@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "generatedBy": "scripts/archive-refs.js",
+    "note": "Machine-generated cache of Internet Archive Wayback snapshots, keyed by reference URL. Do not edit by hand — run `node scripts/archive-refs.js` (in an environment with access to archive.org) to populate or refresh. build.js merges these in to render archived fallback links.",
+    "lastRun": null,
+    "count": 0
+  },
+  "snapshots": {}
+}

@@ -20,10 +20,13 @@ source of truth; a Node script compiles it into plain HTML/CSS that can be hoste
 ```
 fsp/
 ├── data/
-│   └── forum.json      # SINGLE SOURCE OF TRUTH — all dates, parties, references
+│   ├── forum.json      # SINGLE SOURCE OF TRUTH — all dates, parties, references
+│   └── archives.json   # machine-generated Wayback snapshot cache (do not hand-edit)
 ├── src/
 │   └── styles.css      # stylesheet (copied into the build)
-├── build.js            # compiler: data/forum.json -> docs/
+├── scripts/
+│   └── archive-refs.js # archives references to the Wayback Machine + refreshes cache
+├── build.js            # compiler: data/{forum,archives}.json -> docs/
 ├── docs/               # COMPILED OUTPUT (served by GitHub Pages)
 │   ├── index.html
 │   ├── styles.css
@@ -62,6 +65,31 @@ party, or reference, edit that file and re-run `node build.js`. The data model:
 - `parties[]` — `country`, `name`, `abbr`, `founding` (`true`/`false`/`null` = to verify),
   `figures[]`, `notes`.
 - `references[]` — `title`, `url`, `publisher`, `type`.
+
+## Archiving references (Wayback Machine)
+
+Links rot. To keep the chronology verifiable, every reference is preserved in the
+Internet Archive **Wayback Machine**, and the site shows an **archived fallback link**
+next to each live reference.
+
+```bash
+node scripts/archive-refs.js              # archive any reference missing a snapshot, update cache
+node scripts/archive-refs.js --dry-run    # report what would be archived; write nothing
+node scripts/archive-refs.js --save-all   # force a fresh snapshot of every reference
+```
+
+The script reads reference URLs from `data/forum.json`, checks the Wayback
+availability API, triggers **Save Page Now** for anything not yet archived, and
+writes the resulting snapshot URLs + timestamps into `data/archives.json`.
+`build.js` merges that cache so the rendered References section gains
+"archived YYYY-MM-DD" fallback links. Re-running is idempotent.
+
+> **Network requirement:** the script needs outbound access to `archive.org` /
+> `web.archive.org`. Some sandboxed/CI environments block these by egress policy
+> (the call fails fast and the URL is reported as not archived) — run it from an
+> environment that can reach the Internet Archive. Behind a proxy on Node ≥ 22.21,
+> run with `NODE_USE_ENV_PROXY=1`. Save Page Now is rate-limited for anonymous
+> use, so the script paces its requests.
 
 ## Data quality
 
