@@ -1,0 +1,111 @@
+{
+  "country": "Ecuador",
+  "code": "EC",
+  "fspParty": "Movimiento PAIS (Alianza PAIS)",
+  "fspStatus": "affiliated (to verify)",
+  "fspPresidents": [
+    "Rafael Correa"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Rodrigo Borja",
+      "party": "ID",
+      "start": "1988",
+      "end": "1992",
+      "fsp": false
+    },
+    {
+      "name": "Sixto Durán-Ballén",
+      "party": "PUR",
+      "start": "1992",
+      "end": "1996",
+      "fsp": false
+    },
+    {
+      "name": "Abdalá Bucaram",
+      "party": "PRE",
+      "start": "1996",
+      "end": "1997",
+      "fsp": false,
+      "notes": "Removed by Congress."
+    },
+    {
+      "name": "Fabián Alarcón",
+      "party": "interim",
+      "start": "1997",
+      "end": "1998",
+      "fsp": false
+    },
+    {
+      "name": "Jamil Mahuad",
+      "party": "DP",
+      "start": "1998",
+      "end": "2000",
+      "fsp": false,
+      "notes": "Ousted Jan 2000."
+    },
+    {
+      "name": "Gustavo Noboa",
+      "party": "independent",
+      "start": "2000",
+      "end": "2003",
+      "fsp": false
+    },
+    {
+      "name": "Lucio Gutiérrez",
+      "party": "PSP",
+      "start": "2003",
+      "end": "2005",
+      "fsp": false,
+      "notes": "Removed by Congress."
+    },
+    {
+      "name": "Alfredo Palacio",
+      "party": "independent",
+      "start": "2005",
+      "end": "2007",
+      "fsp": false
+    },
+    {
+      "name": "Rafael Correa",
+      "party": "Alianza PAIS",
+      "start": "2007",
+      "end": "2017",
+      "fsp": true
+    },
+    {
+      "name": "Lenín Moreno",
+      "party": "Alianza PAIS",
+      "start": "2017",
+      "end": "2021",
+      "fsp": false,
+      "notes": "Elected with PAIS but broke with Correa; governed from the centre-right."
+    },
+    {
+      "name": "Guillermo Lasso",
+      "party": "CREO",
+      "start": "2021",
+      "end": "2023",
+      "fsp": false,
+      "notes": "Resigned via \"muerte cruzada\"."
+    },
+    {
+      "name": "Daniel Noboa",
+      "party": "ADN",
+      "start": "2023",
+      "end": "present",
+      "fsp": false
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Nacional de Justicia (and Corte Constitucional)",
+    "size": 21,
+    "appointmentMethod": "Judges selected through a merit competition run by the Judicial Council (Consejo de la Judicatura).",
+    "fspEraChanges": "A 2011 referendum under Correa restructured the judiciary, creating a transitional Judicial Council that overhauled judge selection; critics said it gave the executive undue influence over appointments, supporters cited reform of a dysfunctional system.",
+    "stillServing": "Post-Correa governments have reshaped the Judicial Council and courts; current composition to verify.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"
+  ]
+}

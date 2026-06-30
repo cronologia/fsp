@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "generated": "2026-06-30",
+    "description": "Per-country files for Latin American countries that have had a Foro de São Paulo (FSP) member/affiliated president. Each lists the presidential succession since 1990 (with FSP presidents flagged) and a summary of the Supreme Court / high-court and the changes made during (or after) the FSP era.",
+    "dataQuality": "Presidential successions are compiled from public records and are well attested. Supreme-court \"changes\" summarise documented episodes; exact current composition and \"how many appointees still serve\" are marked verified:false and need primary-source confirmation. FSP membership/affiliation of some parties (Morena, Argentine Peronism, Chilean PS/PC, Alianza PAIS) is still being verified — see the main parties list."
+  },
+  "countries": [
+    {
+      "country": "Brazil",
+      "code": "BR",
+      "fspParty": "Partido dos Trabalhadores (PT)",
+      "fspPresidentCount": 2,
+      "file": "countries/BR.json"
+    },
+    {
+      "country": "Venezuela",
+      "code": "VE",
+      "fspParty": "Partido Socialista Unido de Venezuela (PSUV)",
+      "fspPresidentCount": 2,
+      "file": "countries/VE.json"
+    },
+    {
+      "country": "Bolivia",
+      "code": "BO",
+      "fspParty": "Movimiento al Socialismo (MAS)",
+      "fspPresidentCount": 2,
+      "file": "countries/BO.json"
+    },
+    {
+      "country": "Nicaragua",
+      "code": "NI",
+      "fspParty": "Frente Sandinista de Liberación Nacional (FSLN)",
+      "fspPresidentCount": 1,
+      "file": "countries/NI.json"
+    },
+    {
+      "country": "Uruguay",
+      "code": "UY",
+      "fspParty": "Frente Amplio (FA)",
+      "fspPresidentCount": 3,
+      "file": "countries/UY.json"
+    },
+    {
+      "country": "El Salvador",
+      "code": "SV",
+      "fspParty": "Frente Farabundo Martí (FMLN)",
+      "fspPresidentCount": 2,
+      "file": "countries/SV.json"
+    },
+    {
+      "country": "Honduras",
+      "code": "HN",
+      "fspParty": "Libertad y Refundación (LIBRE)",
+      "fspPresidentCount": 1,
+      "file": "countries/HN.json"
+    },
+    {
+      "country": "Mexico",
+      "code": "MX",
+      "fspParty": "Morena",
+      "fspPresidentCount": 2,
+      "file": "countries/MX.json"
+    },
+    {
+      "country": "Argentina",
+      "code": "AR",
+      "fspParty": "Peronist/Kirchnerist coalitions (PJ / FpV / FdT)",
+      "fspPresidentCount": 3,
+      "file": "countries/AR.json"
+    },
+    {
+      "country": "Chile",
+      "code": "CL",
+      "fspParty": "Partido Socialista / Partido Comunista de Chile",
+      "fspPresidentCount": 3,
+      "file": "countries/CL.json"
+    },
+    {
+      "country": "Ecuador",
+      "code": "EC",
+      "fspParty": "Movimiento PAIS (Alianza PAIS)",
+      "fspPresidentCount": 1,
+      "file": "countries/EC.json"
+    }
+  ]
+}

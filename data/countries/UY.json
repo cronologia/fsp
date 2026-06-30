@@ -1,0 +1,80 @@
+{
+  "country": "Uruguay",
+  "code": "UY",
+  "fspParty": "Frente Amplio (FA)",
+  "fspStatus": "member (founding status to verify)",
+  "fspPresidents": [
+    "Tabaré Vázquez",
+    "José Mujica",
+    "Yamandú Orsi"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Luis Alberto Lacalle",
+      "party": "Partido Nacional",
+      "start": "1990",
+      "end": "1995",
+      "fsp": false
+    },
+    {
+      "name": "Julio María Sanguinetti",
+      "party": "Partido Colorado",
+      "start": "1995",
+      "end": "2000",
+      "fsp": false
+    },
+    {
+      "name": "Jorge Batlle",
+      "party": "Partido Colorado",
+      "start": "2000",
+      "end": "2005",
+      "fsp": false
+    },
+    {
+      "name": "Tabaré Vázquez",
+      "party": "Frente Amplio",
+      "start": "2005",
+      "end": "2010",
+      "fsp": true
+    },
+    {
+      "name": "José Mujica",
+      "party": "Frente Amplio",
+      "start": "2010",
+      "end": "2015",
+      "fsp": true
+    },
+    {
+      "name": "Tabaré Vázquez",
+      "party": "Frente Amplio",
+      "start": "2015",
+      "end": "2020",
+      "fsp": true
+    },
+    {
+      "name": "Luis Lacalle Pou",
+      "party": "Partido Nacional",
+      "start": "2020",
+      "end": "2025",
+      "fsp": false
+    },
+    {
+      "name": "Yamandú Orsi",
+      "party": "Frente Amplio",
+      "start": "2025",
+      "end": "present",
+      "fsp": true
+    }
+  ],
+  "supremeCourt": {
+    "name": "Suprema Corte de Justicia",
+    "size": 5,
+    "appointmentMethod": "Elected by a two-thirds majority of the General Assembly; 10-year terms.",
+    "fspEraChanges": "No court-packing. The court remained independent during FA governments — notably its 2013 ruling striking down parts of a law on prosecution of past (dictatorship-era) crimes ran against the FA government’s position.",
+    "stillServing": "Membership rotates on fixed terms; no FSP-driven structural change.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"
+  ]
+}

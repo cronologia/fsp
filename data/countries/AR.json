@@ -1,0 +1,83 @@
+{
+  "country": "Argentina",
+  "code": "AR",
+  "fspParty": "Peronist/Kirchnerist coalitions (PJ / FpV / FdT)",
+  "fspStatus": "affiliated (to verify)",
+  "fspPresidents": [
+    "Néstor Kirchner",
+    "Cristina Fernández de Kirchner",
+    "Alberto Fernández"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Carlos Menem",
+      "party": "PJ",
+      "start": "1989",
+      "end": "1999",
+      "fsp": false,
+      "notes": "Peronist, pre-Kirchner."
+    },
+    {
+      "name": "Fernando de la Rúa",
+      "party": "UCR/Alianza",
+      "start": "1999",
+      "end": "2001",
+      "fsp": false,
+      "notes": "Resigned in the 2001 crisis."
+    },
+    {
+      "name": "Eduardo Duhalde",
+      "party": "PJ",
+      "start": "2002",
+      "end": "2003",
+      "fsp": false,
+      "notes": "Appointed by Congress after interim presidents."
+    },
+    {
+      "name": "Néstor Kirchner",
+      "party": "PJ/FpV",
+      "start": "2003",
+      "end": "2007",
+      "fsp": true
+    },
+    {
+      "name": "Cristina Fernández de Kirchner",
+      "party": "FpV",
+      "start": "2007",
+      "end": "2015",
+      "fsp": true
+    },
+    {
+      "name": "Mauricio Macri",
+      "party": "PRO/Cambiemos",
+      "start": "2015",
+      "end": "2019",
+      "fsp": false
+    },
+    {
+      "name": "Alberto Fernández",
+      "party": "Frente de Todos",
+      "start": "2019",
+      "end": "2023",
+      "fsp": true
+    },
+    {
+      "name": "Javier Milei",
+      "party": "La Libertad Avanza",
+      "start": "2023",
+      "end": "present",
+      "fsp": false
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Suprema de Justicia de la Nación",
+    "size": 5,
+    "appointmentMethod": "Nominated by the President, confirmed by 2/3 of the Senate.",
+    "fspEraChanges": "In 1990 President Menem (Peronist, pre-Kirchner) expanded the court from 5 to 9, creating an \"automatic majority\". In 2006 Néstor Kirchner reduced it back to 5 and tightened the appointment process (Decree 222/03 increasing transparency). The packing thus predates the Kirchnerist (FSP-affiliated) governments, which partly reversed it.",
+    "stillServing": "Court at 5 seats; appointments contested across administrations. Current members to verify.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "country": "Brazil",
+  "code": "BR",
+  "fspParty": "Partido dos Trabalhadores (PT)",
+  "fspStatus": "founding member",
+  "fspPresidents": [
+    "Luiz Inácio Lula da Silva",
+    "Dilma Rousseff"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Fernando Collor de Mello",
+      "party": "PRN",
+      "start": "1990",
+      "end": "1992",
+      "fsp": false,
+      "notes": "Resigned during impeachment."
+    },
+    {
+      "name": "Itamar Franco",
+      "party": "PMDB",
+      "start": "1992",
+      "end": "1995",
+      "fsp": false
+    },
+    {
+      "name": "Fernando Henrique Cardoso",
+      "party": "PSDB",
+      "start": "1995",
+      "end": "2003",
+      "fsp": false
+    },
+    {
+      "name": "Luiz Inácio Lula da Silva",
+      "party": "PT",
+      "start": "2003",
+      "end": "2011",
+      "fsp": true
+    },
+    {
+      "name": "Dilma Rousseff",
+      "party": "PT",
+      "start": "2011",
+      "end": "2016",
+      "fsp": true,
+      "notes": "Removed by impeachment Aug 2016."
+    },
+    {
+      "name": "Michel Temer",
+      "party": "PMDB/MDB",
+      "start": "2016",
+      "end": "2019",
+      "fsp": false
+    },
+    {
+      "name": "Jair Bolsonaro",
+      "party": "PSL/PL",
+      "start": "2019",
+      "end": "2023",
+      "fsp": false
+    },
+    {
+      "name": "Luiz Inácio Lula da Silva",
+      "party": "PT",
+      "start": "2023",
+      "end": "present",
+      "fsp": true
+    }
+  ],
+  "supremeCourt": {
+    "name": "Supremo Tribunal Federal (STF)",
+    "size": 11,
+    "appointmentMethod": "Nominated by the President, confirmed by the Senate; mandatory retirement at 75.",
+    "fspEraChanges": "No structural change to the court. PT presidents (Lula, Dilma) filled numerous vacancies through the normal process; over 2003–2016 they appointed a majority of the sitting justices. Lula appointed several more from 2023.",
+    "stillServing": "Several Lula/Dilma-era appointees remain on the 11-seat court as of 2026; exact current count to verify.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Supremo_Tribunal_Federal",
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "country": "Chile",
+  "code": "CL",
+  "fspParty": "Partido Socialista / Partido Comunista de Chile",
+  "fspStatus": "member (to verify)",
+  "fspPresidents": [
+    "Ricardo Lagos",
+    "Michelle Bachelet",
+    "Gabriel Boric"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Patricio Aylwin",
+      "party": "PDC (Concertación)",
+      "start": "1990",
+      "end": "1994",
+      "fsp": false
+    },
+    {
+      "name": "Eduardo Frei Ruiz-Tagle",
+      "party": "PDC",
+      "start": "1994",
+      "end": "2000",
+      "fsp": false
+    },
+    {
+      "name": "Ricardo Lagos",
+      "party": "PS/PPD",
+      "start": "2000",
+      "end": "2006",
+      "fsp": true,
+      "notes": "Socialist; FSP-aligned."
+    },
+    {
+      "name": "Michelle Bachelet",
+      "party": "PS",
+      "start": "2006",
+      "end": "2010",
+      "fsp": true
+    },
+    {
+      "name": "Sebastián Piñera",
+      "party": "RN/Chile Vamos",
+      "start": "2010",
+      "end": "2014",
+      "fsp": false
+    },
+    {
+      "name": "Michelle Bachelet",
+      "party": "PS",
+      "start": "2014",
+      "end": "2018",
+      "fsp": true
+    },
+    {
+      "name": "Sebastián Piñera",
+      "party": "Chile Vamos",
+      "start": "2018",
+      "end": "2022",
+      "fsp": false
+    },
+    {
+      "name": "Gabriel Boric",
+      "party": "Convergencia Social / Apruebo Dignidad",
+      "start": "2022",
+      "end": "present",
+      "fsp": true,
+      "notes": "Left coalition incl. the FSP-member Communist Party of Chile."
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Suprema de Chile",
+    "size": 21,
+    "appointmentMethod": "Justices proposed by the Court itself, chosen by the President, and confirmed by 2/3 of the Senate.",
+    "fspEraChanges": "No court-packing by left governments. Judicial appointments followed the regular mechanism. Two constituent processes (2021–2023) to replace the 1980 constitution both failed at referendum, leaving the judiciary’s structure unchanged.",
+    "stillServing": "Court independent; no FSP-driven structural change.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Chile"
+  ]
+}

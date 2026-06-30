@@ -1,0 +1,104 @@
+{
+  "country": "Bolivia",
+  "code": "BO",
+  "fspParty": "Movimiento al Socialismo (MAS)",
+  "fspStatus": "member",
+  "fspPresidents": [
+    "Evo Morales",
+    "Luis Arce"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Jaime Paz Zamora",
+      "party": "MIR",
+      "start": "1989",
+      "end": "1993",
+      "fsp": false
+    },
+    {
+      "name": "Gonzalo Sánchez de Lozada",
+      "party": "MNR",
+      "start": "1993",
+      "end": "1997",
+      "fsp": false
+    },
+    {
+      "name": "Hugo Banzer",
+      "party": "ADN",
+      "start": "1997",
+      "end": "2001",
+      "fsp": false
+    },
+    {
+      "name": "Jorge Quiroga",
+      "party": "ADN",
+      "start": "2001",
+      "end": "2002",
+      "fsp": false
+    },
+    {
+      "name": "Gonzalo Sánchez de Lozada",
+      "party": "MNR",
+      "start": "2002",
+      "end": "2003",
+      "fsp": false,
+      "notes": "Resigned amid unrest."
+    },
+    {
+      "name": "Carlos Mesa",
+      "party": "independent",
+      "start": "2003",
+      "end": "2005",
+      "fsp": false
+    },
+    {
+      "name": "Eduardo Rodríguez Veltzé",
+      "party": "interim",
+      "start": "2005",
+      "end": "2006",
+      "fsp": false
+    },
+    {
+      "name": "Evo Morales",
+      "party": "MAS",
+      "start": "2006",
+      "end": "2019",
+      "fsp": true,
+      "notes": "Resigned Nov 2019 amid disputed election/crisis."
+    },
+    {
+      "name": "Jeanine Áñez",
+      "party": "interim (MDS)",
+      "start": "2019",
+      "end": "2020",
+      "fsp": false
+    },
+    {
+      "name": "Luis Arce",
+      "party": "MAS",
+      "start": "2020",
+      "end": "2025",
+      "fsp": true
+    },
+    {
+      "name": "Rodrigo Paz",
+      "party": "PDC",
+      "start": "2025",
+      "end": "present",
+      "fsp": false,
+      "notes": "Won Oct 2025 runoff; ended ~20 years of MAS rule."
+    }
+  ],
+  "supremeCourt": {
+    "name": "Tribunal Supremo de Justicia / Tribunal Constitucional Plurinacional",
+    "size": null,
+    "appointmentMethod": "Since the 2009 Constitution, high-court judges are chosen by popular election from candidates pre-selected by the (MAS-controlled) Legislative Assembly.",
+    "fspEraChanges": "The 2009 Constitution introduced popular election of top judges (held 2011, 2017). In Dec 2023 the Constitutional Tribunal extended (\"self-prorogued\") magistrates' mandates after elections were delayed — widely criticised. Partial judicial elections were held in late 2024.",
+    "stillServing": "Composition in flux through 2024–2025; to verify under the new (post-MAS) government.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
+    "https://www.cnn.com/2025/10/19/americas/bolivia-election-results-rodrigo-paz-intl-hnk"
+  ]
+}
