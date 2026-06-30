@@ -1,0 +1,230 @@
+#!/usr/bin/env node
+/**
+ * Foro de São Paulo — static site generator.
+ *
+ * Zero dependencies. Reads data/forum.json and compiles a self-contained
+ * static website into docs/ (chosen so it can be served directly by GitHub
+ * Pages from the `docs/` folder on the default branch).
+ *
+ * Usage: node build.js
+ */
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = __dirname;
+const DATA_FILE = path.join(ROOT, 'data', 'forum.json');
+const ARCHIVES_FILE = path.join(ROOT, 'data', 'archives.json');
+const SRC_DIR = path.join(ROOT, 'src');
+const OUT_DIR = path.join(ROOT, 'docs');
+
+/** Format a 14-digit Wayback timestamp (YYYYMMDDhhmmss) as YYYY-MM-DD. */
+function formatArchiveTs(ts) {
+  if (!ts || ts.length < 8) return '';
+  return `${ts.slice(0, 4)}-${ts.slice(4, 6)}-${ts.slice(6, 8)}`;
+}
+
+/** Load the machine-generated Wayback snapshot cache (url -> snapshot). */
+function loadArchives() {
+  try {
+    const parsed = JSON.parse(fs.readFileSync(ARCHIVES_FILE, 'utf8'));
+    return (parsed && parsed.snapshots) || {};
+  } catch {
+    return {};
+  }
+}
+
+/** Minimal HTML escaper for text interpolated into the page. */
+function esc(value) {
+  if (value === null || value === undefined) return '';
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderMeetingsRows(meetings) {
+  return meetings
+    .map((m) => {
+      const dates = m.dates
+        ? `${esc(m.dates)}${m.datesVerified ? '' : ' <span class="flag" title="dates not verified against a primary source">?</span>'}`
+        : '<span class="muted">year only</span>';
+      return `        <tr>
+          <td class="edition">${esc(m.edition)}</td>
+          <td class="year">${esc(m.year)}</td>
+          <td>${dates}</td>
+          <td>${esc(m.city)}</td>
+          <td>${esc(m.country)}</td>
+          <td class="notes">${esc(m.notes)}</td>
+        </tr>`;
+    })
+    .join('\n');
+}
+
+function renderParties(parties) {
+  return parties
+    .map((p) => {
+      const founding =
+        p.founding === true
+          ? '<span class="badge badge-founding">founding member</span>'
+          : p.founding === false
+          ? '<span class="badge badge-later">later member</span>'
+          : '<span class="badge badge-unknown">status to verify</span>';
+      const figures = (p.figures && p.figures.length)
+        ? `<p class="figures"><strong>Key figures:</strong> ${esc(p.figures.join(', '))}</p>`
+        : '';
+      const notes = p.notes ? `<p class="party-notes">${esc(p.notes)}</p>` : '';
+      return `      <article class="party-card">
+        <h3>${esc(p.name)}${p.abbr ? ` <span class="abbr">(${esc(p.abbr)})</span>` : ''}</h3>
+        <p class="country">${esc(p.country)} ${founding}</p>
+        ${figures}
+        ${notes}
+      </article>`;
+    })
+    .join('\n');
+}
+
+function renderReferences(refs, archives) {
+  return refs
+    .map((r) => {
+      const snap = archives[r.url];
+      const archiveLink = snap && snap.archiveUrl
+        ? ` · <a class="archive-link" href="${esc(snap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="Internet Archive Wayback Machine snapshot">archived${
+            snap.timestamp ? ` ${esc(formatArchiveTs(snap.timestamp))}` : ''
+          }</a>`
+        : '';
+      return `        <li>
+          <a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a>
+          <span class="ref-meta">${esc(r.publisher)} — ${esc(r.type)}${archiveLink}</span>
+        </li>`;
+    })
+    .join('\n');
+}
+
+function renderTimeline(meetings) {
+  return meetings
+    .map(
+      (m) => `        <li class="tl-item">
+          <span class="tl-year">${esc(m.year)}</span>
+          <span class="tl-edition">${esc(m.edition)}</span>
+          <span class="tl-place">${esc(m.city)}, ${esc(m.country)}</span>
+        </li>`
+    )
+    .join('\n');
+}
+
+function buildHtml(data, archives) {
+  const { meta, founding } = data;
+  return `<!DOCTYPE html>
+<html lang="${esc(meta.language || 'en')}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${esc(meta.title)}</title>
+  <meta name="description" content="${esc(meta.description)}" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>${esc(meta.title)}</h1>
+      <p class="subtitle">${esc(meta.subtitle)}</p>
+      <p class="lead">${esc(meta.description)}</p>
+      <p class="updated">Last updated: ${esc(meta.lastUpdated)}</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="notice">
+      <strong>Data quality note:</strong> ${esc(meta.dataQualityNote)}
+    </div>
+
+    <section id="founding">
+      <h2>Founding</h2>
+      <dl class="facts">
+        <dt>First meeting</dt><dd>${esc(founding.date.replace('/', ' – '))}</dd>
+        <dt>Place</dt><dd>${esc(founding.city)}, ${esc(founding.country)}</dd>
+        <dt>Venue</dt><dd>${esc(founding.venue)}</dd>
+        <dt>Convened by</dt><dd>${esc(founding.convenedBy)}</dd>
+        <dt>Original name</dt><dd>${esc(founding.originalName)}</dd>
+        <dt>Renamed</dt><dd>${esc(founding.renamed)}</dd>
+        <dt>Context</dt><dd>${esc(founding.context)}</dd>
+        <dt>Attendance</dt><dd>${esc(founding.attendance)}</dd>
+      </dl>
+    </section>
+
+    <section id="timeline">
+      <h2>Timeline at a glance</h2>
+      <ol class="timeline">
+${renderTimeline(data.meetings)}
+      </ol>
+    </section>
+
+    <section id="meetings">
+      <h2>Meetings (Encontros)</h2>
+      <p class="section-intro">All recorded editions of the Forum. A <span class="flag">?</span> marks dates not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.</p>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead>
+            <tr><th>Edition</th><th>Year</th><th>Dates</th><th>City</th><th>Country</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+${renderMeetingsRows(data.meetings)}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="parties">
+      <h2>Parties &amp; organizations</h2>
+      <p class="section-intro">A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the complete membership and the full list of the 48 founding organizations are still being compiled.</p>
+      <div class="party-grid">
+${renderParties(data.parties)}
+      </div>
+      <h3>Participating countries</h3>
+      <p class="countries">${data.participatingCountries.map(esc).join(' · ')}</p>
+    </section>
+
+    <section id="references">
+      <h2>References</h2>
+      <p class="section-intro">Each reference links to the live source; where available, an <em>archived</em> link points to an Internet Archive snapshot as a permanent fallback (generated by <code>scripts/archive-refs.js</code>).</p>
+      <ol class="references">
+${renderReferences(data.references, archives)}
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Compiled static site generated from <code>data/forum.json</code> by <code>build.js</code>. Open data — corrections welcome via pull request.</p>
+    </div>
+  </footer>
+</body>
+</html>
+`;
+}
+
+function main() {
+  const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+  const archives = loadArchives();
+
+  if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
+
+  const html = buildHtml(data, archives);
+  fs.writeFileSync(path.join(OUT_DIR, 'index.html'), html);
+
+  // Copy static assets (currently just the stylesheet).
+  fs.copyFileSync(path.join(SRC_DIR, 'styles.css'), path.join(OUT_DIR, 'styles.css'));
+
+  // Disable Jekyll processing on GitHub Pages.
+  fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');
+
+  const count = data.meetings.length;
+  const archivedRefs = data.references.filter((r) => archives[r.url] && archives[r.url].archiveUrl).length;
+  console.log(`Built docs/index.html (${count} meetings, ${data.parties.length} parties, ${data.references.length} references, ${archivedRefs} with archive fallback).`);
+}
+
+main();
