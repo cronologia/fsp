@@ -73,9 +73,26 @@
     "name": "Corte Suprema de Justicia de la Nación",
     "size": 5,
     "appointmentMethod": "Nominated by the President, confirmed by 2/3 of the Senate.",
-    "fspEraChanges": "In 1990 President Menem (Peronist, pre-Kirchner) expanded the court from 5 to 9, creating an \"automatic majority\". In 2006 Néstor Kirchner reduced it back to 5 and tightened the appointment process (Decree 222/03 increasing transparency). The packing thus predates the Kirchnerist (FSP-affiliated) governments, which partly reversed it.",
-    "stillServing": "Court at 5 seats; appointments contested across administrations. Current members to verify.",
-    "verified": false
+    "fspEraChanges": "In 1990 President Menem (Peronist, pre-Kirchner) expanded the court from 5 to 9 (Law 23.774), creating an \"automatic majority\". In 2006 the Kirchnerist government reduced it back to 5 (Law 26.183) and had tightened the appointment process (Decree 222/03, 2003). So the packing predates the Kirchnerist (FSP-affiliated) governments, which actually de-packed it — a useful counter to a simplistic 'FSP packs courts' reading.",
+    "stillServing": "After the retirements of Highton (2021) and Maqueda (2024), the court fell below its 5-seat complement to 3 justices; President Milei's attempts to fill the seats by decree (Lijo, García-Mansilla) failed in the Senate (2025), leaving a deadlock as of 2026.",
+    "verified": true,
+    "courtHistory": [
+      { "period": "1863", "type": "founding", "event": "The Corte Suprema was installed under the 1853 Constitution with 5 justices.", "size": 5, "appointingGovernment": "Mitre (constitutional founding)", "fspRelated": false, "verified": true },
+      { "period": "1947", "type": "purge", "event": "Perón's Congress impeached and removed 4 of the 5 justices (Sagarna, Repetto, Nazar Anchorena, Ramos Mejía), replacing them with Peronist-aligned appointees — the start of a long pattern of incoming governments reshaping the court.", "size": 5, "appointingGovernment": "Juan Domingo Perón (PJ)", "fspRelated": false, "verified": true },
+      { "period": "1958", "type": "reform", "event": "Law 15.271 expanded the court from 5 to 7 members.", "size": 7, "appointingGovernment": "Frondizi (UCRI)", "fspRelated": false, "verified": true },
+      { "period": "1966", "type": "reform", "event": "Law 16.895 returned the court to 5 members.", "size": 5, "appointingGovernment": "Onganía (military 'Revolución Argentina')", "fspRelated": false, "verified": true },
+      { "period": "1976–1983", "type": "composition", "event": "Last military dictatorship: the junta replaced the court, which operated under the de facto regime.", "size": 5, "appointingGovernment": "Military junta", "fspRelated": false, "verified": false },
+      { "period": "1990", "type": "packing", "event": "Law 23.774 (Menem) expanded the court from 5 to 9, creating the 'automatic majority'.", "size": 9, "appointingGovernment": "Carlos Menem (PJ)", "fspRelated": false, "verified": true },
+      { "period": "2003", "type": "reform", "event": "Decree 222/03 (Néstor Kirchner) opened Supreme Court nominations to public scrutiny, applied to the post-Menem vacancies.", "size": 9, "appointingGovernment": "Néstor Kirchner (FpV)", "fspRelated": true, "verified": true },
+      { "period": "2006", "type": "reform", "event": "Law 26.183 (promoted by Cristina Fernández de Kirchner) reduced the court from 9 back to 5, reversing Menem's expansion.", "size": 5, "appointingGovernment": "Kirchnerist government (FpV)", "fspRelated": true, "verified": true },
+      { "period": "2024–present", "type": "composition", "event": "After Highton (2021) and Maqueda (2024) left, the court fell to 3 justices; Milei's decree appointments (Lijo, García-Mansilla) were rejected by the Senate in 2025, leaving the seats vacant amid a deadlock.", "size": 3, "appointingGovernment": "Javier Milei (LLA) — contested", "fspRelated": false, "verified": false }
+    ],
+    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina", "https://es.wikipedia.org/wiki/Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n"],
+    "justices": [
+      { "name": "Ricardo Lorenzetti", "appointedBy": "Néstor Kirchner", "appointedParty": "FpV", "year": 2004, "fspAppointed": true, "status": "serving", "background": "Civil-law scholar; long-time court president (2007–2018)." },
+      { "name": "Horacio Rosatti", "appointedBy": "Mauricio Macri", "appointedParty": "Cambiemos/PRO", "year": 2016, "fspAppointed": false, "status": "serving (court president)", "background": "Former constitutionalist and ex-justice minister." },
+      { "name": "Carlos Rosenkrantz", "appointedBy": "Mauricio Macri", "appointedParty": "Cambiemos/PRO", "year": 2016, "fspAppointed": false, "status": "serving", "background": "Jurist; former university rector." }
+    ]
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina"
