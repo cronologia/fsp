@@ -1,0 +1,86 @@
+{
+  "country": "Honduras",
+  "code": "HN",
+  "fspParty": "Libertad y Refundación (LIBRE)",
+  "fspStatus": "member",
+  "fspPresidents": [
+    "Xiomara Castro"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Rafael Callejas",
+      "party": "Partido Nacional",
+      "start": "1990",
+      "end": "1994",
+      "fsp": false
+    },
+    {
+      "name": "Carlos Roberto Reina",
+      "party": "Partido Liberal",
+      "start": "1994",
+      "end": "1998",
+      "fsp": false
+    },
+    {
+      "name": "Carlos Flores",
+      "party": "Partido Liberal",
+      "start": "1998",
+      "end": "2002",
+      "fsp": false
+    },
+    {
+      "name": "Ricardo Maduro",
+      "party": "Partido Nacional",
+      "start": "2002",
+      "end": "2006",
+      "fsp": false
+    },
+    {
+      "name": "Manuel Zelaya",
+      "party": "Partido Liberal",
+      "start": "2006",
+      "end": "2009",
+      "fsp": false,
+      "notes": "Ousted in June 2009 coup; later founded LIBRE."
+    },
+    {
+      "name": "Roberto Micheletti",
+      "party": "de facto",
+      "start": "2009",
+      "end": "2010",
+      "fsp": false
+    },
+    {
+      "name": "Porfirio Lobo",
+      "party": "Partido Nacional",
+      "start": "2010",
+      "end": "2014",
+      "fsp": false
+    },
+    {
+      "name": "Juan Orlando Hernández",
+      "party": "Partido Nacional",
+      "start": "2014",
+      "end": "2022",
+      "fsp": false
+    },
+    {
+      "name": "Xiomara Castro",
+      "party": "LIBRE",
+      "start": "2022",
+      "end": "present",
+      "fsp": true
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Suprema de Justicia",
+    "size": 15,
+    "appointmentMethod": "Magistrates elected by the National Congress for 7-year terms.",
+    "fspEraChanges": "Before the FSP era: in Dec 2012 Congress removed four Constitutional Chamber justices (\"technical coup\"), and in 2015 the court lifted the ban on presidential re-election (enabling Hernández). Under Castro/LIBRE, Congress elected a new 15-magistrate court in Feb 2023.",
+    "stillServing": "The 2023 LIBRE-era court is current; to verify balance.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)"
+  ]
+}

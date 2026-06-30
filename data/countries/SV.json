@@ -1,0 +1,74 @@
+{
+  "country": "El Salvador",
+  "code": "SV",
+  "fspParty": "Frente Farabundo Martí (FMLN)",
+  "fspStatus": "founding member",
+  "fspPresidents": [
+    "Mauricio Funes",
+    "Salvador Sánchez Cerén"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Alfredo Cristiani",
+      "party": "ARENA",
+      "start": "1989",
+      "end": "1994",
+      "fsp": false
+    },
+    {
+      "name": "Armando Calderón Sol",
+      "party": "ARENA",
+      "start": "1994",
+      "end": "1999",
+      "fsp": false
+    },
+    {
+      "name": "Francisco Flores",
+      "party": "ARENA",
+      "start": "1999",
+      "end": "2004",
+      "fsp": false
+    },
+    {
+      "name": "Antonio Saca",
+      "party": "ARENA",
+      "start": "2004",
+      "end": "2009",
+      "fsp": false
+    },
+    {
+      "name": "Mauricio Funes",
+      "party": "FMLN",
+      "start": "2009",
+      "end": "2014",
+      "fsp": true
+    },
+    {
+      "name": "Salvador Sánchez Cerén",
+      "party": "FMLN",
+      "start": "2014",
+      "end": "2019",
+      "fsp": true
+    },
+    {
+      "name": "Nayib Bukele",
+      "party": "GANA → Nuevas Ideas",
+      "start": "2019",
+      "end": "present",
+      "fsp": false,
+      "notes": "Not an FSP party."
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Suprema de Justicia — Sala de lo Constitucional",
+    "size": 15,
+    "appointmentMethod": "Magistrates elected by the Legislative Assembly.",
+    "fspEraChanges": "During the FMLN era (2009–2018) the Constitutional Chamber was notably independent, ruling against both ARENA and FMLN governments. The decisive change came AFTER the FSP era: on 1 May 2021 President Bukele’s Assembly (Nuevas Ideas) removed the 5 Constitutional Chamber magistrates and the Attorney General, replacing them with loyalists; in Sept 2021 the new chamber authorised presidential re-election. This was done by Bukele, not by an FSP president.",
+    "stillServing": "Bukele-appointed magistrates remain; the pre-2021 chamber was entirely removed.",
+    "verified": false
+  },
+  "sources": [
+    "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm",
+    "https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding"
+  ]
+}

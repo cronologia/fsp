@@ -1,0 +1,51 @@
+{
+  "country": "Nicaragua",
+  "code": "NI",
+  "fspParty": "Frente Sandinista de Liberación Nacional (FSLN)",
+  "fspStatus": "founding member",
+  "fspPresidents": [
+    "Daniel Ortega"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Violeta Chamorro",
+      "party": "UNO",
+      "start": "1990",
+      "end": "1997",
+      "fsp": false
+    },
+    {
+      "name": "Arnoldo Alemán",
+      "party": "PLC",
+      "start": "1997",
+      "end": "2002",
+      "fsp": false
+    },
+    {
+      "name": "Enrique Bolaños",
+      "party": "PLC",
+      "start": "2002",
+      "end": "2007",
+      "fsp": false
+    },
+    {
+      "name": "Daniel Ortega",
+      "party": "FSLN",
+      "start": "2007",
+      "end": "present",
+      "fsp": true,
+      "notes": "Re-elected repeatedly; co-presidency with Rosario Murillo from 2025 constitutional change."
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Suprema de Justicia (CSJ)",
+    "size": 16,
+    "appointmentMethod": "Magistrates elected by the National Assembly.",
+    "fspEraChanges": "The judiciary has been consolidated under FSLN control. In 2009 the CSJ Constitutional Chamber set aside the constitutional ban on consecutive presidential re-election, enabling Ortega’s continued rule; later codified by constitutional reform (2014).",
+    "stillServing": "Court remains FSLN-aligned; current roster to verify.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)"
+  ]
+}

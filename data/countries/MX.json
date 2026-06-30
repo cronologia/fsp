@@ -1,0 +1,73 @@
+{
+  "country": "Mexico",
+  "code": "MX",
+  "fspParty": "Morena",
+  "fspStatus": "affiliated (to verify)",
+  "fspPresidents": [
+    "Andrés Manuel López Obrador",
+    "Claudia Sheinbaum"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Carlos Salinas de Gortari",
+      "party": "PRI",
+      "start": "1988",
+      "end": "1994",
+      "fsp": false
+    },
+    {
+      "name": "Ernesto Zedillo",
+      "party": "PRI",
+      "start": "1994",
+      "end": "2000",
+      "fsp": false
+    },
+    {
+      "name": "Vicente Fox",
+      "party": "PAN",
+      "start": "2000",
+      "end": "2006",
+      "fsp": false
+    },
+    {
+      "name": "Felipe Calderón",
+      "party": "PAN",
+      "start": "2006",
+      "end": "2012",
+      "fsp": false
+    },
+    {
+      "name": "Enrique Peña Nieto",
+      "party": "PRI",
+      "start": "2012",
+      "end": "2018",
+      "fsp": false
+    },
+    {
+      "name": "Andrés Manuel López Obrador",
+      "party": "Morena",
+      "start": "2018",
+      "end": "2024",
+      "fsp": true
+    },
+    {
+      "name": "Claudia Sheinbaum",
+      "party": "Morena",
+      "start": "2024",
+      "end": "present",
+      "fsp": true
+    }
+  ],
+  "supremeCourt": {
+    "name": "Suprema Corte de Justicia de la Nación (SCJN)",
+    "size": 9,
+    "appointmentMethod": "As of the 2024 reform, justices are ELECTED by popular vote (previously: nominated by the President, confirmed by the Senate).",
+    "fspEraChanges": "Landmark change: the 2024 judicial reform (promulgated Sept 2024 under AMLO, championed by Sheinbaum) makes ALL judges — including the Supreme Court — elected by popular vote, cuts the SCJN from 11 to 9 justices, and shortens tenure from 15 to 12 years. The first judicial elections were held 1 June 2025 and a newly elected court was seated in Sept 2025. Critics (Mexican Bar, HRW, scholars) warn it undermines judicial independence; supporters say it democratises the judiciary.",
+    "stillServing": "Most pre-reform justices left or declined to run; the Sept 2025 elected court is new. Composition to verify.",
+    "verified": false
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform",
+    "https://www.hrw.org/news/2025/09/01/mexico-electoral-process-undermines-judicial-independence"
+  ]
+}
