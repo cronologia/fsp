@@ -217,6 +217,61 @@ function renderTimeline(meetings) {
     .join('\n');
 }
 
+function renderFormation(f) {
+  if (!f || !f.items || !f.items.length) return '';
+  const cards = f.items
+    .map((it) => {
+      const flag = it.verified === false ? ' <span class="flag" title="reported / attributed, not independently sourced here">?</span>' : '';
+      const src = (it.sources || [])
+        .map((u) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source</a>`)
+        .join(' · ');
+      return `      <article class="related-card">
+        <h3>${esc(it.title)}${flag}</h3>
+        <p>${esc(it.text)}</p>
+        ${src ? `<p class="related-meta">${src}</p>` : ''}
+      </article>`;
+    })
+    .join('\n');
+  return `    <section id="origins">
+      <h2>${esc(f.title || 'Origins & formative networks')}</h2>
+      <p class="section-intro">${esc(f.note || '')}</p>
+      <div class="party-grid">
+${cards}
+      </div>
+    </section>
+`;
+}
+
+function renderJustices(sc) {
+  if (!sc || !sc.justices || !sc.justices.length) return '';
+  const rows = sc.justices
+    .map((j) => {
+      const cls = j.fspAppointed ? ' class="fsp-row"' : '';
+      const flag = j.fspAppointed ? ' <span class="fsp-badge">FSP</span>' : '';
+      return `        <tr${cls}>
+          <td>${esc(j.year)}</td>
+          <td>${esc(j.name)}${flag}</td>
+          <td>${esc(j.appointedBy)}${j.appointedParty ? ` <span class="muted">(${esc(j.appointedParty)})</span>` : ''}</td>
+          <td>${esc(j.status || '')}</td>
+          <td class="notes">${esc(j.background || '')}</td>
+        </tr>`;
+    })
+    .join('\n');
+  return `    <section>
+      <h2>Court composition — by appointing government</h2>
+      <p class="section-intro">Each justice with the president (and party) who appointed them; rows marked <span class="fsp-badge">FSP</span> were appointed by a Foro de São Paulo member/affiliated president. "Background" notes prior political/professional roles where notable — justices are not formal party members.</p>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead><tr><th>Appt. year</th><th>Justice</th><th>Appointed by (party)</th><th>Status</th><th>Background</th></tr></thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>
+    </section>
+`;
+}
+
 function renderCountryPage(c) {
   const rows = c.presidentialSuccession
     .map((p) => {
@@ -274,6 +329,7 @@ ${rows}
         <dt>Verified</dt><dd>${sc.verified ? 'yes — sourced' : 'no — to verify against primary sources'}</dd>
       </dl>
     </section>
+${renderJustices(sc)}
     <section>
       <h2>Sources</h2>
       <ol class="references">
@@ -329,6 +385,7 @@ function buildHtml(data, archives, codeByCountry) {
       </dl>
     </section>
 
+${renderFormation(data.formation)}
     <section id="timeline">
       <h2>Timeline at a glance</h2>
       <ol class="timeline">

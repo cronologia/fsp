@@ -18,6 +18,30 @@
     "context": "Convened after the fall of the Berlin Wall and the collapse of the Soviet bloc, to coordinate the Latin American and Caribbean left and debate alternatives to neoliberal economic policies.",
     "attendance": "48 parties and organizations from 14 Latin American and Caribbean countries."
   },
+  "formation": {
+    "title": "Origins & formative networks",
+    "note": "The Foro de São Paulo grew out of the Latin American left of the 1980s — socialist and communist parties, trade unions, guerrilla movements turning to electoral politics, and Christian currents. In Brazil, the Workers' Party (PT), the Forum's convener, was itself built from a coalition of trade unionists, Marxists and Catholics of the Liberation Theology tradition (the Christian base communities, CEBs).",
+    "items": [
+      {
+        "title": "Liberation Theology as a formative current",
+        "text": "Liberation Theology — the Latin American Catholic movement linking the Gospel to social and political liberation — was one of the streams feeding the PT and the broader regional left that later convened the Forum. Clerics such as the Dominican friar Frei Betto and the theologian Leonardo Boff bridged the Catholic left, the PT, and revolutionary governments such as Cuba's.",
+        "verified": true,
+        "sources": ["https://en.wikipedia.org/wiki/Liberation_theology", "https://en.wikipedia.org/wiki/Frei_Betto"]
+      },
+      {
+        "title": "Frei Betto — bridge to Cuba",
+        "text": "Frei Betto (Carlos Alberto Libânio Christo), a Dominican friar and Liberation Theology figure, was a spiritual adviser to Lula and held long interviews with Fidel Castro that became the 1985 book 'Fidel and Religion' (Fidel e a Religião). He is widely credited in Brazilian accounts with brokering Lula's relationship with Fidel — the specific 'introduction' is reported in those accounts rather than independently documented here.",
+        "verified": false,
+        "sources": ["https://en.wikipedia.org/wiki/Frei_Betto"]
+      },
+      {
+        "title": "1985 Havana debt conference — an early Lula–Fidel encounter",
+        "text": "Lula first travelled to Cuba in 1985 for a Havana conference convened by Cuba on the Latin American foreign-debt crisis, with broad political, religious and social participation — five years before the Forum's 1990 founding. It is among the early contacts between the Brazilian left and Havana that prefigured the Forum's networks.",
+        "verified": true,
+        "sources": ["https://www.voltairenet.org/article154638.html"]
+      }
+    ]
+  },
   "meetings": [
     {
       "edition": "I",
