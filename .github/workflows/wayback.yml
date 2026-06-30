@@ -10,6 +10,11 @@ name: Wayback collection
 
 on:
   workflow_dispatch:
+    inputs:
+      full:
+        description: 'Force a complete, paginated re-scan (instead of incremental)'
+        type: boolean
+        default: false
   schedule:
     - cron: '17 4 * * 1' # weekly, Mondays 04:17 UTC
   pull_request:
@@ -36,7 +41,7 @@ jobs:
           node-version: '22'
 
       - name: Harvest Wayback inventory (forodesaopaulo.org)
-        run: node scripts/wayback-harvest.js || echo "::warning::harvest step failed (archive.org unreachable?)"
+        run: node scripts/wayback-harvest.js ${{ (github.event_name == 'workflow_dispatch' && inputs.full) && '--full' || '' }} || echo "::warning::harvest step failed (archive.org unreachable?)"
 
       - name: Archive reference URLs
         run: node scripts/archive-refs.js || echo "::warning::archive step failed (archive.org unreachable?)"
@@ -48,7 +53,7 @@ jobs:
         run: |
           echo "## Wayback collection" >> "$GITHUB_STEP_SUMMARY"
           if [ -f data/wayback-inventory.json ]; then
-            node -e "const d=require('./data/wayback-inventory.json'); console.log('- Unique archived URLs: **'+(d.uniqueUrls||0)+'**'); console.log('- High-value pages: **'+(d.usefulUrls||0)+'**'); console.log('- Generated: '+(d.generated||'n/a'));" >> "$GITHUB_STEP_SUMMARY"
+            node -e "const d=require('./data/wayback-inventory.json'); console.log('- Unique archived URLs: **'+(d.uniqueUrls||0)+'**'); console.log('- High-value pages: **'+(d.usefulUrls||0)+'**'); console.log('- Latest capture: '+(d.latestCapture||'n/a')); console.log('- Last run: '+(d.lastRun||'n/a')); if(d.truncated) console.log('- ⚠️ scan truncated at page limit');" >> "$GITHUB_STEP_SUMMARY"
           else
             echo "- No inventory produced (archive.org may be unreachable from this runner)." >> "$GITHUB_STEP_SUMMARY"
           fi

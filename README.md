@@ -119,9 +119,9 @@ policy, the pipeline is designed to run on **GitHub's runners** (open internet) 
    fallback links.
 
 ```bash
-node scripts/wayback-harvest.js                 # incremental update (full scan the first time)
-node scripts/wayback-harvest.js --full          # force a complete re-scan
-node scripts/wayback-harvest.js --limit=20000   # widen the CDX page size
+node scripts/wayback-harvest.js                       # incremental update (full scan the first time)
+node scripts/wayback-harvest.js --full                # force a complete, paginated re-scan
+node scripts/wayback-harvest.js --page-size=15000 --max-pages=50
 ```
 
 The inventory `data/wayback-inventory.json` is **committed and updated
@@ -129,6 +129,12 @@ incrementally**: each run loads it, asks the CDX API only for captures newer tha
 the last one recorded (a `latestCapture` watermark), and merges the delta. A full
 re-scan only happens the first time or with `--full`, so routine runs are cheap and
 don't repeat the whole harvest.
+
+A full scan **paginates through the entire archive** using the CDX `resumeKey`
+cursor (not just the first page), so it captures every archived URL up to the
+`--max-pages` safety limit. To run a complete re-scan on CI, trigger the workflow
+with the **`full`** input checked (**Actions → Wayback collection → Run workflow →
+full ✓**).
 
 **How the workflow runs:**
 
