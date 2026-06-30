@@ -73,7 +73,20 @@
     "appointmentMethod": "Nominated by the President, confirmed by the Senate; mandatory retirement at 75.",
     "fspEraChanges": "No structural change to the court. PT presidents (Lula, Dilma) filled vacancies through the normal process. As of 2026 a majority of the 11 sitting justices were appointed by PT (FSP) presidents: Lula appointed Cármen Lúcia, Dias Toffoli, Cristiano Zanin and Flávio Dino (with Jorge Messias nominated for the seat vacated by Barroso's 2025 retirement); Dilma appointed Luiz Fux and Edson Fachin (the current court president). The rest were appointed by FHC (Gilmar Mendes), Temer (Alexandre de Moraes) and Bolsonaro (Nunes Marques, André Mendonça).",
     "stillServing": "About 7 of the 11 current justices were appointed by FSP (PT) presidents Lula and Dilma — a working majority — as of 2026 (snapshot; the Barroso-seat confirmation was still in process).",
-    "verified": true
+    "verified": true,
+    "justices": [
+      { "name": "Gilmar Mendes", "appointedBy": "Fernando Henrique Cardoso", "appointedParty": "PSDB", "year": 2002, "fspAppointed": false, "status": "serving (decano)", "background": "Former Advocate-General of the Union under FHC." },
+      { "name": "Cármen Lúcia", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2006, "fspAppointed": true, "status": "serving", "background": "Career jurist." },
+      { "name": "Dias Toffoli", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2009, "fspAppointed": true, "status": "serving", "background": "Former Advocate-General under Lula; had been a PT legal adviser." },
+      { "name": "Luiz Fux", "appointedBy": "Dilma Rousseff", "appointedParty": "PT", "year": 2011, "fspAppointed": true, "status": "serving", "background": "Career jurist." },
+      { "name": "Edson Fachin", "appointedBy": "Dilma Rousseff", "appointedParty": "PT", "year": 2015, "fspAppointed": true, "status": "serving (court president 2025–2027)", "background": "Law professor; seen as progressive-leaning." },
+      { "name": "Alexandre de Moraes", "appointedBy": "Michel Temer", "appointedParty": "PMDB/MDB", "year": 2017, "fspAppointed": false, "status": "serving", "background": "Former São Paulo state security secretary (PSDB era) and Temer's justice minister." },
+      { "name": "Kassio Nunes Marques", "appointedBy": "Jair Bolsonaro", "appointedParty": "PL", "year": 2020, "fspAppointed": false, "status": "serving", "background": "Career judge." },
+      { "name": "André Mendonça", "appointedBy": "Jair Bolsonaro", "appointedParty": "PL", "year": 2021, "fspAppointed": false, "status": "serving", "background": "Presbyterian pastor; former Advocate-General and justice minister under Bolsonaro ('terribly evangelical' seat)." },
+      { "name": "Cristiano Zanin", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2023, "fspAppointed": true, "status": "serving", "background": "Lula's former personal defence lawyer in the Lava Jato cases." },
+      { "name": "Flávio Dino", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2024, "fspAppointed": true, "status": "serving", "background": "Career politician — ex-PCdoB, former PSB governor of Maranhão and Lula's justice minister." },
+      { "name": "Jorge Messias", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2025, "fspAppointed": true, "status": "nominated (confirmation pending) for Barroso's seat", "background": "Advocate-General of the Union under Lula." }
+    ]
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supremo_Tribunal_Federal",
