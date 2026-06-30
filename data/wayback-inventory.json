@@ -1,9 +1,9 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-06-30T12:15:41.954Z",
-  "latestCapture": "20260520180831",
-  "uniqueUrls": 35266,
-  "usefulUrls": 3311,
+  "lastRun": "2026-06-30T12:34:26.517Z",
+  "latestCapture": "20260614014754",
+  "uniqueUrls": 35273,
+  "usefulUrls": 3314,
   "truncated": false,
   "entries": [
     {
@@ -3913,6 +3913,15 @@
       "useful": true
     },
     {
+      "url": "http://forodesaopaulo.org/declaracion-final-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-2016/",
+      "firstSeen": "20260524144252",
+      "lastSeen": "20260614003014",
+      "snapshots": 3,
+      "statuscode": "403",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
       "url": "http://forodesaopaulo.org/declaracion-final-del-xxiii-encuentro-del-foro-de-sao-",
       "firstSeen": "20250518001815",
       "lastSeen": "20250518001815",
@@ -4656,6 +4665,15 @@
       "lastSeen": "20200514014323",
       "snapshots": 1,
       "statuscode": "200",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "http://forodesaopaulo.org/documento-base-base-document/",
+      "firstSeen": "20260524144256",
+      "lastSeen": "20260614003013",
+      "snapshots": 3,
+      "statuscode": "403",
       "mimetype": "text/html",
       "useful": true
     },
@@ -6025,6 +6043,15 @@
       "snapshots": 1,
       "statuscode": "200",
       "mimetype": "text/xml",
+      "useful": true
+    },
+    {
+      "url": "http://forodesaopaulo.org/partidos/",
+      "firstSeen": "20260524144256",
+      "lastSeen": "20260614003013",
+      "snapshots": 3,
+      "statuscode": "403",
+      "mimetype": "text/html",
       "useful": true
     },
     {
@@ -8559,8 +8586,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/06/Declaraci%C3%B3n-Final-2016.pdf",
       "firstSeen": "20170302004406",
-      "lastSeen": "20170302004406",
-      "snapshots": 1,
+      "lastSeen": "20260614014754",
+      "snapshots": 3,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -12348,8 +12375,8 @@
     {
       "url": "https://forodesaopaulo.org/declaracion-de-la-reunion-virtual-del-grupo-de-trabajo-del-foro-de-sao-paulo/",
       "firstSeen": "20200815092847",
-      "lastSeen": "20200815092847",
-      "snapshots": 1,
+      "lastSeen": "20260605154100",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": true
@@ -36466,6 +36493,15 @@
       "useful": false
     },
     {
+      "url": "http://forodesaopaulo.org/",
+      "firstSeen": "20260606233348",
+      "lastSeen": "20260606233348",
+      "snapshots": 1,
+      "statuscode": "403",
+      "mimetype": "text/html",
+      "useful": false
+    },
+    {
       "url": "http://forodesaopaulo.org/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1443653735006",
       "firstSeen": "20150930225546",
       "lastSeen": "20150930225546",
@@ -37377,8 +37413,8 @@
     {
       "url": "http://forodesaopaulo.org/?cat=382",
       "firstSeen": "20120609024904",
-      "lastSeen": "20120609024904",
-      "snapshots": 1,
+      "lastSeen": "20260604105717",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": false
@@ -38520,8 +38556,8 @@
     {
       "url": "http://forodesaopaulo.org/?dl_id=196",
       "firstSeen": "20131115225851",
-      "lastSeen": "20131115225851",
-      "snapshots": 1,
+      "lastSeen": "20260607200206",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/download",
       "useful": false
@@ -40707,8 +40743,8 @@
     {
       "url": "http://forodesaopaulo.org/?p=",
       "firstSeen": "20210506062353",
-      "lastSeen": "20210506062353",
-      "snapshots": 1,
+      "lastSeen": "20260604151118",
+      "snapshots": 2,
       "statuscode": "301",
       "mimetype": "text/html",
       "useful": false
@@ -41502,6 +41538,15 @@
       "lastSeen": "20160619031719",
       "snapshots": 1,
       "statuscode": "301",
+      "mimetype": "text/html",
+      "useful": false
+    },
+    {
+      "url": "http://forodesaopaulo.org/?p=1573",
+      "firstSeen": "20260604151116",
+      "lastSeen": "20260604151116",
+      "snapshots": 1,
+      "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
     },
@@ -44742,6 +44787,15 @@
       "lastSeen": "20121217145224",
       "snapshots": 1,
       "statuscode": "200",
+      "mimetype": "text/html",
+      "useful": false
+    },
+    {
+      "url": "http://forodesaopaulo.org/?page_id=52",
+      "firstSeen": "20260524181342",
+      "lastSeen": "20260614003443",
+      "snapshots": 3,
+      "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
     },
@@ -57384,8 +57438,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/plugins/wp-downloadmanager/images/ext/pdf.gif",
       "firstSeen": "20110716012439",
-      "lastSeen": "20110716012439",
-      "snapshots": 1,
+      "lastSeen": "20260607200206",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "image/gif",
       "useful": false
@@ -94462,6 +94516,15 @@
       "useful": false
     },
     {
+      "url": "http://www.forodesaopaulo.org/",
+      "firstSeen": "20260606224929",
+      "lastSeen": "20260606224929",
+      "snapshots": 1,
+      "statuscode": "403",
+      "mimetype": "text/html",
+      "useful": false
+    },
+    {
       "url": "http://www.forodesaopaulo.org/inscripcion/background_1.jpg",
       "firstSeen": "20130809152643",
       "lastSeen": "20130809152643",
@@ -104778,8 +104841,8 @@
     {
       "url": "https://forodesaopaulo.org/comunicado-en-defensa-de-la-soberania-de-nicaragua/?fbclid=IwAR2BjRjF5uSkUPG0rBarpAKXxkKAaOlIQpF017IReMwMMuDr7TzK4YbcX3I",
       "firstSeen": "20220705152722",
-      "lastSeen": "20220705152722",
-      "snapshots": 1,
+      "lastSeen": "20260605063253",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": false
@@ -109458,8 +109521,8 @@
     {
       "url": "https://forodesaopaulo.org/fuera-almagro-nota-del-grupo-de-trabajo-del-fsp/?fbclid=IwAR1_jsJVR4w0wRO2wFbYWlMdlTr1lVfio2xID7vxhMDqhw5Fk4h53X5wdcM",
       "firstSeen": "20220127032714",
-      "lastSeen": "20220127032714",
-      "snapshots": 1,
+      "lastSeen": "20260605145714",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": false
@@ -112392,8 +112455,8 @@
     {
       "url": "https://forodesaopaulo.org/llamado-mundial-para-el-respeto-a-venezuela-por-parte-de-la-union-europea/embed/",
       "firstSeen": "20200715221500",
-      "lastSeen": "20200715221500",
-      "snapshots": 1,
+      "lastSeen": "20260520180831",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": false
@@ -297820,7 +297883,7 @@
       "url": "https://forodesaopaulo.org/wp-content/uploads/2020/07/image-2-300x139.png",
       "firstSeen": "20260520180831",
       "lastSeen": "20260520180831",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -297856,7 +297919,7 @@
       "url": "https://forodesaopaulo.org/wp-content/uploads/2020/07/image-3-300x181.png",
       "firstSeen": "20260520180831",
       "lastSeen": "20260520180831",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -297892,7 +297955,7 @@
       "url": "https://forodesaopaulo.org/wp-content/uploads/2020/07/image-5-300x201.png",
       "firstSeen": "20260520180831",
       "lastSeen": "20260520180831",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -297910,7 +297973,7 @@
       "url": "https://forodesaopaulo.org/wp-content/uploads/2020/07/image-5.png",
       "firstSeen": "20260520180831",
       "lastSeen": "20260520180831",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -297937,7 +298000,7 @@
       "url": "https://forodesaopaulo.org/wp-content/uploads/2020/07/image-6-768x551.png",
       "firstSeen": "20260520180831",
       "lastSeen": "20260520180831",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -297973,7 +298036,7 @@
       "url": "https://forodesaopaulo.org/wp-content/uploads/2020/07/image-7-768x492.png",
       "firstSeen": "20260520180831",
       "lastSeen": "20260520180831",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -297982,7 +298045,7 @@
       "url": "https://forodesaopaulo.org/wp-content/uploads/2020/07/image-7.png",
       "firstSeen": "20260520180831",
       "lastSeen": "20260520180831",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
