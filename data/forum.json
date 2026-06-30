@@ -65,6 +65,32 @@
     "Ecuador", "El Salvador", "Guatemala", "Haiti", "Mexico", "Nicaragua", "Peru",
     "Puerto Rico", "Uruguay", "Venezuela"
   ],
+  "relatedOrganizations": [
+    {
+      "name": "Grupo de Puebla (Puebla Group)",
+      "founded": "July 2019",
+      "place": "Puebla, Mexico",
+      "composition": "Individual progressive leaders — presidents, ex-presidents, ministers, parliamentarians and intellectuals — rather than political parties.",
+      "relationToForum": "A distinct, complementary organization — NOT a renaming of the Foro de São Paulo. Launched in 2019 with the help of Foro-aligned networks; it notably does not include parties from Venezuela, Cuba and Bolivia, partly to distance itself from the authoritarian-left image. Both organizations remain active and have met side by side, e.g. in Tegucigalpa, June 2024.",
+      "url": "https://www.grupodepuebla.org/"
+    },
+    {
+      "name": "Progressive International",
+      "founded": "2020",
+      "place": "Global",
+      "composition": "Global network of left/progressive movements, parties and figures.",
+      "relationToForum": "Allied international network; co-present with the Foro and the Puebla Group at the June 2024 Tegucigalpa gatherings. Separate organization with a worldwide (not Latin America–specific) scope.",
+      "url": "https://progressive.international/"
+    },
+    {
+      "name": "CELAC Social",
+      "founded": "2010s",
+      "place": "Latin America and the Caribbean",
+      "composition": "Social-movements space associated with the Community of Latin American and Caribbean States (CELAC), an intergovernmental body.",
+      "relationToForum": "Allied civil-society space, distinct from the Foro (which is a party forum, not an intergovernmental one). Co-present at the June 2024 Tegucigalpa gatherings.",
+      "url": null
+    }
+  ],
   "references": [
     { "title": "São Paulo Forum — Wikipedia (English)",                         "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum", "publisher": "Wikipedia", "type": "encyclopedia" },
     { "title": "Foro de São Paulo — Wikipédia (Português)",                     "url": "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo", "publisher": "Wikipédia", "type": "encyclopedia" },
@@ -74,6 +100,9 @@
     { "title": "Thirty years ago, the São Paulo Forum gave the left heart",     "url": "https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart", "publisher": "Granma (Cuba)", "type": "news/affiliated" },
     { "title": "The Marxist Influence of the São Paulo Forum in Latin America", "url": "https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america", "publisher": "The Heritage Foundation", "type": "commentary (critical)" },
     { "title": "Scandals erode Sao Paulo Forum's leftist grip",                 "url": "https://www.gisreportsonline.com/r/sao-paulo-forum/", "publisher": "GIS Reports", "type": "analysis" },
-    { "title": "Foro de São Paulo — InfoEscola",                                "url": "https://www.infoescola.com/politica/foro-de-sao-paulo/", "publisher": "InfoEscola", "type": "encyclopedia" }
+    { "title": "Foro de São Paulo — InfoEscola",                                "url": "https://www.infoescola.com/politica/foro-de-sao-paulo/", "publisher": "InfoEscola", "type": "encyclopedia" },
+    { "title": "El Grupo de Puebla: ¿el relevo del Foro de Sao Paulo?",         "url": "https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/", "publisher": "Infobae", "type": "analysis (Foro vs. Puebla Group)" },
+    { "title": "Las diferencias entre el grupo de Puebla y el foro de Sao Paulo", "url": "https://comitedelectura.pe/blogs/noticias/las-diferencias-entre-el-grupo-de-puebla-y-el-foro-de-sao-paulo", "publisher": "Comité de Lectura", "type": "analysis (Foro vs. Puebla Group)" },
+    { "title": "Foro de São Paulo y Grupo de Puebla, en Honduras (June 2024)",  "url": "https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/", "publisher": "Infobae", "type": "news (both orgs met in 2024)" }
   ]
 }
