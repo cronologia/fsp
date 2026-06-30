@@ -41,7 +41,8 @@ chronology facts remains a curated edit to `data/forum.json`.
   on a cadence, independent of any contributor's environment.
 - **Positive:** PR runs prove the pipeline works and surface counts without
   mutating the repo; scheduled runs keep data fresh.
-- **Negative:** Adds a CI workflow and two generated artifacts to maintain; the CDX
-  query is capped (default 10k URLs) and may need pagination for full coverage.
+- **Negative:** Adds a CI workflow and two generated artifacts to maintain. A full
+  scan paginates the whole archive via the CDX `resumeKey` cursor (bounded by a
+  `--max-pages` safety limit), so the committed inventory can grow large.
 - **Neutral:** Save Page Now rate limits mean some references can fail a given run
   and get picked up on the next; the script exits non-zero so this is visible.
