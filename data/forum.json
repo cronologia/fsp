@@ -91,6 +91,35 @@
       "url": null
     }
   ],
+  "criticalPerspectives": {
+    "note": "A prominent strand of Brazilian commentary frames the Foro de São Paulo as a covert revolutionary project coordinating the Latin American left — and, in some accounts, armed movements such as the Colombian FARC and Chile's MIR. The works below are influential in that debate. Mainstream and academic sources describe the FSP as an open conference of left parties and regard the stronger claims as contested. The statements here are attributed to their authors, not asserted by this project as established fact.",
+    "works": [
+      {
+        "author": "Olavo de Carvalho",
+        "work": "O Foro de São Paulo: A ascensão do comunismo latino-americano",
+        "year": "2022",
+        "publisher": "Vide Editorial (posthumous compilation)",
+        "url": "https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861",
+        "thesis": "Argues the FSP is a decades-long project to advance communism across Latin America, which he linked to armed groups such as the FARC and Chile's MIR. Carvalho popularized the FSP-as-conspiracy thesis in Brazil; the framing is widely contested by mainstream sources."
+      },
+      {
+        "author": "Graça Salgueiro",
+        "work": "O Foro de São Paulo: A mais perigosa organização revolucionária das Américas",
+        "year": null,
+        "publisher": "Rádio Vox — Observatório Latino",
+        "url": "https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo",
+        "thesis": "Presents the FSP as a revolutionary organization seeking power across the Americas, including through influence over media. Developed on her Rádio Vox program Observatório Latino."
+      },
+      {
+        "author": "Heitor De Paola",
+        "work": "Commentary on the FSP, the 'Latin American axis' and the New World Order",
+        "year": null,
+        "publisher": "Rádio Vox / Observatório Latino",
+        "url": "https://radiovox.org/",
+        "thesis": "Frames the FSP within a wider regional and global strategy of the left."
+      }
+    ]
+  },
   "references": [
     { "title": "São Paulo Forum — Wikipedia (English)",                         "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum", "publisher": "Wikipedia", "type": "encyclopedia" },
     { "title": "Foro de São Paulo — Wikipédia (Português)",                     "url": "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo", "publisher": "Wikipédia", "type": "encyclopedia" },
@@ -103,6 +132,9 @@
     { "title": "Foro de São Paulo — InfoEscola",                                "url": "https://www.infoescola.com/politica/foro-de-sao-paulo/", "publisher": "InfoEscola", "type": "encyclopedia" },
     { "title": "El Grupo de Puebla: ¿el relevo del Foro de Sao Paulo?",         "url": "https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/", "publisher": "Infobae", "type": "analysis (Foro vs. Puebla Group)" },
     { "title": "Las diferencias entre el grupo de Puebla y el foro de Sao Paulo", "url": "https://comitedelectura.pe/blogs/noticias/las-diferencias-entre-el-grupo-de-puebla-y-el-foro-de-sao-paulo", "publisher": "Comité de Lectura", "type": "analysis (Foro vs. Puebla Group)" },
-    { "title": "Foro de São Paulo y Grupo de Puebla, en Honduras (June 2024)",  "url": "https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/", "publisher": "Infobae", "type": "news (both orgs met in 2024)" }
+    { "title": "Foro de São Paulo y Grupo de Puebla, en Honduras (June 2024)",  "url": "https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/", "publisher": "Infobae", "type": "news (both orgs met in 2024)" },
+    { "title": "O Foro de São Paulo: A ascensão do comunismo latino-americano", "url": "https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861", "publisher": "Olavo de Carvalho (Vide Editorial, 2022)", "type": "book (critical perspective)" },
+    { "title": "O Foro de São Paulo: A mais perigosa organização revolucionária das Américas", "url": "https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo", "publisher": "Graça Salgueiro", "type": "book (critical perspective)" },
+    { "title": "Rádio Vox — Observatório Latino", "url": "https://radiovox.org/", "publisher": "Rádio Vox (Graça Salgueiro, Heitor De Paola)", "type": "media/podcast (critical perspective)" }
   ]
 }
