@@ -1,9 +1,75 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "note": "Machine-generated cache of Internet Archive Wayback snapshots, keyed by reference URL. Do not edit by hand — run `node scripts/archive-refs.js` (in an environment with access to archive.org) to populate or refresh. build.js merges these in to render archived fallback links.",
-    "lastRun": null,
-    "count": 0
+    "lastRun": "2026-06-30T11:42:48.151Z",
+    "count": 11
   },
-  "snapshots": {}
+  "snapshots": {
+    "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
+      "archiveUrl": "https://web.archive.org/web/20260620160759/https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum",
+      "timestamp": "20260620160759",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:49.563Z"
+    },
+    "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo": {
+      "archiveUrl": "https://web.archive.org/web/20260618203344/https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+      "timestamp": "20260618203344",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:49.877Z"
+    },
+    "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/": {
+      "archiveUrl": "https://web.archive.org/web/20230630151335/https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
+      "timestamp": "20230630151335",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:49.976Z"
+    },
+    "https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/": {
+      "archiveUrl": "https://web.archive.org/web/20250919173312/https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/",
+      "timestamp": "20250919173312",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.063Z"
+    },
+    "https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/": {
+      "archiveUrl": "https://web.archive.org/web/20251225164525/https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/",
+      "timestamp": "20251225164525",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.146Z"
+    },
+    "https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart": {
+      "archiveUrl": "https://web.archive.org/web/20250203095126/https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart",
+      "timestamp": "20250203095126",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.227Z"
+    },
+    "https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america": {
+      "archiveUrl": "https://web.archive.org/web/20260420085130/https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america",
+      "timestamp": "20260420085130",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.318Z"
+    },
+    "https://www.gisreportsonline.com/r/sao-paulo-forum/": {
+      "archiveUrl": "https://web.archive.org/web/20260314020258/https://www.gisreportsonline.com/r/sao-paulo-forum/",
+      "timestamp": "20260314020258",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.411Z"
+    },
+    "https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/": {
+      "archiveUrl": "https://web.archive.org/web/20231024134035/https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/",
+      "timestamp": "20231024134035",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:42:47.977Z"
+    },
+    "https://comitedelectura.pe/blogs/noticias/las-diferencias-entre-el-grupo-de-puebla-y-el-foro-de-sao-paulo": {
+      "archiveUrl": "https://web.archive.org/web/20250217012249/https://comitedelectura.pe/blogs/noticias/las-diferencias-entre-el-grupo-de-puebla-y-el-foro-de-sao-paulo",
+      "timestamp": "20250217012249",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:42:48.068Z"
+    },
+    "https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/": {
+      "archiveUrl": "https://web.archive.org/web/20260630113004/https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/",
+      "timestamp": "20260630113004",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:42:48.151Z"
+    }
+  }
 }
