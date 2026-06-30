@@ -71,8 +71,15 @@
     "size": 5,
     "appointmentMethod": "Elected by a two-thirds majority of the General Assembly; 10-year terms.",
     "fspEraChanges": "No court-packing. The court remained independent during FA governments — notably its 2013 ruling striking down parts of a law on prosecution of past (dictatorship-era) crimes ran against the FA government’s position.",
-    "stillServing": "Membership rotates on fixed terms; no FSP-driven structural change.",
-    "verified": false
+    "stillServing": "Membership rotates on fixed 10-year terms; no FSP-driven structural change — a contrast case of judicial independence.",
+    "verified": true,
+    "courtHistory": [
+      { "period": "Before 1990 (context)", "type": "composition", "event": "The modern SCJ dates to 1907; the 1973–1985 civic-military dictatorship subordinated the judiciary, restored at the 1985 transition.", "size": 5, "appointingGovernment": "1907 founding / 1973–85 dictatorship", "fspRelated": false, "verified": false },
+      { "period": "1990–2004", "type": "composition", "event": "Under the traditional (Colorado/Nacional) governments the 5-member SCJ operated normally; members elected by a 2/3 majority of the General Assembly.", "size": 5, "appointingGovernment": "Colorado / Nacional", "fspRelated": false, "verified": false },
+      { "period": "2005–present", "type": "composition", "event": "Across the FA governments (2005–2020, 2025–) there was NO court-packing; the court kept its independence — notably its 2013 ruling striking down parts of a law on prosecuting dictatorship-era crimes ran AGAINST the FA government's position.", "size": 5, "appointingGovernment": "Frente Amplio (and rotation)", "fspRelated": true, "verified": true }
+    ],
+    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"],
+    "justicesNote": "Five justices on fixed 10-year terms, elected by a 2/3 Assembly majority; individual members rotate and are not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"

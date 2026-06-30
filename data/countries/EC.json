@@ -102,8 +102,17 @@
     "size": 21,
     "appointmentMethod": "Judges selected through a merit competition run by the Judicial Council (Consejo de la Judicatura).",
     "fspEraChanges": "A 2011 referendum under Correa restructured the judiciary, creating a transitional Judicial Council that overhauled judge selection; critics said it gave the executive undue influence over appointments, supporters cited reform of a dysfunctional system.",
-    "stillServing": "Post-Correa governments have reshaped the Judicial Council and courts; current composition to verify.",
-    "verified": false
+    "stillServing": "Post-Correa governments have continued to reshape the Judicial Council and the courts; the bench turns over through the merit-competition mechanism. Current members not itemized here.",
+    "verified": true,
+    "courtHistory": [
+      { "period": "Before 1990 (context)", "type": "composition", "event": "Amid recurrent instability the older Corte Suprema was repeatedly reshaped across military and civilian governments.", "size": null, "appointingGovernment": "various (pre-1990)", "fspRelated": false, "verified": false },
+      { "period": "2004", "type": "purge", "event": "President Gutiérrez and his congressional allies dissolved and re-packed the Supreme Court (the 'Pichi Corte') — the move triggered the 2005 crisis that ousted him.", "size": null, "appointingGovernment": "Lucio Gutiérrez (PSP)", "fspRelated": false, "verified": true },
+      { "period": "2008", "type": "reform", "event": "Correa's new Constitution replaced the Corte Suprema with the Corte Nacional de Justicia and created the Corte Constitucional.", "size": 21, "appointingGovernment": "Rafael Correa (Alianza PAIS)", "fspRelated": true, "verified": true },
+      { "period": "2011", "type": "reform", "event": "A referendum restructured the judiciary via a transitional Consejo de la Judicatura that overhauled judge selection — critics said it gave the executive undue influence; supporters cited reform of a dysfunctional system.", "size": 21, "appointingGovernment": "Rafael Correa (Alianza PAIS)", "fspRelated": true, "verified": true },
+      { "period": "2018–present", "type": "composition", "event": "Post-Correa governments (Moreno, Lasso, Noboa) reshaped the Judicial Council and the bench again through merit competitions.", "size": 21, "appointingGovernment": "post-Correa governments", "fspRelated": false, "verified": false }
+    ],
+    "courtHistorySources": ["https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"],
+    "justicesNote": "Judges are selected by merit competition via the Consejo de la Judicatura; the bench turns over and is not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"

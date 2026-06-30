@@ -73,8 +73,15 @@
     "size": 21,
     "appointmentMethod": "Justices proposed by the Court itself, chosen by the President, and confirmed by 2/3 of the Senate.",
     "fspEraChanges": "No court-packing by left governments. Judicial appointments followed the regular mechanism. Two constituent processes (2021–2023) to replace the 1980 constitution both failed at referendum, leaving the judiciary’s structure unchanged.",
-    "stillServing": "Court independent; no FSP-driven structural change.",
-    "verified": false
+    "stillServing": "The 21-member court is independent; no FSP-driven structural change — a contrast case. Members are not itemized here.",
+    "verified": true,
+    "courtHistory": [
+      { "period": "Before 1990 (context)", "type": "composition", "event": "The Corte Suprema dates to the 19th century; during the 1973–1990 Pinochet dictatorship the court was widely criticised for acquiescing to the regime, and the 1980 Constitution shaped its design.", "size": null, "appointingGovernment": "1973–90 dictatorship", "fspRelated": false, "verified": false },
+      { "period": "1997", "type": "reform", "event": "A transition-era reform enlarged the court to 21 members and set the mixed appointment mechanism (Court proposes, President chooses, Senate confirms by 2/3).", "size": 21, "appointingGovernment": "Frei Ruiz-Tagle (Concertación)", "fspRelated": false, "verified": true },
+      { "period": "2000–present", "type": "composition", "event": "Across the Socialist/left governments (Lagos, Bachelet, Boric) there was NO court-packing; appointments followed the regular mechanism. The 2021–2023 constituent processes to replace the 1980 Constitution both failed at referendum, leaving the judiciary's structure unchanged.", "size": 21, "appointingGovernment": "various (incl. PS/left)", "fspRelated": true, "verified": true }
+    ],
+    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Chile"],
+    "justicesNote": "Twenty-one justices appointed via the mixed mechanism; individual members are not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Chile"
