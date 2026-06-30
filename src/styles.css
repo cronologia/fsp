@@ -87,6 +87,9 @@ td.year { font-weight: 700; }
 td.notes { color: var(--muted); font-size: .85rem; max-width: 24ch; }
 .muted { color: var(--muted); }
 .flag { color: var(--accent); font-weight: 700; cursor: help; }
+.decl-link { color: var(--accent); text-decoration: none; font-size: .82rem; white-space: nowrap; }
+.decl-link:hover { text-decoration: underline; }
+td.heads { color: var(--muted); font-size: .85rem; }
 
 /* Parties */
 .party-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }

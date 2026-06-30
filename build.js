@@ -52,12 +52,16 @@ function renderMeetingsRows(meetings) {
       const dates = m.dates
         ? `${esc(m.dates)}${m.datesVerified ? '' : ' <span class="flag" title="dates not verified against a primary source">?</span>'}`
         : '<span class="muted">year only</span>';
+      const decl = m.declarationUrl
+        ? `<a class="decl-link" href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank" title="Final declaration (Internet Archive)">📄 declaration</a>`
+        : '<span class="muted">—</span>';
       return `        <tr>
           <td class="edition">${esc(m.edition)}</td>
           <td class="year">${esc(m.year)}</td>
           <td>${dates}</td>
           <td>${esc(m.city)}</td>
           <td>${esc(m.country)}</td>
+          <td>${decl}</td>
           <td class="notes">${esc(m.notes)}</td>
         </tr>`;
     })
@@ -106,6 +110,35 @@ function renderRelated(orgs) {
     .join('\n');
 }
 
+function renderMembersInGovernment(mg) {
+  if (!mg || !mg.entries || !mg.entries.length) return '';
+  const rows = mg.entries
+    .map(
+      (e) => `        <tr>
+          <td>${esc(e.country)}</td>
+          <td>${esc(e.party)}</td>
+          <td>${esc(e.fspStatus)}</td>
+          <td class="heads">${esc(e.heads)}</td>
+        </tr>`
+    )
+    .join('\n');
+  return `    <section id="government">
+      <h2>Member parties in government</h2>
+      <p class="section-intro">${esc(mg.note)}</p>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead>
+            <tr><th>Country</th><th>Party</th><th>FSP status</th><th>Heads of state (party)</th></tr>
+          </thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>
+    </section>
+`;
+}
+
 function renderCriticalPerspectives(cp) {
   if (!cp || !cp.works || !cp.works.length) return '';
   const cards = cp.works
@@ -123,7 +156,7 @@ function renderCriticalPerspectives(cp) {
     })
     .join('\n');
   return `    <section id="perspectives">
-      <h2>Critical perspectives</h2>
+      <h2>Analyses &amp; perspectives</h2>
       <div class="notice notice-attribution">${esc(cp.note)}</div>
       <div class="party-grid">
 ${cards}
@@ -214,7 +247,7 @@ ${renderTimeline(data.meetings)}
       <div class="table-scroll">
         <table class="meetings">
           <thead>
-            <tr><th>Edition</th><th>Year</th><th>Dates</th><th>City</th><th>Country</th><th>Notes</th></tr>
+            <tr><th>Edition</th><th>Year</th><th>Dates</th><th>City</th><th>Country</th><th>Declaration</th><th>Notes</th></tr>
           </thead>
           <tbody>
 ${renderMeetingsRows(data.meetings)}
@@ -233,6 +266,7 @@ ${renderParties(data.parties)}
       <p class="countries">${data.participatingCountries.map(esc).join(' · ')}</p>
     </section>
 
+${renderMembersInGovernment(data.membersInGovernment)}
     <section id="related">
       <h2>Related organizations</h2>
       <p class="section-intro">The Foro de São Paulo is often confused with newer left/progressive networks. It has <strong>not</strong> been renamed — these are distinct, coexisting organizations that sometimes coordinate or meet alongside it.</p>
