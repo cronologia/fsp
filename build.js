@@ -242,6 +242,40 @@ ${cards}
 `;
 }
 
+function renderCourtHistory(sc) {
+  if (!sc || !sc.courtHistory || !sc.courtHistory.length) return '';
+  const rows = sc.courtHistory
+    .map((h) => {
+      const cls = h.fspRelated ? ' class="fsp-row"' : '';
+      const flag = h.verified === false ? ' <span class="flag" title="broad characterization; verify against a primary source">?</span>' : '';
+      const sizeCell = h.size != null ? `${esc(h.size)}` : '<span class="muted">—</span>';
+      return `        <tr${cls}>
+          <td>${esc(h.period)}</td>
+          <td><span class="ch-type ch-${esc(h.type)}">${esc(h.type)}</span></td>
+          <td>${esc(h.event)}${flag}</td>
+          <td>${sizeCell}</td>
+          <td class="notes">${esc(h.appointingGovernment || '')}</td>
+        </tr>`;
+    })
+    .join('\n');
+  const src = (sc.courtHistorySources || [])
+    .map((u) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source</a>`)
+    .join(' · ');
+  return `    <section>
+      <h2>Court history since 1900</h2>
+      <p class="section-intro">Structural changes to the court over time — foundings, size changes, court-packings, purges and reforms. <span class="ch-type ch-packing">packing</span>/<span class="ch-type ch-purge">purge</span> mark expansions and forced removals. ${src ? `Sources: ${src}.` : ''}</p>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead><tr><th>Period</th><th>Type</th><th>Change</th><th>Seats</th><th>Government</th></tr></thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>
+    </section>
+`;
+}
+
 function renderJustices(sc) {
   if (!sc || !sc.justices || !sc.justices.length) return '';
   const rows = sc.justices
@@ -329,6 +363,7 @@ ${rows}
         <dt>Verified</dt><dd>${sc.verified ? 'yes — sourced' : 'no — to verify against primary sources'}</dd>
       </dl>
     </section>
+${renderCourtHistory(sc)}
 ${renderJustices(sc)}
     <section>
       <h2>Sources</h2>

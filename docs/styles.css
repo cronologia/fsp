@@ -93,6 +93,11 @@ td.heads { color: var(--muted); font-size: .85rem; }
 tr.fsp-row { background: #eaf4ec !important; }
 tr.fsp-row td { font-weight: 500; }
 .fsp-badge { display: inline-block; background: #1b7a3d; color: #fff; font-size: .65rem; font-weight: 700; padding: .1rem .4rem; border-radius: 999px; vertical-align: middle; letter-spacing: .03em; }
+.ch-type { display: inline-block; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; padding: .08rem .4rem; border-radius: 4px; background: #e4e0d8; color: #444; white-space: nowrap; }
+.ch-packing { background: #b8252b; color: #fff; }
+.ch-purge { background: #7a1418; color: #fff; }
+.ch-reform { background: #2f5fb0; color: #fff; }
+.ch-founding { background: #1b7a3d; color: #fff; }
 
 /* Parties */
 .party-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
