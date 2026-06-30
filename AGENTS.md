@@ -15,13 +15,17 @@ project is built this way — read them before changing architecture.
 ## Repository map
 
 ```
-data/forum.json        SOURCE OF TRUTH — meetings, parties, references (hand-edited)
-data/archives.json     Wayback snapshot cache (GENERATED — do not hand-edit)
-src/styles.css         Stylesheet (copied into the build)
-scripts/archive-refs.js Archives reference URLs to the Wayback Machine
-build.js               Compiler: data/* -> docs/
-docs/                  COMPILED OUTPUT, served by GitHub Pages (committed)
-docs/adrs/             Architecture Decision Records
+data/forum.json          SOURCE OF TRUTH — meetings, parties, references (hand-edited)
+data/archives.json       Wayback snapshot cache (GENERATED — do not hand-edit)
+data/wayback-inventory.json  Index of forodesaopaulo.org captures (GENERATED)
+src/styles.css           Stylesheet (copied into the build)
+scripts/archive-refs.js  Archives reference URLs to the Wayback Machine
+scripts/wayback-harvest.js  Indexes archived captures of the official FSP site
+.github/workflows/wayback.yml  Runs the harvesting pipeline on GitHub's runners
+docs-research/           Generated research outputs (Wayback inventory, etc.)
+build.js                 Compiler: data/* -> docs/
+docs/                    COMPILED OUTPUT, served by GitHub Pages (committed)
+docs/adrs/               Architecture Decision Records
 ```
 
 ## Common commands
@@ -30,8 +34,13 @@ docs/adrs/             Architecture Decision Records
 node build.js                       # compile data/* -> docs/
 node scripts/archive-refs.js        # archive any reference missing a Wayback snapshot
 node scripts/archive-refs.js --dry-run
+node scripts/wayback-harvest.js     # index archived captures of forodesaopaulo.org
 python3 -m http.server -d docs 8000 # local preview at http://localhost:8000
 ```
+
+The harvesting scripts need outbound access to `archive.org`; if your environment
+blocks it, run the **Wayback collection** workflow instead (Actions → Run workflow),
+which executes on GitHub's runners. See `README.md` → "Harvesting historical content".
 
 There is **no `npm install`** — the toolchain is intentionally dependency-free
 (see ADR 0001). Don't add runtime dependencies without a new ADR.

@@ -9,13 +9,20 @@
  * human (or a follow-up pass) can pull the high-value pages — meeting pages,
  * "declaração/declaración final", member lists, history pages.
  *
+ * INCREMENTAL BY DESIGN: the inventory (data/wayback-inventory.json) is committed
+ * to the repo. On each run the script loads it, asks the CDX API only for captures
+ * NEWER than the last one it has seen (via the `from=` watermark), and merges the
+ * delta in. A full re-scan only happens the first time, or when forced with --full.
+ *
  * Output:
- *   data/wayback-inventory.json       full machine-readable inventory
+ *   data/wayback-inventory.json       machine-readable inventory (committed, incremental)
  *   docs-research/wayback-inventory.md human-readable summary, useful pages first
  *
  * Usage:
- *   node scripts/wayback-harvest.js
- *   node scripts/wayback-harvest.js --domain=forodesaopaulo.org --limit=10000
+ *   node scripts/wayback-harvest.js                 # incremental update (full if no inventory yet)
+ *   node scripts/wayback-harvest.js --full          # force a complete re-scan
+ *   node scripts/wayback-harvest.js --limit=20000   # widen the CDX page size
+ *   node scripts/wayback-harvest.js --domain=forodesaopaulo.org
  *
  * Network: requires outbound HTTPS to web.archive.org. Some sandboxed/CI
  * environments block archive.org by egress policy — run where the Internet
@@ -44,6 +51,7 @@ const argVal = (name, fallback) => {
 const DOMAIN = argVal('domain', 'forodesaopaulo.org');
 const LIMIT = parseInt(argVal('limit', '10000'), 10) || 10000;
 const TIMEOUT_MS = (parseInt(argVal('timeout', '90'), 10) || 90) * 1000;
+const FULL = args.includes('--full');
 
 // Keywords that flag a capture as high-value for the chronology.
 const USEFUL_PATTERNS = [
@@ -54,28 +62,33 @@ const USEFUL_PATTERNS = [
   /documento/i, /resoluc/i, /acta/i,
 ];
 
-function isUseful(url) {
-  return USEFUL_PATTERNS.some((re) => re.test(url));
+const isUseful = (url) => USEFUL_PATTERNS.some((re) => re.test(url));
+const waybackUrl = (timestamp, original) => `https://web.archive.org/web/${timestamp}/${original}`;
+const fmtTs = (ts) => (!ts || ts.length < 8 ? ts || '' : `${ts.slice(0, 4)}-${ts.slice(4, 6)}-${ts.slice(6, 8)}`);
+
+/** Load the existing inventory (committed), returning a url -> entry map + watermark. */
+function loadExisting() {
+  try {
+    const parsed = JSON.parse(fs.readFileSync(OUT_JSON, 'utf8'));
+    const byUrl = new Map();
+    for (const e of parsed.entries || []) byUrl.set(e.url, e);
+    return { byUrl, watermark: parsed.latestCapture || null };
+  } catch {
+    return { byUrl: new Map(), watermark: null };
+  }
 }
 
-function waybackUrl(timestamp, original) {
-  return `https://web.archive.org/web/${timestamp}/${original}`;
-}
-
-function fmtTs(ts) {
-  if (!ts || ts.length < 8) return ts || '';
-  return `${ts.slice(0, 4)}-${ts.slice(4, 6)}-${ts.slice(6, 8)}`;
-}
-
-async function fetchCdx() {
+/** Query the CDX API for one page of results. Returns the raw rows (incl. header). */
+async function fetchCdx({ from, collapse }) {
   const params = new URLSearchParams({
     url: DOMAIN,
     matchType: 'domain',
     output: 'json',
-    collapse: 'urlkey',
-    fl: 'original,timestamp,statuscode,mimetype,digest',
+    fl: 'original,timestamp,statuscode,mimetype',
     limit: String(LIMIT),
   });
+  if (collapse) params.set('collapse', 'urlkey');
+  if (from) params.set('from', from);
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
@@ -90,48 +103,55 @@ async function fetchCdx() {
   }
 }
 
-function buildInventory(rows) {
-  // First row is the header (original,timestamp,statuscode,mimetype,digest).
-  const [, ...data] = rows;
-  // Group by original URL, tracking earliest/latest capture and capture count.
-  const byUrl = new Map();
+/** Merge CDX rows into the byUrl map. Returns counts of added/updated URLs. */
+function mergeRows(byUrl, rows) {
+  const [, ...data] = rows; // drop header
+  let added = 0;
+  let updated = 0;
   for (const [original, timestamp, statuscode, mimetype] of data) {
-    if (!byUrl.has(original)) {
+    const existing = byUrl.get(original);
+    if (!existing) {
       byUrl.set(original, {
         url: original,
-        firstCapture: timestamp,
-        lastCapture: timestamp,
-        captures: 1,
+        firstSeen: timestamp,
+        lastSeen: timestamp,
+        snapshots: 1,
         statuscode,
         mimetype,
         useful: isUseful(original),
       });
+      added++;
     } else {
-      const e = byUrl.get(original);
-      e.captures += 1;
-      if (timestamp < e.firstCapture) e.firstCapture = timestamp;
-      if (timestamp > e.lastCapture) e.lastCapture = timestamp;
+      let changed = false;
+      if (timestamp < existing.firstSeen) { existing.firstSeen = timestamp; changed = true; }
+      if (timestamp > existing.lastSeen) { existing.lastSeen = timestamp; changed = true; }
+      existing.snapshots = (existing.snapshots || 1) + 1;
+      if (changed) updated++;
     }
   }
-  const entries = [...byUrl.values()].sort((a, b) => {
+  return { added, updated };
+}
+
+function sortEntries(byUrl) {
+  return [...byUrl.values()].sort((a, b) => {
     if (a.useful !== b.useful) return a.useful ? -1 : 1; // useful first
     return a.url.localeCompare(b.url);
   });
-  return entries;
 }
 
-function renderMarkdown(entries) {
+function renderMarkdown(entries, meta) {
   const useful = entries.filter((e) => e.useful);
   const lines = [];
   lines.push('# Wayback inventory — forodesaopaulo.org');
   lines.push('');
-  lines.push('> Generated by `scripts/wayback-harvest.js`. This is an index of what');
-  lines.push('> exists in the Internet Archive, not the harvested content itself.');
-  lines.push('> Use the "high-value pages" list to recover meeting declarations,');
-  lines.push('> member lists and history pages into `data/forum.json`.');
+  lines.push('> Generated by `scripts/wayback-harvest.js` and updated incrementally.');
+  lines.push('> This is an index of what exists in the Internet Archive, not the');
+  lines.push('> harvested content itself. Use the "high-value pages" list to recover');
+  lines.push('> meeting declarations, member lists and history into `data/forum.json`.');
   lines.push('');
   lines.push(`- Domain: \`${DOMAIN}\``);
-  lines.push(`- Generated: ${new Date().toISOString()}`);
+  lines.push(`- Last run: ${meta.lastRun}`);
+  lines.push(`- Latest capture seen (incremental watermark): ${fmtTs(meta.latestCapture)}`);
   lines.push(`- Unique archived URLs: **${entries.length}** (high-value: **${useful.length}**)`);
   lines.push('');
   lines.push('## High-value pages');
@@ -139,12 +159,10 @@ function renderMarkdown(entries) {
   if (useful.length === 0) {
     lines.push('_None matched the high-value patterns — review the full inventory JSON._');
   } else {
-    lines.push('| Page | Captures | First | Last | Latest snapshot |');
-    lines.push('| --- | --- | --- | --- | --- |');
+    lines.push('| Page | First seen | Last seen | Latest snapshot |');
+    lines.push('| --- | --- | --- | --- |');
     for (const e of useful.slice(0, 200)) {
-      lines.push(
-        `| ${e.url} | ${e.captures} | ${fmtTs(e.firstCapture)} | ${fmtTs(e.lastCapture)} | [view](${waybackUrl(e.lastCapture, e.url)}) |`
-      );
+      lines.push(`| ${e.url} | ${fmtTs(e.firstSeen)} | ${fmtTs(e.lastSeen)} | [view](${waybackUrl(e.lastSeen, e.url)}) |`);
     }
   }
   lines.push('');
@@ -154,37 +172,51 @@ function renderMarkdown(entries) {
 }
 
 async function main() {
-  console.log(`Querying Wayback CDX for ${DOMAIN} (limit ${LIMIT})…`);
+  const { byUrl, watermark } = FULL ? { byUrl: new Map(), watermark: null } : loadExisting();
+  const incremental = !FULL && byUrl.size > 0 && watermark;
+
+  console.log(
+    incremental
+      ? `Incremental update: ${byUrl.size} URLs known, fetching captures since ${fmtTs(watermark)}…`
+      : `Full scan of ${DOMAIN} (limit ${LIMIT})…`
+  );
+
   let rows;
   try {
-    rows = await fetchCdx();
+    rows = await fetchCdx({ from: incremental ? watermark : null, collapse: !incremental });
   } catch (err) {
     console.error(`Could not reach the Wayback CDX API: ${err.message}`);
     console.error('If you are in a sandbox that blocks archive.org, run this where the Internet Archive is reachable.');
     process.exit(1);
   }
+
   if (!Array.isArray(rows) || rows.length <= 1) {
-    console.log('No captures found (empty CDX response).');
-    fs.writeFileSync(OUT_JSON, JSON.stringify({ domain: DOMAIN, generated: new Date().toISOString(), entries: [] }, null, 2) + '\n');
+    console.log(incremental ? 'No new captures since last run.' : 'No captures found (empty CDX response).');
+    if (!incremental) {
+      fs.writeFileSync(OUT_JSON, JSON.stringify({ domain: DOMAIN, lastRun: new Date().toISOString(), latestCapture: null, uniqueUrls: 0, usefulUrls: 0, entries: [] }, null, 2) + '\n');
+    }
     process.exit(0);
   }
 
-  const entries = buildInventory(rows);
-  const payload = {
+  const { added, updated } = mergeRows(byUrl, rows);
+  const entries = sortEntries(byUrl);
+  const latestCapture = entries.reduce((mx, e) => (e.lastSeen > mx ? e.lastSeen : mx), watermark || '');
+
+  const meta = {
     domain: DOMAIN,
-    generated: new Date().toISOString(),
+    lastRun: new Date().toISOString(),
+    latestCapture: latestCapture || null,
     uniqueUrls: entries.length,
     usefulUrls: entries.filter((e) => e.useful).length,
-    entries,
   };
 
-  fs.writeFileSync(OUT_JSON, JSON.stringify(payload, null, 2) + '\n');
+  fs.writeFileSync(OUT_JSON, JSON.stringify({ ...meta, entries }, null, 2) + '\n');
   if (!fs.existsSync(OUT_MD_DIR)) fs.mkdirSync(OUT_MD_DIR, { recursive: true });
-  fs.writeFileSync(OUT_MD, renderMarkdown(entries));
+  fs.writeFileSync(OUT_MD, renderMarkdown(entries, meta));
 
   console.log(
-    `Wrote ${path.relative(ROOT, OUT_JSON)} and ${path.relative(ROOT, OUT_MD)} ` +
-      `(${entries.length} URLs, ${payload.usefulUrls} high-value).`
+    `${incremental ? 'Incremental' : 'Full'} run: +${added} new, ${updated} updated. ` +
+      `Inventory now ${entries.length} URLs (${meta.usefulUrls} high-value). Watermark: ${fmtTs(meta.latestCapture)}.`
   );
 }
 

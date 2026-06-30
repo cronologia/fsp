@@ -20,17 +20,25 @@ source of truth; a Node script compiles it into plain HTML/CSS that can be hoste
 ```
 fsp/
 ├── data/
-│   ├── forum.json      # SINGLE SOURCE OF TRUTH — all dates, parties, references
-│   └── archives.json   # machine-generated Wayback snapshot cache (do not hand-edit)
+│   ├── forum.json            # SINGLE SOURCE OF TRUTH — all dates, parties, references
+│   ├── archives.json         # machine-generated Wayback snapshot cache (do not hand-edit)
+│   └── wayback-inventory.json # machine-generated index of forodesaopaulo.org captures
 ├── src/
-│   └── styles.css      # stylesheet (copied into the build)
+│   └── styles.css            # stylesheet (copied into the build)
 ├── scripts/
-│   └── archive-refs.js # archives references to the Wayback Machine + refreshes cache
-├── build.js            # compiler: data/{forum,archives}.json -> docs/
-├── docs/               # COMPILED OUTPUT (served by GitHub Pages)
+│   ├── archive-refs.js       # archives references to the Wayback Machine + refreshes cache
+│   └── wayback-harvest.js    # indexes archived captures of the official FSP site
+├── .github/workflows/
+│   └── wayback.yml           # runs the harvesting pipeline on GitHub's runners
+├── docs-research/            # generated research outputs (Wayback inventory, etc.)
+├── build.js                  # compiler: data/{forum,archives}.json -> docs/
+├── docs/                     # COMPILED OUTPUT (served by GitHub Pages)
 │   ├── index.html
 │   ├── styles.css
+│   ├── adrs/                 # Architecture Decision Records
 │   └── .nojekyll
+├── AGENTS.md                 # how AI agents/humans should work in this repo
+├── context.md                # domain background
 └── README.md
 ```
 
@@ -90,6 +98,49 @@ writes the resulting snapshot URLs + timestamps into `data/archives.json`.
 > environment that can reach the Internet Archive. Behind a proxy on Node ≥ 22.21,
 > run with `NODE_USE_ENV_PROXY=1`. Save Page Now is rate-limited for anonymous
 > use, so the script paces its requests.
+
+## Harvesting historical content (the pipeline)
+
+The Forum's official site (`forodesaopaulo.org`) is the richest primary source, but
+older versions survive mainly in the Internet Archive. A pipeline recovers and
+preserves this material. Because some environments block `archive.org` by egress
+policy, the pipeline is designed to run on **GitHub's runners** (open internet) via
+[`.github/workflows/wayback.yml`](.github/workflows/wayback.yml).
+
+**Two stages, run together:**
+
+1. **Discovery** — [`scripts/wayback-harvest.js`](scripts/wayback-harvest.js) queries
+   the Wayback **CDX API** for every archived capture of `forodesaopaulo.org`, dedupes
+   by URL, records capture counts and first/last timestamps, and flags **high-value
+   pages** (meeting declarations, member lists, history) first. Outputs
+   `data/wayback-inventory.json` and `docs-research/wayback-inventory.md`.
+2. **Preservation** — [`scripts/archive-refs.js`](scripts/archive-refs.js) (above)
+   snapshots every reference and refreshes `data/archives.json`; `build.js` renders the
+   fallback links.
+
+```bash
+node scripts/wayback-harvest.js                 # incremental update (full scan the first time)
+node scripts/wayback-harvest.js --full          # force a complete re-scan
+node scripts/wayback-harvest.js --limit=20000   # widen the CDX page size
+```
+
+The inventory `data/wayback-inventory.json` is **committed and updated
+incrementally**: each run loads it, asks the CDX API only for captures newer than
+the last one recorded (a `latestCapture` watermark), and merges the delta. A full
+re-scan only happens the first time or with `--full`, so routine runs are cheap and
+don't repeat the whole harvest.
+
+**How the workflow runs:**
+
+| Trigger | When | Behavior |
+| --- | --- | --- |
+| `pull_request` | a PR touches the scripts/workflow | runs the pipeline, uploads the inventory as an **artifact** + job summary; does **not** commit |
+| `workflow_dispatch` | **Actions → Wayback collection → Run workflow** | runs the pipeline and **commits** refreshed inventory/cache + rebuilt `docs/` |
+| `schedule` | weekly (Mon 04:17 UTC) | same as dispatch — keeps snapshots fresh |
+
+The inventory is a **discovery index, not the final dataset.** Turning high-value
+captures into chronology facts (declarations, exact dates, founding members) is a
+follow-up step done by editing `data/forum.json`.
 
 ## Data quality
 

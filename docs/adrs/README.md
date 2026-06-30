@@ -14,6 +14,7 @@ context, the decision, and its consequences so future contributors understand
 | [0003](0003-publish-via-github-pages-from-docs.md) | Publish via GitHub Pages from `docs/` | Accepted |
 | [0004](0004-archive-references-in-wayback-machine.md) | Preserve references in the Wayback Machine | Accepted |
 | [0005](0005-data-quality-and-sourcing-policy.md) | Data quality & sourcing policy | Accepted |
+| [0006](0006-wayback-harvesting-pipeline-on-ci.md) | Run the Wayback harvesting pipeline on CI | Accepted |
 
 ## Adding an ADR
 

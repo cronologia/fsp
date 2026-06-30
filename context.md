@@ -66,6 +66,11 @@ distinctions intact in the data.
 - Member roster, per-meeting declarations, and organizational structure are
   partially documented and tracked as open tickets.
 
+Closing these gaps starts from `data/wayback-inventory.json` — the generated index
+of archived `forodesaopaulo.org` pages (see `README.md` → "Harvesting historical
+content"). It is the worklist for recovering declarations and member lists into
+`data/forum.json`.
+
 ## Primary / key sources
 
 The official site `forodesaopaulo.org` (best harvested via the Wayback Machine),
