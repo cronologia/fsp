@@ -53,7 +53,17 @@
     "appointmentMethod": "Elected by the National Assembly.",
     "fspEraChanges": "Widely documented capture: the 2004 Organic Law expanded the TSJ from 20 to 32 magistrates, giving the government a majority; in Dec 2015 the outgoing pro-government Assembly appointed 13 magistrates before the opposition majority was seated. The TSJ subsequently annulled or curtailed acts of the opposition-led National Assembly (2016–2017).",
     "stillServing": "The court has remained PSUV-aligned ever since the 2004 expansion and 2015 packing; a 2022 reform cut it to 20 magistrates, re-appointed by the chavista-controlled National Assembly. No independent/opposition-appointed bloc remains.",
-    "verified": true
+    "verified": true,
+    "courtHistory": [
+      { "period": "Before 1990 (context)", "type": "composition", "event": "The high court evolved from the Corte Federal y de Casación (Gómez era) to the Corte Suprema de Justicia under the 1961 Constitution.", "size": null, "appointingGovernment": "various (pre-1990)", "fspRelated": false, "verified": false },
+      { "period": "1999", "type": "reform", "event": "The Bolivarian Constitution (Chávez) replaced the Corte Suprema with the Tribunal Supremo de Justicia (TSJ).", "size": 20, "appointingGovernment": "Hugo Chávez (MVR)", "fspRelated": true, "verified": true },
+      { "period": "2004", "type": "packing", "event": "The Organic Law of the TSJ expanded the court from 20 to 32 magistrates, giving the government a majority — the decisive court-packing.", "size": 32, "appointingGovernment": "Hugo Chávez (MVR)", "fspRelated": true, "verified": true },
+      { "period": "2015", "type": "packing", "event": "In December the outgoing pro-government National Assembly appointed 13 magistrates before the newly-elected opposition majority was seated.", "size": 32, "appointingGovernment": "chavista National Assembly (lame-duck)", "fspRelated": true, "verified": true },
+      { "period": "2016–2017", "type": "composition", "event": "The TSJ annulled or curtailed acts of the opposition-led National Assembly, including the March 2017 rulings stripping it of its powers (later partly walked back).", "size": 32, "appointingGovernment": "Nicolás Maduro (PSUV)", "fspRelated": true, "verified": true },
+      { "period": "2022", "type": "reform", "event": "A reform of the Organic Law reduced the TSJ from 32 to 20 magistrates, who were re-appointed by the chavista-controlled Assembly — keeping the court government-aligned.", "size": 20, "appointingGovernment": "Nicolás Maduro (PSUV)", "fspRelated": true, "verified": true }
+    ],
+    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)"],
+    "justicesNote": "The TSJ has had 20–32 magistrates; individual members are not itemized here. The court has been PSUV/government-aligned since the 2004 packing, with no opposition-appointed bloc."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)"
