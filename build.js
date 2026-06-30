@@ -262,8 +262,8 @@ function renderCourtHistory(sc) {
     .map((u) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source</a>`)
     .join(' · ');
   return `    <section>
-      <h2>Court history since 1900</h2>
-      <p class="section-intro">Structural changes to the court over time — foundings, size changes, court-packings, purges and reforms. <span class="ch-type ch-packing">packing</span>/<span class="ch-type ch-purge">purge</span> mark expansions and forced removals. ${src ? `Sources: ${src}.` : ''}</p>
+      <h2>Court history (1990–present)</h2>
+      <p class="section-intro">Structural changes to the court during the Foro de São Paulo era — size changes, court-packings, purges and reforms. <span class="ch-type ch-packing">packing</span>/<span class="ch-type ch-purge">purge</span> mark expansions and forced removals. ${src ? `Sources: ${src}.` : ''}</p>
       <div class="table-scroll">
         <table class="meetings">
           <thead><tr><th>Period</th><th>Type</th><th>Change</th><th>Seats</th><th>Government</th></tr></thead>

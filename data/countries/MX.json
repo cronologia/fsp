@@ -64,7 +64,21 @@
     "appointmentMethod": "As of the 2024 reform, justices are ELECTED by popular vote (previously: nominated by the President, confirmed by the Senate).",
     "fspEraChanges": "Landmark change: the 2024 judicial reform (promulgated Sept 2024 under AMLO, championed by Sheinbaum) makes ALL judges — including the Supreme Court — elected by popular vote, cuts the SCJN from 11 to 9 justices, and shortens tenure from 15 to 12 years. The first judicial elections were held 1 June 2025 and a newly elected court was seated in Sept 2025. Critics (Mexican Bar, HRW, scholars) warn it undermines judicial independence; supporters say it democratises the judiciary.",
     "stillServing": "The pre-reform court was effectively replaced. An entirely new 9-justice court was elected on 1 June 2025 and seated 1 September 2025 (12-year terms), with Hugo Aguilar Ortiz as chief justice (2025–2027). Three former AMLO-appointed justices (Lenia Batres, Yasmín Esquivel, Loretta Ortiz) were re-elected. Turnout was about 13%, and the new court is widely assessed as aligned with the ruling Morena party.",
-    "verified": true
+    "verified": true,
+    "courtHistory": [
+      { "period": "Before 1990 (context)", "type": "composition", "event": "The SCJN was re-founded by the 1917 Constitution; under PRI hegemony it was repeatedly resized and was effectively subordinate to the executive.", "size": null, "appointingGovernment": "PRI era (1929–2000)", "fspRelated": false, "verified": false },
+      { "period": "1994", "type": "reform", "event": "Zedillo's judicial reform reduced the SCJN from 26 to 11 ministers (early-retiring the sitting court), created the Federal Judiciary Council (CJF), and set 15-year staggered terms — building the modern, more independent court.", "size": 11, "appointingGovernment": "Ernesto Zedillo (PRI)", "fspRelated": false, "verified": true },
+      { "period": "2024", "type": "reform", "event": "Morena's judicial reform (promulgated Sept 2024 under AMLO) made all judges elected by popular vote, cut the SCJN from 11 to 9, and shortened tenure from 15 to 12 years.", "size": 9, "appointingGovernment": "López Obrador (Morena)", "fspRelated": true, "verified": true },
+      { "period": "2025", "type": "packing", "event": "The first judicial elections (1 June 2025) replaced the entire court; the new 9-justice SCJN seated 1 Sept 2025 is widely assessed as Morena-aligned — critics call it a capture of the court by popular-vote means.", "size": 9, "appointingGovernment": "Sheinbaum (Morena)", "fspRelated": true, "verified": true }
+    ],
+    "courtHistorySources": ["https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform", "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections", "https://www.eluniversal.com.mx/nacion/1994-cuando-zedillo-bajo-de-26-a-11-a-los-ministros-de-la-suprema-corte/"],
+    "justices": [
+      { "name": "Hugo Aguilar Ortiz", "appointedBy": "elected (popular vote)", "appointedParty": "Morena-aligned", "year": 2025, "fspAppointed": true, "status": "chief justice 2025–2027", "background": "Indigenous-rights lawyer; topped the 2025 judicial election." },
+      { "name": "Lenia Batres", "appointedBy": "elected (re-elected; orig. AMLO 2024)", "appointedParty": "Morena-aligned", "year": 2025, "fspAppointed": true, "status": "serving", "background": "Former AMLO appointee, re-elected." },
+      { "name": "Yasmín Esquivel Mossa", "appointedBy": "elected (re-elected; orig. Peña Nieto 2019)", "appointedParty": "—", "year": 2025, "fspAppointed": false, "status": "serving", "background": "Incumbent justice, re-elected." },
+      { "name": "Loretta Ortiz Ahlf", "appointedBy": "elected (re-elected; orig. AMLO 2021)", "appointedParty": "Morena-aligned", "year": 2025, "fspAppointed": true, "status": "serving", "background": "Former AMLO appointee, re-elected." }
+    ],
+    "justicesNote": "Top 4 of the 9 elected justices; the remaining 5 are still to be added (see #45)."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform",
