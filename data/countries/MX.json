@@ -63,11 +63,12 @@
     "size": 9,
     "appointmentMethod": "As of the 2024 reform, justices are ELECTED by popular vote (previously: nominated by the President, confirmed by the Senate).",
     "fspEraChanges": "Landmark change: the 2024 judicial reform (promulgated Sept 2024 under AMLO, championed by Sheinbaum) makes ALL judges — including the Supreme Court — elected by popular vote, cuts the SCJN from 11 to 9 justices, and shortens tenure from 15 to 12 years. The first judicial elections were held 1 June 2025 and a newly elected court was seated in Sept 2025. Critics (Mexican Bar, HRW, scholars) warn it undermines judicial independence; supporters say it democratises the judiciary.",
-    "stillServing": "Most pre-reform justices left or declined to run; the Sept 2025 elected court is new. Composition to verify.",
-    "verified": false
+    "stillServing": "The pre-reform court was effectively replaced. An entirely new 9-justice court was elected on 1 June 2025 and seated 1 September 2025 (12-year terms), with Hugo Aguilar Ortiz as chief justice (2025–2027). Three former AMLO-appointed justices (Lenia Batres, Yasmín Esquivel, Loretta Ortiz) were re-elected. Turnout was about 13%, and the new court is widely assessed as aligned with the ruling Morena party.",
+    "verified": true
   },
   "sources": [
     "https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform",
+    "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections",
     "https://www.hrw.org/news/2025/09/01/mexico-electoral-process-undermines-judicial-independence"
   ]
 }

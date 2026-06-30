@@ -16,8 +16,27 @@ const path = require('path');
 const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, 'data', 'forum.json');
 const ARCHIVES_FILE = path.join(ROOT, 'data', 'archives.json');
+const COUNTRIES_DIR = path.join(ROOT, 'data', 'countries');
 const SRC_DIR = path.join(ROOT, 'src');
 const OUT_DIR = path.join(ROOT, 'docs');
+
+/** Load per-country files (presidential succession + high court). */
+function loadCountries() {
+  try {
+    const index = JSON.parse(fs.readFileSync(path.join(COUNTRIES_DIR, 'index.json'), 'utf8'));
+    return (index.countries || [])
+      .map((c) => {
+        try {
+          return JSON.parse(fs.readFileSync(path.join(COUNTRIES_DIR, `${c.code}.json`), 'utf8'));
+        } catch {
+          return null;
+        }
+      })
+      .filter(Boolean);
+  } catch {
+    return [];
+  }
+}
 
 /** Format a 14-digit Wayback timestamp (YYYYMMDDhhmmss) as YYYY-MM-DD. */
 function formatArchiveTs(ts) {
@@ -110,17 +129,21 @@ function renderRelated(orgs) {
     .join('\n');
 }
 
-function renderMembersInGovernment(mg) {
+function renderMembersInGovernment(mg, codeByCountry) {
   if (!mg || !mg.entries || !mg.entries.length) return '';
   const rows = mg.entries
-    .map(
-      (e) => `        <tr>
-          <td>${esc(e.country)}</td>
+    .map((e) => {
+      const code = codeByCountry && codeByCountry[e.country];
+      const countryCell = code
+        ? `<a href="countries/${esc(code)}.html">${esc(e.country)}</a>`
+        : esc(e.country);
+      return `        <tr>
+          <td>${countryCell}</td>
           <td>${esc(e.party)}</td>
           <td>${esc(e.fspStatus)}</td>
           <td class="heads">${esc(e.heads)}</td>
-        </tr>`
-    )
+        </tr>`;
+    })
     .join('\n');
   return `    <section id="government">
       <h2>Member parties in government</h2>
@@ -194,7 +217,79 @@ function renderTimeline(meetings) {
     .join('\n');
 }
 
-function buildHtml(data, archives) {
+function renderCountryPage(c) {
+  const rows = c.presidentialSuccession
+    .map((p) => {
+      const cls = p.fsp ? ' class="fsp-row"' : '';
+      const flag = p.fsp ? '<span class="fsp-badge">FSP</span>' : '';
+      return `        <tr${cls}>
+          <td>${esc(p.start)}–${esc(p.end)}</td>
+          <td>${esc(p.name)} ${flag}</td>
+          <td>${esc(p.party)}</td>
+          <td class="notes">${esc(p.notes || '')}</td>
+        </tr>`;
+    })
+    .join('\n');
+  const sc = c.supremeCourt || {};
+  const sources = (c.sources || [])
+    .map((u) => `        <li><a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(u)}</a></li>`)
+    .join('\n');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${esc(c.country)} — FSP presidents &amp; courts</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="updated"><a href="../index.html" style="color:#fff">← Foro de São Paulo — Cronologia</a></p>
+      <h1>${esc(c.country)}</h1>
+      <p class="subtitle">Presidential succession since 1990 &amp; the high court</p>
+      <p class="lead">FSP party: <strong>${esc(c.fspParty)}</strong> (${esc(c.fspStatus)}). FSP presidents: ${esc((c.fspPresidents || []).join(', ') || '—')}.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <section>
+      <h2>Presidential succession (1990–present)</h2>
+      <p class="section-intro">Rows highlighted <span class="fsp-badge">FSP</span> mark presidents from a Foro de São Paulo member/affiliated party.</p>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead><tr><th>Period</th><th>President</th><th>Party</th><th>Notes</th></tr></thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h2>High court — ${esc(sc.name || '')}</h2>
+      <dl class="facts">
+        ${sc.size ? `<dt>Seats</dt><dd>${esc(sc.size)}</dd>` : ''}
+        <dt>Appointment</dt><dd>${esc(sc.appointmentMethod || '')}</dd>
+        <dt>Changes (FSP era)</dt><dd>${esc(sc.fspEraChanges || '')}</dd>
+        <dt>How much remains</dt><dd>${esc(sc.stillServing || '')}</dd>
+        <dt>Verified</dt><dd>${sc.verified ? 'yes — sourced' : 'no — to verify against primary sources'}</dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Sources</h2>
+      <ol class="references">
+${sources}
+      </ol>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><p>Generated from <code>data/countries/${esc(c.code)}.json</code>. <a href="../index.html">Back to the chronology</a>.</p></div>
+  </footer>
+</body>
+</html>
+`;
+}
+
+function buildHtml(data, archives, codeByCountry) {
   const { meta, founding } = data;
   return `<!DOCTYPE html>
 <html lang="${esc(meta.language || 'en')}">
@@ -266,7 +361,7 @@ ${renderParties(data.parties)}
       <p class="countries">${data.participatingCountries.map(esc).join(' · ')}</p>
     </section>
 
-${renderMembersInGovernment(data.membersInGovernment)}
+${renderMembersInGovernment(data.membersInGovernment, codeByCountry)}
     <section id="related">
       <h2>Related organizations</h2>
       <p class="section-intro">The Foro de São Paulo is often confused with newer left/progressive networks. It has <strong>not</strong> been renamed — these are distinct, coexisting organizations that sometimes coordinate or meet alongside it.</p>
@@ -298,11 +393,22 @@ ${renderReferences(data.references, archives)}
 function main() {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
   const archives = loadArchives();
+  const countries = loadCountries();
+  const codeByCountry = Object.fromEntries(countries.map((c) => [c.country, c.code]));
 
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
-  const html = buildHtml(data, archives);
+  const html = buildHtml(data, archives, codeByCountry);
   fs.writeFileSync(path.join(OUT_DIR, 'index.html'), html);
+
+  // Per-country pages (presidential succession + high court).
+  if (countries.length) {
+    const cdir = path.join(OUT_DIR, 'countries');
+    if (!fs.existsSync(cdir)) fs.mkdirSync(cdir, { recursive: true });
+    for (const c of countries) {
+      fs.writeFileSync(path.join(cdir, `${c.code}.html`), renderCountryPage(c));
+    }
+  }
 
   // Copy static assets (currently just the stylesheet).
   fs.copyFileSync(path.join(SRC_DIR, 'styles.css'), path.join(OUT_DIR, 'styles.css'));
@@ -312,7 +418,7 @@ function main() {
 
   const count = data.meetings.length;
   const archivedRefs = data.references.filter((r) => archives[r.url] && archives[r.url].archiveUrl).length;
-  console.log(`Built docs/index.html (${count} meetings, ${data.parties.length} parties, ${data.references.length} references, ${archivedRefs} with archive fallback).`);
+  console.log(`Built docs/index.html (${count} meetings, ${data.parties.length} parties, ${data.references.length} references, ${archivedRefs} with archive fallback) + ${countries.length} country pages.`);
 }
 
 main();

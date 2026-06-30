@@ -90,6 +90,9 @@ td.notes { color: var(--muted); font-size: .85rem; max-width: 24ch; }
 .decl-link { color: var(--accent); text-decoration: none; font-size: .82rem; white-space: nowrap; }
 .decl-link:hover { text-decoration: underline; }
 td.heads { color: var(--muted); font-size: .85rem; }
+tr.fsp-row { background: #eaf4ec !important; }
+tr.fsp-row td { font-weight: 500; }
+.fsp-badge { display: inline-block; background: #1b7a3d; color: #fff; font-size: .65rem; font-weight: 700; padding: .1rem .4rem; border-radius: 999px; vertical-align: middle; letter-spacing: .03em; }
 
 /* Parties */
 .party-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
