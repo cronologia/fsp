@@ -110,6 +110,28 @@ function renderParties(parties) {
     .join('\n');
 }
 
+function renderComparison(c) {
+  if (!c || !c.rows || !c.rows.length) return '';
+  const rows = c.rows
+    .map(
+      (r) => `        <tr>
+          <td class="cmp-dim">${esc(r.dimension)}</td>
+          <td>${esc(r.foro)}</td>
+          <td>${esc(r.puebla)}</td>
+        </tr>`
+    )
+    .join('\n');
+  return `      <h3>Foro de São Paulo vs. Grupo de Puebla</h3>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead><tr><th></th><th>Foro de São Paulo</th><th>Grupo de Puebla</th></tr></thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>`;
+}
+
 function renderRelated(orgs) {
   if (!orgs || !orgs.length) return '';
   return orgs
@@ -528,6 +550,7 @@ ${renderOrganization(data.organization)}
       <div class="party-grid">
 ${renderRelated(data.relatedOrganizations)}
       </div>
+${renderComparison(data.foroVsPuebla)}
     </section>
 
 ${renderCriticalPerspectives(data.criticalPerspectives)}
