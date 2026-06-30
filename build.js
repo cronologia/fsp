@@ -87,6 +87,25 @@ function renderParties(parties) {
     .join('\n');
 }
 
+function renderRelated(orgs) {
+  if (!orgs || !orgs.length) return '';
+  return orgs
+    .map((o) => {
+      const meta = [o.founded, o.place].filter(Boolean).map(esc).join(' · ');
+      const link = o.url
+        ? `<p class="related-link"><a href="${esc(o.url)}" rel="noopener noreferrer" target="_blank">${esc(o.url)}</a></p>`
+        : '';
+      return `      <article class="related-card">
+        <h3>${esc(o.name)}</h3>
+        ${meta ? `<p class="related-meta">${meta}</p>` : ''}
+        ${o.composition ? `<p><strong>Composition:</strong> ${esc(o.composition)}</p>` : ''}
+        ${o.relationToForum ? `<p><strong>Relation to the Foro:</strong> ${esc(o.relationToForum)}</p>` : ''}
+        ${link}
+      </article>`;
+    })
+    .join('\n');
+}
+
 function renderReferences(refs, archives) {
   return refs
     .map((r) => {
@@ -186,6 +205,14 @@ ${renderParties(data.parties)}
       </div>
       <h3>Participating countries</h3>
       <p class="countries">${data.participatingCountries.map(esc).join(' · ')}</p>
+    </section>
+
+    <section id="related">
+      <h2>Related organizations</h2>
+      <p class="section-intro">The Foro de São Paulo is often confused with newer left/progressive networks. It has <strong>not</strong> been renamed — these are distinct, coexisting organizations that sometimes coordinate or meet alongside it.</p>
+      <div class="party-grid">
+${renderRelated(data.relatedOrganizations)}
+      </div>
     </section>
 
     <section id="references">
