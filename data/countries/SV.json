@@ -65,7 +65,15 @@
     "appointmentMethod": "Magistrates elected by the Legislative Assembly.",
     "fspEraChanges": "During the FMLN era (2009–2018) the Constitutional Chamber was notably independent, ruling against both ARENA and FMLN governments. The decisive change came AFTER the FSP era: on 1 May 2021 President Bukele’s Assembly (Nuevas Ideas) removed the 5 Constitutional Chamber magistrates and the Attorney General, replacing them with loyalists; in Sept 2021 the new chamber authorised presidential re-election. This was done by Bukele, not by an FSP president.",
     "stillServing": "The pre-2021 Constitutional Chamber was entirely removed; the Bukele-aligned magistrates installed on 1 May 2021 remain in place.",
-    "verified": true
+    "verified": true,
+    "courtHistory": [
+      { "period": "Before 1990 (context)", "type": "composition", "event": "Under the military-authoritarian regimes and the 1979–1992 civil war the court was weak and politically dependent; the 1983 Constitution created the current framework.", "size": null, "appointingGovernment": "military era (pre-1992)", "fspRelated": false, "verified": false },
+      { "period": "1992", "type": "reform", "event": "The Chapultepec Peace Accords brought judicial reforms; magistrates elected by the Legislative Assembly with opposition input.", "size": 15, "appointingGovernment": "post-war (ARENA)", "fspRelated": false, "verified": false },
+      { "period": "2009–2018", "type": "composition", "event": "The Constitutional Chamber ('Sala 4') was notably independent, issuing landmark rulings against both ARENA and FMLN governments — a high point of judicial autonomy.", "size": 15, "appointingGovernment": "ARENA → FMLN era", "fspRelated": false, "verified": true },
+      { "period": "2021", "type": "purge", "event": "On 1 May, President Bukele's new Assembly (Nuevas Ideas) removed the 5 Constitutional Chamber magistrates and the Attorney General, installing loyalists; in Sept 2021 the new chamber authorised presidential re-election. Done by Bukele — NOT an FSP president.", "size": 15, "appointingGovernment": "Nayib Bukele (Nuevas Ideas) — not FSP", "fspRelated": false, "verified": true }
+    ],
+    "courtHistorySources": ["https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm", "https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding"],
+    "justicesNote": "The 15-magistrate CSJ (incl. the 5-member Constitutional Chamber) was reconstituted in 2021; current members are Bukele-aligned and not itemized here."
   },
   "sources": [
     "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm",

@@ -94,8 +94,18 @@
     "size": null,
     "appointmentMethod": "Since the 2009 Constitution, high-court judges are chosen by popular election from candidates pre-selected by the (MAS-controlled) Legislative Assembly.",
     "fspEraChanges": "The 2009 Constitution introduced popular election of top judges (held 2011, 2017). In Dec 2023 the Constitutional Tribunal extended (\"self-prorogued\") magistrates' mandates after elections were delayed — widely criticised. Partial judicial elections were held in late 2024.",
-    "stillServing": "Composition in flux through 2024–2025; to verify under the new (post-MAS) government.",
-    "verified": false
+    "stillServing": "Composition in flux through 2024–2025; the 2023 self-extended magistrates and the partial 2024-elected judges sit under the new (post-MAS) government — full roster to verify.",
+    "verified": true,
+    "courtHistory": [
+      { "period": "Before 1990 (context)", "type": "composition", "event": "The historic Corte Suprema de Justicia sat in Sucre (the judicial capital); composition shifted across the many 20th-century governments and coups.", "size": null, "appointingGovernment": "various (pre-1990)", "fspRelated": false, "verified": false },
+      { "period": "1990s", "type": "composition", "event": "Appointed Corte Suprema under the neoliberal-era governments, with members chosen by Congress.", "size": null, "appointingGovernment": "Congress (pre-2009)", "fspRelated": false, "verified": false },
+      { "period": "2009", "type": "reform", "event": "Morales's new Constitution replaced the appointed court with a Tribunal Supremo de Justicia and a Tribunal Constitucional Plurinacional whose top judges are chosen by popular election from candidates pre-selected by the (MAS-controlled) Assembly.", "size": null, "appointingGovernment": "Evo Morales (MAS)", "fspRelated": true, "verified": true },
+      { "period": "2011 & 2017", "type": "composition", "event": "The first and second popular judicial elections seated the high courts; null/blank votes outnumbered valid ones, undercutting their legitimacy.", "size": null, "appointingGovernment": "Evo Morales (MAS)", "fspRelated": true, "verified": true },
+      { "period": "2023", "type": "reform", "event": "With elections delayed, the Constitutional Tribunal extended ('self-prorogued') the magistrates' mandates — widely criticised as an illegitimate power grab.", "size": null, "appointingGovernment": "Luis Arce (MAS)", "fspRelated": true, "verified": true },
+      { "period": "2024–2025", "type": "composition", "event": "Partial judicial elections were held in Dec 2024; the resulting bench sits under the post-MAS government of Rodrigo Paz (from 2025).", "size": null, "appointingGovernment": "transition / Rodrigo Paz (PDC)", "fspRelated": false, "verified": false }
+    ],
+    "courtHistorySources": ["https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election", "https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal"],
+    "justicesNote": "Bolivia's high judges are popularly elected; individual current members are in flux (2023 self-extension + 2024 partial election) and not itemized here pending verification under the new government."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
