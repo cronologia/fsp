@@ -1,0 +1,77 @@
+name: Wayback collection
+
+# Collects data from the Internet Archive on GitHub's runners (which can reach
+# archive.org), since some environments block it by egress policy.
+#
+# - pull_request: proves the harvest works and uploads the inventory as an
+#   artifact (no commit back).
+# - workflow_dispatch / schedule: refreshes the inventory + archive cache and
+#   commits the results to the branch.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1' # weekly, Mondays 04:17 UTC
+  pull_request:
+    paths:
+      - 'scripts/wayback-harvest.js'
+      - 'scripts/archive-refs.js'
+      - '.github/workflows/wayback.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wayback-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Harvest Wayback inventory (forodesaopaulo.org)
+        run: node scripts/wayback-harvest.js || echo "::warning::harvest step failed (archive.org unreachable?)"
+
+      - name: Archive reference URLs
+        run: node scripts/archive-refs.js || echo "::warning::archive step failed (archive.org unreachable?)"
+
+      - name: Rebuild site
+        run: node build.js
+
+      - name: Job summary
+        run: |
+          echo "## Wayback collection" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f data/wayback-inventory.json ]; then
+            node -e "const d=require('./data/wayback-inventory.json'); console.log('- Unique archived URLs: **'+(d.uniqueUrls||0)+'**'); console.log('- High-value pages: **'+(d.usefulUrls||0)+'**'); console.log('- Generated: '+(d.generated||'n/a'));" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- No inventory produced (archive.org may be unreachable from this runner)." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload inventory artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wayback-inventory
+          path: |
+            data/wayback-inventory.json
+            docs-research/wayback-inventory.md
+          if-no-files-found: ignore
+
+      - name: Commit results
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/archives.json data/wayback-inventory.json docs-research/ docs/ || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: refresh Wayback inventory + archives [skip ci]"
+            git push
+          fi
