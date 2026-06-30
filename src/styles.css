@@ -34,6 +34,20 @@ body {
 .site-header .lead { margin: 0 0 1rem; max-width: 64ch; opacity: .95; }
 .site-header .updated { margin: 0; font-size: .85rem; opacity: .8; }
 
+/* Nav */
+.site-nav { position: sticky; top: 0; z-index: 10; background: #2a2f3a; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+.site-nav .wrap { display: flex; flex-wrap: wrap; gap: .25rem 1rem; padding: .5rem 1.25rem; }
+.site-nav a { color: #e8e6e1; text-decoration: none; font-size: .85rem; font-weight: 600; padding: .15rem 0; white-space: nowrap; }
+.site-nav a:hover { color: #fff; border-bottom: 2px solid var(--accent); }
+
+/* Country index */
+.country-index { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .75rem; }
+.country-card { display: flex; flex-direction: column; gap: .15rem; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 6px; padding: .7rem .85rem; text-decoration: none; color: var(--ink); }
+.country-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.cc-name { font-weight: 700; }
+.cc-party { font-size: .82rem; color: var(--muted); }
+.cc-count { font-size: .72rem; color: var(--accent); font-weight: 600; }
+
 /* Sections */
 main { padding: 2rem 1.25rem 3rem; }
 section { margin: 2.5rem 0; }

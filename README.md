@@ -58,10 +58,21 @@ Open `docs/index.html` directly in a browser, or serve the folder:
 python3 -m http.server -d docs 8000   # then visit http://localhost:8000
 ```
 
+### Validate
+
+```bash
+node scripts/validate-data.js   # schema check for data/forum.json + data/countries/*.json
+```
+
 ### Publish (GitHub Pages)
 
-In repository **Settings → Pages**, set the source to the **`docs/` folder** on the default
-branch. The site is published as-is; `.nojekyll` disables Jekyll processing.
+CI handles this: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) validates the
+data, rebuilds, checks that committed `docs/` is in sync, and deploys `docs/` to GitHub Pages
+on every push to the default branch. **Enable it once** under **Settings → Pages → Build and
+deployment → Source: GitHub Actions**.
+
+(Alternatively, serve the committed `docs/` folder directly: Settings → Pages → Source: `docs/`
+folder. `.nojekyll` disables Jekyll processing either way.)
 
 ## Editing the data
 
