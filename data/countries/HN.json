@@ -77,8 +77,17 @@
     "size": 15,
     "appointmentMethod": "Magistrates elected by the National Congress for 7-year terms.",
     "fspEraChanges": "Before the FSP era: in Dec 2012 Congress removed four Constitutional Chamber justices (\"technical coup\"), and in 2015 the court lifted the ban on presidential re-election (enabling Hernández). Under Castro/LIBRE, Congress elected a new 15-magistrate court in Feb 2023.",
-    "stillServing": "The 2023 LIBRE-era court is current; to verify balance.",
-    "verified": false
+    "stillServing": "The 15-magistrate court elected by Congress in Feb 2023 (under LIBRE) is current; its partisan balance reflects the multi-party negotiation in Congress.",
+    "verified": true,
+    "courtHistory": [
+      { "period": "Before 1990 (context)", "type": "composition", "event": "Through the 'banana republic' era and the military governments (1960s–80s) the court was weak; the 1982 Constitution set the current 15-magistrate court elected by Congress.", "size": 15, "appointingGovernment": "military era / 1982 Constitution", "fspRelated": false, "verified": false },
+      { "period": "2009", "type": "composition", "event": "During the coup against President Zelaya, the Supreme Court ordered his arrest — pivotal, as Zelaya later founded the FSP-member party LIBRE.", "size": 15, "appointingGovernment": "coup / Micheletti", "fspRelated": false, "verified": true },
+      { "period": "2012", "type": "purge", "event": "In December Congress summarily removed four Constitutional Chamber justices (a 'technical coup') after rulings against the government.", "size": 15, "appointingGovernment": "Porfirio Lobo (Partido Nacional)", "fspRelated": false, "verified": true },
+      { "period": "2015", "type": "reform", "event": "The Supreme Court struck down the ban on presidential re-election, enabling Juan Orlando Hernández's 2017 re-election.", "size": 15, "appointingGovernment": "Juan Orlando Hernández (Partido Nacional)", "fspRelated": false, "verified": true },
+      { "period": "2023", "type": "composition", "event": "Under the Castro/LIBRE government, Congress elected a new 15-magistrate court in February after a multi-party negotiation.", "size": 15, "appointingGovernment": "Xiomara Castro (LIBRE)", "fspRelated": true, "verified": true }
+    ],
+    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)", "https://en.wikipedia.org/wiki/2009_Honduran_coup_d%27%C3%A9tat"],
+    "justicesNote": "The 15-magistrate CSJ elected in 2023 is current; individual members are not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)"
