@@ -478,6 +478,16 @@
       "url": null
     }
   ],
+  "foroVsPuebla": {
+    "rows": [
+      { "dimension": "Founded", "foro": "1990, São Paulo", "puebla": "July 2019, Puebla (Mexico)" },
+      { "dimension": "Members", "foro": "Political parties & movements (100+)", "puebla": "Individual leaders — presidents, ex-presidents, ministers, intellectuals" },
+      { "dimension": "Scope", "foro": "Latin America & the Caribbean", "puebla": "Ibero-American (Latin America + Southern Europe)" },
+      { "dimension": "Venezuela / Cuba / Bolivia", "foro": "Included (PSUV, PCC, MAS…)", "puebla": "Largely excluded — to distance from the authoritarian-left image" },
+      { "dimension": "Relationship", "foro": "The party forum that helped seed the Puebla networks", "puebla": "A distinct, complementary leaders' network — NOT a renaming of the Foro" },
+      { "dimension": "Status", "foro": "Active", "puebla": "Active — both met side by side in Tegucigalpa, June 2024" }
+    ]
+  },
   "criticalPerspectives": {
     "note": "Several authors and outlets analyze the Foro de São Paulo as a coordinating network of the Latin American left, tracking the connections between its member parties and the spread of left governments in the region. These works are influential in Brazil's political debate. Some specific claims (e.g. formal ties to armed groups, or direct control of governments) are debated; such claims are attributed to their authors rather than asserted here as established fact.",
     "works": [
