@@ -19,51 +19,397 @@
     "attendance": "48 parties and organizations from 14 Latin American and Caribbean countries."
   },
   "meetings": [
-    { "edition": "I",      "year": 1990, "dates": "1–4 Jul 1990", "city": "São Paulo",        "country": "Brazil",      "datesVerified": true,  "notes": "Founding meeting. 48 parties/organizations from 14 countries." },
-    { "edition": "II",     "year": 1991, "dates": null,            "city": "Mexico City",      "country": "Mexico",      "datesVerified": false, "notes": "Name 'Foro de São Paulo' adopted from this meeting." },
-    { "edition": "III",    "year": 1992, "dates": null,            "city": "Managua",          "country": "Nicaragua",   "datesVerified": false, "notes": "" },
-    { "edition": "IV",     "year": 1993, "dates": null,            "city": "Havana",           "country": "Cuba",        "datesVerified": false, "notes": "" },
-    { "edition": "V",      "year": 1995, "dates": null,            "city": "Montevideo",       "country": "Uruguay",     "datesVerified": false, "notes": "No meeting recorded for 1994." },
-    { "edition": "VI",     "year": 1996, "dates": null,            "city": "San Salvador",     "country": "El Salvador", "datesVerified": false, "notes": "" },
-    { "edition": "VII",    "year": 1997, "dates": null,            "city": "Porto Alegre",     "country": "Brazil",      "datesVerified": false, "notes": "" },
-    { "edition": "VIII",   "year": 1998, "dates": null,            "city": "Mexico City",      "country": "Mexico",      "datesVerified": false, "notes": "" },
-    { "edition": "IX",     "year": 2000, "dates": null,            "city": "Managua",          "country": "Nicaragua",   "datesVerified": false, "notes": "Some sources cite Niquinohomo, Nicaragua. No meeting recorded for 1999." },
-    { "edition": "X",      "year": 2001, "dates": null,            "city": "Havana",           "country": "Cuba",        "datesVerified": false, "notes": "" },
-    { "edition": "XI",     "year": 2002, "dates": null,            "city": "Antigua Guatemala","country": "Guatemala",   "datesVerified": false, "notes": "Host country sometimes mis-cited as Antigua and Barbuda; the city is Antigua Guatemala, Guatemala." },
-    { "edition": "XII",    "year": 2003, "dates": null,            "city": "Quito",            "country": "Ecuador",     "datesVerified": false, "notes": "" },
-    { "edition": "XIII",   "year": 2005, "dates": null,            "city": "São Paulo",        "country": "Brazil",      "datesVerified": false, "notes": "No meeting recorded for 2004." },
-    { "edition": "XIV",    "year": 2007, "dates": null,            "city": "San Salvador",     "country": "El Salvador", "datesVerified": false, "notes": "No meeting recorded for 2006." },
-    { "edition": "XV",     "year": 2008, "dates": null,            "city": "Montevideo",       "country": "Uruguay",     "datesVerified": false, "notes": "" },
-    { "edition": "XVI",    "year": 2009, "dates": null,            "city": "Mexico City",      "country": "Mexico",      "datesVerified": false, "notes": "" },
-    { "edition": "XVII",   "year": 2010, "dates": null,            "city": "Buenos Aires",     "country": "Argentina",   "datesVerified": false, "notes": "" },
-    { "edition": "XVIII",  "year": 2011, "dates": null,            "city": "Managua",          "country": "Nicaragua",   "datesVerified": false, "notes": "" },
-    { "edition": "XIX",    "year": 2012, "dates": null,            "city": "Caracas",          "country": "Venezuela",   "datesVerified": false, "notes": "" },
-    { "edition": "XX",     "year": 2013, "dates": null,            "city": "São Paulo",        "country": "Brazil",      "datesVerified": false, "notes": "" },
-    { "edition": "XXI",    "year": 2014, "dates": null,            "city": "La Paz",           "country": "Bolivia",     "datesVerified": false, "notes": "" },
-    { "edition": "XXII",   "year": 2015, "dates": null,            "city": "Mexico City",      "country": "Mexico",      "datesVerified": false, "notes": "" },
-    { "edition": "XXIII",  "year": 2016, "dates": null,            "city": "San Salvador",     "country": "El Salvador", "datesVerified": false, "notes": "" },
-    { "edition": "XXIV",   "year": 2017, "dates": null,            "city": "Managua",          "country": "Nicaragua",   "datesVerified": false, "notes": "" },
-    { "edition": "XXV",    "year": 2018, "dates": null,            "city": "Havana",           "country": "Cuba",        "datesVerified": false, "notes": "" },
-    { "edition": "XXVI",   "year": 2019, "dates": null,            "city": "Caracas",          "country": "Venezuela",   "datesVerified": false, "notes": "Last meeting before a multi-year pause (no in-person meetings 2020–2022)." },
-    { "edition": "XXVII",  "year": 2023, "dates": "29 Jun–2 Jul 2023", "city": "Brasília",     "country": "Brazil",      "datesVerified": false, "notes": "First in-person meeting after the pandemic-era pause; held in Lula's third term." },
-    { "edition": "XXVIII", "year": 2024, "dates": null,            "city": "Tegucigalpa",      "country": "Honduras",    "datesVerified": false, "notes": "" }
+    {
+      "edition": "I",
+      "year": 1990,
+      "dates": "1–4 Jul 1990",
+      "city": "São Paulo",
+      "country": "Brazil",
+      "datesVerified": true,
+      "notes": "Founding meeting. 48 parties/organizations from 14 countries.",
+      "declarationUrl": "https://web.archive.org/web/20240918022013/http://forodesaopaulo.org/declaracao-final-sao-paulo-1990/"
+    },
+    {
+      "edition": "II",
+      "year": 1991,
+      "dates": null,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "datesVerified": false,
+      "notes": "Name 'Foro de São Paulo' adopted from this meeting.",
+      "declarationUrl": "https://web.archive.org/web/20201028175732/https://forodesaopaulo.org/declaracao-final-mexico-1991/"
+    },
+    {
+      "edition": "III",
+      "year": 1992,
+      "dates": null,
+      "city": "Managua",
+      "country": "Nicaragua",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201026193950/https://forodesaopaulo.org/declaracion-final-managua-1992/"
+    },
+    {
+      "edition": "IV",
+      "year": 1993,
+      "dates": null,
+      "city": "Havana",
+      "country": "Cuba",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201026153702/https://forodesaopaulo.org/declaracao-final-havana-1993/"
+    },
+    {
+      "edition": "V",
+      "year": 1995,
+      "dates": null,
+      "city": "Montevideo",
+      "country": "Uruguay",
+      "datesVerified": false,
+      "notes": "No meeting recorded for 1994.",
+      "declarationUrl": "https://web.archive.org/web/20201031041133/https://forodesaopaulo.org/declaracao-final-montevideu-1995/"
+    },
+    {
+      "edition": "VI",
+      "year": 1996,
+      "dates": null,
+      "city": "San Salvador",
+      "country": "El Salvador",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201023024248/https://forodesaopaulo.org/declaracion-final-san-salvador-1996/"
+    },
+    {
+      "edition": "VII",
+      "year": 1997,
+      "dates": null,
+      "city": "Porto Alegre",
+      "country": "Brazil",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201023205436/https://forodesaopaulo.org/declaracao-final-porto-alegre-1997/"
+    },
+    {
+      "edition": "VIII",
+      "year": 1998,
+      "dates": null,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201022230207/https://forodesaopaulo.org/declaracao-final-mexico-1998/"
+    },
+    {
+      "edition": "IX",
+      "year": 2000,
+      "dates": null,
+      "city": "Managua",
+      "country": "Nicaragua",
+      "datesVerified": false,
+      "notes": "Some sources cite Niquinohomo, Nicaragua. No meeting recorded for 1999.",
+      "declarationUrl": "https://web.archive.org/web/20201026223448/https://forodesaopaulo.org/declaracao-final-niquinohomo-2000/"
+    },
+    {
+      "edition": "X",
+      "year": 2001,
+      "dates": null,
+      "city": "Havana",
+      "country": "Cuba",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201020142138/https://forodesaopaulo.org/declaracao-final-havana-2001/"
+    },
+    {
+      "edition": "XI",
+      "year": 2002,
+      "dates": null,
+      "city": "Antigua Guatemala",
+      "country": "Guatemala",
+      "datesVerified": false,
+      "notes": "Host country sometimes mis-cited as Antigua and Barbuda; the city is Antigua Guatemala, Guatemala.",
+      "declarationUrl": "https://web.archive.org/web/20180714232722/http://forodesaopaulo.org/declaracion-final-antigua-2002"
+    },
+    {
+      "edition": "XII",
+      "year": 2003,
+      "dates": null,
+      "city": "Quito",
+      "country": "Ecuador",
+      "datesVerified": false,
+      "notes": ""
+    },
+    {
+      "edition": "XIII",
+      "year": 2005,
+      "dates": null,
+      "city": "São Paulo",
+      "country": "Brazil",
+      "datesVerified": false,
+      "notes": "No meeting recorded for 2004.",
+      "declarationUrl": "https://web.archive.org/web/20170716080824/http://forodesaopaulo.org/declaracion-final-sao-paulo-2005"
+    },
+    {
+      "edition": "XIV",
+      "year": 2007,
+      "dates": null,
+      "city": "San Salvador",
+      "country": "El Salvador",
+      "datesVerified": false,
+      "notes": "No meeting recorded for 2006.",
+      "declarationUrl": "https://web.archive.org/web/20150411134748/http://forodesaopaulo.org/declaracion-final-san-salvador-2007/"
+    },
+    {
+      "edition": "XV",
+      "year": 2008,
+      "dates": null,
+      "city": "Montevideo",
+      "country": "Uruguay",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20150404071549/http://forodesaopaulo.org/declaracion-final-montevideo-2008/"
+    },
+    {
+      "edition": "XVI",
+      "year": 2009,
+      "dates": null,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201020175110/https://forodesaopaulo.org/declaracion-final-mexico-2009/"
+    },
+    {
+      "edition": "XVII",
+      "year": 2010,
+      "dates": null,
+      "city": "Buenos Aires",
+      "country": "Argentina",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201020165021/https://forodesaopaulo.org/declaracion-final-buenos-aires-2010/"
+    },
+    {
+      "edition": "XVIII",
+      "year": 2011,
+      "dates": null,
+      "city": "Managua",
+      "country": "Nicaragua",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20150405011756/http://forodesaopaulo.org/declaracao-final-managua-2011/"
+    },
+    {
+      "edition": "XIX",
+      "year": 2012,
+      "dates": null,
+      "city": "Caracas",
+      "country": "Venezuela",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20221116014056/http://forodesaopaulo.org/declaracao-final-caracas-2012/277"
+    },
+    {
+      "edition": "XX",
+      "year": 2013,
+      "dates": null,
+      "city": "São Paulo",
+      "country": "Brazil",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20201026095245/https://forodesaopaulo.org/declaracion-final-sao-paulo-2013/"
+    },
+    {
+      "edition": "XXI",
+      "year": 2014,
+      "dates": null,
+      "city": "La Paz",
+      "country": "Bolivia",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20141113024517/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-paz-2014"
+    },
+    {
+      "edition": "XXII",
+      "year": 2015,
+      "dates": null,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20231120184939/https://forodesaopaulo.org/declaracion-final-del-xxi-encuentro-del-foro-de-sao-paulo-en-la-ciudad-de-mexico-df/2015/09/logo-oceansur.png"
+    },
+    {
+      "edition": "XXIII",
+      "year": 2016,
+      "dates": null,
+      "city": "San Salvador",
+      "country": "El Salvador",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20170304013729/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-san-salvador-2016/"
+    },
+    {
+      "edition": "XXIV",
+      "year": 2017,
+      "dates": null,
+      "city": "Managua",
+      "country": "Nicaragua",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20220530190555/http://forodesaopaulo.org/declaracion-final-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-2017/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1571510652418"
+    },
+    {
+      "edition": "XXV",
+      "year": 2018,
+      "dates": null,
+      "city": "Havana",
+      "country": "Cuba",
+      "datesVerified": false,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20191004055653/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-habana-2018/"
+    },
+    {
+      "edition": "XXVI",
+      "year": 2019,
+      "dates": null,
+      "city": "Caracas",
+      "country": "Venezuela",
+      "datesVerified": false,
+      "notes": "Last meeting before a multi-year pause (no in-person meetings 2020–2022)."
+    },
+    {
+      "edition": "XXVII",
+      "year": 2023,
+      "dates": "29 Jun–2 Jul 2023",
+      "city": "Brasília",
+      "country": "Brazil",
+      "datesVerified": false,
+      "notes": "First in-person meeting after the pandemic-era pause; held in Lula's third term."
+    },
+    {
+      "edition": "XXVIII",
+      "year": 2024,
+      "dates": null,
+      "city": "Tegucigalpa",
+      "country": "Honduras",
+      "datesVerified": false,
+      "notes": ""
+    }
   ],
   "parties": [
-    { "country": "Brazil",      "name": "Partido dos Trabalhadores (PT)",                                   "abbr": "PT",   "founding": true,    "figures": ["Luiz Inácio Lula da Silva"], "notes": "Convening party of the Forum." },
-    { "country": "Cuba",        "name": "Partido Comunista de Cuba",                                        "abbr": "PCC",  "founding": true,    "figures": ["Fidel Castro", "Miguel Díaz-Canel"], "notes": "" },
-    { "country": "Nicaragua",   "name": "Frente Sandinista de Liberación Nacional",                         "abbr": "FSLN", "founding": true,    "figures": ["Daniel Ortega"], "notes": "" },
-    { "country": "El Salvador", "name": "Frente Farabundo Martí para la Liberación Nacional",               "abbr": "FMLN", "founding": true,    "figures": [], "notes": "Was an insurgent coalition in 1990; later an electoral party." },
-    { "country": "Venezuela",   "name": "Partido Socialista Unido de Venezuela",                            "abbr": "PSUV", "founding": false,   "figures": ["Hugo Chávez", "Nicolás Maduro"], "notes": "PSUV founded 2007; Chávez aligned with the Forum from the early 2000s." },
-    { "country": "Bolivia",     "name": "Movimiento al Socialismo",                                         "abbr": "MAS",  "founding": false,   "figures": ["Evo Morales"], "notes": "" },
-    { "country": "Uruguay",     "name": "Frente Amplio",                                                    "abbr": "FA",   "founding": null,    "figures": [], "notes": "Membership/founding status to be verified." },
-    { "country": "Chile",       "name": "Partido Comunista de Chile",                                       "abbr": "PCCh", "founding": null,    "figures": [], "notes": "" },
-    { "country": "Mexico",      "name": "Partido de la Revolución Democrática (historically); later Morena-aligned organizations", "abbr": "PRD", "founding": null, "figures": ["Cuauhtémoc Cárdenas"], "notes": "Membership over time to be verified." },
-    { "country": "Argentina",   "name": "Various left and Kirchnerist organizations",                       "abbr": null,   "founding": null,    "figures": [], "notes": "Specific member parties to be verified." }
+    {
+      "country": "Brazil",
+      "name": "Partido dos Trabalhadores (PT)",
+      "abbr": "PT",
+      "founding": true,
+      "figures": [
+        "Luiz Inácio Lula da Silva"
+      ],
+      "notes": "Convening party of the Forum."
+    },
+    {
+      "country": "Cuba",
+      "name": "Partido Comunista de Cuba",
+      "abbr": "PCC",
+      "founding": true,
+      "figures": [
+        "Fidel Castro",
+        "Miguel Díaz-Canel"
+      ],
+      "notes": ""
+    },
+    {
+      "country": "Nicaragua",
+      "name": "Frente Sandinista de Liberación Nacional",
+      "abbr": "FSLN",
+      "founding": true,
+      "figures": [
+        "Daniel Ortega"
+      ],
+      "notes": ""
+    },
+    {
+      "country": "El Salvador",
+      "name": "Frente Farabundo Martí para la Liberación Nacional",
+      "abbr": "FMLN",
+      "founding": true,
+      "figures": [],
+      "notes": "Was an insurgent coalition in 1990; later an electoral party."
+    },
+    {
+      "country": "Venezuela",
+      "name": "Partido Socialista Unido de Venezuela",
+      "abbr": "PSUV",
+      "founding": false,
+      "figures": [
+        "Hugo Chávez",
+        "Nicolás Maduro"
+      ],
+      "notes": "PSUV founded 2007; Chávez aligned with the Forum from the early 2000s."
+    },
+    {
+      "country": "Bolivia",
+      "name": "Movimiento al Socialismo",
+      "abbr": "MAS",
+      "founding": false,
+      "figures": [
+        "Evo Morales"
+      ],
+      "notes": ""
+    },
+    {
+      "country": "Uruguay",
+      "name": "Frente Amplio",
+      "abbr": "FA",
+      "founding": null,
+      "figures": [],
+      "notes": "Membership/founding status to be verified."
+    },
+    {
+      "country": "Chile",
+      "name": "Partido Comunista de Chile",
+      "abbr": "PCCh",
+      "founding": null,
+      "figures": [],
+      "notes": ""
+    },
+    {
+      "country": "Mexico",
+      "name": "Partido de la Revolución Democrática (historically); later Morena-aligned organizations",
+      "abbr": "PRD",
+      "founding": null,
+      "figures": [
+        "Cuauhtémoc Cárdenas"
+      ],
+      "notes": "Membership over time to be verified."
+    },
+    {
+      "country": "Argentina",
+      "name": "Various left and Kirchnerist organizations",
+      "abbr": null,
+      "founding": null,
+      "figures": [],
+      "notes": "Specific member parties to be verified."
+    }
   ],
   "participatingCountries": [
-    "Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Cuba", "Dominican Republic",
-    "Ecuador", "El Salvador", "Guatemala", "Haiti", "Mexico", "Nicaragua", "Peru",
-    "Puerto Rico", "Uruguay", "Venezuela"
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Haiti",
+    "Mexico",
+    "Nicaragua",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
   ],
   "relatedOrganizations": [
     {
@@ -91,18 +437,196 @@
       "url": null
     }
   ],
+  "criticalPerspectives": {
+    "note": "Several authors and outlets analyze the Foro de São Paulo as a coordinating network of the Latin American left, tracking the connections between its member parties and the spread of left governments in the region. These works are influential in Brazil's political debate. Some specific claims (e.g. formal ties to armed groups, or direct control of governments) are debated; such claims are attributed to their authors rather than asserted here as established fact.",
+    "works": [
+      {
+        "author": "Olavo de Carvalho",
+        "work": "O Foro de São Paulo: A ascensão do comunismo latino-americano",
+        "year": "2022",
+        "publisher": "Vide Editorial (posthumous compilation)",
+        "url": "https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861",
+        "thesis": "A long-time analyst of the FSP, Carvalho argued it functions as a coordinated project advancing the Latin American left, and traced links between its member parties and movements — including, in his account, armed groups such as the FARC and Chile's MIR. He was central to bringing the FSP into Brazilian public debate; the strongest of these claims are debated."
+      },
+      {
+        "author": "Graça Salgueiro",
+        "work": "O Foro de São Paulo: A mais perigosa organização revolucionária das Américas",
+        "year": null,
+        "publisher": "Rádio Vox — Observatório Latino",
+        "url": "https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo",
+        "thesis": "Argues the FSP is a far-reaching revolutionary network operating across the Americas, including through influence over media. Developed in her book and on her Rádio Vox program Observatório Latino."
+      },
+      {
+        "author": "Heitor De Paola",
+        "work": "Commentary on the FSP, the 'Latin American axis' and the New World Order",
+        "year": null,
+        "publisher": "Rádio Vox / Observatório Latino",
+        "url": "https://radiovox.org/",
+        "thesis": "Analyzes the FSP within a wider regional and geopolitical strategy of the left ('the Latin American axis')."
+      }
+    ]
+  },
   "references": [
-    { "title": "São Paulo Forum — Wikipedia (English)",                         "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum", "publisher": "Wikipedia", "type": "encyclopedia" },
-    { "title": "Foro de São Paulo — Wikipédia (Português)",                     "url": "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo", "publisher": "Wikipédia", "type": "encyclopedia" },
-    { "title": "Foro de São Paulo: 33 anos em defesa da integração regional e da democracia", "url": "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/", "publisher": "Partido dos Trabalhadores (official)", "type": "primary/affiliated" },
-    { "title": "Foro de São Paulo completa 30 anos; entenda sua importância",   "url": "https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/", "publisher": "Brasil de Fato", "type": "news" },
-    { "title": "São Paulo Forum is back in Brasília with leaders from across the globe (2023)", "url": "https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/", "publisher": "Peoples Dispatch", "type": "news" },
-    { "title": "Thirty years ago, the São Paulo Forum gave the left heart",     "url": "https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart", "publisher": "Granma (Cuba)", "type": "news/affiliated" },
-    { "title": "The Marxist Influence of the São Paulo Forum in Latin America", "url": "https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america", "publisher": "The Heritage Foundation", "type": "commentary (critical)" },
-    { "title": "Scandals erode Sao Paulo Forum's leftist grip",                 "url": "https://www.gisreportsonline.com/r/sao-paulo-forum/", "publisher": "GIS Reports", "type": "analysis" },
-    { "title": "Foro de São Paulo — InfoEscola",                                "url": "https://www.infoescola.com/politica/foro-de-sao-paulo/", "publisher": "InfoEscola", "type": "encyclopedia" },
-    { "title": "El Grupo de Puebla: ¿el relevo del Foro de Sao Paulo?",         "url": "https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/", "publisher": "Infobae", "type": "analysis (Foro vs. Puebla Group)" },
-    { "title": "Las diferencias entre el grupo de Puebla y el foro de Sao Paulo", "url": "https://comitedelectura.pe/blogs/noticias/las-diferencias-entre-el-grupo-de-puebla-y-el-foro-de-sao-paulo", "publisher": "Comité de Lectura", "type": "analysis (Foro vs. Puebla Group)" },
-    { "title": "Foro de São Paulo y Grupo de Puebla, en Honduras (June 2024)",  "url": "https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/", "publisher": "Infobae", "type": "news (both orgs met in 2024)" }
-  ]
+    {
+      "title": "São Paulo Forum — Wikipedia (English)",
+      "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "title": "Foro de São Paulo — Wikipédia (Português)",
+      "url": "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+      "publisher": "Wikipédia",
+      "type": "encyclopedia"
+    },
+    {
+      "title": "Foro de São Paulo: 33 anos em defesa da integração regional e da democracia",
+      "url": "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
+      "publisher": "Partido dos Trabalhadores (official)",
+      "type": "primary/affiliated"
+    },
+    {
+      "title": "Foro de São Paulo completa 30 anos; entenda sua importância",
+      "url": "https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/",
+      "publisher": "Brasil de Fato",
+      "type": "news"
+    },
+    {
+      "title": "São Paulo Forum is back in Brasília with leaders from across the globe (2023)",
+      "url": "https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/",
+      "publisher": "Peoples Dispatch",
+      "type": "news"
+    },
+    {
+      "title": "Thirty years ago, the São Paulo Forum gave the left heart",
+      "url": "https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart",
+      "publisher": "Granma (Cuba)",
+      "type": "news/affiliated"
+    },
+    {
+      "title": "The Marxist Influence of the São Paulo Forum in Latin America",
+      "url": "https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america",
+      "publisher": "The Heritage Foundation",
+      "type": "commentary (critical)"
+    },
+    {
+      "title": "Scandals erode Sao Paulo Forum's leftist grip",
+      "url": "https://www.gisreportsonline.com/r/sao-paulo-forum/",
+      "publisher": "GIS Reports",
+      "type": "analysis"
+    },
+    {
+      "title": "Foro de São Paulo — InfoEscola",
+      "url": "https://www.infoescola.com/politica/foro-de-sao-paulo/",
+      "publisher": "InfoEscola",
+      "type": "encyclopedia"
+    },
+    {
+      "title": "El Grupo de Puebla: ¿el relevo del Foro de Sao Paulo?",
+      "url": "https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/",
+      "publisher": "Infobae",
+      "type": "analysis (Foro vs. Puebla Group)"
+    },
+    {
+      "title": "Las diferencias entre el grupo de Puebla y el foro de Sao Paulo",
+      "url": "https://comitedelectura.pe/blogs/noticias/las-diferencias-entre-el-grupo-de-puebla-y-el-foro-de-sao-paulo",
+      "publisher": "Comité de Lectura",
+      "type": "analysis (Foro vs. Puebla Group)"
+    },
+    {
+      "title": "Foro de São Paulo y Grupo de Puebla, en Honduras (June 2024)",
+      "url": "https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/",
+      "publisher": "Infobae",
+      "type": "news (both orgs met in 2024)"
+    },
+    {
+      "title": "O Foro de São Paulo: A ascensão do comunismo latino-americano",
+      "url": "https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861",
+      "publisher": "Olavo de Carvalho (Vide Editorial, 2022)",
+      "type": "book (analysis)"
+    },
+    {
+      "title": "O Foro de São Paulo: A mais perigosa organização revolucionária das Américas",
+      "url": "https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo",
+      "publisher": "Graça Salgueiro",
+      "type": "book (analysis)"
+    },
+    {
+      "title": "Rádio Vox — Observatório Latino",
+      "url": "https://radiovox.org/",
+      "publisher": "Rádio Vox (Graça Salgueiro, Heitor De Paola)",
+      "type": "media/podcast (analysis)"
+    }
+  ],
+  "membersInGovernment": {
+    "note": "Parties that belong to or are aligned with the Foro de São Paulo have held the presidency across much of Latin America — a measure of the network's electoral weight. (The region has also elected non-FSP, right-leaning governments, so this is a pattern, not exclusive control.) Founding/membership status of some parties is still being verified (see parties list).",
+    "entries": [
+      {
+        "country": "Brazil",
+        "party": "Partido dos Trabalhadores (PT)",
+        "fspStatus": "founding member",
+        "heads": "Lula da Silva (2003–2010, 2023–); Dilma Rousseff (2011–2016)"
+      },
+      {
+        "country": "Venezuela",
+        "party": "PSUV (and predecessors)",
+        "fspStatus": "member",
+        "heads": "Hugo Chávez (1999–2013); Nicolás Maduro (2013–)"
+      },
+      {
+        "country": "Bolivia",
+        "party": "Movimiento al Socialismo (MAS)",
+        "fspStatus": "member",
+        "heads": "Evo Morales (2006–2019); Luis Arce (2020–)"
+      },
+      {
+        "country": "Nicaragua",
+        "party": "Frente Sandinista (FSLN)",
+        "fspStatus": "founding member",
+        "heads": "Daniel Ortega (1985–1990, 2007–)"
+      },
+      {
+        "country": "Uruguay",
+        "party": "Frente Amplio",
+        "fspStatus": "member (to verify founding)",
+        "heads": "Vázquez, Mujica (2005–2020); Yamandú Orsi (2025–)"
+      },
+      {
+        "country": "El Salvador",
+        "party": "FMLN",
+        "fspStatus": "founding member",
+        "heads": "Mauricio Funes (2009–2014); Sánchez Cerén (2014–2019)"
+      },
+      {
+        "country": "Honduras",
+        "party": "LIBRE",
+        "fspStatus": "member",
+        "heads": "Xiomara Castro (2022–)"
+      },
+      {
+        "country": "Mexico",
+        "party": "Morena (formerly PRD-aligned)",
+        "fspStatus": "affiliated (to verify)",
+        "heads": "López Obrador (2018–2024); Claudia Sheinbaum (2024–)"
+      },
+      {
+        "country": "Argentina",
+        "party": "Peronist/Kirchnerist coalitions",
+        "fspStatus": "affiliated (to verify)",
+        "heads": "N. Kirchner, C. F. de Kirchner, A. Fernández (2003–2015, 2019–2023)"
+      },
+      {
+        "country": "Chile",
+        "party": "PS / Partido Comunista de Chile",
+        "fspStatus": "member (to verify)",
+        "heads": "Bachelet (2006–2010, 2014–2018)"
+      },
+      {
+        "country": "Ecuador",
+        "party": "Movimiento PAIS",
+        "fspStatus": "affiliated (to verify)",
+        "heads": "Rafael Correa (2007–2017)"
+      }
+    ]
+  }
 }
