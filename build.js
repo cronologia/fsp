@@ -217,6 +217,44 @@ function renderTimeline(meetings) {
     .join('\n');
 }
 
+function renderNav() {
+  const items = [
+    ['#origins', 'Origins'],
+    ['#timeline', 'Timeline'],
+    ['#meetings', 'Meetings'],
+    ['#parties', 'Parties'],
+    ['#government', 'In government'],
+    ['#countries', 'Countries'],
+    ['#perspectives', 'Analyses'],
+    ['#references', 'References'],
+  ];
+  return `  <nav class="site-nav"><div class="wrap">${items
+    .map(([href, label]) => `<a href="${href}">${esc(label)}</a>`)
+    .join('')}</div></nav>`;
+}
+
+function renderCountryIndex(countries) {
+  if (!countries || !countries.length) return '';
+  const cards = countries
+    .map((c) => {
+      const n = (c.fspPresidents || []).length;
+      return `      <a class="country-card" href="countries/${esc(c.code)}.html">
+        <span class="cc-name">${esc(c.country)}</span>
+        <span class="cc-party">${esc(c.fspParty)}</span>
+        <span class="cc-count">${esc(n)} FSP president${n === 1 ? '' : 's'}</span>
+      </a>`;
+    })
+    .join('\n');
+  return `    <section id="countries">
+      <h2>Countries</h2>
+      <p class="section-intro">Per-country dossiers: presidential succession since 1990 (FSP presidents highlighted) and the Supreme Court history.</p>
+      <div class="country-index">
+${cards}
+      </div>
+    </section>
+`;
+}
+
 function renderFormation(f) {
   if (!f || !f.items || !f.items.length) return '';
   const cards = f.items
@@ -380,7 +418,7 @@ ${sources}
 `;
 }
 
-function buildHtml(data, archives, codeByCountry) {
+function buildHtml(data, archives, codeByCountry, countries) {
   const { meta, founding } = data;
   return `<!DOCTYPE html>
 <html lang="${esc(meta.language || 'en')}">
@@ -400,6 +438,7 @@ function buildHtml(data, archives, codeByCountry) {
       <p class="updated">Last updated: ${esc(meta.lastUpdated)}</p>
     </div>
   </header>
+${renderNav()}
 
   <main class="wrap">
     <div class="notice">
@@ -454,6 +493,7 @@ ${renderParties(data.parties)}
     </section>
 
 ${renderMembersInGovernment(data.membersInGovernment, codeByCountry)}
+${renderCountryIndex(countries)}
     <section id="related">
       <h2>Related organizations</h2>
       <p class="section-intro">The Foro de São Paulo is often confused with newer left/progressive networks. It has <strong>not</strong> been renamed — these are distinct, coexisting organizations that sometimes coordinate or meet alongside it.</p>
@@ -490,7 +530,7 @@ function main() {
 
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
-  const html = buildHtml(data, archives, codeByCountry);
+  const html = buildHtml(data, archives, codeByCountry, countries);
   fs.writeFileSync(path.join(OUT_DIR, 'index.html'), html);
 
   // Per-country pages (presidential succession + high court).
