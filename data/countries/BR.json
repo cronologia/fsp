@@ -71,12 +71,13 @@
     "name": "Supremo Tribunal Federal (STF)",
     "size": 11,
     "appointmentMethod": "Nominated by the President, confirmed by the Senate; mandatory retirement at 75.",
-    "fspEraChanges": "No structural change to the court. PT presidents (Lula, Dilma) filled numerous vacancies through the normal process; over 2003–2016 they appointed a majority of the sitting justices. Lula appointed several more from 2023.",
-    "stillServing": "Several Lula/Dilma-era appointees remain on the 11-seat court as of 2026; exact current count to verify.",
-    "verified": false
+    "fspEraChanges": "No structural change to the court. PT presidents (Lula, Dilma) filled vacancies through the normal process. As of 2026 a majority of the 11 sitting justices were appointed by PT (FSP) presidents: Lula appointed Cármen Lúcia, Dias Toffoli, Cristiano Zanin and Flávio Dino (with Jorge Messias nominated for the seat vacated by Barroso's 2025 retirement); Dilma appointed Luiz Fux and Edson Fachin (the current court president). The rest were appointed by FHC (Gilmar Mendes), Temer (Alexandre de Moraes) and Bolsonaro (Nunes Marques, André Mendonça).",
+    "stillServing": "About 7 of the 11 current justices were appointed by FSP (PT) presidents Lula and Dilma — a working majority — as of 2026 (snapshot; the Barroso-seat confirmation was still in process).",
+    "verified": true
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supremo_Tribunal_Federal",
+    "https://portal.stf.jus.br/ostf/ministros/ministro.asp?periodo=STF&consulta=QUADRO_INDICACOES",
     "https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil"
   ]
 }
