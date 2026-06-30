@@ -74,7 +74,7 @@ function renderMeetingsRows(meetings) {
       const decl = m.declarationUrl
         ? `<a class="decl-link" href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank" title="Final declaration (Internet Archive)">📄 declaration</a>`
         : '<span class="muted">—</span>';
-      return `        <tr>
+      return `        <tr data-country="${esc(m.country)}" data-year="${esc(m.year)}">
           <td class="edition">${esc(m.edition)}</td>
           <td class="year">${esc(m.year)}</td>
           <td>${dates}</td>
@@ -519,8 +519,20 @@ ${renderTimeline(data.meetings)}
     <section id="meetings">
       <h2>Meetings (Encontros)</h2>
       <p class="section-intro">All recorded editions of the Forum. A <span class="flag">?</span> marks dates not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.</p>
+      <div class="m-controls">
+        <input type="search" id="m-search" placeholder="Search city, country, notes…" aria-label="Search meetings" />
+        <select id="m-country" aria-label="Filter by country">
+          <option value="">All countries</option>
+${[...new Set(data.meetings.map((m) => m.country))].sort().map((c) => `          <option value="${esc(c)}">${esc(c)}</option>`).join('\n')}
+        </select>
+        <select id="m-sort" aria-label="Sort by year">
+          <option value="asc">Year ↑</option>
+          <option value="desc">Year ↓</option>
+        </select>
+        <span id="m-count" class="m-count"></span>
+      </div>
       <div class="table-scroll">
-        <table class="meetings">
+        <table class="meetings" id="meetings-table">
           <thead>
             <tr><th>Edition</th><th>Year</th><th>Dates</th><th>City</th><th>Country</th><th>Declaration</th><th>Notes</th></tr>
           </thead>
@@ -568,6 +580,7 @@ ${renderReferences(data.references, archives)}
       <p>Compiled static site generated from <code>data/forum.json</code> by <code>build.js</code>. Open data — corrections welcome via pull request.</p>
     </div>
   </footer>
+  <script src="app.js" defer></script>
 </body>
 </html>
 `;
@@ -595,6 +608,7 @@ function main() {
 
   // Copy static assets (currently just the stylesheet).
   fs.copyFileSync(path.join(SRC_DIR, 'styles.css'), path.join(OUT_DIR, 'styles.css'));
+  fs.copyFileSync(path.join(SRC_DIR, 'app.js'), path.join(OUT_DIR, 'app.js'));
 
   // Disable Jekyll processing on GitHub Pages.
   fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');

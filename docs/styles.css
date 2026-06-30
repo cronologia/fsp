@@ -90,6 +90,12 @@ h3 { font-size: 1.1rem; margin: 1.5rem 0 .5rem; }
 .tl-edition { color: var(--muted); font-variant: small-caps; }
 .tl-place { color: var(--ink); }
 
+/* Meetings controls */
+.m-controls { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: 0 0 .75rem; }
+.m-controls input, .m-controls select { font: inherit; font-size: .9rem; padding: .35rem .5rem; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
+.m-controls #m-search { flex: 1 1 240px; min-width: 180px; }
+.m-count { color: var(--muted); font-size: .82rem; margin-left: auto; }
+
 /* Meetings table */
 .table-scroll { overflow-x: auto; }
 table.meetings { width: 100%; border-collapse: collapse; font-size: .92rem; background: var(--surface); }
