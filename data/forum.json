@@ -42,6 +42,23 @@
       }
     ]
   },
+  "organization": {
+    "note": "The Forum has no permanent headquarters; coordination rotates among member-party apparatuses on a largely volunteer basis. The figures below are reported by the Forum and its affiliated sources and are still to be independently verified.",
+    "bodies": [
+      { "name": "Executive Secretariat (Secretaria Executiva)", "detail": "Implements the decisions of the plenaries; reported as based in São Paulo and held by Brazil's PT.", "verified": false },
+      { "name": "Working Group (Grupo de Trabalho)", "detail": "Standing body with representation from about 16 countries, meeting periodically between the annual plenaries.", "verified": false },
+      { "name": "Regional Secretariat — Cone Sul", "detail": "Southern Cone regional secretariat; seat reported in Uruguay.", "verified": false },
+      { "name": "Regional Secretariat — Andino-Amazônica", "detail": "Andean–Amazonian regional secretariat; provisional seat reported in Colombia.", "verified": false },
+      { "name": "Regional Secretariat — Mesoamericana e Caribenha", "detail": "Mesoamerican & Caribbean regional secretariat; seat reported in El Salvador.", "verified": false }
+    ],
+    "scale": "The PT reports about 123 member parties across 27 countries; the Forum says more than 100 parties and organizations participate. The 2023 Brasília meeting drew 700+ in-person and virtual registrants.",
+    "scaleVerified": false,
+    "sources": [
+      "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
+      "https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/",
+      "https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/"
+    ]
+  },
   "meetings": [
     {
       "edition": "I",

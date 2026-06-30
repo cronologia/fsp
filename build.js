@@ -224,6 +224,7 @@ function renderNav() {
     ['#meetings', 'Meetings'],
     ['#parties', 'Parties'],
     ['#government', 'In government'],
+    ['#organization', 'Structure'],
     ['#countries', 'Countries'],
     ['#perspectives', 'Analyses'],
     ['#references', 'References'],
@@ -231,6 +232,32 @@ function renderNav() {
   return `  <nav class="site-nav"><div class="wrap">${items
     .map(([href, label]) => `<a href="${href}">${esc(label)}</a>`)
     .join('')}</div></nav>`;
+}
+
+function renderOrganization(org) {
+  if (!org || !org.bodies || !org.bodies.length) return '';
+  const cards = org.bodies
+    .map((b) => {
+      const flag = b.verified === false ? ' <span class="flag" title="reported by the Forum / affiliated sources; to verify">?</span>' : '';
+      return `      <article class="related-card">
+        <h3>${esc(b.name)}${flag}</h3>
+        <p>${esc(b.detail)}</p>
+      </article>`;
+    })
+    .join('\n');
+  const src = (org.sources || [])
+    .map((u) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source</a>`)
+    .join(' · ');
+  return `    <section id="organization">
+      <h2>Organization &amp; structure</h2>
+      <p class="section-intro">${esc(org.note)}</p>
+      <div class="party-grid">
+${cards}
+      </div>
+      ${org.scale ? `<p class="org-scale"><strong>Scale:</strong> ${esc(org.scale)}${org.scaleVerified === false ? ' <span class="flag" title="reported figures; to verify">?</span>' : ''}</p>` : ''}
+      ${src ? `<p class="related-meta">Sources: ${src}.</p>` : ''}
+    </section>
+`;
 }
 
 function renderCountryIndex(countries) {
@@ -494,6 +521,7 @@ ${renderParties(data.parties)}
 
 ${renderMembersInGovernment(data.membersInGovernment, codeByCountry)}
 ${renderCountryIndex(countries)}
+${renderOrganization(data.organization)}
     <section id="related">
       <h2>Related organizations</h2>
       <p class="section-intro">The Foro de São Paulo is often confused with newer left/progressive networks. It has <strong>not</strong> been renamed — these are distinct, coexisting organizations that sometimes coordinate or meet alongside it.</p>
