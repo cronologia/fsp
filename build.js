@@ -65,6 +65,53 @@ function esc(value) {
     .replace(/'/g, '&#39;');
 }
 
+function renderMeetingPage(m, archives, codeByCountry) {
+  const snap = archives[m.declarationUrl];
+  const declLive = m.declarationUrl
+    ? `<a href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank">📄 Final declaration (Internet Archive)</a>`
+    : '<span class="muted">Not recovered yet — see issue tracker</span>';
+  const code = codeByCountry && codeByCountry[m.country];
+  const countryCell = code
+    ? `<a href="../countries/${esc(code)}.html">${esc(m.country)}</a>`
+    : esc(m.country);
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${esc(m.edition)} — ${esc(m.city)} ${esc(m.year)} — Foro de São Paulo</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="updated"><a href="../index.html#meetings" style="color:#fff">← Foro de São Paulo — Meetings</a></p>
+      <h1>${esc(m.edition)} Encontro — ${esc(m.city)}, ${esc(m.year)}</h1>
+      <p class="subtitle">${esc(m.country)}${m.dates ? ` · ${esc(m.dates)}` : ''}</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <section>
+      <h2>Meeting</h2>
+      <dl class="facts">
+        <dt>Edition</dt><dd>${esc(m.edition)}</dd>
+        <dt>Year</dt><dd>${esc(m.year)}</dd>
+        <dt>Dates</dt><dd>${m.dates ? esc(m.dates) + (m.datesVerified ? '' : ' (to verify)') : 'year only — to verify'}</dd>
+        <dt>Host city</dt><dd>${esc(m.city)}</dd>
+        <dt>Country</dt><dd>${countryCell}</dd>
+        <dt>Final declaration</dt><dd>${declLive}</dd>
+        ${m.notes ? `<dt>Notes</dt><dd>${esc(m.notes)}</dd>` : ''}
+      </dl>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><p>Generated from <code>data/forum.json</code>. <a href="../index.html#meetings">Back to all meetings</a>.</p></div>
+  </footer>
+</body>
+</html>
+`;
+}
+
 function renderMeetingsRows(meetings) {
   return meetings
     .map((m) => {
@@ -75,7 +122,7 @@ function renderMeetingsRows(meetings) {
         ? `<a class="decl-link" href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank" title="Final declaration (Internet Archive)">📄 declaration</a>`
         : '<span class="muted">—</span>';
       return `        <tr data-country="${esc(m.country)}" data-year="${esc(m.year)}">
-          <td class="edition">${esc(m.edition)}</td>
+          <td class="edition"><a href="meetings/${esc(m.year)}.html">${esc(m.edition)}</a></td>
           <td class="year">${esc(m.year)}</td>
           <td>${dates}</td>
           <td>${esc(m.city)}</td>
@@ -604,6 +651,13 @@ function main() {
     for (const c of countries) {
       fs.writeFileSync(path.join(cdir, `${c.code}.html`), renderCountryPage(c));
     }
+  }
+
+  // Per-meeting detail pages.
+  const mdir = path.join(OUT_DIR, 'meetings');
+  if (!fs.existsSync(mdir)) fs.mkdirSync(mdir, { recursive: true });
+  for (const m of data.meetings) {
+    fs.writeFileSync(path.join(mdir, `${m.year}.html`), renderMeetingPage(m, archives, codeByCountry));
   }
 
   // Copy static assets (currently just the stylesheet).
