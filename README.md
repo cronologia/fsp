@@ -67,9 +67,14 @@ node scripts/validate-data.js   # schema check for data/forum.json + data/countr
 ### Publish (GitHub Pages)
 
 CI handles this: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) validates the
-data, rebuilds, checks that committed `docs/` is in sync, and deploys `docs/` to GitHub Pages
-on every push to the default branch. **Enable it once** under **Settings → Pages → Build and
-deployment → Source: GitHub Actions**.
+data, rebuilds, and checks that committed `docs/` is in sync on every push/PR. Deployment to
+GitHub Pages is **opt-in** so `master` stays green until you turn it on. To go live:
+
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions**
+2. **Settings → Secrets and variables → Actions → Variables → `ENABLE_PAGES` = `true`**
+
+The `deploy` job then runs on pushes to the default branch. (Until then only the build/validate
+job runs — no failing `deploy` step.)
 
 (Alternatively, serve the committed `docs/` folder directly: Settings → Pages → Source: `docs/`
 folder. `.nojekyll` disables Jekyll processing either way.)
