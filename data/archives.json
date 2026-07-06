@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-06-30T12:39:03.961Z",
-    "count": 11
+    "lastRun": "2026-07-06T08:44:47.133Z",
+    "count": 13
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -70,6 +70,18 @@
       "timestamp": "20260630113004",
       "status": "200",
       "checkedAt": "2026-06-30T11:42:48.151Z"
+    },
+    "https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo": {
+      "archiveUrl": "https://web.archive.org/web/20260630123637/https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo",
+      "timestamp": "20260630123637",
+      "status": "200",
+      "checkedAt": "2026-07-06T08:44:46.706Z"
+    },
+    "https://radiovox.org/": {
+      "archiveUrl": "https://web.archive.org/web/20251117020502/http://radiovox.org/",
+      "timestamp": "20251117020502",
+      "status": "200",
+      "checkedAt": "2026-07-06T08:44:47.133Z"
     }
   }
 }
