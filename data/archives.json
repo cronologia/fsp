@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-11T23:07:57.731Z",
-    "count": 15
+    "lastRun": "2026-07-11T23:15:45.855Z",
+    "count": 16
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -94,6 +94,12 @@
       "timestamp": "20250818142150",
       "status": "200",
       "checkedAt": "2026-07-11T23:07:57.731Z"
+    },
+    "https://en.wikipedia.org/wiki/Liberation_theology": {
+      "archiveUrl": "https://web.archive.org/web/20260708150358/https://en.wikipedia.org/wiki/Liberation_theology",
+      "timestamp": "20260708150358",
+      "status": "200",
+      "checkedAt": "2026-07-11T23:15:45.855Z"
     }
   }
 }

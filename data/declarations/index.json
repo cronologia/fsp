@@ -1,10 +1,16 @@
 {
   "_meta": {
     "generatedBy": "scripts/fetch-declarations.js",
-    "lastRun": "2026-07-11T23:10:52.951Z",
+    "lastRun": "2026-07-11T23:16:15.058Z",
     "note": "Raw archived declaration bodies (Wayback snapshots), committed as source data for signatory/date extraction (#28). Do not hand-edit."
   },
   "files": [
+    "1990.html",
+    "1991.html",
+    "1992.html",
+    "1993.html",
+    "1995.html",
+    "1996.html",
     "1997.html",
     "1998.html",
     "2000.html",
