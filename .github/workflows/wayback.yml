@@ -46,6 +46,9 @@ jobs:
       - name: Archive reference URLs
         run: node scripts/archive-refs.js || echo "::warning::archive step failed (archive.org unreachable?)"
 
+      - name: Fetch declaration bodies
+        run: node scripts/fetch-declarations.js || echo "::warning::declaration fetch incomplete (archive.org unreachable or some snapshots failed)"
+
       - name: Rebuild site
         run: node build.js
 
@@ -73,7 +76,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/archives.json data/wayback-inventory.json docs-research/ docs/ || true
+          git add data/archives.json data/wayback-inventory.json data/declarations/ docs-research/ docs/ || true
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
