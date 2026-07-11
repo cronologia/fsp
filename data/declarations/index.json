@@ -1,32 +1,114 @@
 {
   "_meta": {
     "generatedBy": "scripts/fetch-declarations.js",
-    "lastRun": "2026-07-11T23:16:15.058Z",
-    "note": "Raw archived declaration bodies (Wayback snapshots), committed as source data for signatory/date extraction (#28). Do not hand-edit."
+    "lastRun": "2026-07-11T23:34:33.274Z",
+    "minChars": 4000,
+    "note": "Raw archived declaration bodies (Wayback snapshots) for signatory/date extraction (#28). \"shell\" entries have no article text yet — the script retries them on each run. Do not hand-edit."
   },
-  "files": [
-    "1990.html",
-    "1991.html",
-    "1992.html",
-    "1993.html",
-    "1995.html",
-    "1996.html",
-    "1997.html",
-    "1998.html",
-    "2000.html",
-    "2001.html",
-    "2002.html",
-    "2005.html",
-    "2007.html",
-    "2008.html",
-    "2009.html",
-    "2010.html",
-    "2011.html",
-    "2012.html",
-    "2013.html",
-    "2014.html",
-    "2016.html",
-    "2017.html",
-    "2018.html"
-  ]
+  "status": {
+    "1990": {
+      "state": "shell",
+      "chars": 555,
+      "snapshot": "https://web.archive.org/web/20150403220744/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-sao-paulo-1990/"
+    },
+    "1991": {
+      "state": "failed"
+    },
+    "1992": {
+      "state": "shell",
+      "chars": 1317,
+      "snapshot": "https://web.archive.org/web/20201020171348/https://forodesaopaulo.org/declaracao-final-managua-1992/"
+    },
+    "1993": {
+      "state": "shell",
+      "chars": 1321,
+      "snapshot": "https://web.archive.org/web/20201022232816/https://forodesaopaulo.org/declaracion-final-la-habana-1993/"
+    },
+    "1995": {
+      "state": "shell",
+      "chars": 1325,
+      "snapshot": "https://web.archive.org/web/20201021131747/https://forodesaopaulo.org/declaracion-final-montevideo-1995/"
+    },
+    "1996": {
+      "state": "shell",
+      "chars": 1327,
+      "snapshot": "https://web.archive.org/web/20201020181601/https://forodesaopaulo.org/declaracao-final-san-salvador-1996/"
+    },
+    "1997": {
+      "state": "shell",
+      "chars": 1329,
+      "snapshot": "https://web.archive.org/web/20201021125101/https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/"
+    },
+    "1998": {
+      "state": "shell",
+      "chars": 1313,
+      "snapshot": "https://web.archive.org/web/20201022230207/https://forodesaopaulo.org/declaracao-final-mexico-1998/"
+    },
+    "2000": {
+      "state": "shell",
+      "chars": 1265,
+      "snapshot": "https://web.archive.org/web/20201026223448/https://forodesaopaulo.org/declaracao-final-niquinohomo-2000/"
+    },
+    "2001": {
+      "state": "shell",
+      "chars": 1327,
+      "snapshot": "https://web.archive.org/web/20180714233101/http://forodesaopaulo.org:80/declaracion-final-la-habana-2001"
+    },
+    "2002": {
+      "state": "shell",
+      "chars": 547,
+      "snapshot": "https://web.archive.org/web/20150405010304/http://forodesaopaulo.org/declaracao-final-antigua-2002/"
+    },
+    "2005": {
+      "state": "ok",
+      "chars": 19159
+    },
+    "2007": {
+      "state": "ok",
+      "chars": 12471
+    },
+    "2008": {
+      "state": "ok",
+      "chars": 13897
+    },
+    "2009": {
+      "state": "ok",
+      "chars": 18835
+    },
+    "2010": {
+      "state": "ok",
+      "chars": 17947
+    },
+    "2011": {
+      "state": "ok",
+      "chars": 17136
+    },
+    "2012": {
+      "state": "failed"
+    },
+    "2013": {
+      "state": "ok",
+      "chars": 16836
+    },
+    "2014": {
+      "state": "failed"
+    },
+    "2015": {
+      "state": "failed"
+    },
+    "2016": {
+      "state": "ok",
+      "chars": 15670,
+      "snapshot": "https://web.archive.org/web/20160704041758/http://forodesaopaulo.org:80/declaracion-final-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-2016/"
+    },
+    "2017": {
+      "state": "ok",
+      "chars": 14357
+    },
+    "2018": {
+      "state": "shell",
+      "chars": 497,
+      "snapshot": "https://web.archive.org/web/20191004055653/http://forodesaopaulo.org:80/declaraciones_finales/declaracion-final-declaracao-final-la-habana-2018/"
+    }
+  }
 }
