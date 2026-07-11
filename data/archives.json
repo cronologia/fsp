@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-06T08:44:47.133Z",
-    "count": 13
+    "lastRun": "2026-07-11T23:07:57.731Z",
+    "count": 15
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -82,6 +82,18 @@
       "timestamp": "20251117020502",
       "status": "200",
       "checkedAt": "2026-07-06T08:44:47.133Z"
+    },
+    "https://en.wikipedia.org/wiki/Frei_Betto": {
+      "archiveUrl": "https://web.archive.org/web/20260605190521/https://en.wikipedia.org/wiki/Frei_Betto",
+      "timestamp": "20260605190521",
+      "status": "200",
+      "checkedAt": "2026-07-11T23:07:53.385Z"
+    },
+    "https://www.voltairenet.org/article154638.html": {
+      "archiveUrl": "https://web.archive.org/web/20250818142150/https://www.voltairenet.org/article154638.html",
+      "timestamp": "20250818142150",
+      "status": "200",
+      "checkedAt": "2026-07-11T23:07:57.731Z"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-07-06T08:42:02.196Z",
-  "latestCapture": "20260701150007",
+  "lastRun": "2026-07-11T23:04:42.441Z",
+  "latestCapture": "20260706131554",
   "uniqueUrls": 35273,
   "usefulUrls": 3314,
   "truncated": false,
@@ -3915,8 +3915,8 @@
     {
       "url": "http://forodesaopaulo.org/declaracion-final-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-2016/",
       "firstSeen": "20260524144252",
-      "lastSeen": "20260701134455",
-      "snapshots": 4,
+      "lastSeen": "20260706044427",
+      "snapshots": 5,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": true
@@ -4671,8 +4671,8 @@
     {
       "url": "http://forodesaopaulo.org/documento-base-base-document/",
       "firstSeen": "20260524144256",
-      "lastSeen": "20260701134455",
-      "snapshots": 4,
+      "lastSeen": "20260706044430",
+      "snapshots": 5,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": true
@@ -6048,8 +6048,8 @@
     {
       "url": "http://forodesaopaulo.org/partidos/",
       "firstSeen": "20260524144256",
-      "lastSeen": "20260701134455",
-      "snapshots": 4,
+      "lastSeen": "20260706044428",
+      "snapshots": 5,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": true
@@ -8586,8 +8586,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/06/Declaraci%C3%B3n-Final-2016.pdf",
       "firstSeen": "20170302004406",
-      "lastSeen": "20260614014754",
-      "snapshots": 4,
+      "lastSeen": "20260706131554",
+      "snapshots": 5,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -44793,8 +44793,8 @@
     {
       "url": "http://forodesaopaulo.org/?page_id=52",
       "firstSeen": "20260524181342",
-      "lastSeen": "20260701150007",
-      "snapshots": 4,
+      "lastSeen": "20260706093337",
+      "snapshots": 6,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
