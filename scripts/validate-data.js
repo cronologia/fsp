@@ -63,11 +63,27 @@ function validateForum() {
     if (!(p.founding === true || p.founding === false || p.founding === null)) err(f, `parties[${i}].founding must be true/false/null`);
   });
 
+  const refIds = new Set();
   if (!isArr(d.references)) err(f, 'references[] missing');
   else d.references.forEach((r, i) => {
+    if (!isStr(r.id)) err(f, `references[${i}].id missing (stable ids are required)`);
+    else if (refIds.has(r.id)) err(f, `references[${i}].id duplicate: ${r.id}`);
+    else refIds.add(r.id);
     if (!isStr(r.title)) err(f, `references[${i}].title missing`);
     if (!isStr(r.url)) err(f, `references[${i}].url missing`);
   });
+
+  // sources[] entries must be a known reference id or a raw http(s) URL.
+  const checkSources = (sources, at) => {
+    if (sources === undefined) return;
+    if (!isArr(sources)) { err(f, `${at} must be an array`); return; }
+    sources.forEach((s, i) => {
+      if (!isStr(s)) err(f, `${at}[${i}] must be a string`);
+      else if (!refIds.has(s) && !/^https?:\/\//.test(s)) err(f, `${at}[${i}] is neither a known reference id nor a URL: ${s}`);
+    });
+  };
+  (d.formation && d.formation.items || []).forEach((it, i) => checkSources(it.sources, `formation.items[${i}].sources`));
+  if (d.organization) checkSources(d.organization.sources, 'organization.sources');
 }
 
 // ---- countries/*.json -----------------------------------------------------
