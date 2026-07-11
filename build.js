@@ -257,6 +257,40 @@ ${cards}
 `;
 }
 
+/**
+ * Reference registry: id -> { ref, n } (n = 1-based citation number, which is
+ * also the item's position in the rendered References list). Populated in
+ * main() before any page is rendered.
+ */
+let REFS_BY_ID = new Map();
+
+function buildRefIndex(refs) {
+  REFS_BY_ID = new Map(refs.map((r, i) => [r.id, { ref: r, n: i + 1 }]));
+}
+
+/**
+ * Render superscript citation markers for a sources[] array. Entries are
+ * either a reference id (linked to the anchored References list as [n]) or a
+ * raw URL (linked externally as [web] — the migration path for older data).
+ * `prefix` points at index.html from subpages ('' on the homepage).
+ */
+function cite(sources, prefix = '') {
+  if (!sources || !sources.length) return '';
+  const marks = sources
+    .map((s) => {
+      const hit = REFS_BY_ID.get(s);
+      if (hit) {
+        return `<a href="${prefix}#ref-${esc(s)}" title="${esc(hit.ref.title)}">[${hit.n}]</a>`;
+      }
+      if (/^https?:\/\//.test(s)) {
+        return `<a href="${esc(s)}" rel="noopener noreferrer" target="_blank" title="external source">[web]</a>`;
+      }
+      return `<span class="flag" title="unknown source id: ${esc(s)}">[?]</span>`;
+    })
+    .join('');
+  return `<sup class="cite">${marks}</sup>`;
+}
+
 function renderReferences(refs, archives) {
   return refs
     .map((r) => {
@@ -266,7 +300,7 @@ function renderReferences(refs, archives) {
             snap.timestamp ? ` ${esc(formatArchiveTs(snap.timestamp))}` : ''
           }</a>`
         : '';
-      return `        <li>
+      return `        <li id="ref-${esc(r.id)}">
           <a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a>
           <span class="ref-meta">${esc(r.publisher)} — ${esc(r.type)}${archiveLink}</span>
         </li>`;
@@ -314,17 +348,13 @@ function renderOrganization(org) {
       </article>`;
     })
     .join('\n');
-  const src = (org.sources || [])
-    .map((u) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source</a>`)
-    .join(' · ');
   return `    <section id="organization">
       <h2>Organization &amp; structure</h2>
-      <p class="section-intro">${esc(org.note)}</p>
+      <p class="section-intro">${esc(org.note)}${cite(org.sources)}</p>
       <div class="party-grid">
 ${cards}
       </div>
-      ${org.scale ? `<p class="org-scale"><strong>Scale:</strong> ${esc(org.scale)}${org.scaleVerified === false ? ' <span class="flag" title="reported figures; to verify">?</span>' : ''}</p>` : ''}
-      ${src ? `<p class="related-meta">Sources: ${src}.</p>` : ''}
+      ${org.scale ? `<p class="org-scale"><strong>Scale:</strong> ${esc(org.scale)}${org.scaleVerified === false ? ' <span class="flag" title="reported figures; to verify">?</span>' : ''}${cite(org.sources)}</p>` : ''}
     </section>
 `;
 }
@@ -356,13 +386,9 @@ function renderFormation(f) {
   const cards = f.items
     .map((it) => {
       const flag = it.verified === false ? ' <span class="flag" title="reported / attributed, not independently sourced here">?</span>' : '';
-      const src = (it.sources || [])
-        .map((u) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source</a>`)
-        .join(' · ');
       return `      <article class="related-card">
         <h3>${esc(it.title)}${flag}</h3>
-        <p>${esc(it.text)}</p>
-        ${src ? `<p class="related-meta">${src}</p>` : ''}
+        <p>${esc(it.text)}${cite(it.sources)}</p>
       </article>`;
     })
     .join('\n');
@@ -638,6 +664,7 @@ function main() {
   const archives = loadArchives();
   const countries = loadCountries();
   const codeByCountry = Object.fromEntries(countries.map((c) => [c.country, c.code]));
+  buildRefIndex(data.references);
 
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 

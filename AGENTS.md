@@ -65,6 +65,13 @@ neutrality matter more than completeness.
 
 - **Cite every fact.** Add the source to `references[]` and prefer primary or
   high-quality secondary sources.
+- **Citation convention:** every entry in `references[]` has a stable,
+  human-readable `id` (e.g. `wikipedia-en`, `pt-oficial`). Facts cite via a
+  `sources: ["<id>", …]` array; `build.js` renders superscript `[n]` markers
+  linking to the anchored References list. Raw URLs are allowed in `sources[]`
+  as a migration path (rendered as `[web]`), but prefer adding the source to
+  `references[]` and citing its id. `scripts/validate-data.js` rejects unknown
+  ids.
 - **Never fabricate.** If a date, edition number, or membership is uncertain,
   mark it unverified (`datesVerified: false`, `founding: null`) rather than
   guessing. Flagged-but-honest beats confident-but-wrong.
