@@ -268,6 +268,35 @@ ${cards}
 `;
 }
 
+function renderArmedMovements(am) {
+  if (!am || !am.movements || !am.movements.length) return '';
+  const cards = am.movements
+    .map((m) => {
+      const flag = m.verified === false
+        ? ' <span class="flag" title="Forum participation / details not yet verified against a primary source">?</span>'
+        : '';
+      const row = (label, val) => (val ? `        <p class="am-row"><strong>${label}:</strong> ${esc(val)}</p>` : '');
+      return `      <article class="am-card">
+        <h3>${esc(m.name)}${m.abbr ? ` <span class="abbr">(${esc(m.abbr)})</span>` : ''}${flag}</h3>
+        <p class="am-meta">${esc(m.country)}${m.period ? ` · ${esc(m.period)}` : ''}${cite(m.sources)}</p>
+${row('Nature', m.nature)}
+${row('Designation', m.designation)}
+${row('Role in the Forum', m.fspRole)}
+${row('Status today', m.currentStatus)}
+      </article>`;
+    })
+    .join('\n');
+  return `    <section id="armed">
+      <h2>Armed &amp; guerrilla movements in the Forum</h2>
+      <div class="notice notice-attribution">${esc(am.note)}</div>
+      ${am.presidencyNote ? `<div class="notice">${esc(am.presidencyNote)}</div>` : ''}
+      <div class="party-grid">
+${cards}
+      </div>
+    </section>
+`;
+}
+
 /**
  * Reference registry: id -> { ref, n } (n = 1-based citation number, which is
  * also the item's position in the rendered References list). Populated in
@@ -337,6 +366,7 @@ function renderNav() {
     ['#timeline', 'Timeline'],
     ['#meetings', 'Meetings'],
     ['#parties', 'Parties'],
+    ['#armed', 'Armed movements'],
     ['#government', 'In government'],
     ['#organization', 'Structure'],
     ['#countries', 'Countries'],
@@ -638,6 +668,7 @@ ${renderParties(data.parties)}
       <p class="countries">${data.participatingCountries.map(esc).join(' · ')}</p>
     </section>
 
+${renderArmedMovements(data.armedMovements)}
 ${renderMembersInGovernment(data.membersInGovernment, codeByCountry)}
 ${renderCountryIndex(countries)}
 ${renderOrganization(data.organization)}

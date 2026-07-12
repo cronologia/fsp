@@ -139,6 +139,14 @@ tr.fsp-row td { font-weight: 500; }
 .related-meta { color: var(--muted); font-size: .82rem !important; }
 .related-link a { color: var(--accent); font-size: .82rem; word-break: break-all; }
 
+/* Armed & guerrilla movements */
+.am-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #7a1418; border-radius: 6px; padding: 1rem; }
+.am-card h3 { margin: 0 0 .25rem; font-size: 1.02rem; }
+.am-card .abbr { color: var(--muted); font-weight: 400; }
+.am-meta { color: var(--muted); font-size: .82rem; margin: 0 0 .5rem; }
+.am-row { margin: .35rem 0; font-size: .88rem; }
+.am-row strong { color: var(--accent); }
+
 /* Critical perspectives */
 .notice-attribution { background: #fff7e6; border-left-color: #c47f17; margin-bottom: 1rem; }
 .cp-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #c47f17; border-radius: 6px; padding: 1rem; }

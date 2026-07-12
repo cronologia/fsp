@@ -750,6 +750,62 @@
       "publisher": "Foro de São Paulo / Fundação Perseu Abramo",
       "type": "primary-source",
       "note": "The Forum’s own final declarations, published as numbered chapters 01–19. Chapter numbers are the official edition numbers and skip Quito 2003 (XI = Antigua 2002 → XII = São Paulo 2005). Archived PDFs in data/declarations/pdf/; extracted text in data/declarations/text/."
+    },
+    {
+      "id": "farc-wikipedia",
+      "title": "Revolutionary Armed Forces of Colombia (FARC) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "comunes-wikipedia",
+      "title": "Comunes (political party) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Comunes_(political_party)",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "colombia-peace-2016",
+      "title": "Colombian peace agreement (2016) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Colombian_peace_agreement",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "petro-wikipedia",
+      "title": "Gustavo Petro — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gustavo_Petro",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "m19-wikipedia",
+      "title": "19th of April Movement (M-19) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/19th_of_April_Movement",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "mir-chile-wikipedia",
+      "title": "Revolutionary Left Movement (Chile) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Revolutionary_Left_Movement_(Chile)",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "tupamaros-wikipedia",
+      "title": "Tupamaros (MLN-T) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tupamaros",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "urng-wikipedia",
+      "title": "Guatemalan National Revolutionary Unity (URNG) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Guatemalan_National_Revolutionary_Unity",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
     }
   ],
   "membersInGovernment": {
@@ -820,6 +876,85 @@
         "party": "Movimiento PAIS",
         "fspStatus": "affiliated (to verify)",
         "heads": "Rafael Correa (2007–2017)"
+      }
+    ]
+  },
+  "armedMovements": {
+    "note": "The Forum was founded as a gathering of the whole Latin American left, and its participants included not only electoral parties but organizations that had waged, or still waged, armed struggle. Some — the FSLN in Nicaragua, the FMLN in El Salvador, the URNG in Guatemala, the MLN-Tupamaros in Uruguay — were guerrilla movements that became legal parties (the first two are listed among the parties above). Others took part as active armed organizations, most notably Colombia’s FARC and Chile’s MIR. Several of these groups were formally designated terrorist organizations by governments including the United States and the European Union; those designations are noted below with attribution. The precise extent and formality of each armed group’s participation in specific Forum meetings is documented unevenly, so those points are marked to verify and, where contested, attributed rather than asserted.",
+    "presidencyNote": "A claim in circulation holds that “the FARC elected a president.” This conflates two distinct groups. The FARC’s successor party, Comunes, holds seats guaranteed by the 2016 peace accord in Colombia’s Congress but has never won the presidency. Colombia’s president elected in 2022, Gustavo Petro, is a former member of a different, earlier-demobilized guerrilla movement — the M-19 — and was the first former guerrilla to win the Colombian presidency.",
+    "movements": [
+      {
+        "name": "Fuerzas Armadas Revolucionarias de Colombia — Ejército del Pueblo",
+        "abbr": "FARC-EP",
+        "country": "Colombia",
+        "period": "1964–2017 (armed); legal party since 2017",
+        "nature": "The hemisphere’s longest-running Marxist–Leninist guerrilla insurgency; during the conflict it financed itself partly through kidnapping-for-ransom and the taxation of the cocaine trade.",
+        "designation": "Designated a Foreign Terrorist Organization by the United States (1997) and listed as a terrorist organization by the European Union; treated as such by successive Colombian governments during the armed conflict.",
+        "fspRole": "Took part in Foro de São Paulo encuentros during the 1990s and 2000s, when the Forum brought together armed and electoral currents of the left.",
+        "currentStatus": "Signed the 2016 peace accord and demobilized; in 2017 became a legal party — the Fuerza Alternativa Revolucionaria del Común, which kept the “FARC” acronym — renamed Comunes in 2021. The accord guarantees it 10 congressional seats for the 2018–2026 terms. It has not won the presidency.",
+        "verified": false,
+        "sources": [
+          "farc-wikipedia",
+          "comunes-wikipedia",
+          "colombia-peace-2016"
+        ]
+      },
+      {
+        "name": "Movimiento de Izquierda Revolucionaria",
+        "abbr": "MIR",
+        "country": "Chile",
+        "period": "1965–1990s",
+        "nature": "Revolutionary-socialist movement that took up armed struggle, especially in clandestine resistance to the Pinochet dictatorship (1973–1990).",
+        "designation": "Repressed as a subversive organization by the Chilean military regime; many of its members were killed, disappeared or exiled.",
+        "fspRole": "Took part in early Foro de São Paulo meetings.",
+        "currentStatus": "Effectively defunct as an armed force after the return to democracy; only small successor groupings remain.",
+        "verified": false,
+        "sources": [
+          "mir-chile-wikipedia"
+        ]
+      },
+      {
+        "name": "Movimiento 19 de Abril",
+        "abbr": "M-19",
+        "country": "Colombia",
+        "period": "1970–1990",
+        "nature": "Nationalist, left-wing urban guerrilla, known for the 1980 Dominican embassy siege and the 1985 storming of the Palace of Justice in Bogotá.",
+        "designation": "Treated as a terrorist/subversive organization by the Colombian state during its armed period.",
+        "fspRole": "Demobilized in 1990 — the year the Forum was founded — and continued in legal politics through the Alianza Democrática M-19.",
+        "currentStatus": "Demobilized 1990. Former members stayed active in politics; Gustavo Petro, elected President of Colombia in 2022, is a former M-19 member.",
+        "verified": false,
+        "sources": [
+          "m19-wikipedia",
+          "petro-wikipedia"
+        ]
+      },
+      {
+        "name": "Movimiento de Liberación Nacional–Tupamaros",
+        "abbr": "MLN-T",
+        "country": "Uruguay",
+        "period": "1960s–1970s (armed); legal since the 1980s",
+        "nature": "Urban guerrilla movement crushed under the 1973–1985 dictatorship, its members imprisoned for years.",
+        "designation": "Prosecuted as a subversive/terrorist organization under the Uruguayan dictatorship.",
+        "fspRole": "Joined the Frente Amplio — a founding-era Forum member — and takes part through it.",
+        "currentStatus": "Legal; part of the Frente Amplio coalition. José Mujica, a former Tupamaro imprisoned during the dictatorship, was President of Uruguay (2010–2015).",
+        "verified": false,
+        "sources": [
+          "tupamaros-wikipedia"
+        ]
+      },
+      {
+        "name": "Unidad Revolucionaria Nacional Guatemalteca",
+        "abbr": "URNG",
+        "country": "Guatemala",
+        "period": "1982–1996 (guerrilla coalition); legal party since 1998",
+        "nature": "Coalition of Guatemalan guerrilla organizations during the civil war (1960–1996).",
+        "designation": "Treated as an insurgent/terrorist coalition by the Guatemalan state during the war.",
+        "fspRole": "Signed the 1996 peace accords and became a legal party; participant in the Forum.",
+        "currentStatus": "Legal political party (small).",
+        "verified": false,
+        "sources": [
+          "urng-wikipedia"
+        ]
       }
     ]
   }
