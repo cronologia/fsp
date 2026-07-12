@@ -49,6 +49,9 @@ jobs:
       - name: Fetch declaration bodies
         run: node scripts/fetch-declarations.js || echo "::warning::declaration fetch incomplete (archive.org unreachable or some snapshots failed)"
 
+      - name: Extract declaration text corpus (#28)
+        run: node scripts/extract-declarations.js || echo "::warning::declaration text extraction failed"
+
       - name: Rebuild site
         run: node build.js
 

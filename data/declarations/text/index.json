@@ -1,0 +1,199 @@
+{
+  "_meta": {
+    "generatedBy": "scripts/extract-declarations.js",
+    "lastRun": "2026-07-12T23:07:09.598Z",
+    "note": "Plain-text extraction of the official declaration PDFs (#28 phase 2). headerDate and headerEditionRoman are mined from each declaration's own opening dateline — the primary source for #3 (date/edition verification). editionMatchesOfficialNumber:false flags where the header's Roman numeral differs from the book chapter number. Do not hand-edit."
+  },
+  "declarations": {
+    "10": {
+      "year": 2001,
+      "city": "La-Habana-II",
+      "chars": 2846,
+      "headerDate": "2001-12-07",
+      "headerDateLine": "4 al 7 de diciembre de 2001",
+      "headerEditionRoman": "X",
+      "headerEditionNum": 10,
+      "editionMatchesOfficialNumber": true
+    },
+    "11": {
+      "year": 2002,
+      "city": "Antigua",
+      "chars": 3568,
+      "headerDate": "2002-12-04",
+      "headerDateLine": "2 al 4 de diciembre de 2002",
+      "headerEditionRoman": "XI",
+      "headerEditionNum": 11,
+      "editionMatchesOfficialNumber": true
+    },
+    "12": {
+      "year": 2005,
+      "city": "Sao-Paulo-II",
+      "chars": 3699,
+      "headerDate": null,
+      "headerDateLine": null,
+      "headerEditionRoman": "XII",
+      "headerEditionNum": 12,
+      "editionMatchesOfficialNumber": true
+    },
+    "13": {
+      "year": 2007,
+      "city": "San-Salvador-II",
+      "chars": 2080,
+      "headerDate": null,
+      "headerDateLine": null,
+      "headerEditionRoman": "XIII",
+      "headerEditionNum": 13,
+      "editionMatchesOfficialNumber": true
+    },
+    "14": {
+      "year": 2008,
+      "city": "Montevideo-II",
+      "chars": 2489,
+      "headerDate": "2008-05-25",
+      "headerDateLine": "22 al 25 de Mayo de 2008",
+      "headerEditionRoman": "XIV",
+      "headerEditionNum": 14,
+      "editionMatchesOfficialNumber": true
+    },
+    "15": {
+      "year": 2009,
+      "city": "Mexico-III",
+      "chars": 2787,
+      "headerDate": "2009-08-23",
+      "headerDateLine": "20 al 23 de Agosto de 2009",
+      "headerEditionRoman": "XV",
+      "headerEditionNum": 15,
+      "editionMatchesOfficialNumber": true
+    },
+    "16": {
+      "year": 2010,
+      "city": "Buenos-Aires",
+      "chars": 3139,
+      "headerDate": null,
+      "headerDateLine": null,
+      "headerEditionRoman": "XVI",
+      "headerEditionNum": 16,
+      "editionMatchesOfficialNumber": true
+    },
+    "17": {
+      "year": 2011,
+      "city": "Managua-II",
+      "chars": 3487,
+      "headerDate": null,
+      "headerDateLine": null,
+      "headerEditionRoman": "XVII",
+      "headerEditionNum": 17,
+      "editionMatchesOfficialNumber": true
+    },
+    "18": {
+      "year": 2012,
+      "city": "Caracas",
+      "chars": 3837,
+      "headerDate": "2012-07-06",
+      "headerDateLine": "5 y 6 de julio de 2012",
+      "headerEditionRoman": "XVIII",
+      "headerEditionNum": 18,
+      "editionMatchesOfficialNumber": true
+    },
+    "19": {
+      "year": 2013,
+      "city": "Sao-Paulo-III",
+      "chars": 3456,
+      "headerDate": "2013-08-04",
+      "headerDateLine": "4 de agosto de 2013",
+      "headerEditionRoman": "XIX",
+      "headerEditionNum": 19,
+      "editionMatchesOfficialNumber": true
+    },
+    "01": {
+      "year": 1990,
+      "city": "Sao-Paulo",
+      "chars": 9543,
+      "headerDate": "1990-07-04",
+      "headerDateLine": "4 de julio de 1990",
+      "headerEditionRoman": null,
+      "headerEditionNum": null,
+      "editionMatchesOfficialNumber": null
+    },
+    "02": {
+      "year": 1991,
+      "city": "Mexico",
+      "chars": 3632,
+      "headerDate": "1991-06-15",
+      "headerDateLine": "12 al 15 de junio de 1991",
+      "headerEditionRoman": "II",
+      "headerEditionNum": 2,
+      "editionMatchesOfficialNumber": true
+    },
+    "03": {
+      "year": 1992,
+      "city": "Managua",
+      "chars": 3149,
+      "headerDate": "1992-07-19",
+      "headerDateLine": "16 al 19 de julio de 1992",
+      "headerEditionRoman": "III",
+      "headerEditionNum": 3,
+      "editionMatchesOfficialNumber": true
+    },
+    "04": {
+      "year": 1993,
+      "city": "La-Habana",
+      "chars": 3705,
+      "headerDate": "1993-07-24",
+      "headerDateLine": "21 y 24 de julio de 1993",
+      "headerEditionRoman": "IV",
+      "headerEditionNum": 4,
+      "editionMatchesOfficialNumber": true
+    },
+    "05": {
+      "year": 1995,
+      "city": "Montevideo",
+      "chars": 3138,
+      "headerDate": "1995-05-28",
+      "headerDateLine": "25 al 28 de mayo de 1995",
+      "headerEditionRoman": "V",
+      "headerEditionNum": 5,
+      "editionMatchesOfficialNumber": true
+    },
+    "06": {
+      "year": 1996,
+      "city": "San-Salvador",
+      "chars": 3419,
+      "headerDate": "1996-07-28",
+      "headerDateLine": "26 y 28 de julio de 1996",
+      "headerEditionRoman": "VI",
+      "headerEditionNum": 6,
+      "editionMatchesOfficialNumber": true
+    },
+    "07": {
+      "year": 1997,
+      "city": "Porto-Alegre",
+      "chars": 2356,
+      "headerDate": null,
+      "headerDateLine": null,
+      "headerEditionRoman": "VII",
+      "headerEditionNum": 7,
+      "editionMatchesOfficialNumber": true
+    },
+    "08": {
+      "year": 1998,
+      "city": "Mexico-II",
+      "chars": 4433,
+      "headerDate": null,
+      "headerDateLine": null,
+      "headerEditionRoman": null,
+      "headerEditionNum": null,
+      "editionMatchesOfficialNumber": null
+    },
+    "09": {
+      "year": 2000,
+      "city": "Niquinohomo",
+      "chars": 3858,
+      "headerDate": null,
+      "headerDateLine": null,
+      "headerEditionRoman": null,
+      "headerEditionNum": null,
+      "editionMatchesOfficialNumber": null
+    }
+  }
+}
