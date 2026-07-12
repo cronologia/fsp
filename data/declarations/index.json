@@ -1,15 +1,14 @@
 {
   "_meta": {
     "generatedBy": "scripts/fetch-declarations.js",
-    "lastRun": "2026-07-12T04:01:34.739Z",
+    "lastRun": "2026-07-12T20:28:01.130Z",
     "minChars": 4000,
     "note": "Raw archived declaration bodies (Wayback snapshots) for signatory/date extraction (#28). \"shell\" entries have no article text yet — the script retries them on each run. Do not hand-edit."
   },
   "status": {
     "1990": {
       "state": "ok",
-      "chars": 6141,
-      "snapshot": "https://web.archive.org/web/20140924053807/http://forodesaopaulo.org/declaracao-final-dos-encontros-do-foro-de-sao-paulo-1990-2012/"
+      "chars": 6141
     },
     "1991": {
       "state": "shell",
@@ -59,7 +58,7 @@
     "2002": {
       "state": "shell",
       "chars": 559,
-      "snapshot": "https://web.archive.org/web/20150316223936/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-antigua-2002/"
+      "snapshot": "existing file"
     },
     "2005": {
       "state": "ok",
@@ -87,8 +86,7 @@
     },
     "2012": {
       "state": "ok",
-      "chars": 17986,
-      "snapshot": "https://web.archive.org/web/20150404203301/http://forodesaopaulo.org/declaracao-final-caracas-2012/"
+      "chars": 17986
     },
     "2013": {
       "state": "ok",
@@ -102,7 +100,7 @@
     "2015": {
       "state": "shell",
       "chars": 529,
-      "snapshot": "https://web.archive.org/web/20160427180440/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-ciudad-de-mexico-2015/"
+      "snapshot": "existing file"
     },
     "2016": {
       "state": "ok",
