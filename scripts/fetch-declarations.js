@@ -151,6 +151,70 @@ function candidatesFor(m, inventory) {
   return out.slice(0, MAX_ATTEMPTS);
 }
 
+/** Binary fetch with the same cold-snapshot retry policy. */
+async function fetchBinary(url) {
+  const backoffs = [0, 8000, 20000];
+  let lastErr;
+  for (const wait of backoffs) {
+    if (wait) await sleep(wait);
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+    try {
+      const res = await fetch(url, {
+        signal: ctrl.signal,
+        redirect: 'follow',
+        headers: { 'User-Agent': 'fsp-fetch-declarations/3.0 (+https://github.com/cronologia/fsp)' },
+      });
+      if (!res.ok) {
+        const e = new Error(`HTTP ${res.status}`);
+        e.permanent = res.status === 404 || res.status === 410;
+        throw e;
+      }
+      return Buffer.from(await res.arrayBuffer());
+    } catch (err) {
+      lastErr = err;
+      if (err.permanent) break;
+    } finally {
+      clearTimeout(t);
+    }
+  }
+  throw lastErr;
+}
+
+/**
+ * Download the official numbered declaration PDFs (book chapters 01-19,
+ * data/declarations/official-pdfs.json) to data/declarations/pdf/. These are
+ * the authoritative texts for 1990-2013 and immune to the HTML-shell problem.
+ */
+async function fetchOfficialPdfs() {
+  let list;
+  try {
+    list = JSON.parse(fs.readFileSync(path.join(OUT_DIR, 'official-pdfs.json'), 'utf8')).pdfs || [];
+  } catch {
+    return { pdfOk: 0, pdfFailed: 0 };
+  }
+  const dir = path.join(OUT_DIR, 'pdf');
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  let pdfOk = 0;
+  let pdfFailed = 0;
+  for (const p of list) {
+    const out = path.join(dir, `${p.officialNumber}-${p.year}.pdf`);
+    if (fs.existsSync(out) && fs.statSync(out).size > 10 * 1024) { pdfOk++; continue; }
+    await sleep(PACING_MS);
+    try {
+      const buf = await fetchBinary(p.snapshot);
+      if (buf.slice(0, 5).toString() !== '%PDF-') throw new Error('not a PDF payload');
+      fs.writeFileSync(out, buf);
+      console.log(`  ✓ pdf ${p.officialNumber} (${p.year}) — ${(buf.length / 1024).toFixed(0)} KB`);
+      pdfOk++;
+    } catch (err) {
+      console.log(`  ✗ pdf ${p.officialNumber} (${p.year}) — ${err.message}`);
+      pdfFailed++;
+    }
+  }
+  return { pdfOk, pdfFailed };
+}
+
 async function main() {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
   let inventory = [];
@@ -226,8 +290,9 @@ async function main() {
     ) + '\n'
   );
 
-  console.log(`Done. ${ok} full-text, ${shells} shells, ${failed} failed → data/declarations/.`);
-  process.exit(shells + failed > 0 ? 1 : 0);
+  const { pdfOk, pdfFailed } = await fetchOfficialPdfs();
+  console.log(`Done. HTML: ${ok} full-text, ${shells} shells, ${failed} failed · PDFs: ${pdfOk} ok, ${pdfFailed} failed → data/declarations/.`);
+  process.exit(shells + failed + pdfFailed > 0 ? 1 : 0);
 }
 
 main().catch((err) => {

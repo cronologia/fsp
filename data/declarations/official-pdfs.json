@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "source": "Book 'Declaração Final dos Encontros do Foro de São Paulo (1990-2012)' (V. Pomar & R. Regalado, Fundação Perseu Abramo, 2013) — the Forum published its chapters as numbered PDFs under wp-content/uploads/2014/07/. The chapter number IS the official edition number.",
+    "keyFinding": "Official numbering skips Quito 2003 (11 = Antigua 2002 -> 12 = Sao Paulo 2005): Quito 2003 was not a numbered Encontro. Official XII=2005 ... XVIII=2012, XIX=2013 (and hence XXIV=Havana 2018, matching that declaration's slug). Our meetings[].edition values from 2005 on are one too high — renumber under #3.",
+    "curatedFrom": "data/wayback-inventory.json (earliest clean capture per chapter)"
+  },
+  "pdfs": [
+    {
+      "officialNumber": "01",
+      "year": 1990,
+      "city": "Sao-Paulo",
+      "snapshot": "https://web.archive.org/web/20151231003122/http://forodesaopaulo.org/wp-content/uploads/2014/07/01-Declaracion-de-Sao-Paulo-19901.pdf"
+    },
+    {
+      "officialNumber": "02",
+      "year": 1991,
+      "city": "Mexico",
+      "snapshot": "https://web.archive.org/web/20211229185037/https://forodesaopaulo.org/wp-content/uploads/2014/07/02-Declaracion-de-Mexico-1991.pdf"
+    },
+    {
+      "officialNumber": "03",
+      "year": 1992,
+      "city": "Managua",
+      "snapshot": "https://web.archive.org/web/20220510180600/https://forodesaopaulo.org/wp-content/uploads/2014/07/03-Declaracion-de-Managua-1992.pdf"
+    },
+    {
+      "officialNumber": "04",
+      "year": 1993,
+      "city": "La-Habana",
+      "snapshot": "https://web.archive.org/web/20220510180655/https://forodesaopaulo.org/wp-content/uploads/2014/07/04-Declaracion-de-La-Habana-1993.pdf"
+    },
+    {
+      "officialNumber": "05",
+      "year": 1995,
+      "city": "Montevideo",
+      "snapshot": "https://web.archive.org/web/20220308022558/http://forodesaopaulo.org/wp-content/uploads/2014/07/05-Declaracion-de-Montevideo-1995.pdf"
+    },
+    {
+      "officialNumber": "06",
+      "year": 1996,
+      "city": "San-Salvador",
+      "snapshot": "https://web.archive.org/web/20220510180835/https://forodesaopaulo.org/wp-content/uploads/2014/07/06-Declaracion-de-San-Salvador-1996.pdf"
+    },
+    {
+      "officialNumber": "07",
+      "year": 1997,
+      "city": "Porto-Alegre",
+      "snapshot": "https://web.archive.org/web/20220510180854/https://forodesaopaulo.org/wp-content/uploads/2014/07/07-Declaracion-de-Porto-Alegre-1997.pdf"
+    },
+    {
+      "officialNumber": "08",
+      "year": 1998,
+      "city": "Mexico-II",
+      "snapshot": "https://web.archive.org/web/20220510181028/https://forodesaopaulo.org/wp-content/uploads/2014/07/08-Declaracion-de-Mexico-II-1998.pdf"
+    },
+    {
+      "officialNumber": "09",
+      "year": 2000,
+      "city": "Niquinohomo",
+      "snapshot": "https://web.archive.org/web/20220121172352/http://forodesaopaulo.org/wp-content/uploads/2014/07/09-Declaracion-de-Niquinohomo-2000.pdf"
+    },
+    {
+      "officialNumber": "10",
+      "year": 2001,
+      "city": "La-Habana-II",
+      "snapshot": "https://web.archive.org/web/20220510181235/https://forodesaopaulo.org/wp-content/uploads/2014/07/10-Declaracion-de-La-Habana-II-2001.pdf"
+    },
+    {
+      "officialNumber": "11",
+      "year": 2002,
+      "city": "Antigua",
+      "snapshot": "https://web.archive.org/web/20220308022448/http://forodesaopaulo.org/wp-content/uploads/2014/07/11-Declaracion-de-Antigua-2002.pdf"
+    },
+    {
+      "officialNumber": "12",
+      "year": 2005,
+      "city": "Sao-Paulo-II",
+      "snapshot": "https://web.archive.org/web/20201101130054/https://forodesaopaulo.org/wp-content/uploads/2014/07/12-Declaracion-de-Sao-Paulo-II-2005.pdf"
+    },
+    {
+      "officialNumber": "13",
+      "year": 2007,
+      "city": "San-Salvador-II",
+      "snapshot": "https://web.archive.org/web/20220510181508/https://forodesaopaulo.org/wp-content/uploads/2014/07/13-Declaracion-de-San-Salvador-II-2007.pdf"
+    },
+    {
+      "officialNumber": "14",
+      "year": 2008,
+      "city": "Montevideo-II",
+      "snapshot": "https://web.archive.org/web/20220510181651/https://forodesaopaulo.org/wp-content/uploads/2014/07/14-Declaracion-de-Montevideo-II-2008.pdf"
+    },
+    {
+      "officialNumber": "15",
+      "year": 2009,
+      "city": "Mexico-III",
+      "snapshot": "https://web.archive.org/web/20220510181707/https://forodesaopaulo.org/wp-content/uploads/2014/07/15-Declaracion-de-Mexico-III-2009.pdf"
+    },
+    {
+      "officialNumber": "16",
+      "year": 2010,
+      "city": "Buenos-Aires",
+      "snapshot": "https://web.archive.org/web/20220401122427/http://forodesaopaulo.org/wp/con-tent/uploads/2014/07/16-Declaracion-de-Buenos-Aires-2010.pdf"
+    },
+    {
+      "officialNumber": "17",
+      "year": 2011,
+      "city": "Managua-II",
+      "snapshot": "https://web.archive.org/web/20220510181845/https://forodesaopaulo.org/wp-content/uploads/2014/07/17-Declaracion-de-Managua-II-2011.pdf"
+    },
+    {
+      "officialNumber": "18",
+      "year": 2012,
+      "city": "Caracas",
+      "snapshot": "https://web.archive.org/web/20220308022430/http://forodesaopaulo.org/wp-content/uploads/2014/07/18-Declaracion-de-Caracas-2012.pdf"
+    },
+    {
+      "officialNumber": "19",
+      "year": 2013,
+      "city": "Sao-Paulo-III",
+      "snapshot": "https://web.archive.org/web/20220121172107/http://forodesaopaulo.org/wp-con-tent/uploads/2014/07/19-Declaracion-de-Sao-Paulo-III-2013.pdf"
+    }
+  ]
+}
