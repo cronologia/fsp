@@ -53,6 +53,8 @@ function validateForum() {
       if (!isStr(m.country)) err(f, `${at}.country missing`);
       if (!isBool(m.datesVerified)) err(f, `${at}.datesVerified must be boolean`);
       if (m.declarationUrl !== undefined && !isStr(m.declarationUrl)) err(f, `${at}.declarationUrl must be a string`);
+      if (m.numbered !== undefined && !isBool(m.numbered)) err(f, `${at}.numbered must be boolean`);
+      if (m.editionVerified !== undefined && !isBool(m.editionVerified)) err(f, `${at}.editionVerified must be boolean`);
     });
   }
 
