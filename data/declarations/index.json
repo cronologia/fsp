@@ -1,63 +1,65 @@
 {
   "_meta": {
     "generatedBy": "scripts/fetch-declarations.js",
-    "lastRun": "2026-07-11T23:34:33.274Z",
+    "lastRun": "2026-07-12T04:01:34.739Z",
     "minChars": 4000,
     "note": "Raw archived declaration bodies (Wayback snapshots) for signatory/date extraction (#28). \"shell\" entries have no article text yet — the script retries them on each run. Do not hand-edit."
   },
   "status": {
     "1990": {
-      "state": "shell",
-      "chars": 555,
-      "snapshot": "https://web.archive.org/web/20150403220744/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-sao-paulo-1990/"
+      "state": "ok",
+      "chars": 6141,
+      "snapshot": "https://web.archive.org/web/20140924053807/http://forodesaopaulo.org/declaracao-final-dos-encontros-do-foro-de-sao-paulo-1990-2012/"
     },
     "1991": {
-      "state": "failed"
+      "state": "shell",
+      "chars": 1176,
+      "snapshot": "existing file"
     },
     "1992": {
       "state": "shell",
       "chars": 1317,
-      "snapshot": "https://web.archive.org/web/20201020171348/https://forodesaopaulo.org/declaracao-final-managua-1992/"
+      "snapshot": "existing file"
     },
     "1993": {
       "state": "shell",
       "chars": 1321,
-      "snapshot": "https://web.archive.org/web/20201022232816/https://forodesaopaulo.org/declaracion-final-la-habana-1993/"
+      "snapshot": "existing file"
     },
     "1995": {
       "state": "shell",
       "chars": 1325,
-      "snapshot": "https://web.archive.org/web/20201021131747/https://forodesaopaulo.org/declaracion-final-montevideo-1995/"
+      "snapshot": "existing file"
     },
     "1996": {
       "state": "shell",
       "chars": 1327,
-      "snapshot": "https://web.archive.org/web/20201020181601/https://forodesaopaulo.org/declaracao-final-san-salvador-1996/"
+      "snapshot": "existing file"
     },
     "1997": {
       "state": "shell",
       "chars": 1329,
-      "snapshot": "https://web.archive.org/web/20201021125101/https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/"
+      "snapshot": "existing file"
     },
     "1998": {
       "state": "shell",
       "chars": 1313,
-      "snapshot": "https://web.archive.org/web/20201022230207/https://forodesaopaulo.org/declaracao-final-mexico-1998/"
+      "snapshot": "existing file"
     },
     "2000": {
       "state": "shell",
       "chars": 1265,
-      "snapshot": "https://web.archive.org/web/20201026223448/https://forodesaopaulo.org/declaracao-final-niquinohomo-2000/"
+      "snapshot": "existing file"
     },
     "2001": {
       "state": "shell",
       "chars": 1327,
-      "snapshot": "https://web.archive.org/web/20180714233101/http://forodesaopaulo.org:80/declaracion-final-la-habana-2001"
+      "snapshot": "existing file"
     },
     "2002": {
       "state": "shell",
-      "chars": 547,
-      "snapshot": "https://web.archive.org/web/20150405010304/http://forodesaopaulo.org/declaracao-final-antigua-2002/"
+      "chars": 559,
+      "snapshot": "https://web.archive.org/web/20150316223936/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-antigua-2002/"
     },
     "2005": {
       "state": "ok",
@@ -84,22 +86,27 @@
       "chars": 17136
     },
     "2012": {
-      "state": "failed"
+      "state": "ok",
+      "chars": 17986,
+      "snapshot": "https://web.archive.org/web/20150404203301/http://forodesaopaulo.org/declaracao-final-caracas-2012/"
     },
     "2013": {
       "state": "ok",
       "chars": 16836
     },
     "2014": {
-      "state": "failed"
+      "state": "shell",
+      "chars": 567,
+      "snapshot": "existing file"
     },
     "2015": {
-      "state": "failed"
+      "state": "shell",
+      "chars": 529,
+      "snapshot": "https://web.archive.org/web/20160427180440/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-ciudad-de-mexico-2015/"
     },
     "2016": {
       "state": "ok",
-      "chars": 15670,
-      "snapshot": "https://web.archive.org/web/20160704041758/http://forodesaopaulo.org:80/declaracion-final-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-2016/"
+      "chars": 15670
     },
     "2017": {
       "state": "ok",
@@ -108,7 +115,7 @@
     "2018": {
       "state": "shell",
       "chars": 497,
-      "snapshot": "https://web.archive.org/web/20191004055653/http://forodesaopaulo.org:80/declaraciones_finales/declaracion-final-declaracao-final-la-habana-2018/"
+      "snapshot": "existing file"
     }
   }
 }
