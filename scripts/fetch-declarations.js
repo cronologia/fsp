@@ -69,20 +69,44 @@ function textChars(html) {
     .trim().length;
 }
 
-async function fetchBody(url) {
+async function fetchOnce(url) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
     const res = await fetch(url, {
       signal: ctrl.signal,
       redirect: 'follow',
-      headers: { 'User-Agent': 'fsp-fetch-declarations/2.0 (+https://github.com/cronologia/fsp)' },
+      headers: { 'User-Agent': 'fsp-fetch-declarations/3.0 (+https://github.com/cronologia/fsp)' },
     });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) {
+      const e = new Error(`HTTP ${res.status}`);
+      e.permanent = res.status === 404 || res.status === 410;
+      throw e;
+    }
     return await res.text();
   } finally {
     clearTimeout(t);
   }
+}
+
+/**
+ * Fetch with retries. Wayback frequently connection-resets the FIRST request
+ * for a cold snapshot while it warms it from storage ("fetch failed" after
+ * ~10s); a retry then succeeds. 404/410 are permanent — no retry.
+ */
+async function fetchBody(url) {
+  const backoffs = [0, 8000, 20000];
+  let lastErr;
+  for (const wait of backoffs) {
+    if (wait) await sleep(wait);
+    try {
+      return await fetchOnce(url);
+    } catch (err) {
+      lastErr = err;
+      if (err.permanent) break;
+    }
+  }
+  throw lastErr;
 }
 
 /**
@@ -153,7 +177,12 @@ async function main() {
       continue;
     }
 
+    // Seed with the existing body (if any) so a bad run never downgrades a file.
     let best = null; // { body, chars, snap }
+    if (fs.existsSync(out)) {
+      const existing = fs.readFileSync(out, 'utf8');
+      best = { body: existing, chars: textChars(existing), snap: 'existing file' };
+    }
     for (const cand of candidatesFor(m, inventory)) {
       if (!first) await sleep(PACING_MS);
       first = false;
