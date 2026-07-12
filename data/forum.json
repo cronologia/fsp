@@ -229,24 +229,26 @@
     {
       "edition": "XII",
       "year": 2005,
-      "dates": null,
+      "dates": "4 Jul 2005",
       "city": "São Paulo",
       "country": "Brazil",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "No meeting recorded for 2004.",
       "declarationUrl": "https://web.archive.org/web/20170716080824/http://forodesaopaulo.org/declaracion-final-sao-paulo-2005",
-      "editionVerified": true
+      "editionVerified": true,
+      "datesSource": "declaration"
     },
     {
       "edition": "XIII",
       "year": 2007,
-      "dates": null,
+      "dates": "12–14 Jan 2007",
       "city": "San Salvador",
       "country": "El Salvador",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "No meeting recorded for 2006.",
       "declarationUrl": "https://web.archive.org/web/20150411134748/http://forodesaopaulo.org/declaracion-final-san-salvador-2007/",
-      "editionVerified": true
+      "editionVerified": true,
+      "datesSource": "declaration"
     },
     {
       "edition": "XIV",
@@ -275,24 +277,26 @@
     {
       "edition": "XVI",
       "year": 2010,
-      "dates": null,
+      "dates": "17–20 Aug 2010",
       "city": "Buenos Aires",
       "country": "Argentina",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20201020165021/https://forodesaopaulo.org/declaracion-final-buenos-aires-2010/",
-      "editionVerified": true
+      "editionVerified": true,
+      "datesSource": "declaration"
     },
     {
       "edition": "XVII",
       "year": 2011,
-      "dates": null,
+      "dates": "20 May 2011",
       "city": "Managua",
       "country": "Nicaragua",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20150405011756/http://forodesaopaulo.org/declaracao-final-managua-2011/",
-      "editionVerified": true
+      "editionVerified": true,
+      "datesSource": "declaration"
     },
     {
       "edition": "XVIII",
@@ -327,7 +331,8 @@
       "datesVerified": false,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20141113024517/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-paz-2014",
-      "editionVerified": false
+      "editionVerified": true,
+      "editionSource": "declaration"
     },
     {
       "edition": "XXI",
@@ -338,7 +343,8 @@
       "datesVerified": false,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20231120184939/https://forodesaopaulo.org/declaracion-final-del-xxi-encuentro-del-foro-de-sao-paulo-en-la-ciudad-de-mexico-df/2015/09/logo-oceansur.png",
-      "editionVerified": false
+      "editionVerified": true,
+      "editionSource": "declaration"
     },
     {
       "edition": "XXII",
@@ -349,7 +355,8 @@
       "datesVerified": false,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20170304013729/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-san-salvador-2016/",
-      "editionVerified": false
+      "editionVerified": true,
+      "editionSource": "declaration"
     },
     {
       "edition": "XXIII",
@@ -360,7 +367,8 @@
       "datesVerified": false,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20220530190555/http://forodesaopaulo.org/declaracion-final-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-2017/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1571510652418",
-      "editionVerified": false
+      "editionVerified": true,
+      "editionSource": "declaration"
     },
     {
       "edition": "XXIV",
