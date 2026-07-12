@@ -95,57 +95,68 @@
       "country": "Brazil",
       "datesVerified": true,
       "notes": "Founding meeting. 48 parties/organizations from 14 countries.",
-      "declarationUrl": "https://web.archive.org/web/20240918022013/http://forodesaopaulo.org/declaracao-final-sao-paulo-1990/"
+      "declarationUrl": "https://web.archive.org/web/20240918022013/http://forodesaopaulo.org/declaracao-final-sao-paulo-1990/",
+      "editionVerified": true
     },
     {
       "edition": "II",
       "year": 1991,
-      "dates": null,
+      "dates": "12–15 Jun 1991",
       "city": "Mexico City",
       "country": "Mexico",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "Name 'Foro de São Paulo' adopted from this meeting.",
-      "declarationUrl": "https://web.archive.org/web/20201028175732/https://forodesaopaulo.org/declaracao-final-mexico-1991/"
+      "declarationUrl": "https://web.archive.org/web/20201028175732/https://forodesaopaulo.org/declaracao-final-mexico-1991/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "III",
       "year": 1992,
-      "dates": null,
+      "dates": "16–19 Jul 1992",
       "city": "Managua",
       "country": "Nicaragua",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201026193950/https://forodesaopaulo.org/declaracion-final-managua-1992/"
+      "declarationUrl": "https://web.archive.org/web/20201026193950/https://forodesaopaulo.org/declaracion-final-managua-1992/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "IV",
       "year": 1993,
-      "dates": null,
+      "dates": "21–24 Jul 1993",
       "city": "Havana",
       "country": "Cuba",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201026153702/https://forodesaopaulo.org/declaracao-final-havana-1993/"
+      "declarationUrl": "https://web.archive.org/web/20201026153702/https://forodesaopaulo.org/declaracao-final-havana-1993/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "V",
       "year": 1995,
-      "dates": null,
+      "dates": "25–28 May 1995",
       "city": "Montevideo",
       "country": "Uruguay",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "No meeting recorded for 1994.",
-      "declarationUrl": "https://web.archive.org/web/20201031041133/https://forodesaopaulo.org/declaracao-final-montevideu-1995/"
+      "declarationUrl": "https://web.archive.org/web/20201031041133/https://forodesaopaulo.org/declaracao-final-montevideu-1995/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "VI",
       "year": 1996,
-      "dates": null,
+      "dates": "26–28 Jul 1996",
       "city": "San Salvador",
       "country": "El Salvador",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201023024248/https://forodesaopaulo.org/declaracion-final-san-salvador-1996/"
+      "declarationUrl": "https://web.archive.org/web/20201023024248/https://forodesaopaulo.org/declaracion-final-san-salvador-1996/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "VII",
@@ -155,7 +166,8 @@
       "country": "Brazil",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201023205436/https://forodesaopaulo.org/declaracao-final-porto-alegre-1997/"
+      "declarationUrl": "https://web.archive.org/web/20201023205436/https://forodesaopaulo.org/declaracao-final-porto-alegre-1997/",
+      "editionVerified": true
     },
     {
       "edition": "VIII",
@@ -165,7 +177,8 @@
       "country": "Mexico",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201022230207/https://forodesaopaulo.org/declaracao-final-mexico-1998/"
+      "declarationUrl": "https://web.archive.org/web/20201022230207/https://forodesaopaulo.org/declaracao-final-mexico-1998/",
+      "editionVerified": true
     },
     {
       "edition": "IX",
@@ -175,193 +188,220 @@
       "country": "Nicaragua",
       "datesVerified": false,
       "notes": "Some sources cite Niquinohomo, Nicaragua. No meeting recorded for 1999.",
-      "declarationUrl": "https://web.archive.org/web/20201026223448/https://forodesaopaulo.org/declaracao-final-niquinohomo-2000/"
+      "declarationUrl": "https://web.archive.org/web/20201026223448/https://forodesaopaulo.org/declaracao-final-niquinohomo-2000/",
+      "editionVerified": true
     },
     {
       "edition": "X",
       "year": 2001,
-      "dates": null,
+      "dates": "4–7 Dec 2001",
       "city": "Havana",
       "country": "Cuba",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201020142138/https://forodesaopaulo.org/declaracao-final-havana-2001/"
+      "declarationUrl": "https://web.archive.org/web/20201020142138/https://forodesaopaulo.org/declaracao-final-havana-2001/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "XI",
       "year": 2002,
-      "dates": null,
+      "dates": "2–4 Dec 2002",
       "city": "Antigua Guatemala",
       "country": "Guatemala",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "Host country sometimes mis-cited as Antigua and Barbuda; the city is Antigua Guatemala, Guatemala.",
-      "declarationUrl": "https://web.archive.org/web/20180714232722/http://forodesaopaulo.org/declaracion-final-antigua-2002"
+      "declarationUrl": "https://web.archive.org/web/20180714232722/http://forodesaopaulo.org/declaracion-final-antigua-2002",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
-      "edition": "XII",
+      "edition": "—",
       "year": 2003,
       "dates": null,
       "city": "Quito",
       "country": "Ecuador",
       "datesVerified": false,
-      "notes": ""
+      "notes": "Quito 2003 is not part of the Forum’s official numbered sequence: the official declarations book numbers Antigua 2002 as XI and São Paulo 2005 as XII, with no numbered encuentro for 2003. No final declaration is recorded for this meeting.",
+      "numbered": false,
+      "editionVerified": false
     },
     {
-      "edition": "XIII",
+      "edition": "XII",
       "year": 2005,
       "dates": null,
       "city": "São Paulo",
       "country": "Brazil",
       "datesVerified": false,
       "notes": "No meeting recorded for 2004.",
-      "declarationUrl": "https://web.archive.org/web/20170716080824/http://forodesaopaulo.org/declaracion-final-sao-paulo-2005"
+      "declarationUrl": "https://web.archive.org/web/20170716080824/http://forodesaopaulo.org/declaracion-final-sao-paulo-2005",
+      "editionVerified": true
     },
     {
-      "edition": "XIV",
+      "edition": "XIII",
       "year": 2007,
       "dates": null,
       "city": "San Salvador",
       "country": "El Salvador",
       "datesVerified": false,
       "notes": "No meeting recorded for 2006.",
-      "declarationUrl": "https://web.archive.org/web/20150411134748/http://forodesaopaulo.org/declaracion-final-san-salvador-2007/"
+      "declarationUrl": "https://web.archive.org/web/20150411134748/http://forodesaopaulo.org/declaracion-final-san-salvador-2007/",
+      "editionVerified": true
+    },
+    {
+      "edition": "XIV",
+      "year": 2008,
+      "dates": "22–25 May 2008",
+      "city": "Montevideo",
+      "country": "Uruguay",
+      "datesVerified": true,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20150404071549/http://forodesaopaulo.org/declaracion-final-montevideo-2008/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "XV",
-      "year": 2008,
-      "dates": null,
-      "city": "Montevideo",
-      "country": "Uruguay",
-      "datesVerified": false,
+      "year": 2009,
+      "dates": "20–23 Aug 2009",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "datesVerified": true,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20150404071549/http://forodesaopaulo.org/declaracion-final-montevideo-2008/"
+      "declarationUrl": "https://web.archive.org/web/20201020175110/https://forodesaopaulo.org/declaracion-final-mexico-2009/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "XVI",
-      "year": 2009,
-      "dates": null,
-      "city": "Mexico City",
-      "country": "Mexico",
-      "datesVerified": false,
-      "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201020175110/https://forodesaopaulo.org/declaracion-final-mexico-2009/"
-    },
-    {
-      "edition": "XVII",
       "year": 2010,
       "dates": null,
       "city": "Buenos Aires",
       "country": "Argentina",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201020165021/https://forodesaopaulo.org/declaracion-final-buenos-aires-2010/"
+      "declarationUrl": "https://web.archive.org/web/20201020165021/https://forodesaopaulo.org/declaracion-final-buenos-aires-2010/",
+      "editionVerified": true
     },
     {
-      "edition": "XVIII",
+      "edition": "XVII",
       "year": 2011,
       "dates": null,
       "city": "Managua",
       "country": "Nicaragua",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20150405011756/http://forodesaopaulo.org/declaracao-final-managua-2011/"
+      "declarationUrl": "https://web.archive.org/web/20150405011756/http://forodesaopaulo.org/declaracao-final-managua-2011/",
+      "editionVerified": true
+    },
+    {
+      "edition": "XVIII",
+      "year": 2012,
+      "dates": "5–6 Jul 2012",
+      "city": "Caracas",
+      "country": "Venezuela",
+      "datesVerified": true,
+      "notes": "",
+      "declarationUrl": "https://web.archive.org/web/20221116014056/http://forodesaopaulo.org/declaracao-final-caracas-2012/277",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "XIX",
-      "year": 2012,
-      "dates": null,
-      "city": "Caracas",
-      "country": "Venezuela",
-      "datesVerified": false,
+      "year": 2013,
+      "dates": "31 Jul–4 Aug 2013",
+      "city": "São Paulo",
+      "country": "Brazil",
+      "datesVerified": true,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20221116014056/http://forodesaopaulo.org/declaracao-final-caracas-2012/277"
+      "declarationUrl": "https://web.archive.org/web/20201026095245/https://forodesaopaulo.org/declaracion-final-sao-paulo-2013/",
+      "datesSource": "foro-declaraciones-libro",
+      "editionVerified": true
     },
     {
       "edition": "XX",
-      "year": 2013,
-      "dates": null,
-      "city": "São Paulo",
-      "country": "Brazil",
-      "datesVerified": false,
-      "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20201026095245/https://forodesaopaulo.org/declaracion-final-sao-paulo-2013/"
-    },
-    {
-      "edition": "XXI",
       "year": 2014,
       "dates": null,
       "city": "La Paz",
       "country": "Bolivia",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20141113024517/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-paz-2014"
+      "declarationUrl": "https://web.archive.org/web/20141113024517/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-paz-2014",
+      "editionVerified": false
     },
     {
-      "edition": "XXII",
+      "edition": "XXI",
       "year": 2015,
       "dates": null,
       "city": "Mexico City",
       "country": "Mexico",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20231120184939/https://forodesaopaulo.org/declaracion-final-del-xxi-encuentro-del-foro-de-sao-paulo-en-la-ciudad-de-mexico-df/2015/09/logo-oceansur.png"
+      "declarationUrl": "https://web.archive.org/web/20231120184939/https://forodesaopaulo.org/declaracion-final-del-xxi-encuentro-del-foro-de-sao-paulo-en-la-ciudad-de-mexico-df/2015/09/logo-oceansur.png",
+      "editionVerified": false
     },
     {
-      "edition": "XXIII",
+      "edition": "XXII",
       "year": 2016,
       "dates": null,
       "city": "San Salvador",
       "country": "El Salvador",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20170304013729/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-san-salvador-2016/"
+      "declarationUrl": "https://web.archive.org/web/20170304013729/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-san-salvador-2016/",
+      "editionVerified": false
     },
     {
-      "edition": "XXIV",
+      "edition": "XXIII",
       "year": 2017,
       "dates": null,
       "city": "Managua",
       "country": "Nicaragua",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20220530190555/http://forodesaopaulo.org/declaracion-final-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-2017/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1571510652418"
+      "declarationUrl": "https://web.archive.org/web/20220530190555/http://forodesaopaulo.org/declaracion-final-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-2017/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1571510652418",
+      "editionVerified": false
     },
     {
-      "edition": "XXV",
+      "edition": "XXIV",
       "year": 2018,
       "dates": null,
       "city": "Havana",
       "country": "Cuba",
       "datesVerified": false,
       "notes": "",
-      "declarationUrl": "https://web.archive.org/web/20191004055653/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-habana-2018/"
+      "declarationUrl": "https://web.archive.org/web/20191004055653/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-habana-2018/",
+      "editionVerified": false
     },
     {
-      "edition": "XXVI",
+      "edition": "XXV",
       "year": 2019,
       "dates": null,
       "city": "Caracas",
       "country": "Venezuela",
       "datesVerified": false,
-      "notes": "Last meeting before a multi-year pause (no in-person meetings 2020–2022)."
+      "notes": "Last meeting before a multi-year pause (no in-person meetings 2020–2022).",
+      "editionVerified": false
     },
     {
-      "edition": "XXVII",
+      "edition": "XXVI",
       "year": 2023,
       "dates": "29 Jun–2 Jul 2023",
       "city": "Brasília",
       "country": "Brazil",
       "datesVerified": false,
-      "notes": "First in-person meeting after the pandemic-era pause; held in Lula's third term."
+      "notes": "First in-person meeting after the pandemic-era pause; held in Lula's third term.",
+      "editionVerified": false
     },
     {
-      "edition": "XXVIII",
+      "edition": "XXVII",
       "year": 2024,
       "dates": null,
       "city": "Tegucigalpa",
       "country": "Honduras",
       "datesVerified": false,
-      "notes": ""
+      "notes": "",
+      "editionVerified": false
     }
   ],
   "parties": [
@@ -694,6 +734,14 @@
       "url": "https://www.voltairenet.org/article154638.html",
       "publisher": "Voltaire Network (Fidel Castro reflection)",
       "type": "primary/affiliated"
+    },
+    {
+      "id": "foro-declaraciones-libro",
+      "title": "Declaração Final dos Encontros do Foro de São Paulo (1990–2013) — official numbered declarations",
+      "url": "https://web.archive.org/web/20220510181707/https://forodesaopaulo.org/wp-content/uploads/2014/07/15-Declaracion-de-Mexico-III-2009.pdf",
+      "publisher": "Foro de São Paulo / Fundação Perseu Abramo",
+      "type": "primary-source",
+      "note": "The Forum’s own final declarations, published as numbered chapters 01–19. Chapter numbers are the official edition numbers and skip Quito 2003 (XI = Antigua 2002 → XII = São Paulo 2005). Archived PDFs in data/declarations/pdf/; extracted text in data/declarations/text/."
     }
   ],
   "membersInGovernment": {

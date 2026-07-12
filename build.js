@@ -74,19 +74,26 @@ function renderMeetingPage(m, archives, codeByCountry) {
   const countryCell = code
     ? `<a href="../countries/${esc(code)}.html">${esc(m.country)}</a>`
     : esc(m.country);
+  const unnumbered = m.numbered === false;
+  const heading = unnumbered
+    ? `Foro de São Paulo — ${esc(m.city)}, ${esc(m.year)}`
+    : `${esc(m.edition)} Encontro — ${esc(m.city)}, ${esc(m.year)}`;
+  const editionCell = unnumbered
+    ? 'Not part of the official numbered series'
+    : `${esc(m.edition)}${m.editionVerified ? '' : ' <span class="muted">(to verify)</span>'}`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${esc(m.edition)} — ${esc(m.city)} ${esc(m.year)} — Foro de São Paulo</title>
+  <title>${unnumbered ? esc(m.city) : esc(m.edition)} ${esc(m.year)} — Foro de São Paulo</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
       <p class="updated"><a href="../index.html#meetings" style="color:#fff">← Foro de São Paulo — Meetings</a></p>
-      <h1>${esc(m.edition)} Encontro — ${esc(m.city)}, ${esc(m.year)}</h1>
+      <h1>${heading}</h1>
       <p class="subtitle">${esc(m.country)}${m.dates ? ` · ${esc(m.dates)}` : ''}</p>
     </div>
   </header>
@@ -94,7 +101,7 @@ function renderMeetingPage(m, archives, codeByCountry) {
     <section>
       <h2>Meeting</h2>
       <dl class="facts">
-        <dt>Edition</dt><dd>${esc(m.edition)}</dd>
+        <dt>Edition</dt><dd>${editionCell}</dd>
         <dt>Year</dt><dd>${esc(m.year)}</dd>
         <dt>Dates</dt><dd>${m.dates ? esc(m.dates) + (m.datesVerified ? '' : ' (to verify)') : 'year only — to verify'}</dd>
         <dt>Host city</dt><dd>${esc(m.city)}</dd>
@@ -121,8 +128,12 @@ function renderMeetingsRows(meetings) {
       const decl = m.declarationUrl
         ? `<a class="decl-link" href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank" title="Final declaration (Internet Archive)">📄 declaration</a>`
         : '<span class="muted">—</span>';
+      const edLabel = m.numbered === false ? '—' : esc(m.edition);
+      const edFlag = m.numbered === false || m.editionVerified
+        ? ''
+        : ' <span class="flag" title="edition not yet verified against a primary source">?</span>';
       return `        <tr data-country="${esc(m.country)}" data-year="${esc(m.year)}">
-          <td class="edition"><a href="meetings/${esc(m.year)}.html">${esc(m.edition)}</a></td>
+          <td class="edition"><a href="meetings/${esc(m.year)}.html">${edLabel}</a>${edFlag}</td>
           <td class="year">${esc(m.year)}</td>
           <td>${dates}</td>
           <td>${esc(m.city)}</td>
@@ -591,7 +602,8 @@ ${renderTimeline(data.meetings)}
 
     <section id="meetings">
       <h2>Meetings (Encontros)</h2>
-      <p class="section-intro">All recorded editions of the Forum. A <span class="flag">?</span> marks dates not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.</p>
+      <p class="section-intro">All recorded editions of the Forum. A <span class="flag">?</span> marks dates or edition numbers not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.</p>
+      <p class="notice">Edition numbers follow the Forum’s own numbered declarations${cite(['foro-declaraciones-libro'])}, which run <strong>XI = Antigua 2002 → XII = São Paulo 2005</strong> — the official series has <strong>no numbered encuentro for Quito 2003</strong>. Editions I–XIX (1990–2013) are confirmed against those primary sources; 2014 onward follows the same corrected sequence and is marked to verify.</p>
       <div class="m-controls">
         <input type="search" id="m-search" placeholder="Search city, country, notes…" aria-label="Search meetings" />
         <select id="m-country" aria-label="Filter by country">
