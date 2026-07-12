@@ -223,10 +223,17 @@ async function main() {
   } catch {
     console.log('note: wayback inventory unavailable; only recorded declarationUrls will be tried.');
   }
-  const targets = data.meetings.filter((m) => m.declarationUrl);
+  // Recent meetings (2018+) often have no recorded declarationUrl yet, but their
+  // final declarations may still be captured on forodesaopaulo.org. Target them
+  // too so candidatesFor() mines the inventory by year + host city — this is how
+  // we recover, e.g., the XXIV Havana 2018 and Tegucigalpa 2024 declarations to
+  // confirm their edition numbers (#27). Years with no capture simply report as
+  // failed, which is harmless.
+  const EXTRA_TARGET_YEARS = new Set([2018, 2019, 2023, 2024]);
+  const targets = data.meetings.filter((m) => m.declarationUrl || EXTRA_TARGET_YEARS.has(m.year));
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
-  console.log(`${targets.length} meetings have a declarationUrl (min ${MIN_CHARS} visible chars).`);
+  console.log(`${targets.length} target meetings (recorded declarationUrl or recent year; min ${MIN_CHARS} visible chars).`);
   const status = {};
   let ok = 0;
   let shells = 0;
