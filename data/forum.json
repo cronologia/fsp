@@ -379,7 +379,8 @@
       "datesVerified": false,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20191004055653/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-habana-2018/",
-      "editionVerified": false
+      "editionVerified": true,
+      "editionSource": "declaration"
     },
     {
       "edition": "XXV",
@@ -404,12 +405,14 @@
     {
       "edition": "XXVII",
       "year": 2024,
-      "dates": null,
+      "dates": "27–29 Jun 2024",
       "city": "Tegucigalpa",
       "country": "Honduras",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
-      "editionVerified": false
+      "editionVerified": true,
+      "editionSource": "declaration",
+      "datesSource": "declaration"
     }
   ],
   "parties": [
