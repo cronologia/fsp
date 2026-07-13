@@ -339,6 +339,31 @@ ${cards}
 `;
 }
 
+function renderRegionalBodies(rb) {
+  if (!rb || !rb.items || !rb.items.length) return '';
+  const cards = rb.items
+    .map((b) => {
+      const row = (label, val) => (val ? `        <p class="am-row"><strong>${label}:</strong> ${esc(val)}</p>` : '');
+      return `      <article class="am-card">
+        <h3>${esc(b.name)}${b.abbr ? ` <span class="abbr">(${esc(b.abbr)})</span>` : ''}</h3>
+        <p class="am-meta">${b.founded ? esc(b.founded) : ''}${cite(b.sources)}</p>
+${row('What it is', b.whatItIs)}
+${row('Members', b.members)}
+${row('Link to the Forum', b.fspLink)}
+      </article>`;
+    })
+    .join('\n');
+  return `    <section id="regional">
+      <h2>Regional integration bodies</h2>
+      <div class="notice notice-attribution">${esc(rb.note)}</div>
+      <div class="party-grid">
+${cards}
+      </div>
+      ${rb.seeAlso ? `<p class="section-intro">${esc(rb.seeAlso)}</p>` : ''}
+    </section>
+`;
+}
+
 /**
  * Reference registry: id -> { ref, n } (n = 1-based citation number, which is
  * also the item's position in the rendered References list). Populated in
@@ -413,6 +438,7 @@ function renderNav() {
     ['#meetings', 'Meetings'],
     ['#parties', 'Parties'],
     ['#armed', 'Armed movements'],
+    ['#regional', 'Regional bodies'],
     ['#government', 'In government'],
     ['#organization', 'Structure'],
     ['#countries', 'Countries'],
@@ -727,6 +753,7 @@ ${renderRelated(data.relatedOrganizations)}
 ${renderComparison(data.foroVsPuebla)}
     </section>
 
+${renderRegionalBodies(data.regionalBodies)}
 ${renderCriticalPerspectives(data.criticalPerspectives)}
     <section id="references">
       <h2>References</h2>

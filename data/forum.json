@@ -898,6 +898,67 @@
       "publisher": "Foro de São Paulo",
       "type": "primary-source",
       "official": true
+    },
+    {
+      "id": "mercosur-wikipedia",
+      "title": "Mercosur — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mercosur",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "alba-wikipedia",
+      "title": "Bolivarian Alliance for the Peoples of Our America (ALBA-TCP) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bolivarian_Alliance_for_the_Peoples_of_Our_America",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "unasur-wikipedia",
+      "title": "Union of South American Nations (UNASUR) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Union_of_South_American_Nations",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "celac-wikipedia",
+      "title": "Community of Latin American and Caribbean States (CELAC) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Community_of_Latin_American_and_Caribbean_States",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "brics-wikipedia",
+      "title": "BRICS — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/BRICS",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
+    },
+    {
+      "id": "regalado-2008",
+      "title": "Roberto Regalado — Encuentros y desencuentros de la izquierda latinoamericana: una mirada desde el Foro de São Paulo",
+      "url": "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
+      "publisher": "Ocean Sur",
+      "type": "book (insider)",
+      "official": true,
+      "note": "By Roberto Regalado — a theorist and participant of the Foro de São Paulo (Univ. of Havana). An insider/scholarly account, added for balance alongside the critical works."
+    },
+    {
+      "id": "pomar-regalado-2013",
+      "title": "Valter Pomar & Roberto Regalado — Foro de São Paulo: construindo a integração latino-americana e caribenha",
+      "url": "https://fpabramo.org.br/foro-de-sao-paulo-nasceu-como-alternativa-a-onda-neoliberal-dos-anos-90/",
+      "publisher": "Fundação Perseu Abramo",
+      "type": "book (insider)",
+      "official": true,
+      "note": "Valter Pomar was the Forum’s Executive Secretary (2005–2013). The Forum’s own account of its integration project — an insider primary source."
+    },
+    {
+      "id": "pena-esclusa-foro",
+      "title": "Alejandro Peña Esclusa — El Foro de São Paulo: una amenaza continental (expanded ed. of “…contra Álvaro Uribe”, 2008)",
+      "url": "https://www.goodreads.com/book/show/54416676-el-foro-de-s-o-paulo",
+      "publisher": "Ediciones Fuerza Productiva",
+      "type": "book (analysis)",
+      "note": "Critical/analytical work by a Venezuelan anti-communist activist; interpretive claims attributed to the author."
     }
   ],
   "membersInGovernment": {
@@ -1049,5 +1110,67 @@
         ]
       }
     ]
+  },
+  "regionalBodies": {
+    "note": "These are state-level intergovernmental organizations — distinct from the Foro de São Paulo, which is a network of political parties, not of governments. They are listed here because they were created or led largely by governments headed by FSP-member parties during the 2000s “pink tide”. Critical authors (Graça Salgueiro; Olavo de Carvalho / Mídia Sem Máscara) go further and describe them as instruments of the Forum’s regional-integration project (the “pátria grande”); that stronger, coordinating-hand claim is attributed to those authors, not asserted here. Founding dates and membership below are factual.",
+    "items": [
+      {
+        "name": "Mercosur (Mercosul) — Southern Common Market",
+        "abbr": "Mercosur",
+        "founded": "1991 (Treaty of Asunción)",
+        "members": "Argentina, Brazil, Paraguay, Uruguay; Venezuela (joined 2012, suspended 2016); Bolivia acceding.",
+        "whatItIs": "A customs union and trade bloc — created in 1991, before the pink tide.",
+        "fspLink": "Its foundation predates the FSP-aligned governments; from the 2000s, presidents from FSP-member parties (Lula, Kirchner, Chávez) drove its more political orientation. Salgueiro / Mídia Sem Máscara argue the “new” Mercosur follows the Forum’s directives — attributed to those authors.",
+        "sources": [
+          "mercosur-wikipedia",
+          "salgueiro-foro"
+        ]
+      },
+      {
+        "name": "ALBA-TCP — Bolivarian Alliance for the Peoples of Our America",
+        "abbr": "ALBA",
+        "founded": "2004 (Havana; Chávez & Fidel Castro)",
+        "members": "Venezuela, Cuba, Bolivia, Nicaragua and several Caribbean/Central American states; linked energy pact Petrocaribe (2005).",
+        "whatItIs": "An explicitly left, anti-neoliberal bloc created as a counter to the US-backed FTAA/ALCA.",
+        "fspLink": "The bloc most closely aligned with FSP membership — founded and led by FSP-member governing parties (PSUV, PCC, MAS, FSLN); its social-movements arm overlaps with FSP-orbit organizations.",
+        "sources": [
+          "alba-wikipedia"
+        ]
+      },
+      {
+        "name": "UNASUR — Union of South American Nations",
+        "abbr": "UNASUR",
+        "founded": "2008 (Brasília)",
+        "members": "12 South American states (founding). Most withdrew after 2018; partial revival from 2023.",
+        "whatItIs": "A South American intergovernmental union loosely modeled on the EU.",
+        "fspLink": "Championed by Lula, Kirchner and Chávez; Néstor Kirchner (Peronism/FpV) was its first Secretary-General (2010). It fractured as the pink tide receded.",
+        "sources": [
+          "unasur-wikipedia"
+        ]
+      },
+      {
+        "name": "CELAC — Community of Latin American and Caribbean States",
+        "abbr": "CELAC",
+        "founded": "2010–2011 (successor to the Rio Group)",
+        "members": "33 states — every country of the Americas except the United States and Canada.",
+        "whatItIs": "A regional forum spanning all of Latin America and the Caribbean.",
+        "fspLink": "Created under pink-tide leadership (early summits chaired by Piñera, then Raúl Castro); FSP-aligned governments have used it as their preferred regional forum. Its civil-society arm, CELAC Social, is listed under Related organizations.",
+        "sources": [
+          "celac-wikipedia"
+        ]
+      },
+      {
+        "name": "BRICS",
+        "abbr": "BRICS",
+        "founded": "2009 (first summit); Brazil a founding member",
+        "members": "Brazil, Russia, India, China, South Africa (2010); a 2024 expansion added Egypt, Ethiopia, Iran, the UAE and others.",
+        "whatItIs": "A global grouping of major emerging economies — NOT a Latin American or FSP body.",
+        "fspLink": "Included only because Brazil’s participation has been driven by PT (FSP-founding-member) governments under Lula. BRICS spans governments of every ideology (e.g. India) and has no organizational tie to the Forum.",
+        "sources": [
+          "brics-wikipedia"
+        ]
+      }
+    ],
+    "seeAlso": "Related bodies the same authors cite: Petrocaribe (2005, ALBA energy pact), Banco del Sur (2009), and OLAS (Organización Latinoamericana de Solidaridad, 1966–67) — which Fidel Castro described the Forum as “recovering” at its 1990 founding."
   }
 }
