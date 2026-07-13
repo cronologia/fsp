@@ -139,6 +139,15 @@ tr.fsp-row td { font-weight: 500; }
 .related-meta { color: var(--muted); font-size: .82rem !important; }
 .related-link a { color: var(--accent); font-size: .82rem; word-break: break-all; }
 
+/* Founding organizations (1990 roster) */
+.founding-orgs dt { white-space: nowrap; }
+.founding-orgs dd { margin-bottom: .35rem; }
+.fo-n { display: inline-block; background: #e4e0d8; color: #555; font-size: .7rem; font-weight: 700; padding: .02rem .35rem; border-radius: 999px; vertical-align: middle; }
+.roster-h { margin: 1rem 0 .3rem; font-size: 1rem; }
+details.roster { margin: .5rem 0; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: .4rem .75rem; }
+details.roster > summary { cursor: pointer; font-size: .95rem; }
+details.roster[open] > summary { margin-bottom: .5rem; }
+
 /* Armed & guerrilla movements */
 .am-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #7a1418; border-radius: 6px; padding: 1rem; }
 .am-card h3 { margin: 0 0 .25rem; font-size: 1.02rem; }
