@@ -1,6 +1,6 @@
 # ADR-0004: Preserve references in the Wayback Machine
 
-- **Status:** Accepted
+- **Status:** Accepted (extended by ADR-0008)
 - **Date:** 2026-06-30
 
 ## Context

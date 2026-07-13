@@ -15,6 +15,8 @@ context, the decision, and its consequences so future contributors understand
 | [0004](0004-archive-references-in-wayback-machine.md) | Preserve references in the Wayback Machine | Accepted |
 | [0005](0005-data-quality-and-sourcing-policy.md) | Data quality & sourcing policy | Accepted |
 | [0006](0006-wayback-harvesting-pipeline-on-ci.md) | Run the Wayback harvesting pipeline on CI | Accepted |
+| [0007](0007-declaration-corpus-and-extraction.md) | Recover and extract the declaration corpus | Accepted |
+| [0008](0008-local-document-vault.md) | Preserve full local copies of every reference (document vault) | Accepted |
 
 ## Adding an ADR
 
