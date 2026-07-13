@@ -599,7 +599,7 @@
         "year": "2022",
         "publisher": "Vide Editorial (posthumous compilation)",
         "url": "https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861",
-        "thesis": "A long-time analyst of the FSP, Carvalho argued it functions as a coordinated project advancing the Latin American left, and traced links between its member parties and movements — including, in his account, armed groups such as the FARC and Chile's MIR. He was central to bringing the FSP into Brazilian public debate; the strongest of these claims are debated."
+        "thesis": "A long-time analyst of the FSP, Carvalho argued it functions as a coordinated project advancing the Latin American left, and traced links between its member parties and movements — including, in his account, armed groups such as the FARC and Chile's MIR. He was central to bringing the FSP into Brazilian public debate; the strongest of these claims are debated. Much of this analysis was published through his outlet Mídia Sem Máscara (2002–2014, since revived), which also circulated a compiled “Atas do Foro de São Paulo”."
       },
       {
         "author": "Graça Salgueiro",
@@ -614,7 +614,7 @@
         "work": "Commentary on the FSP, the 'Latin American axis' and the New World Order",
         "year": null,
         "publisher": "Rádio Vox / Observatório Latino",
-        "url": "https://radiovox.org/",
+        "url": "https://www.youtube.com/@RadioVox1029",
         "thesis": "Analyzes the FSP within a wider regional and geopolitical strategy of the left ('the Latin American axis')."
       }
     ]
@@ -720,10 +720,11 @@
     },
     {
       "id": "radiovox",
-      "title": "Rádio Vox — Observatório Latino",
-      "url": "https://radiovox.org/",
+      "title": "Rádio Vox / Observatório Latino — YouTube channel",
+      "url": "https://www.youtube.com/@RadioVox1029",
       "publisher": "Rádio Vox (Graça Salgueiro, Heitor De Paola)",
-      "type": "media/podcast (analysis)"
+      "type": "media/podcast (analysis)",
+      "note": "The radiovox.org website is defunct; its programs (Observatório Latino, etc.) continue on this YouTube channel. Captures of the old site are preserved in the Internet Archive."
     },
     {
       "id": "wikipedia-liberation-theology",
@@ -809,6 +810,22 @@
       "url": "https://en.wikipedia.org/wiki/Guatemalan_National_Revolutionary_Unity",
       "publisher": "Wikipedia",
       "type": "encyclopedia"
+    },
+    {
+      "id": "midiasemmascara",
+      "title": "Mídia Sem Máscara — Olavo de Carvalho",
+      "url": "https://www.midiasemmascara.org/",
+      "publisher": "Mídia Sem Máscara",
+      "type": "media (analysis)",
+      "note": "Site founded in 2002 by Olavo de Carvalho; ran until 2014 and has since been revived. Published extensive critical coverage of the FSP. The 2002–2014 run is preserved in the Internet Archive."
+    },
+    {
+      "id": "atas-foro-msm",
+      "title": "Atas do Foro de São Paulo (compilation) — Mídia Sem Máscara / Olavo de Carvalho",
+      "url": "https://archive.org/details/atas-do-foro-de-sao-paulo-midia-sem-mascara-olavo-de-carvalho",
+      "publisher": "Internet Archive (compiled by Mídia Sem Máscara)",
+      "type": "compilation (attributed)",
+      "note": "A document assembled and published by Mídia Sem Máscara / Olavo de Carvalho, presented as records (“atas”) of FSP meetings. Their authenticity as verbatim minutes is not independently established here; included as an attributed critical compilation, preserved on the Internet Archive."
     }
   ],
   "membersInGovernment": {
