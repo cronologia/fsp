@@ -187,18 +187,30 @@ function renderMeetingsRows(meetings, archives = {}) {
     .join('\n');
 }
 
-function renderFoundingOrganizations(fo) {
-  if (!fo || !fo.byCountry || !fo.byCountry.length) return '';
-  const rows = fo.byCountry
-    .map(
-      (c) => `        <dt>${esc(c.country)} <span class="fo-n">${c.orgs.length}</span></dt><dd>${c.orgs.map(esc).join(' · ')}</dd>`
-    )
-    .join('\n');
-  return `      <h3>The ${fo.count || 48} founding organizations (1990)${cite(fo.sources)}</h3>
-      <p class="section-intro">${esc(fo.note)}</p>
-      <dl class="facts founding-orgs">
+function renderMembershipRosters(rosters) {
+  if (!rosters || !rosters.length) return '';
+  const one = (r) => {
+    const total = r.byCountry.reduce((n, c) => n + c.orgs.length, 0);
+    const rows = r.byCountry
+      .map((c) => `          <dt>${esc(c.country)} <span class="fo-n">${c.orgs.length}</span></dt><dd>${c.orgs.map(esc).join(' · ')}</dd>`)
+      .join('\n');
+    const heading = `${esc(r.title)} — ${total} organizations, ${r.byCountry.length} countries${cite(r.sources)}`;
+    const body = `${r.note ? `<p class="section-intro">${esc(r.note)}</p>` : ''}
+        <dl class="facts founding-orgs">
 ${rows}
-      </dl>`;
+        </dl>`;
+    // The founding roster is shown open; the larger later snapshots collapse.
+    return r.open
+      ? `      <h4 class="roster-h">${heading}</h4>
+        ${body}`
+      : `      <details class="roster">
+        <summary><strong>${heading}</strong></summary>
+        ${body}
+      </details>`;
+  };
+  return `      <h3>Membership over time</h3>
+      <p class="section-intro">The Forum's membership at three documented points, per Regalado (2008). It grew from the 48 founding organizations (1990) across the Caribbean and Central America by 1993, then consolidated by 2007.</p>
+${rosters.map(one).join('\n')}`;
 }
 
 function renderParties(parties) {
@@ -746,11 +758,11 @@ ${renderMeetingsRows(data.meetings, archives)}
 
     <section id="parties">
       <h2>Parties &amp; organizations</h2>
-      <p class="section-intro">A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the complete <strong>1990 founding roster is listed below</strong>, and the full current membership is still being compiled.</p>
+      <p class="section-intro">A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the full <strong>membership rosters for 1990, 1993 and 2007 are listed below</strong> (from Regalado), and the current membership is still being compiled.</p>
       <div class="party-grid">
 ${renderParties(data.parties)}
       </div>
-${renderFoundingOrganizations(data.foundingOrganizations)}
+${renderMembershipRosters(data.membershipRosters)}
       <h3>Participating countries</h3>
       <p class="countries">${data.participatingCountries.map(esc).join(' · ')}</p>
     </section>
