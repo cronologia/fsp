@@ -161,13 +161,14 @@
     {
       "edition": "VII",
       "year": 1997,
-      "dates": null,
+      "dates": "31 Jul–3 Aug 1997",
       "city": "Porto Alegre",
       "country": "Brazil",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/",
-      "editionVerified": true
+      "editionVerified": true,
+      "datesSource": "salgueiro-foro"
     },
     {
       "edition": "VIII",
@@ -175,23 +176,23 @@
       "dates": "29–31 Oct 1998",
       "city": "Mexico City",
       "country": "Mexico",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20201022230207/https://forodesaopaulo.org/declaracao-final-mexico-1998/",
       "editionVerified": true,
-      "datesSource": "secondary — to confirm against the Forum’s Histórico"
+      "datesSource": "salgueiro-foro"
     },
     {
       "edition": "IX",
       "year": 2000,
-      "dates": "Feb 2000",
+      "dates": "17–21 Feb 2000",
       "city": "Managua",
       "country": "Nicaragua",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "Some sources cite Niquinohomo, Nicaragua. No meeting recorded for 1999.",
       "declarationUrl": "https://web.archive.org/web/20201026223448/https://forodesaopaulo.org/declaracao-final-niquinohomo-2000/",
       "editionVerified": true,
-      "datesSource": "secondary — to confirm against the Forum’s Histórico"
+      "datesSource": "salgueiro-foro"
     },
     {
       "edition": "X",
@@ -343,12 +344,12 @@
       "dates": "29 Jul–1 Aug 2015",
       "city": "Mexico City",
       "country": "Mexico",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20231120184939/https://forodesaopaulo.org/declaracion-final-del-xxi-encuentro-del-foro-de-sao-paulo-en-la-ciudad-de-mexico-df/2015/09/logo-oceansur.png",
       "editionVerified": true,
       "editionSource": "declaration",
-      "datesSource": "secondary — to confirm against the Forum’s Histórico"
+      "datesSource": "salgueiro-foro"
     },
     {
       "edition": "XXII",
