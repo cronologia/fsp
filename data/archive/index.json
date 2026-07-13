@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-07-13T01:39:06.234Z",
+    "lastRun": "2026-07-13T02:00:22.487Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -77,8 +77,9 @@
     },
     "radiovox": {
       "path": "media/radiovox.html",
-      "state": "failed",
-      "error": "too small (1201b)"
+      "bytes": 712757,
+      "source": "wayback",
+      "state": "ok"
     },
     "wikipedia-liberation-theology": {
       "path": "encyclopedia/wikipedia-liberation-theology.html",
@@ -113,7 +114,6 @@
     "colombia-peace-2016": {
       "path": "encyclopedia/colombia-peace-2016.html",
       "bytes": 712554,
-      "source": "live",
       "state": "ok"
     },
     "petro-wikipedia": {
@@ -139,6 +139,18 @@
     "urng-wikipedia": {
       "path": "encyclopedia/urng-wikipedia.html",
       "bytes": 554594,
+      "state": "ok"
+    },
+    "midiasemmascara": {
+      "path": "media/midiasemmascara.html",
+      "bytes": 4661,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "atas-foro-msm": {
+      "path": "compilation/atas-foro-msm.html",
+      "bytes": 221170,
+      "source": "live",
       "state": "ok"
     }
   }

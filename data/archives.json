@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-13T01:35:11.560Z",
-    "count": 24
+    "lastRun": "2026-07-13T01:57:12.795Z",
+    "count": 27
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -148,6 +148,24 @@
       "timestamp": "20260713000047",
       "status": "200",
       "checkedAt": "2026-07-13T01:19:15.942Z"
+    },
+    "https://www.youtube.com/@RadioVox1029": {
+      "archiveUrl": "https://web.archive.org/web/20250717231029/https://www.youtube.com/@radiovox1029",
+      "timestamp": "20250717231029",
+      "status": "200",
+      "checkedAt": "2026-07-13T01:55:11.728Z"
+    },
+    "https://en.wikipedia.org/wiki/Colombian_peace_process": {
+      "archiveUrl": "https://web.archive.org/web/20260701092323/https://en.wikipedia.org/wiki/Colombian_peace_process",
+      "timestamp": "20260701092323",
+      "status": "200",
+      "checkedAt": "2026-07-13T01:56:13.828Z"
+    },
+    "https://www.midiasemmascara.org/": {
+      "archiveUrl": "https://web.archive.org/web/20260601204728/http://www.midiasemmascara.org/",
+      "timestamp": "20260601204728",
+      "status": "200",
+      "checkedAt": "2026-07-13T01:56:18.220Z"
     }
   }
 }
