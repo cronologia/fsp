@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "generatedBy": "scripts/archive-docs.js",
+    "lastRun": "2026-07-13T01:25:42.779Z",
+    "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
+  },
+  "docs": {
+    "wikipedia-en": {
+      "path": "encyclopedia/wikipedia-en.html",
+      "bytes": 338193,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "wikipedia-pt": {
+      "path": "encyclopedia/wikipedia-pt.html",
+      "bytes": 283387,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "pt-oficial": {
+      "path": "primary-affiliated/pt-oficial.html",
+      "bytes": 92973,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "brasildefato-30anos": {
+      "path": "news/brasildefato-30anos.html",
+      "bytes": 154799,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "peoplesdispatch-2023": {
+      "path": "news/peoplesdispatch-2023.html",
+      "bytes": 112346,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "granma-30years": {
+      "path": "news-affiliated/granma-30years.html",
+      "bytes": 26801,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "heritage-marxist": {
+      "path": "commentary-critical/heritage-marxist.html",
+      "bytes": 87469,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "gis-scandals": {
+      "path": "analysis/gis-scandals.html",
+      "bytes": 109123,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "infoescola": {
+      "path": "encyclopedia/infoescola.html",
+      "bytes": 31459,
+      "source": "live",
+      "state": "ok"
+    },
+    "infobae-relevo": {
+      "path": "analysis-foro-vs-puebla-group/infobae-relevo.html",
+      "bytes": 1083395,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "comitedelectura": {
+      "path": "analysis-foro-vs-puebla-group/comitedelectura.html",
+      "bytes": 169700,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "infobae-tegucigalpa": {
+      "path": "news-both-orgs-met-in-2024/infobae-tegucigalpa.html",
+      "bytes": 134871,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "carvalho-foro": {
+      "path": "book-analysis/carvalho-foro.html",
+      "bytes": 3876,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "salgueiro-foro": {
+      "path": "book-analysis/salgueiro-foro.html",
+      "bytes": 162968,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "radiovox": {
+      "path": "media-podcast-analysis/radiovox.html",
+      "state": "failed",
+      "error": "too small (1201b)"
+    },
+    "wikipedia-liberation-theology": {
+      "path": "encyclopedia/wikipedia-liberation-theology.html",
+      "bytes": 345842,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "wikipedia-frei-betto": {
+      "path": "encyclopedia/wikipedia-frei-betto.html",
+      "bytes": 98159,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "castro-lula-voltairenet": {
+      "path": "primary-affiliated/castro-lula-voltairenet.html",
+      "bytes": 154940,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "foro-declaraciones-libro": {
+      "path": "primary-source/foro-declaraciones-libro.pdf",
+      "bytes": 97386,
+      "source": "live",
+      "state": "ok"
+    },
+    "farc-wikipedia": {
+      "path": "encyclopedia/farc-wikipedia.html",
+      "bytes": 926249,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "comunes-wikipedia": {
+      "path": "encyclopedia/comunes-wikipedia.html",
+      "bytes": 100466,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "colombia-peace-2016": {
+      "path": "encyclopedia/colombia-peace-2016.html",
+      "state": "failed",
+      "error": "HTTP 404"
+    },
+    "petro-wikipedia": {
+      "path": "encyclopedia/petro-wikipedia.html",
+      "bytes": 1190523,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "m19-wikipedia": {
+      "path": "encyclopedia/m19-wikipedia.html",
+      "bytes": 174426,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "mir-chile-wikipedia": {
+      "path": "encyclopedia/mir-chile-wikipedia.html",
+      "bytes": 158932,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "tupamaros-wikipedia": {
+      "path": "encyclopedia/tupamaros-wikipedia.html",
+      "bytes": 240458,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "urng-wikipedia": {
+      "path": "encyclopedia/urng-wikipedia.html",
+      "bytes": 554594,
+      "source": "wayback",
+      "state": "ok"
+    }
+  }
+}

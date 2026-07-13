@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-13T00:04:20.619Z",
-    "count": 23
+    "lastRun": "2026-07-13T01:21:25.923Z",
+    "count": 24
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -142,6 +142,12 @@
       "timestamp": "20260708001944",
       "status": "200",
       "checkedAt": "2026-07-13T00:04:20.618Z"
+    },
+    "https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861": {
+      "archiveUrl": "https://web.archive.org/web/20260713000047/https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861",
+      "timestamp": "20260713000047",
+      "status": "200",
+      "checkedAt": "2026-07-13T01:19:15.942Z"
     }
   }
 }
