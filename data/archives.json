@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-13T07:45:51.061Z",
-    "count": 34
+    "lastRun": "2026-07-13T11:49:35.054Z",
+    "count": 40
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -216,6 +216,48 @@
       "status": "200",
       "fresh": true,
       "checkedAt": "2026-07-13T02:57:07.922Z"
+    },
+    "https://en.wikipedia.org/wiki/Mercosur": {
+      "archiveUrl": "https://web.archive.org/web/20260708112445/https://en.wikipedia.org/wiki/Mercosur",
+      "timestamp": "20260708112445",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:14.245Z"
+    },
+    "https://en.wikipedia.org/wiki/Bolivarian_Alliance_for_the_Peoples_of_Our_America": {
+      "archiveUrl": "https://web.archive.org/web/20260121001432/https://en.wikipedia.org/wiki/Bolivarian_Alliance_for_the_Peoples_of_Our_America",
+      "timestamp": "20260121001432",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:14.609Z"
+    },
+    "https://en.wikipedia.org/wiki/Union_of_South_American_Nations": {
+      "archiveUrl": "https://web.archive.org/web/20260709212000/https://en.wikipedia.org/wiki/Union_of_South_American_Nations",
+      "timestamp": "20260709212000",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:16.533Z"
+    },
+    "https://en.wikipedia.org/wiki/Community_of_Latin_American_and_Caribbean_States": {
+      "archiveUrl": "https://web.archive.org/web/20260701100816/https://en.wikipedia.org/wiki/Community_of_Latin_American_and_Caribbean_States",
+      "timestamp": "20260701100816",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:16.887Z"
+    },
+    "https://en.wikipedia.org/wiki/BRICS": {
+      "archiveUrl": "https://web.archive.org/web/20260710095205/https://en.wikipedia.org/wiki/BRICS",
+      "timestamp": "20260710095205",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:17.962Z"
+    },
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa": {
+      "archiveUrl": "https://web.archive.org/web/20250208141042/https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
+      "timestamp": "20250208141042",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T11:46:42.852Z"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-07-13T07:50:54.640Z",
+    "lastRun": "2026-07-13T11:57:00.012Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -183,6 +183,52 @@
     "declaracion-porto-alegre-1997": {
       "path": "primary/declaracion-porto-alegre-1997.html",
       "bytes": 63417,
+      "state": "ok"
+    },
+    "mercosur-wikipedia": {
+      "path": "encyclopedia/mercosur-wikipedia.html",
+      "state": "failed",
+      "error": "fetch failed"
+    },
+    "alba-wikipedia": {
+      "path": "encyclopedia/alba-wikipedia.html",
+      "bytes": 315373,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "unasur-wikipedia": {
+      "path": "encyclopedia/unasur-wikipedia.html",
+      "bytes": 768405,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "celac-wikipedia": {
+      "path": "encyclopedia/celac-wikipedia.html",
+      "bytes": 384581,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "brics-wikipedia": {
+      "path": "encyclopedia/brics-wikipedia.html",
+      "bytes": 1641850,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "regalado-2008": {
+      "path": "book/regalado-2008.html",
+      "bytes": 131593,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "pomar-regalado-2013": {
+      "path": "book/pomar-regalado-2013.html",
+      "state": "failed",
+      "error": "HTTP 403"
+    },
+    "pena-esclusa-foro": {
+      "path": "book/pena-esclusa-foro.html",
+      "bytes": 170107,
+      "source": "live",
       "state": "ok"
     }
   }
