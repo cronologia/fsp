@@ -1186,5 +1186,133 @@
       }
     ],
     "seeAlso": "Related bodies the same authors cite: Petrocaribe (2005, ALBA energy pact), Banco del Sur (2009), and OLAS (Organización Latinoamericana de Solidaridad, 1966–67) — which Fidel Castro described the Forum as “recovering” at its 1990 founding."
+  },
+  "foundingOrganizations": {
+    "note": "The 48 political parties, movements and fronts, from 14 countries, that took part in the founding meeting — the Encuentro de Partidos y Organizaciones Políticas de América Latina y el Caribe (São Paulo, 2–4 July 1990). This is the full roster; the Parties section above highlights a few of them.",
+    "sources": [
+      "regalado-2008"
+    ],
+    "count": 48,
+    "countryCount": 14,
+    "byCountry": [
+      {
+        "country": "Argentina",
+        "orgs": [
+          "Grupo de los Ocho",
+          "Frente Izquierda Unida",
+          "Movimiento al Socialismo",
+          "Partido Comunista Argentino",
+          "Partido Intransigente",
+          "Partido Intransigencia Revolucionaria",
+          "Partido Socialista Popular",
+          "Partido Revolucionario de los Trabajadores",
+          "Partido Obrero",
+          "Movimiento de los de Abajo",
+          "Movimiento de los Descamisados",
+          "Unidad Socialista"
+        ]
+      },
+      {
+        "country": "Bolivia",
+        "orgs": [
+          "Eje de Convergencia Patriótica",
+          "Partido Comunista Boliviano"
+        ]
+      },
+      {
+        "country": "Brasil",
+        "orgs": [
+          "Partido de los Trabajadores",
+          "Partido Comunista de Brasil",
+          "Partido Comunista Brasileño",
+          "Partido Democrático de los Trabajadores",
+          "Partido Socialista Brasileño"
+        ]
+      },
+      {
+        "country": "Colombia",
+        "orgs": [
+          "Partido Comunista Colombiano",
+          "Unión Patriótica"
+        ]
+      },
+      {
+        "country": "Chile",
+        "orgs": [
+          "Izquierda Cristiana",
+          "Movimiento de Izquierda Revolucionaria",
+          "Partido Comunista de Chile"
+        ]
+      },
+      {
+        "country": "Ecuador",
+        "orgs": [
+          "Liberación Nacional",
+          "Movimiento Popular Democrático",
+          "Partido Comunista del Ecuador",
+          "Partido Socialista del Ecuador",
+          "Partido Socialista Popular"
+        ]
+      },
+      {
+        "country": "Paraguay",
+        "orgs": [
+          "Corriente Patria Libre",
+          "Partido Comunista Paraguayo",
+          "Partido Revolucionario Febrerista",
+          "Partido de los Trabajadores"
+        ]
+      },
+      {
+        "country": "Perú",
+        "orgs": [
+          "Movimiento al Socialismo",
+          "Partido Comunista Peruano",
+          "Partido Unificado Mariateguista",
+          "Partido Comunista Revolucionario",
+          "Unidad Democrática y Popular"
+        ]
+      },
+      {
+        "country": "Uruguay",
+        "orgs": [
+          "Frente Amplio"
+        ]
+      },
+      {
+        "country": "Venezuela",
+        "orgs": [
+          "Causa R",
+          "Movimiento al Socialismo",
+          "Movimiento Electoral del Pueblo",
+          "Partido Comunista de Venezuela"
+        ]
+      },
+      {
+        "country": "México",
+        "orgs": [
+          "Partido de la Revolución Democrática",
+          "Partido Popular Socialista"
+        ]
+      },
+      {
+        "country": "El Salvador",
+        "orgs": [
+          "Frente Farabundo Martí para la Liberación Nacional"
+        ]
+      },
+      {
+        "country": "Cuba",
+        "orgs": [
+          "Partido Comunista de Cuba"
+        ]
+      },
+      {
+        "country": "República Dominicana",
+        "orgs": [
+          "Partido Comunista Dominicano"
+        ]
+      }
+    ]
   }
 }

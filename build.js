@@ -187,6 +187,20 @@ function renderMeetingsRows(meetings, archives = {}) {
     .join('\n');
 }
 
+function renderFoundingOrganizations(fo) {
+  if (!fo || !fo.byCountry || !fo.byCountry.length) return '';
+  const rows = fo.byCountry
+    .map(
+      (c) => `        <dt>${esc(c.country)} <span class="fo-n">${c.orgs.length}</span></dt><dd>${c.orgs.map(esc).join(' · ')}</dd>`
+    )
+    .join('\n');
+  return `      <h3>The ${fo.count || 48} founding organizations (1990)${cite(fo.sources)}</h3>
+      <p class="section-intro">${esc(fo.note)}</p>
+      <dl class="facts founding-orgs">
+${rows}
+      </dl>`;
+}
+
 function renderParties(parties) {
   return parties
     .map((p) => {
@@ -732,10 +746,11 @@ ${renderMeetingsRows(data.meetings, archives)}
 
     <section id="parties">
       <h2>Parties &amp; organizations</h2>
-      <p class="section-intro">A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the complete membership and the full list of the 48 founding organizations are still being compiled.</p>
+      <p class="section-intro">A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the complete <strong>1990 founding roster is listed below</strong>, and the full current membership is still being compiled.</p>
       <div class="party-grid">
 ${renderParties(data.parties)}
       </div>
+${renderFoundingOrganizations(data.foundingOrganizations)}
       <h3>Participating countries</h3>
       <p class="countries">${data.participatingCountries.map(esc).join(' · ')}</p>
     </section>
