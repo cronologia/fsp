@@ -59,8 +59,71 @@
       },
       {
         "name": "Working Group (Grupo de Trabalho)",
-        "detail": "Standing body with representation from about 16 countries, meeting periodically between the annual plenaries.",
-        "verified": false
+        "detail": "The Forum’s standing body between plenaries, made up of one delegation per country (several as unified national fronts). Regalado records it meeting in Colombia on 20–23 April 2006 — the first Working Group gathering since the Forum’s founding — and again after the XIII Encuentro (San Salvador, January 2007); Brazil’s PCdoB joined the Working Group at its Managua session on 20–21 July 2007.",
+        "verified": true,
+        "compositionTitle": "Grupo de Trabajo — composition at the end of 2007",
+        "compositionNote": "One delegation per country; several countries sent a unified national front (delegación unitaria) rather than a single named party.",
+        "compositionSources": [
+          "regalado-2008"
+        ],
+        "composition": [
+          {
+            "country": "Argentina",
+            "delegation": "unified delegation"
+          },
+          {
+            "country": "Brasil",
+            "delegation": "unified delegation"
+          },
+          {
+            "country": "Chile",
+            "delegation": "unified delegation"
+          },
+          {
+            "country": "Colombia",
+            "delegation": "unified delegation"
+          },
+          {
+            "country": "Cuba",
+            "delegation": "Partido Comunista de Cuba (PCC)"
+          },
+          {
+            "country": "Ecuador",
+            "delegation": "unified delegation"
+          },
+          {
+            "country": "El Salvador",
+            "delegation": "Frente Farabundo Martí para la Liberación Nacional (FMLN)"
+          },
+          {
+            "country": "Guatemala",
+            "delegation": "unified delegation"
+          },
+          {
+            "country": "Martinica",
+            "delegation": "Partido Comunista por la Independencia y el Socialismo"
+          },
+          {
+            "country": "México",
+            "delegation": "Partido de la Revolución Democrática (PRD) and Partido del Trabajo (PT)"
+          },
+          {
+            "country": "Nicaragua",
+            "delegation": "Frente Sandinista de Liberación Nacional (FSLN)"
+          },
+          {
+            "country": "Perú",
+            "delegation": "unified delegation"
+          },
+          {
+            "country": "Puerto Rico",
+            "delegation": "unified delegation"
+          },
+          {
+            "country": "Uruguay",
+            "delegation": "Frente Amplio"
+          }
+        ]
       },
       {
         "name": "Regional Secretariat — Cone Sul",
@@ -1620,8 +1683,8 @@
     },
     {
       "year": 2007,
-      "title": "Active members — Working Group, end of 2007",
-      "note": "Active members compiled by the Working Group at the end of 2007 — fewer than 1993 as the roster consolidated around larger parties. (The 2007 Working Group itself was one delegation per country, several as unified fronts.)",
+      "title": "Active members — end of 2007",
+      "note": "The full list of active member parties and organizations at the end of 2007, per Regalado. It consolidated from the 1993 peak around larger parties. (Distinct from the standing Working Group, whose one-delegation-per-country composition is shown under Organization & structure.)",
       "sources": [
         "regalado-2008"
       ],

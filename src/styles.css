@@ -147,6 +147,9 @@ tr.fsp-row td { font-weight: 500; }
 details.roster { margin: .5rem 0; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: .4rem .75rem; }
 details.roster > summary { cursor: pointer; font-size: .95rem; }
 details.roster[open] > summary { margin-bottom: .5rem; }
+details.wg-composition { margin-top: .75rem; background: #fbfaf8; }
+details.wg-composition > summary { font-size: .85rem; }
+details.wg-composition .founding-orgs dt { white-space: normal; }
 
 /* Armed & guerrilla movements */
 .am-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #7a1418; border-radius: 6px; padding: 1rem; }
