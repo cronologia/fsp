@@ -172,24 +172,26 @@
     {
       "edition": "VIII",
       "year": 1998,
-      "dates": null,
+      "dates": "29–31 Oct 1998",
       "city": "Mexico City",
       "country": "Mexico",
       "datesVerified": false,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20201022230207/https://forodesaopaulo.org/declaracao-final-mexico-1998/",
-      "editionVerified": true
+      "editionVerified": true,
+      "datesSource": "secondary — to confirm against the Forum’s Histórico"
     },
     {
       "edition": "IX",
       "year": 2000,
-      "dates": null,
+      "dates": "Feb 2000",
       "city": "Managua",
       "country": "Nicaragua",
       "datesVerified": false,
       "notes": "Some sources cite Niquinohomo, Nicaragua. No meeting recorded for 1999.",
       "declarationUrl": "https://web.archive.org/web/20201026223448/https://forodesaopaulo.org/declaracao-final-niquinohomo-2000/",
-      "editionVerified": true
+      "editionVerified": true,
+      "datesSource": "secondary — to confirm against the Forum’s Histórico"
     },
     {
       "edition": "X",
@@ -325,62 +327,67 @@
     {
       "edition": "XX",
       "year": 2014,
-      "dates": null,
+      "dates": "25–29 Aug 2014",
       "city": "La Paz",
       "country": "Bolivia",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20141113024517/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-paz-2014",
       "editionVerified": true,
-      "editionSource": "declaration"
+      "editionSource": "declaration",
+      "datesSource": "memoria-xx-2014"
     },
     {
       "edition": "XXI",
       "year": 2015,
-      "dates": null,
+      "dates": "29 Jul–1 Aug 2015",
       "city": "Mexico City",
       "country": "Mexico",
       "datesVerified": false,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20231120184939/https://forodesaopaulo.org/declaracion-final-del-xxi-encuentro-del-foro-de-sao-paulo-en-la-ciudad-de-mexico-df/2015/09/logo-oceansur.png",
       "editionVerified": true,
-      "editionSource": "declaration"
+      "editionSource": "declaration",
+      "datesSource": "secondary — to confirm against the Forum’s Histórico"
     },
     {
       "edition": "XXII",
       "year": 2016,
-      "dates": null,
+      "dates": "23–26 Jun 2016",
       "city": "San Salvador",
       "country": "El Salvador",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20170304013729/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-san-salvador-2016/",
       "editionVerified": true,
-      "editionSource": "declaration"
+      "editionSource": "declaration",
+      "datesSource": "memoria-xxii-2016"
     },
     {
       "edition": "XXIII",
       "year": 2017,
-      "dates": null,
+      "dates": "15–19 Jul 2017",
       "city": "Managua",
       "country": "Nicaragua",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20220530190555/http://forodesaopaulo.org/declaracion-final-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-2017/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1571510652418",
       "editionVerified": true,
-      "editionSource": "declaration"
+      "editionSource": "declaration",
+      "datesSource": "memoria-xxiii-2017"
     },
     {
       "edition": "XXIV",
       "year": 2018,
-      "dates": null,
+      "dates": "15–17 Jul 2018",
       "city": "Havana",
       "country": "Cuba",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20191004055653/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-habana-2018/",
       "editionVerified": true,
-      "editionSource": "declaration"
+      "editionSource": "declaration",
+      "datesSource": "memoria-xxiv-2018"
     },
     {
       "edition": "XXV",
@@ -846,6 +853,38 @@
       "id": "declaracion-xxvi-2023",
       "title": "Declaração Final do XXVI Encontro do Foro de São Paulo (Brasília, 2023)",
       "url": "https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/",
+      "publisher": "Foro de São Paulo",
+      "type": "primary-source",
+      "official": true
+    },
+    {
+      "id": "memoria-xx-2014",
+      "title": "Memoria del XX Encuentro del Foro de São Paulo — La Paz, 25–29 ago 2014",
+      "url": "https://forodesaopaulo.org/memoria-del-xx-encuentro-del-foro-de-sao-paulo/",
+      "publisher": "Foro de São Paulo",
+      "type": "primary-source",
+      "official": true
+    },
+    {
+      "id": "memoria-xxii-2016",
+      "title": "Memoria del XXII Encuentro del Foro de São Paulo — San Salvador, 23–26 jun 2016",
+      "url": "https://forodesaopaulo.org/memoria-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-el-salvador-2016/",
+      "publisher": "Foro de São Paulo",
+      "type": "primary-source",
+      "official": true
+    },
+    {
+      "id": "memoria-xxiii-2017",
+      "title": "Memoria del XXIII Encuentro del Foro de São Paulo — Managua, 15–19 jul 2017",
+      "url": "https://forodesaopaulo.org/memoria-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-nicaragua-15-al-19-de-julio-de-2017/",
+      "publisher": "Foro de São Paulo",
+      "type": "primary-source",
+      "official": true
+    },
+    {
+      "id": "memoria-xxiv-2018",
+      "title": "Memoria del XXIV Encuentro del Foro de São Paulo — La Habana, 15–17 jul 2018",
+      "url": "https://forodesaopaulo.org/memoria-del-xxiv-encuentro-del-foro-de-sao-paulo-la-habana-cuba-15-al-17-de-julio-de-2018/",
       "publisher": "Foro de São Paulo",
       "type": "primary-source",
       "official": true
