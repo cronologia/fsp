@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-12T20:34:26.611Z",
-    "count": 16
+    "lastRun": "2026-07-13T00:04:20.619Z",
+    "count": 23
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -100,6 +100,48 @@
       "timestamp": "20260708150358",
       "status": "200",
       "checkedAt": "2026-07-11T23:15:45.855Z"
+    },
+    "https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia": {
+      "archiveUrl": "https://web.archive.org/web/20260701092319/https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia",
+      "timestamp": "20260701092319",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:03:05.524Z"
+    },
+    "https://en.wikipedia.org/wiki/Comunes_(political_party)": {
+      "archiveUrl": "https://web.archive.org/web/20260107181712/https://en.wikipedia.org/wiki/Comunes_(political_party)",
+      "timestamp": "20260107181712",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:03:08.392Z"
+    },
+    "https://en.wikipedia.org/wiki/Gustavo_Petro": {
+      "archiveUrl": "https://web.archive.org/web/20260709023434/https://en.wikipedia.org/wiki/Gustavo_Petro",
+      "timestamp": "20260709023434",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:16.294Z"
+    },
+    "https://en.wikipedia.org/wiki/19th_of_April_Movement": {
+      "archiveUrl": "https://web.archive.org/web/20260701092320/https://en.wikipedia.org/wiki/19th_of_April_Movement",
+      "timestamp": "20260701092320",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:16.508Z"
+    },
+    "https://en.wikipedia.org/wiki/Revolutionary_Left_Movement_(Chile)": {
+      "archiveUrl": "https://web.archive.org/web/20260522184154/https://en.wikipedia.org/wiki/Revolutionary_Left_Movement_(Chile)",
+      "timestamp": "20260522184154",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:16.770Z"
+    },
+    "https://en.wikipedia.org/wiki/Tupamaros": {
+      "archiveUrl": "https://web.archive.org/web/20260711172008/https://en.wikipedia.org/wiki/Tupamaros",
+      "timestamp": "20260711172008",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:20.382Z"
+    },
+    "https://en.wikipedia.org/wiki/Guatemalan_National_Revolutionary_Unity": {
+      "archiveUrl": "https://web.archive.org/web/20260708001944/https://en.wikipedia.org/wiki/Guatemalan_National_Revolutionary_Unity",
+      "timestamp": "20260708001944",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:20.618Z"
     }
   }
 }

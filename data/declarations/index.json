@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/fetch-declarations.js",
-    "lastRun": "2026-07-12T20:37:49.191Z",
+    "lastRun": "2026-07-13T00:06:44.563Z",
     "minChars": 4000,
     "note": "Raw archived declaration bodies (Wayback snapshots) for signatory/date extraction (#28). \"shell\" entries have no article text yet — the script retries them on each run. Do not hand-edit."
   },
@@ -114,6 +114,17 @@
       "state": "shell",
       "chars": 497,
       "snapshot": "existing file"
+    },
+    "2019": {
+      "state": "failed"
+    },
+    "2023": {
+      "state": "failed"
+    },
+    "2024": {
+      "state": "shell",
+      "chars": 3703,
+      "snapshot": "https://web.archive.org/web/20240819063431/https://forodesaopaulo.org/declaracion-de-tegucigalpa-bienvenida-a-celac-social-2024/"
     }
   }
 }
