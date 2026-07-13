@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-13T02:35:31.369Z",
-    "count": 29
+    "lastRun": "2026-07-13T02:57:07.922Z",
+    "count": 34
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -181,6 +181,41 @@
       "status": "200",
       "fresh": true,
       "checkedAt": "2026-07-13T02:35:31.369Z"
+    },
+    "https://forodesaopaulo.org/memoria-del-xx-encuentro-del-foro-de-sao-paulo/": {
+      "archiveUrl": "https://web.archive.org/web/20210613042318/https://forodesaopaulo.org/memoria-del-xx-encuentro-del-foro-de-sao-paulo/",
+      "timestamp": "20210613042318",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:55:05.802Z"
+    },
+    "https://forodesaopaulo.org/memoria-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-el-salvador-2016/": {
+      "archiveUrl": "https://web.archive.org/web/20240616213622/https://forodesaopaulo.org/memoria-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-el-salvador-2016/",
+      "timestamp": "20240616213622",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:55:30.791Z"
+    },
+    "https://forodesaopaulo.org/memoria-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-nicaragua-15-al-19-de-julio-de-2017/": {
+      "archiveUrl": "https://web.archive.org/web/20240616210719/https://forodesaopaulo.org/memoria-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-nicaragua-15-al-19-de-julio-de-2017/",
+      "timestamp": "20240616210719",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:55:55.772Z"
+    },
+    "https://forodesaopaulo.org/memoria-del-xxiv-encuentro-del-foro-de-sao-paulo-la-habana-cuba-15-al-17-de-julio-de-2018/": {
+      "archiveUrl": "https://web.archive.org/web/20240305102159/https://forodesaopaulo.org/memoria-del-xxiv-encuentro-del-foro-de-sao-paulo-la-habana-cuba-15-al-17-de-julio-de-2018/",
+      "timestamp": "20240305102159",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:56:22.674Z"
+    },
+    "https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/": {
+      "archiveUrl": "https://web.archive.org/web/20201021125101/https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/",
+      "timestamp": "20201021125101",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:57:07.922Z"
     }
   }
 }

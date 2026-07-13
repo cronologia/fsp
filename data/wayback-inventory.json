@@ -1,6 +1,6 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-07-13T02:31:07.665Z",
+  "lastRun": "2026-07-13T02:51:46.158Z",
   "latestCapture": "20260706131554",
   "uniqueUrls": 35273,
   "usefulUrls": 3314,
@@ -8587,7 +8587,7 @@
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/06/Declaraci%C3%B3n-Final-2016.pdf",
       "firstSeen": "20170302004406",
       "lastSeen": "20260706131554",
-      "snapshots": 15,
+      "snapshots": 16,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true

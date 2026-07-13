@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-07-13T02:39:08.873Z",
+    "lastRun": "2026-07-13T03:06:06.088Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -153,12 +153,39 @@
     "declaracion-xxv-2019": {
       "path": "primary/declaracion-xxv-2019.html",
       "bytes": 421989,
-      "source": "wayback",
       "state": "ok"
     },
     "declaracion-xxvi-2023": {
       "path": "primary/declaracion-xxvi-2023.html",
       "bytes": 151776,
+      "state": "ok"
+    },
+    "memoria-xx-2014": {
+      "path": "primary/memoria-xx-2014.html",
+      "state": "failed",
+      "error": "fetch failed"
+    },
+    "memoria-xxii-2016": {
+      "path": "primary/memoria-xxii-2016.html",
+      "bytes": 558491,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "memoria-xxiii-2017": {
+      "path": "primary/memoria-xxiii-2017.html",
+      "bytes": 619875,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "memoria-xxiv-2018": {
+      "path": "primary/memoria-xxiv-2018.html",
+      "bytes": 279945,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "declaracion-porto-alegre-1997": {
+      "path": "primary/declaracion-porto-alegre-1997.html",
+      "bytes": 63417,
       "source": "wayback",
       "state": "ok"
     }
