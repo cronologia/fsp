@@ -56,8 +56,9 @@ Puebla**. It was not. They are distinct, coexisting organizations:
 | Status | active | active |
 
 Both met side by side in Tegucigalpa in June 2024. Related allied networks
-include the **Progressive International** and **CELAC Social**. Keep these
-distinctions intact in the data.
+include the **World Social Forum** (the movement/civil-society counterpart, born
+in Porto Alegre in 2001), the **Progressive International** and **CELAC Social**.
+Keep these distinctions intact in the data.
 
 ## Glossary
 

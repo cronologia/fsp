@@ -568,6 +568,14 @@
       "composition": "Social-movements space associated with the Community of Latin American and Caribbean States (CELAC), an intergovernmental body.",
       "relationToForum": "Allied civil-society space, distinct from the Foro (which is a party forum, not an intergovernmental one). Co-present at the June 2024 Tegucigalpa gatherings.",
       "url": null
+    },
+    {
+      "name": "Fórum Social Mundial (World Social Forum, WSF)",
+      "founded": "January 2001",
+      "place": "Porto Alegre, Brazil",
+      "composition": "Civil-society movements, unions, NGOs and activists — explicitly NOT political parties. Its Charter of Principles bars parties from taking positions in the WSF’s name.",
+      "relationToForum": "Born in the same Porto Alegre / PT-linked milieu as the Foro and often described as the “movement” counterpart to the Foro’s “party” network — distinct and autonomous, not a Foro body. Some Foro-aligned figures helped launch it. Critical authors (e.g. Salgueiro) treat the two as parts of one apparatus; that stronger, coordinating-hand claim is attributed to those authors, not asserted here.",
+      "url": "https://en.wikipedia.org/wiki/World_Social_Forum"
     }
   ],
   "foroVsPuebla": {
@@ -958,6 +966,13 @@
       "publisher": "Ediciones Fuerza Productiva",
       "type": "book (analysis)",
       "note": "Critical/analytical work by a Venezuelan anti-communist activist; interpretive claims attributed to the author."
+    },
+    {
+      "id": "wsf-wikipedia",
+      "title": "World Social Forum (Fórum Social Mundial) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/World_Social_Forum",
+      "publisher": "Wikipedia",
+      "type": "encyclopedia"
     }
   ],
   "membersInGovernment": {
