@@ -63,6 +63,14 @@ There is **no `npm install`** — the toolchain is intentionally dependency-free
    `data/forum.json` must be valid JSON.
 4. **Archive new sources.** When you add a URL to `references[]` (or any source
    field), run `scripts/archive-refs.js` so it gains a permanent fallback.
+5. **Force-archive official/live pages.** When a reference is an official or
+   live page whose content can be changed or removed (e.g. the Forum's own
+   `forodesaopaulo.org` declarations, party/government sites), set
+   `"official": true` on it. `scripts/archive-refs.js` then triggers a *fresh*
+   Save Page Now capture the first time it sees the URL — instead of accepting
+   a possibly years-old snapshot — so the content is preserved as it stood when
+   we cited it. The capture is marked `fresh` in `data/archives.json` so later
+   runs stay idempotent (use `--save-all` to re-capture everything).
 
 ## Data quality & sourcing rules (important)
 
