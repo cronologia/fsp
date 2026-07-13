@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/extract-declarations.js",
-    "lastRun": "2026-07-13T02:00:16.464Z",
+    "lastRun": "2026-07-13T02:39:05.957Z",
     "note": "Plain-text extraction of the official declaration PDFs (#28 phase 2). headerDate and headerEditionRoman are mined from each declaration's own opening dateline — the primary source for #3 (date/edition verification). editionMatchesOfficialNumber:false flags where the header's Roman numeral differs from the book chapter number. Do not hand-edit."
   },
   "declarations": {

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-07-13T02:00:22.487Z",
+    "lastRun": "2026-07-13T02:39:08.873Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -78,7 +78,6 @@
     "radiovox": {
       "path": "media/radiovox.html",
       "bytes": 712757,
-      "source": "wayback",
       "state": "ok"
     },
     "wikipedia-liberation-theology": {
@@ -144,13 +143,23 @@
     "midiasemmascara": {
       "path": "media/midiasemmascara.html",
       "bytes": 4661,
-      "source": "wayback",
       "state": "ok"
     },
     "atas-foro-msm": {
       "path": "compilation/atas-foro-msm.html",
       "bytes": 221170,
-      "source": "live",
+      "state": "ok"
+    },
+    "declaracion-xxv-2019": {
+      "path": "primary/declaracion-xxv-2019.html",
+      "bytes": 421989,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "declaracion-xxvi-2023": {
+      "path": "primary/declaracion-xxvi-2023.html",
+      "bytes": 151776,
+      "source": "wayback",
       "state": "ok"
     }
   }

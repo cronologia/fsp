@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-13T01:57:12.795Z",
-    "count": 27
+    "lastRun": "2026-07-13T02:35:31.369Z",
+    "count": 29
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -18,10 +18,11 @@
       "checkedAt": "2026-06-30T11:41:49.877Z"
     },
     "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/": {
-      "archiveUrl": "https://web.archive.org/web/20230630151335/https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
-      "timestamp": "20230630151335",
+      "archiveUrl": "https://web.archive.org/web/20260713022142/https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
+      "timestamp": "20260713022142",
       "status": "200",
-      "checkedAt": "2026-06-30T11:41:49.976Z"
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:31:25.640Z"
     },
     "https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/": {
       "archiveUrl": "https://web.archive.org/web/20250919173312/https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/",
@@ -166,6 +167,20 @@
       "timestamp": "20260601204728",
       "status": "200",
       "checkedAt": "2026-07-13T01:56:18.220Z"
+    },
+    "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/": {
+      "archiveUrl": "https://web.archive.org/web/20240616222506/https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/",
+      "timestamp": "20240616222506",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:35:06.458Z"
+    },
+    "https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/": {
+      "archiveUrl": "https://web.archive.org/web/20240523194414/https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/",
+      "timestamp": "20240523194414",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:35:31.369Z"
     }
   }
 }
