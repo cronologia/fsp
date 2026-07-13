@@ -87,5 +87,15 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: refresh Wayback inventory + archives [skip ci]"
-            git push
+            # master may have advanced while this run worked (e.g. a merge landed).
+            # Rebase the generated-data commit onto the latest master and retry so
+            # the push isn't lost to a non-fast-forward rejection.
+            n=0
+            until git push; do
+              n=$((n+1))
+              if [ "$n" -ge 4 ]; then echo "::error::push failed after $n attempts"; exit 1; fi
+              echo "::warning::push rejected (master advanced) — rebasing on origin/master and retrying ($n)"
+              git fetch origin master
+              git rebase origin/master || { echo "::error::rebase conflict on generated data"; git rebase --abort; exit 1; }
+            done
           fi
