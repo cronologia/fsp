@@ -481,9 +481,24 @@ function renderOrganization(org) {
   const cards = org.bodies
     .map((b) => {
       const flag = b.verified === false ? ' <span class="flag" title="reported by the Forum / affiliated sources; to verify">?</span>' : '';
+      let composition = '';
+      if (b.composition && b.composition.length) {
+        const rows = b.composition
+          .map((c) => `            <dt>${esc(c.country)}</dt><dd>${esc(c.delegation)}</dd>`)
+          .join('\n');
+        const heading = `${esc(b.compositionTitle || 'Composition')} — ${b.composition.length} countries${cite(b.compositionSources)}`;
+        composition = `
+        <details class="roster wg-composition">
+          <summary><strong>${heading}</strong></summary>
+          ${b.compositionNote ? `<p class="section-intro">${esc(b.compositionNote)}</p>` : ''}
+          <dl class="facts founding-orgs">
+${rows}
+          </dl>
+        </details>`;
+      }
       return `      <article class="related-card">
         <h3>${esc(b.name)}${flag}</h3>
-        <p>${esc(b.detail)}</p>
+        <p>${esc(b.detail)}</p>${composition}
       </article>`;
     })
     .join('\n');
