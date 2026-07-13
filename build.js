@@ -96,9 +96,16 @@ function esc(value) {
 }
 
 function renderMeetingPage(m, archives, codeByCountry) {
+  const isWb = !!m.declarationUrl && /web\.archive\.org/.test(m.declarationUrl);
   const snap = archives[m.declarationUrl];
+  // Always surface a Wayback link: if the declaration link is a live/official
+  // page, append its archived snapshot; if it is already a Wayback URL, it is
+  // the archive.
+  const archLink = snap && snap.archiveUrl && !isWb
+    ? ` · <a href="${esc(snap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="Internet Archive Wayback Machine snapshot">🗄 archived${snap.timestamp ? ` ${esc(formatArchiveTs(snap.timestamp))}` : ''}</a>`
+    : '';
   const declLive = m.declarationUrl
-    ? `<a href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank">📄 Final declaration (Internet Archive)</a>`
+    ? `<a href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank">📄 Final declaration${isWb ? ' (Internet Archive)' : ''}</a>${archLink}`
     : '<span class="muted">Not recovered yet — see issue tracker</span>';
   const code = codeByCountry && codeByCountry[m.country];
   const countryCell = code
@@ -149,14 +156,19 @@ function renderMeetingPage(m, archives, codeByCountry) {
 `;
 }
 
-function renderMeetingsRows(meetings) {
+function renderMeetingsRows(meetings, archives = {}) {
   return meetings
     .map((m) => {
       const dates = m.dates
         ? `${esc(m.dates)}${m.datesVerified ? '' : ' <span class="flag" title="dates not verified against a primary source">?</span>'}`
         : '<span class="muted">year only</span>';
+      const dsnap = archives[m.declarationUrl];
+      const dIsWb = !!m.declarationUrl && /web\.archive\.org/.test(m.declarationUrl);
+      const dArch = dsnap && dsnap.archiveUrl && !dIsWb
+        ? ` <a class="archive-link" href="${esc(dsnap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="Wayback Machine snapshot">🗄</a>`
+        : '';
       const decl = m.declarationUrl
-        ? `<a class="decl-link" href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank" title="Final declaration (Internet Archive)">📄 declaration</a>`
+        ? `<a class="decl-link" href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank" title="Final declaration">📄 declaration</a>${dArch}`
         : '<span class="muted">—</span>';
       const edLabel = m.numbered === false ? '—' : esc(m.edition);
       const edFlag = m.numbered === false || m.editionVerified
@@ -667,7 +679,7 @@ ${renderTimeline(data.meetings)}
     <section id="meetings">
       <h2>Meetings (Encontros)</h2>
       <p class="section-intro">All recorded editions of the Forum. A <span class="flag">?</span> marks dates or edition numbers not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.</p>
-      <p class="notice">Edition numbers follow the Forum’s own numbered declarations${cite(['foro-declaraciones-libro'])}, which run <strong>XI = Antigua 2002 → XII = São Paulo 2005</strong> — the official series has <strong>no numbered encuentro for Quito 2003</strong>. Every edition number is confirmed against a primary source — the PDF book through 2013, and each meeting’s own final declaration for 2014–2024.</p>
+      <p class="notice">Edition numbers follow the Forum’s own numbered declarations${cite(['foro-declaraciones-libro'])}, which run <strong>XI = Antigua 2002 → XII = São Paulo 2005</strong> — the official series has <strong>no numbered encuentro for Quito 2003</strong>. Every edition number is confirmed against a primary source — the PDF book through 2013, and each meeting’s own final declaration for 2014–2024. The dates and edition sequence draw on the Forum’s official numbered declarations${cite(['foro-declaraciones-libro'])}, its per-meeting “Memoria” pages, and the chronology in Graça Salgueiro’s book${cite(['salgueiro-foro'])}. Where a declaration links to a live page, its Wayback snapshot is kept alongside it.</p>
       <div class="m-controls">
         <input type="search" id="m-search" placeholder="Search city, country, notes…" aria-label="Search meetings" />
         <select id="m-country" aria-label="Filter by country">
@@ -686,7 +698,7 @@ ${[...new Set(data.meetings.map((m) => m.country))].sort().map((c) => `         
             <tr><th>Edition</th><th>Year</th><th>Dates</th><th>City</th><th>Country</th><th>Declaration</th><th>Notes</th></tr>
           </thead>
           <tbody>
-${renderMeetingsRows(data.meetings)}
+${renderMeetingsRows(data.meetings, archives)}
           </tbody>
         </table>
       </div>
