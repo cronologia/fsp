@@ -28,13 +28,20 @@ and the Caribbean**.
 
 Produce an **open, source-referenced chronology** as a static website:
 
-- Every meeting since 1990 (edition, year, dates, host city/country).
-- The parties and organizations involved, with key figures.
-- References, each preserved in the Internet Archive as a fallback.
+- Every meeting since 1990 (edition, year, dates, host city/country) — verified
+  against the Forum's own declarations (see ADR-0007).
+- The parties and organizations involved, with key figures — including the
+  **armed/guerrilla movements** and the **regional integration bodies** (Mercosur,
+  ALBA, UNASUR, CELAC, BRICS) in the Forum's orbit.
+- Both **critical** analyses and the Forum's own **insider** scholarship, so the
+  same event is describable from more than one side.
+- References, each preserved in the Internet Archive **and** as a full local copy
+  in the document vault (ADR-0004, ADR-0008).
 
 The project values **verifiability and neutrality** over completeness. It serves
 readers across the political spectrum, so it must describe rather than advocate,
-and flag what is uncertain.
+and flag what is uncertain: contested claims are **attributed to their authors**,
+never asserted in the site's own voice.
 
 ## Important disambiguation: Foro de São Paulo ≠ Grupo de Puebla
 
@@ -61,19 +68,29 @@ distinctions intact in the data.
 
 ## Known data gaps (see GitHub issues)
 
-- The full list of the **48 founding organizations** (1990) is not yet sourced.
-- **Exact dates** and some **edition numbers** vary between sources and are flagged.
-- Member roster, per-meeting declarations, and organizational structure are
-  partially documented and tracked as open tickets.
+Meeting **editions and dates are now verified** (1990–2024); Quito 2003 is
+recorded as unnumbered (not in the official series). Remaining open work is
+tracked as GitHub issues:
 
-Closing these gaps starts from `data/wayback-inventory.json` — the generated index
-of archived `forodesaopaulo.org` pages (see `README.md` → "Harvesting historical
-content"). It is the worklist for recovering declarations and member lists into
-`data/forum.json`.
+- The **48 founding organizations** (1990) — the source is now located (Regalado,
+  *Encuentros y desencuentros*, pp. 264–265); needs transcription (#2).
+- The full **member roster** + ambiguous affiliations (#4); verifying each
+  **armed group's** Forum participation (#95); **regional-bodies** primary docs
+  and the **World Social Forum** connection (#93); a standing **data-quality
+  audit** of every `verified:false`/attributed claim (#97).
+
+Recovery work starts from `data/wayback-inventory.json` (the generated index of
+archived `forodesaopaulo.org` pages) and the declaration corpus in
+`data/declarations/` (ADR-0007).
 
 ## Primary / key sources
 
-The official site `forodesaopaulo.org` (best harvested via the Wayback Machine),
-plus Wikipedia (EN/PT), the PT's official pages, and a spread of news/analysis
-across the political spectrum. All cited sources live in
-`data/forum.json` → `references[]`.
+- **The Forum's own texts:** its numbered final-declarations book (Pomar &
+  Regalado, Fundação Perseu Abramo, 2013 — the corpus in `data/declarations/`),
+  Regalado's *Encuentros y desencuentros…* (Ocean Sur, 2008), and the official
+  site `forodesaopaulo.org` (best read via the Wayback Machine).
+- **Cross-spectrum:** Wikipedia (EN/PT), party/government sites, and news &
+  analysis from across the political spectrum, including critical works (Salgueiro,
+  Carvalho / Mídia Sem Máscara, De Paola).
+- All cited sources live in `data/forum.json` → `references[]`, each preserved as a
+  Wayback snapshot and a local copy in `data/archive/`.

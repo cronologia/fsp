@@ -21,11 +21,13 @@ data/wayback-inventory.json  Index of forodesaopaulo.org captures (GENERATED)
 data/declarations/official-pdfs.json  Canonical 01-19 declaration-PDF snapshots (hand-curated)
 data/declarations/pdf/   Official declaration PDFs 1990-2013 (GENERATED — fetched from Wayback)
 data/declarations/text/  Plain-text corpus + index.json: dates & official editions (GENERATED)
+data/archive/            Local vault: a saved copy of every reference, by type (GENERATED — ADR-0008)
 src/styles.css           Stylesheet (copied into the build)
-scripts/archive-refs.js  Archives reference URLs to the Wayback Machine
+scripts/archive-refs.js  Archives reference URLs to the Wayback Machine (honors `official: true`)
+scripts/archive-docs.js  Saves a local copy of every reference into data/archive/ (ADR-0008)
 scripts/wayback-harvest.js  Indexes archived captures of the official FSP site
-scripts/fetch-declarations.js  Downloads declaration bodies + official PDFs from Wayback
-scripts/extract-declarations.js  Extracts plain text + dates/editions from the PDFs (zero-dep, zlib)
+scripts/fetch-declarations.js  Downloads declaration bodies + official PDFs from Wayback (ADR-0007)
+scripts/extract-declarations.js  Extracts plain text + dates/editions from the PDFs (zero-dep, zlib; ADR-0007)
 .github/workflows/wayback.yml  Runs the harvesting pipeline on GitHub's runners
 docs-research/           Generated research outputs (Wayback inventory, etc.)
 build.js                 Compiler: data/* -> docs/
@@ -41,6 +43,7 @@ node scripts/archive-refs.js        # archive any reference missing a Wayback sn
 node scripts/archive-refs.js --dry-run
 node scripts/wayback-harvest.js     # index archived captures of forodesaopaulo.org
 node scripts/extract-declarations.js # rebuild the declaration text corpus from the PDFs (offline)
+node scripts/archive-docs.js        # save a local copy of every reference into data/archive/
 python3 -m http.server -d docs 8000 # local preview at http://localhost:8000
 ```
 
