@@ -385,12 +385,15 @@
     {
       "edition": "XXV",
       "year": 2019,
-      "dates": null,
+      "dates": "25–28 Jul 2019",
       "city": "Caracas",
       "country": "Venezuela",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "Last meeting before a multi-year pause (no in-person meetings 2020–2022).",
-      "editionVerified": false
+      "editionVerified": true,
+      "editionSource": "declaration",
+      "datesSource": "declaration",
+      "declarationUrl": "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/"
     },
     {
       "edition": "XXVI",
@@ -398,9 +401,12 @@
       "dates": "29 Jun–2 Jul 2023",
       "city": "Brasília",
       "country": "Brazil",
-      "datesVerified": false,
+      "datesVerified": true,
       "notes": "First in-person meeting after the pandemic-era pause; held in Lula's third term.",
-      "editionVerified": false
+      "editionVerified": true,
+      "editionSource": "declaration",
+      "datesSource": "declaration",
+      "declarationUrl": "https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/"
     },
     {
       "edition": "XXVII",
@@ -826,6 +832,20 @@
       "publisher": "Internet Archive (compiled by Mídia Sem Máscara)",
       "type": "compilation (attributed)",
       "note": "A document assembled and published by Mídia Sem Máscara / Olavo de Carvalho, presented as records (“atas”) of FSP meetings. Their authenticity as verbatim minutes is not independently established here; included as an attributed critical compilation, preserved on the Internet Archive."
+    },
+    {
+      "id": "declaracion-xxv-2019",
+      "title": "Declaración Final del XXV Encuentro del Foro de São Paulo (Caracas, 2019)",
+      "url": "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/",
+      "publisher": "Foro de São Paulo",
+      "type": "primary-source"
+    },
+    {
+      "id": "declaracion-xxvi-2023",
+      "title": "Declaração Final do XXVI Encontro do Foro de São Paulo (Brasília, 2023)",
+      "url": "https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/",
+      "publisher": "Foro de São Paulo",
+      "type": "primary-source"
     }
   ],
   "membersInGovernment": {

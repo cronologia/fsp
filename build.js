@@ -667,7 +667,7 @@ ${renderTimeline(data.meetings)}
     <section id="meetings">
       <h2>Meetings (Encontros)</h2>
       <p class="section-intro">All recorded editions of the Forum. A <span class="flag">?</span> marks dates or edition numbers not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.</p>
-      <p class="notice">Edition numbers follow the Forum’s own numbered declarations${cite(['foro-declaraciones-libro'])}, which run <strong>XI = Antigua 2002 → XII = São Paulo 2005</strong> — the official series has <strong>no numbered encuentro for Quito 2003</strong>. Edition numbers are confirmed against primary sources — the PDF book through 2013 and each meeting’s own final declaration for 2014–2024 — for every meeting except XXV (Caracas 2019) and XXVI (Brasília 2023), whose declarations are not yet recovered; those two follow the sequence and are marked to verify.</p>
+      <p class="notice">Edition numbers follow the Forum’s own numbered declarations${cite(['foro-declaraciones-libro'])}, which run <strong>XI = Antigua 2002 → XII = São Paulo 2005</strong> — the official series has <strong>no numbered encuentro for Quito 2003</strong>. Every edition number is confirmed against a primary source — the PDF book through 2013, and each meeting’s own final declaration for 2014–2024.</p>
       <div class="m-controls">
         <input type="search" id="m-search" placeholder="Search city, country, notes…" aria-label="Search meetings" />
         <select id="m-country" aria-label="Filter by country">
