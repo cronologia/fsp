@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-13T11:49:35.054Z",
-    "count": 40
+    "lastRun": "2026-07-13T12:06:19.325Z",
+    "count": 41
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -258,6 +258,13 @@
       "status": "200",
       "fresh": true,
       "checkedAt": "2026-07-13T11:46:42.852Z"
+    },
+    "https://diegoazziufabc.wordpress.com/wp-content/uploads/2018/08/livro-foro-de-sao-paulo-roberto-regalado-e-valter-pomar-compl.pdf": {
+      "archiveUrl": "https://web.archive.org/web/20250919194026/https://diegoazziufabc.wordpress.com/wp-content/uploads/2018/08/livro-foro-de-sao-paulo-roberto-regalado-e-valter-pomar-compl.pdf",
+      "timestamp": "20250919194026",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T12:04:39.783Z"
     }
   }
 }
