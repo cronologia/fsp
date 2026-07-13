@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-07-13T01:25:42.779Z",
+    "lastRun": "2026-07-13T01:30:01.716Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -18,7 +18,7 @@
       "state": "ok"
     },
     "pt-oficial": {
-      "path": "primary-affiliated/pt-oficial.html",
+      "path": "primary/pt-oficial.html",
       "bytes": 92973,
       "source": "wayback",
       "state": "ok"
@@ -36,13 +36,13 @@
       "state": "ok"
     },
     "granma-30years": {
-      "path": "news-affiliated/granma-30years.html",
+      "path": "news/granma-30years.html",
       "bytes": 26801,
       "source": "wayback",
       "state": "ok"
     },
     "heritage-marxist": {
-      "path": "commentary-critical/heritage-marxist.html",
+      "path": "commentary/heritage-marxist.html",
       "bytes": 87469,
       "source": "wayback",
       "state": "ok"
@@ -60,31 +60,31 @@
       "state": "ok"
     },
     "infobae-relevo": {
-      "path": "analysis-foro-vs-puebla-group/infobae-relevo.html",
+      "path": "analysis/infobae-relevo.html",
       "bytes": 1083395,
       "source": "wayback",
       "state": "ok"
     },
     "comitedelectura": {
-      "path": "analysis-foro-vs-puebla-group/comitedelectura.html",
+      "path": "analysis/comitedelectura.html",
       "bytes": 169700,
       "source": "wayback",
       "state": "ok"
     },
     "infobae-tegucigalpa": {
-      "path": "news-both-orgs-met-in-2024/infobae-tegucigalpa.html",
+      "path": "news/infobae-tegucigalpa.html",
       "bytes": 134871,
       "source": "wayback",
       "state": "ok"
     },
     "carvalho-foro": {
-      "path": "book-analysis/carvalho-foro.html",
+      "path": "book/carvalho-foro.html",
       "bytes": 3876,
       "source": "wayback",
       "state": "ok"
     },
     "salgueiro-foro": {
-      "path": "book-analysis/salgueiro-foro.html",
+      "path": "book/salgueiro-foro.html",
       "bytes": 162968,
       "source": "wayback",
       "state": "ok"
@@ -107,13 +107,13 @@
       "state": "ok"
     },
     "castro-lula-voltairenet": {
-      "path": "primary-affiliated/castro-lula-voltairenet.html",
+      "path": "primary/castro-lula-voltairenet.html",
       "bytes": 154940,
       "source": "wayback",
       "state": "ok"
     },
     "foro-declaraciones-libro": {
-      "path": "primary-source/foro-declaraciones-libro.pdf",
+      "path": "primary/foro-declaraciones-libro.pdf",
       "bytes": 97386,
       "source": "live",
       "state": "ok"

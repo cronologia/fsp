@@ -38,7 +38,10 @@ const MIN_PDF = 10 * 1024;     // bytes
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const slug = (s) => String(s || 'other').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'other';
+/** Top-level folder category for a reference: its type's first word (so
+ *  "commentary (critical)" and "primary/affiliated" collapse to clean, single
+ *  categories like "commentary" and "primary"). */
+const categoryOf = (type) => (String(type || '').match(/[a-z]+/i) || ['other'])[0].toLowerCase();
 const extFor = (url) => (/\.pdf(?:$|[?#])/i.test(url) ? 'pdf' : 'html');
 
 /** Wayback raw-resource form: insert `id_` after the timestamp. */
@@ -124,7 +127,7 @@ async function main() {
   for (const r of refs) {
     const ext = extFor(r.url);
     const min = ext === 'pdf' ? MIN_PDF : MIN_HTML;
-    const rel = path.join(slug(r.type), `${r.id}.${ext}`);
+    const rel = path.join(categoryOf(r.type), `${r.id}.${ext}`);
     const out = path.join(OUT_DIR, rel);
     fs.mkdirSync(path.dirname(out), { recursive: true });
 
@@ -173,7 +176,11 @@ async function main() {
   console.log(`Done. ${ok} already saved, ${saved} newly saved, ${failed} failed → data/archive/.`);
 }
 
-main().catch((err) => {
-  console.error('archive-docs failed:', err);
-  process.exit(0);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error('archive-docs failed:', err);
+    process.exit(0);
+  });
+}
+
+module.exports = { categoryOf, extFor, writeReadme, OUT_DIR };
