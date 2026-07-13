@@ -6,7 +6,7 @@
 > meeting declarations, member lists and history into `data/forum.json`.
 
 - Domain: `forodesaopaulo.org`
-- Last run: 2026-07-13T01:18:19.151Z
+- Last run: 2026-07-13T01:31:55.629Z
 - Latest capture seen (incremental watermark): 2026-07-06
 - Unique archived URLs: **35273** (high-value: **3314**)
 
