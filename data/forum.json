@@ -645,7 +645,8 @@
       "title": "Foro de São Paulo: 33 anos em defesa da integração regional e da democracia",
       "url": "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
       "publisher": "Partido dos Trabalhadores (official)",
-      "type": "primary/affiliated"
+      "type": "primary/affiliated",
+      "official": true
     },
     {
       "id": "brasildefato-30anos",
@@ -838,14 +839,16 @@
       "title": "Declaración Final del XXV Encuentro del Foro de São Paulo (Caracas, 2019)",
       "url": "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/",
       "publisher": "Foro de São Paulo",
-      "type": "primary-source"
+      "type": "primary-source",
+      "official": true
     },
     {
       "id": "declaracion-xxvi-2023",
       "title": "Declaração Final do XXVI Encontro do Foro de São Paulo (Brasília, 2023)",
       "url": "https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/",
       "publisher": "Foro de São Paulo",
-      "type": "primary-source"
+      "type": "primary-source",
+      "official": true
     }
   ],
   "membersInGovernment": {

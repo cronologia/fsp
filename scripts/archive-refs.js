@@ -10,6 +10,13 @@
  *      archive the page, then re-check until the snapshot appears.
  *   3. Record the snapshot URL + timestamp into data/archives.json.
  *
+ * References marked `official: true` (the Forum's own site and other live
+ * official pages whose content can be changed or removed) get a FORCED fresh
+ * capture the first time they are seen — accepting a years-old snapshot is not
+ * enough when we are citing the page's current content. The capture is then
+ * marked `fresh` in the cache so subsequent runs stay idempotent; use
+ * --save-all to re-capture everything.
+ *
  * Design: data/forum.json stays the hand-curated source of truth. This script
  * never edits it. The machine-generated cache lives in data/archives.json,
  * which build.js merges in to render "archived" fallback links next to each
@@ -56,13 +63,21 @@ const PACING_DELAY_MS = 6000;     // polite delay between Save Page Now calls
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-/** Collect the distinct reference URLs from forum.json. */
+/**
+ * Collect the distinct reference URLs from forum.json, flagging those marked
+ * `official: true`. Official/live pages (e.g. the Forum's own site) are the
+ * ones whose content can be silently changed or removed, so they get a forced
+ * fresh capture rather than accepting whatever old snapshot already exists.
+ */
 function collectUrls(data) {
-  const urls = new Set();
+  const byUrl = new Map();
   for (const ref of data.references || []) {
-    if (ref && typeof ref.url === 'string') urls.add(ref.url.trim());
+    if (ref && typeof ref.url === 'string') {
+      const url = ref.url.trim();
+      byUrl.set(url, (byUrl.get(url) || false) || ref.official === true);
+    }
   }
-  return [...urls];
+  return [...byUrl].map(([url, official]) => ({ url, official }));
 }
 
 /** fetch JSON with a timeout; returns null on any failure. */
@@ -157,32 +172,45 @@ async function main() {
   let failed = 0;
   let first = true;
 
-  for (const url of urls) {
+  for (const { url, official } of urls) {
     const cached = cache.snapshots[url];
-    if (cached && cached.archiveUrl && !SAVE_ALL) {
+    const haveFresh = !!(cached && cached.fresh);
+    // A cached snapshot is enough — except for official pages we haven't yet
+    // captured ourselves, which we force-save once so the cited content is
+    // preserved as it stood at citation time.
+    if (cached && cached.archiveUrl && !SAVE_ALL && (!official || haveFresh)) {
       console.log(`  ✓ cached     ${url}`);
       archived++;
       continue;
     }
 
     let snap = await lookupSnapshot(url);
+    // Force a new capture when: --save-all, no snapshot exists, or this is an
+    // official page without a fresh (self-made) capture yet.
+    const mustSave = SAVE_ALL || !snap || (official && !haveFresh);
 
-    if (!snap || SAVE_ALL) {
+    if (mustSave) {
       if (DRY_RUN) {
-        console.log(`  · would save ${url}${snap ? ' (re-archive)' : ' (no snapshot)'}`);
+        console.log(`  · would save ${official ? '(official) ' : ''}${url}${snap ? ' (re-archive)' : ' (no snapshot)'}`);
         if (!snap) { failed++; continue; }
       } else {
         if (!first) await sleep(PACING_DELAY_MS);
         first = false;
-        console.log(`  ⟳ saving…    ${url}`);
+        console.log(`  ⟳ saving${official ? ' (official)' : ''}…    ${url}`);
         const fresh = await savePage(url);
-        if (fresh) { snap = fresh; saved++; }
+        if (fresh) { snap = fresh; snap.fresh = true; saved++; }
       }
     }
 
     if (snap) {
-      cache.snapshots[url] = { ...snap, checkedAt: new Date().toISOString() };
-      console.log(`  ✓ archived   ${url} -> ${snap.archiveUrl}`);
+      cache.snapshots[url] = {
+        archiveUrl: snap.archiveUrl,
+        timestamp: snap.timestamp,
+        status: snap.status,
+        fresh: !!(snap.fresh || haveFresh),
+        checkedAt: new Date().toISOString(),
+      };
+      console.log(`  ✓ archived   ${url} -> ${snap.archiveUrl}${snap.fresh ? ' (fresh)' : ''}`);
       archived++;
     } else {
       console.log(`  ✗ FAILED     ${url}`);
