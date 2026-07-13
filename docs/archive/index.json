@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-07-13T12:11:09.370Z",
+    "lastRun": "2026-07-13T21:19:31.733Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -188,7 +188,6 @@
     "mercosur-wikipedia": {
       "path": "encyclopedia/mercosur-wikipedia.html",
       "bytes": 724084,
-      "source": "wayback",
       "state": "ok"
     },
     "alba-wikipedia": {
@@ -219,12 +218,17 @@
     "pomar-regalado-2013": {
       "path": "book/pomar-regalado-2013.pdf",
       "bytes": 2500922,
-      "source": "wayback",
       "state": "ok"
     },
     "pena-esclusa-foro": {
       "path": "book/pena-esclusa-foro.html",
       "bytes": 170107,
+      "state": "ok"
+    },
+    "wsf-wikipedia": {
+      "path": "encyclopedia/wsf-wikipedia.html",
+      "bytes": 322612,
+      "source": "live",
       "state": "ok"
     }
   }
