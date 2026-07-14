@@ -107,17 +107,17 @@
   select(0);
 })();
 
-/* Interactive tile-grid map: recolour countries as the year slider moves; a Play
- * button animates through the years. Server-rendered for the current year, so the
- * map still shows a snapshot with JS disabled. */
+/* Interactive Latin America map: recolour country paths as the year slider moves;
+ * a Play button animates through the years. Server-rendered for the current year,
+ * so the map still shows a snapshot with JS disabled. */
 (function () {
-  var grid = document.getElementById('atlas-grid');
+  var map = document.getElementById('atlas-map');
   var raw = document.getElementById('atlas-data');
   var slider = document.getElementById('atlas-slider');
   var yearOut = document.getElementById('atlas-year');
   var cap = document.getElementById('atlas-caption');
   var play = document.getElementById('atlas-play');
-  if (!grid || !raw || !slider) return;
+  if (!map || !raw || !slider) return;
 
   var data;
   try { data = JSON.parse(raw.textContent); } catch (e) { return; }
@@ -125,32 +125,47 @@
   var STATES = 'f u o n .'.split(' ');
   var byCode = {};
   data.countries.forEach(function (c) { byCode[c.code] = c; });
-  var tiles = Array.prototype.slice.call(grid.querySelectorAll('.atlas-tile'));
+  var paths = Array.prototype.slice.call(map.querySelectorAll('.latam-c'));
+
+  function label(c, year, i) { return c.name + ' ' + year + ': ' + c.who[i]; }
 
   function render(year) {
     var i = year - data.start;
     yearOut.textContent = year;
     var count = 0, electoral = 0;
-    tiles.forEach(function (t) {
+    paths.forEach(function (t) {
       var c = byCode[t.getAttribute('data-code')];
       if (!c) return;
       var st = c.states.charAt(i) || '.';
       STATES.forEach(function (s) { t.classList.remove(CLASS[s]); });
       t.classList.add(CLASS[st]);
-      t.title = c.name + ' ' + year + ': ' + c.who[i];
+      var l = label(c, year, i);
+      t.setAttribute('aria-label', l);
       if (st !== 'o') electoral++;         // one-party states (Cuba) not in the electoral count
       if (st === 'f' || st === 'u') count++;
     });
     if (cap) cap.textContent = 'Showing ' + year + ' — ' + count + ' of ' + electoral +
-      ' electoral countries FSP-governed (Cuba, one-party, shown separately). Hover a country for its president.';
+      ' electoral countries FSP-governed (Cuba, one-party, shown separately). Hover or tap a country for its president.';
   }
 
   slider.addEventListener('input', function () { stop(); render(Number(slider.value)); });
 
-  // Hover/focus a country → show its detail for the current year.
-  grid.addEventListener('pointerover', function (e) {
-    var t = e.target.closest('.atlas-tile');
-    if (t && cap) cap.textContent = t.title;
+  // Hover/focus a country → show its detail; click/Enter → open its dossier.
+  function detail(e) {
+    var t = e.target.closest('.latam-c');
+    if (t && cap) cap.textContent = t.getAttribute('aria-label');
+  }
+  function go(code) { if (code) window.location.href = 'countries/' + code + '.html'; }
+  map.addEventListener('pointerover', detail);
+  map.addEventListener('focusin', detail);
+  map.addEventListener('click', function (e) {
+    var t = e.target.closest('.latam-c');
+    if (t) go(t.getAttribute('data-code'));
+  });
+  map.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var t = e.target.closest('.latam-c');
+    if (t) { e.preventDefault(); go(t.getAttribute('data-code')); }
   });
 
   var timer = null;

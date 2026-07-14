@@ -49,14 +49,21 @@ data.** Design points:
   cell mirrors its detail into an `aria-live` caption; with JS off the `title`
   tooltips still work.
 
-An **interactive tile-grid map** (`#atlas`) sits at the very top: the 16 tracked
-countries in an approximate geographic layout, recoloured by a **year slider**
-(with a Play animation) using the same states. It is a **schematic tile
-cartogram, not geographic outlines** — a deliberate choice so it stays
-zero-dependency and self-contained (no embedded/fetched map asset, ADR-0001). It
-server-renders the current year so a snapshot shows with JS disabled; `app.js`
-adds the slider/animation. A true geographic SVG map would be a future upgrade
-(needs a committed, self-contained map asset).
+An **interactive map** (`#atlas`) sits at the very top: a real Latin America map
+(actual country borders) recoloured by a **year slider** with a Play animation,
+using the same states; neighbours are greyed for context. It **inlines a
+committed SVG** (`src/latam.svg`) generated **once** from public-domain **Natural
+Earth** 1:50m boundaries (via the npm `world-atlas` package, projected with
+`d3-geo`) — see `scripts/gen-latam-svg.js`. That generator is **dev-only and not
+part of the build**: `build.js` only inlines the committed SVG and injects the
+per-year colours + hatch/cross-hatch patterns, so the **shipped site stays
+zero-dependency and self-contained** (ADR-0001) with no external/fetched asset.
+It server-renders the current year so a snapshot shows with JS disabled; `app.js`
+adds the slider/animation, hover captions, and click-through to dossiers.
+
+_(This replaced an earlier schematic tile-grid cartogram, once real
+public-domain geometry could be obtained at generate-time without adding a
+runtime or committed build dependency.)_
 
 The same grid infrastructure also renders a **high-court interventions grid**
 (`#courts-map`): per country per year, the documented court-packing / purge /
