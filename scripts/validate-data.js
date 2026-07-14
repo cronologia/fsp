@@ -122,6 +122,21 @@ function validateCountry(file, d) {
     });
   }
 
+  // Optional: detailed per-election legislative composition (issue #106 detail).
+  if (d.legislativeComposition !== undefined) {
+    if (!isArr(d.legislativeComposition)) err(file, 'legislativeComposition must be an array');
+    else d.legislativeComposition.forEach((e, i) => {
+      const at = `legislativeComposition[${i}]`;
+      if (!isNum(e.year)) err(file, `${at}.year must be a number`);
+      if (!isStr(e.chamber)) err(file, `${at}.chamber missing`);
+      if (!isArr(e.parties) || !e.parties.length) err(file, `${at}.parties[] missing`);
+      else e.parties.forEach((pt, j) => {
+        if (!isStr(pt.abbr) && !isStr(pt.name)) err(file, `${at}.parties[${j}] needs abbr or name`);
+        if (!isNum(pt.seats)) err(file, `${at}.parties[${j}].seats must be a number`);
+      });
+    });
+  }
+
   const sc = d.supremeCourt;
   if (!sc || !isStr(sc.name)) err(file, 'supremeCourt.name missing');
   else {

@@ -276,5 +276,171 @@
         "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/"
       ]
     }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2022,
+      "chamber": "Câmara dos Deputados",
+      "totalSeats": 513,
+      "majorityThreshold": 257,
+      "parties": [
+        {
+          "abbr": "PL",
+          "name": "Partido Liberal",
+          "seats": 99,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PT",
+          "name": "Partido dos Trabalhadores",
+          "seats": 68,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "União",
+          "name": "União Brasil",
+          "seats": 59,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PP",
+          "name": "Progressistas",
+          "seats": 47,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PSD",
+          "name": "Partido Social Democrático",
+          "seats": 42,
+          "align": "mixed"
+        },
+        {
+          "abbr": "MDB",
+          "name": "Movimento Democrático Brasileiro",
+          "seats": 42,
+          "align": "government"
+        },
+        {
+          "abbr": "Republicanos",
+          "name": "Republicanos",
+          "seats": 41,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PDT",
+          "name": "Partido Democrático Trabalhista",
+          "seats": 17,
+          "align": "government"
+        },
+        {
+          "abbr": "PSB",
+          "name": "Partido Socialista Brasileiro",
+          "seats": 14,
+          "align": "government"
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties (20+)",
+          "seats": 84,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Luiz Inácio Lula da Silva (PT)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The PT-led left base (~120–130 seats) is a minority alone; Lula's government assembles a working majority (257) through a broad multiparty coalition — União Brasil, PP, MDB, PSD, Republicanos (the “Centrão”) — via ministerial posts. No party governs alone (coalition presidentialism)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2022_Brazilian_general_election",
+        "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/"
+      ]
+    },
+    {
+      "year": 2018,
+      "chamber": "Câmara dos Deputados",
+      "totalSeats": 513,
+      "majorityThreshold": 257,
+      "parties": [
+        {
+          "abbr": "PT",
+          "name": "Partido dos Trabalhadores",
+          "seats": 56,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "PSL",
+          "name": "Partido Social Liberal (Bolsonaro)",
+          "seats": 52,
+          "align": "government"
+        },
+        {
+          "abbr": "PP",
+          "name": "Progressistas",
+          "seats": 37,
+          "align": "mixed"
+        },
+        {
+          "abbr": "MDB",
+          "name": "Movimento Democrático Brasileiro",
+          "seats": 34,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PSD",
+          "name": "Partido Social Democrático",
+          "seats": 34,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PR",
+          "name": "Partido da República (now PL)",
+          "seats": 33,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PSB",
+          "name": "Partido Socialista Brasileiro",
+          "seats": 32,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRB",
+          "name": "Partido Republicano Brasileiro (Republicanos)",
+          "seats": 30,
+          "align": "government"
+        },
+        {
+          "abbr": "DEM",
+          "name": "Democratas",
+          "seats": 29,
+          "align": "government"
+        },
+        {
+          "abbr": "PSDB",
+          "name": "Partido da Social Democracia Brasileira",
+          "seats": 29,
+          "align": "mixed"
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties (20+, incl. PDT 28)",
+          "seats": 147,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Jair Bolsonaro (PSL)",
+        "fspInGovernment": false,
+        "hasMajority": true,
+        "note": "PT remained the largest single party but sat in opposition. Bolsonaro's government (PSL, DEM, MDB, PRB, Novo and allies) assembled majorities through shifting Centrão support."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2018_Brazilian_general_election",
+        "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20181007/"
+      ]
+    }
   ]
 }
