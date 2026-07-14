@@ -466,6 +466,7 @@ function renderNav() {
     ['#armed', 'Armed movements'],
     ['#regional', 'Regional bodies'],
     ['#government', 'In government'],
+    ['#presidents-map', 'Pink tide'],
     ['#organization', 'Structure'],
     ['#countries', 'Countries'],
     ['#perspectives', 'Analyses'],
@@ -509,6 +510,102 @@ ${rows}
 ${cards}
       </div>
       ${org.scale ? `<p class="org-scale"><strong>Scale:</strong> ${esc(org.scale)}${org.scaleVerified === false ? ' <span class="flag" title="reported figures; to verify">?</span>' : ''}${cite(org.sources)}</p>` : ''}
+    </section>
+`;
+}
+
+// Year-by-year map of FSP presidential coverage — the "pink tide" (issue #104).
+// Drives entirely off data/countries/*.json presidentialSuccession[] (start/end/fsp);
+// no new data. Affiliations still flagged "to verify" render as a distinct state,
+// never asserted as confirmed FSP.
+function ptlYear(s, now) {
+  return s === 'present' ? now : parseInt(s, 10);
+}
+function ptlStateFor(country, year, now) {
+  // The president in office in a given year = the one with the greatest start ≤ year
+  // whose term also spans it. Handles "present", gaps, and handover years.
+  let best = null;
+  for (const p of country.presidentialSuccession || []) {
+    const s = ptlYear(p.start, now);
+    const e = ptlYear(p.end, now);
+    if (s <= year && year <= e && (!best || s >= ptlYear(best.start, now))) best = p;
+  }
+  if (!best) return { st: 'nodata', p: null };
+  if (best.fsp) return { st: /verify/i.test(country.fspStatus || '') ? 'fsp-unv' : 'fsp', p: best };
+  return { st: 'non', p: best };
+}
+function renderPresidentialTimeline(countries) {
+  if (!countries || !countries.length) return '';
+  const now = new Date().getFullYear();
+  const years = [];
+  for (let y = 1990; y <= now; y++) years.push(y);
+  const nCols = years.length;
+
+  // Order rows by when each country first had an FSP-party president, so the wave
+  // reads as a diagonal; countries that never did fall to the bottom, then A–Z.
+  const firstFsp = (c) => {
+    const ys = (c.presidentialSuccession || []).filter((p) => p.fsp).map((p) => ptlYear(p.start, now));
+    return ys.length ? Math.min(...ys) : Infinity;
+  };
+  const rows = [...countries].sort((a, b) => firstFsp(a) - firstFsp(b) || a.country.localeCompare(b.country));
+
+  const label = { fsp: 'FSP-party president', 'fsp-unv': 'FSP affiliation to verify', non: 'Non-FSP president', nodata: 'No data' };
+
+  // Per-year tally (verified FSP + to-verify) for the bar strip.
+  const tally = years.map((y) => {
+    let fsp = 0, unv = 0;
+    for (const c of rows) {
+      const st = ptlStateFor(c, y, now).st;
+      if (st === 'fsp') fsp++;
+      else if (st === 'fsp-unv') unv++;
+    }
+    return { y, fsp, unv, total: fsp + unv };
+  });
+  const peak = tally.reduce((m, t) => (t.total > m.total ? t : m), tally[0]);
+
+  // One cell per column throughout (uniform auto-flow, no explicit placement) so
+  // the year header, tally bars and country cells stay column-aligned.
+  const header = years
+    .map((y) => `<span class="ptl-yr">${y % 5 === 0 ? y : ''}</span>`)
+    .join('');
+
+  const barRow = tally
+    .map((t) => {
+      const h = Math.round((t.total / rows.length) * 100);
+      return `<span class="ptl-bar" style="--h:${h}%" title="${t.y}: ${t.total} of ${rows.length} FSP-governed (${t.fsp} confirmed, ${t.unv} to verify)"><span style="height:${h}%"></span></span>`;
+    })
+    .join('');
+
+  const bodyRows = rows
+    .map((c) => {
+      const cells = years
+        .map((y) => {
+          const r = ptlStateFor(c, y, now);
+          const who = r.p ? ` — ${r.p.name} (${r.p.party})` : '';
+          return `<span class="ptl-c ptl-${r.st}" title="${esc(c.country)} ${y}: ${esc(label[r.st])}${esc(who)}"></span>`;
+        })
+        .join('');
+      return `          <a class="ptl-lbl ptl-row" href="countries/${esc(c.code)}.html">${esc(c.country)}</a>${cells}`;
+    })
+    .join('\n');
+
+  const legend = ['fsp', 'fsp-unv', 'non', 'nodata']
+    .map((k) => `<span class="ptl-key"><span class="ptl-c ptl-${k}"></span>${esc(label[k])}</span>`)
+    .join('');
+
+  const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
+  return `    <section id="presidents-map">
+      <h2>FSP presidential coverage, year by year</h2>
+      <p class="section-intro">For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom. Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a lighter state, not counted as confirmed. The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.</p>
+      <div class="table-scroll">
+        <div class="ptl" style="${gridCols}">
+          <span class="ptl-corner">Year →</span>${header}
+          <span class="ptl-lbl ptl-tally-lbl" title="Countries with an FSP-party president that year (confirmed + to-verify), out of ${rows.length} tracked">FSP-governed</span>${barRow}
+${bodyRows}
+        </div>
+      </div>
+      <p class="ptl-note">Peak coverage: <strong>${peak.total} of ${rows.length}</strong> tracked countries in <strong>${peak.y}</strong>. This maps only the ${rows.length} countries with a dossier here, not all of Latin America — read the per-year counts, not the absolute total. Companion to the sourced president count (issue&nbsp;#96).</p>
+      <div class="ptl-legend">${legend}</div>
     </section>
 `;
 }
@@ -784,6 +881,7 @@ ${renderMembershipRosters(data.membershipRosters)}
 
 ${renderArmedMovements(data.armedMovements)}
 ${renderMembersInGovernment(data.membersInGovernment, codeByCountry)}
+${renderPresidentialTimeline(countries)}
 ${renderCountryIndex(countries)}
 ${renderOrganization(data.organization)}
     <section id="related">

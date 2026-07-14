@@ -151,6 +151,33 @@ details.wg-composition { margin-top: .75rem; background: #fbfaf8; }
 details.wg-composition > summary { font-size: .85rem; }
 details.wg-composition .founding-orgs dt { white-space: normal; }
 
+/* Presidential timeline map — "pink tide" (issue #104) */
+.ptl {
+  --ptl-cell: 15px;
+  --ptl-lbl: 8.5rem;
+  display: grid;
+  gap: 2px;
+  align-items: stretch;
+  width: max-content;
+  min-width: 100%;
+  margin: .25rem 0 .75rem;
+}
+.ptl-corner { font-size: .72rem; color: var(--muted); align-self: end; padding-bottom: .2rem; white-space: nowrap; }
+.ptl-yr { font-size: .62rem; color: var(--muted); writing-mode: vertical-rl; transform: rotate(180deg); justify-self: center; align-self: end; height: 2.4rem; line-height: var(--ptl-cell); }
+.ptl-lbl { font-size: .74rem; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: .4rem; align-self: center; }
+a.ptl-row:hover { color: var(--accent); text-decoration: underline; }
+.ptl-tally-lbl { color: var(--muted); font-weight: 600; }
+.ptl-c { width: var(--ptl-cell); height: var(--ptl-cell); border-radius: 2px; background: var(--line); display: block; }
+.ptl-fsp { background: #b8252b; }
+.ptl-fsp-unv { background: #e79aa0; }
+.ptl-non { background: #dfe3ea; }
+.ptl-nodata { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+.ptl-bar { height: 2.2rem; display: flex; align-items: flex-end; justify-content: center; }
+.ptl-bar > span { display: block; width: 9px; background: #7a1418; border-radius: 2px 2px 0 0; min-height: 1px; }
+.ptl-note { color: var(--muted); font-size: .85rem; max-width: 70ch; }
+.ptl-legend { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin-top: .5rem; font-size: .8rem; color: var(--muted); }
+.ptl-key { display: inline-flex; align-items: center; gap: .35rem; }
+
 /* Armed & guerrilla movements */
 .am-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #7a1418; border-radius: 6px; padding: 1rem; }
 .am-card h3 { margin: 0 0 .25rem; font-size: 1.02rem; }
