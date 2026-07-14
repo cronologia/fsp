@@ -1,0 +1,94 @@
+{
+  "country": "Peru",
+  "code": "PE",
+  "fspParty": "Partido Nacionalista Peruano (Humala)",
+  "fspStatus": "member (Partido Nacionalista Peruano, per Regalado 2008)",
+  "fspPresidents": [
+    "Ollanta Humala"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Alberto Fujimori",
+      "party": "Cambio 90 / Perú 2000",
+      "start": "1990",
+      "end": "2000",
+      "fsp": false
+    },
+    {
+      "name": "Valentín Paniagua",
+      "party": "Acción Popular (interim)",
+      "start": "2000",
+      "end": "2001",
+      "fsp": false
+    },
+    {
+      "name": "Alejandro Toledo",
+      "party": "Perú Posible",
+      "start": "2001",
+      "end": "2006",
+      "fsp": false
+    },
+    {
+      "name": "Alan García",
+      "party": "APRA",
+      "start": "2006",
+      "end": "2011",
+      "fsp": false
+    },
+    {
+      "name": "Ollanta Humala",
+      "party": "Partido Nacionalista Peruano (Gana Perú)",
+      "start": "2011",
+      "end": "2016",
+      "fsp": true,
+      "notes": "The Partido Nacionalista del Perú is listed among FSP active members in Regalado's 2007 roster (Encuentros y desencuentros, Ocean Sur 2008)."
+    },
+    {
+      "name": "Pedro Pablo Kuczynski",
+      "party": "Peruanos Por el Kambio",
+      "start": "2016",
+      "end": "2018",
+      "fsp": false
+    },
+    {
+      "name": "Martín Vizcarra",
+      "party": "independent",
+      "start": "2018",
+      "end": "2020",
+      "fsp": false
+    },
+    {
+      "name": "Francisco Sagasti",
+      "party": "Partido Morado",
+      "start": "2020",
+      "end": "2021",
+      "fsp": false
+    },
+    {
+      "name": "Pedro Castillo",
+      "party": "Perú Libre",
+      "start": "2021",
+      "end": "2022",
+      "fsp": false,
+      "notes": "Left-wing, but Perú Libre's FSP membership is not established here — not counted as FSP pending sourcing (#4)."
+    },
+    {
+      "name": "Dina Boluarte",
+      "party": "independent (ex-Perú Libre)",
+      "start": "2022",
+      "end": "present",
+      "fsp": false
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Suprema de Justicia de la República",
+    "verified": false,
+    "appointmentMethod": "Judges selected by the Junta Nacional de Justicia.",
+    "fspEraChanges": "Court history not yet compiled for this dossier (added for the timeline map; see issue #109)."
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_Peru",
+    "https://en.wikipedia.org/wiki/Ollanta_Humala",
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ]
+}

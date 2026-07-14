@@ -1,0 +1,73 @@
+{
+  "country": "Colombia",
+  "code": "CO",
+  "fspParty": "Pacto Histórico / Colombia Humana (Petro)",
+  "fspStatus": "affiliated (to verify)",
+  "fspPresidents": [
+    "Gustavo Petro"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "César Gaviria",
+      "party": "Partido Liberal",
+      "start": "1990",
+      "end": "1994",
+      "fsp": false
+    },
+    {
+      "name": "Ernesto Samper",
+      "party": "Partido Liberal",
+      "start": "1994",
+      "end": "1998",
+      "fsp": false
+    },
+    {
+      "name": "Andrés Pastrana",
+      "party": "Partido Conservador",
+      "start": "1998",
+      "end": "2002",
+      "fsp": false
+    },
+    {
+      "name": "Álvaro Uribe",
+      "party": "Primero Colombia / Partido de la U",
+      "start": "2002",
+      "end": "2010",
+      "fsp": false
+    },
+    {
+      "name": "Juan Manuel Santos",
+      "party": "Partido de la U",
+      "start": "2010",
+      "end": "2018",
+      "fsp": false
+    },
+    {
+      "name": "Iván Duque",
+      "party": "Centro Democrático",
+      "start": "2018",
+      "end": "2022",
+      "fsp": false
+    },
+    {
+      "name": "Gustavo Petro",
+      "party": "Pacto Histórico / Colombia Humana",
+      "start": "2022",
+      "end": "present",
+      "fsp": true,
+      "notes": "First left president of Colombia. FSP membership of the Pacto Histórico coalition as such is not established here (to verify): its constituent Polo Democrático Alternativo and Partido Comunista Colombiano appear in Regalado's 2007 FSP roster, and forodesaopaulo.org published a solidarity statement with Petro and the Pacto Histórico. Petro's political lineage runs through the M-19 (see Armed movements) and the Polo Democrático."
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Suprema de Justicia / Corte Constitucional",
+    "verified": false,
+    "appointmentMethod": "Constitutional Court magistrates elected by the Senate from shortlists; Supreme Court self-cooptation.",
+    "fspEraChanges": "Court history not yet compiled for this dossier (added for the timeline map; see issue #109)."
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_Colombia",
+    "https://en.wikipedia.org/wiki/Historic_Pact",
+    "https://forodesaopaulo.org/solidaridad-com-el-pacto-historico-y-a-gustavo-petro/",
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ]
+}
