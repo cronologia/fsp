@@ -75,28 +75,206 @@
     "stillServing": "About 7 of the 11 current justices were appointed by FSP (PT) presidents Lula and Dilma — a working majority — as of 2026 (snapshot; the Barroso-seat confirmation was still in process).",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "Earlier history: the STF was founded in 1890–91 (15 ministers), cut to 11 by Vargas (1931), expanded 11→16 by the military regime's AI-2 (1965) and purged of three ministers under AI-5 (1969, back to 11). The 1988 democratic Constitution kept the 11-seat court (retirement at 70).", "size": 11, "appointingGovernment": "various (1890–1988)", "fspRelated": false, "verified": true },
-      { "period": "2015", "type": "reform", "event": "Constitutional Amendment 88 ('PEC da Bengala') raised mandatory retirement from 70 to 75, slowing turnover on the court.", "size": 11, "appointingGovernment": "Dilma Rousseff (PT)", "fspRelated": true, "verified": true },
-      { "period": "1990–present", "type": "composition", "event": "No structural change; vacancies filled through the normal appointment process. By 2026 about 7 of the 11 justices had been appointed by PT (FSP) presidents — see the current-bench table below.", "size": 11, "appointingGovernment": "various", "fspRelated": true, "verified": true }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "Earlier history: the STF was founded in 1890–91 (15 ministers), cut to 11 by Vargas (1931), expanded 11→16 by the military regime's AI-2 (1965) and purged of three ministers under AI-5 (1969, back to 11). The 1988 democratic Constitution kept the 11-seat court (retirement at 70).",
+        "size": 11,
+        "appointingGovernment": "various (1890–1988)",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2015",
+        "type": "reform",
+        "event": "Constitutional Amendment 88 ('PEC da Bengala') raised mandatory retirement from 70 to 75, slowing turnover on the court.",
+        "size": 11,
+        "appointingGovernment": "Dilma Rousseff (PT)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "1990–present",
+        "type": "composition",
+        "event": "No structural change; vacancies filled through the normal appointment process. By 2026 about 7 of the 11 justices had been appointed by PT (FSP) presidents — see the current-bench table below.",
+        "size": 11,
+        "appointingGovernment": "various",
+        "fspRelated": true,
+        "verified": true
+      }
     ],
-    "courtHistorySources": ["https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal", "https://portal.stf.jus.br/textos/verTexto.asp?servico=sobreStfConhecaStfHistorico", "https://www18.fgv.br/cpdoc/acervo/dicionarios/verbete-tematico/supremo-tribunal-federal-stf"],
+    "courtHistorySources": [
+      "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal",
+      "https://portal.stf.jus.br/textos/verTexto.asp?servico=sobreStfConhecaStfHistorico",
+      "https://www18.fgv.br/cpdoc/acervo/dicionarios/verbete-tematico/supremo-tribunal-federal-stf"
+    ],
     "justices": [
-      { "name": "Gilmar Mendes", "appointedBy": "Fernando Henrique Cardoso", "appointedParty": "PSDB", "year": 2002, "fspAppointed": false, "status": "serving (decano)", "background": "Former Advocate-General of the Union under FHC." },
-      { "name": "Cármen Lúcia", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2006, "fspAppointed": true, "status": "serving", "background": "Career jurist." },
-      { "name": "Dias Toffoli", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2009, "fspAppointed": true, "status": "serving", "background": "Former Advocate-General under Lula; had been a PT legal adviser." },
-      { "name": "Luiz Fux", "appointedBy": "Dilma Rousseff", "appointedParty": "PT", "year": 2011, "fspAppointed": true, "status": "serving", "background": "Career jurist." },
-      { "name": "Edson Fachin", "appointedBy": "Dilma Rousseff", "appointedParty": "PT", "year": 2015, "fspAppointed": true, "status": "serving (court president 2025–2027)", "background": "Law professor; seen as progressive-leaning." },
-      { "name": "Alexandre de Moraes", "appointedBy": "Michel Temer", "appointedParty": "PMDB/MDB", "year": 2017, "fspAppointed": false, "status": "serving", "background": "Former São Paulo state security secretary (PSDB era) and Temer's justice minister." },
-      { "name": "Kassio Nunes Marques", "appointedBy": "Jair Bolsonaro", "appointedParty": "PL", "year": 2020, "fspAppointed": false, "status": "serving", "background": "Career judge." },
-      { "name": "André Mendonça", "appointedBy": "Jair Bolsonaro", "appointedParty": "PL", "year": 2021, "fspAppointed": false, "status": "serving", "background": "Presbyterian pastor; former Advocate-General and justice minister under Bolsonaro ('terribly evangelical' seat)." },
-      { "name": "Cristiano Zanin", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2023, "fspAppointed": true, "status": "serving", "background": "Lula's former personal defence lawyer in the Lava Jato cases." },
-      { "name": "Flávio Dino", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2024, "fspAppointed": true, "status": "serving", "background": "Career politician — ex-PCdoB, former PSB governor of Maranhão and Lula's justice minister." },
-      { "name": "Jorge Messias", "appointedBy": "Lula da Silva", "appointedParty": "PT", "year": 2025, "fspAppointed": true, "status": "nominated (confirmation pending) for Barroso's seat", "background": "Advocate-General of the Union under Lula." }
+      {
+        "name": "Gilmar Mendes",
+        "appointedBy": "Fernando Henrique Cardoso",
+        "appointedParty": "PSDB",
+        "year": 2002,
+        "fspAppointed": false,
+        "status": "serving (decano)",
+        "background": "Former Advocate-General of the Union under FHC."
+      },
+      {
+        "name": "Cármen Lúcia",
+        "appointedBy": "Lula da Silva",
+        "appointedParty": "PT",
+        "year": 2006,
+        "fspAppointed": true,
+        "status": "serving",
+        "background": "Career jurist."
+      },
+      {
+        "name": "Dias Toffoli",
+        "appointedBy": "Lula da Silva",
+        "appointedParty": "PT",
+        "year": 2009,
+        "fspAppointed": true,
+        "status": "serving",
+        "background": "Former Advocate-General under Lula; had been a PT legal adviser."
+      },
+      {
+        "name": "Luiz Fux",
+        "appointedBy": "Dilma Rousseff",
+        "appointedParty": "PT",
+        "year": 2011,
+        "fspAppointed": true,
+        "status": "serving",
+        "background": "Career jurist."
+      },
+      {
+        "name": "Edson Fachin",
+        "appointedBy": "Dilma Rousseff",
+        "appointedParty": "PT",
+        "year": 2015,
+        "fspAppointed": true,
+        "status": "serving (court president 2025–2027)",
+        "background": "Law professor; seen as progressive-leaning."
+      },
+      {
+        "name": "Alexandre de Moraes",
+        "appointedBy": "Michel Temer",
+        "appointedParty": "PMDB/MDB",
+        "year": 2017,
+        "fspAppointed": false,
+        "status": "serving",
+        "background": "Former São Paulo state security secretary (PSDB era) and Temer's justice minister."
+      },
+      {
+        "name": "Kassio Nunes Marques",
+        "appointedBy": "Jair Bolsonaro",
+        "appointedParty": "PL",
+        "year": 2020,
+        "fspAppointed": false,
+        "status": "serving",
+        "background": "Career judge."
+      },
+      {
+        "name": "André Mendonça",
+        "appointedBy": "Jair Bolsonaro",
+        "appointedParty": "PL",
+        "year": 2021,
+        "fspAppointed": false,
+        "status": "serving",
+        "background": "Presbyterian pastor; former Advocate-General and justice minister under Bolsonaro ('terribly evangelical' seat)."
+      },
+      {
+        "name": "Cristiano Zanin",
+        "appointedBy": "Lula da Silva",
+        "appointedParty": "PT",
+        "year": 2023,
+        "fspAppointed": true,
+        "status": "serving",
+        "background": "Lula's former personal defence lawyer in the Lava Jato cases."
+      },
+      {
+        "name": "Flávio Dino",
+        "appointedBy": "Lula da Silva",
+        "appointedParty": "PT",
+        "year": 2024,
+        "fspAppointed": true,
+        "status": "serving",
+        "background": "Career politician — ex-PCdoB, former PSB governor of Maranhão and Lula's justice minister."
+      },
+      {
+        "name": "Jorge Messias",
+        "appointedBy": "Lula da Silva",
+        "appointedParty": "PT",
+        "year": 2025,
+        "fspAppointed": true,
+        "status": "nominated (confirmation pending) for Barroso's seat",
+        "background": "Advocate-General of the Union under Lula."
+      }
     ]
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supremo_Tribunal_Federal",
     "https://portal.stf.jus.br/ostf/ministros/ministro.asp?periodo=STF&consulta=QUADRO_INDICACOES",
     "https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil"
+  ],
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2003",
+      "chamber": "lower",
+      "chamberName": "Câmara dos Deputados (513 seats)",
+      "fspParty": "PT",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "grew from a small bloc to 58 seats (1998) — the principal left opposition, never near a majority",
+      "notes": "In opposition throughout the Collor, Franco and Cardoso (PSDB) governments. Brazil's fragmented multiparty system means no single party holds a majority.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Workers%27_Party_(Brazil)",
+        "https://en.wikipedia.org/wiki/Chamber_of_Deputies_(Brazil)"
+      ]
+    },
+    {
+      "start": "2003",
+      "end": "2016",
+      "chamber": "lower",
+      "chamberName": "Câmara dos Deputados (513 seats)",
+      "fspParty": "PT",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "largest party — 91 (2002), 83 (2006), 88 (2010), 70 (2014)",
+      "notes": "Under Lula and Dilma the PT led broad governing coalitions that commanded a working majority in the Chamber (a majority of the coalition, not of the PT alone). The coalition fractured in 2015–2016, leading to Dilma's impeachment (Aug 2016).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Workers%27_Party_(Brazil)",
+        "https://en.wikipedia.org/wiki/Chamber_of_Deputies_(Brazil)"
+      ]
+    },
+    {
+      "start": "2016",
+      "end": "2023",
+      "chamber": "lower",
+      "chamberName": "Câmara dos Deputados (513 seats)",
+      "fspParty": "PT",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "remained the largest single party (56 seats, 2018) but in opposition",
+      "notes": "After Dilma's impeachment the PT went into opposition under Temer (MDB) and Bolsonaro.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Workers%27_Party_(Brazil)",
+        "https://en.wikipedia.org/wiki/Chamber_of_Deputies_(Brazil)"
+      ]
+    },
+    {
+      "start": "2023",
+      "end": "present",
+      "chamber": "lower",
+      "chamberName": "Câmara dos Deputados (513 seats)",
+      "fspParty": "PT",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "PT-led federation the largest bloc (~68–80 of 513); Lula's government assembled a working multiparty majority",
+      "notes": "Lula's third-term government relies on a broad multiparty coalition (União Brasil, PP, MDB, and others); the PT is the largest single party but well short of a majority on its own.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Workers%27_Party_(Brazil)",
+        "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/"
+      ]
+    }
   ]
 }

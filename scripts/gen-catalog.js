@@ -85,6 +85,22 @@ function generate() {
       `${cell(data.fspParty)} | ${cell(data.fspStatus)} | ${cell(fspP)} |`);
   });
 
+  // Legislative control (lower house), where compiled (issue #106).
+  const withLeg = countries.filter(({ data }) => Array.isArray(data.legislativeControl) && data.legislativeControl.length);
+  if (withLeg.length) {
+    p('');
+    p('### Legislative control (lower house)');
+    p('The FSP-member party’s standing in the lower chamber over time, where compiled');
+    p('(issue #106). `majority`/`plurality`/`minority` describe the FSP party or its');
+    p('governing coalition; `opposition` = out of government; `single-party` = one-party state.');
+    withLeg.forEach(({ data }) => {
+      const spans = data.legislativeControl
+        .map((l) => `${yr(l.start)}–${yr(l.end)}: **${cell(l.fspBloc)}**`)
+        .join(' · ');
+      p(`- **${cell(data.country)}** (${cell(data.legislativeControl[0].fspParty || '')}): ${spans}`);
+    });
+  }
+
   // ---- Parties -------------------------------------------------------------
   h('## Member parties');
   p('A curated, non-exhaustive list of notable member parties (from');

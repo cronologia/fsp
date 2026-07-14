@@ -47,6 +47,12 @@ Total FSP-party presidential terms across tracked countries: **34**.
 | [Colombia](docs/countries/CO.html) | CO | Pacto Histórico / Colombia Humana (Petro) | affiliated (to verify) | Gustavo Petro (2022–present) |
 | [Cuba](docs/countries/CU.html) | CU | Partido Comunista de Cuba (PCC) | member (PCC; one-party state — no competitive elections) | Fidel Castro (1976–2008); Raúl Castro (2008–2018); Miguel Díaz-Canel (2018–present) |
 
+### Legislative control (lower house)
+The FSP-member party’s standing in the lower chamber over time, where compiled
+(issue #106). `majority`/`plurality`/`minority` describe the FSP party or its
+governing coalition; `opposition` = out of government; `single-party` = one-party state.
+- **Brazil** (PT): 1990–2003: **opposition** · 2003–2016: **majority** · 2016–2023: **opposition** · 2023–present: **majority**
+
 ## Member parties
 
 A curated, non-exhaustive list of notable member parties (from

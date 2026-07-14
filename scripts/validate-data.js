@@ -90,6 +90,7 @@ function validateForum() {
 
 // ---- countries/*.json -----------------------------------------------------
 const COURT_TYPES = new Set(['founding', 'reform', 'packing', 'purge', 'composition']);
+const LEG_BLOCS = new Set(['majority', 'plurality', 'minority', 'opposition', 'single-party']);
 
 function validateCountry(file, d) {
   if (!d) return;
@@ -104,6 +105,20 @@ function validateCountry(file, d) {
       if (!isStr(p.name)) err(file, `${at}.name missing`);
       if (!isStr(p.party)) err(file, `${at}.party missing`);
       if (!isBool(p.fsp)) err(file, `${at}.fsp must be boolean`);
+    });
+  }
+
+  // Optional: legislative/congress control over time (issue #106). Feeds the
+  // legislative band on the timeline map (#107).
+  if (d.legislativeControl !== undefined) {
+    if (!isArr(d.legislativeControl)) err(file, 'legislativeControl must be an array');
+    else d.legislativeControl.forEach((l, i) => {
+      const at = `legislativeControl[${i}]`;
+      if (!isStr(l.start)) err(file, `${at}.start missing`);
+      if (!isStr(l.end)) err(file, `${at}.end missing`);
+      if (!isStr(l.chamber)) err(file, `${at}.chamber missing`);
+      if (!LEG_BLOCS.has(l.fspBloc)) err(file, `${at}.fspBloc invalid (${l.fspBloc})`);
+      if (l.inGovernment !== undefined && !isBool(l.inGovernment)) err(file, `${at}.inGovernment must be boolean`);
     });
   }
 
