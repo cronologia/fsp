@@ -358,6 +358,62 @@
       ]
     },
     {
+      "year": 2022,
+      "chamber": "Senado Federal",
+      "totalSeats": 81,
+      "majorityThreshold": 41,
+      "parties": [
+        {
+          "abbr": "PL",
+          "name": "Partido Liberal",
+          "seats": 14,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PSD",
+          "name": "Partido Social Democrático",
+          "seats": 11,
+          "align": "mixed"
+        },
+        {
+          "abbr": "MDB",
+          "name": "Movimento Democrático Brasileiro",
+          "seats": 10,
+          "align": "government"
+        },
+        {
+          "abbr": "União",
+          "name": "União Brasil",
+          "seats": 10,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PT",
+          "name": "Partido dos Trabalhadores",
+          "seats": 9,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties (PP, Podemos, Republicanos, PDT, PSB, …)",
+          "seats": 27,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Luiz Inácio Lula da Silva (PT)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "One-third of the 81 seats are renewed each election (8-year terms). Figures are the post-2022 result; party-switching in early 2023 made the PSD the largest bench. Lula's government commands a working Senate majority via the same broad coalition — the Senate elected a government-aligned president (Rodrigo Pacheco, PSD) in 2023."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2022_Brazilian_general_election",
+        "https://data.ipu.org/parliament/BR/BR-UC01/election/BR-UC01-E20221002/",
+        "https://www12.senado.leg.br/noticias/materias/2022/10/31/bancadas-do-senado-estarao-mais-concentradas-em-2023"
+      ]
+    },
+    {
       "year": 2018,
       "chamber": "Câmara dos Deputados",
       "totalSeats": 513,
