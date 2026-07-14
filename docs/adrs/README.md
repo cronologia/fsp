@@ -17,6 +17,9 @@ context, the decision, and its consequences so future contributors understand
 | [0006](0006-wayback-harvesting-pipeline-on-ci.md) | Run the Wayback harvesting pipeline on CI | Accepted |
 | [0007](0007-declaration-corpus-and-extraction.md) | Recover and extract the declaration corpus | Accepted |
 | [0008](0008-local-document-vault.md) | Preserve full local copies of every reference (document vault) | Accepted |
+| [0009](0009-per-country-dossiers.md) | Per-country dossiers as separate data files | Accepted |
+| [0010](0010-timeline-map-presidential-coverage.md) | Timeline map of FSP presidential coverage ("pink tide") | Accepted |
+| [0011](0011-generated-reference-catalog.md) | Generated reference catalog (`CATALOG.md`) | Accepted |
 
 ## Adding an ADR
 
