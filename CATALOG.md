@@ -53,6 +53,7 @@ The FSP-member party’s standing in the lower chamber over time, where compiled
 governing coalition; `opposition` = out of government; `single-party` = one-party state.
 - **Brazil** (PT / PCdoB): 1990–2003: **opposition** · 2003–2016: **majority** · 2016–2023: **opposition** · 2023–present: **majority**
 - **Bolivia** (MAS): 1990–2006: **opposition** · 2006–2025: **majority** · 2025–present: **opposition**
+- **Uruguay** (Frente Amplio): 1990–2005: **opposition** · 2005–2020: **majority** · 2020–2025: **opposition** · 2025–present: **minority**
 
 ## Member parties
 
