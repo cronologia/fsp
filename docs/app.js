@@ -40,21 +40,24 @@
   apply();
 })();
 
-/* Timeline map: mirror the hovered/tapped cell's detail into a live caption, so
- * mouse and touch users get the info that is otherwise only in the title tooltip.
- * Purely additive — titles still work with JS disabled. */
+/* Year grids (presidential coverage, court interventions): mirror the
+ * hovered/tapped cell's detail into a live caption, so mouse and touch users get
+ * the info that is otherwise only in the title tooltip. Purely additive — titles
+ * still work with JS disabled. */
 (function () {
-  var grid = document.getElementById('ptl-grid');
-  var cap = document.getElementById('ptl-caption');
-  if (!grid || !cap) return;
-  var base = cap.textContent;
-  function show(e) {
-    var t = e.target.closest('[data-d]');
-    if (t) cap.textContent = t.getAttribute('data-d');
-  }
-  function reset() { cap.textContent = base; }
-  grid.addEventListener('pointerover', show);
-  grid.addEventListener('pointerdown', show); // touch: taps don't fire pointerover reliably
-  grid.addEventListener('focusin', show);
-  grid.addEventListener('pointerleave', reset);
+  [['ptl-grid', 'ptl-caption'], ['cm-grid', 'cm-caption']].forEach(function (pair) {
+    var grid = document.getElementById(pair[0]);
+    var cap = document.getElementById(pair[1]);
+    if (!grid || !cap) return;
+    var base = cap.textContent;
+    function show(e) {
+      var t = e.target.closest('[data-d]');
+      if (t) cap.textContent = t.getAttribute('data-d');
+    }
+    function reset() { cap.textContent = base; }
+    grid.addEventListener('pointerover', show);
+    grid.addEventListener('pointerdown', show); // touch: taps don't fire pointerover reliably
+    grid.addEventListener('focusin', show);
+    grid.addEventListener('pointerleave', reset);
+  });
 })();
