@@ -97,18 +97,263 @@
     "stillServing": "Composition in flux through 2024–2025; the 2023 self-extended magistrates and the partial 2024-elected judges sit under the new (post-MAS) government — full roster to verify.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "The historic Corte Suprema de Justicia sat in Sucre (the judicial capital); composition shifted across the many 20th-century governments and coups.", "size": null, "appointingGovernment": "various (pre-1990)", "fspRelated": false, "verified": false },
-      { "period": "1990s", "type": "composition", "event": "Appointed Corte Suprema under the neoliberal-era governments, with members chosen by Congress.", "size": null, "appointingGovernment": "Congress (pre-2009)", "fspRelated": false, "verified": false },
-      { "period": "2009", "type": "reform", "event": "Morales's new Constitution replaced the appointed court with a Tribunal Supremo de Justicia and a Tribunal Constitucional Plurinacional whose top judges are chosen by popular election from candidates pre-selected by the (MAS-controlled) Assembly.", "size": null, "appointingGovernment": "Evo Morales (MAS)", "fspRelated": true, "verified": true },
-      { "period": "2011 & 2017", "type": "composition", "event": "The first and second popular judicial elections seated the high courts; null/blank votes outnumbered valid ones, undercutting their legitimacy.", "size": null, "appointingGovernment": "Evo Morales (MAS)", "fspRelated": true, "verified": true },
-      { "period": "2023", "type": "reform", "event": "With elections delayed, the Constitutional Tribunal extended ('self-prorogued') the magistrates' mandates — widely criticised as an illegitimate power grab.", "size": null, "appointingGovernment": "Luis Arce (MAS)", "fspRelated": true, "verified": true },
-      { "period": "2024–2025", "type": "composition", "event": "Partial judicial elections were held in Dec 2024; the resulting bench sits under the post-MAS government of Rodrigo Paz (from 2025).", "size": null, "appointingGovernment": "transition / Rodrigo Paz (PDC)", "fspRelated": false, "verified": false }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "The historic Corte Suprema de Justicia sat in Sucre (the judicial capital); composition shifted across the many 20th-century governments and coups.",
+        "size": null,
+        "appointingGovernment": "various (pre-1990)",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "1990s",
+        "type": "composition",
+        "event": "Appointed Corte Suprema under the neoliberal-era governments, with members chosen by Congress.",
+        "size": null,
+        "appointingGovernment": "Congress (pre-2009)",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "2009",
+        "type": "reform",
+        "event": "Morales's new Constitution replaced the appointed court with a Tribunal Supremo de Justicia and a Tribunal Constitucional Plurinacional whose top judges are chosen by popular election from candidates pre-selected by the (MAS-controlled) Assembly.",
+        "size": null,
+        "appointingGovernment": "Evo Morales (MAS)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2011 & 2017",
+        "type": "composition",
+        "event": "The first and second popular judicial elections seated the high courts; null/blank votes outnumbered valid ones, undercutting their legitimacy.",
+        "size": null,
+        "appointingGovernment": "Evo Morales (MAS)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2023",
+        "type": "reform",
+        "event": "With elections delayed, the Constitutional Tribunal extended ('self-prorogued') the magistrates' mandates — widely criticised as an illegitimate power grab.",
+        "size": null,
+        "appointingGovernment": "Luis Arce (MAS)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2024–2025",
+        "type": "composition",
+        "event": "Partial judicial elections were held in Dec 2024; the resulting bench sits under the post-MAS government of Rodrigo Paz (from 2025).",
+        "size": null,
+        "appointingGovernment": "transition / Rodrigo Paz (PDC)",
+        "fspRelated": false,
+        "verified": false
+      }
     ],
-    "courtHistorySources": ["https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election", "https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal"],
+    "courtHistorySources": [
+      "https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election",
+      "https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal"
+    ],
     "justicesNote": "Bolivia's high judges are popularly elected; individual current members are in flux (2023 self-extension + 2024 partial election) and not itemized here pending verification under the new government."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
     "https://www.cnn.com/2025/10/19/americas/bolivia-election-results-rodrigo-paz-intl-hnk"
+  ],
+  "fspParties": {
+    "current": [
+      "Movimiento al Socialismo (MAS-IPSP)"
+    ],
+    "note": "MAS is Bolivia's FSP member with a parliamentary presence. Regalado's 2007 roster also lists minor members (Movimiento Bolivia Libre, Partido Comunista de Bolivia, Partido Patria Socialista) without seats."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2006",
+      "chamber": "lower",
+      "fspParty": "MAS",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "MAS emerged in 2002 as the main opposition; earlier negligible",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Bolivian_general_election"
+      ]
+    },
+    {
+      "start": "2006",
+      "end": "2025",
+      "chamber": "lower",
+      "fspParty": "MAS",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "absolute majority throughout (two-thirds supermajority 2009–2020)",
+      "notes": "During the 2019–2020 Áñez interim MAS lost the presidency but kept its congressional majority.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Bolivian_general_election",
+        "https://en.wikipedia.org/wiki/2014_Bolivian_general_election"
+      ]
+    },
+    {
+      "start": "2025",
+      "end": "present",
+      "chamber": "lower",
+      "fspParty": "MAS",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "MAS split and collapsed at the 2025 election, losing the presidency and its majority",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Bolivian_general_election"
+      ]
+    }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2020,
+      "chamber": "Cámara de Diputados",
+      "totalSeats": 130,
+      "majorityThreshold": 66,
+      "parties": [
+        {
+          "abbr": "MAS-IPSP",
+          "name": "Movimiento al Socialismo",
+          "seats": 75,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "CC",
+          "name": "Comunidad Ciudadana",
+          "seats": 39,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Creemos",
+          "name": "Creemos",
+          "seats": 16,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Luis Arce (MAS-IPSP)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "MAS won an absolute majority in both chambers, though not the two-thirds it held in 2014–2020 (two-thirds is needed for constitutional reforms and top judicial appointments)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Bolivian_general_election",
+        "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20201018/"
+      ]
+    },
+    {
+      "year": 2020,
+      "chamber": "Cámara de Senadores",
+      "totalSeats": 36,
+      "majorityThreshold": 19,
+      "parties": [
+        {
+          "abbr": "MAS-IPSP",
+          "name": "Movimiento al Socialismo",
+          "seats": 21,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "CC",
+          "name": "Comunidad Ciudadana",
+          "seats": 11,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Creemos",
+          "name": "Creemos",
+          "seats": 4,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Luis Arce (MAS-IPSP)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "Absolute Senate majority."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Bolivian_general_election",
+        "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20201018/"
+      ]
+    },
+    {
+      "year": 2014,
+      "chamber": "Cámara de Diputados",
+      "totalSeats": 130,
+      "majorityThreshold": 66,
+      "parties": [
+        {
+          "abbr": "MAS-IPSP",
+          "name": "Movimiento al Socialismo",
+          "seats": 88,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "UD",
+          "name": "Unidad Demócrata",
+          "seats": 32,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PDC",
+          "name": "Partido Demócrata Cristiano",
+          "seats": 10,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Evo Morales (MAS-IPSP)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "MAS held a two-thirds supermajority in both chambers (2009–2020), enough to pass constitutional changes and pack the courts (elected judiciary)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2014_Bolivian_general_election"
+      ]
+    },
+    {
+      "year": 2014,
+      "chamber": "Cámara de Senadores",
+      "totalSeats": 36,
+      "majorityThreshold": 19,
+      "parties": [
+        {
+          "abbr": "MAS-IPSP",
+          "name": "Movimiento al Socialismo",
+          "seats": 25,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "UD",
+          "name": "Unidad Demócrata",
+          "seats": 9,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PDC",
+          "name": "Partido Demócrata Cristiano",
+          "seats": 2,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Evo Morales (MAS-IPSP)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "Two-thirds Senate supermajority."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2014_Bolivian_general_election"
+      ]
+    }
   ]
 }

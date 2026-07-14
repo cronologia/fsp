@@ -887,7 +887,8 @@ function renderLegislativeGrid(countries) {
     })
     .sort((a, b) => (b.has ? 1 : 0) - (a.has ? 1 : 0) || a.first - b.first || a.c.country.localeCompare(b.c.country));
 
-  const withData = rows.filter((r) => r.has).length;
+  const withNames = rows.filter((r) => r.has).map((r) => r.c.country);
+  const withData = withNames.length;
   const tick = (y) => (y % 5 === 0 ? ' ptl-tick' : '');
   const header = years.map((y) => `<span class="ptl-yr${tick(y)}">${y % 5 === 0 ? y : ''}</span>`).join('');
 
@@ -928,7 +929,7 @@ function renderLegislativeGrid(countries) {
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="legislative-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-legislative" tabindex="0">
       <h2>Legislative control, year by year</h2>
-      <p class="section-intro">The FSP-member party's standing in the <strong>lower house</strong> each year — whether it (or its governing coalition) held a <strong>majority</strong>, a <strong>plurality</strong>, a <strong>minority</strong> government, or sat in <strong>opposition</strong>. A coalition majority is not a single-party majority (see each cell's detail). Only <strong>${withData}</strong> country compiled so far — Brazil, the pilot (#106); the rest are blank pending the country epics (#107).</p>
+      <p class="section-intro">The FSP-member party's standing in the <strong>lower house</strong> each year — whether it (or its governing coalition) held a <strong>majority</strong>, a <strong>plurality</strong>, a <strong>minority</strong> government, or sat in <strong>opposition</strong>. A coalition majority is not a single-party majority (see each cell's detail). <strong>${withData}</strong> ${withData === 1 ? 'country' : 'countries'} compiled so far (${esc(withNames.join(', '))}); the rest are blank pending the country epics (#107).</p>
       <p class="ptl-caption" id="lg-caption" aria-live="polite">Hover, tap or focus a cell for the party's legislative standing that year.</p>
       <div class="table-scroll">
         <div class="ptl" id="lg-grid" style="${gridCols}">
