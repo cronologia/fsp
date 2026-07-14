@@ -1,0 +1,48 @@
+{
+  "country": "Cuba",
+  "code": "CU",
+  "fspParty": "Partido Comunista de Cuba (PCC)",
+  "fspStatus": "member (PCC; one-party state — no competitive elections)",
+  "oneParty": true,
+  "fspPresidents": [
+    "Fidel Castro",
+    "Raúl Castro",
+    "Miguel Díaz-Canel"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Fidel Castro",
+      "party": "Partido Comunista de Cuba (PCC)",
+      "start": "1976",
+      "end": "2008",
+      "fsp": true,
+      "notes": "President of the Council of State until 2008; PCC First Secretary. Cuba is a one-party socialist state — the PCC is the sole legal party and has governed since 1965, predating the Forum. Shown on the timeline map as a one-party state (not electoral alternation)."
+    },
+    {
+      "name": "Raúl Castro",
+      "party": "Partido Comunista de Cuba (PCC)",
+      "start": "2008",
+      "end": "2018",
+      "fsp": true
+    },
+    {
+      "name": "Miguel Díaz-Canel",
+      "party": "Partido Comunista de Cuba (PCC)",
+      "start": "2018",
+      "end": "present",
+      "fsp": true,
+      "notes": "President of the Council of State (2018), then President of the Republic under the 2019 constitution; PCC First Secretary from 2021."
+    }
+  ],
+  "supremeCourt": {
+    "name": "Tribunal Supremo Popular",
+    "verified": false,
+    "appointmentMethod": "Judges elected by the National Assembly of People's Power.",
+    "fspEraChanges": "One-party socialist state; court is subordinate to the National Assembly. Court history not compiled for this dossier (added for the timeline map; see issue #109)."
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Cuba",
+    "https://en.wikipedia.org/wiki/Communist_Party_of_Cuba",
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ]
+}

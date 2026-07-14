@@ -174,6 +174,13 @@ a.ptl-row:hover { color: var(--accent); text-decoration: underline; }
 .ptl-fsp-unv { background: #e79aa0; background-image: repeating-linear-gradient(45deg, rgba(122,20,24,.75) 0 1.5px, transparent 1.5px 4px); }
 .ptl-non { background: #dfe3ea; }
 .ptl-nodata { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+/* One-party socialist state (Cuba): FSP-governed but not electoral — a cross-hatch
+   distinct from the single-direction "to-verify" hatch and from solid FSP. */
+.ptl-fsp-op { background: #b8252b; background-image: repeating-linear-gradient(45deg, rgba(0,0,0,.42) 0 1.5px, transparent 1.5px 4px), repeating-linear-gradient(-45deg, rgba(0,0,0,.42) 0 1.5px, transparent 1.5px 4px); }
+/* Separate the one-party row(s) from the electoral wave above. */
+.ptl-op { box-shadow: inset 0 2px 0 rgba(29,35,48,.35); }
+.ptl-op.ptl-tick { box-shadow: inset 0 2px 0 rgba(29,35,48,.35), inset 1.5px 0 0 rgba(29,35,48,.22); }
+a.ptl-lbl.ptl-op { margin-top: 2px; }
 /* Lustrum gridline every 5 years (no layout shift). */
 .ptl-tick { box-shadow: inset 1.5px 0 0 rgba(29,35,48,.22); }
 .ptl-nodata.ptl-tick { box-shadow: inset 0 0 0 1px var(--line), inset 1.5px 0 0 rgba(29,35,48,.28); }
