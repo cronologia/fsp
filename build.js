@@ -602,13 +602,26 @@ function renderAtlas(countries) {
 
   const stClass = { f: 'atlas-f', u: 'atlas-u', o: 'atlas-o', n: 'atlas-n', '.': 'atlas-nodata' };
   const iNow = years.length - 1;
-  const tiles = data
-    .map((d) => {
-      const [row, col] = ATLAS_TILES[d.code];
-      const st = d.states[iNow];
-      return `        <a class="atlas-tile ${stClass[st]}" data-code="${esc(d.code)}" style="grid-row:${row};grid-column:${col}" href="countries/${esc(d.code)}.html" title="${esc(d.name)} ${now}: ${esc(d.who[iNow])}"><span class="atlas-code">${esc(d.code)}</span></a>`;
-    })
-    .join('\n');
+
+  // Inline the committed, public-domain Latin America SVG (real borders). Inject
+  // hatch/cross-hatch patterns (to-verify / one-party), then server-render the
+  // current year's colours + a11y attributes so the map works without JS.
+  let svg = fs.readFileSync(path.join(SRC_DIR, 'latam.svg'), 'utf8');
+  const defs = `<defs>
+<pattern id="p-u" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#e79aa0"/><line x1="0" y1="0" x2="0" y2="6" stroke="#7a1418" stroke-width="2"/></pattern>
+<pattern id="p-o" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill="#b8252b"/><path d="M0,0L6,6M6,0L0,6" stroke="rgba(0,0,0,.45)" stroke-width="1.2"/></pattern>
+</defs>`;
+  svg = svg.replace(/(<svg\b[^>]*>)/, `$1\n${defs}`);
+  const byCode = {};
+  data.forEach((d) => { byCode[d.code] = d; });
+  data.forEach((d) => {
+    const cls = stClass[d.states[iNow]];
+    const aria = `${d.name} ${now}: ${d.who[iNow]}`;
+    svg = svg.replace(
+      `<path id="ne-${d.code}" class="latam-c" data-code="${d.code}"`,
+      `<path id="ne-${d.code}" class="latam-c ${cls}" data-code="${d.code}" tabindex="0" role="link" aria-label="${esc(aria)}"`
+    );
+  });
 
   const legend = [
     ['atlas-f', 'FSP-party president'],
@@ -623,17 +636,18 @@ function renderAtlas(countries) {
   const payload = JSON.stringify({ start: 1990, end: now, countries: data });
   return `    <section id="atlas" class="tab-panel" role="tabpanel" aria-labelledby="tab-atlas" tabindex="0">
       <h2>The map, year by year</h2>
-      <p class="section-intro">The tracked countries in an approximate geographic layout (a schematic tile map, not exact borders), coloured by who held the presidency that year. Drag the slider or press play to watch the “pink tide” rise and recede. Same states as the grids above; one-party Cuba is marked distinctly and not part of the electoral counts.</p>
+      <p class="section-intro">The tracked countries on the map, coloured by who held the presidency that year. Drag the slider or press play to watch the spread — often called the “pink tide” — rise and recede. Same states as the grids above; one-party Cuba is marked distinctly and not part of the electoral counts. Neighbouring countries are shown greyed for context.</p>
       <div class="atlas-controls">
         <button type="button" id="atlas-play" class="atlas-btn" aria-label="Play through the years">▶ Play</button>
-        <input type="range" id="atlas-slider" min="1990" max="${now}" value="${now}" step="1" aria-label="Year" list="atlas-ticks" />
+        <input type="range" id="atlas-slider" min="1990" max="${now}" value="${now}" step="1" aria-label="Year" />
         <output id="atlas-year" class="atlas-year">${now}</output>
       </div>
-      <p class="ptl-caption" id="atlas-caption" aria-live="polite">Showing ${now}. Hover or focus a country for its president that year.</p>
-      <div class="atlas-grid" id="atlas-grid" role="img" aria-label="Map of FSP presidential coverage by country and year">
-${tiles}
+      <p class="ptl-caption" id="atlas-caption" aria-live="polite">Showing ${now}. Hover, tap or focus a country for its president that year.</p>
+      <div class="atlas-map" id="atlas-map">
+${svg}
       </div>
       <div class="ptl-legend">${legend}</div>
+      <p class="atlas-credit">Map: Natural Earth (public domain).</p>
       <script type="application/json" id="atlas-data">${payload}</script>
     </section>
 `;
