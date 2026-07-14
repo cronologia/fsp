@@ -565,14 +565,18 @@ function renderPresidentialTimeline(countries) {
 
   // One cell per column throughout (uniform auto-flow, no explicit placement) so
   // the year header, tally bars and country cells stay column-aligned.
+  // A lustrum tick (every 5th year) gives a vertical gridline so a year is
+  // readable without counting cells.
+  const tick = (y) => (y % 5 === 0 ? ' ptl-tick' : '');
   const header = years
-    .map((y) => `<span class="ptl-yr">${y % 5 === 0 ? y : ''}</span>`)
+    .map((y) => `<span class="ptl-yr${tick(y)}">${y % 5 === 0 ? y : ''}</span>`)
     .join('');
 
   const barRow = tally
     .map((t) => {
       const h = Math.round((t.total / rows.length) * 100);
-      return `<span class="ptl-bar" style="--h:${h}%" title="${t.y}: ${t.total} of ${rows.length} FSP-governed (${t.fsp} confirmed, ${t.unv} to verify)"><span style="height:${h}%"></span></span>`;
+      const d = `${t.y}: ${t.total} of ${rows.length} FSP-governed (${t.fsp} confirmed, ${t.unv} to verify)`;
+      return `<span class="ptl-bar${tick(t.y)}" data-d="${esc(d)}" title="${esc(d)}"><span style="height:${h}%"></span></span>`;
     })
     .join('');
 
@@ -582,7 +586,8 @@ function renderPresidentialTimeline(countries) {
         .map((y) => {
           const r = ptlStateFor(c, y, now);
           const who = r.p ? ` — ${r.p.name} (${r.p.party})` : '';
-          return `<span class="ptl-c ptl-${r.st}" title="${esc(c.country)} ${y}: ${esc(label[r.st])}${esc(who)}"></span>`;
+          const d = `${c.country} ${y}: ${label[r.st]}${who}`;
+          return `<span class="ptl-c ptl-${r.st}${tick(y)}" data-d="${esc(d)}" title="${esc(d)}"></span>`;
         })
         .join('');
       return `          <a class="ptl-lbl ptl-row" href="countries/${esc(c.code)}.html">${esc(c.country)}</a>${cells}`;
@@ -596,11 +601,12 @@ function renderPresidentialTimeline(countries) {
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="presidents-map">
       <h2>FSP presidential coverage, year by year</h2>
-      <p class="section-intro">For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom. Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a lighter state, not counted as confirmed. The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.</p>
+      <p class="section-intro">For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom. Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a hatched state, not counted as confirmed. The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.</p>
+      <p class="ptl-caption" id="ptl-caption" aria-live="polite">Hover, tap or focus a cell for the country, year and president. Each state is shown by both colour and fill, so it reads without colour.</p>
       <div class="table-scroll">
-        <div class="ptl" style="${gridCols}">
+        <div class="ptl" id="ptl-grid" style="${gridCols}">
           <span class="ptl-corner">Year →</span>${header}
-          <span class="ptl-lbl ptl-tally-lbl" title="Countries with an FSP-party president that year (confirmed + to-verify), out of ${rows.length} tracked">FSP-governed</span>${barRow}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="Countries with an FSP-party president that year (confirmed + to-verify), out of ${rows.length} tracked" title="Countries with an FSP-party president that year (confirmed + to-verify), out of ${rows.length} tracked">FSP-governed</span>${barRow}
 ${bodyRows}
         </div>
       </div>

@@ -168,15 +168,28 @@ details.wg-composition .founding-orgs dt { white-space: normal; }
 a.ptl-row:hover { color: var(--accent); text-decoration: underline; }
 .ptl-tally-lbl { color: var(--muted); font-weight: 600; }
 .ptl-c { width: var(--ptl-cell); height: var(--ptl-cell); border-radius: 2px; background: var(--line); display: block; }
+/* State = colour AND fill, so the four states read without colour (WCAG 1.4.1):
+   solid dark = FSP · diagonal hatch = to-verify · solid light = non-FSP · outline = no data. */
 .ptl-fsp { background: #b8252b; }
-.ptl-fsp-unv { background: #e79aa0; }
+.ptl-fsp-unv { background: #e79aa0; background-image: repeating-linear-gradient(45deg, rgba(122,20,24,.75) 0 1.5px, transparent 1.5px 4px); }
 .ptl-non { background: #dfe3ea; }
 .ptl-nodata { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+/* Lustrum gridline every 5 years (no layout shift). */
+.ptl-tick { box-shadow: inset 1.5px 0 0 rgba(29,35,48,.22); }
+.ptl-nodata.ptl-tick { box-shadow: inset 0 0 0 1px var(--line), inset 1.5px 0 0 rgba(29,35,48,.28); }
 .ptl-bar { height: 2.2rem; display: flex; align-items: flex-end; justify-content: center; }
 .ptl-bar > span { display: block; width: 9px; background: #7a1418; border-radius: 2px 2px 0 0; min-height: 1px; }
+a.ptl-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-radius: 2px; }
+.ptl-c:hover, .ptl-bar:hover { outline: 1.5px solid var(--ink); outline-offset: -1px; }
+.ptl-caption { color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: .35rem .6rem; font-size: .82rem; margin: .5rem 0; min-height: 1.5em; }
 .ptl-note { color: var(--muted); font-size: .85rem; max-width: 70ch; }
 .ptl-legend { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin-top: .5rem; font-size: .8rem; color: var(--muted); }
 .ptl-key { display: inline-flex; align-items: center; gap: .35rem; }
+@media print {
+  .ptl { width: auto; }
+  #presidents-map .table-scroll { overflow: visible; }
+  .ptl-caption { display: none; }
+}
 
 /* Armed & guerrilla movements */
 .am-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #7a1418; border-radius: 6px; padding: 1rem; }
