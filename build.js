@@ -1078,6 +1078,18 @@ function renderLegislativeComposition(c) {
         .join('\n');
       const g = e.government || {};
       const maj = g.hasMajority ? 'commanded a working majority' : 'lacked a majority';
+      // Sum the FSP member parties' own seats and contrast with the majority
+      // threshold — to make explicit that the FSP bloc alone is not a majority
+      // and that any governing majority is built with non-FSP coalition partners.
+      const fspSeats = e.parties.filter((p) => p.fsp).reduce((n, p) => n + (p.seats || 0), 0);
+      const thr = e.majorityThreshold;
+      const pct = e.totalSeats ? Math.round((fspSeats / e.totalSeats) * 100) : 0;
+      const tail = g.fspInGovernment
+        ? (g.hasMajority ? 'The governing majority is built with non-FSP coalition partners.' : 'Even in government the FSP bloc depends on other parties.')
+        : 'The FSP parties sat in opposition.';
+      const fspLine = fspSeats
+        ? `      <p class="notice"><strong>FSP member parties together: ${fspSeats} of ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${fspSeats >= thr ? 'a majority on their own' : `well short of the ${esc(thr)}-seat majority`}` : ''}. ${tail}</p>\n`
+        : '';
       return `      <h3>${esc(e.year)} — ${esc(e.chamber)} (${esc(e.totalSeats)} seats${e.majorityThreshold ? `; majority = ${esc(e.majorityThreshold)}` : ''})</h3>
       <div class="table-scroll">
         <table class="meetings">
@@ -1087,7 +1099,7 @@ ${prows}
           </tbody>
         </table>
       </div>
-      <p class="section-intro"><strong>Government:</strong> ${esc(g.led || '')} — ${maj}. FSP party in government: <strong>${g.fspInGovernment ? 'yes' : 'no'}</strong>.${g.note ? ` ${esc(g.note)}` : ''}${srcLinks(e.sources)}</p>`;
+${fspLine}      <p class="section-intro"><strong>Government:</strong> ${esc(g.led || '')} — ${maj}. FSP party in government: <strong>${g.fspInGovernment ? 'yes' : 'no'}</strong>.${g.note ? ` ${esc(g.note)}` : ''}${srcLinks(e.sources)}</p>`;
     })
     .join('\n');
   const fp = c.fspParties;
