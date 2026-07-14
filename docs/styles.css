@@ -198,8 +198,9 @@ a.ptl-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px;
   .ptl-caption { display: none; }
 }
 
-/* Visualization tabs (Pink tide / Map / Court interventions) */
-.viz { margin: 1.5rem 0 2rem; }
+/* Year-by-year grids, in tabs (Presidential / Court interventions) */
+.viz { margin: 2rem 0; }
+.viz-h { margin-bottom: .6rem; }
 .viz-tabs { display: flex; flex-wrap: wrap; gap: .3rem; border-bottom: 2px solid var(--accent-soft); margin-bottom: .25rem; }
 .viz-tab { font: inherit; font-size: .9rem; font-weight: 600; padding: .45rem .9rem; border: 1px solid var(--line); border-bottom: none; border-radius: 7px 7px 0 0; background: #f1eee8; color: var(--muted); cursor: pointer; margin-bottom: -2px; }
 .viz-tab:hover { color: var(--accent); }
