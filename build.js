@@ -12,6 +12,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { write: writeCatalog } = require('./scripts/gen-catalog');
 
 const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, 'data', 'forum.json');
@@ -961,6 +962,10 @@ function main() {
 
   // Disable Jekyll processing on GitHub Pages.
   fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');
+
+  // Regenerate the human-readable reference catalog from the same data, so it
+  // never drifts (ADR-0002, ADR-0011).
+  writeCatalog();
 
   const count = data.meetings.length;
   const archivedRefs = data.references.filter((r) => archives[r.url] && archives[r.url].archiveUrl).length;
