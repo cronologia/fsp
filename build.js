@@ -460,8 +460,8 @@ function renderTimeline(meetings) {
 
 function renderNav() {
   const items = [
-    ['#presidents-map', 'Presidential'],
     ['#atlas', 'Map'],
+    ['#presidents-map', 'Presidential'],
     ['#courts-map', 'Courts'],
     ['#origins', 'Origins'],
     ['#timeline', 'Timeline'],
@@ -549,7 +549,6 @@ function ptlStateFor(country, year, now) {
 function renderVizTabs(countries) {
   const tabs = [
     ['tab-presidents', 'presidents-map', 'Presidential'],
-    ['tab-atlas', 'atlas', 'Map'],
     ['tab-courts', 'courts-map', 'Court interventions'],
   ];
   const buttons = tabs
@@ -557,9 +556,9 @@ function renderVizTabs(countries) {
       `<button type="button" class="viz-tab" role="tab" id="${id}" aria-controls="${ctl}" aria-selected="${i === 0 ? 'true' : 'false'}">${esc(lbl)}</button>`)
     .join('');
   return `    <div class="viz">
-      <div class="viz-tabs" role="tablist" aria-label="Data visualizations" hidden>${buttons}</div>
+      <h2 class="viz-h">The grids, year by year</h2>
+      <div class="viz-tabs" role="tablist" aria-label="Year-by-year grids" hidden>${buttons}</div>
 ${renderPresidentialTimeline(countries)}
-${renderAtlas(countries)}
 ${renderCourtsGrid(countries)}
     </div>
 `;
@@ -634,7 +633,7 @@ function renderAtlas(countries) {
     .join('');
 
   const payload = JSON.stringify({ start: 1990, end: now, countries: data });
-  return `    <section id="atlas" class="tab-panel" role="tabpanel" aria-labelledby="tab-atlas" tabindex="0">
+  return `    <section id="atlas">
       <h2>The map, year by year</h2>
       <p class="section-intro">The tracked countries on the map, coloured by who held the presidency that year. Drag the slider or press play to watch the spread — often called the “pink tide” — rise and recede. Same states as the grids above; one-party Cuba is marked distinctly and not part of the electoral counts. Neighbouring countries are shown greyed for context.</p>
       <div class="atlas-controls">
@@ -1045,6 +1044,7 @@ ${renderNav()}
       <strong>Data quality note:</strong> ${esc(meta.dataQualityNote)}
     </div>
 
+${renderAtlas(countries)}
 ${renderVizTabs(countries)}
     <section id="founding">
       <h2>Founding</h2>

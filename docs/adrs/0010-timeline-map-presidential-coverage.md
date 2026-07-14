@@ -71,11 +71,12 @@ reform events from `supremeCourt.courtHistory[]`, encoded by colour and glyph
 (P/×/R). Continuity is left blank; only interventions are marked, framed as a
 record rather than a verdict.
 
-All three visualizations (Map, Pink-tide grid, Court-interventions grid) are
-promoted to the **top of the home page** and organized into a **tab interface**
-(ARIA tab pattern, arrow-key navigation). Progressive enhancement: the tablist is
-hidden and the panels simply stack until `app.js` activates the tabs, so with JS
-off nothing is lost. Nav links that target a panel activate its tab.
+All three visualizations sit at the **top of the home page**. The **interactive
+map stands alone first** (the headline), followed by the two **year-by-year grids
+(Presidential, Court interventions) in a tab interface** (ARIA tab pattern,
+arrow-key navigation). Progressive enhancement: the tablist is hidden and the
+grid panels simply stack until `app.js` activates the tabs, so with JS off
+nothing is lost. Nav links that target a grid panel activate its tab.
 
 A legislative/congress band is **deferred** to its own data + render tickets
 (#106/#107) because it requires new sourced data.
