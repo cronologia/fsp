@@ -78,8 +78,12 @@ arrow-key navigation). Progressive enhancement: the tablist is hidden and the
 grid panels simply stack until `app.js` activates the tabs, so with JS off
 nothing is lost. Nav links that target a grid panel activate its tab.
 
-A legislative/congress band is **deferred** to its own data + render tickets
-(#106/#107) because it requires new sourced data.
+A **legislative-control grid** (`#legislative-map`) is a third tab: per country
+per year, the FSP party's standing in the lower house (majority / plurality /
+minority / opposition / single-party), from `legislativeControl[]` (ADR-0009,
+schema in #106). Colour + glyph (M/P/m), with the same honesty rule — a coalition
+majority is not a single-party majority, stated per cell. Populated for Brazil
+(the pilot); the rest fill in via the country epics.
 
 ## Consequences
 

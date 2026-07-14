@@ -246,6 +246,21 @@ a.ptl-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px;
 .cm-reform { background: #2f5fb0; }
 .cm-c:hover { outline: 1.5px solid var(--ink); outline-offset: -1px; }
 
+/* Legislative-control grid — reuses the .ptl grid layout. Cells carry a glyph as
+   well as colour (M/P/m majority/plurality/minority, blank opposition, 1 one-party). */
+.lg-c {
+  width: var(--ptl-cell); height: var(--ptl-cell);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .6rem; font-weight: 700; line-height: 1; color: #fff;
+  border-radius: 2px; background: #eef0f3;
+}
+.lg-majority { background: #b8252b; }
+.lg-plurality { background: #cf6a6e; }
+.lg-minority { background: #e79aa0; color: #7a1418; }
+.lg-opposition { background: #dfe3ea; }
+.lg-single-party { background: #b8252b; background-image: repeating-linear-gradient(45deg, rgba(0,0,0,.42) 0 1.5px, transparent 1.5px 4px), repeating-linear-gradient(-45deg, rgba(0,0,0,.42) 0 1.5px, transparent 1.5px 4px); }
+.lg-c:hover { outline: 1.5px solid var(--ink); outline-offset: -1px; }
+
 /* Armed & guerrilla movements */
 .am-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #7a1418; border-radius: 6px; padding: 1rem; }
 .am-card h3 { margin: 0 0 .25rem; font-size: 1.02rem; }

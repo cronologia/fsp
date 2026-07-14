@@ -45,7 +45,7 @@
  * the info that is otherwise only in the title tooltip. Purely additive — titles
  * still work with JS disabled. */
 (function () {
-  [['ptl-grid', 'ptl-caption'], ['cm-grid', 'cm-caption']].forEach(function (pair) {
+  [['ptl-grid', 'ptl-caption'], ['lg-grid', 'lg-caption'], ['cm-grid', 'cm-caption']].forEach(function (pair) {
     var grid = document.getElementById(pair[0]);
     var cap = document.getElementById(pair[1]);
     if (!grid || !cap) return;
