@@ -22,6 +22,17 @@ const ARCHIVE_SRC = path.join(ROOT, 'data', 'archive');
 const SRC_DIR = path.join(ROOT, 'src');
 const OUT_DIR = path.join(ROOT, 'docs');
 
+// Google Analytics (gtag.js). Injected into the <head> of every generated page.
+// The measurement ID is a public identifier, not a secret.
+const ANALYTICS = `  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9LV1QZHVE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9LV1QZHVE');
+  </script>`;
+
 /** Load per-country files (presidential succession + high court). */
 function loadCountries() {
   try {
@@ -126,6 +137,7 @@ function renderMeetingPage(m, archives, codeByCountry) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${unnumbered ? esc(m.city) : esc(m.edition)} ${esc(m.year)} — Foro de São Paulo</title>
   <link rel="stylesheet" href="../styles.css" />
+${ANALYTICS}
 </head>
 <body>
   <header class="site-header">
@@ -967,6 +979,7 @@ function renderCountryPage(c) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(c.country)} — FSP presidents &amp; courts</title>
   <link rel="stylesheet" href="../styles.css" />
+${ANALYTICS}
 </head>
 <body>
   <header class="site-header">
@@ -1027,6 +1040,7 @@ function buildHtml(data, archives, codeByCountry, countries, archiveDocs) {
   <title>${esc(meta.title)}</title>
   <meta name="description" content="${esc(meta.description)}" />
   <link rel="stylesheet" href="styles.css" />
+${ANALYTICS}
 </head>
 <body>
   <header class="site-header">
