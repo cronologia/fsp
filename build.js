@@ -1090,10 +1090,14 @@ ${prows}
       <p class="section-intro"><strong>Government:</strong> ${esc(g.led || '')} — ${maj}. FSP party in government: <strong>${g.fspInGovernment ? 'yes' : 'no'}</strong>.${g.note ? ` ${esc(g.note)}` : ''}${srcLinks(e.sources)}</p>`;
     })
     .join('\n');
+  const fp = c.fspParties;
+  const fspNote = fp
+    ? `      <p class="notice">FSP member parties (highlighted <span class="fsp-badge">FSP</span>): <strong>${(fp.current || []).map(esc).join(', ')}</strong>.${fp.foundingOnly && fp.foundingOnly.length ? ` Also 1990 founding members: ${fp.foundingOnly.map(esc).join(', ')}.` : ''}${fp.note ? ` ${esc(fp.note)}` : ''}</p>\n`
+    : '';
   return `    <section>
-      <h2>Legislative composition (lower house)</h2>
-      <p class="section-intro">Seats by party in the lower house for recent elections, and whether the governing coalition held a majority. In a fragmented system a governing majority is assembled across several parties — no party governs alone; a coalition majority is not a single-party majority.</p>
-${blocks}
+      <h2>Legislative composition</h2>
+      <p class="section-intro">Seats by party for recent elections, and whether the governing coalition held a majority. In a fragmented system a governing majority is assembled across several parties — no party governs alone; a coalition majority is not a single-party majority.</p>
+${fspNote}${blocks}
     </section>
 `;
 }
