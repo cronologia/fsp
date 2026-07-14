@@ -6,7 +6,7 @@
 > `node scripts/gen-catalog.js`. See [`context.md`](context.md) for domain
 > background and [`docs/adrs/`](docs/adrs/) for the architecture.
 
-_Last generated: 2026-07-14 · 16 countries · 10 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 45 references._
+_Last generated: 2026-07-14 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 45 references._
 
 ## Contents
 
@@ -30,7 +30,7 @@ Total FSP-party presidential terms across tracked countries: **34**.
 
 | Country | Code | FSP party | Status | FSP presidents (term) |
 |---|---|---|---|---|
-| [Brazil](docs/countries/BR.html) | BR | Partido dos Trabalhadores (PT) | founding member | Luiz Inácio Lula da Silva (2003–2011); Dilma Rousseff (2011–2016); Luiz Inácio Lula da Silva (2023–present) |
+| [Brazil](docs/countries/BR.html) | BR | Partido dos Trabalhadores (PT) & Partido Comunista do Brasil (PCdoB) | founding member | Luiz Inácio Lula da Silva (2003–2011); Dilma Rousseff (2011–2016); Luiz Inácio Lula da Silva (2023–present) |
 | [Venezuela](docs/countries/VE.html) | VE | Partido Socialista Unido de Venezuela (PSUV) | member | Hugo Chávez (1999–2013); Nicolás Maduro (2013–present) |
 | [Bolivia](docs/countries/BO.html) | BO | Movimiento al Socialismo (MAS) | member | Evo Morales (2006–2019); Luis Arce (2020–2025) |
 | [Nicaragua](docs/countries/NI.html) | NI | Frente Sandinista de Liberación Nacional (FSLN) | founding member | Daniel Ortega (2007–present) |
@@ -51,7 +51,7 @@ Total FSP-party presidential terms across tracked countries: **34**.
 The FSP-member party’s standing in the lower chamber over time, where compiled
 (issue #106). `majority`/`plurality`/`minority` describe the FSP party or its
 governing coalition; `opposition` = out of government; `single-party` = one-party state.
-- **Brazil** (PT): 1990–2003: **opposition** · 2003–2016: **majority** · 2016–2023: **opposition** · 2023–present: **majority**
+- **Brazil** (PT / PCdoB): 1990–2003: **opposition** · 2003–2016: **majority** · 2016–2023: **opposition** · 2023–present: **majority**
 
 ## Member parties
 
@@ -61,6 +61,7 @@ A curated, non-exhaustive list of notable member parties (from
 | Party | Abbr | Country | Founding member | Notes |
 |---|---|---|---|---|
 | Partido dos Trabalhadores (PT) | PT | Brazil | yes | Convening party of the Forum. |
+| Partido Comunista do Brasil | PCdoB | Brazil | yes | Brazilian FSP member alongside the PT (both in Regalado's 1990, 1993 and 2007 rosters). Runs with the PT in the Federação Brasil da Esperança. |
 | Partido Comunista de Cuba | PCC | Cuba | yes |  |
 | Frente Sandinista de Liberación Nacional | FSLN | Nicaragua | yes |  |
 | Frente Farabundo Martí para la Liberación Nacional | FMLN | El Salvador | yes | Was an insurgent coalition in 1990; later an electoral party. |

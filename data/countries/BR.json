@@ -1,7 +1,7 @@
 {
   "country": "Brazil",
   "code": "BR",
-  "fspParty": "Partido dos Trabalhadores (PT)",
+  "fspParty": "Partido dos Trabalhadores (PT) & Partido Comunista do Brasil (PCdoB)",
   "fspStatus": "founding member",
   "fspPresidents": [
     "Luiz Inácio Lula da Silva",
@@ -221,7 +221,7 @@
       "end": "2003",
       "chamber": "lower",
       "chamberName": "Câmara dos Deputados (513 seats)",
-      "fspParty": "PT",
+      "fspParty": "PT / PCdoB",
       "fspBloc": "opposition",
       "inGovernment": false,
       "seats": "grew from a small bloc to 58 seats (1998) — the principal left opposition, never near a majority",
@@ -236,7 +236,7 @@
       "end": "2016",
       "chamber": "lower",
       "chamberName": "Câmara dos Deputados (513 seats)",
-      "fspParty": "PT",
+      "fspParty": "PT / PCdoB",
       "fspBloc": "majority",
       "inGovernment": true,
       "seats": "largest party — 91 (2002), 83 (2006), 88 (2010), 70 (2014)",
@@ -251,7 +251,7 @@
       "end": "2023",
       "chamber": "lower",
       "chamberName": "Câmara dos Deputados (513 seats)",
-      "fspParty": "PT",
+      "fspParty": "PT / PCdoB",
       "fspBloc": "opposition",
       "inGovernment": false,
       "seats": "remained the largest single party (56 seats, 2018) but in opposition",
@@ -266,7 +266,7 @@
       "end": "present",
       "chamber": "lower",
       "chamberName": "Câmara dos Deputados (513 seats)",
-      "fspParty": "PT",
+      "fspParty": "PT / PCdoB",
       "fspBloc": "majority",
       "inGovernment": true,
       "seats": "PT-led federation the largest bloc (~68–80 of 513); Lula's government assembled a working multiparty majority",
@@ -340,9 +340,16 @@
           "align": "government"
         },
         {
+          "abbr": "PCdoB",
+          "name": "Partido Comunista do Brasil",
+          "seats": 8,
+          "align": "government",
+          "fsp": true
+        },
+        {
           "abbr": "others",
           "name": "Other parties (20+)",
-          "seats": 84,
+          "seats": 76,
           "align": "mixed"
         }
       ],
@@ -481,9 +488,16 @@
           "align": "mixed"
         },
         {
+          "abbr": "PCdoB",
+          "name": "Partido Comunista do Brasil",
+          "seats": 9,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
           "abbr": "others",
           "name": "Other parties (20+, incl. PDT 28)",
-          "seats": 147,
+          "seats": 138,
           "align": "mixed"
         }
       ],
@@ -498,5 +512,17 @@
         "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20181007/"
       ]
     }
-  ]
+  ],
+  "fspParties": {
+    "current": [
+      "Partido dos Trabalhadores (PT)",
+      "Partido Comunista do Brasil (PCdoB)"
+    ],
+    "foundingOnly": [
+      "Partido Democrático Trabalhista (PDT)",
+      "Partido Socialista Brasileiro (PSB)",
+      "Partido Comunista Brasileiro (PCB)"
+    ],
+    "note": "Per Regalado's rosters, PT and PCdoB are FSP members through 2007 (both are flagged below). PDT, PSB and PCB were among the 1990 founding members too, but their current FSP membership is unverified, so they are not flagged."
+  }
 }
