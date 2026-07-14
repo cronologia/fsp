@@ -81,6 +81,34 @@
       "fspParty": "Movimiento PAIS (Alianza PAIS)",
       "fspPresidentCount": 1,
       "file": "countries/EC.json"
+    },
+    {
+      "country": "Dominican Republic",
+      "code": "DO",
+      "fspParty": "Partido de la Liberación Dominicana (PLD)",
+      "fspPresidentCount": 2,
+      "file": "countries/DO.json"
+    },
+    {
+      "country": "Peru",
+      "code": "PE",
+      "fspParty": "Partido Nacionalista Peruano (Humala)",
+      "fspPresidentCount": 1,
+      "file": "countries/PE.json"
+    },
+    {
+      "country": "Paraguay",
+      "code": "PY",
+      "fspParty": "Frente Guasú (Lugo)",
+      "fspPresidentCount": 1,
+      "file": "countries/PY.json"
+    },
+    {
+      "country": "Colombia",
+      "code": "CO",
+      "fspParty": "Pacto Histórico (Petro)",
+      "fspPresidentCount": 1,
+      "file": "countries/CO.json"
     }
   ]
 }
