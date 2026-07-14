@@ -1,0 +1,67 @@
+{
+  "country": "Dominican Republic",
+  "code": "DO",
+  "fspParty": "Partido de la Liberación Dominicana (PLD)",
+  "fspStatus": "member (PLD, per Regalado 2008)",
+  "fspPresidents": [
+    "Leonel Fernández",
+    "Danilo Medina"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Joaquín Balaguer",
+      "party": "PRSC (Reformista)",
+      "start": "1990",
+      "end": "1996",
+      "fsp": false
+    },
+    {
+      "name": "Leonel Fernández",
+      "party": "Partido de la Liberación Dominicana (PLD)",
+      "start": "1996",
+      "end": "2000",
+      "fsp": true,
+      "notes": "The PLD is listed among FSP active members in Regalado's 2007 roster (Encuentros y desencuentros, Ocean Sur 2008)."
+    },
+    {
+      "name": "Hipólito Mejía",
+      "party": "Partido Revolucionario Dominicano (PRD)",
+      "start": "2000",
+      "end": "2004",
+      "fsp": false,
+      "notes": "The PRD also appears in Regalado's 2007 FSP roster, but its FSP alignment is contested and it later joined the opposition; not counted as FSP here pending confirmation (#4)."
+    },
+    {
+      "name": "Leonel Fernández",
+      "party": "Partido de la Liberación Dominicana (PLD)",
+      "start": "2004",
+      "end": "2012",
+      "fsp": true
+    },
+    {
+      "name": "Danilo Medina",
+      "party": "Partido de la Liberación Dominicana (PLD)",
+      "start": "2012",
+      "end": "2020",
+      "fsp": true
+    },
+    {
+      "name": "Luis Abinader",
+      "party": "Partido Revolucionario Moderno (PRM)",
+      "start": "2020",
+      "end": "present",
+      "fsp": false
+    }
+  ],
+  "supremeCourt": {
+    "name": "Suprema Corte de Justicia",
+    "verified": false,
+    "appointmentMethod": "Justices appointed by the Consejo Nacional de la Magistratura.",
+    "fspEraChanges": "Court history not yet compiled for this dossier (added for the timeline map; see issue #109)."
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic",
+    "https://en.wikipedia.org/wiki/Dominican_Liberation_Party",
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ]
+}

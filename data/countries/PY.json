@@ -1,0 +1,95 @@
+{
+  "country": "Paraguay",
+  "code": "PY",
+  "fspParty": "Frente Guasú / Alianza Patriótica para el Cambio (Lugo)",
+  "fspStatus": "affiliated (to verify)",
+  "fspPresidents": [
+    "Fernando Lugo"
+  ],
+  "presidentialSuccession": [
+    {
+      "name": "Andrés Rodríguez",
+      "party": "ANR-Partido Colorado",
+      "start": "1989",
+      "end": "1993",
+      "fsp": false
+    },
+    {
+      "name": "Juan Carlos Wasmosy",
+      "party": "ANR-Partido Colorado",
+      "start": "1993",
+      "end": "1998",
+      "fsp": false
+    },
+    {
+      "name": "Raúl Cubas",
+      "party": "ANR-Partido Colorado",
+      "start": "1998",
+      "end": "1999",
+      "fsp": false
+    },
+    {
+      "name": "Luis González Macchi",
+      "party": "ANR-Partido Colorado",
+      "start": "1999",
+      "end": "2003",
+      "fsp": false
+    },
+    {
+      "name": "Nicanor Duarte",
+      "party": "ANR-Partido Colorado",
+      "start": "2003",
+      "end": "2008",
+      "fsp": false
+    },
+    {
+      "name": "Fernando Lugo",
+      "party": "Alianza Patriótica para el Cambio (later Frente Guasú)",
+      "start": "2008",
+      "end": "2012",
+      "fsp": true,
+      "notes": "First left president of Paraguay; removed by impeachment in 2012. FSP membership of his coalition as such is to verify: the APC/Frente Guasú contains FSP-member organizations and sent delegates to the Forum (e.g. Hugo Richer). Colorado Party rule preceded and followed him."
+    },
+    {
+      "name": "Federico Franco",
+      "party": "PLRA (Liberal)",
+      "start": "2012",
+      "end": "2013",
+      "fsp": false,
+      "notes": "Vice-president elevated after Lugo's impeachment."
+    },
+    {
+      "name": "Horacio Cartes",
+      "party": "ANR-Partido Colorado",
+      "start": "2013",
+      "end": "2018",
+      "fsp": false
+    },
+    {
+      "name": "Mario Abdo Benítez",
+      "party": "ANR-Partido Colorado",
+      "start": "2018",
+      "end": "2023",
+      "fsp": false
+    },
+    {
+      "name": "Santiago Peña",
+      "party": "ANR-Partido Colorado",
+      "start": "2023",
+      "end": "present",
+      "fsp": false
+    }
+  ],
+  "supremeCourt": {
+    "name": "Corte Suprema de Justicia",
+    "verified": false,
+    "appointmentMethod": "Justices appointed by the Senate with the executive, from Consejo de la Magistratura shortlists.",
+    "fspEraChanges": "Court history not yet compiled for this dossier (added for the timeline map; see issue #109)."
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_Paraguay",
+    "https://en.wikipedia.org/wiki/Guas%C3%BA_Front",
+    "https://en.wikipedia.org/wiki/Fernando_Lugo",
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ]
+}
