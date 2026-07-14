@@ -49,6 +49,13 @@ data.** Design points:
   cell mirrors its detail into an `aria-live` caption; with JS off the `title`
   tooltips still work.
 
+The same grid infrastructure also renders a **high-court interventions grid**
+(`#courts-map`): per country per year, the documented court-packing / purge /
+reform events from `supremeCourt.courtHistory[]`, encoded by colour and glyph
+(P/×/R). Continuity is left blank; only interventions are marked, framed as a
+record rather than a verdict. Both grids are promoted to the **top of the home
+page** as the headline visualizations.
+
 A legislative/congress band is **deferred** to its own data + render tickets
 (#106/#107) because it requires new sourced data.
 

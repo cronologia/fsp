@@ -460,6 +460,8 @@ function renderTimeline(meetings) {
 
 function renderNav() {
   const items = [
+    ['#presidents-map', 'Pink tide'],
+    ['#courts-map', 'Courts'],
     ['#origins', 'Origins'],
     ['#timeline', 'Timeline'],
     ['#meetings', 'Meetings'],
@@ -467,7 +469,6 @@ function renderNav() {
     ['#armed', 'Armed movements'],
     ['#regional', 'Regional bodies'],
     ['#government', 'In government'],
-    ['#presidents-map', 'Pink tide'],
     ['#organization', 'Structure'],
     ['#countries', 'Countries'],
     ['#perspectives', 'Analyses'],
@@ -632,6 +633,94 @@ ${bodyRows}
         </div>
       </div>
       <p class="ptl-note">Peak coverage: <strong>${peak.total} of ${denom}</strong> electoral countries in <strong>${peak.y}</strong>. ${opCountries.length ? `${esc(opCountries.join(', '))} — a one-party socialist state governed continuously by the PCC — ${opCountries.length === 1 ? 'is' : 'are'} shown separately (last row) and excluded from these counts. ` : ''}This maps ${rows.length} countries with a dossier here, not all of Latin America — read the per-year counts, not the absolute total. Companion to the sourced president count (issue&nbsp;#96).</p>
+      <div class="ptl-legend">${legend}</div>
+    </section>
+`;
+}
+
+// Year-by-year grid of high-court interventions (packing / purge / reform), from
+// each country's supremeCourt.courtHistory[]. Marks the years courts were
+// restructured; "composition"/continuity entries are context, not events, so
+// they are not marked. Reuses the .ptl grid layout for column alignment.
+function courtEventYears(period) {
+  return (String(period).match(/\d{4}/g) || []).map(Number).filter((y) => y >= 1990);
+}
+function renderCourtsGrid(countries) {
+  if (!countries || !countries.length) return '';
+  const now = new Date().getFullYear();
+  const years = [];
+  for (let y = 1990; y <= now; y++) years.push(y);
+  const nCols = years.length;
+
+  const TYPES = {
+    packing: { label: 'Court-packing (seats added / allies installed)', glyph: 'P' },
+    purge: { label: 'Purge / removal of justices', glyph: '×' },
+    reform: { label: 'Structural reform', glyph: 'R' },
+  };
+  const prio = { reform: 1, purge: 2, packing: 3 };
+
+  const rows = countries
+    .map((c) => {
+      const events = {}; // year -> { type, event }
+      const ch = (c.supremeCourt && c.supremeCourt.courtHistory) || [];
+      for (const h of ch) {
+        if (!TYPES[h.type]) continue;
+        for (const y of courtEventYears(h.period)) {
+          if (!events[y] || prio[h.type] > prio[events[y].type]) events[y] = { type: h.type, event: h.event };
+        }
+      }
+      const yrs = Object.keys(events).map(Number);
+      return { c, events, n: yrs.length, first: yrs.length ? Math.min(...yrs) : Infinity };
+    })
+    .sort((a, b) => (b.n > 0) - (a.n > 0) || a.first - b.first || a.c.country.localeCompare(b.c.country));
+
+  const withData = rows.filter((r) => r.n > 0).length;
+  const tick = (y) => (y % 5 === 0 ? ' ptl-tick' : '');
+  const header = years.map((y) => `<span class="ptl-yr${tick(y)}">${y % 5 === 0 ? y : ''}</span>`).join('');
+
+  // Per-year count of interventions, for the bar strip.
+  const counts = years.map((y) => rows.reduce((n, r) => n + (r.events[y] ? 1 : 0), 0));
+  const maxCount = Math.max(1, ...counts);
+  const barRow = years
+    .map((y, i) => {
+      const n = counts[i];
+      const h = Math.round((n / maxCount) * 100);
+      const d = `${y}: ${n} court intervention${n === 1 ? '' : 's'}`;
+      return `<span class="ptl-bar${tick(y)}" data-d="${esc(d)}" title="${esc(d)}"><span style="height:${n ? h : 0}%"></span></span>`;
+    })
+    .join('');
+
+  const bodyRows = rows
+    .map(({ c, events }) => {
+      const cells = years
+        .map((y) => {
+          const e = events[y];
+          if (!e) return `<span class="cm-c${tick(y)}" data-d="${esc(`${c.country} ${y}: no recorded court change`)}" title="${esc(`${c.country} ${y}`)}"></span>`;
+          const t = TYPES[e.type];
+          const d = `${c.country} ${y} — ${t.label}: ${e.event}`;
+          return `<span class="cm-c cm-${e.type}${tick(y)}" data-d="${esc(d)}" title="${esc(d)}">${esc(t.glyph)}</span>`;
+        })
+        .join('');
+      return `          <a class="ptl-lbl ptl-row" href="countries/${esc(c.code)}.html">${esc(c.country)}</a>${cells}`;
+    })
+    .join('\n');
+
+  const legend = Object.entries(TYPES)
+    .map(([k, t]) => `<span class="ptl-key"><span class="cm-c cm-${k}">${esc(t.glyph)}</span>${esc(t.label)}</span>`)
+    .join('');
+
+  const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
+  return `    <section id="courts-map">
+      <h2>High-court interventions, year by year</h2>
+      <p class="section-intro">When each tracked country's <strong>high court was restructured</strong> — court-packing, purges, and structural reforms — from the court histories in the country dossiers. Continuity (normal turnover) is left blank; only documented interventions are marked, colour and glyph both. Interventions happen under governments of every stripe — the grid is a record, not a verdict. ${withData} countries have a compiled court history so far; the rest show blank (see the country epics).</p>
+      <p class="ptl-caption" id="cm-caption" aria-live="polite">Hover, tap or focus a cell for the court change in that country and year.</p>
+      <div class="table-scroll">
+        <div class="ptl" id="cm-grid" style="${gridCols}">
+          <span class="ptl-corner">Year →</span>${header}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="Number of high-court interventions across tracked countries that year" title="Interventions per year">Interventions</span>${barRow}
+${bodyRows}
+        </div>
+      </div>
       <div class="ptl-legend">${legend}</div>
     </section>
 `;
@@ -845,6 +934,8 @@ ${renderNav()}
       <strong>Data quality note:</strong> ${esc(meta.dataQualityNote)}
     </div>
 
+${renderPresidentialTimeline(countries)}
+${renderCourtsGrid(countries)}
     <section id="founding">
       <h2>Founding</h2>
       <dl class="facts">
@@ -908,7 +999,6 @@ ${renderMembershipRosters(data.membershipRosters)}
 
 ${renderArmedMovements(data.armedMovements)}
 ${renderMembersInGovernment(data.membersInGovernment, codeByCountry)}
-${renderPresidentialTimeline(countries)}
 ${renderCountryIndex(countries)}
 ${renderOrganization(data.organization)}
     <section id="related">
