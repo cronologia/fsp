@@ -460,8 +460,8 @@ function renderTimeline(meetings) {
 
 function renderNav() {
   const items = [
-    ['#atlas', 'Map'],
     ['#presidents-map', 'Pink tide'],
+    ['#atlas', 'Map'],
     ['#courts-map', 'Courts'],
     ['#origins', 'Origins'],
     ['#timeline', 'Timeline'],
@@ -543,6 +543,28 @@ function ptlStateFor(country, year, now) {
   return { st: 'non', p: best };
 }
 
+// Wrap the three headline visualizations in a tab interface. Progressive
+// enhancement: the tablist is hidden and all panels are shown until app.js
+// activates the tabs, so with JS off the panels simply stack.
+function renderVizTabs(countries) {
+  const tabs = [
+    ['tab-presidents', 'presidents-map', 'Pink tide'],
+    ['tab-atlas', 'atlas', 'Map'],
+    ['tab-courts', 'courts-map', 'Court interventions'],
+  ];
+  const buttons = tabs
+    .map(([id, ctl, lbl], i) =>
+      `<button type="button" class="viz-tab" role="tab" id="${id}" aria-controls="${ctl}" aria-selected="${i === 0 ? 'true' : 'false'}">${esc(lbl)}</button>`)
+    .join('');
+  return `    <div class="viz">
+      <div class="viz-tabs" role="tablist" aria-label="Data visualizations" hidden>${buttons}</div>
+${renderPresidentialTimeline(countries)}
+${renderAtlas(countries)}
+${renderCourtsGrid(countries)}
+    </div>
+`;
+}
+
 // Interactive tile-grid cartogram: the 16 tracked countries laid out in an
 // approximate geographic arrangement, recoloured by a year slider (same FSP
 // states as the timeline grid). A schematic tile map — not geographic outlines —
@@ -599,7 +621,7 @@ function renderAtlas(countries) {
     .join('');
 
   const payload = JSON.stringify({ start: 1990, end: now, countries: data });
-  return `    <section id="atlas">
+  return `    <section id="atlas" class="tab-panel" role="tabpanel" aria-labelledby="tab-atlas" tabindex="0">
       <h2>The map, year by year</h2>
       <p class="section-intro">The tracked countries in an approximate geographic layout (a schematic tile map, not exact borders), coloured by who held the presidency that year. Drag the slider or press play to watch the “pink tide” rise and recede. Same states as the grids above; one-party Cuba is marked distinctly and not part of the electoral counts.</p>
       <div class="atlas-controls">
@@ -696,7 +718,7 @@ function renderPresidentialTimeline(countries) {
     .join('');
 
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
-  return `    <section id="presidents-map">
+  return `    <section id="presidents-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-presidents" tabindex="0">
       <h2>FSP presidential coverage, year by year</h2>
       <p class="section-intro">For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom. Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a hatched state, not counted as confirmed. The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.</p>
       <p class="ptl-caption" id="ptl-caption" aria-live="polite">Hover, tap or focus a cell for the country, year and president. Each state is shown by both colour and fill, so it reads without colour.</p>
@@ -785,7 +807,7 @@ function renderCourtsGrid(countries) {
     .join('');
 
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
-  return `    <section id="courts-map">
+  return `    <section id="courts-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-courts" tabindex="0">
       <h2>High-court interventions, year by year</h2>
       <p class="section-intro">When each tracked country's <strong>high court was restructured</strong> — court-packing, purges, and structural reforms — from the court histories in the country dossiers. Continuity (normal turnover) is left blank; only documented interventions are marked, colour and glyph both. Interventions happen under governments of every stripe — the grid is a record, not a verdict. ${withData} countries have a compiled court history so far; the rest show blank (see the country epics).</p>
       <p class="ptl-caption" id="cm-caption" aria-live="polite">Hover, tap or focus a cell for the court change in that country and year.</p>
@@ -1009,9 +1031,7 @@ ${renderNav()}
       <strong>Data quality note:</strong> ${esc(meta.dataQualityNote)}
     </div>
 
-${renderAtlas(countries)}
-${renderPresidentialTimeline(countries)}
-${renderCourtsGrid(countries)}
+${renderVizTabs(countries)}
     <section id="founding">
       <h2>Founding</h2>
       <dl class="facts">

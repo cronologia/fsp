@@ -62,6 +62,51 @@
   });
 })();
 
+/* Visualization tabs: turn the stacked panels (Pink tide / Map / Courts) into a
+ * tab interface. With JS disabled the tablist stays hidden and the panels simply
+ * stack, so nothing is lost. ARIA tab pattern + arrow-key navigation. */
+(function () {
+  var tablist = document.querySelector('.viz-tabs');
+  if (!tablist) return;
+  var tabs = Array.prototype.slice.call(tablist.querySelectorAll('[role="tab"]'));
+  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+  if (!tabs.length) return;
+  tablist.hidden = false;
+
+  function select(idx, focus) {
+    tabs.forEach(function (t, i) {
+      var on = i === idx;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (panels[i]) panels[i].hidden = !on;
+    });
+    if (focus) tabs[idx].focus();
+  }
+
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(i); });
+    t.addEventListener('keydown', function (e) {
+      var n;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (i + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') n = 0;
+      else if (e.key === 'End') n = tabs.length - 1;
+      else return;
+      e.preventDefault();
+      select(n, true);
+    });
+  });
+
+  // Nav links pointing at a panel activate its tab (then the anchor scroll runs).
+  Array.prototype.forEach.call(document.querySelectorAll('.site-nav a'), function (a) {
+    var href = a.getAttribute('href') || '';
+    var idx = panels.findIndex(function (p) { return p && '#' + p.id === href; });
+    if (idx >= 0) a.addEventListener('click', function () { select(idx); });
+  });
+
+  select(0);
+})();
+
 /* Interactive tile-grid map: recolour countries as the year slider moves; a Play
  * button animates through the years. Server-rendered for the current year, so the
  * map still shows a snapshot with JS disabled. */
