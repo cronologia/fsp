@@ -66,6 +66,10 @@ Keep these distinctions intact in the data.
 - **Declaração Final / Declaración Final** — the consensus declaration closing a meeting.
 - **Grupo de Trabalho** — the Forum's Working Group.
 - **Secretaria Executiva** — Executive Secretariat (implements plenary decisions).
+- **Legislative control** — per-country record (`legislativeControl[]`, issue #106)
+  of the FSP-member party's standing in the **lower house** over time
+  (majority / plurality / minority / opposition / single-party). Distinct from the
+  presidency; a coalition majority is not a single-party majority.
 
 ## Known data gaps (see GitHub issues)
 

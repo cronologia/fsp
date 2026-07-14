@@ -78,6 +78,28 @@ There is **no `npm install`** — the toolchain is intentionally dependency-free
    we cited it. The capture is marked `fresh` in `data/archives.json` so later
    runs stay idempotent (use `--save-all` to re-capture everything).
 
+### Country dossier: `legislativeControl[]` (issue #106)
+
+Optional per-country array tracking the FSP-member party's standing in the
+**legislature over time**, feeding the legislative band on the timeline map
+(#107). Convention:
+
+- **Chamber:** track the **lower house** (e.g. Brazil's *Câmara dos Deputados*).
+  Note the upper house only where it materially differs; set `chamber` to
+  `"lower"` / `"upper"` / `"unicameral"`.
+- **Fields:** `start`, `end` (year strings; `"present"` allowed, same as
+  `presidentialSuccession[]`), `chamber`, `fspParty`, `fspBloc`, `inGovernment`
+  (bool), `seats` (free text), `sources[]`, optional `notes`.
+- **`fspBloc`** ∈ `majority | plurality | minority | opposition | single-party`.
+  It describes the FSP party **or its governing coalition** — `majority` where
+  that coalition holds a lower-house majority, `opposition` where the party is
+  out of government, `single-party` for one-party states (Cuba). In fragmented
+  systems say so in `notes` (a coalition majority is not a single-party
+  majority). Only set it from a source; never guess.
+
+Brazil (`BR.json`) is the worked pilot. Per-country collection is tracked in the
+country epics (#30–#40, #114–#118).
+
 ## Data quality & sourcing rules (important)
 
 This is a reference work about a politically contested subject. Accuracy and
