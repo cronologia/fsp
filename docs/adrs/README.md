@@ -20,6 +20,7 @@ context, the decision, and its consequences so future contributors understand
 | [0009](0009-per-country-dossiers.md) | Per-country dossiers as separate data files | Accepted |
 | [0010](0010-timeline-map-presidential-coverage.md) | Timeline map of FSP presidential coverage ("pink tide") | Accepted |
 | [0011](0011-generated-reference-catalog.md) | Generated reference catalog (`CATALOG.md`) | Accepted |
+| [0012](0012-forodesaopaulo-geoblock.md) | Capturing `forodesaopaulo.org` requires a Brazilian IP | Accepted |
 
 ## Adding an ADR
 

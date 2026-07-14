@@ -77,6 +77,14 @@ There is **no `npm install`** — the toolchain is intentionally dependency-free
    a possibly years-old snapshot — so the content is preserved as it stood when
    we cited it. The capture is marked `fresh` in `data/archives.json` so later
    runs stay idempotent (use `--save-all` to re-capture everything).
+6. **`forodesaopaulo.org` needs a Brazilian IP (ADR-0012).** The official site
+   geoblocks non-Brazilian IPs, so it is unreachable from the US — the CI runners,
+   the Internet Archive's crawlers, and this sandbox all fail against it, and
+   Wayback coverage stops ~2024–2025. Do **not** expect the CI Wayback step to
+   preserve this host. Capture official pages from a **Brazilian egress** (BR
+   VPN/proxy, a self-hosted BR runner, or a manual capture) and commit the copy to
+   `data/archive/` — the committed vault copy is the citation of record when
+   Wayback has none. Never route the sandbox around its own egress policy.
 
 ### Country dossier: `legislativeControl[]` (issue #106)
 
@@ -109,6 +117,16 @@ fspInGovernment, hasMajority, note}, sources }`. `align` ∈
 **appointment-provenance tally** computed from `supremeCourt.justices[]`
 (`fspAppointed`) — framed as *who nominated each justice*, never as a claim about
 how they rule.
+
+**Flag every sourced FSP member party, not just the president's party.** A country
+usually has several FSP members (e.g. Brazil = PT *and* PCdoB). Set `fsp: true` on
+each party that appears in a sourced FSP roster, and record them in a `fspParties`
+object (`{ current: [...], foundingOnly: [...], note }`) rendered on the page.
+Parties that were founding members but aren't in the latest roster are named as
+founding-only and **not** flagged (to-verify discipline). The page also computes
+the **FSP bloc's combined seats vs the majority threshold**, to show that the FSP
+parties are typically a minority and any governing majority is built with non-FSP
+coalition partners — never present a coalition majority as an FSP majority.
 
 ## Data quality & sourcing rules (important)
 

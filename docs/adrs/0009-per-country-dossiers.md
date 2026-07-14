@@ -31,6 +31,13 @@ alpha-2 code), discovered through `data/countries/index.json`. Each file carries
   sourced; unsourced cases are left `false` with a note rather than counted.
 - `supremeCourt` — the high court, with `verified` and optional `courtHistory[]`
   / `justices[]`.
+- _(Extended 2026-07-14)_ `legislativeControl[]` — the FSP party's lower-house
+  standing over time (feeds the legislative grid, #106/#107); `legislative
+  Composition[]` — the *detailed* per-election seats-by-party breakdown rendered on
+  the page; and `fspParties` — the country's FSP member parties (a country usually
+  has several, e.g. Brazil = PT **and** PCdoB). Every party flagged `fsp` must
+  appear in a sourced roster; the page contrasts the FSP bloc's combined seats with
+  the majority threshold so a coalition majority is never shown as an FSP majority.
 
 `scripts/validate-data.js` validates every file listed in `index.json`.
 `build.js` renders a page per country and feeds the same data into the country
