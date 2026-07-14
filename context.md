@@ -93,7 +93,10 @@ archived `forodesaopaulo.org` pages) and the declaration corpus in
 - **The Forum's own texts:** its numbered final-declarations book (Pomar &
   Regalado, Fundação Perseu Abramo, 2013 — the corpus in `data/declarations/`),
   Regalado's *Encuentros y desencuentros…* (Ocean Sur, 2008), and the official
-  site `forodesaopaulo.org` (best read via the Wayback Machine).
+  site `forodesaopaulo.org`. **Note:** the official site now geoblocks non-Brazilian
+  IPs, so it is unreachable from the US — and the Internet Archive (US-based) can no
+  longer snapshot it (Wayback coverage stops ~2024–2025). It must be read/captured
+  from a **Brazilian IP**, with the copy committed to the vault (see ADR-0012).
 - **Cross-spectrum:** Wikipedia (EN/PT), party/government sites, and news &
   analysis from across the political spectrum, including critical works (Salgueiro,
   Carvalho / Mídia Sem Máscara, De Paola).
