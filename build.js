@@ -1088,8 +1088,9 @@ function renderLegislativeComposition(c) {
       const tail = g.fspInGovernment
         ? (g.hasMajority ? 'The governing majority is built with non-FSP coalition partners.' : 'Even in government the FSP bloc depends on other parties.')
         : 'The FSP parties sat in opposition.';
+      const gap = thr ? thr - fspSeats : 0;
       const fspLine = fspSeats
-        ? `      <p class="notice"><strong>FSP member parties together: ${fspSeats} of ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${fspSeats >= thr ? 'a majority on their own' : `well short of the ${esc(thr)}-seat majority`}` : ''}. ${tail}</p>\n`
+        ? `      <p class="notice"><strong>FSP member parties together: ${fspSeats} of ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${fspSeats >= thr ? 'a majority on their own' : `${gap} seat${gap === 1 ? '' : 's'} short of the ${esc(thr)}-seat majority`}` : ''}. ${tail}</p>\n`
         : '';
       return `      <h3>${esc(e.year)} — ${esc(e.chamber)} (${esc(e.totalSeats)} seats${e.majorityThreshold ? `; majority = ${esc(e.majorityThreshold)}` : ''})</h3>
       <div class="table-scroll">
