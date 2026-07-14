@@ -74,14 +74,226 @@
     "stillServing": "Membership rotates on fixed 10-year terms; no FSP-driven structural change — a contrast case of judicial independence.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "The modern SCJ dates to 1907; the 1973–1985 civic-military dictatorship subordinated the judiciary, restored at the 1985 transition.", "size": 5, "appointingGovernment": "1907 founding / 1973–85 dictatorship", "fspRelated": false, "verified": false },
-      { "period": "1990–2004", "type": "composition", "event": "Under the traditional (Colorado/Nacional) governments the 5-member SCJ operated normally; members elected by a 2/3 majority of the General Assembly.", "size": 5, "appointingGovernment": "Colorado / Nacional", "fspRelated": false, "verified": false },
-      { "period": "2005–present", "type": "composition", "event": "Across the FA governments (2005–2020, 2025–) there was NO court-packing; the court kept its independence — notably its 2013 ruling striking down parts of a law on prosecuting dictatorship-era crimes ran AGAINST the FA government's position.", "size": 5, "appointingGovernment": "Frente Amplio (and rotation)", "fspRelated": true, "verified": true }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "The modern SCJ dates to 1907; the 1973–1985 civic-military dictatorship subordinated the judiciary, restored at the 1985 transition.",
+        "size": 5,
+        "appointingGovernment": "1907 founding / 1973–85 dictatorship",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "1990–2004",
+        "type": "composition",
+        "event": "Under the traditional (Colorado/Nacional) governments the 5-member SCJ operated normally; members elected by a 2/3 majority of the General Assembly.",
+        "size": 5,
+        "appointingGovernment": "Colorado / Nacional",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "2005–present",
+        "type": "composition",
+        "event": "Across the FA governments (2005–2020, 2025–) there was NO court-packing; the court kept its independence — notably its 2013 ruling striking down parts of a law on prosecuting dictatorship-era crimes ran AGAINST the FA government's position.",
+        "size": 5,
+        "appointingGovernment": "Frente Amplio (and rotation)",
+        "fspRelated": true,
+        "verified": true
+      }
     ],
-    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"],
+    "courtHistorySources": [
+      "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"
+    ],
     "justicesNote": "Five justices on fixed 10-year terms, elected by a 2/3 Assembly majority; individual members rotate and are not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"
+  ],
+  "fspParties": {
+    "current": [
+      "Frente Amplio (FA)"
+    ],
+    "note": "The Frente Amplio is itself a coalition of FSP-listed factions — Movimiento de Participación Popular, Partido Socialista, Partido Comunista del Uruguay, Asamblea Uruguay, MLN-Tupamaros and others (Regalado 2007). It contests elections as a single bloc, so its seats are the FSP bloc."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2005",
+      "chamber": "lower",
+      "fspParty": "Frente Amplio",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "the main left opposition, growing each election until winning nationally in 2004",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election"
+      ]
+    },
+    {
+      "start": "2005",
+      "end": "2020",
+      "chamber": "lower",
+      "fspParty": "Frente Amplio",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "absolute majority in both chambers throughout (Vázquez, Mujica, Vázquez)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election"
+      ]
+    },
+    {
+      "start": "2020",
+      "end": "2025",
+      "chamber": "lower",
+      "fspParty": "Frente Amplio",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "largest single party but in opposition; a multi-party 'coalición multicolor' governed under Lacalle Pou",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election"
+      ]
+    },
+    {
+      "start": "2025",
+      "end": "present",
+      "chamber": "lower",
+      "fspParty": "Frente Amplio",
+      "fspBloc": "minority",
+      "inGovernment": true,
+      "seats": "back in government (Orsi) with a Senate majority but only a plurality in the lower house — 48 of 99",
+      "notes": "Minority in the Cámara de Representantes (needs allies for 50); majority in the Senado.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024_Uruguayan_general_election"
+      ]
+    }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2024,
+      "chamber": "Cámara de Representantes",
+      "totalSeats": 99,
+      "majorityThreshold": 50,
+      "parties": [
+        {
+          "abbr": "FA",
+          "name": "Frente Amplio",
+          "seats": 48,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 29,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PC",
+          "name": "Partido Colorado",
+          "seats": 17,
+          "align": "opposition"
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties (Cabildo Abierto, etc.)",
+          "seats": 5,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Yamandú Orsi (Frente Amplio)",
+        "fspInGovernment": true,
+        "hasMajority": false,
+        "note": "The FA won the presidency and is the largest party, but fell two seats short of a lower-house majority (50); it governs as a minority here and negotiates votes. It does hold a Senate majority."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024_Uruguayan_general_election"
+      ]
+    },
+    {
+      "year": 2024,
+      "chamber": "Cámara de Senadores",
+      "totalSeats": 30,
+      "majorityThreshold": 16,
+      "parties": [
+        {
+          "abbr": "FA",
+          "name": "Frente Amplio",
+          "seats": 16,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 9,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PC",
+          "name": "Partido Colorado",
+          "seats": 5,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Yamandú Orsi (Frente Amplio)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The FA holds a Senate majority (16 of 30; the vice-president presides), unlike in the lower house."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024_Uruguayan_general_election",
+        "https://data.ipu.org/parliament/UY/UY-UC01/election/UY-UC01-E20241027/"
+      ]
+    },
+    {
+      "year": 2019,
+      "chamber": "Cámara de Representantes",
+      "totalSeats": 99,
+      "majorityThreshold": 50,
+      "parties": [
+        {
+          "abbr": "FA",
+          "name": "Frente Amplio",
+          "seats": 42,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 30,
+          "align": "government"
+        },
+        {
+          "abbr": "PC",
+          "name": "Partido Colorado",
+          "seats": 13,
+          "align": "government"
+        },
+        {
+          "abbr": "CA",
+          "name": "Cabildo Abierto",
+          "seats": 11,
+          "align": "government"
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties",
+          "seats": 3,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Luis Lacalle Pou (Partido Nacional)",
+        "fspInGovernment": false,
+        "hasMajority": true,
+        "note": "The FA remained the largest single party but lost the majority it had held since 2005. A five-party 'coalición multicolor' (PN, PC, Cabildo Abierto and others) formed a majority; the FA went into opposition."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election"
+      ]
+    }
   ]
 }
