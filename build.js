@@ -474,6 +474,7 @@ function renderNav() {
   const items = [
     ['#atlas', 'Map'],
     ['#presidents-map', 'Presidential'],
+    ['#legislative-map', 'Legislative'],
     ['#courts-map', 'Courts'],
     ['#origins', 'Origins'],
     ['#timeline', 'Timeline'],
@@ -561,6 +562,7 @@ function ptlStateFor(country, year, now) {
 function renderVizTabs(countries) {
   const tabs = [
     ['tab-presidents', 'presidents-map', 'Presidential'],
+    ['tab-legislative', 'legislative-map', 'Legislative'],
     ['tab-courts', 'courts-map', 'Court interventions'],
   ];
   const buttons = tabs
@@ -571,6 +573,7 @@ function renderVizTabs(countries) {
       <h2 class="viz-h">The grids, year by year</h2>
       <div class="viz-tabs" role="tablist" aria-label="Year-by-year grids" hidden>${buttons}</div>
 ${renderPresidentialTimeline(countries)}
+${renderLegislativeGrid(countries)}
 ${renderCourtsGrid(countries)}
     </div>
 `;
@@ -840,6 +843,97 @@ function renderCourtsGrid(countries) {
         <div class="ptl" id="cm-grid" style="${gridCols}">
           <span class="ptl-corner">Year →</span>${header}
           <span class="ptl-lbl ptl-tally-lbl" data-d="Number of high-court interventions across tracked countries that year" title="Interventions per year">Interventions</span>${barRow}
+${bodyRows}
+        </div>
+      </div>
+      <div class="ptl-legend">${legend}</div>
+    </section>
+`;
+}
+
+// The legislative bloc in force in a given year = the legislativeControl[] entry
+// with the greatest start ≤ year that spans it. Mirrors ptlStateFor.
+function legStateFor(country, year, now) {
+  let best = null;
+  for (const l of country.legislativeControl || []) {
+    const s = ptlYear(l.start, now);
+    const e = ptlYear(l.end, now);
+    if (s <= year && year <= e && (!best || s >= ptlYear(best.start, now))) best = l;
+  }
+  return best;
+}
+// Year-by-year grid of the FSP-member party's standing in the lower house
+// (issue #106/#107), from each country's legislativeControl[].
+function renderLegislativeGrid(countries) {
+  if (!countries || !countries.length) return '';
+  const now = new Date().getFullYear();
+  const years = [];
+  for (let y = 1990; y <= now; y++) years.push(y);
+  const nCols = years.length;
+
+  const BLOCS = {
+    majority: { label: 'FSP majority (party or its governing coalition)', glyph: 'M' },
+    plurality: { label: 'FSP plurality (largest, no majority)', glyph: 'P' },
+    minority: { label: 'FSP minority government', glyph: 'm' },
+    opposition: { label: 'FSP in opposition', glyph: '' },
+    'single-party': { label: 'One-party state', glyph: '1' },
+  };
+
+  const rows = countries
+    .map((c) => {
+      const lc = c.legislativeControl || [];
+      const first = lc.length ? Math.min(...lc.map((l) => ptlYear(l.start, now))) : Infinity;
+      return { c, has: lc.length > 0, first };
+    })
+    .sort((a, b) => (b.has ? 1 : 0) - (a.has ? 1 : 0) || a.first - b.first || a.c.country.localeCompare(b.c.country));
+
+  const withData = rows.filter((r) => r.has).length;
+  const tick = (y) => (y % 5 === 0 ? ' ptl-tick' : '');
+  const header = years.map((y) => `<span class="ptl-yr${tick(y)}">${y % 5 === 0 ? y : ''}</span>`).join('');
+
+  // Per-year count of countries where the FSP party/coalition holds a majority.
+  const counts = years.map((y) => rows.reduce((n, r) => {
+    const l = legStateFor(r.c, y, now);
+    return n + (l && l.fspBloc === 'majority' ? 1 : 0);
+  }, 0));
+  const maxCount = Math.max(1, ...counts);
+  const barRow = years
+    .map((y, i) => {
+      const n = counts[i];
+      const h = Math.round((n / maxCount) * 100);
+      const d = `${y}: ${n} ${n === 1 ? 'country' : 'countries'} with an FSP legislative majority`;
+      return `<span class="ptl-bar${tick(y)}" data-d="${esc(d)}" title="${esc(d)}"><span style="height:${n ? h : 0}%"></span></span>`;
+    })
+    .join('');
+
+  const bodyRows = rows
+    .map(({ c }) => {
+      const cells = years
+        .map((y) => {
+          const l = legStateFor(c, y, now);
+          if (!l) return `<span class="lg-c${tick(y)}" data-d="${esc(`${c.country} ${y}: no data`)}" title="${esc(`${c.country} ${y}`)}"></span>`;
+          const b = BLOCS[l.fspBloc] || { label: l.fspBloc, glyph: '' };
+          const d = `${c.country} ${y} — ${b.label}${l.seats ? ` (${l.seats})` : ''}`;
+          return `<span class="lg-c lg-${l.fspBloc}${tick(y)}" data-d="${esc(d)}" title="${esc(d)}">${esc(b.glyph)}</span>`;
+        })
+        .join('');
+      return `          <a class="ptl-lbl ptl-row" href="countries/${esc(c.code)}.html">${esc(c.country)}</a>${cells}`;
+    })
+    .join('\n');
+
+  const legend = Object.entries(BLOCS)
+    .map(([k, b]) => `<span class="ptl-key"><span class="lg-c lg-${k}">${esc(b.glyph)}</span>${esc(b.label)}</span>`)
+    .join('');
+
+  const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
+  return `    <section id="legislative-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-legislative" tabindex="0">
+      <h2>Legislative control, year by year</h2>
+      <p class="section-intro">The FSP-member party's standing in the <strong>lower house</strong> each year — whether it (or its governing coalition) held a <strong>majority</strong>, a <strong>plurality</strong>, a <strong>minority</strong> government, or sat in <strong>opposition</strong>. A coalition majority is not a single-party majority (see each cell's detail). Only <strong>${withData}</strong> country compiled so far — Brazil, the pilot (#106); the rest are blank pending the country epics (#107).</p>
+      <p class="ptl-caption" id="lg-caption" aria-live="polite">Hover, tap or focus a cell for the party's legislative standing that year.</p>
+      <div class="table-scroll">
+        <div class="ptl" id="lg-grid" style="${gridCols}">
+          <span class="ptl-corner">Year →</span>${header}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="Countries with an FSP legislative majority that year" title="FSP legislative majorities per year">FSP majority</span>${barRow}
 ${bodyRows}
         </div>
       </div>
