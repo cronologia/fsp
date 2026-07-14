@@ -460,7 +460,7 @@ function renderTimeline(meetings) {
 
 function renderNav() {
   const items = [
-    ['#presidents-map', 'Pink tide'],
+    ['#presidents-map', 'Presidential'],
     ['#atlas', 'Map'],
     ['#courts-map', 'Courts'],
     ['#origins', 'Origins'],
@@ -548,7 +548,7 @@ function ptlStateFor(country, year, now) {
 // activates the tabs, so with JS off the panels simply stack.
 function renderVizTabs(countries) {
   const tabs = [
-    ['tab-presidents', 'presidents-map', 'Pink tide'],
+    ['tab-presidents', 'presidents-map', 'Presidential'],
     ['tab-atlas', 'atlas', 'Map'],
     ['tab-courts', 'courts-map', 'Court interventions'],
   ];
