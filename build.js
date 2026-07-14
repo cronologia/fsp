@@ -460,6 +460,7 @@ function renderTimeline(meetings) {
 
 function renderNav() {
   const items = [
+    ['#atlas', 'Map'],
     ['#presidents-map', 'Pink tide'],
     ['#courts-map', 'Courts'],
     ['#origins', 'Origins'],
@@ -540,6 +541,80 @@ function ptlStateFor(country, year, now) {
     return { st: /verify/i.test(country.fspStatus || '') ? 'fsp-unv' : 'fsp', p: best };
   }
   return { st: 'non', p: best };
+}
+
+// Interactive tile-grid cartogram: the 16 tracked countries laid out in an
+// approximate geographic arrangement, recoloured by a year slider (same FSP
+// states as the timeline grid). A schematic tile map — not geographic outlines —
+// so it stays zero-dependency and self-contained (ADR-0001/0010). Server-renders
+// the current year so it works without JS; app.js adds the slider/animation.
+const ATLAS_TILES = {
+  MX: [1, 2], CU: [2, 3], DO: [2, 4],
+  SV: [3, 1], HN: [3, 2],
+  NI: [4, 2], VE: [4, 4],
+  CO: [5, 3],
+  EC: [6, 2], BR: [6, 5],
+  PE: [7, 2], BO: [7, 4],
+  PY: [8, 4],
+  CL: [9, 3], AR: [9, 4], UY: [9, 5],
+};
+const ATLAS_ST = { fsp: 'f', 'fsp-unv': 'u', 'fsp-op': 'o', non: 'n', nodata: '.' };
+function renderAtlas(countries) {
+  if (!countries || !countries.length) return '';
+  const now = new Date().getFullYear();
+  const years = [];
+  for (let y = 1990; y <= now; y++) years.push(y);
+  const tracked = countries.filter((c) => ATLAS_TILES[c.code]);
+
+  // Precompute, per country, a per-year state string + president labels.
+  const data = tracked.map((c) => {
+    const states = [];
+    const who = [];
+    for (const y of years) {
+      const r = ptlStateFor(c, y, now);
+      states.push(ATLAS_ST[r.st] || '.');
+      who.push(r.p ? `${r.p.name} (${r.p.party})` : '—');
+    }
+    return { code: c.code, name: c.country, states: states.join(''), who };
+  });
+
+  const stClass = { f: 'atlas-f', u: 'atlas-u', o: 'atlas-o', n: 'atlas-n', '.': 'atlas-nodata' };
+  const iNow = years.length - 1;
+  const tiles = data
+    .map((d) => {
+      const [row, col] = ATLAS_TILES[d.code];
+      const st = d.states[iNow];
+      return `        <a class="atlas-tile ${stClass[st]}" data-code="${esc(d.code)}" style="grid-row:${row};grid-column:${col}" href="countries/${esc(d.code)}.html" title="${esc(d.name)} ${now}: ${esc(d.who[iNow])}"><span class="atlas-code">${esc(d.code)}</span></a>`;
+    })
+    .join('\n');
+
+  const legend = [
+    ['atlas-f', 'FSP-party president'],
+    ['atlas-u', 'FSP affiliation to verify'],
+    ['atlas-o', 'One-party state (PCC)'],
+    ['atlas-n', 'Non-FSP'],
+    ['atlas-nodata', 'No data'],
+  ]
+    .map(([k, l]) => `<span class="ptl-key"><span class="atlas-swatch ${k}"></span>${esc(l)}</span>`)
+    .join('');
+
+  const payload = JSON.stringify({ start: 1990, end: now, countries: data });
+  return `    <section id="atlas">
+      <h2>The map, year by year</h2>
+      <p class="section-intro">The tracked countries in an approximate geographic layout (a schematic tile map, not exact borders), coloured by who held the presidency that year. Drag the slider or press play to watch the “pink tide” rise and recede. Same states as the grids above; one-party Cuba is marked distinctly and not part of the electoral counts.</p>
+      <div class="atlas-controls">
+        <button type="button" id="atlas-play" class="atlas-btn" aria-label="Play through the years">▶ Play</button>
+        <input type="range" id="atlas-slider" min="1990" max="${now}" value="${now}" step="1" aria-label="Year" list="atlas-ticks" />
+        <output id="atlas-year" class="atlas-year">${now}</output>
+      </div>
+      <p class="ptl-caption" id="atlas-caption" aria-live="polite">Showing ${now}. Hover or focus a country for its president that year.</p>
+      <div class="atlas-grid" id="atlas-grid" role="img" aria-label="Map of FSP presidential coverage by country and year">
+${tiles}
+      </div>
+      <div class="ptl-legend">${legend}</div>
+      <script type="application/json" id="atlas-data">${payload}</script>
+    </section>
+`;
 }
 function renderPresidentialTimeline(countries) {
   if (!countries || !countries.length) return '';
@@ -934,6 +1009,7 @@ ${renderNav()}
       <strong>Data quality note:</strong> ${esc(meta.dataQualityNote)}
     </div>
 
+${renderAtlas(countries)}
 ${renderPresidentialTimeline(countries)}
 ${renderCourtsGrid(countries)}
     <section id="founding">

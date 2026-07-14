@@ -49,6 +49,15 @@ data.** Design points:
   cell mirrors its detail into an `aria-live` caption; with JS off the `title`
   tooltips still work.
 
+An **interactive tile-grid map** (`#atlas`) sits at the very top: the 16 tracked
+countries in an approximate geographic layout, recoloured by a **year slider**
+(with a Play animation) using the same states. It is a **schematic tile
+cartogram, not geographic outlines** — a deliberate choice so it stays
+zero-dependency and self-contained (no embedded/fetched map asset, ADR-0001). It
+server-renders the current year so a snapshot shows with JS disabled; `app.js`
+adds the slider/animation. A true geographic SVG map would be a future upgrade
+(needs a committed, self-contained map asset).
+
 The same grid infrastructure also renders a **high-court interventions grid**
 (`#courts-map`): per country per year, the documented court-packing / purge /
 reform events from `supremeCourt.courtHistory[]`, encoded by colour and glyph
