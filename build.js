@@ -532,7 +532,12 @@ function ptlStateFor(country, year, now) {
     if (s <= year && year <= e && (!best || s >= ptlYear(best.start, now))) best = p;
   }
   if (!best) return { st: 'nodata', p: null };
-  if (best.fsp) return { st: /verify/i.test(country.fspStatus || '') ? 'fsp-unv' : 'fsp', p: best };
+  if (best.fsp) {
+    // A one-party socialist state (Cuba) is FSP-governed but not by electoral
+    // alternation — its own state, kept out of the "pink tide" tally (ADR-0010).
+    if (country.oneParty) return { st: 'fsp-op', p: best };
+    return { st: /verify/i.test(country.fspStatus || '') ? 'fsp-unv' : 'fsp', p: best };
+  }
   return { st: 'non', p: best };
 }
 function renderPresidentialTimeline(countries) {
@@ -548,14 +553,27 @@ function renderPresidentialTimeline(countries) {
     const ys = (c.presidentialSuccession || []).filter((p) => p.fsp).map((p) => ptlYear(p.start, now));
     return ys.length ? Math.min(...ys) : Infinity;
   };
-  const rows = [...countries].sort((a, b) => firstFsp(a) - firstFsp(b) || a.country.localeCompare(b.country));
+  // Electoral countries first (ordered by the wave), one-party states (Cuba) last.
+  const rows = [...countries].sort((a, b) =>
+    (a.oneParty ? 1 : 0) - (b.oneParty ? 1 : 0) ||
+    firstFsp(a) - firstFsp(b) ||
+    a.country.localeCompare(b.country));
+  const electoral = rows.filter((c) => !c.oneParty);
 
-  const label = { fsp: 'FSP-party president', 'fsp-unv': 'FSP affiliation to verify', non: 'Non-FSP president', nodata: 'No data' };
+  const label = {
+    fsp: 'FSP-party president',
+    'fsp-unv': 'FSP affiliation to verify',
+    'fsp-op': 'One-party socialist state (PCC)',
+    non: 'Non-FSP president',
+    nodata: 'No data',
+  };
 
-  // Per-year tally (verified FSP + to-verify) for the bar strip.
+  // Per-year tally (confirmed FSP + to-verify) for the bar strip — over the
+  // electoral countries only; one-party states are shown but not counted.
+  const denom = electoral.length;
   const tally = years.map((y) => {
     let fsp = 0, unv = 0;
-    for (const c of rows) {
+    for (const c of electoral) {
       const st = ptlStateFor(c, y, now).st;
       if (st === 'fsp') fsp++;
       else if (st === 'fsp-unv') unv++;
@@ -563,6 +581,7 @@ function renderPresidentialTimeline(countries) {
     return { y, fsp, unv, total: fsp + unv };
   });
   const peak = tally.reduce((m, t) => (t.total > m.total ? t : m), tally[0]);
+  const opCountries = rows.filter((c) => c.oneParty).map((c) => c.country);
 
   // One cell per column throughout (uniform auto-flow, no explicit placement) so
   // the year header, tally bars and country cells stay column-aligned.
@@ -575,27 +594,28 @@ function renderPresidentialTimeline(countries) {
 
   const barRow = tally
     .map((t) => {
-      const h = Math.round((t.total / rows.length) * 100);
-      const d = `${t.y}: ${t.total} of ${rows.length} FSP-governed (${t.fsp} confirmed, ${t.unv} to verify)`;
+      const h = Math.round((t.total / denom) * 100);
+      const d = `${t.y}: ${t.total} of ${denom} FSP-governed (${t.fsp} confirmed, ${t.unv} to verify)`;
       return `<span class="ptl-bar${tick(t.y)}" data-d="${esc(d)}" title="${esc(d)}"><span style="height:${h}%"></span></span>`;
     })
     .join('');
 
   const bodyRows = rows
     .map((c) => {
+      const op = c.oneParty ? ' ptl-op' : '';
       const cells = years
         .map((y) => {
           const r = ptlStateFor(c, y, now);
           const who = r.p ? ` — ${r.p.name} (${r.p.party})` : '';
           const d = `${c.country} ${y}: ${label[r.st]}${who}`;
-          return `<span class="ptl-c ptl-${r.st}${tick(y)}" data-d="${esc(d)}" title="${esc(d)}"></span>`;
+          return `<span class="ptl-c ptl-${r.st}${op}${tick(y)}" data-d="${esc(d)}" title="${esc(d)}"></span>`;
         })
         .join('');
-      return `          <a class="ptl-lbl ptl-row" href="countries/${esc(c.code)}.html">${esc(c.country)}</a>${cells}`;
+      return `          <a class="ptl-lbl ptl-row${op}" href="countries/${esc(c.code)}.html">${esc(c.country)}</a>${cells}`;
     })
     .join('\n');
 
-  const legend = ['fsp', 'fsp-unv', 'non', 'nodata']
+  const legend = ['fsp', 'fsp-unv', 'fsp-op', 'non', 'nodata']
     .map((k) => `<span class="ptl-key"><span class="ptl-c ptl-${k}"></span>${esc(label[k])}</span>`)
     .join('');
 
@@ -607,11 +627,11 @@ function renderPresidentialTimeline(countries) {
       <div class="table-scroll">
         <div class="ptl" id="ptl-grid" style="${gridCols}">
           <span class="ptl-corner">Year →</span>${header}
-          <span class="ptl-lbl ptl-tally-lbl" data-d="Countries with an FSP-party president that year (confirmed + to-verify), out of ${rows.length} tracked" title="Countries with an FSP-party president that year (confirmed + to-verify), out of ${rows.length} tracked">FSP-governed</span>${barRow}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="Electoral countries with an FSP-party president that year (confirmed + to-verify), out of ${denom}" title="Electoral countries with an FSP-party president that year (confirmed + to-verify), out of ${denom}">FSP-governed</span>${barRow}
 ${bodyRows}
         </div>
       </div>
-      <p class="ptl-note">Peak coverage: <strong>${peak.total} of ${rows.length}</strong> tracked countries in <strong>${peak.y}</strong>. This maps only the ${rows.length} countries with a dossier here, not all of Latin America — read the per-year counts, not the absolute total. Companion to the sourced president count (issue&nbsp;#96).</p>
+      <p class="ptl-note">Peak coverage: <strong>${peak.total} of ${denom}</strong> electoral countries in <strong>${peak.y}</strong>. ${opCountries.length ? `${esc(opCountries.join(', '))} — a one-party socialist state governed continuously by the PCC — ${opCountries.length === 1 ? 'is' : 'are'} shown separately (last row) and excluded from these counts. ` : ''}This maps ${rows.length} countries with a dossier here, not all of Latin America — read the per-year counts, not the absolute total. Companion to the sourced president count (issue&nbsp;#96).</p>
       <div class="ptl-legend">${legend}</div>
     </section>
 `;

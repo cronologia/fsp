@@ -6,7 +6,7 @@
 > `node scripts/gen-catalog.js`. See [`context.md`](context.md) for domain
 > background and [`docs/adrs/`](docs/adrs/) for the architecture.
 
-_Last generated: 2026-07-14 · 15 countries · 10 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 45 references._
+_Last generated: 2026-07-14 · 16 countries · 10 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 45 references._
 
 ## Contents
 
@@ -26,7 +26,7 @@ Foro de São Paulo member/affiliated presidents flagged). **This is the set of
 *tracked* countries — not an exhaustive list of Latin America.** Affiliations
 marked *to verify* are not asserted as confirmed. See ADR-0009.
 
-Total FSP-party presidential terms across tracked countries: **31**.
+Total FSP-party presidential terms across tracked countries: **34**.
 
 | Country | Code | FSP party | Status | FSP presidents (term) |
 |---|---|---|---|---|
@@ -45,6 +45,7 @@ Total FSP-party presidential terms across tracked countries: **31**.
 | [Peru](docs/countries/PE.html) | PE | Partido Nacionalista Peruano (Humala) | member (Partido Nacionalista Peruano, per Regalado 2008) | Ollanta Humala (2011–2016) |
 | [Paraguay](docs/countries/PY.html) | PY | Frente Guasú / Alianza Patriótica para el Cambio (Lugo) | affiliated (to verify) | Fernando Lugo (2008–2012) |
 | [Colombia](docs/countries/CO.html) | CO | Pacto Histórico / Colombia Humana (Petro) | affiliated (to verify) | Gustavo Petro (2022–present) |
+| [Cuba](docs/countries/CU.html) | CU | Partido Comunista de Cuba (PCC) | member (PCC; one-party state — no competitive elections) | Fidel Castro (1976–2008); Raúl Castro (2008–2018); Miguel Díaz-Canel (2018–present) |
 
 ## Member parties
 

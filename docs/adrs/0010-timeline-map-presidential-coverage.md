@@ -29,9 +29,16 @@ data.** Design points:
 - **Year-in-office rule:** for each year, the president is the one with the
   greatest `start ≤ year` whose term spans it (handles `"present"`, gaps, and
   handover years).
-- **Four states, encoded by colour *and* fill** (WCAG 1.4.1, ADR-0005): solid =
+- **States, encoded by colour *and* fill** (WCAG 1.4.1, ADR-0005): solid =
   confirmed FSP, diagonal hatch = affiliation *to verify* (country `fspStatus`
-  contains "verify"), solid light = non-FSP, outline = no data.
+  contains "verify"), solid light = non-FSP, outline = no data. _(Amended
+  2026-07-14: a fifth state, a **cross-hatch for a one-party socialist state**,
+  was added for Cuba — see below.)_
+- **One-party states (Cuba):** a country flagged `oneParty: true` is
+  FSP-governed but not by electoral alternation (the PCC has governed since
+  1965). It is rendered as its own cross-hatched state, sorted to the bottom
+  below the electoral rows, and **excluded from the per-year tally and the peak**
+  so the electoral "pink tide" reading stays honest. The footnote names it.
 - **Ordering:** rows sorted by the year each country first had an FSP president,
   so the wave reads as a diagonal.
 - **Neutrality:** a per-year tally + peak callout state raw counts; the words

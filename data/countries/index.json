@@ -109,6 +109,13 @@
       "fspParty": "Pacto Histórico (Petro)",
       "fspPresidentCount": 1,
       "file": "countries/CO.json"
+    },
+    {
+      "country": "Cuba",
+      "code": "CU",
+      "fspParty": "Partido Comunista de Cuba (PCC)",
+      "fspPresidentCount": 3,
+      "file": "countries/CU.json"
     }
   ]
 }
