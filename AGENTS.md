@@ -100,6 +100,16 @@ Optional per-country array tracking the FSP-member party's standing in the
 Brazil (`BR.json`) is the worked pilot. Per-country collection is tracked in the
 country epics (#30–#40, #114–#118).
 
+A companion field, **`legislativeComposition[]`**, holds the *detailed* per-election
+breakdown rendered on the country page: `{ year, chamber, totalSeats,
+majorityThreshold, parties: [{abbr, name, seats, align, fsp?}], government: {led,
+fspInGovernment, hasMajority, note}, sources }`. `align` ∈
+`government | opposition | mixed | independent`. Seats should sum to `totalSeats`
+(use an "others" bucket). Every entry cited. The country page also shows a court
+**appointment-provenance tally** computed from `supremeCourt.justices[]`
+(`fspAppointed`) — framed as *who nominated each justice*, never as a claim about
+how they rule.
+
 ## Data quality & sourcing rules (important)
 
 This is a reference work about a politically contested subject. Accuracy and

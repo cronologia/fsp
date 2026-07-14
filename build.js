@@ -1049,6 +1049,55 @@ ${rows}
 `;
 }
 
+// Small inline source-link list for country pages (sources are raw URLs).
+function srcLinks(arr) {
+  if (!arr || !arr.length) return '';
+  return ' <span class="src-links">(' + arr
+    .map((u, i) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source ${i + 1}</a>`)
+    .join(', ') + ')</span>';
+}
+
+// Detailed per-election legislative composition on the country page (seats by
+// party, and whether the governing coalition held a majority). Issue #106 detail.
+function renderLegislativeComposition(c) {
+  const comps = c.legislativeComposition || [];
+  if (!comps.length) return '';
+  const ALIGN = { government: 'Government', opposition: 'Opposition', mixed: 'Mixed / centrão', independent: 'Independent' };
+  const blocks = comps
+    .map((e) => {
+      const prows = e.parties
+        .map((pt) => {
+          const fsp = pt.fsp ? ' <span class="fsp-badge">FSP</span>' : '';
+          return `        <tr${pt.fsp ? ' class="fsp-row"' : ''}>
+          <td><strong>${esc(pt.abbr || pt.name)}</strong>${fsp}</td>
+          <td class="notes">${esc(pt.abbr ? pt.name || '' : '')}</td>
+          <td>${esc(pt.seats)}</td>
+          <td>${esc(ALIGN[pt.align] || pt.align || '')}</td>
+        </tr>`;
+        })
+        .join('\n');
+      const g = e.government || {};
+      const maj = g.hasMajority ? 'commanded a working majority' : 'lacked a majority';
+      return `      <h3>${esc(e.year)} — ${esc(e.chamber)} (${esc(e.totalSeats)} seats${e.majorityThreshold ? `; majority = ${esc(e.majorityThreshold)}` : ''})</h3>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead><tr><th>Party</th><th>Full name</th><th>Seats</th><th>Alignment</th></tr></thead>
+          <tbody>
+${prows}
+          </tbody>
+        </table>
+      </div>
+      <p class="section-intro"><strong>Government:</strong> ${esc(g.led || '')} — ${maj}. FSP party in government: <strong>${g.fspInGovernment ? 'yes' : 'no'}</strong>.${g.note ? ` ${esc(g.note)}` : ''}${srcLinks(e.sources)}</p>`;
+    })
+    .join('\n');
+  return `    <section>
+      <h2>Legislative composition (lower house)</h2>
+      <p class="section-intro">Seats by party in the lower house for recent elections, and whether the governing coalition held a majority. In a fragmented system a governing majority is assembled across several parties — no party governs alone; a coalition majority is not a single-party majority.</p>
+${blocks}
+    </section>
+`;
+}
+
 function renderCountryPage(c) {
   const rows = c.presidentialSuccession
     .map((p) => {
@@ -1063,6 +1112,11 @@ function renderCountryPage(c) {
     })
     .join('\n');
   const sc = c.supremeCourt || {};
+  const js = sc.justices || [];
+  const fspApp = js.filter((j) => j.fspAppointed).length;
+  const benchTally = js.length
+    ? `        <dt>Appointed under FSP-party govts</dt><dd><strong>${fspApp} of ${js.length}</strong> sitting justices${fspApp * 2 > js.length ? ' — a majority of the current bench' : fspApp * 2 === js.length ? ' — half the current bench' : ' — a minority of the current bench'}. <span class="muted">This is appointment provenance (who nominated each justice), <strong>not</strong> a claim about how they rule — justices serve independently.</span></dd>\n`
+    : '';
   const sources = (c.sources || [])
     .map((u) => `        <li><a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(u)}</a></li>`)
     .join('\n');
@@ -1097,12 +1151,13 @@ ${rows}
         </table>
       </div>
     </section>
+${renderLegislativeComposition(c)}
     <section>
       <h2>High court — ${esc(sc.name || '')}</h2>
       <dl class="facts">
         ${sc.size ? `<dt>Seats</dt><dd>${esc(sc.size)}</dd>` : ''}
         <dt>Appointment</dt><dd>${esc(sc.appointmentMethod || '')}</dd>
-        <dt>Changes (FSP era)</dt><dd>${esc(sc.fspEraChanges || '')}</dd>
+${benchTally}        <dt>Changes (FSP era)</dt><dd>${esc(sc.fspEraChanges || '')}</dd>
         <dt>How much remains</dt><dd>${esc(sc.stillServing || '')}</dd>
         <dt>Verified</dt><dd>${sc.verified ? 'yes — sourced' : 'no — to verify against primary sources'}</dd>
       </dl>
