@@ -45,16 +45,105 @@
     "stillServing": "The court remains under FSLN control; after the 2009 ruling and 2014 constitutional reform there is no independent bloc, and the judiciary has been central to Ortega and Murillo's consolidation of power. Exact 2026 roster not individually itemised here.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "Under the Somoza dynasty the judiciary was subordinated to the regime; the 1979 Sandinista revolution and 1987 Constitution rebuilt the court.", "size": null, "appointingGovernment": "Somoza era / 1979 revolution", "fspRelated": false, "verified": false },
-      { "period": "1990s", "type": "composition", "event": "Post-revolution court under Chamorro; magistrates elected by the National Assembly.", "size": null, "appointingGovernment": "Chamorro (UNO)", "fspRelated": false, "verified": false },
-      { "period": "2000", "type": "reform", "event": "The Alemán–Ortega pact ('El Pacto') divided control of the CSJ and other state bodies between the PLC and the FSLN by quota, politicising judicial appointments.", "size": null, "appointingGovernment": "Alemán (PLC) + Ortega (FSLN)", "fspRelated": true, "verified": true },
-      { "period": "2009", "type": "reform", "event": "The CSJ Constitutional Chamber set aside the constitutional ban on consecutive presidential re-election, clearing the way for Ortega's continued rule.", "size": null, "appointingGovernment": "Daniel Ortega (FSLN)", "fspRelated": true, "verified": true },
-      { "period": "2014", "type": "reform", "event": "Constitutional reform codified indefinite presidential re-election and further entrenched FSLN control of the judiciary.", "size": null, "appointingGovernment": "Daniel Ortega (FSLN)", "fspRelated": true, "verified": true }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "Under the Somoza dynasty the judiciary was subordinated to the regime; the 1979 Sandinista revolution and 1987 Constitution rebuilt the court.",
+        "size": null,
+        "appointingGovernment": "Somoza era / 1979 revolution",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "1990s",
+        "type": "composition",
+        "event": "Post-revolution court under Chamorro; magistrates elected by the National Assembly.",
+        "size": null,
+        "appointingGovernment": "Chamorro (UNO)",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "2000",
+        "type": "reform",
+        "event": "The Alemán–Ortega pact ('El Pacto') divided control of the CSJ and other state bodies between the PLC and the FSLN by quota, politicising judicial appointments.",
+        "size": null,
+        "appointingGovernment": "Alemán (PLC) + Ortega (FSLN)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2009",
+        "type": "reform",
+        "event": "The CSJ Constitutional Chamber set aside the constitutional ban on consecutive presidential re-election, clearing the way for Ortega's continued rule.",
+        "size": null,
+        "appointingGovernment": "Daniel Ortega (FSLN)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2014",
+        "type": "reform",
+        "event": "Constitutional reform codified indefinite presidential re-election and further entrenched FSLN control of the judiciary.",
+        "size": null,
+        "appointingGovernment": "Daniel Ortega (FSLN)",
+        "fspRelated": true,
+        "verified": true
+      }
     ],
-    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)", "https://en.wikipedia.org/wiki/Daniel_Ortega"],
+    "courtHistorySources": [
+      "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)",
+      "https://en.wikipedia.org/wiki/Daniel_Ortega"
+    ],
     "justicesNote": "The CSJ (16 magistrates) is FSLN-aligned; individual members are not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)"
+  ],
+  "fspParties": {
+    "current": [
+      "Frente Sandinista de Liberación Nacional (FSLN)"
+    ],
+    "note": "The FSLN is Nicaragua's FSP founding member."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2007",
+      "chamber": "unicameral",
+      "fspParty": "FSLN",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "The FSLN lost power in 1990 (Chamorro/UNO) and sat in opposition through the Alemán and Bolaños governments (though it remained the second bloc).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/National_Assembly_(Nicaragua)"
+      ]
+    },
+    {
+      "start": "2007",
+      "end": "2012",
+      "chamber": "unicameral",
+      "fspParty": "FSLN",
+      "fspBloc": "plurality",
+      "inGovernment": true,
+      "seats": "Ortega returned to the presidency in 2007; the FSLN was the largest bloc and governed with allied votes before winning an outright majority in 2011.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/National_Assembly_(Nicaragua)"
+      ]
+    },
+    {
+      "start": "2012",
+      "end": "present",
+      "chamber": "unicameral",
+      "fspParty": "FSLN",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "FSLN majority from 2012, a supermajority from 2016 (roughly 70–75 of 90 elected seats).",
+      "notes": "The 2016 and 2021 elections were widely condemned as neither free nor fair — leading opposition figures were barred or jailed before the 2021 vote — so the supermajority is real but the elections' legitimacy is disputed.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2016_Nicaraguan_general_election",
+        "https://en.wikipedia.org/wiki/2021_Nicaraguan_general_election"
+      ]
+    }
   ]
 }

@@ -52,7 +52,9 @@ The FSP-member party’s standing in the lower chamber over time, where compiled
 (issue #106). `majority`/`plurality`/`minority` describe the FSP party or its
 governing coalition; `opposition` = out of government; `single-party` = one-party state.
 - **Brazil** (PT / PCdoB): 1990–2003: **opposition** · 2003–2016: **majority** · 2016–2023: **opposition** · 2023–present: **majority**
+- **Venezuela** (MVR/Chavismo): 1990–2000: **opposition** · 2000–2016: **majority** · 2016–2020: **minority** · 2020–present: **majority**
 - **Bolivia** (MAS): 1990–2006: **opposition** · 2006–2025: **majority** · 2025–present: **opposition**
+- **Nicaragua** (FSLN): 1990–2007: **opposition** · 2007–2012: **plurality** · 2012–present: **majority**
 - **Uruguay** (Frente Amplio): 1990–2005: **opposition** · 2005–2020: **majority** · 2020–2025: **opposition** · 2025–present: **minority**
 
 ## Member parties
