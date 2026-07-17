@@ -80,16 +80,91 @@
     "stillServing": "The 15-magistrate court elected by Congress in Feb 2023 (under LIBRE) is current; its partisan balance reflects the multi-party negotiation in Congress.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "Through the 'banana republic' era and the military governments (1960s–80s) the court was weak; the 1982 Constitution set the current 15-magistrate court elected by Congress.", "size": 15, "appointingGovernment": "military era / 1982 Constitution", "fspRelated": false, "verified": false },
-      { "period": "2009", "type": "composition", "event": "During the coup against President Zelaya, the Supreme Court ordered his arrest — pivotal, as Zelaya later founded the FSP-member party LIBRE.", "size": 15, "appointingGovernment": "coup / Micheletti", "fspRelated": false, "verified": true },
-      { "period": "2012", "type": "purge", "event": "In December Congress summarily removed four Constitutional Chamber justices (a 'technical coup') after rulings against the government.", "size": 15, "appointingGovernment": "Porfirio Lobo (Partido Nacional)", "fspRelated": false, "verified": true },
-      { "period": "2015", "type": "reform", "event": "The Supreme Court struck down the ban on presidential re-election, enabling Juan Orlando Hernández's 2017 re-election.", "size": 15, "appointingGovernment": "Juan Orlando Hernández (Partido Nacional)", "fspRelated": false, "verified": true },
-      { "period": "2023", "type": "composition", "event": "Under the Castro/LIBRE government, Congress elected a new 15-magistrate court in February after a multi-party negotiation.", "size": 15, "appointingGovernment": "Xiomara Castro (LIBRE)", "fspRelated": true, "verified": true }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "Through the 'banana republic' era and the military governments (1960s–80s) the court was weak; the 1982 Constitution set the current 15-magistrate court elected by Congress.",
+        "size": 15,
+        "appointingGovernment": "military era / 1982 Constitution",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "2009",
+        "type": "composition",
+        "event": "During the coup against President Zelaya, the Supreme Court ordered his arrest — pivotal, as Zelaya later founded the FSP-member party LIBRE.",
+        "size": 15,
+        "appointingGovernment": "coup / Micheletti",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2012",
+        "type": "purge",
+        "event": "In December Congress summarily removed four Constitutional Chamber justices (a 'technical coup') after rulings against the government.",
+        "size": 15,
+        "appointingGovernment": "Porfirio Lobo (Partido Nacional)",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2015",
+        "type": "reform",
+        "event": "The Supreme Court struck down the ban on presidential re-election, enabling Juan Orlando Hernández's 2017 re-election.",
+        "size": 15,
+        "appointingGovernment": "Juan Orlando Hernández (Partido Nacional)",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2023",
+        "type": "composition",
+        "event": "Under the Castro/LIBRE government, Congress elected a new 15-magistrate court in February after a multi-party negotiation.",
+        "size": 15,
+        "appointingGovernment": "Xiomara Castro (LIBRE)",
+        "fspRelated": true,
+        "verified": true
+      }
     ],
-    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)", "https://en.wikipedia.org/wiki/2009_Honduran_coup_d%27%C3%A9tat"],
+    "courtHistorySources": [
+      "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)",
+      "https://en.wikipedia.org/wiki/2009_Honduran_coup_d%27%C3%A9tat"
+    ],
     "justicesNote": "The 15-magistrate CSJ elected in 2023 is current; individual members are not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)"
+  ],
+  "fspParties": {
+    "current": [
+      "Libertad y Refundación (LIBRE)"
+    ],
+    "note": "LIBRE, formed in 2011 by supporters of the ousted Manuel Zelaya, is Honduras's FSP member. Before 2011 there was no FSP party in Congress."
+  },
+  "legislativeControl": [
+    {
+      "start": "2013",
+      "end": "2022",
+      "chamber": "unicameral",
+      "fspParty": "LIBRE",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "LIBRE first contested Congress in 2013 as the main left opposition to the governing Partido Nacional.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/National_Congress_(Honduras)"
+      ]
+    },
+    {
+      "start": "2022",
+      "end": "present",
+      "chamber": "unicameral",
+      "fspParty": "LIBRE",
+      "fspBloc": "plurality",
+      "inGovernment": true,
+      "seats": "With Xiomara Castro's 2021 win LIBRE became the largest bloc in Congress (about 50 of 128) but without a majority — it governs in alliance with Salvador Nasralla's PSH.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/National_Congress_(Honduras)"
+      ]
+    }
   ]
 }

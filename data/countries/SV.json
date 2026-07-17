@@ -67,16 +67,95 @@
     "stillServing": "The pre-2021 Constitutional Chamber was entirely removed; the Bukele-aligned magistrates installed on 1 May 2021 remain in place.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "Under the military-authoritarian regimes and the 1979–1992 civil war the court was weak and politically dependent; the 1983 Constitution created the current framework.", "size": null, "appointingGovernment": "military era (pre-1992)", "fspRelated": false, "verified": false },
-      { "period": "1992", "type": "reform", "event": "The Chapultepec Peace Accords brought judicial reforms; magistrates elected by the Legislative Assembly with opposition input.", "size": 15, "appointingGovernment": "post-war (ARENA)", "fspRelated": false, "verified": false },
-      { "period": "2009–2018", "type": "composition", "event": "The Constitutional Chamber ('Sala 4') was notably independent, issuing landmark rulings against both ARENA and FMLN governments — a high point of judicial autonomy.", "size": 15, "appointingGovernment": "ARENA → FMLN era", "fspRelated": false, "verified": true },
-      { "period": "2021", "type": "purge", "event": "On 1 May, President Bukele's new Assembly (Nuevas Ideas) removed the 5 Constitutional Chamber magistrates and the Attorney General, installing loyalists; in Sept 2021 the new chamber authorised presidential re-election. Done by Bukele — NOT an FSP president.", "size": 15, "appointingGovernment": "Nayib Bukele (Nuevas Ideas) — not FSP", "fspRelated": false, "verified": true }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "Under the military-authoritarian regimes and the 1979–1992 civil war the court was weak and politically dependent; the 1983 Constitution created the current framework.",
+        "size": null,
+        "appointingGovernment": "military era (pre-1992)",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "1992",
+        "type": "reform",
+        "event": "The Chapultepec Peace Accords brought judicial reforms; magistrates elected by the Legislative Assembly with opposition input.",
+        "size": 15,
+        "appointingGovernment": "post-war (ARENA)",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "2009–2018",
+        "type": "composition",
+        "event": "The Constitutional Chamber ('Sala 4') was notably independent, issuing landmark rulings against both ARENA and FMLN governments — a high point of judicial autonomy.",
+        "size": 15,
+        "appointingGovernment": "ARENA → FMLN era",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2021",
+        "type": "purge",
+        "event": "On 1 May, President Bukele's new Assembly (Nuevas Ideas) removed the 5 Constitutional Chamber magistrates and the Attorney General, installing loyalists; in Sept 2021 the new chamber authorised presidential re-election. Done by Bukele — NOT an FSP president.",
+        "size": 15,
+        "appointingGovernment": "Nayib Bukele (Nuevas Ideas) — not FSP",
+        "fspRelated": false,
+        "verified": true
+      }
     ],
-    "courtHistorySources": ["https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm", "https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding"],
+    "courtHistorySources": [
+      "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm",
+      "https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding"
+    ],
     "justicesNote": "The 15-magistrate CSJ (incl. the 5-member Constitutional Chamber) was reconstituted in 2021; current members are Bukele-aligned and not itemized here."
   },
   "sources": [
     "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm",
     "https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding"
+  ],
+  "fspParties": {
+    "current": [
+      "Frente Farabundo Martí para la Liberación Nacional (FMLN)"
+    ],
+    "note": "The FMLN is El Salvador's FSP founding member."
+  },
+  "legislativeControl": [
+    {
+      "start": "1994",
+      "end": "2009",
+      "chamber": "unicameral",
+      "fspParty": "FMLN",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "After the 1992 peace accords the FMLN became the main opposition to ARENA — often the largest or second party in the Asamblea, but out of government.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)"
+      ]
+    },
+    {
+      "start": "2009",
+      "end": "2019",
+      "chamber": "unicameral",
+      "fspParty": "FMLN",
+      "fspBloc": "minority",
+      "inGovernment": true,
+      "seats": "The FMLN held the presidency (Funes, Sánchez Cerén) but never an Assembly majority — it governed as a minority, negotiating with GANA/PCN.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)"
+      ]
+    },
+    {
+      "start": "2019",
+      "end": "present",
+      "chamber": "unicameral",
+      "fspParty": "FMLN",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "The FMLN collapsed as Nayib Bukele rose; his Nuevas Ideas swept the 2021 Assembly (a supermajority), reducing the FMLN to a handful of seats.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)"
+      ]
+    }
   ]
 }

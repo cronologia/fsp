@@ -44,5 +44,25 @@
     "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Cuba",
     "https://en.wikipedia.org/wiki/Communist_Party_of_Cuba",
     "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ],
+  "fspParties": {
+    "current": [
+      "Partido Comunista de Cuba (PCC)"
+    ],
+    "note": "Cuba is a one-party state; the PCC is the sole legal party and the only FSP member."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "present",
+      "chamber": "unicameral",
+      "fspParty": "PCC",
+      "fspBloc": "single-party",
+      "inGovernment": true,
+      "seats": "The Asamblea Nacional del Poder Popular is a single-party body — candidates are pre-approved and there are no competing parties; the PCC is the sole legal party.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/National_Assembly_of_People%27s_Power"
+      ]
+    }
   ]
 }

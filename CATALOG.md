@@ -56,6 +56,9 @@ governing coalition; `opposition` = out of government; `single-party` = one-part
 - **Bolivia** (MAS): 1990–2006: **opposition** · 2006–2025: **majority** · 2025–present: **opposition**
 - **Nicaragua** (FSLN): 1990–2007: **opposition** · 2007–2012: **plurality** · 2012–present: **majority**
 - **Uruguay** (Frente Amplio): 1990–2005: **opposition** · 2005–2020: **majority** · 2020–2025: **opposition** · 2025–present: **minority**
+- **El Salvador** (FMLN): 1994–2009: **opposition** · 2009–2019: **minority** · 2019–present: **opposition**
+- **Honduras** (LIBRE): 2013–2022: **opposition** · 2022–present: **plurality**
+- **Cuba** (PCC): 1990–present: **single-party**
 
 ## Member parties
 
