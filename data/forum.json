@@ -350,7 +350,14 @@
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20201020165021/https://forodesaopaulo.org/declaracion-final-buenos-aires-2010/",
       "editionVerified": true,
-      "datesSource": "declaration"
+      "datesSource": "declaration",
+      "officialDocs": [
+        {
+          "type": "base",
+          "label": "Documento base",
+          "url": "https://forodesaopaulo.org/documento-base-xvi-encuentro-del-fsp-buenos-aires-17-a-20-de-agosto-de-2010/"
+        }
+      ]
     },
     {
       "edition": "XVII",
@@ -362,7 +369,14 @@
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20150405011756/http://forodesaopaulo.org/declaracao-final-managua-2011/",
       "editionVerified": true,
-      "datesSource": "declaration"
+      "datesSource": "declaration",
+      "officialDocs": [
+        {
+          "type": "base",
+          "label": "Documento base",
+          "url": "https://forodesaopaulo.org/documento-base-del-xvii-encuentro-del-foro-de-sao-paulo-tercera-version/"
+        }
+      ]
     },
     {
       "edition": "XVIII",
@@ -386,7 +400,14 @@
       "notes": "",
       "declarationUrl": "https://web.archive.org/web/20201026095245/https://forodesaopaulo.org/declaracion-final-sao-paulo-2013/",
       "datesSource": "foro-declaraciones-libro",
-      "editionVerified": true
+      "editionVerified": true,
+      "officialDocs": [
+        {
+          "type": "base",
+          "label": "Documento base",
+          "url": "https://forodesaopaulo.org/documento-base-del-xix-encuentro-del-foro-de-sao-paulo/"
+        }
+      ]
     },
     {
       "edition": "XX",
@@ -399,7 +420,14 @@
       "declarationUrl": "https://web.archive.org/web/20141113024517/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-paz-2014",
       "editionVerified": true,
       "editionSource": "declaration",
-      "datesSource": "memoria-xx-2014"
+      "datesSource": "memoria-xx-2014",
+      "officialDocs": [
+        {
+          "type": "memoria",
+          "label": "Memoria",
+          "url": "https://forodesaopaulo.org/memoria-del-xx-encuentro-del-foro-de-sao-paulo/"
+        }
+      ]
     },
     {
       "edition": "XXI",
@@ -412,7 +440,19 @@
       "declarationUrl": "https://web.archive.org/web/20231120184939/https://forodesaopaulo.org/declaracion-final-del-xxi-encuentro-del-foro-de-sao-paulo-en-la-ciudad-de-mexico-df/2015/09/logo-oceansur.png",
       "editionVerified": true,
       "editionSource": "declaration",
-      "datesSource": "salgueiro-foro"
+      "datesSource": "salgueiro-foro",
+      "officialDocs": [
+        {
+          "type": "memoria",
+          "label": "Memoria",
+          "url": "https://forodesaopaulo.org/memoria-del-xxi-encuentro-del-foro-de-sao-paulo-ciudad-de-mexico-df/"
+        },
+        {
+          "type": "base",
+          "label": "Documento base",
+          "url": "https://forodesaopaulo.org/documento-base-del-xxi-encuentro/"
+        }
+      ]
     },
     {
       "edition": "XXII",
@@ -425,7 +465,14 @@
       "declarationUrl": "https://web.archive.org/web/20170304013729/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-san-salvador-2016/",
       "editionVerified": true,
       "editionSource": "declaration",
-      "datesSource": "memoria-xxii-2016"
+      "datesSource": "memoria-xxii-2016",
+      "officialDocs": [
+        {
+          "type": "memoria",
+          "label": "Memoria",
+          "url": "https://forodesaopaulo.org/memoria-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-el-salvador-2016/"
+        }
+      ]
     },
     {
       "edition": "XXIII",
@@ -438,7 +485,14 @@
       "declarationUrl": "https://web.archive.org/web/20220530190555/http://forodesaopaulo.org/declaracion-final-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-2017/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1571510652418",
       "editionVerified": true,
       "editionSource": "declaration",
-      "datesSource": "memoria-xxiii-2017"
+      "datesSource": "memoria-xxiii-2017",
+      "officialDocs": [
+        {
+          "type": "memoria",
+          "label": "Memoria",
+          "url": "https://forodesaopaulo.org/memoria-del-xxiii-encuentro-del-foro-de-sao-paulo-managua-nicaragua-15-al-19-de-julio-de-2017/"
+        }
+      ]
     },
     {
       "edition": "XXIV",
@@ -451,7 +505,14 @@
       "declarationUrl": "https://web.archive.org/web/20191004055653/http://forodesaopaulo.org/declaraciones_finales/declaracion-final-declaracao-final-la-habana-2018/",
       "editionVerified": true,
       "editionSource": "declaration",
-      "datesSource": "memoria-xxiv-2018"
+      "datesSource": "memoria-xxiv-2018",
+      "officialDocs": [
+        {
+          "type": "memoria",
+          "label": "Memoria",
+          "url": "https://forodesaopaulo.org/memoria-del-xxiv-encuentro-del-foro-de-sao-paulo-la-habana-cuba-15-al-17-de-julio-de-2018/"
+        }
+      ]
     },
     {
       "edition": "XXV",
@@ -464,7 +525,14 @@
       "editionVerified": true,
       "editionSource": "declaration",
       "datesSource": "declaration",
-      "declarationUrl": "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/"
+      "declarationUrl": "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/",
+      "officialDocs": [
+        {
+          "type": "memoria",
+          "label": "Memoria",
+          "url": "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/"
+        }
+      ]
     },
     {
       "edition": "XXVI",
@@ -477,7 +545,19 @@
       "editionVerified": true,
       "editionSource": "declaration",
       "datesSource": "declaration",
-      "declarationUrl": "https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/"
+      "declarationUrl": "https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/",
+      "officialDocs": [
+        {
+          "type": "memoria",
+          "label": "Memoria",
+          "url": "https://forodesaopaulo.org/memoria-xxvi-encuentro-del-foro-de-sao-paulo-brasil/"
+        },
+        {
+          "type": "base",
+          "label": "Documento base",
+          "url": "https://forodesaopaulo.org/documento-base-del-xxvi-encuentro-del-foro-de-sao-paulo/"
+        }
+      ]
     },
     {
       "edition": "XXVII",

@@ -29,6 +29,7 @@ scripts/wayback-harvest.js  Indexes archived captures of the official FSP site
 scripts/fetch-declarations.js  Downloads declaration bodies + official PDFs from Wayback (ADR-0007)
 scripts/extract-declarations.js  Extracts plain text + dates/editions from the PDFs (zero-dep, zlib; ADR-0007)
 scripts/gen-catalog.js   Generates CATALOG.md from the data (run by build.js; ADR-0011)
+scripts/parse-official-index.js  Parses the saved forodesaopaulo.org/documentos page → official-index.json (#138, ADR-0012)
 CATALOG.md               Flat reference of every country/party/association (GENERATED — do not edit; ADR-0011)
 .github/workflows/wayback.yml  Runs the harvesting pipeline on GitHub's runners
 docs-research/           Generated research outputs (Wayback inventory, etc.)

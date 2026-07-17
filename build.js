@@ -157,6 +157,7 @@ ${ANALYTICS}
         <dt>Host city</dt><dd>${esc(m.city)}</dd>
         <dt>Country</dt><dd>${countryCell}</dd>
         <dt>Final declaration</dt><dd>${declLive}</dd>
+        ${(m.officialDocs && m.officialDocs.length) ? `<dt>Forum's own pages</dt><dd>${m.officialDocs.map((o) => `<a href="${esc(o.url)}" rel="noopener noreferrer" target="_blank">${esc(o.label || o.type)}</a>`).join(' · ')} <span class="muted">(official site — geoblocked to non-Brazilian IPs; see the document index)</span></dd>` : ''}
         ${m.notes ? `<dt>Notes</dt><dd>${esc(m.notes)}</dd>` : ''}
       </dl>
     </section>
