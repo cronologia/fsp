@@ -858,7 +858,7 @@ ${bodyRows}
         </div>
       </div>
       <div class="ptl-legend">${legend}</div>
-    </section>
+${renderCourtSeatsGrid(countries)}    </section>
 `;
 }
 
@@ -954,6 +954,121 @@ ${bodyRows}
 `;
 }
 
+// The bench-control band in force in a given year = the supremeCourt.benchControl[]
+// entry with the greatest start ≤ year that spans it. Mirrors legStateFor. Returns
+// null for years no sourced band covers (rendered as "no data", never guessed).
+function benchStateFor(country, year, now) {
+  let best = null;
+  for (const b of (country.supremeCourt && country.supremeCourt.benchControl) || []) {
+    const s = ptlYear(b.start, now);
+    const e = ptlYear(b.end, now);
+    if (s <= year && year <= e && (!best || s >= ptlYear(best.start, now))) best = b;
+  }
+  return best;
+}
+
+// Hover/label text for one bench-control band: state plus the sourced seat count
+// when both numbers are present — counts are never derived or invented here.
+function benchCellText(country, year, band) {
+  const CTRL_LABEL = {
+    aligned: 'aligned',
+    partial: 'partial',
+    independent: 'independent',
+  };
+  const counts = band.fspAppointed != null && band.size != null
+    ? ` — ${band.fspAppointed} of ${band.size} justices appointed under FSP-era governments`
+    : '';
+  return `${country} ${year}: ${CTRL_LABEL[band.control] || band.control}${counts}`;
+}
+
+// Year-by-year grid of high-court bench control by APPOINTMENT PROVENANCE
+// (issue #129), from each country's supremeCourt.benchControl[]. Rendered inside
+// the "Court interventions" tab panel, below the interventions grid — provenance
+// is the weaker claim; interventions (packing/purges) are the stronger one.
+function renderCourtSeatsGrid(countries) {
+  const now = new Date().getFullYear();
+  const years = [];
+  for (let y = 1990; y <= now; y++) years.push(y);
+  const nCols = years.length;
+
+  const STATES = {
+    aligned: { label: 'FSP-era appointees a majority of the bench', glyph: 'M' },
+    partial: { label: 'Some FSP-era appointees, not a majority', glyph: 'p' },
+    independent: { label: 'No FSP-era-appointed presence', glyph: '' },
+  };
+
+  // Rows: only countries with a sourced benchControl record — no padding rows.
+  const rows = countries
+    .map((c) => {
+      const bc = (c.supremeCourt && c.supremeCourt.benchControl) || [];
+      const firstAligned = bc.filter((b) => b.control === 'aligned').map((b) => ptlYear(b.start, now));
+      return { c, has: bc.length > 0, first: firstAligned.length ? Math.min(...firstAligned) : Infinity };
+    })
+    .filter((r) => r.has)
+    .sort((a, b) => a.first - b.first || a.c.country.localeCompare(b.c.country));
+  if (!rows.length) return '';
+
+  const tick = (y) => (y % 5 === 0 ? ' ptl-tick' : '');
+  const header = years.map((y) => `<span class="ptl-yr${tick(y)}">${y % 5 === 0 ? y : ''}</span>`).join('');
+
+  // Per-year count of countries whose bench is majority-FSP-appointed, for the bar strip.
+  const counts = years.map((y) => rows.reduce((n, r) => {
+    const b = benchStateFor(r.c, y, now);
+    return n + (b && b.control === 'aligned' ? 1 : 0);
+  }, 0));
+  const maxCount = Math.max(1, ...counts);
+  const barRow = years
+    .map((y, i) => {
+      const n = counts[i];
+      const h = Math.round((n / maxCount) * 100);
+      const d = `${y}: ${n} ${n === 1 ? 'country' : 'countries'} where FSP-era appointees were a majority of the bench`;
+      return `<span class="ptl-bar${tick(y)}" data-d="${esc(d)}" title="${esc(d)}"><span style="height:${n ? h : 0}%"></span></span>`;
+    })
+    .join('');
+
+  const bodyRows = rows
+    .map(({ c }) => {
+      const cells = years
+        .map((y) => {
+          const b = benchStateFor(c, y, now);
+          if (!b) return `<span class="cs-c${tick(y)}" data-d="${esc(`${c.country} ${y}: no sourced data`)}" title="${esc(`${c.country} ${y}: no sourced data`)}"></span>`;
+          const st = STATES[b.control] || { label: b.control, glyph: '' };
+          const d = benchCellText(c.country, y, b);
+          return `<span class="cs-c cs-${esc(b.control)}${tick(y)}" data-d="${esc(d)}" title="${esc(d)}">${esc(st.glyph)}</span>`;
+        })
+        .join('');
+      return `          <a class="ptl-lbl ptl-row" href="countries/${esc(c.code)}.html">${esc(c.country)}</a>${cells}`;
+    })
+    .join('\n');
+
+  // Legend only the states that occur, plus "no data" if any year is uncovered.
+  const present = new Set();
+  let anyGap = false;
+  for (const { c } of rows) for (const y of years) {
+    const b = benchStateFor(c, y, now);
+    if (b) present.add(b.control); else anyGap = true;
+  }
+  const legend = Object.entries(STATES)
+    .filter(([k]) => present.has(k))
+    .map(([k, s]) => `<span class="ptl-key"><span class="cs-c cs-${k}">${esc(s.glyph)}</span>${esc(s.label)}</span>`)
+    .concat(anyGap ? [`<span class="ptl-key"><span class="cs-c"></span>No sourced data</span>`] : [])
+    .join('');
+
+  const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
+  return `      <h2>High-court seats by appointing government, year by year</h2>
+      <p class="section-intro">For each country with a sourced record, <strong>who appointed the sitting high-court bench</strong> each year — whether justices appointed under FSP-member governments were a <strong>majority</strong>, a <strong>minority</strong>, or absent. This grid records <strong>appointment provenance only</strong>: appointment by a government does not by itself demonstrate that a court serves it — courts counted here have ruled against the governments that appointed them (Brazil's mensalão convictions, Uruguay's 2013 rulings). The stronger claim — documented packing, purges and structural reforms — is the interventions grid above. ${rows.length} countries have a sourced bench record; the rest are omitted rather than estimated. Each cell's detail cites the counts only where sources give them.</p>
+      <p class="ptl-caption" id="cs-caption" aria-live="polite">Hover, tap or focus a cell for the bench's appointment provenance that year. Each state is shown by colour, fill and glyph, so it reads without colour.</p>
+      <div class="table-scroll">
+        <div class="ptl" id="cs-grid" style="${gridCols}">
+          <span class="ptl-corner">Year →</span>${header}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="Countries whose bench had a majority appointed under FSP-era governments that year" title="Majority-FSP-appointed benches per year">Majority benches</span>${barRow}
+${bodyRows}
+        </div>
+      </div>
+      <div class="ptl-legend">${legend}</div>
+`;
+}
+
 function renderCountryIndex(countries) {
   if (!countries || !countries.length) return '';
   const cards = countries
@@ -1022,6 +1137,44 @@ function renderCourtHistory(sc) {
       <div class="table-scroll">
         <table class="meetings">
           <thead><tr><th>Period</th><th>Type</th><th>Change</th><th>Seats</th><th>Government</th></tr></thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>
+    </section>
+`;
+}
+
+// Country-page table of the sourced bench-control bands (issue #129) — the same
+// data behind the "seats by appointing government" grid on the front page.
+// Provenance framing only; every band cites its sources inline.
+function renderBenchControl(sc) {
+  if (!sc || !sc.benchControl || !sc.benchControl.length) return '';
+  const rows = sc.benchControl
+    .map((b) => {
+      const period = `${b.start}–${b.end}`;
+      const bench = b.fspAppointed != null && b.size != null
+        ? `${b.fspAppointed} of ${b.size}`
+        : b.fspAppointed != null
+          ? `${b.fspAppointed}`
+          : b.size != null
+            ? `bench of ${b.size}`
+            : '<span class="muted">—</span>';
+      return `        <tr${b.control === 'aligned' ? ' class="fsp-row"' : ''}>
+          <td>${esc(period)}</td>
+          <td><span class="ch-type cs-t-${esc(b.control)}">${esc(b.control)}</span></td>
+          <td>${bench}</td>
+          <td class="notes">${esc(b.note || '')}${srcLinks(b.sources)}</td>
+        </tr>`;
+    })
+    .join('\n');
+  return `    <section>
+      <h2>Bench control by appointing government</h2>
+      <p class="section-intro">Sourced period bands: how much of the sitting high-court bench was appointed (or, where sources say so, effectively controlled) under FSP-member governments. <strong>Appointment provenance is not a claim about how judges rule</strong> — see each band's notes; documented interventions are in the court history above. Seat counts appear only where sources give them; years outside these bands are uncovered, not asserted.</p>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead><tr><th>Period</th><th>Control</th><th>FSP-era appointees</th><th>Notes &amp; sources</th></tr></thead>
           <tbody>
 ${rows}
           </tbody>
@@ -1230,6 +1383,7 @@ ${benchTally}        <dt>Changes (FSP era)</dt><dd>${esc(sc.fspEraChanges || '')
       </dl>
     </section>
 ${renderCourtHistory(sc)}
+${renderBenchControl(sc)}
 ${renderJustices(sc)}
     <section>
       <h2>Sources</h2>
@@ -1426,4 +1580,4 @@ function main() {
 // pure helpers so they can be unit-tested without generating docs/.
 if (require.main === module) main();
 
-module.exports = { esc, ptlYear, ptlStateFor, legStateFor, courtEventYears, fspBlocStats };
+module.exports = { esc, ptlYear, ptlStateFor, legStateFor, benchStateFor, benchCellText, courtEventYears, fspBlocStats };

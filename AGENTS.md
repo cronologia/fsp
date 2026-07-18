@@ -111,6 +111,29 @@ Optional per-country array tracking the FSP-member party's standing in the
 Brazil (`BR.json`) is the worked pilot. Per-country collection is tracked in the
 country epics (#30–#40, #114–#118).
 
+### Country dossier: `supremeCourt.benchControl[]` (issue #129)
+
+Optional per-country array of **sourced period bands** describing how much of the
+sitting high-court bench was appointed (or, where sources say so, effectively
+controlled) under FSP-member governments. Feeds the "seats by appointing
+government" grid inside the Court-interventions tab and a table on the country
+page. Convention:
+
+- **Fields:** `start`, `end` (year strings; `"present"` allowed), `size`,
+  `fspAppointed` (numbers **or null** — null whenever only the qualitative state
+  is sourced; never invent counts), `control`, `note`, `sources[]` (required,
+  non-empty).
+- **`control`** ∈ `aligned | partial | independent`: `aligned` = a majority of
+  the bench appointed/controlled under FSP-era governments, `partial` = some
+  FSP-era appointees but not a majority, `independent` = no FSP-era-appointed
+  presence. Years no band covers render as *no data* — skip years (and
+  countries) you cannot source rather than padding.
+- **Provenance, not verdicts.** `control` records who appointed the bench; the
+  note must carry the counter-evidence where it exists (e.g. Brazil's mensalão
+  convictions and Uruguay's 2013 rulings came from majority-FSP-appointed
+  courts). Interventions (packing/purges) are the stronger claim and live in
+  `courtHistory[]`.
+
 A companion field, **`legislativeComposition[]`**, holds the *detailed* per-election
 breakdown rendered on the country page: `{ year, chamber, totalSeats,
 majorityThreshold, parties: [{abbr, name, seats, align, fsp?}], government: {led,

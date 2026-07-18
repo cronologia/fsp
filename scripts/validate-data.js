@@ -91,6 +91,7 @@ function validateForum() {
 // ---- countries/*.json -----------------------------------------------------
 const COURT_TYPES = new Set(['founding', 'reform', 'packing', 'purge', 'composition']);
 const LEG_BLOCS = new Set(['majority', 'plurality', 'minority', 'opposition', 'single-party']);
+const BENCH_CONTROLS = new Set(['aligned', 'partial', 'independent']);
 
 function validateCountry(file, d) {
   if (!d) return;
@@ -149,6 +150,21 @@ function validateCountry(file, d) {
         if (!COURT_TYPES.has(h.type)) err(file, `${at}.type invalid (${h.type})`);
         if (!isStr(h.event)) err(file, `${at}.event missing`);
         if (!isBool(h.verified)) err(file, `${at}.verified must be boolean`);
+      });
+    }
+    // Optional: bench control by appointment provenance (issue #129). Every band
+    // must be sourced; seat counts are null unless a source gives them.
+    if (sc.benchControl !== undefined) {
+      if (!isArr(sc.benchControl)) err(file, 'supremeCourt.benchControl must be an array');
+      else sc.benchControl.forEach((b, i) => {
+        const at = `supremeCourt.benchControl[${i}]`;
+        if (!isStr(b.start)) err(file, `${at}.start missing`);
+        if (!isStr(b.end)) err(file, `${at}.end missing`);
+        if (!BENCH_CONTROLS.has(b.control)) err(file, `${at}.control invalid (${b.control})`);
+        if (b.size !== undefined && b.size !== null && !isNum(b.size)) err(file, `${at}.size must be a number or null`);
+        if (b.fspAppointed !== undefined && b.fspAppointed !== null && !isNum(b.fspAppointed)) err(file, `${at}.fspAppointed must be a number or null`);
+        if (isNum(b.size) && isNum(b.fspAppointed) && b.fspAppointed > b.size) err(file, `${at}.fspAppointed (${b.fspAppointed}) exceeds size (${b.size})`);
+        if (!isArr(b.sources) || b.sources.length === 0) err(file, `${at}.sources[] missing — every bench-control band must cite sources`);
       });
     }
     if (sc.justices !== undefined) {

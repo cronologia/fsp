@@ -108,6 +108,78 @@
       "https://portal.stf.jus.br/textos/verTexto.asp?servico=sobreStfConhecaStfHistorico",
       "https://www18.fgv.br/cpdoc/acervo/dicionarios/verbete-tematico/supremo-tribunal-federal-stf"
     ],
+    "benchControl": [
+      {
+        "start": "1990",
+        "end": "2002",
+        "size": 11,
+        "fspAppointed": 0,
+        "control": "independent",
+        "note": "All 11 justices were appointees of pre-FSP-era presidents (Sarney through Cardoso); the PT first won the presidency in the 2002 election.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)"
+        ]
+      },
+      {
+        "start": "2003",
+        "end": "2005",
+        "size": 11,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "Lula's first appointments — Cezar Peluso, Ayres Britto and Joaquim Barbosa (2003), then Eros Grau (2004) — put 3–4 PT-era appointees on the 11-seat bench.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)"
+        ]
+      },
+      {
+        "start": "2006",
+        "end": "2010",
+        "size": 11,
+        "fspAppointed": null,
+        "control": "aligned",
+        "note": "With Ricardo Lewandowski and Cármen Lúcia (2006) the tally reached 6 of 11 — a majority by appointment provenance — and 7 with Menezes Direito (2007; Dias Toffoli took that seat in 2009). Provenance did not dictate outcomes: Lula appointee Joaquim Barbosa went on to lead the mensalão corruption convictions of senior PT figures.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)",
+          "https://atlasinstitute.org/how-presidential-nominations-shape-brazils-highest-court/"
+        ]
+      },
+      {
+        "start": "2011",
+        "end": "2016",
+        "size": 11,
+        "fspAppointed": null,
+        "control": "aligned",
+        "note": "Dilma Rousseff's appointments (Fux and Rosa Weber 2011, Zavascki 2012, Barroso 2013, Fachin 2015) kept 7–8 of the 11 seats held by Lula/Dilma appointees — the peak, 8 of 11, around 2015–16.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)",
+          "https://en.mercopress.com/2018/04/14/brazilian-supreme-tribunal-of-the-eleven-justices-seven-were-named-by-lula-and-rousseff"
+        ]
+      },
+      {
+        "start": "2017",
+        "end": "2022",
+        "size": 11,
+        "fspAppointed": 7,
+        "control": "aligned",
+        "note": "7 of the 11 sitting justices were Lula/Dilma appointees (MercoPress, 2018); the period's vacancies went to Temer (Moraes 2017) and Bolsonaro (Nunes Marques 2020, Mendonça 2021). The same court upheld Lula's imprisonment in 2018 — appointment provenance is not a voting bloc.",
+        "sources": [
+          "https://en.mercopress.com/2018/04/14/brazilian-supreme-tribunal-of-the-eleven-justices-seven-were-named-by-lula-and-rousseff",
+          "https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)"
+        ]
+      },
+      {
+        "start": "2023",
+        "end": "present",
+        "size": 11,
+        "fspAppointed": null,
+        "control": "aligned",
+        "note": "Lula's third-term appointments (Zanin 2023, Dino 2024) offset PT-era retirements (Lewandowski and Rosa Weber, 2023); 6–7 of 11 as of 2026, with Jorge Messias's confirmation pending for Barroso's seat after his October 2025 retirement.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)",
+          "https://www.brasildefato.com.br/2025/10/17/lula-to-make-11th-supreme-court-appointment-as-justice-barroso-retires-from-brazils-top-court/"
+        ]
+      }
+    ],
     "justices": [
       {
         "name": "Gilmar Mendes",

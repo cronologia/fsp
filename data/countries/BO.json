@@ -156,6 +156,47 @@
       "https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election",
       "https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal"
     ],
+    "benchControl": [
+      {
+        "start": "1990",
+        "end": "2005",
+        "size": null,
+        "fspAppointed": 0,
+        "control": "independent",
+        "note": "The Corte Suprema and (from 1999) the Tribunal Constitucional were appointed by Congress under pre-MAS governments; MAS first took office in 2006.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal"
+        ]
+      },
+      {
+        "start": "2006",
+        "end": "2011",
+        "size": null,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "Morales initially governed with courts inherited from the pre-2009 system; resignations left growing vacancies, and in February 2010 Decree 432 (under a MAS-passed transition law) let Morales seat 18 interim high-court magistrates pending the first judicial elections.",
+        "sources": [
+          "https://ain-bolivia.org/2011/06/pending-bolivian-judicial-elections-opportunity-for-reform-in-uncharted-territory/",
+          "https://www.lexivox.org/norms/BO-DS-N432.html",
+          "https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election"
+        ]
+      },
+      {
+        "start": "2012",
+        "end": "2024",
+        "size": null,
+        "fspAppointed": null,
+        "control": "aligned",
+        "note": "Benches seated by the 2011 and 2017 judicial elections were drawn from candidate lists pre-selected by the MAS-controlled two-thirds Assembly (ICJ; Freedom House); null and blank ballots outnumbered valid votes in both elections. In December 2023 the Constitutional Tribunal extended its own and other courts' mandates after elections were delayed (OHCHR); partial judicial elections followed in December 2024. Composition under the post-MAS government (2025–) is in flux and not asserted here.",
+        "sources": [
+          "https://www.icj.org/bolivia-new-report-highlights-shortcomings-and-challenges-of-judicial-independence/",
+          "https://freedomhouse.org/country/bolivia/freedom-world/2018",
+          "https://www.ohchr.org/en/press-releases/2024/01/bolivia-un-expert-concerned-about-delay-judicial-elections",
+          "https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election",
+          "https://en.wikipedia.org/wiki/2024_Bolivian_judicial_election"
+        ]
+      }
+    ],
     "justicesNote": "Bolivia's high judges are popularly elected; individual current members are in flux (2023 self-extension + 2024 partial election) and not itemized here pending verification under the new government."
   },
   "sources": [

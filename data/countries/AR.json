@@ -127,6 +127,57 @@
       "https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina",
       "https://es.wikipedia.org/wiki/Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n"
     ],
+    "benchControl": [
+      {
+        "start": "1990",
+        "end": "2002",
+        "size": 9,
+        "fspAppointed": 0,
+        "control": "independent",
+        "note": "Menem's 1990 expansion to 9 seats and its 'automatic majority' predate any FSP-linked government; no Kirchner-era appointees sat on the court.",
+        "sources": [
+          "https://es.wikipedia.org/wiki/Anexo:Jueces_de_la_Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n_(Argentina)",
+          "https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina"
+        ]
+      },
+      {
+        "start": "2003",
+        "end": "2004",
+        "size": 9,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "Néstor Kirchner's renewal under the open Decree 222/03 process seated Zaffaroni (2003), then Highton and Lorenzetti (2004), as Menem-era justices resigned or were impeached — 1 to 3 of the 9 seats.",
+        "sources": [
+          "https://www.icj.org/wp-content/uploads/2012/04/Argentina-Attacks-on-Justice-2005-Publications-2008.pdf",
+          "https://es.wikipedia.org/wiki/Anexo:Jueces_de_la_Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n_(Argentina)"
+        ]
+      },
+      {
+        "start": "2005",
+        "end": "2014",
+        "size": null,
+        "fspAppointed": 4,
+        "control": "aligned",
+        "note": "Four of the seven sitting justices (Zaffaroni, Highton, Lorenzetti, and Argibay from Feb 2005) were Kirchner appointees — a majority of the sitting bench, while Law 26.183 (2006) shrank the statutory size from 9 toward 5 by attrition. The ICJ described the openly-vetted renewal as strengthening independence, and the court repeatedly ruled against the government — notably striking down the 2013 judicial-council reform.",
+        "sources": [
+          "https://www.icj.org/wp-content/uploads/2012/04/Argentina-Attacks-on-Justice-2005-Publications-2008.pdf",
+          "https://es.wikipedia.org/wiki/Anexo:Jueces_de_la_Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n_(Argentina)",
+          "https://www.lanacion.com.ar/politica/cuando-cristina-kirchner-fustigaba-a-los-jueces-de-la-corte-ejemplar-de-nestor-kirchner-nid18072022/"
+        ]
+      },
+      {
+        "start": "2015",
+        "end": "present",
+        "size": 5,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "After the 2014–15 departures of Petracchi, Argibay, Zaffaroni and Fayt, Kirchner-era appointees fell to 2 of 5 (Lorenzetti, Highton) beside Macri's 2016 appointees (Rosatti, Rosenkrantz); with Highton's exit (2021) and Maqueda's (2024), 1 of the 3 sitting justices (Lorenzetti) as the Senate rejected Milei's 2025 nominees.",
+        "sources": [
+          "https://es.wikipedia.org/wiki/Anexo:Jueces_de_la_Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n_(Argentina)",
+          "https://www.cadena3.com/noticia/siempre-juntos/como-fue-la-composicion-del-maximo-tribunal-desde-cfk-hasta-milei_407707"
+        ]
+      }
+    ],
     "justices": [
       {
         "name": "Ricardo Lorenzetti",

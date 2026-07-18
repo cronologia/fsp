@@ -154,6 +154,55 @@
     "courtHistorySources": [
       "https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"
     ],
+    "benchControl": [
+      {
+        "start": "1990",
+        "end": "2006",
+        "size": null,
+        "fspAppointed": 0,
+        "control": "independent",
+        "note": "The pre-Correa courts — including the 2004–05 Gutiérrez dissolution and re-packing crisis — were shaped by non-FSP governments; Correa first took office in January 2007.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"
+        ]
+      },
+      {
+        "start": "2007",
+        "end": "2011",
+        "size": null,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "Correa's 2008 Constitution replaced the Corte Suprema with the Corte Nacional de Justicia and a new Corte Constitucional; transition benches straddled the old and new systems, and the May 2011 referendum dissolved the old Judicial Council, giving the executive a direct role in its replacement (HRW).",
+        "sources": [
+          "https://www.hrw.org/world-report/2012/country-chapters/ecuador",
+          "https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"
+        ]
+      },
+      {
+        "start": "2012",
+        "end": "2018",
+        "size": 21,
+        "fspAppointed": null,
+        "control": "aligned",
+        "note": "Judges were appointed and removed by a Judicial Council composed almost entirely of former Correa-administration officials (HRW, 2014); the DPLF study by Luis Pásara documents executive sway over rulings. Supporters presented the overhaul as reform of a dysfunctional system.",
+        "sources": [
+          "https://www.hrw.org/news/2014/01/29/ecuador-ensure-judicial-independence",
+          "https://dplf.org/wp-content/uploads/2014/07/judicial-independence-ecuadors-judicial-reform-process.pdf"
+        ]
+      },
+      {
+        "start": "2019",
+        "end": "present",
+        "size": null,
+        "fspAppointed": 0,
+        "control": "independent",
+        "note": "After the February 2018 referendum under Moreno, a transitory citizen-participation council replaced the Correa-era Judicial Council and fully renewed the Constitutional Court (2019), which observers have since treated as an independent check (HRW, 2021); the correísta movement has been out of government throughout.",
+        "sources": [
+          "https://www.hrw.org/news/2021/05/27/ecuador-implement-constitutional-court-rulings-protecting-rights",
+          "https://www.iconnectblog.com/a-convenient-emergency-perilous-times-for-judicial-independence-in-ecuador/"
+        ]
+      }
+    ],
     "justicesNote": "Judges are selected by merit competition via the Consejo de la Judicatura; the bench turns over and is not itemized here."
   },
   "sources": [

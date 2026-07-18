@@ -95,6 +95,44 @@
       "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)",
       "https://en.wikipedia.org/wiki/Daniel_Ortega"
     ],
+    "benchControl": [
+      {
+        "start": "2000",
+        "end": "2006",
+        "size": 16,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "The Alemán–Ortega pact's January 2000 constitutional reform expanded the CSJ from 12 to 16 magistrates, split by quota between the PLC and the FSLN — the FSLN held a share of the bench while in opposition. Pre-2000 composition is not itemized here.",
+        "sources": [
+          "https://nacla.org/strange-bedfellows-aleman-ortega-pact/",
+          "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)"
+        ]
+      },
+      {
+        "start": "2007",
+        "end": "2009",
+        "size": 16,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "With Ortega back in office the FSLN's pact-era quota anchored growing control; in October 2009 a Constitutional Chamber session convened with FSLN-appointed magistrates set aside the ban on consecutive presidential re-election.",
+        "sources": [
+          "https://www.oas.org/en/iachr/reports/pdfs/2021_nicaragua-en.pdf",
+          "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)"
+        ]
+      },
+      {
+        "start": "2010",
+        "end": "present",
+        "size": 16,
+        "fspAppointed": null,
+        "control": "aligned",
+        "note": "Decree 3-2010 kept pro-government magistrates in office after their terms expired (Freedom House); the IACHR's 2021 report describes a judiciary subordinated to the executive, with no independent bloc remaining on the CSJ.",
+        "sources": [
+          "https://www.refworld.org/reference/annualreport/freehou/2013/en/63359",
+          "https://www.oas.org/en/iachr/reports/pdfs/2021_nicaragua-en.pdf"
+        ]
+      }
+    ],
     "justicesNote": "The CSJ (16 magistrates) is FSLN-aligned; individual members are not itemized here."
   },
   "sources": [
