@@ -177,5 +177,67 @@
         "https://en.wikipedia.org/wiki/National_Assembly_(Venezuela)"
       ]
     }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2015,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 167,
+      "majorityThreshold": 84,
+      "parties": [
+        {
+          "abbr": "MUD",
+          "name": "Mesa de la Unidad Democrática (opposition coalition)",
+          "seats": 112,
+          "align": "opposition"
+        },
+        {
+          "abbr": "GPP",
+          "name": "Gran Polo Patriótico (PSUV-led)",
+          "seats": 55,
+          "align": "government",
+          "fsp": true
+        }
+      ],
+      "government": {
+        "led": "Nicolás Maduro (PSUV)",
+        "fspInGovernment": true,
+        "hasMajority": false,
+        "note": "A landmark defeat for Chavismo: the opposition MUD won a two-thirds Assembly majority (later reduced to 109 after three Amazonas deputies were suspended). Maduro kept the presidency; from 2017 the government governed through the all-Chavista Constituent Assembly (ANC) and the Supreme Tribunal stripped the opposition-led Assembly of its powers."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2015_Venezuelan_parliamentary_election"
+      ]
+    },
+    {
+      "year": 2020,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 277,
+      "majorityThreshold": 139,
+      "parties": [
+        {
+          "abbr": "GPP",
+          "name": "Gran Polo Patriótico (PSUV-led)",
+          "seats": 253,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Participating minor/opposition parties",
+          "seats": 24,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Nicolás Maduro (PSUV)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The PSUV-led alliance regained a supermajority in an Assembly expanded to 277 seats. The main opposition BOYCOTTED the election, turnout was ~31%, and many governments and the EU did not recognise the result — it is widely disputed."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Venezuelan_parliamentary_election"
+      ]
+    }
   ]
 }
