@@ -2,7 +2,7 @@
   "country": "Paraguay",
   "code": "PY",
   "fspParty": "Frente Guasú / Alianza Patriótica para el Cambio (Lugo)",
-  "fspStatus": "affiliated (to verify)",
+  "fspStatus": "member (Frente Guasú — Lugo)",
   "fspPresidents": [
     "Fernando Lugo"
   ],
@@ -91,5 +91,53 @@
     "https://en.wikipedia.org/wiki/Guas%C3%BA_Front",
     "https://en.wikipedia.org/wiki/Fernando_Lugo",
     "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ],
+  "fspMembershipSources": [
+    "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+    "https://forodesaopaulo.org/partidos/"
+  ],
+  "fspParties": {
+    "current": [
+      "Frente Guasú (Fernando Lugo's left coalition)"
+    ],
+    "note": "Paraguay's FSP member is the Frente Guasú, the left coalition around Fernando Lugo. Paraguayan politics has been dominated by the Colorado Party (ANR) almost continuously; Lugo's 2008 win (as the broad anti-Colorado Alianza Patriótica para el Cambio) briefly broke that grip, but he never held a congressional majority and was removed by impeachment in 2012. The Frente Guasú holds only a small bloc of seats."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2008",
+      "chamber": "both",
+      "fspParty": "—",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "No FSP force in power; the Colorado Party dominated Congress after the end of the Stroessner dictatorship.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Colorado_Party_(Paraguay)"
+      ]
+    },
+    {
+      "start": "2008",
+      "end": "2012",
+      "chamber": "both",
+      "fspParty": "Frente Guasú / APC",
+      "fspBloc": "minority",
+      "inGovernment": true,
+      "seats": "Lugo won the presidency on a broad anti-Colorado ticket but the left held only a minority of Congress; he governed with the Liberals (PLRA) and was impeached and removed in 2012.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Fernando_Lugo"
+      ]
+    },
+    {
+      "start": "2012",
+      "end": "present",
+      "chamber": "both",
+      "fspParty": "Frente Guasú",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "Since Lugo's removal the Colorado Party has held the presidency; the Frente Guasú is a small opposition bloc.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Colorado_Party_(Paraguay)"
+      ]
+    }
   ]
 }

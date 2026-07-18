@@ -2,7 +2,7 @@
   "country": "Argentina",
   "code": "AR",
   "fspParty": "Peronist/Kirchnerist coalitions (PJ / FpV / FdT)",
-  "fspStatus": "affiliated (to verify)",
+  "fspStatus": "member (PJ / Kirchnerist Peronism — FpV / FdT)",
   "fspPresidents": [
     "Néstor Kirchner",
     "Cristina Fernández de Kirchner",
@@ -77,20 +77,172 @@
     "stillServing": "After the retirements of Highton (2021) and Maqueda (2024), the court fell below its 5-seat complement to 3 justices; President Milei's attempts to fill the seats by decree (Lijo, García-Mansilla) failed in the Senate (2025), leaving a deadlock as of 2026.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "Earlier history: the Corte Suprema was installed in 1863 (5 justices). In 1947 Perón's Congress removed 4 of the 5 justices; the court was expanded 5→7 (1958) and returned to 5 (1966); the 1976–83 junta replaced it. Reshaping the court by incoming governments was a long-running pattern before 1990.", "size": 5, "appointingGovernment": "various (1863–1989)", "fspRelated": false, "verified": true },
-      { "period": "1990", "type": "packing", "event": "Law 23.774 (Menem) expanded the court from 5 to 9, creating the 'automatic majority'.", "size": 9, "appointingGovernment": "Carlos Menem (PJ)", "fspRelated": false, "verified": true },
-      { "period": "2003", "type": "reform", "event": "Decree 222/03 (Néstor Kirchner) opened Supreme Court nominations to public scrutiny, applied to the post-Menem vacancies.", "size": 9, "appointingGovernment": "Néstor Kirchner (FpV)", "fspRelated": true, "verified": true },
-      { "period": "2006", "type": "reform", "event": "Law 26.183 (promoted by Cristina Fernández de Kirchner) reduced the court from 9 back to 5, reversing Menem's expansion.", "size": 5, "appointingGovernment": "Kirchnerist government (FpV)", "fspRelated": true, "verified": true },
-      { "period": "2024–present", "type": "composition", "event": "After Highton (2021) and Maqueda (2024) left, the court fell to 3 justices; Milei's decree appointments (Lijo, García-Mansilla) were rejected by the Senate in 2025, leaving the seats vacant amid a deadlock.", "size": 3, "appointingGovernment": "Javier Milei (LLA) — contested", "fspRelated": false, "verified": false }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "Earlier history: the Corte Suprema was installed in 1863 (5 justices). In 1947 Perón's Congress removed 4 of the 5 justices; the court was expanded 5→7 (1958) and returned to 5 (1966); the 1976–83 junta replaced it. Reshaping the court by incoming governments was a long-running pattern before 1990.",
+        "size": 5,
+        "appointingGovernment": "various (1863–1989)",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "1990",
+        "type": "packing",
+        "event": "Law 23.774 (Menem) expanded the court from 5 to 9, creating the 'automatic majority'.",
+        "size": 9,
+        "appointingGovernment": "Carlos Menem (PJ)",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2003",
+        "type": "reform",
+        "event": "Decree 222/03 (Néstor Kirchner) opened Supreme Court nominations to public scrutiny, applied to the post-Menem vacancies.",
+        "size": 9,
+        "appointingGovernment": "Néstor Kirchner (FpV)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2006",
+        "type": "reform",
+        "event": "Law 26.183 (promoted by Cristina Fernández de Kirchner) reduced the court from 9 back to 5, reversing Menem's expansion.",
+        "size": 5,
+        "appointingGovernment": "Kirchnerist government (FpV)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2024–present",
+        "type": "composition",
+        "event": "After Highton (2021) and Maqueda (2024) left, the court fell to 3 justices; Milei's decree appointments (Lijo, García-Mansilla) were rejected by the Senate in 2025, leaving the seats vacant amid a deadlock.",
+        "size": 3,
+        "appointingGovernment": "Javier Milei (LLA) — contested",
+        "fspRelated": false,
+        "verified": false
+      }
     ],
-    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina", "https://es.wikipedia.org/wiki/Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n"],
+    "courtHistorySources": [
+      "https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina",
+      "https://es.wikipedia.org/wiki/Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n"
+    ],
     "justices": [
-      { "name": "Ricardo Lorenzetti", "appointedBy": "Néstor Kirchner", "appointedParty": "FpV", "year": 2004, "fspAppointed": true, "status": "serving", "background": "Civil-law scholar; long-time court president (2007–2018)." },
-      { "name": "Horacio Rosatti", "appointedBy": "Mauricio Macri", "appointedParty": "Cambiemos/PRO", "year": 2016, "fspAppointed": false, "status": "serving (court president)", "background": "Former constitutionalist and ex-justice minister." },
-      { "name": "Carlos Rosenkrantz", "appointedBy": "Mauricio Macri", "appointedParty": "Cambiemos/PRO", "year": 2016, "fspAppointed": false, "status": "serving", "background": "Jurist; former university rector." }
+      {
+        "name": "Ricardo Lorenzetti",
+        "appointedBy": "Néstor Kirchner",
+        "appointedParty": "FpV",
+        "year": 2004,
+        "fspAppointed": true,
+        "status": "serving",
+        "background": "Civil-law scholar; long-time court president (2007–2018)."
+      },
+      {
+        "name": "Horacio Rosatti",
+        "appointedBy": "Mauricio Macri",
+        "appointedParty": "Cambiemos/PRO",
+        "year": 2016,
+        "fspAppointed": false,
+        "status": "serving (court president)",
+        "background": "Former constitutionalist and ex-justice minister."
+      },
+      {
+        "name": "Carlos Rosenkrantz",
+        "appointedBy": "Mauricio Macri",
+        "appointedParty": "Cambiemos/PRO",
+        "year": 2016,
+        "fspAppointed": false,
+        "status": "serving",
+        "background": "Jurist; former university rector."
+      }
     ]
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina"
+  ],
+  "fspMembershipSources": [
+    "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+    "https://www.cancilleria.gob.ar/es/actualidad/comunicados/esta-semana-se-reune-el-foro-de-sao-paulo-en-buenos-aires"
+  ],
+  "fspParties": {
+    "current": [
+      "Partido Justicialista (PJ)",
+      "Frente para la Victoria / Frente de Todos (Kirchnerist Peronism)"
+    ],
+    "note": "The Partido Justicialista (Peronism) is listed as an FSP member, together with Kirchnerist vehicles (Frente para la Victoria, Frente de Todos) and allied groups (Frente Grande, Partido Intransigente). Important caveat: Peronism is a broad movement spanning left to right — only its Kirchnerist wing is FSP-aligned, which is why the 1990s Menem and 2002–03 Duhalde (both PJ) presidencies are marked non-FSP while the Kirchners and Alberto Fernández are marked FSP. A precise seat-by-party table is deferred: Argentina renews only half its Chamber and a third of its Senate every two years, so any single chamber mixes two elections' winners and 'per-election' seat tables are easily misread."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2003",
+      "chamber": "lower",
+      "fspParty": "PJ (non-Kirchnerist)",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "Peronism governed under Menem in the 1990s and the Duhalde interim, but that PJ leadership was not the FSP-aligned Kirchnerist current; treated here as outside the FSP bloc.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2019_Argentine_general_election"
+      ]
+    },
+    {
+      "start": "2003",
+      "end": "2015",
+      "chamber": "lower",
+      "fspParty": "FpV",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "The Kirchners' Frente para la Victoria held the presidency and, for most of this period, working majorities in both chambers — with a mid-term dip after the 2009 elections.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2011_Argentine_general_election"
+      ]
+    },
+    {
+      "start": "2015",
+      "end": "2019",
+      "chamber": "lower",
+      "fspParty": "FpV",
+      "fspBloc": "plurality",
+      "inGovernment": false,
+      "seats": "Under Macri's Cambiemos government the Kirchnerist bloc was the largest opposition force but out of power.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2017_Argentine_legislative_election"
+      ]
+    },
+    {
+      "start": "2019",
+      "end": "2021",
+      "chamber": "lower",
+      "fspParty": "FdT",
+      "fspBloc": "plurality",
+      "inGovernment": true,
+      "seats": "Alberto Fernández's Frente de Todos was the largest bloc in the Chamber of Deputies (~119 of 257) but short of a 129-seat majority; it did hold a Senate majority (~41 of 72) over this period.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2019_Argentine_general_election"
+      ]
+    },
+    {
+      "start": "2021",
+      "end": "2023",
+      "chamber": "lower",
+      "fspParty": "FdT",
+      "fspBloc": "plurality",
+      "inGovernment": true,
+      "seats": "The 2021 midterms cost the Frente de Todos its Senate majority — the first time Peronism lost Senate control since the 1983 return to democracy — and left it short of a majority in the Chamber too.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2021_Argentine_legislative_election"
+      ]
+    },
+    {
+      "start": "2023",
+      "end": "present",
+      "chamber": "lower",
+      "fspParty": "Unión por la Patria",
+      "fspBloc": "plurality",
+      "inGovernment": false,
+      "seats": "Under the libertarian Milei government the Kirchnerist bloc (now Unión por la Patria) is the largest opposition force but out of power.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2023_Argentine_general_election"
+      ]
+    }
   ]
 }

@@ -2,7 +2,7 @@
   "country": "Ecuador",
   "code": "EC",
   "fspParty": "Movimiento PAIS (Alianza PAIS)",
-  "fspStatus": "affiliated (to verify)",
+  "fspStatus": "member (Alianza PAIS / Revolución Ciudadana — Correísmo)",
   "fspPresidents": [
     "Rafael Correa"
   ],
@@ -105,16 +105,159 @@
     "stillServing": "Post-Correa governments have continued to reshape the Judicial Council and the courts; the bench turns over through the merit-competition mechanism. Current members not itemized here.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "Amid recurrent instability the older Corte Suprema was repeatedly reshaped across military and civilian governments.", "size": null, "appointingGovernment": "various (pre-1990)", "fspRelated": false, "verified": false },
-      { "period": "2004", "type": "purge", "event": "President Gutiérrez and his congressional allies dissolved and re-packed the Supreme Court (the 'Pichi Corte') — the move triggered the 2005 crisis that ousted him.", "size": null, "appointingGovernment": "Lucio Gutiérrez (PSP)", "fspRelated": false, "verified": true },
-      { "period": "2008", "type": "reform", "event": "Correa's new Constitution replaced the Corte Suprema with the Corte Nacional de Justicia and created the Corte Constitucional.", "size": 21, "appointingGovernment": "Rafael Correa (Alianza PAIS)", "fspRelated": true, "verified": true },
-      { "period": "2011", "type": "reform", "event": "A referendum restructured the judiciary via a transitional Consejo de la Judicatura that overhauled judge selection — critics said it gave the executive undue influence; supporters cited reform of a dysfunctional system.", "size": 21, "appointingGovernment": "Rafael Correa (Alianza PAIS)", "fspRelated": true, "verified": true },
-      { "period": "2018–present", "type": "composition", "event": "Post-Correa governments (Moreno, Lasso, Noboa) reshaped the Judicial Council and the bench again through merit competitions.", "size": 21, "appointingGovernment": "post-Correa governments", "fspRelated": false, "verified": false }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "Amid recurrent instability the older Corte Suprema was repeatedly reshaped across military and civilian governments.",
+        "size": null,
+        "appointingGovernment": "various (pre-1990)",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "2004",
+        "type": "purge",
+        "event": "President Gutiérrez and his congressional allies dissolved and re-packed the Supreme Court (the 'Pichi Corte') — the move triggered the 2005 crisis that ousted him.",
+        "size": null,
+        "appointingGovernment": "Lucio Gutiérrez (PSP)",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2008",
+        "type": "reform",
+        "event": "Correa's new Constitution replaced the Corte Suprema with the Corte Nacional de Justicia and created the Corte Constitucional.",
+        "size": 21,
+        "appointingGovernment": "Rafael Correa (Alianza PAIS)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2011",
+        "type": "reform",
+        "event": "A referendum restructured the judiciary via a transitional Consejo de la Judicatura that overhauled judge selection — critics said it gave the executive undue influence; supporters cited reform of a dysfunctional system.",
+        "size": 21,
+        "appointingGovernment": "Rafael Correa (Alianza PAIS)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2018–present",
+        "type": "composition",
+        "event": "Post-Correa governments (Moreno, Lasso, Noboa) reshaped the Judicial Council and the bench again through merit competitions.",
+        "size": 21,
+        "appointingGovernment": "post-Correa governments",
+        "fspRelated": false,
+        "verified": false
+      }
     ],
-    "courtHistorySources": ["https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"],
+    "courtHistorySources": [
+      "https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"
+    ],
     "justicesNote": "Judges are selected by merit competition via the Consejo de la Judicatura; the bench turns over and is not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/National_Court_of_Justice_(Ecuador)"
+  ],
+  "fspMembershipSources": [
+    "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+    "https://forodesaopaulo.org/partidos/"
+  ],
+  "fspParties": {
+    "current": [
+      "Alianza PAIS / Revolución Ciudadana (Correísmo)",
+      "Partido Comunista del Ecuador",
+      "Partido Socialista Ecuatoriano"
+    ],
+    "note": "Ecuador's FSP member is Rafael Correa's movement — Alianza PAIS, now Revolución Ciudadana (UNES) — alongside smaller left parties. Important split: Correa's successor Lenín Moreno (2017–2021) broke with Correísmo and turned against it, which is why he is marked non-FSP even though he was elected on the PAIS ticket. Since 2017 the FSP-aligned bloc is Correísmo/RC, in opposition."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2007",
+      "chamber": "unicameral",
+      "fspParty": "—",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "Before Correa, Ecuador had no FSP force in power; its traditional left was fragmented across a volatile party system.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/National_Assembly_(Ecuador)"
+      ]
+    },
+    {
+      "start": "2007",
+      "end": "2017",
+      "chamber": "unicameral",
+      "fspParty": "Alianza PAIS",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "Correa's Alianza PAIS won successive Assembly majorities, peaking at a two-thirds supermajority (100 of 137) in 2013.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2013_Ecuadorian_general_election"
+      ]
+    },
+    {
+      "start": "2017",
+      "end": "2021",
+      "chamber": "unicameral",
+      "fspParty": "Revolución Ciudadana",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "The PAIS split: President Moreno broke with Correísmo, which reorganised as Revolución Ciudadana in opposition.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/National_Assembly_(Ecuador)"
+      ]
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "chamber": "unicameral",
+      "fspParty": "Revolución Ciudadana (UNES)",
+      "fspBloc": "plurality",
+      "inGovernment": false,
+      "seats": "Correísmo (UNES) has been the largest single bloc in the Assembly since 2021 but without a majority and out of the presidency (Lasso, then Noboa).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2023_Ecuadorian_general_election"
+      ]
+    }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2013,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 137,
+      "majorityThreshold": 69,
+      "parties": [
+        {
+          "abbr": "PAIS",
+          "name": "Movimiento Alianza PAIS",
+          "seats": 100,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "CREO",
+          "name": "Movimiento CREO",
+          "seats": 11,
+          "align": "opposition"
+        },
+        {
+          "abbr": "others",
+          "name": "PSC, PSP, Pachakutik, Avanza and minor lists",
+          "seats": 26,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Rafael Correa (Alianza PAIS)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "Alianza PAIS held 100 of 137 seats — a two-thirds supermajority in its own right, enough to pass constitutional amendments without any other party."
+      },
+      "sources": [
+        "http://archive.ipu.org/parline-e/reports/arc/2095_13.htm",
+        "https://en.wikipedia.org/wiki/2013_Ecuadorian_general_election"
+      ]
+    }
   ]
 }
