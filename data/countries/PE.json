@@ -90,5 +90,106 @@
     "https://en.wikipedia.org/wiki/List_of_presidents_of_Peru",
     "https://en.wikipedia.org/wiki/Ollanta_Humala",
     "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ],
+  "fspParties": {
+    "current": [
+      "Partido Nacionalista Peruano (PNP)"
+    ],
+    "note": "Peru's FSP member is the Partido Nacionalista Peruano (Ollanta Humala), per Regalado's 2008 roster. In 2011 the PNP led the Gana Perú electoral alliance (which also included smaller left parties). The PNP has had no congressional presence since Humala left office in 2016."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2011",
+      "chamber": "unicameral",
+      "fspParty": "PNP",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "The PNP (founded 2005) had no presence before 2011; Congress was dominated by Fujimorismo, APRA and Perú Posible.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2011_Peruvian_general_election"
+      ]
+    },
+    {
+      "start": "2011",
+      "end": "2016",
+      "chamber": "unicameral",
+      "fspParty": "PNP (Gana Perú)",
+      "fspBloc": "plurality",
+      "inGovernment": true,
+      "seats": "Gana Perú won 47 of 130 seats — the largest bloc but short of a majority; Humala governed with a working majority assembled with Perú Posible.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2011_Peruvian_general_election"
+      ]
+    },
+    {
+      "start": "2016",
+      "end": "present",
+      "chamber": "unicameral",
+      "fspParty": "PNP",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "The PNP won no seats in 2016 and has been absent from Congress since; Peru's post-2016 left (e.g. Perú Libre) is not an FSP member.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2016_Peruvian_general_election"
+      ]
+    }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2011,
+      "chamber": "Congreso de la República",
+      "totalSeats": 130,
+      "majorityThreshold": 66,
+      "parties": [
+        {
+          "abbr": "Gana Perú",
+          "name": "Gana Perú (Partido Nacionalista Peruano-led alliance)",
+          "seats": 47,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "Fuerza 2011",
+          "name": "Fuerza 2011 (Fujimorismo)",
+          "seats": 37,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Perú Posible",
+          "name": "Alianza Perú Posible",
+          "seats": 21,
+          "align": "mixed"
+        },
+        {
+          "abbr": "AGC",
+          "name": "Alianza por el Gran Cambio",
+          "seats": 12,
+          "align": "opposition"
+        },
+        {
+          "abbr": "ASN",
+          "name": "Alianza Solidaridad Nacional",
+          "seats": 9,
+          "align": "opposition"
+        },
+        {
+          "abbr": "APRA",
+          "name": "Alianza Popular Revolucionaria Americana",
+          "seats": 4,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Ollanta Humala (PNP / Gana Perú)",
+        "fspInGovernment": true,
+        "hasMajority": false,
+        "note": "Gana Perú was the largest bloc (47/130) but well short of a 66-seat majority. Humala assembled a working majority with Alejandro Toledo's Perú Posible (21 seats); that partnership was fragile and the government's congressional support fluctuated over the term."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2011_Peruvian_general_election",
+        "https://data.ipu.org/election-summary/HTML/2251_11.htm"
+      ]
+    }
   ]
 }

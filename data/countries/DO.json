@@ -63,5 +63,133 @@
     "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic",
     "https://en.wikipedia.org/wiki/Dominican_Liberation_Party",
     "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ],
+  "fspParties": {
+    "current": [
+      "Partido de la Liberación Dominicana (PLD)"
+    ],
+    "note": "The Dominican Republic's FSP member is the Partido de la Liberación Dominicana (PLD), founded by Juan Bosch and listed on Regalado's 2008 roster. In government the PLD governed as a broadly centrist, pro-business party — its FSP affiliation is documented but its policy record is not straightforwardly left. It held the presidency 1996–2000 and 2004–2020 and lost power in 2020."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "1996",
+      "chamber": "both",
+      "fspParty": "PLD",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "The PLD was a rising third force behind Balaguer's PRSC and the PRD; it first won the presidency in 1996.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dominican_Liberation_Party"
+      ]
+    },
+    {
+      "start": "1996",
+      "end": "2020",
+      "chamber": "both",
+      "fspParty": "PLD",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "The PLD held the presidency for all but one term (2000–2004) and commanded large congressional majorities in both chambers through the 2000s–2010s, peaking at roughly two-thirds after 2016.",
+      "notes": "Except for the 2000–2004 PRD interlude, when the PLD sat in opposition.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2016_Dominican_Republic_general_election",
+        "https://en.wikipedia.org/wiki/Dominican_Liberation_Party"
+      ]
+    },
+    {
+      "start": "2020",
+      "end": "present",
+      "chamber": "both",
+      "fspParty": "PLD",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "The PLD lost the 2020 presidency and its congressional majority to Luis Abinader's PRM (which won its own majorities again in 2024); the PLD is now a diminished opposition party.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Dominican_Republic_general_election"
+      ]
+    }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2016,
+      "chamber": "Cámara de Diputados",
+      "totalSeats": 190,
+      "majorityThreshold": 96,
+      "parties": [
+        {
+          "abbr": "PLD",
+          "name": "Partido de la Liberación Dominicana",
+          "seats": 106,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PRM",
+          "name": "Partido Revolucionario Moderno",
+          "seats": 42,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRSC",
+          "name": "Partido Reformista Social Cristiano",
+          "seats": 17,
+          "align": "mixed"
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties (PRD and minor lists)",
+          "seats": 25,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Danilo Medina (PLD)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The PLD won an outright majority (106/190) in its own right and, with allied parties in its 'Bloque Progresista', controlled well over two-thirds of the chamber."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2016_Dominican_Republic_general_election",
+        "https://electionguide.org/elections/id/2550/"
+      ]
+    },
+    {
+      "year": 2016,
+      "chamber": "Senado",
+      "totalSeats": 32,
+      "majorityThreshold": 17,
+      "parties": [
+        {
+          "abbr": "PLD",
+          "name": "Partido de la Liberación Dominicana",
+          "seats": 26,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PRM",
+          "name": "Partido Revolucionario Moderno",
+          "seats": 2,
+          "align": "opposition"
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties (PRSC, PRD and allies)",
+          "seats": 4,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Danilo Medina (PLD)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The PLD held 26 of 32 Senate seats — a commanding supermajority."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2016_Dominican_Republic_general_election",
+        "https://electionguide.org/elections/id/2549/"
+      ]
+    }
   ]
 }
