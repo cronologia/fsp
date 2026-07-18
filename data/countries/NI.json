@@ -222,6 +222,44 @@
         "https://data.ipu.org/parliament/NI/NI-LC01/election/NI-LC01-E20211107/",
         "https://freedomhouse.org/country/nicaragua/freedom-world/2022"
       ]
+    },
+    {
+      "year": 2011,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 92,
+      "majorityThreshold": 47,
+      "parties": [
+        {
+          "abbr": "FSLN",
+          "name": "Frente Sandinista de Liberación Nacional",
+          "seats": 63,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PLI",
+          "name": "Partido Liberal Independiente (Gadea)",
+          "seats": 27,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PLC",
+          "name": "Partido Liberal Constitucionalista",
+          "seats": 2,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Daniel Ortega (FSLN)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The FSLN jumped to 63 of 92 seats (90 elected plus two ex-officio) — its first supermajority, above the two-thirds needed to amend the constitution, later used for the 2014 reform abolishing presidential term limits. The election itself was contested: the constitution then barred consecutive re-election, and Ortega's candidacy rested on a 2009 ruling by the FSLN-aligned Supreme Court's constitutional chamber setting the ban aside. Runner-up Fabio Gadea (PLI) rejected the results as fraudulent, and EU and OAS observer missions reported serious irregularities and a lack of transparency; the government and its allies maintained the vote was valid."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2011_Nicaraguan_general_election",
+        "https://www.electionguide.org/elections/id/1610/",
+        "http://archive.ipu.org/parline/reports/2235_E.htm"
+      ]
     }
   ]
 }

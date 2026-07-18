@@ -364,6 +364,158 @@
         "https://en.wikipedia.org/wiki/2024_Mexican_Senate_election",
         "https://www.electionguide.org/elections/id/4312/"
       ]
+    },
+    {
+      "year": 2018,
+      "chamber": "Cámara de Diputados",
+      "totalSeats": 500,
+      "majorityThreshold": 251,
+      "parties": [
+        {
+          "abbr": "MORENA",
+          "name": "Movimiento Regeneración Nacional",
+          "seats": 191,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PT",
+          "name": "Partido del Trabajo",
+          "seats": 61,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PES",
+          "name": "Partido Encuentro Social",
+          "seats": 56,
+          "align": "government"
+        },
+        {
+          "abbr": "PAN",
+          "name": "Partido Acción Nacional",
+          "seats": 81,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRI",
+          "name": "Partido Revolucionario Institucional",
+          "seats": 45,
+          "align": "opposition"
+        },
+        {
+          "abbr": "MC",
+          "name": "Movimiento Ciudadano",
+          "seats": 27,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRD",
+          "name": "Partido de la Revolución Democrática",
+          "seats": 21,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "PVEM",
+          "name": "Partido Verde Ecologista de México",
+          "seats": 16,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PNA",
+          "name": "Nueva Alianza",
+          "seats": 2,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Andrés Manuel López Obrador (MORENA)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "AMLO's landslide. The FSP members MORENA (191) and PT (61) together won 252 of 500 — a bare majority in their own right; their 'Juntos Haremos Historia' coalition (308) added the PES, a socially conservative evangelical party that is NOT an FSP member. The PRD — the FSP's historic Mexican member and AMLO's former party — ran with the opposition 'Por México al Frente'. Seat figures are the INE's election allocation; the PES lost its registration soon after, and party-switching at the September 2018 seating lifted MORENA's bench to about 255 (IPU Parline's figure)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2018_Mexican_general_election",
+        "https://data.ipu.org/parliament/MX/MX-LC01/election/MX-LC01-E20180701/",
+        "https://www.congress.gov/crs_external_products/IF/PDF/IF10867/IF10867.5.pdf"
+      ]
+    },
+    {
+      "year": 2018,
+      "chamber": "Senado",
+      "totalSeats": 128,
+      "majorityThreshold": 65,
+      "parties": [
+        {
+          "abbr": "MORENA",
+          "name": "Movimiento Regeneración Nacional",
+          "seats": 55,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PT",
+          "name": "Partido del Trabajo",
+          "seats": 6,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PES",
+          "name": "Partido Encuentro Social",
+          "seats": 8,
+          "align": "government"
+        },
+        {
+          "abbr": "PAN",
+          "name": "Partido Acción Nacional",
+          "seats": 23,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRI",
+          "name": "Partido Revolucionario Institucional",
+          "seats": 14,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRD",
+          "name": "Partido de la Revolución Democrática",
+          "seats": 8,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "MC",
+          "name": "Movimiento Ciudadano",
+          "seats": 7,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PVEM",
+          "name": "Partido Verde Ecologista de México",
+          "seats": 6,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PNA",
+          "name": "Nueva Alianza",
+          "seats": 1,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Andrés Manuel López Obrador (MORENA)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The 'Juntos Haremos Historia' coalition won 69 of 128 Senate seats — a majority, but far from the two-thirds (86) needed for constitutional change. The FSP members MORENA (55) and PT (6) held 61 seats between them, short of a majority without the non-FSP PES; as in the Chamber, later party-switching lifted MORENA's bench (IPU Parline records 58)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2018_Mexican_general_election",
+        "https://data.ipu.org/parliament/MX/MX-UC01/election/MX-UC01-E20180701/",
+        "https://www.congress.gov/crs_external_products/IF/PDF/IF10867/IF10867.5.pdf"
+      ]
     }
   ]
 }

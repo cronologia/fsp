@@ -583,6 +583,168 @@
         "https://en.wikipedia.org/wiki/2018_Brazilian_general_election",
         "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20181007/"
       ]
+    },
+    {
+      "year": 2006,
+      "chamber": "Câmara dos Deputados",
+      "totalSeats": 513,
+      "majorityThreshold": 257,
+      "parties": [
+        {
+          "abbr": "PMDB",
+          "name": "Partido do Movimento Democrático Brasileiro",
+          "seats": 89,
+          "align": "government"
+        },
+        {
+          "abbr": "PT",
+          "name": "Partido dos Trabalhadores",
+          "seats": 83,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PSDB",
+          "name": "Partido da Social Democracia Brasileira",
+          "seats": 66,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PFL",
+          "name": "Partido da Frente Liberal (from 2007, DEM)",
+          "seats": 65,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PP",
+          "name": "Partido Progressista",
+          "seats": 41,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PSB",
+          "name": "Partido Socialista Brasileiro",
+          "seats": 27,
+          "align": "government"
+        },
+        {
+          "abbr": "PDT",
+          "name": "Partido Democrático Trabalhista",
+          "seats": 24,
+          "align": "government"
+        },
+        {
+          "abbr": "PL",
+          "name": "Partido Liberal (from 2007, PR)",
+          "seats": 23,
+          "align": "government"
+        },
+        {
+          "abbr": "PTB",
+          "name": "Partido Trabalhista Brasileiro",
+          "seats": 22,
+          "align": "government"
+        },
+        {
+          "abbr": "PPS",
+          "name": "Partido Popular Socialista",
+          "seats": 22,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PCdoB",
+          "name": "Partido Comunista do Brasil",
+          "seats": 13,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties (PV, PSC, PSOL and smaller lists)",
+          "seats": 38,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Luiz Inácio Lula da Silva (PT)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "Lula's re-election. The two FSP members, PT (83) and PCdoB (13), together held 96 of 513 seats — well short of a majority. The second-term government was sustained by a broad coalition in which the PMDB, now the largest party, was the key partner (alongside PSB, PDT, PR, PTB and, in practice, much of the PP); the PSDB and PFL/DEM led the opposition."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2006_Brazilian_general_election",
+        "https://data.ipu.org/election-summary/HTML/2043_06.htm",
+        "https://www.electionguide.org/elections/id/381/"
+      ]
+    },
+    {
+      "year": 2002,
+      "chamber": "Câmara dos Deputados",
+      "totalSeats": 513,
+      "majorityThreshold": 257,
+      "parties": [
+        {
+          "abbr": "PT",
+          "name": "Partido dos Trabalhadores",
+          "seats": 91,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PFL",
+          "name": "Partido da Frente Liberal",
+          "seats": 84,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PMDB",
+          "name": "Partido do Movimento Democrático Brasileiro",
+          "seats": 75,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PSDB",
+          "name": "Partido da Social Democracia Brasileira",
+          "seats": 70,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PPB",
+          "name": "Partido Progressista Brasileiro (from 2003, PP)",
+          "seats": 49,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PL",
+          "name": "Partido Liberal",
+          "seats": 26,
+          "align": "government"
+        },
+        {
+          "abbr": "PCdoB",
+          "name": "Partido Comunista do Brasil",
+          "seats": 11,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Other parties (PTB, PSB, PDT, PPS, PV and 10+ smaller lists)",
+          "seats": 107,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Luiz Inácio Lula da Silva (PT)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "Lula's first victory made the PT the largest party for the first time, but the FSP members PT (91) and PCdoB (11) held only 102 of 513 seats. The government's working majority was a broad coalition built with the PL (of vice-president José Alencar), PTB, PSB, PDT, PPS, PV and, from 2004, the PMDB; managing it was fraught — the 2005 'mensalão' scandal, in which government operatives were convicted of buying legislators' votes, grew directly out of sustaining this coalition. Minor-party totals vary slightly by source (election-day vs sworn-in figures); the PCdoB figure follows FGV's Atlas (11 elected in 2002)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2002_Brazilian_general_election",
+        "https://pdba.georgetown.edu/Elecdata/Brazil/dip02.html",
+        "https://atlas.fgv.br/verbete/6071"
+      ]
     }
   ],
   "fspParties": {

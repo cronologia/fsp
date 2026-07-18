@@ -345,6 +345,167 @@
       "sources": [
         "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election"
       ]
+    },
+    {
+      "year": 2009,
+      "chamber": "Cámara de Representantes",
+      "totalSeats": 99,
+      "majorityThreshold": 50,
+      "parties": [
+        {
+          "abbr": "FA",
+          "name": "Frente Amplio",
+          "seats": 50,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 30,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PC",
+          "name": "Partido Colorado",
+          "seats": 17,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PI",
+          "name": "Partido Independiente",
+          "seats": 2,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "José Mujica (Frente Amplio)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The FA retained its outright majority — exactly 50 of 99 — alongside Mujica's first-round-short, runoff-won presidency, keeping single-party control of both chambers for a second consecutive term."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2009_Uruguayan_general_election",
+        "https://data.ipu.org/election-summary/HTML/2341_09.htm",
+        "https://www.electionguide.org/elections/id/456/"
+      ]
+    },
+    {
+      "year": 2009,
+      "chamber": "Cámara de Senadores",
+      "totalSeats": 30,
+      "majorityThreshold": 16,
+      "parties": [
+        {
+          "abbr": "FA",
+          "name": "Frente Amplio",
+          "seats": 16,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 9,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PC",
+          "name": "Partido Colorado",
+          "seats": 5,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "José Mujica (Frente Amplio)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "FA Senate majority retained (16 of 30, plus the vice-president presiding)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2009_Uruguayan_general_election",
+        "https://www.electionguide.org/elections/id/967/"
+      ]
+    },
+    {
+      "year": 2004,
+      "chamber": "Cámara de Representantes",
+      "totalSeats": 99,
+      "majorityThreshold": 50,
+      "parties": [
+        {
+          "abbr": "FA",
+          "name": "Frente Amplio (EP-FA-Nueva Mayoría)",
+          "seats": 52,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 36,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PC",
+          "name": "Partido Colorado",
+          "seats": 10,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PI",
+          "name": "Partido Independiente",
+          "seats": 1,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Tabaré Vázquez (Frente Amplio)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "Historic breakthrough: the FA won the presidency in the first round and its first-ever absolute majorities in BOTH chambers, ending some 170 years of Colorado/Nacional two-party dominance. Unusually for an FSP-member government, the FA's majority was single-party (the FA is itself a coalition of left factions that contests elections as one bloc), so it governed without needing outside partners."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2004_Uruguayan_general_election",
+        "https://electionguide.org/elections/id/338/"
+      ]
+    },
+    {
+      "year": 2004,
+      "chamber": "Cámara de Senadores",
+      "totalSeats": 30,
+      "majorityThreshold": 16,
+      "parties": [
+        {
+          "abbr": "FA",
+          "name": "Frente Amplio (EP-FA-Nueva Mayoría)",
+          "seats": 16,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 11,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PC",
+          "name": "Partido Colorado",
+          "seats": 3,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Tabaré Vázquez (Frente Amplio)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "First-ever FA Senate majority (16 of 30, plus the vice-president presiding)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2004_Uruguayan_general_election",
+        "https://electionguide.org/elections/id/338/"
+      ]
     }
   ],
   "fspMembershipSources": [

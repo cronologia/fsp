@@ -272,6 +272,94 @@
   ],
   "legislativeComposition": [
     {
+      "year": 2023,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 137,
+      "majorityThreshold": 69,
+      "parties": [
+        {
+          "abbr": "RC",
+          "name": "Revolución Ciudadana (RC5, Correísmo)",
+          "seats": 52,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "Construye",
+          "name": "Movimiento Construye",
+          "seats": 29,
+          "align": "opposition"
+        },
+        {
+          "abbr": "ADN",
+          "name": "Acción Democrática Nacional (Noboa)",
+          "seats": 14,
+          "align": "government"
+        },
+        {
+          "abbr": "others",
+          "name": "PSC, Pachakutik, local movements and independents",
+          "seats": 42,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Daniel Noboa (ADN)",
+        "fspInGovernment": false,
+        "hasMajority": false,
+        "note": "Snap election after President Lasso dissolved the Assembly ('muerte cruzada'); the new Assembly served only a truncated 2023–2025 term. Correísmo's Revolución Ciudadana was again the largest bloc (52 of 137) but stayed in opposition: Daniel Noboa won the presidency with ADN holding just 14 seats, governing through shifting pacts. Construye's presidential candidate Fernando Villavicencio was assassinated during the campaign. Bench sizes shifted slightly at seating as alliance members regrouped."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2023_Ecuadorian_general_election",
+        "https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20230820/",
+        "https://www.eluniverso.com/noticias/politica/asi-esta-conformada-la-asamblea-nacional-del-ecuador-para-el-periodo-2023-2025-nota/"
+      ]
+    },
+    {
+      "year": 2017,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 137,
+      "majorityThreshold": 69,
+      "parties": [
+        {
+          "abbr": "PAIS",
+          "name": "Movimiento Alianza PAIS",
+          "seats": 74,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "CREO-SUMA",
+          "name": "Alianza CREO–SUMA",
+          "seats": 34,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PSC",
+          "name": "Partido Social Cristiano",
+          "seats": 15,
+          "align": "opposition"
+        },
+        {
+          "abbr": "others",
+          "name": "Pachakutik, Izquierda Democrática, PSP, Fuerza Ecuador and local movements",
+          "seats": 14,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Lenín Moreno (Alianza PAIS)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "PAIS kept an absolute majority (74 of 137, down from 100 in 2013) and Moreno won the presidency on its ticket — but within months he broke with Rafael Correa, and the Correísta wing (roughly 30 assembly members) split off into opposition. The majority elected here therefore stopped being FSP-aligned mid-term: from 2018 the FSP-aligned bloc was the Revolución Ciudadana rump in opposition, while Moreno's remaining PAIS governed from the centre-right with opposition votes."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2017_Ecuadorian_general_election",
+        "https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20170219/",
+        "https://www.everycrsreport.com/reports/IF10581.html"
+      ]
+    },
+    {
       "year": 2013,
       "chamber": "Asamblea Nacional",
       "totalSeats": 137,

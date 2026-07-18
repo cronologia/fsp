@@ -251,6 +251,112 @@
   ],
   "legislativeComposition": [
     {
+      "year": 2025,
+      "chamber": "Cámara de Diputados",
+      "totalSeats": 130,
+      "majorityThreshold": 66,
+      "parties": [
+        {
+          "abbr": "PDC",
+          "name": "Partido Demócrata Cristiano (Rodrigo Paz)",
+          "seats": 49,
+          "align": "government"
+        },
+        {
+          "abbr": "Libre",
+          "name": "Alianza Libre (Jorge Quiroga)",
+          "seats": 39,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Unidad",
+          "name": "Bloque de Unidad (Samuel Doria Medina)",
+          "seats": 26,
+          "align": "opposition"
+        },
+        {
+          "abbr": "AP",
+          "name": "Alianza Popular (Andrónico Rodríguez)",
+          "seats": 8,
+          "align": "opposition"
+        },
+        {
+          "abbr": "APB-Súmate",
+          "name": "Autonomía Para Bolivia – Súmate",
+          "seats": 5,
+          "align": "opposition"
+        },
+        {
+          "abbr": "MAS-IPSP",
+          "name": "Movimiento al Socialismo",
+          "seats": 2,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Indigenous special-seat caucus (Bia Yuqui)",
+          "seats": 1,
+          "align": "independent"
+        }
+      ],
+      "government": {
+        "led": "Rodrigo Paz (PDC)",
+        "fspInGovernment": false,
+        "hasMajority": false,
+        "note": "The collapse of the MAS era: the splintered FSP member fell from 75 seats to 2 (the left vote also split toward Andrónico Rodríguez's Alianza Popular, which is not a documented FSP member). No bloc won a majority; Paz — winner of the October runoff over Quiroga — governs the chamber through pacts among the PDC, Unidad and others."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
+        "https://fuentedirecta.oep.org.bo/noticia/elecciones-generales-2025-cinco-organizaciones-politicas-tendran-representacion-en-la-asamblea-legislativa-plurinacional/",
+        "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/",
+        "https://es.wikipedia.org/wiki/C%C3%A1mara_de_Diputados_de_Bolivia"
+      ]
+    },
+    {
+      "year": 2025,
+      "chamber": "Cámara de Senadores",
+      "totalSeats": 36,
+      "majorityThreshold": 19,
+      "parties": [
+        {
+          "abbr": "PDC",
+          "name": "Partido Demócrata Cristiano (Rodrigo Paz)",
+          "seats": 16,
+          "align": "government"
+        },
+        {
+          "abbr": "Libre",
+          "name": "Alianza Libre (Jorge Quiroga)",
+          "seats": 12,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Unidad",
+          "name": "Bloque de Unidad (Samuel Doria Medina)",
+          "seats": 7,
+          "align": "opposition"
+        },
+        {
+          "abbr": "APB-Súmate",
+          "name": "Autonomía Para Bolivia – Súmate",
+          "seats": 1,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Rodrigo Paz (PDC)",
+        "fspInGovernment": false,
+        "hasMajority": false,
+        "note": "For the first time since 2005 the MAS won no Senate seats at all; the FSP presence in the upper house dropped from a 21-seat majority to zero. The PDC is the largest bench (16 of 36) but short of a majority."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
+        "https://fuentedirecta.oep.org.bo/noticia/elecciones-generales-2025-cinco-organizaciones-politicas-tendran-representacion-en-la-asamblea-legislativa-plurinacional/",
+        "https://data.ipu.org/parliament/BO/BO-UC01/election/BO-UC01-E20250817/"
+      ]
+    },
+    {
       "year": 2020,
       "chamber": "Cámara de Diputados",
       "totalSeats": 130,

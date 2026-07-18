@@ -112,6 +112,44 @@
   ],
   "legislativeComposition": [
     {
+      "year": 2020,
+      "chamber": "Cámara de Diputados",
+      "totalSeats": 190,
+      "majorityThreshold": 96,
+      "parties": [
+        {
+          "abbr": "PRM",
+          "name": "Partido Revolucionario Moderno",
+          "seats": 86,
+          "align": "government"
+        },
+        {
+          "abbr": "PLD",
+          "name": "Partido de la Liberación Dominicana",
+          "seats": 75,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Fuerza del Pueblo, PRSC, PRD and minor parties",
+          "seats": 29,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Luis Abinader (PRM)",
+        "fspInGovernment": false,
+        "hasMajority": true,
+        "note": "The end of 16 years of PLD rule: the FSP member fell from 106 to 75 seats and lost the presidency. The PLD had also split — Leonel Fernández's breakaway Fuerza del Pueblo drew away part of its vote. The PRM alone (86 of 190) fell just short of an absolute majority, but with allied minor parties the incoming Abinader government controlled the chamber (per CSIS) and swept most Senate races."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Dominican_Republic_general_election",
+        "https://data.ipu.org/parliament/DO/DO-LC01/election/DO-LC01-E20200705/",
+        "https://www.csis.org/analysis/outcome-dominican-republic-general-elections"
+      ]
+    },
+    {
       "year": 2016,
       "chamber": "Cámara de Diputados",
       "totalSeats": 190,
