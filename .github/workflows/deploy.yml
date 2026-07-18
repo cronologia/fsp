@@ -39,6 +39,9 @@ jobs:
       - name: Validate data
         run: node scripts/validate-data.js
 
+      - name: Run tests
+        run: node --test
+
       - name: Build
         run: node build.js
 

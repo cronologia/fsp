@@ -1392,4 +1392,8 @@ function main() {
   console.log(`Built docs/index.html (${count} meetings, ${data.parties.length} parties, ${data.references.length} references, ${archivedRefs} with archive fallback) + ${countries.length} country pages + ${archivedDocs} preserved documents.`);
 }
 
-main();
+// Run the build only when invoked directly; when required (tests) just expose the
+// pure helpers so they can be unit-tested without generating docs/.
+if (require.main === module) main();
+
+module.exports = { esc, ptlYear, ptlStateFor, legStateFor, courtEventYears };
