@@ -2,7 +2,7 @@
   "country": "Peru",
   "code": "PE",
   "fspParty": "Partido Nacionalista Peruano (Humala)",
-  "fspStatus": "member (Partido Nacionalista Peruano, per Regalado 2008)",
+  "fspStatus": "member (Partido Nacionalista Peruano per Regalado 2008; Perú Libre since 2018/2020)",
   "fspPresidents": [
     "Ollanta Humala"
   ],
@@ -69,15 +69,32 @@
       "party": "Perú Libre",
       "start": "2021",
       "end": "2022",
-      "fsp": false,
-      "notes": "Left-wing, but Perú Libre's FSP membership is not established here — not counted as FSP pending sourcing (#4)."
+      "fsp": true,
+      "notes": "Perú Libre joined the FSP in 2018–2020, before Castillo's 2021 win on its ticket. Removed and arrested after his December 2022 attempt to dissolve Congress."
     },
     {
       "name": "Dina Boluarte",
       "party": "independent (ex-Perú Libre)",
       "start": "2022",
+      "end": "2025",
+      "fsp": false,
+      "notes": "Impeached and removed 10 October 2025."
+    },
+    {
+      "name": "José Jerí",
+      "party": "Somos Perú (interim)",
+      "start": "2025",
+      "end": "2026",
+      "fsp": false,
+      "notes": "Assumed the presidency as head of Congress after Boluarte's removal; censured and removed 17 February 2026 amid the \"Chifa-gate\" scandal."
+    },
+    {
+      "name": "José María Balcázar",
+      "party": "Perú Libre (interim)",
+      "start": "2026",
       "end": "present",
-      "fsp": false
+      "fsp": true,
+      "notes": "Elected interim president by Congress 18–19 Feb 2026 on Perú Libre's nomination (he entered Congress on its ticket, though formally unaffiliated after caucus moves). Interim only: Keiko Fujimori (Fuerza Popular), winner of the June 2026 runoff, is due to be sworn in on 28 July 2026."
     }
   ],
   "supremeCourt": {
@@ -89,13 +106,17 @@
   "sources": [
     "https://en.wikipedia.org/wiki/List_of_presidents_of_Peru",
     "https://en.wikipedia.org/wiki/Ollanta_Humala",
-    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
+    "https://en.wikipedia.org/wiki/Jos%C3%A9_Jer%C3%AD",
+    "https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Balc%C3%A1zar",
+    "https://en.wikipedia.org/wiki/2026_Peruvian_general_election"
   ],
   "fspParties": {
     "current": [
-      "Partido Nacionalista Peruano (PNP)"
+      "Partido Nacionalista Peruano (PNP)",
+      "Perú Libre (PL)"
     ],
-    "note": "Peru's FSP member is the Partido Nacionalista Peruano (Ollanta Humala), per Regalado's 2008 roster. In 2011 the PNP led the Gana Perú electoral alliance (which also included smaller left parties). The PNP has had no congressional presence since Humala left office in 2016."
+    "note": "Peru has two documented FSP members. The Partido Nacionalista Peruano (Ollanta Humala) appears on Regalado's 2008 roster and led the Gana Perú alliance to power in 2011. Perú Libre (Vladimir Cerrón) joined the Forum as Perú Libertario at the XXIV Encuentro (Havana 2018) and announced its formal incorporation as a full member on 30 June 2020; the Forum publicly defended Cerrón against what it called political persecution in 2021. Perú Libre won the 2021 election with Pedro Castillo and, after the interim churn of 2025–26, provided the congressionally elected interim president José María Balcázar (Feb 2026)."
   },
   "legislativeControl": [
     {
@@ -124,14 +145,39 @@
     },
     {
       "start": "2016",
-      "end": "present",
+      "end": "2021",
       "chamber": "unicameral",
-      "fspParty": "PNP",
+      "fspParty": "PNP / Perú Libre",
       "fspBloc": "opposition",
       "inGovernment": false,
-      "seats": "The PNP won no seats in 2016 and has been absent from Congress since; Peru's post-2016 left (e.g. Perú Libre) is not an FSP member.",
+      "seats": "The PNP won no seats in 2016 and left Congress; Perú Libre (an FSP member from 2018–2020) had not yet entered Congress.",
       "sources": [
-        "https://en.wikipedia.org/wiki/2016_Peruvian_general_election"
+        "https://en.wikipedia.org/wiki/2016_Peruvian_general_election",
+        "https://diariocorreo.pe/politica/el-peru-libre-de-vladimir-cerron-integra-el-foro-de-sao-paulo-noticia/"
+      ]
+    },
+    {
+      "start": "2021",
+      "end": "2022",
+      "chamber": "unicameral",
+      "fspParty": "Perú Libre",
+      "fspBloc": "plurality",
+      "inGovernment": true,
+      "seats": "Perú Libre won 37 of 130 seats — the largest bloc but far short of a majority; Castillo governed through a permanent governability crisis and the caucus fragmented.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2021_Peruvian_general_election"
+      ]
+    },
+    {
+      "start": "2022",
+      "end": "present",
+      "chamber": "unicameral",
+      "fspParty": "Perú Libre",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "Under Boluarte and the interim presidencies Perú Libre sat in opposition with a diminished caucus; in February 2026 Congress elected its lawmaker José María Balcázar interim president.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Balc%C3%A1zar"
       ]
     }
   ],
@@ -190,6 +236,89 @@
         "https://en.wikipedia.org/wiki/2011_Peruvian_general_election",
         "https://data.ipu.org/election-summary/HTML/2251_11.htm"
       ]
+    },
+    {
+      "year": 2021,
+      "chamber": "Congreso de la República",
+      "totalSeats": 130,
+      "majorityThreshold": 66,
+      "parties": [
+        {
+          "abbr": "PL",
+          "name": "Perú Libre",
+          "seats": 37,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "JP",
+          "name": "Juntos por el Perú",
+          "seats": 5,
+          "align": "government"
+        },
+        {
+          "abbr": "FP",
+          "name": "Fuerza Popular",
+          "seats": 24,
+          "align": "opposition"
+        },
+        {
+          "abbr": "RP",
+          "name": "Renovación Popular",
+          "seats": 13,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Avanza País",
+          "name": "Avanza País",
+          "seats": 7,
+          "align": "opposition"
+        },
+        {
+          "abbr": "AP",
+          "name": "Acción Popular",
+          "seats": 16,
+          "align": "mixed"
+        },
+        {
+          "abbr": "APP",
+          "name": "Alianza para el Progreso",
+          "seats": 15,
+          "align": "mixed"
+        },
+        {
+          "abbr": "SP",
+          "name": "Somos Perú",
+          "seats": 5,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PP",
+          "name": "Podemos Perú",
+          "seats": 5,
+          "align": "mixed"
+        },
+        {
+          "abbr": "PM",
+          "name": "Partido Morado",
+          "seats": 3,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Pedro Castillo (Perú Libre)",
+        "fspInGovernment": true,
+        "hasMajority": false,
+        "note": "Perú Libre was the largest bloc (37/130) but even with its left ally Juntos por el Perú held barely a third of the chamber. Castillo faced two impeachment attempts before Congress removed him in December 2022 after he tried to dissolve it; his own caucus fragmented along the way."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2021_Peruvian_general_election",
+        "https://data.ipu.org/parliament/PE/PE-LC01/election/PE-LC01-E20210411/"
+      ]
     }
+  ],
+  "fspMembershipSources": [
+    "https://diariocorreo.pe/politica/el-peru-libre-de-vladimir-cerron-integra-el-foro-de-sao-paulo-noticia/",
+    "https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo"
   ]
 }

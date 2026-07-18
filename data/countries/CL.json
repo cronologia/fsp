@@ -63,9 +63,17 @@
       "name": "Gabriel Boric",
       "party": "Convergencia Social / Apruebo Dignidad",
       "start": "2022",
-      "end": "present",
+      "end": "2026",
       "fsp": true,
       "notes": "Left coalition incl. the FSP-member Communist Party of Chile."
+    },
+    {
+      "name": "José Antonio Kast",
+      "party": "Partido Republicano",
+      "start": "2026",
+      "end": "present",
+      "fsp": false,
+      "notes": "Won the 14 December 2025 runoff against Jeannette Jara (Communist Party) by roughly 58–42; inaugurated 11 March 2026."
     }
   ],
   "supremeCourt": {
@@ -110,7 +118,8 @@
     "justicesNote": "Twenty-one justices appointed via the mixed mechanism; individual members are not itemized here."
   },
   "sources": [
-    "https://en.wikipedia.org/wiki/Supreme_Court_of_Chile"
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Chile",
+    "https://en.wikipedia.org/wiki/2025_Chilean_general_election"
   ],
   "fspMembershipSources": [
     "https://forodesaopaulo.org/partidos/",
@@ -186,7 +195,7 @@
     },
     {
       "start": "2022",
-      "end": "present",
+      "end": "2026",
       "chamber": "both",
       "fspParty": "PCCh (Apruebo Dignidad)",
       "fspBloc": "minority",
@@ -194,6 +203,18 @@
       "seats": "Boric's government (Frente Amplio + the Communist Party) holds the presidency but no majority in either the highly fragmented Chamber (155) or Senate (50), and depends on case-by-case deals with the centre-left and centre.",
       "sources": [
         "https://en.wikipedia.org/wiki/2021_Chilean_general_election"
+      ]
+    },
+    {
+      "start": "2026",
+      "end": "present",
+      "chamber": "both",
+      "fspParty": "PS / PCCh",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "Under Kast's right-wing government the PS and PCCh sit in opposition; a sourced seat table for the November 2025 congressional election is still to be added.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Chilean_general_election"
       ]
     }
   ]

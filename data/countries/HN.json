@@ -68,8 +68,16 @@
       "name": "Xiomara Castro",
       "party": "LIBRE",
       "start": "2022",
-      "end": "present",
+      "end": "2026",
       "fsp": true
+    },
+    {
+      "name": "Nasry Asfura",
+      "party": "Partido Nacional",
+      "start": "2026",
+      "end": "present",
+      "fsp": false,
+      "notes": "Declared winner of the 30 Nov 2025 election on 24 Dec 2025 by 0.74 points over Salvador Nasralla; both LIBRE and Nasralla's party challenged the results. Inaugurated 27 January 2026."
     }
   ],
   "supremeCourt": {
@@ -133,7 +141,8 @@
     "justicesNote": "The 15-magistrate CSJ elected in 2023 is current; individual members are not itemized here."
   },
   "sources": [
-    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)"
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)",
+    "https://en.wikipedia.org/wiki/2025_Honduran_general_election"
   ],
   "fspParties": {
     "current": [
@@ -156,7 +165,7 @@
     },
     {
       "start": "2022",
-      "end": "present",
+      "end": "2026",
       "chamber": "unicameral",
       "fspParty": "LIBRE",
       "fspBloc": "plurality",
@@ -164,6 +173,18 @@
       "seats": "With Xiomara Castro's 2021 win LIBRE became the largest bloc in Congress (about 50 of 128) but without a majority — it governs in alliance with Salvador Nasralla's PSH.",
       "sources": [
         "https://en.wikipedia.org/wiki/National_Congress_(Honduras)"
+      ]
+    },
+    {
+      "start": "2026",
+      "end": "present",
+      "chamber": "unicameral",
+      "fspParty": "LIBRE",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "LIBRE returned to opposition under Asfura's PN government. The new Congress's certified seat distribution was still pending as of mid-2026 (preliminary counts put PN ~50, PL ~40, LIBRE ~34); a seat table will follow certification.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Honduran_general_election"
       ]
     }
   ],
