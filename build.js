@@ -1086,10 +1086,12 @@ function renderLegislativeComposition(c) {
       const fspSeats = e.parties.filter((p) => p.fsp).reduce((n, p) => n + (p.seats || 0), 0);
       const thr = e.majorityThreshold;
       const pct = e.totalSeats ? Math.round((fspSeats / e.totalSeats) * 100) : 0;
-      const tail = g.fspInGovernment
-        ? (g.hasMajority ? 'The governing majority is built with non-FSP coalition partners.' : 'Even in government the FSP bloc depends on other parties.')
-        : 'The FSP parties sat in opposition.';
       const gap = thr ? thr - fspSeats : 0;
+      let tail;
+      if (!g.fspInGovernment) tail = 'The FSP parties sat in opposition.';
+      else if (thr && fspSeats >= thr) tail = 'The FSP bloc holds a majority in this chamber in its own right.';
+      else if (g.hasMajority) tail = 'A working majority is assembled with non-FSP coalition partners.';
+      else tail = 'The FSP party held the presidency but not a majority in this chamber.';
       const fspLine = fspSeats
         ? `      <p class="notice"><strong>FSP member parties together: ${fspSeats} of ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${fspSeats >= thr ? 'a majority on their own' : `${gap} seat${gap === 1 ? '' : 's'} short of the ${esc(thr)}-seat majority`}` : ''}. ${tail}</p>\n`
         : '';
