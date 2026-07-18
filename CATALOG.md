@@ -37,7 +37,7 @@ Total FSP-party presidential terms across tracked countries: **34**.
 | [Uruguay](docs/countries/UY.html) | UY | Frente Amplio (FA) | member (founding status to verify) | Tabaré Vázquez (2005–2010); José Mujica (2010–2015); Tabaré Vázquez (2015–2020); Yamandú Orsi (2025–present) |
 | [El Salvador](docs/countries/SV.html) | SV | Frente Farabundo Martí (FMLN) | founding member | Mauricio Funes (2009–2014); Salvador Sánchez Cerén (2014–2019) |
 | [Honduras](docs/countries/HN.html) | HN | Libertad y Refundación (LIBRE) | member | Xiomara Castro (2022–present) |
-| [Mexico](docs/countries/MX.html) | MX | Morena | affiliated (to verify) | Andrés Manuel López Obrador (2018–2024); Claudia Sheinbaum (2024–present) |
+| [Mexico](docs/countries/MX.html) | MX | Morena | member (MORENA, PT and PRD) | Andrés Manuel López Obrador (2018–2024); Claudia Sheinbaum (2024–present) |
 | [Argentina](docs/countries/AR.html) | AR | Peronist/Kirchnerist coalitions (PJ / FpV / FdT) | affiliated (to verify) | Néstor Kirchner (2003–2007); Cristina Fernández de Kirchner (2007–2015); Alberto Fernández (2019–2023) |
 | [Chile](docs/countries/CL.html) | CL | Partido Socialista / Partido Comunista de Chile | member (to verify) | Ricardo Lagos (2000–2006); Michelle Bachelet (2006–2010); Michelle Bachelet (2014–2018); Gabriel Boric (2022–present) |
 | [Ecuador](docs/countries/EC.html) | EC | Movimiento PAIS (Alianza PAIS) | affiliated (to verify) | Rafael Correa (2007–2017) |
@@ -58,6 +58,7 @@ governing coalition; `opposition` = out of government; `single-party` = one-part
 - **Uruguay** (Frente Amplio): 1990–2005: **opposition** · 2005–2020: **majority** · 2020–2025: **opposition** · 2025–present: **minority**
 - **El Salvador** (FMLN): 1994–2009: **opposition** · 2009–2019: **minority** · 2019–present: **opposition**
 - **Honduras** (LIBRE): 2013–2022: **opposition** · 2022–present: **plurality**
+- **Mexico** (PRD / PT): 1990–2018: **opposition** · 2018–present: **majority**
 - **Dominican Republic** (PLD): 1990–1996: **opposition** · 1996–2020: **majority** · 2020–present: **opposition**
 - **Peru** (PNP): 1990–2011: **opposition** · 2011–2016: **plurality** · 2016–present: **opposition**
 - **Cuba** (PCC): 1990–present: **single-party**
