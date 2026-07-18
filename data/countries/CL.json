@@ -2,7 +2,7 @@
   "country": "Chile",
   "code": "CL",
   "fspParty": "Partido Socialista / Partido Comunista de Chile",
-  "fspStatus": "member (to verify)",
+  "fspStatus": "member (Partido Socialista and Partido Comunista)",
   "fspPresidents": [
     "Ricardo Lagos",
     "Michelle Bachelet",
@@ -76,14 +76,125 @@
     "stillServing": "The 21-member court is independent; no FSP-driven structural change — a contrast case. Members are not itemized here.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "The Corte Suprema dates to the 19th century; during the 1973–1990 Pinochet dictatorship the court was widely criticised for acquiescing to the regime, and the 1980 Constitution shaped its design.", "size": null, "appointingGovernment": "1973–90 dictatorship", "fspRelated": false, "verified": false },
-      { "period": "1997", "type": "reform", "event": "A transition-era reform enlarged the court to 21 members and set the mixed appointment mechanism (Court proposes, President chooses, Senate confirms by 2/3).", "size": 21, "appointingGovernment": "Frei Ruiz-Tagle (Concertación)", "fspRelated": false, "verified": true },
-      { "period": "2000–present", "type": "composition", "event": "Across the Socialist/left governments (Lagos, Bachelet, Boric) there was NO court-packing; appointments followed the regular mechanism. The 2021–2023 constituent processes to replace the 1980 Constitution both failed at referendum, leaving the judiciary's structure unchanged.", "size": 21, "appointingGovernment": "various (incl. PS/left)", "fspRelated": true, "verified": true }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "The Corte Suprema dates to the 19th century; during the 1973–1990 Pinochet dictatorship the court was widely criticised for acquiescing to the regime, and the 1980 Constitution shaped its design.",
+        "size": null,
+        "appointingGovernment": "1973–90 dictatorship",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "1997",
+        "type": "reform",
+        "event": "A transition-era reform enlarged the court to 21 members and set the mixed appointment mechanism (Court proposes, President chooses, Senate confirms by 2/3).",
+        "size": 21,
+        "appointingGovernment": "Frei Ruiz-Tagle (Concertación)",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2000–present",
+        "type": "composition",
+        "event": "Across the Socialist/left governments (Lagos, Bachelet, Boric) there was NO court-packing; appointments followed the regular mechanism. The 2021–2023 constituent processes to replace the 1980 Constitution both failed at referendum, leaving the judiciary's structure unchanged.",
+        "size": 21,
+        "appointingGovernment": "various (incl. PS/left)",
+        "fspRelated": true,
+        "verified": true
+      }
     ],
-    "courtHistorySources": ["https://en.wikipedia.org/wiki/Supreme_Court_of_Chile"],
+    "courtHistorySources": [
+      "https://en.wikipedia.org/wiki/Supreme_Court_of_Chile"
+    ],
     "justicesNote": "Twenty-one justices appointed via the mixed mechanism; individual members are not itemized here."
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Chile"
+  ],
+  "fspMembershipSources": [
+    "https://forodesaopaulo.org/partidos/",
+    "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo"
+  ],
+  "fspParties": {
+    "current": [
+      "Partido Socialista de Chile (PS)",
+      "Partido Comunista de Chile (PCCh)"
+    ],
+    "note": "Chile's FSP members are the Partido Socialista (PS) and the Partido Comunista (PCCh); the Forum's own roster also lists smaller groups (Izquierda Ciudadana, Partido Humanista, MIR). Crucially, these parties have always governed as a minority faction inside broad center-left coalitions — the Concertación (1990–2010, led by the non-FSP Christian Democrats), the Nueva Mayoría (which added the PCCh from 2013), and Boric's Apruebo Dignidad (2022–, Frente Amplio + PCCh). The PS and PCCh have never commanded a congressional majority on their own, which is why a detailed FSP-bloc seat table is deferred: it would misrepresent their role without a full mapping of each multi-party coalition. Boric's government has notably lacked a majority in either chamber."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2000",
+      "chamber": "both",
+      "fspParty": "PS",
+      "fspBloc": "minority",
+      "inGovernment": true,
+      "seats": "The PS was a junior partner in the Christian-Democrat-led Concertación that governed after the return to democracy; the coalition held working majorities but the FSP parties were a minority within it.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Concertaci%C3%B3n"
+      ]
+    },
+    {
+      "start": "2000",
+      "end": "2010",
+      "chamber": "both",
+      "fspParty": "PS",
+      "fspBloc": "minority",
+      "inGovernment": true,
+      "seats": "PS presidents Lagos and Bachelet led Concertación governments; the coalition majority rested on non-FSP partners (Christian Democrats, PPD, Radicals) alongside the PS.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Concertaci%C3%B3n"
+      ]
+    },
+    {
+      "start": "2010",
+      "end": "2014",
+      "chamber": "both",
+      "fspParty": "PS",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "Under the right-wing Piñera government the FSP parties sat in opposition.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2009_Chilean_general_election"
+      ]
+    },
+    {
+      "start": "2014",
+      "end": "2018",
+      "chamber": "both",
+      "fspParty": "PS / PCCh",
+      "fspBloc": "minority",
+      "inGovernment": true,
+      "seats": "Bachelet's Nueva Mayoría (Concertación plus the Communist Party) governed with a congressional majority; the FSP parties were part of, but not the whole of, that bloc.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2013_Chilean_general_election"
+      ]
+    },
+    {
+      "start": "2018",
+      "end": "2022",
+      "chamber": "both",
+      "fspParty": "PS / PCCh",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "Opposition again under the second Piñera government.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2017_Chilean_general_election"
+      ]
+    },
+    {
+      "start": "2022",
+      "end": "present",
+      "chamber": "both",
+      "fspParty": "PCCh (Apruebo Dignidad)",
+      "fspBloc": "minority",
+      "inGovernment": true,
+      "seats": "Boric's government (Frente Amplio + the Communist Party) holds the presidency but no majority in either the highly fragmented Chamber (155) or Senate (50), and depends on case-by-case deals with the centre-left and centre.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2021_Chilean_general_election"
+      ]
+    }
   ]
 }

@@ -39,7 +39,7 @@ Total FSP-party presidential terms across tracked countries: **34**.
 | [Honduras](docs/countries/HN.html) | HN | Libertad y Refundación (LIBRE) | member | Xiomara Castro (2022–present) |
 | [Mexico](docs/countries/MX.html) | MX | Morena | member (MORENA, PT and PRD) | Andrés Manuel López Obrador (2018–2024); Claudia Sheinbaum (2024–present) |
 | [Argentina](docs/countries/AR.html) | AR | Peronist/Kirchnerist coalitions (PJ / FpV / FdT) | affiliated (to verify) | Néstor Kirchner (2003–2007); Cristina Fernández de Kirchner (2007–2015); Alberto Fernández (2019–2023) |
-| [Chile](docs/countries/CL.html) | CL | Partido Socialista / Partido Comunista de Chile | member (to verify) | Ricardo Lagos (2000–2006); Michelle Bachelet (2006–2010); Michelle Bachelet (2014–2018); Gabriel Boric (2022–present) |
+| [Chile](docs/countries/CL.html) | CL | Partido Socialista / Partido Comunista de Chile | member (Partido Socialista and Partido Comunista) | Ricardo Lagos (2000–2006); Michelle Bachelet (2006–2010); Michelle Bachelet (2014–2018); Gabriel Boric (2022–present) |
 | [Ecuador](docs/countries/EC.html) | EC | Movimiento PAIS (Alianza PAIS) | affiliated (to verify) | Rafael Correa (2007–2017) |
 | [Dominican Republic](docs/countries/DO.html) | DO | Partido de la Liberación Dominicana (PLD) | member (PLD, per Regalado 2008) | Leonel Fernández (1996–2000); Leonel Fernández (2004–2012); Danilo Medina (2012–2020) |
 | [Peru](docs/countries/PE.html) | PE | Partido Nacionalista Peruano (Humala) | member (Partido Nacionalista Peruano, per Regalado 2008) | Ollanta Humala (2011–2016) |
@@ -59,6 +59,7 @@ governing coalition; `opposition` = out of government; `single-party` = one-part
 - **El Salvador** (FMLN): 1994–2009: **opposition** · 2009–2019: **minority** · 2019–present: **opposition**
 - **Honduras** (LIBRE): 2013–2022: **opposition** · 2022–present: **plurality**
 - **Mexico** (PRD / PT): 1990–2018: **opposition** · 2018–present: **majority**
+- **Chile** (PS): 1990–2000: **minority** · 2000–2010: **minority** · 2010–2014: **opposition** · 2014–2018: **minority** · 2018–2022: **opposition** · 2022–present: **minority**
 - **Dominican Republic** (PLD): 1990–1996: **opposition** · 1996–2020: **majority** · 2020–present: **opposition**
 - **Peru** (PNP): 1990–2011: **opposition** · 2011–2016: **plurality** · 2016–present: **opposition**
 - **Cuba** (PCC): 1990–present: **single-party**
