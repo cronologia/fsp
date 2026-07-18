@@ -166,5 +166,56 @@
         "https://en.wikipedia.org/wiki/National_Congress_(Honduras)"
       ]
     }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2021,
+      "chamber": "Congreso Nacional",
+      "totalSeats": 128,
+      "majorityThreshold": 65,
+      "parties": [
+        {
+          "abbr": "LIBRE",
+          "name": "Partido Libertad y Refundación",
+          "seats": 50,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PSH",
+          "name": "Partido Salvador de Honduras",
+          "seats": 10,
+          "align": "government"
+        },
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 44,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PL",
+          "name": "Partido Liberal",
+          "seats": 22,
+          "align": "opposition"
+        },
+        {
+          "abbr": "others",
+          "name": "DC, PAC",
+          "seats": 2,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Xiomara Castro (LIBRE)",
+        "fspInGovernment": true,
+        "hasMajority": false,
+        "note": "LIBRE won a plurality (50/128); even with its electoral ally PSH (10) the government bloc held 60 seats — 5 short of a majority. The gap showed immediately: in January 2022 a group of LIBRE dissidents backed a rival congressional leadership, splitting the chamber before a negotiated settlement. Castro governed without reliable control of Congress."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2021_Honduran_general_election",
+        "https://data.ipu.org/parliament/HN/HN-LC01/election/HN-LC01-E20211128/"
+      ]
+    }
   ]
 }

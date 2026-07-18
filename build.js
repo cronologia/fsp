@@ -638,14 +638,18 @@ function renderAtlas(countries) {
     );
   });
 
+  // Legend only the states that occur in some year (the hatched "to verify"
+  // state vanishes once every affiliation is confirmed).
+  const seen = new Set(data.flatMap((d) => d.states.split('')));
   const legend = [
-    ['atlas-f', 'FSP-party president'],
-    ['atlas-u', 'FSP affiliation to verify'],
-    ['atlas-o', 'One-party state (PCC)'],
-    ['atlas-n', 'Non-FSP'],
-    ['atlas-nodata', 'No data'],
+    ['f', 'atlas-f', 'FSP-party president'],
+    ['u', 'atlas-u', 'FSP affiliation to verify'],
+    ['o', 'atlas-o', 'One-party state (PCC)'],
+    ['n', 'atlas-n', 'Non-FSP'],
+    ['.', 'atlas-nodata', 'No data'],
   ]
-    .map(([k, l]) => `<span class="ptl-key"><span class="atlas-swatch ${k}"></span>${esc(l)}</span>`)
+    .filter(([s]) => seen.has(s))
+    .map(([, k, l]) => `<span class="ptl-key"><span class="atlas-swatch ${k}"></span>${esc(l)}</span>`)
     .join('');
 
   const payload = JSON.stringify({ start: 1990, end: now, countries: data });
@@ -719,10 +723,11 @@ function renderPresidentialTimeline(countries) {
     .map((y) => `<span class="ptl-yr${tick(y)}">${y % 5 === 0 ? y : ''}</span>`)
     .join('');
 
+  const anyUnv = tally.some((t) => t.unv > 0);
   const barRow = tally
     .map((t) => {
       const h = Math.round((t.total / denom) * 100);
-      const d = `${t.y}: ${t.total} of ${denom} FSP-governed (${t.fsp} confirmed, ${t.unv} to verify)`;
+      const d = `${t.y}: ${t.total} of ${denom} FSP-governed${anyUnv ? ` (${t.fsp} confirmed, ${t.unv} to verify)` : ''}`;
       return `<span class="ptl-bar${tick(t.y)}" data-d="${esc(d)}" title="${esc(d)}"><span style="height:${h}%"></span></span>`;
     })
     .join('');
@@ -742,14 +747,19 @@ function renderPresidentialTimeline(countries) {
     })
     .join('\n');
 
+  // Only legend the states that actually occur in the grid (e.g. the hatched
+  // "to verify" state disappears once every affiliation is confirmed).
+  const present = new Set();
+  for (const c of rows) for (const y of years) present.add(ptlStateFor(c, y, now).st);
   const legend = ['fsp', 'fsp-unv', 'fsp-op', 'non', 'nodata']
+    .filter((k) => present.has(k))
     .map((k) => `<span class="ptl-key"><span class="ptl-c ptl-${k}"></span>${esc(label[k])}</span>`)
     .join('');
 
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="presidents-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-presidents" tabindex="0">
       <h2>FSP presidential coverage, year by year</h2>
-      <p class="section-intro">For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom. Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a hatched state, not counted as confirmed. The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.</p>
+      <p class="section-intro">For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom. ${present.has('fsp-unv') ? 'Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a hatched state, not counted as confirmed. ' : ''}The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.</p>
       <p class="ptl-caption" id="ptl-caption" aria-live="polite">Hover, tap or focus a cell for the country, year and president. Each state is shown by both colour and fill, so it reads without colour.</p>
       <div class="table-scroll">
         <div class="ptl" id="ptl-grid" style="${gridCols}">
@@ -1059,6 +1069,25 @@ function srcLinks(arr) {
     .join(', ') + ')</span>';
 }
 
+// FSP-bloc arithmetic for one legislativeComposition entry. In-government FSP
+// strength is what any majority claim is about: FSP-listed parties sitting with
+// the opposition (e.g. Mexico's PRD in 2024) must not inflate the governing bloc.
+function fspBlocStats(e) {
+  const g = e.government || {};
+  const fspAll = e.parties.filter((p) => p.fsp);
+  const total = fspAll.reduce((n, p) => n + (p.seats || 0), 0);
+  const gov = fspAll.filter((p) => p.align === 'government').reduce((n, p) => n + (p.seats || 0), 0);
+  const opp = total - gov;
+  const bloc = g.fspInGovernment ? gov : total;
+  const thr = e.majorityThreshold;
+  let tail;
+  if (!g.fspInGovernment) tail = 'The FSP parties sat in opposition.';
+  else if (thr && bloc >= thr) tail = 'The FSP bloc holds a majority in this chamber in its own right.';
+  else if (g.hasMajority) tail = 'A working majority is assembled with non-FSP coalition partners.';
+  else tail = 'The FSP party held the presidency but not a majority in this chamber.';
+  return { bloc, opp, tail, label: g.fspInGovernment && opp ? 'FSP member parties in government' : 'FSP member parties together' };
+}
+
 // Detailed per-election legislative composition on the country page (seats by
 // party, and whether the governing coalition held a majority). Issue #106 detail.
 function renderLegislativeComposition(c) {
@@ -1080,29 +1109,30 @@ function renderLegislativeComposition(c) {
         .join('\n');
       const g = e.government || {};
       const maj = g.hasMajority ? 'commanded a working majority' : 'lacked a majority';
-      // Sum the FSP member parties' own seats and contrast with the majority
-      // threshold — to make explicit that the FSP bloc alone is not a majority
-      // and that any governing majority is built with non-FSP coalition partners.
-      const fspSeats = e.parties.filter((p) => p.fsp).reduce((n, p) => n + (p.seats || 0), 0);
+      // Contrast the governing FSP bloc with the majority threshold — to make
+      // explicit whether the FSP bloc alone is a majority or the governing
+      // majority is built with non-FSP coalition partners. FSP-listed parties
+      // sitting in opposition are reported separately, never folded in.
+      const st = fspBlocStats(e);
       const thr = e.majorityThreshold;
-      const pct = e.totalSeats ? Math.round((fspSeats / e.totalSeats) * 100) : 0;
-      const gap = thr ? thr - fspSeats : 0;
-      let tail;
-      if (!g.fspInGovernment) tail = 'The FSP parties sat in opposition.';
-      else if (thr && fspSeats >= thr) tail = 'The FSP bloc holds a majority in this chamber in its own right.';
-      else if (g.hasMajority) tail = 'A working majority is assembled with non-FSP coalition partners.';
-      else tail = 'The FSP party held the presidency but not a majority in this chamber.';
-      const fspLine = fspSeats
-        ? `      <p class="notice"><strong>FSP member parties together: ${fspSeats} of ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${fspSeats >= thr ? 'a majority on their own' : `${gap} seat${gap === 1 ? '' : 's'} short of the ${esc(thr)}-seat majority`}` : ''}. ${tail}</p>\n`
+      const pct = e.totalSeats ? Math.round((st.bloc / e.totalSeats) * 100) : 0;
+      const gap = thr ? thr - st.bloc : 0;
+      const oppNote = g.fspInGovernment && st.opp
+        ? ` A further ${st.opp} FSP-listed seat${st.opp === 1 ? '' : 's'} sat with the opposition.`
         : '';
-      // Visual seat-share bar: parties ordered FSP → government ally → mixed →
-      // opposition, with a marker at the majority threshold — so it's obvious at a
-      // glance whether (and with whom) the governing bloc crosses the majority line.
-      const rank = { fsp: 0, government: 1, mixed: 2, independent: 3, opposition: 4 };
-      const grp = (p) => (p.fsp ? 'fsp' : (p.align || 'independent'));
+      const fspLine = st.bloc
+        ? `      <p class="notice"><strong>${st.label}: ${st.bloc} of ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${st.bloc >= thr ? 'a majority on their own' : `${gap} seat${gap === 1 ? '' : 's'} short of the ${esc(thr)}-seat majority`}` : ''}. ${st.tail}${oppNote}</p>\n`
+        : '';
+      // Visual seat-share bar: parties ordered government → mixed → independent →
+      // opposition (FSP parties first within their own alignment group, keeping
+      // FSP colour), with a marker at the majority threshold — so it's obvious at
+      // a glance whether (and with whom) the governing bloc crosses the line.
+      const rank = { government: 0, mixed: 1, independent: 2, opposition: 3 };
+      const seg = (p) => (p.fsp ? 'fsp' : (p.align || 'independent'));
       const segs = e.totalSeats
-        ? [...e.parties].sort((a, b) => (rank[grp(a)] - rank[grp(b)]) || (b.seats - a.seats))
-            .map((p) => `<span class="seatseg seatseg-${grp(p)}" style="width:${(p.seats / e.totalSeats * 100).toFixed(2)}%" title="${esc(`${p.abbr || p.name}: ${p.seats} — ${ALIGN[p.align] || p.align || ''}`)}"></span>`).join('')
+        ? [...e.parties].sort((a, b) =>
+              ((rank[a.align] ?? 2) - (rank[b.align] ?? 2)) || ((b.fsp ? 1 : 0) - (a.fsp ? 1 : 0)) || (b.seats - a.seats))
+            .map((p) => `<span class="seatseg seatseg-${seg(p)}" style="width:${(p.seats / e.totalSeats * 100).toFixed(2)}%" title="${esc(`${p.abbr || p.name}: ${p.seats} — ${ALIGN[p.align] || p.align || ''}`)}"></span>`).join('')
         : '';
       const majMark = e.majorityThreshold && e.totalSeats
         ? `<span class="seatbar-maj" style="left:${(e.majorityThreshold / e.totalSeats * 100).toFixed(2)}%" title="Majority = ${esc(e.majorityThreshold)} of ${esc(e.totalSeats)}"></span>`
@@ -1396,4 +1426,4 @@ function main() {
 // pure helpers so they can be unit-tested without generating docs/.
 if (require.main === module) main();
 
-module.exports = { esc, ptlYear, ptlStateFor, legStateFor, courtEventYears };
+module.exports = { esc, ptlYear, ptlStateFor, legStateFor, courtEventYears, fspBlocStats };
