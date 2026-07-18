@@ -2,7 +2,7 @@
   "country": "Colombia",
   "code": "CO",
   "fspParty": "Pacto Histórico / Colombia Humana (Petro)",
-  "fspStatus": "affiliated (to verify)",
+  "fspStatus": "member (Pacto Histórico; Partido Comunista Colombiano and the Polo/UP tradition)",
   "fspPresidents": [
     "Gustavo Petro"
   ],
@@ -69,5 +69,43 @@
     "https://en.wikipedia.org/wiki/Historic_Pact",
     "https://forodesaopaulo.org/solidaridad-com-el-pacto-historico-y-a-gustavo-petro/",
     "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+  ],
+  "fspMembershipSources": [
+    "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+    "https://forodesaopaulo.org/partidos/"
+  ],
+  "fspParties": {
+    "current": [
+      "Pacto Histórico (Gustavo Petro's coalition)",
+      "Partido Comunista Colombiano",
+      "Unión Patriótica (UP)"
+    ],
+    "note": "Colombia's FSP members include the Partido Comunista Colombiano and the Unión Patriótica — long marginal and, in the UP's case, the target of a genocidal extermination campaign in the 1980s–90s — and today Gustavo Petro's Pacto Histórico. Colombia's left was excluded from national power for the whole armed-conflict era; Petro's 2022 win was the first by a left candidate."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2022",
+      "chamber": "both",
+      "fspParty": "PCC / UP / Polo",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "For the entire post-1990 period Colombia's FSP-aligned left held only a small share of Congress and never the presidency; the Unión Patriótica was decimated by political violence.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Patriotic_Union_(Colombia)"
+      ]
+    },
+    {
+      "start": "2022",
+      "end": "present",
+      "chamber": "both",
+      "fspParty": "Pacto Histórico",
+      "fspBloc": "plurality",
+      "inGovernment": true,
+      "seats": "Petro's Pacto Histórico became the largest bloc in both chambers in 2022 but well short of a majority; his government depends on a shifting, fragile congressional coalition.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2022_Colombian_parliamentary_election"
+      ]
+    }
   ]
 }
