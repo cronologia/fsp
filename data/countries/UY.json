@@ -2,7 +2,7 @@
   "country": "Uruguay",
   "code": "UY",
   "fspParty": "Frente Amplio (FA)",
-  "fspStatus": "member (founding status to verify)",
+  "fspStatus": "member (Frente Amplio, founding participant)",
   "fspPresidents": [
     "Tabaré Vázquez",
     "José Mujica",
@@ -295,5 +295,9 @@
         "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election"
       ]
     }
+  ],
+  "fspMembershipSources": [
+    "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum",
+    "https://es.wikipedia.org/wiki/Frente_Amplio_(Uruguay)"
   ]
 }
