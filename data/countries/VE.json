@@ -113,6 +113,67 @@
     "courtHistorySources": [
       "https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)"
     ],
+    "benchControl": [
+      {
+        "start": "1990",
+        "end": "1998",
+        "size": null,
+        "fspAppointed": 0,
+        "control": "independent",
+        "note": "The pre-1999 Corte Suprema de Justicia was appointed under the Punto Fijo-era governments; no FSP-member government had yet held office.",
+        "sources": [
+          "https://www.hrw.org/report/2004/06/16/rigging-rule-law/judicial-independence-under-siege-venezuela",
+          "https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)"
+        ]
+      },
+      {
+        "start": "1999",
+        "end": "2003",
+        "size": 20,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "The 1999 constituent process replaced the old court with a 20-member TSJ seated under Chávez-era assemblies, but the bench was not reliably government-aligned: Human Rights Watch described a roughly even split, and in August 2002 the court dismissed charges against the generals involved in the April coup.",
+        "sources": [
+          "https://www.hrw.org/report/2004/06/16/rigging-rule-law/judicial-independence-under-siege-venezuela"
+        ]
+      },
+      {
+        "start": "2004",
+        "end": "2015",
+        "size": 32,
+        "fspAppointed": 32,
+        "control": "aligned",
+        "note": "The May 2004 Organic Law expanded the TSJ from 20 to 32 magistrates; the pro-Chávez legislative majority filled the 12 new seats in December 2004 and gained power to annul sitting justices' appointments (HRW). The full bench was seated by chavista-majority assemblies.",
+        "sources": [
+          "https://www.hrw.org/report/2004/06/16/rigging-rule-law/judicial-independence-under-siege-venezuela",
+          "https://www.hrw.org/news/2004/12/13/venezuela-chavez-allies-pack-supreme-court",
+          "https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)"
+        ]
+      },
+      {
+        "start": "2016",
+        "end": "2021",
+        "size": 32,
+        "fspAppointed": 32,
+        "control": "aligned",
+        "note": "In December 2015 the outgoing pro-government Assembly named 13 magistrates before the newly-elected opposition majority was seated (HRW had urged curbing the plan); in 2016–2017 the TSJ annulled or curtailed acts of the opposition-led National Assembly.",
+        "sources": [
+          "https://www.hrw.org/news/2015/12/10/venezuela-curb-plan-pack-supreme-court",
+          "https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)"
+        ]
+      },
+      {
+        "start": "2022",
+        "end": "present",
+        "size": 20,
+        "fspAppointed": 20,
+        "control": "aligned",
+        "note": "A 2022 reform cut the TSJ from 32 to 20 magistrates, re-elected by the government-controlled National Assembly; no opposition-appointed bloc remains.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)"
+        ]
+      }
+    ],
     "justicesNote": "The TSJ has had 20–32 magistrates; individual members are not itemized here. The court has been PSUV/government-aligned since the 2004 packing, with no opposition-appointed bloc."
   },
   "sources": [

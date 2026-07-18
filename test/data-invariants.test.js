@@ -35,6 +35,22 @@ test('legislativeControl uses a valid fspBloc enum and year-parseable bounds', (
   }
 });
 
+const BENCH_CONTROLS = new Set(['aligned', 'partial', 'independent']);
+
+test('benchControl bands are parseable, use valid enums, and never overcount', () => {
+  for (const c of countries) {
+    for (const b of (c.supremeCourt && c.supremeCourt.benchControl) || []) {
+      assert.ok(/^\d{4}$/.test(b.start), `${c.code}: bad benchControl start ${b.start}`);
+      assert.ok(b.end === 'present' || /^\d{4}$/.test(b.end), `${c.code}: bad benchControl end ${b.end}`);
+      assert.ok(BENCH_CONTROLS.has(b.control), `${c.code}: bad benchControl control ${b.control}`);
+      if (typeof b.size === 'number' && typeof b.fspAppointed === 'number') {
+        assert.ok(b.fspAppointed <= b.size, `${c.code} ${b.start}: fspAppointed ${b.fspAppointed} > size ${b.size}`);
+      }
+      assert.ok(Array.isArray(b.sources) && b.sources.length > 0, `${c.code} ${b.start}: benchControl band without sources`);
+    }
+  }
+});
+
 test('presidentialSuccession years are parseable and fsp is boolean', () => {
   for (const c of countries) {
     for (const p of c.presidentialSuccession) {

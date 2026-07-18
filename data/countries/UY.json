@@ -105,6 +105,57 @@
     "courtHistorySources": [
       "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"
     ],
+    "benchControl": [
+      {
+        "start": "1990",
+        "end": "2004",
+        "size": 5,
+        "fspAppointed": 0,
+        "control": "independent",
+        "note": "All five ministers were appointed under pre-FA governments; the Frente Amplio first took office in March 2005.",
+        "sources": [
+          "http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2019000200061&lng=es&nrm=iso&tlng=es",
+          "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"
+        ]
+      },
+      {
+        "start": "2005",
+        "end": "2011",
+        "size": 5,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "The bench renewed progressively during FA governments as 10-year terms and the age-70 limit rotated members out; appointments require a two-thirds General Assembly vote, and after 90 days without one the senior appeals-court judge is elevated automatically — a mechanism that limits partisan selection.",
+        "sources": [
+          "http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2019000200061&lng=es&nrm=iso&tlng=es",
+          "https://www.redalyc.org/journal/675/67559606003/html/"
+        ]
+      },
+      {
+        "start": "2012",
+        "end": "2019",
+        "size": 5,
+        "fspAppointed": 5,
+        "control": "aligned",
+        "note": "By 2012 all five sitting ministers had been appointed during FA governments (the 2013 bench: Ruibal Pino, Larrieux, Chediak, Chalar, Pérez Manrique — all seated 2008–2012). The court nonetheless remained institutionally independent, striking down FA-backed laws in 2013 (the ICIR rural-land tax and Law 18.831 on dictatorship-era prosecutions) — a contrast case: appointment provenance without alignment in rulings.",
+        "sources": [
+          "http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2019000200061&lng=es&nrm=iso&tlng=es",
+          "http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2020000100135",
+          "https://www.redalyc.org/journal/675/67559606003/html/"
+        ]
+      },
+      {
+        "start": "2020",
+        "end": "present",
+        "size": 5,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "FA-era appointees have progressively aged out under the post-2020 governments; the bench is mixed, with recent vacancies filled under non-FA (2020–2024) and FA (2025–) assemblies.",
+        "sources": [
+          "https://www.poderjudicial.gub.uy/suprema-corte-de-justicia/integrantes",
+          "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)"
+        ]
+      }
+    ],
     "justicesNote": "Five justices on fixed 10-year terms, elected by a 2/3 Assembly majority; individual members rotate and are not itemized here."
   },
   "sources": [
