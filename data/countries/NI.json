@@ -145,5 +145,45 @@
         "https://en.wikipedia.org/wiki/2021_Nicaraguan_general_election"
       ]
     }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2021,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 90,
+      "majorityThreshold": 46,
+      "parties": [
+        {
+          "abbr": "FSLN",
+          "name": "Frente Sandinista de Liberación Nacional",
+          "seats": 75,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PLC",
+          "name": "Partido Liberal Constitucionalista",
+          "seats": 10,
+          "align": "opposition"
+        },
+        {
+          "abbr": "others",
+          "name": "ALN, APRE, PLI, YATAMA",
+          "seats": 5,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Daniel Ortega (FSLN)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "Reported result of an election the OAS, EU and US said was neither free nor fair: authorities had jailed or forced into exile the leading opposition candidates (seven presidential aspirants disqualified or arrested) and the main opposition coalitions were barred or boycotted. The parties that did run alongside the FSLN are widely described as collaborationist. The 90 elected seats shown exclude the two ex-officio seats (outgoing president and presidential runner-up). ALBA-TCP, by contrast, welcomed the result."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2021_Nicaraguan_general_election",
+        "https://data.ipu.org/parliament/NI/NI-LC01/election/NI-LC01-E20211107/",
+        "https://freedomhouse.org/country/nicaragua/freedom-world/2022"
+      ]
+    }
   ]
 }

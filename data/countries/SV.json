@@ -157,5 +157,44 @@
         "https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)"
       ]
     }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2009,
+      "chamber": "Asamblea Legislativa",
+      "totalSeats": 84,
+      "majorityThreshold": 43,
+      "parties": [
+        {
+          "abbr": "FMLN",
+          "name": "Frente Farabundo Martí para la Liberación Nacional",
+          "seats": 35,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "ARENA",
+          "name": "Alianza Republicana Nacionalista",
+          "seats": 32,
+          "align": "opposition"
+        },
+        {
+          "abbr": "others",
+          "name": "PCN, PDC and CD",
+          "seats": 17,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Mauricio Funes (FMLN)",
+        "fspInGovernment": true,
+        "hasMajority": false,
+        "note": "The FMLN's best-ever result — the largest bloc, but 8 seats short of a majority. The Funes government legislated through shifting deals with the smaller right-of-centre parties (and, from late 2009, the GANA split from ARENA); the FMLN never controlled the Assembly outright in either of its two presidencies (2009–2019)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2009_Salvadoran_legislative_election",
+        "https://revista.drclas.harvard.edu/the-salvadoran-right-since-2009/"
+      ]
+    }
   ]
 }
