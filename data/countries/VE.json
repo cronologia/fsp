@@ -241,6 +241,36 @@
   ],
   "legislativeComposition": [
     {
+      "year": 2020,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 277,
+      "majorityThreshold": 139,
+      "parties": [
+        {
+          "abbr": "GPP",
+          "name": "Gran Polo Patriótico (PSUV-led)",
+          "seats": 253,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Participating minor/opposition parties",
+          "seats": 24,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Nicolás Maduro (PSUV)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "The PSUV-led alliance regained a supermajority in an Assembly expanded to 277 seats. The main opposition BOYCOTTED the election, turnout was ~31%, and many governments and the EU did not recognise the result — it is widely disputed."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_Venezuelan_parliamentary_election"
+      ]
+    },
+    {
       "year": 2015,
       "chamber": "Asamblea Nacional",
       "totalSeats": 167,
@@ -271,33 +301,41 @@
       ]
     },
     {
-      "year": 2020,
+      "year": 2010,
       "chamber": "Asamblea Nacional",
-      "totalSeats": 277,
-      "majorityThreshold": 139,
+      "totalSeats": 165,
+      "majorityThreshold": 83,
       "parties": [
         {
-          "abbr": "GPP",
-          "name": "Gran Polo Patriótico (PSUV-led)",
-          "seats": 253,
+          "abbr": "PSUV",
+          "name": "Partido Socialista Unido de Venezuela",
+          "seats": 98,
           "align": "government",
           "fsp": true
         },
         {
-          "abbr": "others",
-          "name": "Participating minor/opposition parties",
-          "seats": 24,
-          "align": "mixed"
+          "abbr": "MUD",
+          "name": "Mesa de la Unidad Democrática (opposition coalition)",
+          "seats": 65,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PPT",
+          "name": "Patria Para Todos",
+          "seats": 2,
+          "align": "independent"
         }
       ],
       "government": {
-        "led": "Nicolás Maduro (PSUV)",
+        "led": "Hugo Chávez (PSUV)",
         "fspInGovernment": true,
         "hasMajority": true,
-        "note": "The PSUV-led alliance regained a supermajority in an Assembly expanded to 277 seats. The main opposition BOYCOTTED the election, turnout was ~31%, and many governments and the EU did not recognise the result — it is widely disputed."
+        "note": "The last National Assembly election before 2015 whose results were broadly recognized at home and abroad. The PSUV kept a clear majority (98 of 165) but lost the two-thirds it had enjoyed after the opposition's 2005 boycott. The opposition MUD argued the outcome was engineered: the 2009 electoral law (LOPE) had replaced proportional allocation with mostly winner-take-all districts and redrawn boundaries, so the PSUV took ~59% of seats on roughly 48% of the vote while the MUD's ~47% yielded 65 seats; the government maintained the rules applied equally to all. PPT ran separately from both blocs."
       },
       "sources": [
-        "https://en.wikipedia.org/wiki/2020_Venezuelan_parliamentary_election"
+        "https://en.wikipedia.org/wiki/2010_Venezuelan_parliamentary_election",
+        "http://archive.ipu.org/parline/reports/arc/2347_10.htm",
+        "https://www.csis.org/analysis/venezuelan-parliamentary-elections"
       ]
     }
   ]

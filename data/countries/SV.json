@@ -160,6 +160,74 @@
   ],
   "legislativeComposition": [
     {
+      "year": 2021,
+      "chamber": "Asamblea Legislativa",
+      "totalSeats": 84,
+      "majorityThreshold": 43,
+      "parties": [
+        {
+          "abbr": "NI",
+          "name": "Nuevas Ideas (Bukele)",
+          "seats": 56,
+          "align": "government"
+        },
+        {
+          "abbr": "ARENA",
+          "name": "Alianza Republicana Nacionalista",
+          "seats": 14,
+          "align": "opposition"
+        },
+        {
+          "abbr": "GANA",
+          "name": "Gran Alianza por la Unidad Nacional",
+          "seats": 5,
+          "align": "government"
+        },
+        {
+          "abbr": "FMLN",
+          "name": "Frente Farabundo Martí para la Liberación Nacional",
+          "seats": 4,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "PCN",
+          "name": "Partido de Concertación Nacional",
+          "seats": 2,
+          "align": "government"
+        },
+        {
+          "abbr": "PDC",
+          "name": "Partido Demócrata Cristiano",
+          "seats": 1,
+          "align": "government"
+        },
+        {
+          "abbr": "NT",
+          "name": "Nuestro Tiempo",
+          "seats": 1,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Vamos",
+          "name": "Vamos",
+          "seats": 1,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Nayib Bukele (Nuevas Ideas) — not an FSP party",
+        "fspInGovernment": false,
+        "hasMajority": true,
+        "note": "The end of the FMLN cycle: the FSP founding member collapsed from 23 seats (2018) to 4 — its worst result since becoming a party — as Bukele's Nuevas Ideas alone won 56 of 84, exactly the two-thirds supermajority, and 61 with its allies (GANA, PCN, PDC). On 1 May 2021, its first day, the new Assembly removed the five Constitutional Chamber magistrates and the Attorney General (see the court section); human-rights groups called it a rupture of the constitutional order, while Bukele defended it as within the Assembly's powers."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2021_Salvadoran_legislative_election",
+        "https://data.ipu.org/parliament/SV/SV-LC01/election/SV-LC01-E20210228/",
+        "https://elfaro.net/es/202103/el_salvador/25304/Bukele-gana-la-Asamblea-Legislativa.htm"
+      ]
+    },
+    {
       "year": 2009,
       "chamber": "Asamblea Legislativa",
       "totalSeats": 84,
