@@ -58,16 +58,19 @@ Open `docs/index.html` directly in a browser, or serve the folder:
 python3 -m http.server -d docs 8000   # then visit http://localhost:8000
 ```
 
-### Validate
+### Validate & test
 
 ```bash
 node scripts/validate-data.js   # schema check for data/forum.json + data/countries/*.json
+node --test                     # unit tests (build.js helpers, data invariants, parsers)
 ```
+
+Both run in CI before the build. Tests use `node:test`/`node:assert` only — no dependencies.
 
 ### Publish (GitHub Pages)
 
 CI handles this: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) validates the
-data, rebuilds, and checks that committed `docs/` is in sync on every push/PR. Deployment to
+data, runs the tests, rebuilds, and checks that committed `docs/` is in sync on every push/PR. Deployment to
 GitHub Pages is **opt-in** so `master` stays green until you turn it on. To go live:
 
 1. **Settings → Pages → Build and deployment → Source: GitHub Actions**
