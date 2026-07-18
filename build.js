@@ -1095,8 +1095,23 @@ function renderLegislativeComposition(c) {
       const fspLine = fspSeats
         ? `      <p class="notice"><strong>FSP member parties together: ${fspSeats} of ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${fspSeats >= thr ? 'a majority on their own' : `${gap} seat${gap === 1 ? '' : 's'} short of the ${esc(thr)}-seat majority`}` : ''}. ${tail}</p>\n`
         : '';
+      // Visual seat-share bar: parties ordered FSP → government ally → mixed →
+      // opposition, with a marker at the majority threshold — so it's obvious at a
+      // glance whether (and with whom) the governing bloc crosses the majority line.
+      const rank = { fsp: 0, government: 1, mixed: 2, independent: 3, opposition: 4 };
+      const grp = (p) => (p.fsp ? 'fsp' : (p.align || 'independent'));
+      const segs = e.totalSeats
+        ? [...e.parties].sort((a, b) => (rank[grp(a)] - rank[grp(b)]) || (b.seats - a.seats))
+            .map((p) => `<span class="seatseg seatseg-${grp(p)}" style="width:${(p.seats / e.totalSeats * 100).toFixed(2)}%" title="${esc(`${p.abbr || p.name}: ${p.seats} — ${ALIGN[p.align] || p.align || ''}`)}"></span>`).join('')
+        : '';
+      const majMark = e.majorityThreshold && e.totalSeats
+        ? `<span class="seatbar-maj" style="left:${(e.majorityThreshold / e.totalSeats * 100).toFixed(2)}%" title="Majority = ${esc(e.majorityThreshold)} of ${esc(e.totalSeats)}"></span>`
+        : '';
+      const seatbar = segs
+        ? `      <div class="seatbar" role="img" aria-label="Seats by bloc for ${esc(e.year)}; majority line at ${esc(e.majorityThreshold || '')} of ${esc(e.totalSeats)}">${segs}${majMark}</div>\n`
+        : '';
       return `      <h3>${esc(e.year)} — ${esc(e.chamber)} (${esc(e.totalSeats)} seats${e.majorityThreshold ? `; majority = ${esc(e.majorityThreshold)}` : ''})</h3>
-      <div class="table-scroll">
+${seatbar}      <div class="table-scroll">
         <table class="meetings">
           <thead><tr><th>Party</th><th>Full name</th><th>Seats</th><th>Alignment</th></tr></thead>
           <tbody>
@@ -1113,7 +1128,8 @@ ${fspLine}      <p class="section-intro"><strong>Government:</strong> ${esc(g.le
     : '';
   return `    <section>
       <h2>Legislative composition</h2>
-      <p class="section-intro">Seats by party for recent elections, and whether the governing coalition held a majority. In a fragmented system a governing majority is assembled across several parties — no party governs alone; a coalition majority is not a single-party majority.</p>
+      <p class="section-intro">Seats by party for recent elections, and whether the governing coalition held a majority. In a fragmented system a governing majority is assembled across several parties — no party governs alone; a coalition majority is not a single-party majority. Each bar orders blocs left→right with a marker at the majority line.</p>
+      <div class="seatbar-legend"><span class="ptl-key"><span class="seatseg-key seatseg-fsp"></span>FSP party</span><span class="ptl-key"><span class="seatseg-key seatseg-government"></span>Government ally</span><span class="ptl-key"><span class="seatseg-key seatseg-mixed"></span>Mixed / centrão</span><span class="ptl-key"><span class="seatseg-key seatseg-opposition"></span>Opposition</span><span class="ptl-key"><span class="seatbar-maj-key"></span>Majority line</span></div>
 ${fspNote}${blocks}
     </section>
 `;
