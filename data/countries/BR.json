@@ -414,14 +414,14 @@
         {
           "abbr": "PCdoB",
           "name": "Partido Comunista do Brasil",
-          "seats": 8,
+          "seats": 6,
           "align": "government",
           "fsp": true
         },
         {
           "abbr": "others",
           "name": "Other parties (20+)",
-          "seats": 76,
+          "seats": 78,
           "align": "mixed"
         }
       ],
@@ -433,7 +433,8 @@
       },
       "sources": [
         "https://en.wikipedia.org/wiki/2022_Brazilian_general_election",
-        "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/"
+        "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/",
+        "https://pcdob.org.br/noticias/pcdob-elege-seis-deputados-federais-em-cinco-estados/"
       ]
     },
     {
