@@ -34,7 +34,7 @@ Total FSP-party presidential terms across tracked countries: **34**.
 | [Venezuela](docs/countries/VE.html) | VE | Partido Socialista Unido de Venezuela (PSUV) | member | Hugo Chávez (1999–2013); Nicolás Maduro (2013–present) |
 | [Bolivia](docs/countries/BO.html) | BO | Movimiento al Socialismo (MAS) | member | Evo Morales (2006–2019); Luis Arce (2020–2025) |
 | [Nicaragua](docs/countries/NI.html) | NI | Frente Sandinista de Liberación Nacional (FSLN) | founding member | Daniel Ortega (2007–present) |
-| [Uruguay](docs/countries/UY.html) | UY | Frente Amplio (FA) | member (founding status to verify) | Tabaré Vázquez (2005–2010); José Mujica (2010–2015); Tabaré Vázquez (2015–2020); Yamandú Orsi (2025–present) |
+| [Uruguay](docs/countries/UY.html) | UY | Frente Amplio (FA) | member (Frente Amplio, founding participant) | Tabaré Vázquez (2005–2010); José Mujica (2010–2015); Tabaré Vázquez (2015–2020); Yamandú Orsi (2025–present) |
 | [El Salvador](docs/countries/SV.html) | SV | Frente Farabundo Martí (FMLN) | founding member | Mauricio Funes (2009–2014); Salvador Sánchez Cerén (2014–2019) |
 | [Honduras](docs/countries/HN.html) | HN | Libertad y Refundación (LIBRE) | member | Xiomara Castro (2022–present) |
 | [Mexico](docs/countries/MX.html) | MX | Morena | member (MORENA, PT and PRD) | Andrés Manuel López Obrador (2018–2024); Claudia Sheinbaum (2024–present) |
