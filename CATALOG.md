@@ -58,6 +58,8 @@ governing coalition; `opposition` = out of government; `single-party` = one-part
 - **Uruguay** (Frente Amplio): 1990–2005: **opposition** · 2005–2020: **majority** · 2020–2025: **opposition** · 2025–present: **minority**
 - **El Salvador** (FMLN): 1994–2009: **opposition** · 2009–2019: **minority** · 2019–present: **opposition**
 - **Honduras** (LIBRE): 2013–2022: **opposition** · 2022–present: **plurality**
+- **Dominican Republic** (PLD): 1990–1996: **opposition** · 1996–2020: **majority** · 2020–present: **opposition**
+- **Peru** (PNP): 1990–2011: **opposition** · 2011–2016: **plurality** · 2016–present: **opposition**
 - **Cuba** (PCC): 1990–present: **single-party**
 
 ## Member parties
