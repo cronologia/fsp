@@ -2,7 +2,7 @@
   "country": "Mexico",
   "code": "MX",
   "fspParty": "Morena",
-  "fspStatus": "affiliated (to verify)",
+  "fspStatus": "member (MORENA, PT and PRD)",
   "fspPresidents": [
     "Andrés Manuel López Obrador",
     "Claudia Sheinbaum"
@@ -66,17 +66,85 @@
     "stillServing": "The pre-reform court was effectively replaced. An entirely new 9-justice court was elected on 1 June 2025 and seated 1 September 2025 (12-year terms), with Hugo Aguilar Ortiz as chief justice (2025–2027). Three former AMLO-appointed justices (Lenia Batres, Yasmín Esquivel, Loretta Ortiz) were re-elected. Turnout was about 13%, and the new court is widely assessed as aligned with the ruling Morena party.",
     "verified": true,
     "courtHistory": [
-      { "period": "Before 1990 (context)", "type": "composition", "event": "The SCJN was re-founded by the 1917 Constitution; under PRI hegemony it was repeatedly resized and was effectively subordinate to the executive.", "size": null, "appointingGovernment": "PRI era (1929–2000)", "fspRelated": false, "verified": false },
-      { "period": "1994", "type": "reform", "event": "Zedillo's judicial reform reduced the SCJN from 26 to 11 ministers (early-retiring the sitting court), created the Federal Judiciary Council (CJF), and set 15-year staggered terms — building the modern, more independent court.", "size": 11, "appointingGovernment": "Ernesto Zedillo (PRI)", "fspRelated": false, "verified": true },
-      { "period": "2024", "type": "reform", "event": "Morena's judicial reform (promulgated Sept 2024 under AMLO) made all judges elected by popular vote, cut the SCJN from 11 to 9, and shortened tenure from 15 to 12 years.", "size": 9, "appointingGovernment": "López Obrador (Morena)", "fspRelated": true, "verified": true },
-      { "period": "2025", "type": "packing", "event": "The first judicial elections (1 June 2025) replaced the entire court; the new 9-justice SCJN seated 1 Sept 2025 is widely assessed as Morena-aligned — critics call it a capture of the court by popular-vote means.", "size": 9, "appointingGovernment": "Sheinbaum (Morena)", "fspRelated": true, "verified": true }
+      {
+        "period": "Before 1990 (context)",
+        "type": "composition",
+        "event": "The SCJN was re-founded by the 1917 Constitution; under PRI hegemony it was repeatedly resized and was effectively subordinate to the executive.",
+        "size": null,
+        "appointingGovernment": "PRI era (1929–2000)",
+        "fspRelated": false,
+        "verified": false
+      },
+      {
+        "period": "1994",
+        "type": "reform",
+        "event": "Zedillo's judicial reform reduced the SCJN from 26 to 11 ministers (early-retiring the sitting court), created the Federal Judiciary Council (CJF), and set 15-year staggered terms — building the modern, more independent court.",
+        "size": 11,
+        "appointingGovernment": "Ernesto Zedillo (PRI)",
+        "fspRelated": false,
+        "verified": true
+      },
+      {
+        "period": "2024",
+        "type": "reform",
+        "event": "Morena's judicial reform (promulgated Sept 2024 under AMLO) made all judges elected by popular vote, cut the SCJN from 11 to 9, and shortened tenure from 15 to 12 years.",
+        "size": 9,
+        "appointingGovernment": "López Obrador (Morena)",
+        "fspRelated": true,
+        "verified": true
+      },
+      {
+        "period": "2025",
+        "type": "packing",
+        "event": "The first judicial elections (1 June 2025) replaced the entire court; the new 9-justice SCJN seated 1 Sept 2025 is widely assessed as Morena-aligned — critics call it a capture of the court by popular-vote means.",
+        "size": 9,
+        "appointingGovernment": "Sheinbaum (Morena)",
+        "fspRelated": true,
+        "verified": true
+      }
     ],
-    "courtHistorySources": ["https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform", "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections", "https://www.eluniversal.com.mx/nacion/1994-cuando-zedillo-bajo-de-26-a-11-a-los-ministros-de-la-suprema-corte/"],
+    "courtHistorySources": [
+      "https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform",
+      "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections",
+      "https://www.eluniversal.com.mx/nacion/1994-cuando-zedillo-bajo-de-26-a-11-a-los-ministros-de-la-suprema-corte/"
+    ],
     "justices": [
-      { "name": "Hugo Aguilar Ortiz", "appointedBy": "elected (popular vote)", "appointedParty": "Morena-aligned", "year": 2025, "fspAppointed": true, "status": "chief justice 2025–2027", "background": "Indigenous-rights lawyer; topped the 2025 judicial election." },
-      { "name": "Lenia Batres", "appointedBy": "elected (re-elected; orig. AMLO 2024)", "appointedParty": "Morena-aligned", "year": 2025, "fspAppointed": true, "status": "serving", "background": "Former AMLO appointee, re-elected." },
-      { "name": "Yasmín Esquivel Mossa", "appointedBy": "elected (re-elected; orig. Peña Nieto 2019)", "appointedParty": "—", "year": 2025, "fspAppointed": false, "status": "serving", "background": "Incumbent justice, re-elected." },
-      { "name": "Loretta Ortiz Ahlf", "appointedBy": "elected (re-elected; orig. AMLO 2021)", "appointedParty": "Morena-aligned", "year": 2025, "fspAppointed": true, "status": "serving", "background": "Former AMLO appointee, re-elected." }
+      {
+        "name": "Hugo Aguilar Ortiz",
+        "appointedBy": "elected (popular vote)",
+        "appointedParty": "Morena-aligned",
+        "year": 2025,
+        "fspAppointed": true,
+        "status": "chief justice 2025–2027",
+        "background": "Indigenous-rights lawyer; topped the 2025 judicial election."
+      },
+      {
+        "name": "Lenia Batres",
+        "appointedBy": "elected (re-elected; orig. AMLO 2024)",
+        "appointedParty": "Morena-aligned",
+        "year": 2025,
+        "fspAppointed": true,
+        "status": "serving",
+        "background": "Former AMLO appointee, re-elected."
+      },
+      {
+        "name": "Yasmín Esquivel Mossa",
+        "appointedBy": "elected (re-elected; orig. Peña Nieto 2019)",
+        "appointedParty": "—",
+        "year": 2025,
+        "fspAppointed": false,
+        "status": "serving",
+        "background": "Incumbent justice, re-elected."
+      },
+      {
+        "name": "Loretta Ortiz Ahlf",
+        "appointedBy": "elected (re-elected; orig. AMLO 2021)",
+        "appointedParty": "Morena-aligned",
+        "year": 2025,
+        "fspAppointed": true,
+        "status": "serving",
+        "background": "Former AMLO appointee, re-elected."
+      }
     ],
     "justicesNote": "Top 4 of the 9 elected justices; the remaining 5 are still to be added (see #45)."
   },
@@ -84,5 +152,178 @@
     "https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform",
     "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections",
     "https://www.hrw.org/news/2025/09/01/mexico-electoral-process-undermines-judicial-independence"
+  ],
+  "fspMembershipSources": [
+    "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+    "https://www.capitalmexico.com.mx/nacional/foro-de-sao-paulo-relacionado-mexico-prd-morena-cuba-brasil-venezuela/"
+  ],
+  "fspParties": {
+    "current": [
+      "Movimiento Regeneración Nacional (MORENA)",
+      "Partido del Trabajo (PT)",
+      "Partido de la Revolución Democrática (PRD)"
+    ],
+    "note": "Mexico's FSP members are MORENA (which joined around 2015 and led the 2018 turn to power), the Partido del Trabajo (PT), and the older Partido de la Revolución Democrática (PRD) — the party Andrés Manuel López Obrador belonged to before founding MORENA. By 2024 the PRD had collapsed: it ran with the PAN/PRI-led opposition, won a single deputy, and lost its national registration. In government MORENA and the PT sit together; the coalition's supermajority relied on the non-FSP Partido Verde (PVEM)."
+  },
+  "legislativeControl": [
+    {
+      "start": "1990",
+      "end": "2018",
+      "chamber": "both",
+      "fspParty": "PRD / PT",
+      "fspBloc": "opposition",
+      "inGovernment": false,
+      "seats": "The FSP-aligned left (the PRD from 1989, the PT from 1990) sat in opposition to the PRI and then PAN governments; the PRD was at times the third-largest force and governed Mexico City, but never won the presidency or a congressional majority.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Party_of_the_Democratic_Revolution"
+      ]
+    },
+    {
+      "start": "2018",
+      "end": "present",
+      "chamber": "both",
+      "fspParty": "MORENA / PT",
+      "fspBloc": "majority",
+      "inGovernment": true,
+      "seats": "López Obrador's MORENA won the 2018 presidency and, with the PT and the non-FSP PVEM, majorities in both chambers; the 2024 election under Claudia Sheinbaum returned a two-thirds supermajority in the Chamber of Deputies and a near-supermajority in the Senate.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024_Mexican_general_election",
+        "https://en.wikipedia.org/wiki/2018_Mexican_general_election"
+      ]
+    }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2024,
+      "chamber": "Cámara de Diputados",
+      "totalSeats": 500,
+      "majorityThreshold": 251,
+      "parties": [
+        {
+          "abbr": "MORENA",
+          "name": "Movimiento Regeneración Nacional",
+          "seats": 236,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PVEM",
+          "name": "Partido Verde Ecologista de México",
+          "seats": 77,
+          "align": "government"
+        },
+        {
+          "abbr": "PT",
+          "name": "Partido del Trabajo",
+          "seats": 51,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PAN",
+          "name": "Partido Acción Nacional",
+          "seats": 72,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRI",
+          "name": "Partido Revolucionario Institucional",
+          "seats": 35,
+          "align": "opposition"
+        },
+        {
+          "abbr": "MC",
+          "name": "Movimiento Ciudadano",
+          "seats": 27,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRD",
+          "name": "Partido de la Revolución Democrática",
+          "seats": 1,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Other / independent",
+          "seats": 1,
+          "align": "independent"
+        }
+      ],
+      "government": {
+        "led": "Claudia Sheinbaum (MORENA)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "MORENA and the PT — both FSP members — together hold 287 of 500 seats, a majority in their own right. The full 'Sigamos Haciendo Historia' coalition (adding the non-FSP PVEM, 364 seats) reached the two-thirds supermajority needed to amend the constitution without the opposition. Note the historically FSP-listed PRD ran with the opposition here and won a single seat before losing its registration."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/LXVI_Legislature_of_the_Mexican_Congress",
+        "https://en.wikipedia.org/wiki/2024_Mexican_Chamber_of_Deputies_election"
+      ]
+    },
+    {
+      "year": 2024,
+      "chamber": "Senado",
+      "totalSeats": 128,
+      "majorityThreshold": 65,
+      "parties": [
+        {
+          "abbr": "MORENA",
+          "name": "Movimiento Regeneración Nacional",
+          "seats": 60,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PVEM",
+          "name": "Partido Verde Ecologista de México",
+          "seats": 14,
+          "align": "government"
+        },
+        {
+          "abbr": "PT",
+          "name": "Partido del Trabajo",
+          "seats": 8,
+          "align": "government",
+          "fsp": true
+        },
+        {
+          "abbr": "PAN",
+          "name": "Partido Acción Nacional",
+          "seats": 22,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRI",
+          "name": "Partido Revolucionario Institucional",
+          "seats": 16,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PRD",
+          "name": "Partido de la Revolución Democrática",
+          "seats": 2,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "Movimiento Ciudadano + independents",
+          "seats": 6,
+          "align": "opposition"
+        }
+      ],
+      "government": {
+        "led": "Claudia Sheinbaum (MORENA)",
+        "fspInGovernment": true,
+        "hasMajority": true,
+        "note": "MORENA and the PT hold 68 of 128 Senate seats — a majority on their own. The coalition (with PVEM, 82 seats) fell a few seats short of a two-thirds supermajority at the election and reached it only through later defections."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2024_Mexican_Senate_election",
+        "https://www.electionguide.org/elections/id/4312/"
+      ]
+    }
   ]
 }
