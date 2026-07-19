@@ -628,11 +628,15 @@ function ptlStateFor(country, year, now) {
 // enhancement: the tablist is hidden and all panels are shown until app.js
 // activates the tabs, so with JS off the panels simply stack.
 function renderVizTabs(countries) {
+  // The bench-provenance grid is its own tab; it renders empty when no country
+  // has a sourced benchControl record, in which case we omit the tab entirely.
+  const benchPanel = renderCourtSeatsGrid(countries);
   const tabs = [
     ['tab-presidents', 'presidents-map', 'Presidential'],
     ['tab-legislative', 'legislative-map', 'Legislative'],
     ['tab-courts', 'courts-map', 'Court interventions'],
   ];
+  if (benchPanel) tabs.push(['tab-courtbench', 'courtbench-map', 'Court bench']);
   const buttons = tabs
     .map(([id, ctl, lbl], i) =>
       `<button type="button" class="viz-tab" role="tab" id="${id}" aria-controls="${ctl}" aria-selected="${i === 0 ? 'true' : 'false'}">${esc(lbl)}</button>`)
@@ -643,7 +647,7 @@ function renderVizTabs(countries) {
 ${renderPresidentialTimeline(countries)}
 ${renderLegislativeGrid(countries)}
 ${renderCourtsGrid(countries)}
-    </div>
+${benchPanel}    </div>
 `;
 }
 
@@ -663,6 +667,24 @@ const ATLAS_TILES = {
   CL: [9, 3], AR: [9, 4], UY: [9, 5],
 };
 const ATLAS_ST = { fsp: 'f', 'fsp-unv': 'u', 'fsp-op': 'o', non: 'n', nodata: '.' };
+
+// FSP legislative standing that counts as "control" for the map overlay: the
+// FSP party/bloc holds a lower-house majority, single-party control, or a
+// plurality (largest bloc) in the active legislativeControl band. Returns the
+// bloc word (for the hover label), else null. Only meaningful in years the FSP
+// party did NOT hold the presidency (the overlay is layered on the "non" fill).
+function fspLegControl(country, year, now) {
+  const l = legStateFor(country, year, now);
+  return l && ['majority', 'single-party', 'plurality'].includes(l.fspBloc) ? l.fspBloc : null;
+}
+// True when the sitting high-court bench had an FSP-appointed MAJORITY that year
+// (benchControl 'aligned'). This is appointment provenance, not a claim of
+// control — courts so counted have ruled against the governments that named them.
+function fspBenchMajority(country, year, now) {
+  const b = benchStateFor(country, year, now);
+  return !!(b && b.control === 'aligned');
+}
+
 function renderAtlas(countries) {
   if (!countries || !countries.length) return '';
   const now = new Date().getFullYear();
@@ -670,19 +692,36 @@ function renderAtlas(countries) {
   for (let y = 1990; y <= now; y++) years.push(y);
   const tracked = countries.filter((c) => ATLAS_TILES[c.code]);
 
-  // Precompute, per country, a per-year state string + president labels.
+  // Precompute, per country, a per-year state string + hover labels. A solid
+  // fill marks the years the FSP party held the presidency; in years it did not
+  // (base state "n"), we overlay red hatching where it still held a legislative
+  // majority/plurality (L), an FSP-appointed high-court majority (C), or both
+  // (B) — power in a branch without the presidency.
   const data = tracked.map((c) => {
     const states = [];
     const who = [];
     for (const y of years) {
       const r = ptlStateFor(c, y, now);
-      states.push(ATLAS_ST[r.st] || '.');
-      who.push(r.p ? `${r.p.name} (${r.p.party})` : '—');
+      let st = ATLAS_ST[r.st] || '.';
+      const pres = r.p ? `${r.p.name} (${r.p.party})` : '—';
+      let w = pres;
+      if (st === 'n') {
+        const leg = fspLegControl(c, y, now);
+        const court = fspBenchMajority(c, y, now);
+        if (leg && court) { st = 'B'; w = `${pres} · FSP legislative ${leg} + FSP-appointed high-court majority`; }
+        else if (leg) { st = 'L'; w = `${pres} · FSP legislative ${leg}`; }
+        else if (court) { st = 'C'; w = `${pres} · FSP-appointed high-court majority`; }
+      }
+      states.push(st);
+      who.push(w);
     }
     return { code: c.code, name: c.country, states: states.join(''), who };
   });
 
-  const stClass = { f: 'atlas-f', u: 'atlas-u', o: 'atlas-o', n: 'atlas-n', '.': 'atlas-nodata' };
+  const stClass = {
+    f: 'atlas-f', u: 'atlas-u', o: 'atlas-o', n: 'atlas-n', '.': 'atlas-nodata',
+    L: 'atlas-leg', C: 'atlas-court', B: 'atlas-both',
+  };
   const iNow = years.length - 1;
 
   // Inline the committed, public-domain Latin America SVG (real borders). Inject
@@ -692,6 +731,9 @@ function renderAtlas(countries) {
   const defs = `<defs>
 <pattern id="p-u" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#e79aa0"/><line x1="0" y1="0" x2="0" y2="6" stroke="#7a1418" stroke-width="2"/></pattern>
 <pattern id="p-o" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill="#b8252b"/><path d="M0,0L6,6M6,0L0,6" stroke="rgba(0,0,0,.45)" stroke-width="1.2"/></pattern>
+<pattern id="p-leg" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill="#dfe3ea"/><line x1="0" y1="3" x2="6" y2="3" stroke="#b8252b" stroke-width="1.6"/></pattern>
+<pattern id="p-court" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill="#dfe3ea"/><line x1="3" y1="0" x2="3" y2="6" stroke="#b8252b" stroke-width="1.6"/></pattern>
+<pattern id="p-both" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill="#dfe3ea"/><line x1="0" y1="3" x2="6" y2="3" stroke="#b8252b" stroke-width="1.4"/><line x1="3" y1="0" x2="3" y2="6" stroke="#b8252b" stroke-width="1.4"/></pattern>
 </defs>`;
   svg = svg.replace(/(<svg\b[^>]*>)/, `$1\n${defs}`);
   const byCode = {};
@@ -712,6 +754,9 @@ function renderAtlas(countries) {
     ['f', 'atlas-f', 'FSP-party president'],
     ['u', 'atlas-u', 'FSP affiliation to verify'],
     ['o', 'atlas-o', 'One-party state (PCC)'],
+    ['L', 'atlas-leg', 'FSP legislative majority/plurality, no presidency'],
+    ['C', 'atlas-court', 'FSP-appointed high-court majority, no presidency'],
+    ['B', 'atlas-both', 'Legislature + court, no presidency'],
     ['n', 'atlas-n', 'Non-FSP'],
     ['.', 'atlas-nodata', 'No data'],
   ]
@@ -722,7 +767,7 @@ function renderAtlas(countries) {
   const payload = JSON.stringify({ start: 1990, end: now, countries: data });
   return `    <section id="atlas">
       <h2>The map, year by year</h2>
-      <p class="section-intro">The tracked countries on the map, coloured by who held the presidency that year. Drag the slider or press play to watch the spread — often called the “pink tide” — rise and recede. Same states as the grids above; one-party Cuba is marked distinctly and not part of the electoral counts. Neighbouring countries are shown greyed for context.</p>
+      <p class="section-intro">The tracked countries on the map, coloured by who held the presidency that year. Drag the slider or press play to watch the spread — often called the “pink tide” — rise and recede. A <strong>solid</strong> country held an FSP-party presidency; where the FSP party instead held a <strong>legislative</strong> majority or plurality, or an <strong>FSP-appointed high-court majority</strong>, <em>without</em> the presidency, the country is hatched with red lines — horizontal for the legislature, vertical for the court, crossed for both (a branch, not the presidency; the court line records who appointed the bench, not how it rules). One-party Cuba is marked distinctly and not part of the electoral counts. Neighbouring countries are shown greyed for context.</p>
       <div class="atlas-controls">
         <button type="button" id="atlas-play" class="atlas-btn" aria-label="Play through the years">▶ Play</button>
         <input type="range" id="atlas-slider" min="1990" max="${now}" value="${now}" step="1" aria-label="Year" />
@@ -925,7 +970,7 @@ ${bodyRows}
         </div>
       </div>
       <div class="ptl-legend">${legend}</div>
-${renderCourtSeatsGrid(countries)}    </section>
+    </section>
 `;
 }
 
@@ -1122,8 +1167,9 @@ function renderCourtSeatsGrid(countries) {
     .join('');
 
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
-  return `      <h2>High-court seats by appointing government, year by year</h2>
-      <p class="section-intro">For each country with a sourced record, <strong>who appointed the sitting high-court bench</strong> each year — whether justices appointed under FSP-member governments were a <strong>majority</strong>, a <strong>minority</strong>, or absent. This grid records <strong>appointment provenance only</strong>: appointment by a government does not by itself demonstrate that a court serves it — courts counted here have ruled against the governments that appointed them (Brazil's mensalão convictions, Uruguay's 2013 rulings). The stronger claim — documented packing, purges and structural reforms — is the interventions grid above. ${rows.length} countries have a sourced bench record; the rest are omitted rather than estimated. Each cell's detail cites the counts only where sources give them.</p>
+  return `    <section id="courtbench-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-courtbench" tabindex="0">
+      <h2>High-court seats by appointing government, year by year</h2>
+      <p class="section-intro">For each country with a sourced record, <strong>who appointed the sitting high-court bench</strong> each year — whether justices appointed under FSP-member governments were a <strong>majority</strong> (the years marked here, and the vertical red hatch on the map), a <strong>minority</strong>, or absent. This grid records <strong>appointment provenance only</strong>: appointment by a government does not by itself demonstrate that a court serves it — courts counted here have ruled against the governments that appointed them (Brazil's mensalão convictions, Uruguay's 2013 rulings). The stronger claim — documented packing, purges and structural reforms — is the <strong>Court interventions</strong> tab. ${rows.length} countries have a sourced bench record; the rest are omitted rather than estimated. Each cell's detail cites the counts only where sources give them.</p>
       <p class="ptl-caption" id="cs-caption" aria-live="polite">Hover, tap or focus a cell for the bench's appointment provenance that year. Each state is shown by colour, fill and glyph, so it reads without colour.</p>
       <div class="table-scroll">
         <div class="ptl" id="cs-grid" style="${gridCols}">
@@ -1133,6 +1179,7 @@ ${bodyRows}
         </div>
       </div>
       <div class="ptl-legend">${legend}</div>
+    </section>
 `;
 }
 
@@ -1664,4 +1711,4 @@ function main() {
 // pure helpers so they can be unit-tested without generating docs/.
 if (require.main === module) main();
 
-module.exports = { esc, ptlYear, ptlStateFor, legStateFor, benchStateFor, benchCellText, courtEventYears, fspBlocStats };
+module.exports = { esc, ptlYear, ptlStateFor, legStateFor, benchStateFor, benchCellText, courtEventYears, fspBlocStats, fspLegControl, fspBenchMajority };
