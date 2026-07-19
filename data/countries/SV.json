@@ -108,7 +108,22 @@
       "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm",
       "https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding"
     ],
-    "justicesNote": "The 15-magistrate CSJ (incl. the 5-member Constitutional Chamber) was reconstituted in 2021; current members are Bukele-aligned and not itemized here."
+    "justicesNote": "The 15-magistrate CSJ (incl. the 5-member Constitutional Chamber) was reconstituted in 2021; current members are Bukele-aligned and not itemized here.",
+    "benchControl": [
+      {
+        "start": "2009",
+        "end": "2021",
+        "size": 5,
+        "fspAppointed": null,
+        "control": "partial",
+        "note": "Bench tracked here = the 5-member Constitutional Chamber ('Sala de lo Constitucional', 5 of the 15 CSJ magistrates), the constitutionally decisive body. During the FMLN governments (2009–2019) magistrates were elected by a two-thirds Assembly vote through the long-standing ARENA–FMLN power-sharing — the FMLN caucus co-selected 2 of the 4 seats filled in the 2009 cycle, never a chamber majority on its own. The resulting 'Sala 4' (2009–2018) became known for landmark rulings against both the ARENA and FMLN governments — an appointment-provenance-without-alignment case, not FSP control. The successor chamber was removed en masse on 1 May 2021 by Bukele's new (non-FSP) Assembly (see courtHistory), ending the FMLN-era co-appointed presence.",
+        "sources": [
+          "https://es.wikipedia.org/wiki/Sala_de_lo_Constitucional_de_la_Corte_Suprema_de_Justicia_de_El_Salvador",
+          "https://revistamundoelectoral.com/articulo-internacional/luces-y-sombras-de-la-jurisprudencia-constitucional-electoral-en-el-salvador/",
+          "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm"
+        ]
+      }
+    ]
   },
   "sources": [
     "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm",

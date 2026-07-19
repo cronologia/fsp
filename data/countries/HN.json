@@ -138,7 +138,34 @@
       "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)",
       "https://en.wikipedia.org/wiki/2009_Honduran_coup_d%27%C3%A9tat"
     ],
-    "justicesNote": "The 15-magistrate CSJ elected in 2023 is current; individual members are not itemized here."
+    "justicesNote": "The 15-magistrate CSJ elected in 2023 is current; individual members are not itemized here.",
+    "benchControl": [
+      {
+        "start": "2016",
+        "end": "2023",
+        "size": 15,
+        "fspAppointed": 0,
+        "control": "independent",
+        "note": "The 2016–2023 Supreme Court was elected in 2016 by a Congress controlled by the Hernández (Partido Nacional, non-FSP) government; LIBRE had no role in its selection. The 2012 removal of four Constitutional Chamber justices (the 'technical coup') and the 2015 ruling that lifted the presidential re-election ban both came from courts seated under non-FSP governments — the FSP party never controlled these benches.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)",
+          "https://www.americanbar.org/groups/human_rights/reports/honduras-elige-nueva-corte-suprema/"
+        ]
+      },
+      {
+        "start": "2023",
+        "end": "present",
+        "size": 15,
+        "fspAppointed": 6,
+        "control": "partial",
+        "note": "In February 2023 the LIBRE-led Congress elected the 2023–2030 Supreme Court (the 15 magistrates require a two-thirds vote, from a list vetted by a nominating board). After three weeks of deadlock the seats were distributed by a negotiated tripartite pact — about 6 of the 15 magistrates were counted as LIBRE-aligned, 5 as Partido Nacional and 4 as Partido Liberal. It was LIBRE's largest-ever share of the bench but short of a majority; a PSH deputy criticised it as a new tripartite 'reparto'.",
+        "sources": [
+          "https://cnnespanol.cnn.com/2023/02/17/congreso-honduras-nuevos-15-magistrados-corte-suprema-justicia-orix/",
+          "https://www.expedientepublico.org/honduras-eligio-a-los-15-nuevos-magistrados-de-la-corte-suprema-de-justicia/",
+          "https://www.americanbar.org/groups/human_rights/reports/honduras-elige-nueva-corte-suprema/"
+        ]
+      }
+    ]
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Honduras)",
