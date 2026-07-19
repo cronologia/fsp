@@ -121,8 +121,11 @@
 
   var data;
   try { data = JSON.parse(raw.textContent); } catch (e) { return; }
-  var CLASS = { f: 'atlas-f', u: 'atlas-u', o: 'atlas-o', n: 'atlas-n', '.': 'atlas-nodata' };
-  var STATES = 'f u o n .'.split(' ');
+  var CLASS = {
+    f: 'atlas-f', u: 'atlas-u', o: 'atlas-o', n: 'atlas-n', '.': 'atlas-nodata',
+    L: 'atlas-leg', C: 'atlas-court', B: 'atlas-both',
+  };
+  var STATES = 'f u o n . L C B'.split(' ');
   var byCode = {};
   data.countries.forEach(function (c) { byCode[c.code] = c; });
   var paths = Array.prototype.slice.call(map.querySelectorAll('.latam-c'));

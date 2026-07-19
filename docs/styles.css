@@ -225,6 +225,9 @@ a.ptl-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px;
 .latam-c.atlas-o { fill: url(#p-o); }
 .latam-c.atlas-n { fill: #dfe3ea; }
 .latam-c.atlas-nodata { fill: #eef0f3; }
+.latam-c.atlas-leg { fill: url(#p-leg); }
+.latam-c.atlas-court { fill: url(#p-court); }
+.latam-c.atlas-both { fill: url(#p-both); }
 .atlas-credit { color: var(--muted); font-size: .72rem; margin: .3rem 0 0; }
 .atlas-swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; }
 .atlas-swatch.atlas-f { background: #b8252b; }
@@ -232,6 +235,9 @@ a.ptl-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px;
 .atlas-swatch.atlas-o { background: #b8252b; background-image: repeating-linear-gradient(45deg, rgba(0,0,0,.42) 0 2px, transparent 2px 5px), repeating-linear-gradient(-45deg, rgba(0,0,0,.42) 0 2px, transparent 2px 5px); }
 .atlas-swatch.atlas-n { background: #dfe3ea; }
 .atlas-swatch.atlas-nodata { background: #eef0f3; box-shadow: inset 0 0 0 1px var(--line); }
+.atlas-swatch.atlas-leg { background: #dfe3ea; background-image: repeating-linear-gradient(0deg, #b8252b 0 2px, transparent 2px 6px); }
+.atlas-swatch.atlas-court { background: #dfe3ea; background-image: repeating-linear-gradient(90deg, #b8252b 0 2px, transparent 2px 6px); }
+.atlas-swatch.atlas-both { background: #dfe3ea; background-image: repeating-linear-gradient(0deg, #b8252b 0 1.5px, transparent 1.5px 6px), repeating-linear-gradient(90deg, #b8252b 0 1.5px, transparent 1.5px 6px); }
 
 /* High-court interventions grid — reuses the .ptl grid layout. Cells carry a
    glyph as well as colour (P = packing, × = purge, R = reform) for a11y. */

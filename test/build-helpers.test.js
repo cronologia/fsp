@@ -2,7 +2,7 @@
 // Unit tests for build.js's pure helpers (zero-dependency; node --test).
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { esc, ptlYear, ptlStateFor, legStateFor, benchStateFor, benchCellText, courtEventYears, fspBlocStats } = require('../build.js');
+const { esc, ptlYear, ptlStateFor, legStateFor, benchStateFor, benchCellText, courtEventYears, fspBlocStats, fspLegControl, fspBenchMajority } = require('../build.js');
 
 const NOW = 2026;
 
@@ -139,4 +139,29 @@ test('courtEventYears extracts 4-digit years ≥1990 from period strings', () =>
   assert.deepEqual(courtEventYears('2011 & 2017'), [2011, 2017]);
   assert.deepEqual(courtEventYears('2016–2017'), [2016, 2017]);
   assert.deepEqual(courtEventYears('1989 (pre-democracy)'), []); // below 1990 → filtered
+});
+
+test('fspLegControl counts majority, single-party and plurality as control', () => {
+  const c = { legislativeControl: [
+    { start: '2000', end: '2004', fspBloc: 'majority' },
+    { start: '2004', end: '2008', fspBloc: 'plurality' },
+    { start: '2008', end: '2012', fspBloc: 'minority' },
+    { start: '2012', end: 'present', fspBloc: 'opposition' },
+  ] };
+  assert.equal(fspLegControl(c, 2002, NOW), 'majority');
+  assert.equal(fspLegControl(c, 2006, NOW), 'plurality');
+  assert.equal(fspLegControl(c, 2010, NOW), null); // minority is not "control"
+  assert.equal(fspLegControl(c, 2020, NOW), null); // opposition is not "control"
+  assert.equal(fspLegControl({}, 2020, NOW), null); // no bands → null
+});
+
+test('fspBenchMajority is true only for an aligned bench band', () => {
+  const c = { supremeCourt: { benchControl: [
+    { start: '2010', end: '2015', control: 'aligned' },
+    { start: '2015', end: 'present', control: 'partial' },
+  ] } };
+  assert.equal(fspBenchMajority(c, 2012, NOW), true);
+  assert.equal(fspBenchMajority(c, 2020, NOW), false); // partial → not a majority
+  assert.equal(fspBenchMajority(c, 2005, NOW), false); // no band covers the year
+  assert.equal(fspBenchMajority({}, 2012, NOW), false);
 });
