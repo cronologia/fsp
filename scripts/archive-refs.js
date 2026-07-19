@@ -42,7 +42,18 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_FILE = path.join(ROOT, 'data', 'forum.json');
+const COUNTRIES_DIR = path.join(ROOT, 'data', 'countries');
 const CACHE_FILE = path.join(ROOT, 'data', 'archives.json');
+
+// Source arrays carried by the country dossiers (data/countries/*.json). These
+// hold bare URL strings (not reference objects), scattered across the dossier —
+// sources[] on legislativeComposition/benchControl/courtHistory entries, plus
+// the top-level membership/court source lists. We walk for these key names.
+const COUNTRY_SOURCE_KEYS = new Set([
+  'sources',
+  'courtHistorySources',
+  'fspMembershipSources',
+]);
 
 const AVAILABILITY_API = 'https://archive.org/wayback/available';
 const SAVE_API = 'https://web.archive.org/save/';
@@ -64,18 +75,74 @@ const PACING_DELAY_MS = 6000;     // polite delay between Save Page Now calls
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /**
- * Collect the distinct reference URLs from forum.json, flagging those marked
+ * Recursively collect bare URL strings held in a country dossier's source
+ * arrays (see COUNTRY_SOURCE_KEYS). The dossiers cite sources as plain URL
+ * strings rather than reference objects, and those arrays hang off many nested
+ * shapes (legislativeComposition[].sources, benchControl[].sources,
+ * courtHistorySources, fspMembershipSources, …), so we walk the whole tree.
+ */
+function collectCountryUrls(node, into) {
+  if (Array.isArray(node)) {
+    for (const item of node) collectCountryUrls(item, into);
+    return;
+  }
+  if (node && typeof node === 'object') {
+    for (const [key, value] of Object.entries(node)) {
+      if (COUNTRY_SOURCE_KEYS.has(key) && Array.isArray(value)) {
+        for (const s of value) {
+          if (typeof s === 'string' && /^https?:\/\//i.test(s.trim())) {
+            into.add(s.trim());
+          }
+        }
+      }
+      collectCountryUrls(value, into);
+    }
+  }
+}
+
+/** Read every country dossier and return the distinct source URLs they cite. */
+function loadCountryUrls() {
+  const urls = new Set();
+  let files = [];
+  try {
+    files = fs.readdirSync(COUNTRIES_DIR);
+  } catch {
+    return urls; // no country dossiers in this checkout
+  }
+  for (const file of files) {
+    if (!file.endsWith('.json') || file === 'index.json') continue;
+    let dossier;
+    try {
+      dossier = JSON.parse(fs.readFileSync(path.join(COUNTRIES_DIR, file), 'utf8'));
+    } catch {
+      continue;
+    }
+    collectCountryUrls(dossier, urls);
+  }
+  return urls;
+}
+
+/**
+ * Collect the distinct reference URLs to archive, flagging those marked
  * `official: true`. Official/live pages (e.g. the Forum's own site) are the
  * ones whose content can be silently changed or removed, so they get a forced
  * fresh capture rather than accepting whatever old snapshot already exists.
+ *
+ * URLs come from two places: `forum.json` `references[]` (objects that may
+ * carry `official: true`), and the country dossiers' source arrays (bare URL
+ * strings, which cannot be flagged official). When the same URL appears in
+ * both, the `official` flag from `references[]` wins.
  */
-function collectUrls(data) {
+function collectUrls(data, countryUrls) {
   const byUrl = new Map();
   for (const ref of data.references || []) {
     if (ref && typeof ref.url === 'string') {
       const url = ref.url.trim();
       byUrl.set(url, (byUrl.get(url) || false) || ref.official === true);
     }
+  }
+  for (const url of countryUrls || []) {
+    if (!byUrl.has(url)) byUrl.set(url, false);
   }
   return [...byUrl].map(([url, official]) => ({ url, official }));
 }
@@ -162,10 +229,15 @@ function writeCache(cache) {
 
 async function main() {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
-  const urls = collectUrls(data);
+  const countryUrls = loadCountryUrls();
+  const urls = collectUrls(data, countryUrls);
   const cache = loadCache();
 
-  console.log(`Found ${urls.length} reference URL(s).${DRY_RUN ? ' (dry-run)' : ''}`);
+  console.log(
+    `Found ${urls.length} reference URL(s) ` +
+      `(${data.references ? data.references.length : 0} in forum.json, ` +
+      `${countryUrls.size} in country dossiers).${DRY_RUN ? ' (dry-run)' : ''}`
+  );
 
   let archived = 0;
   let saved = 0;
@@ -227,7 +299,11 @@ async function main() {
   process.exit(failed > 0 ? 1 : 0);
 }
 
-main().catch((err) => {
-  console.error('archive-refs failed:', err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error('archive-refs failed:', err);
+    process.exit(1);
+  });
+}
+
+module.exports = { collectUrls, collectCountryUrls, loadCountryUrls };
