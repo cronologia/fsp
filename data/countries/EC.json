@@ -264,13 +264,58 @@
       "fspParty": "Revolución Ciudadana (UNES)",
       "fspBloc": "plurality",
       "inGovernment": false,
-      "seats": "Correísmo (UNES) has been the largest single bloc in the Assembly since 2021 but without a majority and out of the presidency (Lasso, then Noboa).",
+      "seats": "Correísmo (Revolución Ciudadana) has been the largest single bloc in the Assembly since 2021, without a majority and out of the presidency (Lasso, then Noboa). It stayed the largest bloc at the February 2025 election (67 of 151 to Noboa's ADN 66) but narrowed to a 66–66 tie after a pre-seating defection.",
       "sources": [
-        "https://en.wikipedia.org/wiki/2023_Ecuadorian_general_election"
+        "https://en.wikipedia.org/wiki/2023_Ecuadorian_general_election",
+        "https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election"
       ]
     }
   ],
   "legislativeComposition": [
+    {
+      "year": 2025,
+      "chamber": "Asamblea Nacional",
+      "totalSeats": 151,
+      "majorityThreshold": 76,
+      "parties": [
+        {
+          "abbr": "RC",
+          "name": "Revolución Ciudadana (Correísmo)",
+          "seats": 67,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "ADN",
+          "name": "Acción Democrática Nacional (Noboa)",
+          "seats": 66,
+          "align": "government"
+        },
+        {
+          "abbr": "PK",
+          "name": "Pachakutik",
+          "seats": 9,
+          "align": "mixed"
+        },
+        {
+          "abbr": "others",
+          "name": "PSC, Construye, local movements and a small left alliance",
+          "seats": 9,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Daniel Noboa (ADN)",
+        "fspInGovernment": false,
+        "hasMajority": false,
+        "note": "The 9 February 2025 election (CNE definitive results, 7 April 2025) returned a 151-seat Assembly — enlarged from 137 — with no majority. Correísmo's Revolución Ciudadana was again the largest single bloc (67) but stayed in opposition; President Noboa's ADN (66) governs as a minority, dependent on Pachakutik, the Social Christians and smaller movements. A pre-seating defection left RC and ADN level at 66 each. The non-government blocs do not form a common bloc. The small left alliance folded into 'others' includes the FSP-listed Partido Socialista Ecuatoriano, but it holds no seat in its own right."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election",
+        "https://www.cne.gob.ec/cne-proclama-resultados-definitivos-y-adjudica-escanos-de-asambleistas-nacionales-y-parlamentarios-andinos/",
+        "https://www.primicias.ec/elecciones/ecuador2025/asamblea/resultados-candidatos-asambleistas-nacionales-provinciales-bancadas-cne-89388/"
+      ]
+    },
     {
       "year": 2023,
       "chamber": "Asamblea Nacional",
