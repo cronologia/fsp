@@ -1488,6 +1488,13 @@ ${ANALYTICS}
       <p class="subtitle">${esc(meta.subtitle)}</p>
       <p class="lead">${esc(meta.description)}</p>
       <p class="updated">Last updated: ${esc(meta.lastUpdated)}</p>
+      <div class="viz-chips">
+        <a href="#atlas">🗺 Member map by year</a>
+        <a href="#presidents-map">🏛 Presidencies</a>
+        <a href="#legislative-map">📊 Legislatures</a>
+        <a href="#courts-map">⚖ Courts</a>
+        <a href="#documents">📄 Declarations</a>
+      </div>
     </div>
   </header>
 ${renderNav()}
