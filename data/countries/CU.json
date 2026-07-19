@@ -38,7 +38,22 @@
     "name": "Tribunal Supremo Popular",
     "verified": false,
     "appointmentMethod": "Judges elected by the National Assembly of People's Power.",
-    "fspEraChanges": "One-party socialist state; court is subordinate to the National Assembly. Court history not compiled for this dossier (added for the timeline map; see issue #109)."
+    "fspEraChanges": "One-party socialist state; court is subordinate to the National Assembly. Court history not compiled for this dossier (added for the timeline map; see issue #109).",
+    "benchControl": [
+      {
+        "start": "1990",
+        "end": "present",
+        "size": null,
+        "fspAppointed": null,
+        "control": "aligned",
+        "note": "Cuba is a one-party socialist state whose Partido Comunista de Cuba is a founding FSP member. The Tribunal Supremo Popular is elected by, and directly subordinate to, the National Assembly of People's Power, which may appoint or remove judges at any time; human-rights monitors (Human Rights Watch, Freedom House and the IACHR) report no separation of powers between the courts, the executive and the PCC. Provenance is therefore 'aligned' across the whole period as a matter of the one-party system — not a bench captured through competitive appointments — so seat counts are not meaningful and are left null.",
+        "sources": [
+          "https://www.hrw.org/world-report/2025/country-chapters/cuba",
+          "https://freedomhouse.org/country/cuba",
+          "https://www.oas.org/en/iachr/docs/annual/2023/chapters/IA2023_Cap_4B_Cuba_ENG.PDF"
+        ]
+      }
+    ]
   },
   "sources": [
     "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Cuba",
