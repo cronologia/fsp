@@ -6,9 +6,9 @@
 > meeting declarations, member lists and history into `data/forum.json`.
 
 - Domain: `forodesaopaulo.org`
-- Last run: 2026-07-13T21:09:24.717Z
+- Last run: 2026-07-19T11:46:56.219Z
 - Latest capture seen (incremental watermark): 2026-07-13
-- Unique archived URLs: **35273** (high-value: **3314**)
+- Unique archived URLs: **35274** (high-value: **3314**)
 
 ## High-value pages
 
@@ -316,4 +316,4 @@
 | http://forodesaopaulo.org/boletin-digital-panorama-mundial-220519-partido-comunista-de-cuba/ | 2019-08-19 | 2019-08-19 | [view](https://web.archive.org/web/20190819163414/http://forodesaopaulo.org/boletin-digital-panorama-mundial-220519-partido-comunista-de-cuba/) |
 | … and 3014 more (see JSON) | | | |
 
-_Full machine-readable inventory: `data/wayback-inventory.json` (35273 URLs)._
+_Full machine-readable inventory: `data/wayback-inventory.json` (35274 URLs)._

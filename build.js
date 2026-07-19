@@ -77,6 +77,26 @@ function loadArchiveDocs() {
   }
 }
 
+/** Load the curated official-declaration-PDF index (hand-curated; ADR-0007). */
+function loadOfficialPdfs() {
+  try {
+    const parsed = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'declarations', 'official-pdfs.json'), 'utf8'));
+    return (parsed && parsed.pdfs) || [];
+  } catch {
+    return [];
+  }
+}
+
+/** Load the extracted-text index of the declaration corpus (GENERATED; ADR-0007). */
+function loadDeclTextIndex() {
+  try {
+    const parsed = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'declarations', 'text', 'index.json'), 'utf8'));
+    return (parsed && parsed.declarations) || {};
+  } catch {
+    return {};
+  }
+}
+
 /** Recursively copy every file under src into dest, preserving structure. */
 function copyTree(src, dest) {
   if (!fs.existsSync(src)) return 0;
@@ -107,7 +127,52 @@ function esc(value) {
     .replace(/'/g, '&#39;');
 }
 
-function renderMeetingPage(m, archives, codeByCountry) {
+/**
+ * The Documents section: the Forum's own numbered final declarations
+ * ("atas"/declaraciones) 1990–2013 as locally published PDFs, with their
+ * Wayback snapshots and extracted plain text. 2014–2024 declarations are
+ * linked from each meeting's row/page; the per-meeting "Memoria" pages and
+ * other primary captures live in the published vault (docs/archive/, ADR-0008).
+ */
+function renderDocumentsSection(pdfs, textIndex) {
+  if (!pdfs || !pdfs.length) return '';
+  const rows = pdfs
+    .map((p) => {
+      const file = `${p.officialNumber}-${p.year}.pdf`;
+      const t = textIndex[p.officialNumber];
+      const dateline = t && t.headerDateLine ? esc(t.headerDateLine) : '<span class="muted">—</span>';
+      const links = [
+        `<a href="declarations/pdf/${esc(file)}">📄 PDF (local copy)</a>`,
+        p.snapshot ? `<a href="${esc(p.snapshot)}" rel="noopener noreferrer" target="_blank" title="Internet Archive Wayback Machine snapshot">🗄 snapshot</a>` : '',
+        t ? `<a href="declarations/text/${esc(p.officialNumber)}-${esc(p.year)}.txt">txt</a>` : '',
+      ].filter(Boolean).join(' · ');
+      return `          <tr>
+            <td class="edition">${esc(p.officialNumber)}</td>
+            <td class="year">${esc(p.year)}</td>
+            <td>${esc(String(p.city).replace(/-/g, ' '))}</td>
+            <td>${dateline}</td>
+            <td>${links}</td>
+          </tr>`;
+    })
+    .join('\n');
+  return `    <section id="documents">
+      <h2>Documents (declarations &amp; atas)</h2>
+      <p class="section-intro">The Forum's own <strong>numbered final declarations 01–19 (1990–2013)</strong>, published here as preserved local PDFs — the chapters of the Forum's official compilation${cite(['foro-declaraciones-libro'])}, recovered from Wayback captures of forodesaopaulo.org (ADR-0007). Each row links the local copy, its Internet Archive snapshot, and the extracted plain text used for date/edition verification. Declarations from 2014 on are linked from each meeting's page; the per-meeting <em>Memoria</em> pages and other primary captures are preserved in the <a href="archive/">published document vault</a> (ADR-0008). The dateline column is each declaration's own opening dateline — the primary source for the dates in the meetings table.</p>
+      <div class="table-scroll">
+        <table class="meetings">
+          <thead>
+            <tr><th>Nº</th><th>Year</th><th>City</th><th>Declaration dateline</th><th>Documents</th></tr>
+          </thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>
+    </section>
+`;
+}
+
+function renderMeetingPage(m, archives, codeByCountry, officialPdfByYear) {
   const isWb = !!m.declarationUrl && /web\.archive\.org/.test(m.declarationUrl);
   const snap = archives[m.declarationUrl];
   // Always surface a Wayback link: if the declaration link is a live/official
@@ -157,6 +222,7 @@ ${ANALYTICS}
         <dt>Host city</dt><dd>${esc(m.city)}</dd>
         <dt>Country</dt><dd>${countryCell}</dd>
         <dt>Final declaration</dt><dd>${declLive}</dd>
+        ${officialPdfByYear && officialPdfByYear[m.year] ? `<dt>Official PDF</dt><dd><a href="../declarations/pdf/${esc(officialPdfByYear[m.year].officialNumber)}-${esc(m.year)}.pdf">📄 Local preserved copy (Nº ${esc(officialPdfByYear[m.year].officialNumber)})</a>${officialPdfByYear[m.year].snapshot ? ` · <a href="${esc(officialPdfByYear[m.year].snapshot)}" rel="noopener noreferrer" target="_blank" title="Internet Archive Wayback Machine snapshot">🗄 snapshot</a>` : ''}</dd>` : ''}
         ${(m.officialDocs && m.officialDocs.length) ? `<dt>Forum's own pages</dt><dd>${m.officialDocs.map((o) => `${esc(o.label || o.type)}: <a href="${esc(o.url)}" rel="noopener noreferrer" target="_blank">official</a>${o.archiveUrl ? ` · <a href="${esc(o.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="Internet Archive snapshot">🗄 archived</a>` : ''}`).join(' · ')} <span class="muted">(the official site is geoblocked to non-Brazilian IPs — use the archived copy)</span></dd>` : ''}
         ${m.notes ? `<dt>Notes</dt><dd>${esc(m.notes)}</dd>` : ''}
       </dl>
@@ -480,6 +546,7 @@ function renderNav() {
     ['#origins', 'Origins'],
     ['#timeline', 'Timeline'],
     ['#meetings', 'Meetings'],
+    ['#documents', 'Documents'],
     ['#parties', 'Parties'],
     ['#armed', 'Armed movements'],
     ['#regional', 'Regional bodies'],
@@ -1402,6 +1469,8 @@ ${sources}
 
 function buildHtml(data, archives, codeByCountry, countries, archiveDocs) {
   const { meta, founding } = data;
+  const officialPdfs = loadOfficialPdfs();
+  const declTextIndex = loadDeclTextIndex();
   return `<!DOCTYPE html>
 <html lang="${esc(meta.language || 'en')}">
 <head>
@@ -1419,6 +1488,13 @@ ${ANALYTICS}
       <p class="subtitle">${esc(meta.subtitle)}</p>
       <p class="lead">${esc(meta.description)}</p>
       <p class="updated">Last updated: ${esc(meta.lastUpdated)}</p>
+      <div class="viz-chips">
+        <a href="#atlas">🗺 Member map by year</a>
+        <a href="#presidents-map">🏛 Presidencies</a>
+        <a href="#legislative-map">📊 Legislatures</a>
+        <a href="#courts-map">⚖ Courts</a>
+        <a href="#documents">📄 Declarations</a>
+      </div>
     </div>
   </header>
 ${renderNav()}
@@ -1480,6 +1556,7 @@ ${renderMeetingsRows(data.meetings, archives)}
       </div>
     </section>
 
+${renderDocumentsSection(officialPdfs, declTextIndex)}
     <section id="parties">
       <h2>Parties &amp; organizations</h2>
       <p class="section-intro">A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the full <strong>membership rosters for 1990, 1993 and 2007 are listed below</strong> (from Regalado), and the current membership is still being compiled.</p>
@@ -1533,6 +1610,7 @@ function main() {
   const codeByCountry = Object.fromEntries(countries.map((c) => [c.country, c.code]));
   buildRefIndex(data.references);
   const archiveDocs = loadArchiveDocs();
+  const officialPdfByYear = Object.fromEntries(loadOfficialPdfs().map((p) => [p.year, p]));
 
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
@@ -1552,7 +1630,7 @@ function main() {
   const mdir = path.join(OUT_DIR, 'meetings');
   if (!fs.existsSync(mdir)) fs.mkdirSync(mdir, { recursive: true });
   for (const m of data.meetings) {
-    fs.writeFileSync(path.join(mdir, `${m.year}.html`), renderMeetingPage(m, archives, codeByCountry));
+    fs.writeFileSync(path.join(mdir, `${m.year}.html`), renderMeetingPage(m, archives, codeByCountry, officialPdfByYear));
   }
 
   // Copy static assets (currently just the stylesheet).
@@ -1564,6 +1642,12 @@ function main() {
   // blobs, so committing both paths costs no extra storage.
   const archivedDocs = copyTree(ARCHIVE_SRC, path.join(OUT_DIR, 'archive'));
 
+  // Publish the official-declaration corpus (ADR-0007): the numbered final
+  // declarations 1990–2013 as local PDFs plus the extracted plain text, so
+  // the Documents section and meeting pages can link preserved copies.
+  const declPdfCount = copyTree(path.join(ROOT, 'data', 'declarations', 'pdf'), path.join(OUT_DIR, 'declarations', 'pdf'));
+  copyTree(path.join(ROOT, 'data', 'declarations', 'text'), path.join(OUT_DIR, 'declarations', 'text'));
+
   // Disable Jekyll processing on GitHub Pages.
   fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');
 
@@ -1573,7 +1657,7 @@ function main() {
 
   const count = data.meetings.length;
   const archivedRefs = data.references.filter((r) => archives[r.url] && archives[r.url].archiveUrl).length;
-  console.log(`Built docs/index.html (${count} meetings, ${data.parties.length} parties, ${data.references.length} references, ${archivedRefs} with archive fallback) + ${countries.length} country pages + ${archivedDocs} preserved documents.`);
+  console.log(`Built docs/index.html (${count} meetings, ${data.parties.length} parties, ${data.references.length} references, ${archivedRefs} with archive fallback) + ${countries.length} country pages + ${archivedDocs} preserved documents + ${declPdfCount} declaration PDFs.`);
 }
 
 // Run the build only when invoked directly; when required (tests) just expose the
