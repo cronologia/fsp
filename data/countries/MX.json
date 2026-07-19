@@ -324,7 +324,7 @@
         {
           "abbr": "PT",
           "name": "Partido del Trabajo",
-          "seats": 8,
+          "seats": 9,
           "align": "government",
           "fsp": true
         },
@@ -348,9 +348,9 @@
           "fsp": true
         },
         {
-          "abbr": "others",
-          "name": "Movimiento Ciudadano + independents",
-          "seats": 6,
+          "abbr": "MC",
+          "name": "Movimiento Ciudadano",
+          "seats": 5,
           "align": "opposition"
         }
       ],
@@ -358,11 +358,13 @@
         "led": "Claudia Sheinbaum (MORENA)",
         "fspInGovernment": true,
         "hasMajority": true,
-        "note": "MORENA and the PT hold 68 of 128 Senate seats — a majority on their own. The coalition (with PVEM, 82 seats) fell a few seats short of a two-thirds supermajority at the election and reached it only through later defections."
+        "note": "MORENA and the PT (both FSP members) hold 69 of 128 Senate seats on their own; with PVEM the Sigamos Haciendo Historia coalition holds 83 — three short of the 86-seat two-thirds supermajority at the election, which it approached only through later realignments. Every seat is held by a party (there are no independent senators). Election-night tallies reported 82 before the final proportional-representation allocation lifted the PT to 9; a minority of sources record PRI 17 / MC 4 instead of the PRI 16 / MC 5 shown, but all tallies put the governing coalition at 83."
       },
       "sources": [
         "https://en.wikipedia.org/wiki/2024_Mexican_Senate_election",
-        "https://www.electionguide.org/elections/id/4312/"
+        "https://www.electionguide.org/elections/id/4312/",
+        "https://mexiconewsdaily.com/mexico-elections-2024/mexico-morena-falls-short-senate-supermajority/",
+        "https://contralacorrupcion.mx/una-mayoria-muchas-oposiciones-como-voto-el-senado-en-la-lxvi-legislatura"
       ]
     },
     {
