@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-19T10:56:21.612Z",
-    "count": 215
+    "lastRun": "2026-07-19T11:25:53.775Z",
+    "count": 218
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -1483,6 +1483,27 @@
       "status": "200",
       "fresh": false,
       "checkedAt": "2026-07-19T10:56:21.611Z"
+    },
+    "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/": {
+      "archiveUrl": "https://web.archive.org/web/20260719110446/https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/",
+      "timestamp": "20260719110446",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T11:20:12.618Z"
+    },
+    "https://atlasinstitute.org/how-presidential-nominations-shape-brazils-highest-court/": {
+      "archiveUrl": "https://web.archive.org/web/20260719110624/https://atlasinstitute.org/how-presidential-nominations-shape-brazils-highest-court/",
+      "timestamp": "20260719110624",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T11:20:13.366Z"
+    },
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)": {
+      "archiveUrl": "https://web.archive.org/web/20260719111326/https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)",
+      "timestamp": "20260719111326",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T11:24:55.718Z"
     }
   }
 }
