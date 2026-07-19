@@ -182,13 +182,57 @@
       "fspParty": "LIBRE",
       "fspBloc": "opposition",
       "inGovernment": false,
-      "seats": "LIBRE returned to opposition under Asfura's PN government. The new Congress's certified seat distribution was still pending as of mid-2026 (preliminary counts put PN ~50, PL ~40, LIBRE ~34); a seat table will follow certification.",
+      "seats": "LIBRE returned to opposition under Asfura's PN government. In the CNE-certified 2026–2030 Congress the PN holds a plurality of 49 of 128, the Liberal Party 41 and LIBRE 35 (PINU-SD 2, DC 1) — no party has a majority.",
       "sources": [
         "https://en.wikipedia.org/wiki/2025_Honduran_general_election"
       ]
     }
   ],
   "legislativeComposition": [
+    {
+      "year": 2025,
+      "chamber": "Congreso Nacional",
+      "totalSeats": 128,
+      "majorityThreshold": 65,
+      "parties": [
+        {
+          "abbr": "PN",
+          "name": "Partido Nacional",
+          "seats": 49,
+          "align": "government"
+        },
+        {
+          "abbr": "PL",
+          "name": "Partido Liberal",
+          "seats": 41,
+          "align": "opposition"
+        },
+        {
+          "abbr": "LIBRE",
+          "name": "Partido Libertad y Refundación",
+          "seats": 35,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "others",
+          "name": "PINU-SD, DC",
+          "seats": 3,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "Nasry Asfura (PN)",
+        "fspInGovernment": false,
+        "hasMajority": false,
+        "note": "The Partido Nacional's Nasry Asfura won the presidency and PN took a plurality of Congress (49 of 128); no party reached the 65-seat majority, so lawmaking depends on cross-party alliances. LIBRE, the FSP member, returned to opposition with 35 seats. The CNE issued its final declaration on 30 December 2025, having declared Asfura the presidential winner on 24 December with ~40.2% of the vote; both LIBRE and the Liberal Party's Salvador Nasralla disputed the count. PL and LIBRE are counted as opposition to the PN government but are ideological opposites and do not form a common bloc; PINU-SD (2) and the Christian Democrats (1) hold the balance."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Honduran_general_election",
+        "https://www.electionguide.org/elections/id/4596/",
+        "https://www.laprensa.hn/premium/especiales/resultados-elecciones-honduras-2025/elecciones-honduras-2025-declaratoria-congreso-nacional-diputados-FK28776461"
+      ]
+    },
     {
       "year": 2021,
       "chamber": "Congreso Nacional",

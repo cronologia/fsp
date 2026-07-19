@@ -130,7 +130,7 @@
       "Partido Socialista de Chile (PS)",
       "Partido Comunista de Chile (PCCh)"
     ],
-    "note": "Chile's FSP members are the Partido Socialista (PS) and the Partido Comunista (PCCh); the Forum's own roster also lists smaller groups (Izquierda Ciudadana, Partido Humanista, MIR). Crucially, these parties have always governed as a minority faction inside broad center-left coalitions — the Concertación (1990–2010, led by the non-FSP Christian Democrats), the Nueva Mayoría (which added the PCCh from 2013), and Boric's Apruebo Dignidad (2022–, Frente Amplio + PCCh). The PS and PCCh have never commanded a congressional majority on their own, which is why a detailed FSP-bloc seat table is deferred: it would misrepresent their role without a full mapping of each multi-party coalition. Boric's government has notably lacked a majority in either chamber."
+    "note": "Chile's FSP members are the Partido Socialista (PS) and the Partido Comunista (PCCh); the Forum's own roster also lists smaller groups (Izquierda Ciudadana, Partido Humanista, MIR). Crucially, these parties have always governed as a minority faction inside broad center-left coalitions — the Concertación (1990–2010, led by the non-FSP Christian Democrats), the Nueva Mayoría (which added the PCCh from 2013), and Boric's Apruebo Dignidad (2022–, Frente Amplio + PCCh). The PS and PCCh have never commanded a congressional majority on their own: the 2025 seat tables below show them holding just 22 of the Chamber's 155 seats and 10 of the Senate's 50 — a minority even within the Unidad por Chile bloc they share with the (non-FSP) Frente Amplio, PPD, Christian Democrats, Radicals and Liberals. Boric's 2022–2026 government likewise lacked a majority in either chamber."
   },
   "legislativeControl": [
     {
@@ -212,9 +212,137 @@
       "fspParty": "PS / PCCh",
       "fspBloc": "opposition",
       "inGovernment": false,
-      "seats": "Under Kast's right-wing government the PS and PCCh sit in opposition; a sourced seat table for the November 2025 congressional election is still to be added.",
+      "seats": "Under Kast's right-wing government the PS and PCCh sit in opposition. In the 16 November 2025 election the governing right (Cambio por Chile + Chile Grande y Unido) took 76 of 155 in the Chamber and 25 of 50 in the Senate — short of a majority in both — while the FSP parties hold 22 Chamber and 10 Senate seats inside the opposition Unidad por Chile bloc.",
       "sources": [
         "https://en.wikipedia.org/wiki/2025_Chilean_general_election"
+      ]
+    }
+  ],
+  "legislativeComposition": [
+    {
+      "year": 2025,
+      "chamber": "Cámara de Diputadas y Diputados",
+      "totalSeats": 155,
+      "majorityThreshold": 78,
+      "parties": [
+        {
+          "abbr": "PS",
+          "name": "Partido Socialista",
+          "seats": 11,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "PCCh",
+          "name": "Partido Comunista de Chile",
+          "seats": 11,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "FA",
+          "name": "Frente Amplio",
+          "seats": 17,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Unidad (otros)",
+          "name": "Resto de Unidad por Chile (DC, PPD, PR, PL)",
+          "seats": 22,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Cambio",
+          "name": "Cambio por Chile (Republicanos, PNL)",
+          "seats": 42,
+          "align": "government"
+        },
+        {
+          "abbr": "ChGyU",
+          "name": "Chile Grande y Unido (UDI, RN, Evópoli)",
+          "seats": 34,
+          "align": "government"
+        },
+        {
+          "abbr": "PDG",
+          "name": "Partido de la Gente",
+          "seats": 14,
+          "align": "mixed"
+        },
+        {
+          "abbr": "others",
+          "name": "Verdes/Regionalistas/Humanistas + independiente",
+          "seats": 4,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "José Antonio Kast (Partido Republicano)",
+        "fspInGovernment": false,
+        "hasMajority": false,
+        "note": "The Chamber was fully renewed on 16 November 2025 for 2026–2030. President-elect Kast's Partido Republicano anchors the Cambio por Chile bloc; with the traditional right (Chile Grande y Unido) the governing right holds 76 of 155 — short of the 78-seat majority, so it relies on the Partido de la Gente (14) and independents. The FSP members PS (11) and PCCh (11) sit in opposition inside the 61-seat Unidad por Chile bloc and are a small minority of the chamber; the non-FSP Frente Amplio (17) is the bloc's largest party."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Chilean_general_election",
+        "https://data.ipu.org/parliament/CL/CL-LC01/election/CL-LC01-E20251116/",
+        "https://www.masparachile.cl/noticias/como-quedo-compuesta-la-camara-de-diputadas-y-diputados-tras-las-elecciones-2025"
+      ]
+    },
+    {
+      "year": 2025,
+      "chamber": "Senado",
+      "totalSeats": 50,
+      "majorityThreshold": 26,
+      "parties": [
+        {
+          "abbr": "PS",
+          "name": "Partido Socialista",
+          "seats": 7,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "PCCh",
+          "name": "Partido Comunista de Chile",
+          "seats": 3,
+          "align": "opposition",
+          "fsp": true
+        },
+        {
+          "abbr": "Unidad (otros)",
+          "name": "Resto de Unidad por Chile (PPD 4, DC 3, FA 2, PL 1)",
+          "seats": 10,
+          "align": "opposition"
+        },
+        {
+          "abbr": "ChGyU",
+          "name": "Chile Grande y Unido (RN 9, UDI 5, Evópoli 2, Demócratas 2)",
+          "seats": 18,
+          "align": "government"
+        },
+        {
+          "abbr": "Cambio",
+          "name": "Cambio por Chile (Republicanos 5, PNL 1, P. Social Cristiano 1)",
+          "seats": 7,
+          "align": "government"
+        },
+        {
+          "abbr": "others",
+          "name": "FRVS (3) + independientes (2)",
+          "seats": 5,
+          "align": "mixed"
+        }
+      ],
+      "government": {
+        "led": "José Antonio Kast (Partido Republicano)",
+        "fspInGovernment": false,
+        "hasMajority": false,
+        "note": "Full post-election composition. The Senate renews by halves — 23 of the 50 seats were up on 16 November 2025, combined here with the 2021 holdovers. The governing right (Chile Grande y Unido 18 + Cambio por Chile 7 = 25) is level with the centre-left and others (Unidad por Chile 20, FRVS 3, 2 independents = 25), so neither side holds the 26-seat majority. The FSP members PS (7) and PCCh (3) sit in opposition within Unidad por Chile."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025_Chilean_general_election",
+        "https://www.masparachile.cl/noticias/como-quedo-compuesto-el-senado-de-chile-tras-las-elecciones-2025",
+        "https://www.emol.com/noticias/Nacional/2025/12/14/1185707/nuevo-senado-congreso-miembros-partidos.html"
       ]
     }
   ]
