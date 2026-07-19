@@ -12,6 +12,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { write: writeCatalog } = require('./scripts/gen-catalog');
 
 const ROOT = __dirname;
@@ -21,6 +22,16 @@ const COUNTRIES_DIR = path.join(ROOT, 'data', 'countries');
 const ARCHIVE_SRC = path.join(ROOT, 'data', 'archive');
 const SRC_DIR = path.join(ROOT, 'src');
 const OUT_DIR = path.join(ROOT, 'docs');
+
+// Cache-busting: a short content hash of styles.css / app.js is appended to
+// their links (e.g. styles.css?v=ab12cd34) so a redeploy forces browsers to
+// refetch. GitHub Pages serves these assets cacheable; without the query
+// string, returning visitors keep a stale styles.css/app.js after any change.
+// Populated at the start of main() from the source files; templates read it.
+const ASSET_VER = { css: 'dev', js: 'dev' };
+function assetHash(file) {
+  return crypto.createHash('sha1').update(fs.readFileSync(file)).digest('hex').slice(0, 8);
+}
 
 // Google Analytics (gtag.js). Injected into the <head> of every generated page.
 // The measurement ID is a public identifier, not a secret.
@@ -201,7 +212,7 @@ function renderMeetingPage(m, archives, codeByCountry, officialPdfByYear) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${unnumbered ? esc(m.city) : esc(m.edition)} ${esc(m.year)} — Foro de São Paulo</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles.css?v=${ASSET_VER.css}" />
 ${ANALYTICS}
 </head>
 <body>
@@ -1460,7 +1471,7 @@ function renderCountryPage(c) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(c.country)} — FSP presidents &amp; courts</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles.css?v=${ASSET_VER.css}" />
 ${ANALYTICS}
 </head>
 <body>
@@ -1525,7 +1536,7 @@ function buildHtml(data, archives, codeByCountry, countries, archiveDocs) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(meta.title)}</title>
   <meta name="description" content="${esc(meta.description)}" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=${ASSET_VER.css}" />
 ${ANALYTICS}
 </head>
 <body>
@@ -1644,13 +1655,15 @@ ${renderReferences(data.references, archives, archiveDocs)}
       <p>Compiled static site generated from <code>data/forum.json</code> by <code>build.js</code>. Open data — corrections welcome via pull request.</p>
     </div>
   </footer>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=${ASSET_VER.js}" defer></script>
 </body>
 </html>
 `;
 }
 
 function main() {
+  ASSET_VER.css = assetHash(path.join(SRC_DIR, 'styles.css'));
+  ASSET_VER.js = assetHash(path.join(SRC_DIR, 'app.js'));
   const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
   const archives = loadArchives();
   const countries = loadCountries();
