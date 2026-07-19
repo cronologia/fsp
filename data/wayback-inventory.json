@@ -1,8 +1,8 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-07-13T21:09:24.717Z",
-  "latestCapture": "20260713025656",
-  "uniqueUrls": 35273,
+  "lastRun": "2026-07-19T11:46:56.219Z",
+  "latestCapture": "20260713025657",
+  "uniqueUrls": 35274,
   "usefulUrls": 3314,
   "truncated": false,
   "entries": [
@@ -13411,7 +13411,7 @@
       "url": "https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/",
       "firstSeen": "20201021125101",
       "lastSeen": "20260713025656",
-      "snapshots": 2,
+      "snapshots": 3,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": true
@@ -103021,6 +103021,15 @@
       "useful": false
     },
     {
+      "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/h/b/jsd/oneshot/80a697ecdece/0.5155265219211621:1783908922:TQg6E09bDAKQeQrB0D_vY-4XOhnG6hr5_4MnuDch9zE/a1a5046e9bd28dfa",
+      "firstSeen": "20260713025657",
+      "lastSeen": "20260713025657",
+      "snapshots": 1,
+      "statuscode": "200",
+      "mimetype": "text/plain",
+      "useful": false
+    },
+    {
       "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/h/b/jsd/r/0.33901053840786705:1759181653:HPFtGXA9cRBK3CqrSNmitoM-SrmUzhaqn8pRGXkvJBA/986ed5e2f9321020",
       "firstSeen": "20250929221448",
       "lastSeen": "20250929221448",
@@ -103347,8 +103356,8 @@
     {
       "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/scripts/jsd/main.js",
       "firstSeen": "20250929221447",
-      "lastSeen": "20250929221447",
-      "snapshots": 1,
+      "lastSeen": "20260713025657",
+      "snapshots": 2,
       "statuscode": "302",
       "mimetype": "unk",
       "useful": false
@@ -103356,8 +103365,8 @@
     {
       "url": "https://forodesaopaulo.org/cdn-cgi/images/browser-bar.png?1376755637",
       "firstSeen": "20211206072139",
-      "lastSeen": "20211206072139",
-      "snapshots": 1,
+      "lastSeen": "20260713025656",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "image/png",
       "useful": false
@@ -103419,8 +103428,8 @@
     {
       "url": "https://forodesaopaulo.org/cdn-cgi/images/cf-no-screenshot-error.png",
       "firstSeen": "20211206072158",
-      "lastSeen": "20211206072158",
-      "snapshots": 1,
+      "lastSeen": "20260713025656",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "image/png",
       "useful": false
@@ -103455,8 +103464,8 @@
     {
       "url": "https://forodesaopaulo.org/cdn-cgi/styles/cf.errors.css",
       "firstSeen": "20211206021349",
-      "lastSeen": "20211206021349",
-      "snapshots": 1,
+      "lastSeen": "20260713025656",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/css",
       "useful": false
