@@ -1,11 +1,11 @@
 name: Build & deploy
 
 # Validates the data, rebuilds the site, checks that committed docs/ is in sync,
-# and (on master) deploys docs/ to GitHub Pages.
+# and (on main) deploys docs/ to GitHub Pages.
 #
 # The `build` job (validate + build + drift check) always runs and gates every
 # push/PR. The `deploy` job is opt-in: it only runs once GitHub Pages is enabled
-# AND the repo variable ENABLE_PAGES is set to "true". This keeps `master` green
+# AND the repo variable ENABLE_PAGES is set to "true". This keeps `main` green
 # until Pages is turned on, instead of failing on a 404 from actions/deploy-pages.
 #
 # To go live:
@@ -14,8 +14,9 @@ name: Build & deploy
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -55,13 +56,13 @@ jobs:
           echo "docs/ is in sync."
 
       - name: Upload Pages artifact
-        if: github.ref == 'refs/heads/master' && vars.ENABLE_PAGES == 'true'
+        if: github.ref == 'refs/heads/main' && vars.ENABLE_PAGES == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
 
   deploy:
-    if: github.ref == 'refs/heads/master' && vars.ENABLE_PAGES == 'true'
+    if: github.ref == 'refs/heads/main' && vars.ENABLE_PAGES == 'true'
     needs: build
     runs-on: ubuntu-latest
     environment:
