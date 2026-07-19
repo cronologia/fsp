@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-07-13T21:19:31.733Z",
+    "lastRun": "2026-07-19T12:05:13.911Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -228,7 +228,6 @@
     "wsf-wikipedia": {
       "path": "encyclopedia/wsf-wikipedia.html",
       "bytes": 322612,
-      "source": "live",
       "state": "ok"
     }
   }

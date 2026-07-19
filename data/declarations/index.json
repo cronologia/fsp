@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/fetch-declarations.js",
-    "lastRun": "2026-07-13T21:19:31.468Z",
+    "lastRun": "2026-07-19T12:05:13.805Z",
     "minChars": 4000,
     "note": "Raw archived declaration bodies (Wayback snapshots) for signatory/date extraction (#28). \"shell\" entries have no article text yet — the script retries them on each run. Do not hand-edit."
   },
