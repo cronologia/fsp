@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-19T11:58:12.671Z",
-    "count": 218
+    "lastRun": "2026-07-20T07:46:36.832Z",
+    "count": 235
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -1504,6 +1504,125 @@
       "status": "200",
       "fresh": false,
       "checkedAt": "2026-07-19T11:24:55.718Z"
+    },
+    "https://www.masparachile.cl/noticias/como-quedo-compuesta-la-camara-de-diputadas-y-diputados-tras-las-elecciones-2025": {
+      "archiveUrl": "https://web.archive.org/web/20260302130056/https://www.masparachile.cl/noticias/como-quedo-compuesta-la-camara-de-diputadas-y-diputados-tras-las-elecciones-2025",
+      "timestamp": "20260302130056",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:39:40.622Z"
+    },
+    "https://www.emol.com/noticias/Nacional/2025/12/14/1185707/nuevo-senado-congreso-miembros-partidos.html": {
+      "archiveUrl": "https://web.archive.org/web/20260116025116/https://www.emol.com/noticias/Nacional/2025/12/14/1185707/nuevo-senado-congreso-miembros-partidos.html",
+      "timestamp": "20260116025116",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:40:48.376Z"
+    },
+    "https://www.hrw.org/world-report/2025/country-chapters/cuba": {
+      "archiveUrl": "https://web.archive.org/web/20260712075907/https://www.hrw.org/world-report/2025/country-chapters/cuba",
+      "timestamp": "20260712075907",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:40:48.605Z"
+    },
+    "https://freedomhouse.org/country/cuba": {
+      "archiveUrl": "https://web.archive.org/web/20260601004954/https://freedomhouse.org/country/cuba",
+      "timestamp": "20260601004954",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:40:48.863Z"
+    },
+    "https://www.oas.org/en/iachr/docs/annual/2023/chapters/IA2023_Cap_4B_Cuba_ENG.PDF": {
+      "archiveUrl": "https://web.archive.org/web/20260105162827/https://www.oas.org/en/iachr/docs/annual/2023/chapters/IA2023_Cap_4B_Cuba_ENG.PDF",
+      "timestamp": "20260105162827",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:40:49.113Z"
+    },
+    "https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260503231905/https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election",
+      "timestamp": "20260503231905",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:41:52.939Z"
+    },
+    "https://www.cne.gob.ec/cne-proclama-resultados-definitivos-y-adjudica-escanos-de-asambleistas-nacionales-y-parlamentarios-andinos/": {
+      "archiveUrl": "https://web.archive.org/web/20250409180542/https://www.cne.gob.ec/cne-proclama-resultados-definitivos-y-adjudica-escanos-de-asambleistas-nacionales-y-parlamentarios-andinos/",
+      "timestamp": "20250409180542",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:41:53.195Z"
+    },
+    "https://www.primicias.ec/elecciones/ecuador2025/asamblea/resultados-candidatos-asambleistas-nacionales-provinciales-bancadas-cne-89388/": {
+      "archiveUrl": "https://web.archive.org/web/20260123023939/https://www.primicias.ec/elecciones/ecuador2025/asamblea/resultados-candidatos-asambleistas-nacionales-provinciales-bancadas-cne-89388/",
+      "timestamp": "20260123023939",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:41:53.489Z"
+    },
+    "https://www.americanbar.org/groups/human_rights/reports/honduras-elige-nueva-corte-suprema/": {
+      "archiveUrl": "https://web.archive.org/web/20250421022012/https://www.americanbar.org/groups/human_rights/reports/honduras-elige-nueva-corte-suprema/",
+      "timestamp": "20250421022012",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:42:59.791Z"
+    },
+    "https://cnnespanol.cnn.com/2023/02/17/congreso-honduras-nuevos-15-magistrados-corte-suprema-justicia-orix/": {
+      "archiveUrl": "https://web.archive.org/web/20230924152331/https://cnnespanol.cnn.com/2023/02/17/congreso-honduras-nuevos-15-magistrados-corte-suprema-justicia-orix/",
+      "timestamp": "20230924152331",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:43:00.088Z"
+    },
+    "https://www.expedientepublico.org/honduras-eligio-a-los-15-nuevos-magistrados-de-la-corte-suprema-de-justicia/": {
+      "archiveUrl": "https://web.archive.org/web/20260218121733/https://www.expedientepublico.org/honduras-eligio-a-los-15-nuevos-magistrados-de-la-corte-suprema-de-justicia/",
+      "timestamp": "20260218121733",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:43:00.351Z"
+    },
+    "https://www.laprensa.hn/premium/especiales/resultados-elecciones-honduras-2025/elecciones-honduras-2025-declaratoria-congreso-nacional-diputados-FK28776461": {
+      "archiveUrl": "https://web.archive.org/web/20260110212621/https://www.laprensa.hn/premium/especiales/resultados-elecciones-honduras-2025/elecciones-honduras-2025-declaratoria-congreso-nacional-diputados-FK28776461",
+      "timestamp": "20260110212621",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:26.954Z"
+    },
+    "https://mexiconewsdaily.com/mexico-elections-2024/mexico-morena-falls-short-senate-supermajority/": {
+      "archiveUrl": "https://web.archive.org/web/20251115063734/https://mexiconewsdaily.com/mexico-elections-2024/mexico-morena-falls-short-senate-supermajority/",
+      "timestamp": "20251115063734",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:27.187Z"
+    },
+    "https://contralacorrupcion.mx/una-mayoria-muchas-oposiciones-como-voto-el-senado-en-la-lxvi-legislatura": {
+      "archiveUrl": "https://web.archive.org/web/20251015061857/https://contralacorrupcion.mx/una-mayoria-muchas-oposiciones-como-voto-el-senado-en-la-lxvi-legislatura",
+      "timestamp": "20251015061857",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:28.213Z"
+    },
+    "https://es.wikipedia.org/wiki/Sala_de_lo_Constitucional_de_la_Corte_Suprema_de_Justicia_de_El_Salvador": {
+      "archiveUrl": "https://web.archive.org/web/20260504165821/https://es.wikipedia.org/wiki/Sala_de_lo_Constitucional_de_la_Corte_Suprema_de_Justicia_de_El_Salvador",
+      "timestamp": "20260504165821",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:28.449Z"
+    },
+    "https://revistamundoelectoral.com/articulo-internacional/luces-y-sombras-de-la-jurisprudencia-constitucional-electoral-en-el-salvador/": {
+      "archiveUrl": "https://web.archive.org/web/20260514102900/https://revistamundoelectoral.com/articulo-internacional/luces-y-sombras-de-la-jurisprudencia-constitucional-electoral-en-el-salvador/",
+      "timestamp": "20260514102900",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:28.703Z"
+    },
+    "https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)": {
+      "archiveUrl": "https://web.archive.org/web/20260719115650/https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)",
+      "timestamp": "20260719115650",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:29.976Z"
     }
   }
 }

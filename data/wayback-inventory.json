@@ -1,6 +1,6 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-07-19T11:46:56.219Z",
+  "lastRun": "2026-07-20T07:32:11.401Z",
   "latestCapture": "20260713025657",
   "uniqueUrls": 35274,
   "usefulUrls": 3314,
@@ -103024,7 +103024,7 @@
       "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/h/b/jsd/oneshot/80a697ecdece/0.5155265219211621:1783908922:TQg6E09bDAKQeQrB0D_vY-4XOhnG6hr5_4MnuDch9zE/a1a5046e9bd28dfa",
       "firstSeen": "20260713025657",
       "lastSeen": "20260713025657",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/plain",
       "useful": false
@@ -103357,7 +103357,7 @@
       "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/scripts/jsd/main.js",
       "firstSeen": "20250929221447",
       "lastSeen": "20260713025657",
-      "snapshots": 2,
+      "snapshots": 3,
       "statuscode": "302",
       "mimetype": "unk",
       "useful": false
