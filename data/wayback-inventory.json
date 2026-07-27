@@ -1,8 +1,8 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-07-20T07:32:11.401Z",
-  "latestCapture": "20260713025657",
-  "uniqueUrls": 35274,
+  "lastRun": "2026-07-27T07:54:36.140Z",
+  "latestCapture": "20260723154436",
+  "uniqueUrls": 35276,
   "usefulUrls": 3314,
   "truncated": false,
   "entries": [
@@ -3915,8 +3915,8 @@
     {
       "url": "http://forodesaopaulo.org/declaracion-final-del-xxii-encuentro-del-foro-de-sao-paulo-san-salvador-2016/",
       "firstSeen": "20260524144252",
-      "lastSeen": "20260706044427",
-      "snapshots": 5,
+      "lastSeen": "20260720095115",
+      "snapshots": 6,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": true
@@ -4671,8 +4671,8 @@
     {
       "url": "http://forodesaopaulo.org/documento-base-base-document/",
       "firstSeen": "20260524144256",
-      "lastSeen": "20260706044430",
-      "snapshots": 5,
+      "lastSeen": "20260720095115",
+      "snapshots": 6,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": true
@@ -6048,8 +6048,8 @@
     {
       "url": "http://forodesaopaulo.org/partidos/",
       "firstSeen": "20260524144256",
-      "lastSeen": "20260706044428",
-      "snapshots": 5,
+      "lastSeen": "20260720095115",
+      "snapshots": 6,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": true
@@ -8586,8 +8586,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/06/Declaraci%C3%B3n-Final-2016.pdf",
       "firstSeen": "20170302004406",
-      "lastSeen": "20260706131554",
-      "snapshots": 21,
+      "lastSeen": "20260720110203",
+      "snapshots": 22,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -24255,8 +24255,8 @@
     {
       "url": "https://forodesaopaulo.org/wp-content/uploads/2014/07/15-Declaracion-de-Mexico-III-2009.pdf",
       "firstSeen": "20220510181707",
-      "lastSeen": "20220510181707",
-      "snapshots": 1,
+      "lastSeen": "20260719114828",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -44793,8 +44793,8 @@
     {
       "url": "http://forodesaopaulo.org/?page_id=52",
       "firstSeen": "20260524181342",
-      "lastSeen": "20260706093337",
-      "snapshots": 6,
+      "lastSeen": "20260720110757",
+      "snapshots": 7,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -94669,6 +94669,15 @@
       "useful": false
     },
     {
+      "url": "https://forodesaopaulo.org/",
+      "firstSeen": "20260723154436",
+      "lastSeen": "20260723154436",
+      "snapshots": 1,
+      "statuscode": "403",
+      "mimetype": "text/html",
+      "useful": false
+    },
+    {
       "url": "https://forodesaopaulo.org/_autoindex/icons/blank.png",
       "firstSeen": "20211016161139",
       "lastSeen": "20211016161139",
@@ -103024,7 +103033,7 @@
       "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/h/b/jsd/oneshot/80a697ecdece/0.5155265219211621:1783908922:TQg6E09bDAKQeQrB0D_vY-4XOhnG6hr5_4MnuDch9zE/a1a5046e9bd28dfa",
       "firstSeen": "20260713025657",
       "lastSeen": "20260713025657",
-      "snapshots": 2,
+      "snapshots": 3,
       "statuscode": "200",
       "mimetype": "text/plain",
       "useful": false
@@ -103210,6 +103219,15 @@
       "useful": false
     },
     {
+      "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/h/b/scripts/jsd/80a697ecdece/main.js?",
+      "firstSeen": "20260713025657",
+      "lastSeen": "20260713025657",
+      "snapshots": 1,
+      "statuscode": "200",
+      "mimetype": "application/javascript",
+      "useful": false
+    },
+    {
       "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/h/g/flow/ov1/932644703:1745154649:pRsxV39FpkET7n8tymOEYm0xiSUxOyMjTc6Npbgu8Sw/9334f89c0d94182a/TBw2T.6wL8M0kOjiEIvlHI0htehqxBFXruawY_DT9F0-1745155562-1.2.1.1-BeTCwbTD8g1esmp6U_DfALANSU2cTI_FpYxeEysogmLRw4quPorkXjIJxmCO_ydU",
       "firstSeen": "20250420132603",
       "lastSeen": "20250420132603",
@@ -103357,7 +103375,7 @@
       "url": "https://forodesaopaulo.org/cdn-cgi/challenge-platform/scripts/jsd/main.js",
       "firstSeen": "20250929221447",
       "lastSeen": "20260713025657",
-      "snapshots": 3,
+      "snapshots": 4,
       "statuscode": "302",
       "mimetype": "unk",
       "useful": false

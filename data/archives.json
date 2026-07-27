@@ -1,8 +1,8 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-20T07:46:36.832Z",
-    "count": 235
+    "lastRun": "2026-07-27T08:07:27.396Z",
+    "count": 237
   },
   "snapshots": {
     "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
@@ -1623,6 +1623,20 @@
       "status": "200",
       "fresh": false,
       "checkedAt": "2026-07-20T07:44:29.976Z"
+    },
+    "https://www.masparachile.cl/noticias/como-quedo-compuesto-el-senado-de-chile-tras-las-elecciones-2025": {
+      "archiveUrl": "https://web.archive.org/web/20260311135525/https://www.masparachile.cl/noticias/como-quedo-compuesto-el-senado-de-chile-tras-las-elecciones-2025",
+      "timestamp": "20260311135525",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-27T08:02:16.280Z"
+    },
+    "https://www.electionguide.org/elections/id/4596/": {
+      "archiveUrl": "https://web.archive.org/web/20260720074316/https://www.electionguide.org/elections/id/4596/",
+      "timestamp": "20260720074316",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-27T08:04:38.315Z"
     }
   }
 }
