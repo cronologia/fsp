@@ -14,6 +14,17 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { write: writeCatalog } = require('./scripts/gen-catalog');
+const I18N = require('./i18n');
+
+// Locale being rendered. CUR = the chrome-string table for that locale; UP = the
+// relative prefix from the page being rendered to the docs ROOT ('../' for a
+// locale index page, '../../' for locale meetings/countries pages) — root-level
+// assets (styles.css, app.js) and the locale-agnostic vault (archive/,
+// declarations/) live at the docs root and are linked through it. Templates read
+// these module-level variables at call time; main() sets them per locale/depth.
+let CUR = I18N.UI.en;
+let LANG = 'en';
+let UP = '';
 
 const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, 'data', 'forum.json');
@@ -153,9 +164,9 @@ function renderDocumentsSection(pdfs, textIndex) {
       const t = textIndex[p.officialNumber];
       const dateline = t && t.headerDateLine ? esc(t.headerDateLine) : '<span class="muted">—</span>';
       const links = [
-        `<a href="declarations/pdf/${esc(file)}">📄 PDF (local copy)</a>`,
-        p.snapshot ? `<a href="${esc(p.snapshot)}" rel="noopener noreferrer" target="_blank" title="Internet Archive Wayback Machine snapshot">🗄 snapshot</a>` : '',
-        t ? `<a href="declarations/text/${esc(p.officialNumber)}-${esc(p.year)}.txt">txt</a>` : '',
+        `<a href="${UP}declarations/pdf/${esc(file)}">📄 ${CUR.pdfLocalCopy}</a>`,
+        p.snapshot ? `<a href="${esc(p.snapshot)}" rel="noopener noreferrer" target="_blank" title="${CUR.tWayback}">🗄 ${CUR.snapshotWord}</a>` : '',
+        t ? `<a href="${UP}declarations/text/${esc(p.officialNumber)}-${esc(p.year)}.txt">txt</a>` : '',
       ].filter(Boolean).join(' · ');
       return `          <tr>
             <td class="edition">${esc(p.officialNumber)}</td>
@@ -167,12 +178,12 @@ function renderDocumentsSection(pdfs, textIndex) {
     })
     .join('\n');
   return `    <section id="documents">
-      <h2>Documents (declarations &amp; atas)</h2>
-      <p class="section-intro">The Forum's own <strong>numbered final declarations 01–19 (1990–2013)</strong>, published here as preserved local PDFs — the chapters of the Forum's official compilation${cite(['foro-declaraciones-libro'])}, recovered from Wayback captures of forodesaopaulo.org (ADR-0007). Each row links the local copy, its Internet Archive snapshot, and the extracted plain text used for date/edition verification. Declarations from 2014 on are linked from each meeting's page; the per-meeting <em>Memoria</em> pages and other primary captures are preserved in the <a href="archive/">published document vault</a> (ADR-0008). The dateline column is each declaration's own opening dateline — the primary source for the dates in the meetings table.</p>
+      <h2>${CUR.hDocuments}</h2>
+      <p class="section-intro">The Forum's own <strong>numbered final declarations 01–19 (1990–2013)</strong>, published here as preserved local PDFs — the chapters of the Forum's official compilation${cite(['foro-declaraciones-libro'])}, recovered from Wayback captures of forodesaopaulo.org (ADR-0007). Each row links the local copy, its Internet Archive snapshot, and the extracted plain text used for date/edition verification. Declarations from 2014 on are linked from each meeting's page; the per-meeting <em>Memoria</em> pages and other primary captures are preserved in the <a href="${UP}archive/">published document vault</a> (ADR-0008). The dateline column is each declaration's own opening dateline — the primary source for the dates in the meetings table.</p>
       <div class="table-scroll">
         <table class="meetings">
           <thead>
-            <tr><th>Nº</th><th>Year</th><th>City</th><th>Declaration dateline</th><th>Documents</th></tr>
+            <tr><th>${CUR.thNo}</th><th>${CUR.thYear}</th><th>${CUR.thCity}</th><th>${CUR.thDeclDateline}</th><th>${CUR.thDocuments}</th></tr>
           </thead>
           <tbody>
 ${rows}
@@ -190,11 +201,11 @@ function renderMeetingPage(m, archives, codeByCountry, officialPdfByYear) {
   // page, append its archived snapshot; if it is already a Wayback URL, it is
   // the archive.
   const archLink = snap && snap.archiveUrl && !isWb
-    ? ` · <a href="${esc(snap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="Internet Archive Wayback Machine snapshot">🗄 archived${snap.timestamp ? ` ${esc(formatArchiveTs(snap.timestamp))}` : ''}</a>`
+    ? ` · <a href="${esc(snap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="${CUR.tWayback}">🗄 ${CUR.archivedWord}${snap.timestamp ? ` ${esc(formatArchiveTs(snap.timestamp))}` : ''}</a>`
     : '';
   const declLive = m.declarationUrl
-    ? `<a href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank">📄 Final declaration${isWb ? ' (Internet Archive)' : ''}</a>${archLink}`
-    : '<span class="muted">Not recovered yet — see issue tracker</span>';
+    ? `<a href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank">📄 ${CUR.tFinalDeclaration}${isWb ? ' (Internet Archive)' : ''}</a>${archLink}`
+    : `<span class="muted">${CUR.notRecovered}</span>`;
   const code = codeByCountry && codeByCountry[m.country];
   const countryCell = code
     ? `<a href="../countries/${esc(code)}.html">${esc(m.country)}</a>`
@@ -204,43 +215,46 @@ function renderMeetingPage(m, archives, codeByCountry, officialPdfByYear) {
     ? `Foro de São Paulo — ${esc(m.city)}, ${esc(m.year)}`
     : `${esc(m.edition)} Encontro — ${esc(m.city)}, ${esc(m.year)}`;
   const editionCell = unnumbered
-    ? 'Not part of the official numbered series'
-    : `${esc(m.edition)}${m.editionVerified ? '' : ' <span class="muted">(to verify)</span>'}`;
+    ? CUR.notNumbered
+    : `${esc(m.edition)}${m.editionVerified ? '' : ` <span class="muted">(${CUR.toVerify})</span>`}`;
+  const route = `meetings/${m.year}.html`;
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${LANG}">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${unnumbered ? esc(m.city) : esc(m.edition)} ${esc(m.year)} — Foro de São Paulo</title>
-  <link rel="stylesheet" href="../styles.css?v=${ASSET_VER.css}" />
+${I18N.hreflangHead(LANG, route)}
+  <link rel="stylesheet" href="${UP}styles.css?v=${ASSET_VER.css}" />
 ${ANALYTICS}
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <p class="updated"><a href="../index.html#meetings" style="color:#fff">← Foro de São Paulo — Meetings</a></p>
+      ${I18N.switcher(LANG, route, CUR)}
+      <p class="updated"><a href="../index.html#meetings" style="color:#fff">${CUR.backToFspMeetings}</a></p>
       <h1>${heading}</h1>
       <p class="subtitle">${esc(m.country)}${m.dates ? ` · ${esc(m.dates)}` : ''}</p>
     </div>
-  </header>
+  </header>${I18N.disclaimerHtml(CUR)}
   <main class="wrap">
     <section>
-      <h2>Meeting</h2>
+      <h2>${CUR.hMeeting}</h2>
       <dl class="facts">
-        <dt>Edition</dt><dd>${editionCell}</dd>
-        <dt>Year</dt><dd>${esc(m.year)}</dd>
-        <dt>Dates</dt><dd>${m.dates ? esc(m.dates) + (m.datesVerified ? '' : ' (to verify)') : 'year only — to verify'}</dd>
-        <dt>Host city</dt><dd>${esc(m.city)}</dd>
-        <dt>Country</dt><dd>${countryCell}</dd>
-        <dt>Final declaration</dt><dd>${declLive}</dd>
-        ${officialPdfByYear && officialPdfByYear[m.year] ? `<dt>Official PDF</dt><dd><a href="../declarations/pdf/${esc(officialPdfByYear[m.year].officialNumber)}-${esc(m.year)}.pdf">📄 Local preserved copy (Nº ${esc(officialPdfByYear[m.year].officialNumber)})</a>${officialPdfByYear[m.year].snapshot ? ` · <a href="${esc(officialPdfByYear[m.year].snapshot)}" rel="noopener noreferrer" target="_blank" title="Internet Archive Wayback Machine snapshot">🗄 snapshot</a>` : ''}</dd>` : ''}
-        ${(m.officialDocs && m.officialDocs.length) ? `<dt>Forum's own pages</dt><dd>${m.officialDocs.map((o) => `${esc(o.label || o.type)}: <a href="${esc(o.url)}" rel="noopener noreferrer" target="_blank">official</a>${o.archiveUrl ? ` · <a href="${esc(o.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="Internet Archive snapshot">🗄 archived</a>` : ''}`).join(' · ')} <span class="muted">(the official site is geoblocked to non-Brazilian IPs — use the archived copy)</span></dd>` : ''}
-        ${m.notes ? `<dt>Notes</dt><dd>${esc(m.notes)}</dd>` : ''}
+        <dt>${CUR.thEdition}</dt><dd>${editionCell}</dd>
+        <dt>${CUR.thYear}</dt><dd>${esc(m.year)}</dd>
+        <dt>${CUR.thDates}</dt><dd>${m.dates ? esc(m.dates) + (m.datesVerified ? '' : ` (${CUR.toVerify})`) : `${CUR.yearOnly} — ${CUR.toVerify}`}</dd>
+        <dt>${CUR.dtHostCity}</dt><dd>${esc(m.city)}</dd>
+        <dt>${CUR.thCountry}</dt><dd>${countryCell}</dd>
+        <dt>${CUR.tFinalDeclaration}</dt><dd>${declLive}</dd>
+        ${officialPdfByYear && officialPdfByYear[m.year] ? `<dt>${CUR.dtOfficialPdf}</dt><dd><a href="${UP}declarations/pdf/${esc(officialPdfByYear[m.year].officialNumber)}-${esc(m.year)}.pdf">📄 ${CUR.localPreservedCopy} (Nº ${esc(officialPdfByYear[m.year].officialNumber)})</a>${officialPdfByYear[m.year].snapshot ? ` · <a href="${esc(officialPdfByYear[m.year].snapshot)}" rel="noopener noreferrer" target="_blank" title="${CUR.tWayback}">🗄 ${CUR.snapshotWord}</a>` : ''}</dd>` : ''}
+        ${(m.officialDocs && m.officialDocs.length) ? `<dt>${CUR.dtForumPages}</dt><dd>${m.officialDocs.map((o) => `${esc(o.label || o.type)}: <a href="${esc(o.url)}" rel="noopener noreferrer" target="_blank">${CUR.official}</a>${o.archiveUrl ? ` · <a href="${esc(o.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="${CUR.tSnapshot}">🗄 ${CUR.archivedWord}</a>` : ''}`).join(' · ')} <span class="muted">(${CUR.geoblockNote})</span></dd>` : ''}
+        ${m.notes ? `<dt>${CUR.thNotes}</dt><dd>${esc(m.notes)}</dd>` : ''}
       </dl>
     </section>
   </main>
   <footer class="site-footer">
-    <div class="wrap"><p>Generated from <code>data/forum.json</code>. <a href="../index.html#meetings">Back to all meetings</a>.</p></div>
+    <div class="wrap"><p>Generated from <code>data/forum.json</code>. <a href="../index.html#meetings">${CUR.backAllMeetings}</a>.</p></div>
   </footer>
 </body>
 </html>
@@ -251,20 +265,20 @@ function renderMeetingsRows(meetings, archives = {}) {
   return meetings
     .map((m) => {
       const dates = m.dates
-        ? `${esc(m.dates)}${m.datesVerified ? '' : ' <span class="flag" title="dates not verified against a primary source">?</span>'}`
-        : '<span class="muted">year only</span>';
+        ? `${esc(m.dates)}${m.datesVerified ? '' : ` <span class="flag" title="${CUR.tNotVerified}">?</span>`}`
+        : `<span class="muted">${CUR.yearOnly}</span>`;
       const dsnap = archives[m.declarationUrl];
       const dIsWb = !!m.declarationUrl && /web\.archive\.org/.test(m.declarationUrl);
       const dArch = dsnap && dsnap.archiveUrl && !dIsWb
-        ? ` <a class="archive-link" href="${esc(dsnap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="Wayback Machine snapshot">🗄</a>`
+        ? ` <a class="archive-link" href="${esc(dsnap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="${CUR.tWaybackShort}">🗄</a>`
         : '';
       const decl = m.declarationUrl
-        ? `<a class="decl-link" href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank" title="Final declaration">📄 declaration</a>${dArch}`
+        ? `<a class="decl-link" href="${esc(m.declarationUrl)}" rel="noopener noreferrer" target="_blank" title="${CUR.tFinalDeclaration}">📄 ${CUR.declarationWord}</a>${dArch}`
         : '<span class="muted">—</span>';
       const edLabel = m.numbered === false ? '—' : esc(m.edition);
       const edFlag = m.numbered === false || m.editionVerified
         ? ''
-        : ' <span class="flag" title="edition not yet verified against a primary source">?</span>';
+        : ` <span class="flag" title="${CUR.tEditionNotVerified}">?</span>`;
       return `        <tr data-country="${esc(m.country)}" data-year="${esc(m.year)}">
           <td class="edition"><a href="meetings/${esc(m.year)}.html">${edLabel}</a>${edFlag}</td>
           <td class="year">${esc(m.year)}</td>
@@ -299,7 +313,7 @@ ${rows}
         ${body}
       </details>`;
   };
-  return `      <h3>Membership over time</h3>
+  return `      <h3>${CUR.hMembership}</h3>
       <p class="section-intro">The Forum's membership at three documented points, per Regalado (2008). It grew from the 48 founding organizations (1990) across the Caribbean and Central America by 1993, then consolidated by 2007.</p>
 ${rosters.map(one).join('\n')}`;
 }
@@ -309,12 +323,12 @@ function renderParties(parties) {
     .map((p) => {
       const founding =
         p.founding === true
-          ? '<span class="badge badge-founding">founding member</span>'
+          ? `<span class="badge badge-founding">${CUR.badgeFounding}</span>`
           : p.founding === false
-          ? '<span class="badge badge-later">later member</span>'
-          : '<span class="badge badge-unknown">status to verify</span>';
+          ? `<span class="badge badge-later">${CUR.badgeLater}</span>`
+          : `<span class="badge badge-unknown">${CUR.badgeUnknown}</span>`;
       const figures = (p.figures && p.figures.length)
-        ? `<p class="figures"><strong>Key figures:</strong> ${esc(p.figures.join(', '))}</p>`
+        ? `<p class="figures"><strong>${CUR.keyFigures}:</strong> ${esc(p.figures.join(', '))}</p>`
         : '';
       const notes = p.notes ? `<p class="party-notes">${esc(p.notes)}</p>` : '';
       return `      <article class="party-card">
@@ -338,10 +352,10 @@ function renderComparison(c) {
         </tr>`
     )
     .join('\n');
-  return `      <h3>Foro de São Paulo vs. Grupo de Puebla</h3>
+  return `      <h3>${CUR.hVsPuebla}</h3>
       <div class="table-scroll">
         <table class="meetings">
-          <thead><tr><th></th><th>Foro de São Paulo</th><th>Grupo de Puebla</th></tr></thead>
+          <thead><tr><th></th><th>${CUR.thFsp}</th><th>${CUR.thPuebla}</th></tr></thead>
           <tbody>
 ${rows}
           </tbody>
@@ -360,8 +374,8 @@ function renderRelated(orgs) {
       return `      <article class="related-card">
         <h3>${esc(o.name)}</h3>
         ${meta ? `<p class="related-meta">${meta}</p>` : ''}
-        ${o.composition ? `<p><strong>Composition:</strong> ${esc(o.composition)}</p>` : ''}
-        ${o.relationToForum ? `<p><strong>Relation to the Foro:</strong> ${esc(o.relationToForum)}</p>` : ''}
+        ${o.composition ? `<p><strong>${CUR.rowComposition}:</strong> ${esc(o.composition)}</p>` : ''}
+        ${o.relationToForum ? `<p><strong>${CUR.rowRelation}:</strong> ${esc(o.relationToForum)}</p>` : ''}
         ${link}
       </article>`;
     })
@@ -385,12 +399,12 @@ function renderMembersInGovernment(mg, codeByCountry) {
     })
     .join('\n');
   return `    <section id="government">
-      <h2>Member parties in government</h2>
+      <h2>${CUR.hMembersGov}</h2>
       <p class="section-intro">${esc(mg.note)}</p>
       <div class="table-scroll">
         <table class="meetings">
           <thead>
-            <tr><th>Country</th><th>Party</th><th>FSP status</th><th>Heads of state (party)</th></tr>
+            <tr><th>${CUR.thCountry}</th><th>${CUR.thParty}</th><th>${CUR.thFspStatus}</th><th>${CUR.thHeads}</th></tr>
           </thead>
           <tbody>
 ${rows}
@@ -418,7 +432,7 @@ function renderCriticalPerspectives(cp) {
     })
     .join('\n');
   return `    <section id="perspectives">
-      <h2>Analyses &amp; perspectives</h2>
+      <h2>${CUR.hAnalyses}</h2>
       <div class="notice notice-attribution">${esc(cp.note)}</div>
       <div class="party-grid">
 ${cards}
@@ -432,21 +446,21 @@ function renderArmedMovements(am) {
   const cards = am.movements
     .map((m) => {
       const flag = m.verified === false
-        ? ' <span class="flag" title="Forum participation / details not yet verified against a primary source">?</span>'
+        ? ` <span class="flag" title="${CUR.tParticipationNotVerified}">?</span>`
         : '';
       const row = (label, val) => (val ? `        <p class="am-row"><strong>${label}:</strong> ${esc(val)}</p>` : '');
       return `      <article class="am-card">
         <h3>${esc(m.name)}${m.abbr ? ` <span class="abbr">(${esc(m.abbr)})</span>` : ''}${flag}</h3>
         <p class="am-meta">${esc(m.country)}${m.period ? ` · ${esc(m.period)}` : ''}${cite(m.sources)}</p>
-${row('Nature', m.nature)}
-${row('Designation', m.designation)}
-${row('Role in the Forum', m.fspRole)}
-${row('Status today', m.currentStatus)}
+${row(CUR.rowNature, m.nature)}
+${row(CUR.rowDesignation, m.designation)}
+${row(CUR.rowFspRole, m.fspRole)}
+${row(CUR.rowStatusToday, m.currentStatus)}
       </article>`;
     })
     .join('\n');
   return `    <section id="armed">
-      <h2>Armed &amp; guerrilla movements in the Forum</h2>
+      <h2>${CUR.hArmed}</h2>
       <div class="notice notice-attribution">${esc(am.note)}</div>
       ${am.presidencyNote ? `<div class="notice">${esc(am.presidencyNote)}</div>` : ''}
       <div class="party-grid">
@@ -464,14 +478,14 @@ function renderRegionalBodies(rb) {
       return `      <article class="am-card">
         <h3>${esc(b.name)}${b.abbr ? ` <span class="abbr">(${esc(b.abbr)})</span>` : ''}</h3>
         <p class="am-meta">${b.founded ? esc(b.founded) : ''}${cite(b.sources)}</p>
-${row('What it is', b.whatItIs)}
-${row('Members', b.members)}
-${row('Link to the Forum', b.fspLink)}
+${row(CUR.rowWhatItIs, b.whatItIs)}
+${row(CUR.rowMembers, b.members)}
+${row(CUR.rowFspLink, b.fspLink)}
       </article>`;
     })
     .join('\n');
   return `    <section id="regional">
-      <h2>Regional integration bodies</h2>
+      <h2>${CUR.hRegional}</h2>
       <div class="notice notice-attribution">${esc(rb.note)}</div>
       <div class="party-grid">
 ${cards}
@@ -507,9 +521,9 @@ function cite(sources, prefix = '') {
         return `<a href="${prefix}#ref-${esc(s)}" title="${esc(hit.ref.title)}">[${hit.n}]</a>`;
       }
       if (/^https?:\/\//.test(s)) {
-        return `<a href="${esc(s)}" rel="noopener noreferrer" target="_blank" title="external source">[web]</a>`;
+        return `<a href="${esc(s)}" rel="noopener noreferrer" target="_blank" title="${CUR.tExternal}">[web]</a>`;
       }
-      return `<span class="flag" title="unknown source id: ${esc(s)}">[?]</span>`;
+      return `<span class="flag" title="${CUR.tUnknownSource}: ${esc(s)}">[?]</span>`;
     })
     .join('');
   return `<sup class="cite">${marks}</sup>`;
@@ -520,13 +534,13 @@ function renderReferences(refs, archives, archiveDocs = {}) {
     .map((r) => {
       const snap = archives[r.url];
       const archiveLink = snap && snap.archiveUrl
-        ? ` · <a class="archive-link" href="${esc(snap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="Internet Archive Wayback Machine snapshot">archived${
+        ? ` · <a class="archive-link" href="${esc(snap.archiveUrl)}" rel="noopener noreferrer" target="_blank" title="${CUR.tWayback}">${CUR.archivedWord}${
             snap.timestamp ? ` ${esc(formatArchiveTs(snap.timestamp))}` : ''
           }</a>`
         : '';
       const doc = archiveDocs[r.id];
       const savedLink = doc && doc.state === 'ok' && doc.path
-        ? ` · <a class="archive-link" href="archive/${esc(doc.path)}" title="Preserved copy stored in this repository">saved copy</a>`
+        ? ` · <a class="archive-link" href="${UP}archive/${esc(doc.path)}" title="${CUR.tPreserved}">${CUR.savedCopy}</a>`
         : '';
       return `        <li id="ref-${esc(r.id)}">
           <a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a>
@@ -550,22 +564,22 @@ function renderTimeline(meetings) {
 
 function renderNav() {
   const items = [
-    ['#atlas', 'Map'],
-    ['#presidents-map', 'Presidential'],
-    ['#legislative-map', 'Legislative'],
-    ['#courts-map', 'Courts'],
-    ['#origins', 'Origins'],
-    ['#timeline', 'Timeline'],
-    ['#meetings', 'Meetings'],
-    ['#documents', 'Documents'],
-    ['#parties', 'Parties'],
-    ['#armed', 'Armed movements'],
-    ['#regional', 'Regional bodies'],
-    ['#government', 'In government'],
-    ['#organization', 'Structure'],
-    ['#countries', 'Countries'],
-    ['#perspectives', 'Analyses'],
-    ['#references', 'References'],
+    ['#atlas', CUR.navMap],
+    ['#presidents-map', CUR.navPresidential],
+    ['#legislative-map', CUR.navLegislative],
+    ['#courts-map', CUR.navCourts],
+    ['#origins', CUR.navOrigins],
+    ['#timeline', CUR.navTimeline],
+    ['#meetings', CUR.navMeetings],
+    ['#documents', CUR.navDocuments],
+    ['#parties', CUR.navParties],
+    ['#armed', CUR.navArmed],
+    ['#regional', CUR.navRegional],
+    ['#government', CUR.navGovernment],
+    ['#organization', CUR.navStructure],
+    ['#countries', CUR.navCountries],
+    ['#perspectives', CUR.navAnalyses],
+    ['#references', CUR.navReferences],
   ];
   return `  <nav class="site-nav"><div class="wrap">${items
     .map(([href, label]) => `<a href="${href}">${esc(label)}</a>`)
@@ -576,13 +590,13 @@ function renderOrganization(org) {
   if (!org || !org.bodies || !org.bodies.length) return '';
   const cards = org.bodies
     .map((b) => {
-      const flag = b.verified === false ? ' <span class="flag" title="reported by the Forum / affiliated sources; to verify">?</span>' : '';
+      const flag = b.verified === false ? ` <span class="flag" title="${CUR.tReportedForum}">?</span>` : '';
       let composition = '';
       if (b.composition && b.composition.length) {
         const rows = b.composition
           .map((c) => `            <dt>${esc(c.country)}</dt><dd>${esc(c.delegation)}</dd>`)
           .join('\n');
-        const heading = `${esc(b.compositionTitle || 'Composition')} — ${b.composition.length} countries${cite(b.compositionSources)}`;
+        const heading = `${b.compositionTitle ? esc(b.compositionTitle) : CUR.rowComposition} — ${b.composition.length} countries${cite(b.compositionSources)}`;
         composition = `
         <details class="roster wg-composition">
           <summary><strong>${heading}</strong></summary>
@@ -599,12 +613,12 @@ ${rows}
     })
     .join('\n');
   return `    <section id="organization">
-      <h2>Organization &amp; structure</h2>
+      <h2>${CUR.hStructure}</h2>
       <p class="section-intro">${esc(org.note)}${cite(org.sources)}</p>
       <div class="party-grid">
 ${cards}
       </div>
-      ${org.scale ? `<p class="org-scale"><strong>Scale:</strong> ${esc(org.scale)}${org.scaleVerified === false ? ' <span class="flag" title="reported figures; to verify">?</span>' : ''}${cite(org.sources)}</p>` : ''}
+      ${org.scale ? `<p class="org-scale"><strong>${CUR.rowScale}:</strong> ${esc(org.scale)}${org.scaleVerified === false ? ` <span class="flag" title="${CUR.tReportedFigures}">?</span>` : ''}${cite(org.sources)}</p>` : ''}
     </section>
 `;
 }
@@ -643,18 +657,18 @@ function renderVizTabs(countries) {
   // has a sourced benchControl record, in which case we omit the tab entirely.
   const benchPanel = renderCourtSeatsGrid(countries);
   const tabs = [
-    ['tab-presidents', 'presidents-map', 'Presidential'],
-    ['tab-legislative', 'legislative-map', 'Legislative'],
-    ['tab-courts', 'courts-map', 'Court interventions'],
+    ['tab-presidents', 'presidents-map', CUR.navPresidential],
+    ['tab-legislative', 'legislative-map', CUR.navLegislative],
+    ['tab-courts', 'courts-map', CUR.tabCourts],
   ];
-  if (benchPanel) tabs.push(['tab-courtbench', 'courtbench-map', 'Court bench']);
+  if (benchPanel) tabs.push(['tab-courtbench', 'courtbench-map', CUR.tabCourtBench]);
   const buttons = tabs
     .map(([id, ctl, lbl], i) =>
       `<button type="button" class="viz-tab" role="tab" id="${id}" aria-controls="${ctl}" aria-selected="${i === 0 ? 'true' : 'false'}">${esc(lbl)}</button>`)
     .join('');
   return `    <div class="viz">
-      <h2 class="viz-h">The grids, year by year</h2>
-      <div class="viz-tabs" role="tablist" aria-label="Year-by-year grids" hidden>${buttons}</div>
+      <h2 class="viz-h">${CUR.hGrids}</h2>
+      <div class="viz-tabs" role="tablist" aria-label="${CUR.gridsAria}" hidden>${buttons}</div>
 ${renderPresidentialTimeline(countries)}
 ${renderLegislativeGrid(countries)}
 ${renderCourtsGrid(countries)}
@@ -777,14 +791,14 @@ function renderAtlas(countries) {
 
   const payload = JSON.stringify({ start: 1990, end: now, countries: data });
   return `    <section id="atlas">
-      <h2>The map, year by year</h2>
+      <h2>${CUR.hAtlas}</h2>
       <p class="section-intro">The tracked countries on the map, coloured by who held the presidency that year. Drag the slider or press play to watch the spread — often called the “pink tide” — rise and recede. A <strong>solid</strong> country held an FSP-party presidency; where the FSP party instead held a <strong>legislative</strong> majority or plurality, or an <strong>FSP-appointed high-court majority</strong>, <em>without</em> the presidency, the country is hatched with red lines — horizontal for the legislature, vertical for the court, crossed for both (a branch, not the presidency; the court line records who appointed the bench, not how it rules). One-party Cuba is marked distinctly and not part of the electoral counts. Neighbouring countries are shown greyed for context.</p>
       <div class="atlas-controls">
-        <button type="button" id="atlas-play" class="atlas-btn" aria-label="Play through the years">▶ Play</button>
-        <input type="range" id="atlas-slider" min="1990" max="${now}" value="${now}" step="1" aria-label="Year" />
+        <button type="button" id="atlas-play" class="atlas-btn" aria-label="${CUR.playAria}" data-play="${CUR.play}" data-pause="${CUR.pause}">${CUR.play}</button>
+        <input type="range" id="atlas-slider" min="1990" max="${now}" value="${now}" step="1" aria-label="${CUR.yearAria}" />
         <output id="atlas-year" class="atlas-year">${now}</output>
       </div>
-      <p class="ptl-caption" id="atlas-caption" aria-live="polite">Showing ${now}. Hover, tap or focus a country for its president that year.</p>
+      <p class="ptl-caption" id="atlas-caption" aria-live="polite" data-fmt="${CUR.atlasShowing}">${CUR.atlasCaptionStatic.replace('{year}', now)}</p>
       <div class="atlas-map" id="atlas-map">
 ${svg}
       </div>
@@ -881,13 +895,13 @@ function renderPresidentialTimeline(countries) {
 
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="presidents-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-presidents" tabindex="0">
-      <h2>FSP presidential coverage, year by year</h2>
+      <h2>${CUR.hFspCoverage}</h2>
       <p class="section-intro">For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom. ${present.has('fsp-unv') ? 'Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a hatched state, not counted as confirmed. ' : ''}The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.</p>
-      <p class="ptl-caption" id="ptl-caption" aria-live="polite">Hover, tap or focus a cell for the country, year and president. Each state is shown by both colour and fill, so it reads without colour.</p>
+      <p class="ptl-caption" id="ptl-caption" aria-live="polite">${CUR.capPtl}</p>
       <div class="table-scroll">
         <div class="ptl" id="ptl-grid" style="${gridCols}">
-          <span class="ptl-corner">Year →</span>${header}
-          <span class="ptl-lbl ptl-tally-lbl" data-d="Electoral countries with an FSP-party president that year (confirmed + to-verify), out of ${denom}" title="Electoral countries with an FSP-party president that year (confirmed + to-verify), out of ${denom}">FSP-governed</span>${barRow}
+          <span class="ptl-corner">${CUR.thYear} →</span>${header}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="Electoral countries with an FSP-party president that year (confirmed + to-verify), out of ${denom}" title="Electoral countries with an FSP-party president that year (confirmed + to-verify), out of ${denom}">${CUR.lblFspGoverned}</span>${barRow}
 ${bodyRows}
         </div>
       </div>
@@ -970,13 +984,13 @@ function renderCourtsGrid(countries) {
 
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="courts-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-courts" tabindex="0">
-      <h2>High-court interventions, year by year</h2>
+      <h2>${CUR.hInterventions}</h2>
       <p class="section-intro">When each tracked country's <strong>high court was restructured</strong> — court-packing, purges, and structural reforms — from the court histories in the country dossiers. Continuity (normal turnover) is left blank; only documented interventions are marked, colour and glyph both. Interventions happen under governments of every stripe — the grid is a record, not a verdict. ${withData} countries have a compiled court history so far; the rest show blank (see the country epics).</p>
-      <p class="ptl-caption" id="cm-caption" aria-live="polite">Hover, tap or focus a cell for the court change in that country and year.</p>
+      <p class="ptl-caption" id="cm-caption" aria-live="polite">${CUR.capCm}</p>
       <div class="table-scroll">
         <div class="ptl" id="cm-grid" style="${gridCols}">
-          <span class="ptl-corner">Year →</span>${header}
-          <span class="ptl-lbl ptl-tally-lbl" data-d="Number of high-court interventions across tracked countries that year" title="Interventions per year">Interventions</span>${barRow}
+          <span class="ptl-corner">${CUR.thYear} →</span>${header}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="${CUR.dInterventions}" title="${CUR.tInterventionsPerYear}">${CUR.lblInterventions}</span>${barRow}
 ${bodyRows}
         </div>
       </div>
@@ -1062,13 +1076,13 @@ function renderLegislativeGrid(countries) {
 
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="legislative-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-legislative" tabindex="0">
-      <h2>Legislative control, year by year</h2>
+      <h2>${CUR.hLegControl}</h2>
       <p class="section-intro">The FSP-member party's standing in the <strong>lower house</strong> each year — whether it (or its governing coalition) held a <strong>majority</strong>, a <strong>plurality</strong>, a <strong>minority</strong> government, or sat in <strong>opposition</strong>. A coalition majority is not a single-party majority (see each cell's detail). <strong>${withData}</strong> ${withData === 1 ? 'country' : 'countries'} compiled so far (${esc(withNames.join(', '))}); the rest are blank pending the country epics (#107).</p>
-      <p class="ptl-caption" id="lg-caption" aria-live="polite">Hover, tap or focus a cell for the party's legislative standing that year.</p>
+      <p class="ptl-caption" id="lg-caption" aria-live="polite">${CUR.capLg}</p>
       <div class="table-scroll">
         <div class="ptl" id="lg-grid" style="${gridCols}">
-          <span class="ptl-corner">Year →</span>${header}
-          <span class="ptl-lbl ptl-tally-lbl" data-d="Countries with an FSP legislative majority that year" title="FSP legislative majorities per year">FSP majority</span>${barRow}
+          <span class="ptl-corner">${CUR.thYear} →</span>${header}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="${CUR.dLegMajority}" title="${CUR.tLegMajorities}">${CUR.lblFspMajority}</span>${barRow}
 ${bodyRows}
         </div>
       </div>
@@ -1179,13 +1193,13 @@ function renderCourtSeatsGrid(countries) {
 
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="courtbench-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-courtbench" tabindex="0">
-      <h2>High-court seats by appointing government, year by year</h2>
+      <h2>${CUR.hSeatsByGov}</h2>
       <p class="section-intro">For each country with a sourced record, <strong>who appointed the sitting high-court bench</strong> each year — whether justices appointed under FSP-member governments were a <strong>majority</strong> (the years marked here, and the vertical red hatch on the map), a <strong>minority</strong>, or absent. This grid records <strong>appointment provenance only</strong>: appointment by a government does not by itself demonstrate that a court serves it — courts counted here have ruled against the governments that appointed them (Brazil's mensalão convictions, Uruguay's 2013 rulings). The stronger claim — documented packing, purges and structural reforms — is the <strong>Court interventions</strong> tab. ${rows.length} countries have a sourced bench record; the rest are omitted rather than estimated. Each cell's detail cites the counts only where sources give them.</p>
-      <p class="ptl-caption" id="cs-caption" aria-live="polite">Hover, tap or focus a cell for the bench's appointment provenance that year. Each state is shown by colour, fill and glyph, so it reads without colour.</p>
+      <p class="ptl-caption" id="cs-caption" aria-live="polite">${CUR.capCs}</p>
       <div class="table-scroll">
         <div class="ptl" id="cs-grid" style="${gridCols}">
-          <span class="ptl-corner">Year →</span>${header}
-          <span class="ptl-lbl ptl-tally-lbl" data-d="Countries whose bench had a majority appointed under FSP-era governments that year" title="Majority-FSP-appointed benches per year">Majority benches</span>${barRow}
+          <span class="ptl-corner">${CUR.thYear} →</span>${header}
+          <span class="ptl-lbl ptl-tally-lbl" data-d="${CUR.dBenchMajority}" title="${CUR.tMajorityBenches}">${CUR.lblMajorityBenches}</span>${barRow}
 ${bodyRows}
         </div>
       </div>
@@ -1202,12 +1216,12 @@ function renderCountryIndex(countries) {
       return `      <a class="country-card" href="countries/${esc(c.code)}.html">
         <span class="cc-name">${esc(c.country)}</span>
         <span class="cc-party">${esc(c.fspParty)}</span>
-        <span class="cc-count">${esc(n)} FSP president${n === 1 ? '' : 's'}</span>
+        <span class="cc-count">${esc(n)} ${n === 1 ? CUR.fspPresidentOne : CUR.fspPresidentMany}</span>
       </a>`;
     })
     .join('\n');
   return `    <section id="countries">
-      <h2>Countries</h2>
+      <h2>${CUR.hCountries}</h2>
       <p class="section-intro">Per-country dossiers: presidential succession since 1990 (FSP presidents highlighted) and the Supreme Court history.</p>
       <div class="country-index">
 ${cards}
@@ -1220,7 +1234,7 @@ function renderFormation(f) {
   if (!f || !f.items || !f.items.length) return '';
   const cards = f.items
     .map((it) => {
-      const flag = it.verified === false ? ' <span class="flag" title="reported / attributed, not independently sourced here">?</span>' : '';
+      const flag = it.verified === false ? ` <span class="flag" title="${CUR.tReported}">?</span>` : '';
       return `      <article class="related-card">
         <h3>${esc(it.title)}${flag}</h3>
         <p>${esc(it.text)}${cite(it.sources)}</p>
@@ -1242,7 +1256,7 @@ function renderCourtHistory(sc) {
   const rows = sc.courtHistory
     .map((h) => {
       const cls = h.fspRelated ? ' class="fsp-row"' : '';
-      const flag = h.verified === false ? ' <span class="flag" title="broad characterization; verify against a primary source">?</span>' : '';
+      const flag = h.verified === false ? ` <span class="flag" title="${CUR.tBroad}">?</span>` : '';
       const sizeCell = h.size != null ? `${esc(h.size)}` : '<span class="muted">—</span>';
       return `        <tr${cls}>
           <td>${esc(h.period)}</td>
@@ -1254,14 +1268,14 @@ function renderCourtHistory(sc) {
     })
     .join('\n');
   const src = (sc.courtHistorySources || [])
-    .map((u) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source</a>`)
+    .map((u) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${CUR.sourceWord}</a>`)
     .join(' · ');
   return `    <section>
-      <h2>Court history (1990–present)</h2>
-      <p class="section-intro">Structural changes to the court during the Foro de São Paulo era — size changes, court-packings, purges and reforms. <span class="ch-type ch-packing">packing</span>/<span class="ch-type ch-purge">purge</span> mark expansions and forced removals. ${src ? `Sources: ${src}.` : ''}</p>
+      <h2>${CUR.hCourtHistory}</h2>
+      <p class="section-intro">Structural changes to the court during the Foro de São Paulo era — size changes, court-packings, purges and reforms. <span class="ch-type ch-packing">packing</span>/<span class="ch-type ch-purge">purge</span> mark expansions and forced removals. ${src ? `${CUR.sourcesWord}: ${src}.` : ''}</p>
       <div class="table-scroll">
         <table class="meetings">
-          <thead><tr><th>Period</th><th>Type</th><th>Change</th><th>Seats</th><th>Government</th></tr></thead>
+          <thead><tr><th>${CUR.thPeriod}</th><th>${CUR.thType}</th><th>${CUR.thChange}</th><th>${CUR.thSeats}</th><th>${CUR.thGovernment}</th></tr></thead>
           <tbody>
 ${rows}
           </tbody>
@@ -1295,11 +1309,11 @@ function renderBenchControl(sc) {
     })
     .join('\n');
   return `    <section>
-      <h2>Bench control by appointing government</h2>
+      <h2>${CUR.hBench}</h2>
       <p class="section-intro">Sourced period bands: how much of the sitting high-court bench was appointed (or, where sources say so, effectively controlled) under FSP-member governments. <strong>Appointment provenance is not a claim about how judges rule</strong> — see each band's notes; documented interventions are in the court history above. Seat counts appear only where sources give them; years outside these bands are uncovered, not asserted.</p>
       <div class="table-scroll">
         <table class="meetings">
-          <thead><tr><th>Period</th><th>Control</th><th>FSP-era appointees</th><th>Notes &amp; sources</th></tr></thead>
+          <thead><tr><th>${CUR.thPeriod}</th><th>${CUR.thControl}</th><th>${CUR.thFspAppointees}</th><th>${CUR.thNotesSources}</th></tr></thead>
           <tbody>
 ${rows}
           </tbody>
@@ -1325,11 +1339,11 @@ function renderJustices(sc) {
     })
     .join('\n');
   return `    <section>
-      <h2>Court composition — by appointing government</h2>
+      <h2>${CUR.hCourtComposition}</h2>
       <p class="section-intro">Each justice with the president (and party) who appointed them; rows marked <span class="fsp-badge">FSP</span> were appointed by a Foro de São Paulo member/affiliated president. "Background" notes prior political/professional roles where notable — justices are not formal party members.</p>
       <div class="table-scroll">
         <table class="meetings">
-          <thead><tr><th>Appt. year</th><th>Justice</th><th>Appointed by (party)</th><th>Status</th><th>Background</th></tr></thead>
+          <thead><tr><th>${CUR.thApptYear}</th><th>${CUR.thJustice}</th><th>${CUR.thAppointedBy}</th><th>${CUR.thStatus}</th><th>${CUR.thBackground}</th></tr></thead>
           <tbody>
 ${rows}
           </tbody>
@@ -1343,7 +1357,7 @@ ${rows}
 function srcLinks(arr) {
   if (!arr || !arr.length) return '';
   return ' <span class="src-links">(' + arr
-    .map((u, i) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">source ${i + 1}</a>`)
+    .map((u, i) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${CUR.sourceWord} ${i + 1}</a>`)
     .join(', ') + ')</span>';
 }
 
@@ -1421,7 +1435,7 @@ function renderLegislativeComposition(c) {
       return `      <h3>${esc(e.year)} — ${esc(e.chamber)} (${esc(e.totalSeats)} seats${e.majorityThreshold ? `; majority = ${esc(e.majorityThreshold)}` : ''})</h3>
 ${seatbar}      <div class="table-scroll">
         <table class="meetings">
-          <thead><tr><th>Party</th><th>Full name</th><th>Seats</th><th>Alignment</th></tr></thead>
+          <thead><tr><th>${CUR.thParty}</th><th>${CUR.thFullName}</th><th>${CUR.thSeats}</th><th>${CUR.thAlignment}</th></tr></thead>
           <tbody>
 ${prows}
           </tbody>
@@ -1435,7 +1449,7 @@ ${fspLine}      <p class="section-intro"><strong>Government:</strong> ${esc(g.le
     ? `      <p class="notice">FSP member parties (highlighted <span class="fsp-badge">FSP</span>): <strong>${(fp.current || []).map(esc).join(', ')}</strong>.${fp.foundingOnly && fp.foundingOnly.length ? ` Also 1990 founding members: ${fp.foundingOnly.map(esc).join(', ')}.` : ''}${fp.note ? ` ${esc(fp.note)}` : ''}</p>\n`
     : '';
   return `    <section>
-      <h2>Legislative composition</h2>
+      <h2>${CUR.hLegComposition}</h2>
       <p class="section-intro">Seats by party for recent elections, and whether the governing coalition held a majority. In a fragmented system a governing majority is assembled across several parties — no party governs alone; a coalition majority is not a single-party majority. Each bar orders blocs left→right with a marker at the majority line.</p>
       <div class="seatbar-legend"><span class="ptl-key"><span class="seatseg-key seatseg-fsp"></span>FSP party</span><span class="ptl-key"><span class="seatseg-key seatseg-government"></span>Government ally</span><span class="ptl-key"><span class="seatseg-key seatseg-mixed"></span>Mixed / centrão</span><span class="ptl-key"><span class="seatseg-key seatseg-opposition"></span>Opposition</span><span class="ptl-key"><span class="seatbar-maj-key"></span>Majority line</span></div>
 ${fspNote}${blocks}
@@ -1460,36 +1474,39 @@ function renderCountryPage(c) {
   const js = sc.justices || [];
   const fspApp = js.filter((j) => j.fspAppointed).length;
   const benchTally = js.length
-    ? `        <dt>Appointed under FSP-party govts</dt><dd><strong>${fspApp} of ${js.length}</strong> sitting justices${fspApp * 2 > js.length ? ' — a majority of the current bench' : fspApp * 2 === js.length ? ' — half the current bench' : ' — a minority of the current bench'}. <span class="muted">This is appointment provenance (who nominated each justice), <strong>not</strong> a claim about how they rule — justices serve independently.</span></dd>\n`
+    ? `        <dt>${CUR.dtFspAppointed}</dt><dd><strong>${fspApp} of ${js.length}</strong> sitting justices${fspApp * 2 > js.length ? ' — a majority of the current bench' : fspApp * 2 === js.length ? ' — half the current bench' : ' — a minority of the current bench'}. <span class="muted">This is appointment provenance (who nominated each justice), <strong>not</strong> a claim about how they rule — justices serve independently.</span></dd>\n`
     : '';
   const sources = (c.sources || [])
     .map((u) => `        <li><a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(u)}</a></li>`)
     .join('\n');
+  const route = `countries/${c.code}.html`;
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${LANG}">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${esc(c.country)} — FSP presidents &amp; courts</title>
-  <link rel="stylesheet" href="../styles.css?v=${ASSET_VER.css}" />
+  <title>${esc(c.country)} — ${CUR.countryTitleSuffix}</title>
+${I18N.hreflangHead(LANG, route)}
+  <link rel="stylesheet" href="${UP}styles.css?v=${ASSET_VER.css}" />
 ${ANALYTICS}
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <p class="updated"><a href="../index.html" style="color:#fff">← Foro de São Paulo — Cronologia</a></p>
+      ${I18N.switcher(LANG, route, CUR)}
+      <p class="updated"><a href="../index.html" style="color:#fff">${CUR.backToIndex}</a></p>
       <h1>${esc(c.country)}</h1>
-      <p class="subtitle">Presidential succession since 1990 &amp; the high court</p>
-      <p class="lead">FSP party: <strong>${esc(c.fspParty)}</strong> (${esc(c.fspStatus)}). FSP presidents: ${esc((c.fspPresidents || []).join(', ') || '—')}.</p>
+      <p class="subtitle">${CUR.countrySubtitle}</p>
+      <p class="lead">${CUR.fspPartyLabel}: <strong>${esc(c.fspParty)}</strong> (${esc(c.fspStatus)}). ${CUR.fspPresidentsLabel}: ${esc((c.fspPresidents || []).join(', ') || '—')}.</p>
     </div>
-  </header>
+  </header>${I18N.disclaimerHtml(CUR)}
   <main class="wrap">
     <section>
-      <h2>Presidential succession (1990–present)</h2>
+      <h2>${CUR.hPresidential}</h2>
       <p class="section-intro">Rows highlighted <span class="fsp-badge">FSP</span> mark presidents from a Foro de São Paulo member/affiliated party.</p>
       <div class="table-scroll">
         <table class="meetings">
-          <thead><tr><th>Period</th><th>President</th><th>Party</th><th>Notes</th></tr></thead>
+          <thead><tr><th>${CUR.thPeriod}</th><th>${CUR.thPresident}</th><th>${CUR.thParty}</th><th>${CUR.thNotes}</th></tr></thead>
           <tbody>
 ${rows}
           </tbody>
@@ -1498,27 +1515,27 @@ ${rows}
     </section>
 ${renderLegislativeComposition(c)}
     <section>
-      <h2>High court — ${esc(sc.name || '')}</h2>
+      <h2>${CUR.hHighCourt} — ${esc(sc.name || '')}</h2>
       <dl class="facts">
-        ${sc.size ? `<dt>Seats</dt><dd>${esc(sc.size)}</dd>` : ''}
-        <dt>Appointment</dt><dd>${esc(sc.appointmentMethod || '')}</dd>
-${benchTally}        <dt>Changes (FSP era)</dt><dd>${esc(sc.fspEraChanges || '')}</dd>
-        <dt>How much remains</dt><dd>${esc(sc.stillServing || '')}</dd>
-        <dt>Verified</dt><dd>${sc.verified ? 'yes — sourced' : 'no — to verify against primary sources'}</dd>
+        ${sc.size ? `<dt>${CUR.thSeats}</dt><dd>${esc(sc.size)}</dd>` : ''}
+        <dt>${CUR.dtAppointment}</dt><dd>${esc(sc.appointmentMethod || '')}</dd>
+${benchTally}        <dt>${CUR.dtFspChanges}</dt><dd>${esc(sc.fspEraChanges || '')}</dd>
+        <dt>${CUR.dtRemains}</dt><dd>${esc(sc.stillServing || '')}</dd>
+        <dt>${CUR.dtVerified}</dt><dd>${sc.verified ? CUR.verifiedYes : CUR.verifiedNo}</dd>
       </dl>
     </section>
 ${renderCourtHistory(sc)}
 ${renderBenchControl(sc)}
 ${renderJustices(sc)}
     <section>
-      <h2>Sources</h2>
+      <h2>${CUR.sourcesWord}</h2>
       <ol class="references">
 ${sources}
       </ol>
     </section>
   </main>
   <footer class="site-footer">
-    <div class="wrap"><p>Generated from <code>data/countries/${esc(c.code)}.json</code>. <a href="../index.html">Back to the chronology</a>.</p></div>
+    <div class="wrap"><p>Generated from <code>data/countries/${esc(c.code)}.json</code>. <a href="../index.html">${CUR.backToChronology}</a>.</p></div>
   </footer>
 </body>
 </html>
@@ -1530,82 +1547,84 @@ function buildHtml(data, archives, codeByCountry, countries, archiveDocs) {
   const officialPdfs = loadOfficialPdfs();
   const declTextIndex = loadDeclTextIndex();
   return `<!DOCTYPE html>
-<html lang="${esc(meta.language || 'en')}">
+<html lang="${LANG}">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(meta.title)}</title>
   <meta name="description" content="${esc(meta.description)}" />
-  <link rel="stylesheet" href="styles.css?v=${ASSET_VER.css}" />
+${I18N.hreflangHead(LANG, '')}
+  <link rel="stylesheet" href="${UP}styles.css?v=${ASSET_VER.css}" />
 ${ANALYTICS}
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
+      ${I18N.switcher(LANG, '', CUR)}
       <h1>${esc(meta.title)}</h1>
       <p class="subtitle">${esc(meta.subtitle)}</p>
       <p class="lead">${esc(meta.description)}</p>
-      <p class="updated">Last updated: ${esc(meta.lastUpdated)}</p>
+      <p class="updated">${CUR.lastUpdatedLabel}: ${esc(meta.lastUpdated)}</p>
       <div class="viz-chips">
-        <a href="#atlas">🗺 Member map by year</a>
-        <a href="#presidents-map">🏛 Presidencies</a>
-        <a href="#legislative-map">📊 Legislatures</a>
-        <a href="#courts-map">⚖ Courts</a>
-        <a href="#documents">📄 Declarations</a>
+        <a href="#atlas">🗺 ${CUR.chipMap}</a>
+        <a href="#presidents-map">🏛 ${CUR.chipPresidencies}</a>
+        <a href="#legislative-map">📊 ${CUR.chipLegislatures}</a>
+        <a href="#courts-map">⚖ ${CUR.navCourts}</a>
+        <a href="#documents">📄 ${CUR.chipDeclarations}</a>
       </div>
     </div>
-  </header>
+  </header>${I18N.disclaimerHtml(CUR)}
 ${renderNav()}
 
   <main class="wrap">
     <div class="notice">
-      <strong>Data quality note:</strong> ${esc(meta.dataQualityNote)}
+      <strong>${CUR.dataQualityLabel}:</strong> ${esc(meta.dataQualityNote)}
     </div>
 
 ${renderAtlas(countries)}
 ${renderVizTabs(countries)}
     <section id="founding">
-      <h2>Founding</h2>
+      <h2>${CUR.hFounding}</h2>
       <dl class="facts">
-        <dt>First meeting</dt><dd>${esc(founding.date.replace('/', ' – '))}</dd>
-        <dt>Place</dt><dd>${esc(founding.city)}, ${esc(founding.country)}</dd>
-        <dt>Venue</dt><dd>${esc(founding.venue)}</dd>
-        <dt>Convened by</dt><dd>${esc(founding.convenedBy)}</dd>
-        <dt>Original name</dt><dd>${esc(founding.originalName)}</dd>
-        <dt>Renamed</dt><dd>${esc(founding.renamed)}</dd>
-        <dt>Context</dt><dd>${esc(founding.context)}</dd>
-        <dt>Attendance</dt><dd>${esc(founding.attendance)}</dd>
+        <dt>${CUR.dtFirstMeeting}</dt><dd>${esc(founding.date.replace('/', ' – '))}</dd>
+        <dt>${CUR.dtPlace}</dt><dd>${esc(founding.city)}, ${esc(founding.country)}</dd>
+        <dt>${CUR.dtVenue}</dt><dd>${esc(founding.venue)}</dd>
+        <dt>${CUR.dtConvenedBy}</dt><dd>${esc(founding.convenedBy)}</dd>
+        <dt>${CUR.dtOriginalName}</dt><dd>${esc(founding.originalName)}</dd>
+        <dt>${CUR.dtRenamed}</dt><dd>${esc(founding.renamed)}</dd>
+        <dt>${CUR.dtContext}</dt><dd>${esc(founding.context)}</dd>
+        <dt>${CUR.dtAttendance}</dt><dd>${esc(founding.attendance)}</dd>
       </dl>
     </section>
 
 ${renderFormation(data.formation)}
     <section id="timeline">
-      <h2>Timeline at a glance</h2>
+      <h2>${CUR.hTimeline}</h2>
       <ol class="timeline">
 ${renderTimeline(data.meetings)}
       </ol>
     </section>
 
     <section id="meetings">
-      <h2>Meetings (Encontros)</h2>
+      <h2>${CUR.hMeetings}</h2>
       <p class="section-intro">All recorded editions of the Forum. A <span class="flag">?</span> marks dates or edition numbers not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.</p>
       <p class="notice">Edition numbers follow the Forum’s own numbered declarations${cite(['foro-declaraciones-libro'])}, which run <strong>XI = Antigua 2002 → XII = São Paulo 2005</strong> — the official series has <strong>no numbered encuentro for Quito 2003</strong>. Every edition number is confirmed against a primary source — the PDF book through 2013, and each meeting’s own final declaration for 2014–2024. The dates and edition sequence draw on the Forum’s official numbered declarations${cite(['foro-declaraciones-libro'])}, its per-meeting “Memoria” pages, and the chronology in Graça Salgueiro’s book${cite(['salgueiro-foro'])}. Where a declaration links to a live page, its Wayback snapshot is kept alongside it.</p>
       <div class="m-controls">
-        <input type="search" id="m-search" placeholder="Search city, country, notes…" aria-label="Search meetings" />
-        <select id="m-country" aria-label="Filter by country">
-          <option value="">All countries</option>
+        <input type="search" id="m-search" placeholder="${CUR.searchPlaceholder}" aria-label="${CUR.searchMeetings}" />
+        <select id="m-country" aria-label="${CUR.filterCountry}">
+          <option value="">${CUR.allCountries}</option>
 ${[...new Set(data.meetings.map((m) => m.country))].sort().map((c) => `          <option value="${esc(c)}">${esc(c)}</option>`).join('\n')}
         </select>
-        <select id="m-sort" aria-label="Sort by year">
-          <option value="asc">Year ↑</option>
-          <option value="desc">Year ↓</option>
+        <select id="m-sort" aria-label="${CUR.sortYear}">
+          <option value="asc">${CUR.thYear} ↑</option>
+          <option value="desc">${CUR.thYear} ↓</option>
         </select>
-        <span id="m-count" class="m-count"></span>
+        <span id="m-count" class="m-count" data-fmt="${CUR.meetingsCount}"></span>
       </div>
       <div class="table-scroll">
         <table class="meetings" id="meetings-table">
           <thead>
-            <tr><th>Edition</th><th>Year</th><th>Dates</th><th>City</th><th>Country</th><th>Declaration</th><th>Notes</th></tr>
+            <tr><th>${CUR.thEdition}</th><th>${CUR.thYear}</th><th>${CUR.thDates}</th><th>${CUR.thCity}</th><th>${CUR.thCountry}</th><th>${CUR.thDeclaration}</th><th>${CUR.thNotes}</th></tr>
           </thead>
           <tbody>
 ${renderMeetingsRows(data.meetings, archives)}
@@ -1616,13 +1635,13 @@ ${renderMeetingsRows(data.meetings, archives)}
 
 ${renderDocumentsSection(officialPdfs, declTextIndex)}
     <section id="parties">
-      <h2>Parties &amp; organizations</h2>
+      <h2>${CUR.hParties}</h2>
       <p class="section-intro">A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the full <strong>membership rosters for 1990, 1993 and 2007 are listed below</strong> (from Regalado), and the current membership is still being compiled.</p>
       <div class="party-grid">
 ${renderParties(data.parties)}
       </div>
 ${renderMembershipRosters(data.membershipRosters)}
-      <h3>Participating countries</h3>
+      <h3>${CUR.hParticipating}</h3>
       <p class="countries">${data.participatingCountries.map(esc).join(' · ')}</p>
     </section>
 
@@ -1631,7 +1650,7 @@ ${renderMembersInGovernment(data.membersInGovernment, codeByCountry)}
 ${renderCountryIndex(countries)}
 ${renderOrganization(data.organization)}
     <section id="related">
-      <h2>Related organizations</h2>
+      <h2>${CUR.hRelated}</h2>
       <p class="section-intro">The Foro de São Paulo is often confused with newer left/progressive networks. It has <strong>not</strong> been renamed — these are distinct, coexisting organizations that sometimes coordinate or meet alongside it.</p>
       <div class="party-grid">
 ${renderRelated(data.relatedOrganizations)}
@@ -1642,7 +1661,7 @@ ${renderComparison(data.foroVsPuebla)}
 ${renderRegionalBodies(data.regionalBodies)}
 ${renderCriticalPerspectives(data.criticalPerspectives)}
     <section id="references">
-      <h2>References</h2>
+      <h2>${CUR.hReferences}</h2>
       <p class="section-intro">Each reference links to the live source; where available, an <em>archived</em> link points to an Internet Archive snapshot as a permanent fallback (generated by <code>scripts/archive-refs.js</code>).</p>
       <ol class="references">
 ${renderReferences(data.references, archives, archiveDocs)}
@@ -1655,7 +1674,7 @@ ${renderReferences(data.references, archives, archiveDocs)}
       <p>Compiled static site generated from <code>data/forum.json</code> by <code>build.js</code>. Open data — corrections welcome via pull request.</p>
     </div>
   </footer>
-  <script src="app.js?v=${ASSET_VER.js}" defer></script>
+  <script src="${UP}app.js?v=${ASSET_VER.js}" defer></script>
 </body>
 </html>
 `;
@@ -1674,24 +1693,63 @@ function main() {
 
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
-  const html = buildHtml(data, archives, codeByCountry, countries, archiveDocs);
-  fs.writeFileSync(path.join(OUT_DIR, 'index.html'), html);
+  // One full page tree per locale under docs/<lang>/ (core#9). The English
+  // objects stay authoritative; localizeDeep with the committed dict is an
+  // identity copy for 'en'. References are NEVER localized (buildRefIndex above
+  // ran once on the English references and is shared by every locale).
+  for (const lang of I18N.LOCALES) {
+    LANG = lang;
+    CUR = I18N.UI[lang];
+    const dict = I18N.loadDict(lang);
+    const ldata = I18N.localizeDeep(data, dict);
+    const lcountries = I18N.localizeDeep(countries, dict);
+    const ldir = path.join(OUT_DIR, lang);
+    fs.mkdirSync(ldir, { recursive: true });
 
-  // Per-country pages (presidential succession + high court).
-  if (countries.length) {
-    const cdir = path.join(OUT_DIR, 'countries');
-    if (!fs.existsSync(cdir)) fs.mkdirSync(cdir, { recursive: true });
-    for (const c of countries) {
-      fs.writeFileSync(path.join(cdir, `${c.code}.html`), renderCountryPage(c));
+    UP = '../'; // locale index page → docs root
+    const html = buildHtml(ldata, archives, codeByCountry, lcountries, archiveDocs);
+    fs.writeFileSync(path.join(ldir, 'index.html'), html);
+
+    UP = '../../'; // locale subpages → docs root
+
+    // Per-country pages (presidential succession + high court).
+    if (lcountries.length) {
+      const cdir = path.join(ldir, 'countries');
+      if (!fs.existsSync(cdir)) fs.mkdirSync(cdir, { recursive: true });
+      for (const c of lcountries) {
+        fs.writeFileSync(path.join(cdir, `${c.code}.html`), renderCountryPage(c));
+      }
+    }
+
+    // Per-meeting detail pages.
+    const mdir = path.join(ldir, 'meetings');
+    if (!fs.existsSync(mdir)) fs.mkdirSync(mdir, { recursive: true });
+    for (const m of ldata.meetings) {
+      fs.writeFileSync(path.join(mdir, `${m.year}.html`), renderMeetingPage(m, archives, codeByCountry, officialPdfByYear));
     }
   }
+  LANG = 'en'; CUR = I18N.UI.en; UP = '';
 
-  // Per-meeting detail pages.
-  const mdir = path.join(OUT_DIR, 'meetings');
-  if (!fs.existsSync(mdir)) fs.mkdirSync(mdir, { recursive: true });
+  // Every pre-i18n URL stays alive as a redirect stub into the locale trees.
+  fs.writeFileSync(path.join(OUT_DIR, 'index.html'), I18N.redirectStub('', 'Foro de São Paulo — Cronologia'));
+  const stubMdir = path.join(OUT_DIR, 'meetings');
+  if (!fs.existsSync(stubMdir)) fs.mkdirSync(stubMdir, { recursive: true });
   for (const m of data.meetings) {
-    fs.writeFileSync(path.join(mdir, `${m.year}.html`), renderMeetingPage(m, archives, codeByCountry, officialPdfByYear));
+    fs.writeFileSync(path.join(stubMdir, `${m.year}.html`), I18N.redirectStub(`meetings/${m.year}.html`, `Encontro ${m.year} — Foro de São Paulo`));
   }
+  const stubCdir = path.join(OUT_DIR, 'countries');
+  if (!fs.existsSync(stubCdir)) fs.mkdirSync(stubCdir, { recursive: true });
+  for (const c of countries) {
+    fs.writeFileSync(path.join(stubCdir, `${c.code}.html`), I18N.redirectStub(`countries/${c.code}.html`, `${c.country} — Foro de São Paulo`));
+  }
+
+  // Search-engine plumbing for the locale trees.
+  const routes = [''].concat(
+    data.meetings.map((m) => `meetings/${m.year}.html`),
+    countries.map((c) => `countries/${c.code}.html`)
+  );
+  fs.writeFileSync(path.join(OUT_DIR, 'sitemap.xml'), I18N.sitemap(routes));
+  fs.writeFileSync(path.join(OUT_DIR, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: https://cronologia.github.io/fsp/sitemap.xml\n');
 
   // Copy static assets (currently just the stylesheet).
   fs.copyFileSync(path.join(SRC_DIR, 'styles.css'), path.join(OUT_DIR, 'styles.css'));
@@ -1717,7 +1775,7 @@ function main() {
 
   const count = data.meetings.length;
   const archivedRefs = data.references.filter((r) => archives[r.url] && archives[r.url].archiveUrl).length;
-  console.log(`Built docs/index.html (${count} meetings, ${data.parties.length} parties, ${data.references.length} references, ${archivedRefs} with archive fallback) + ${countries.length} country pages + ${archivedDocs} preserved documents + ${declPdfCount} declaration PDFs.`);
+  console.log(`Built docs/{${I18N.LOCALES.join(',')}}/index.html — ${I18N.LOCALES.length} locales (${count} meetings, ${data.parties.length} parties, ${data.references.length} references, ${archivedRefs} with archive fallback) + ${countries.length} country pages per locale + ${1 + count + countries.length} redirect stubs + sitemap.xml/robots.txt + ${archivedDocs} preserved documents + ${declPdfCount} declaration PDFs.`);
 }
 
 // Run the build only when invoked directly; when required (tests) just expose the

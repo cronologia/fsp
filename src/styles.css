@@ -357,3 +357,15 @@ ol.references a:hover { text-decoration: underline; }
   .site-nav .wrap { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 1rem; padding: .55rem 1rem; }
   .site-nav a { font-size: .82rem; }
 }
+
+/* i18n: language switcher (header, top-right) + machine-translation disclaimer */
+.site-header { position: relative; }
+.lang-switch { position: absolute; top: 1rem; right: 1.25rem; font-size: .8rem; }
+.lang-switch a, .lang-switch .lang-current { color: #cfd6e4; text-decoration: none; padding: .15rem .4rem; border-radius: 4px; }
+.lang-switch .lang-current { background: rgba(255,255,255,.18); color: #fff; font-weight: 700; }
+.lang-switch a:hover { background: rgba(255,255,255,.1); }
+.i18n-disclaimer { background: #fdf3e3; border-bottom: 1px solid #ecd9b0; color: #6b5518; font-size: .82rem; padding: .45rem 1.25rem; text-align: center; }
+@media (max-width: 640px) {
+  /* The compact header leaves no safe corner — let the switcher flow above the title. */
+  .lang-switch { position: static; display: inline-block; margin: 0 0 .3rem -.4rem; }
+}
