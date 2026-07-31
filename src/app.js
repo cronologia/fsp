@@ -10,6 +10,7 @@
   if (!table) return;
   var tbody = table.tBodies[0];
   var rows = Array.prototype.slice.call(tbody.rows);
+  var countFmt = (countEl && countEl.getAttribute('data-fmt')) || '{n} of {m} meetings';
 
   function apply() {
     var q = (search && search.value || '').trim().toLowerCase();
@@ -22,7 +23,7 @@
       r.style.display = show ? '' : 'none';
       if (show) shown++;
     });
-    if (countEl) countEl.textContent = shown + ' of ' + rows.length + ' meetings';
+    if (countEl) countEl.textContent = countFmt.replace('{n}', shown).replace('{m}', rows.length);
   }
 
   function applySort() {
@@ -118,6 +119,11 @@
   var cap = document.getElementById('atlas-caption');
   var play = document.getElementById('atlas-play');
   if (!map || !raw || !slider) return;
+  // Localized label formats, emitted by build.js; fall back to the English strings.
+  var capFmt = (cap && cap.getAttribute('data-fmt')) ||
+    'Showing {year} — {count} of {total} electoral countries FSP-governed (Cuba, one-party, shown separately). Hover or tap a country for its president.';
+  var playLbl = (play && play.getAttribute('data-play')) || '▶ Play';
+  var pauseLbl = (play && play.getAttribute('data-pause')) || '❚❚ Pause';
 
   var data;
   try { data = JSON.parse(raw.textContent); } catch (e) { return; }
@@ -147,8 +153,7 @@
       if (st !== 'o') electoral++;         // one-party states (Cuba) not in the electoral count
       if (st === 'f' || st === 'u') count++;
     });
-    if (cap) cap.textContent = 'Showing ' + year + ' — ' + count + ' of ' + electoral +
-      ' electoral countries FSP-governed (Cuba, one-party, shown separately). Hover or tap a country for its president.';
+    if (cap) cap.textContent = capFmt.replace('{year}', year).replace('{count}', count).replace('{total}', electoral);
   }
 
   slider.addEventListener('input', function () { stop(); render(Number(slider.value)); });
@@ -172,9 +177,9 @@
   });
 
   var timer = null;
-  function stop() { if (timer) { clearInterval(timer); timer = null; play.textContent = '▶ Play'; } }
+  function stop() { if (timer) { clearInterval(timer); timer = null; play.textContent = playLbl; } }
   function start() {
-    play.textContent = '❚❚ Pause';
+    play.textContent = pauseLbl;
     var y = Number(slider.value);
     if (y >= data.end) y = data.start;
     timer = setInterval(function () {
