@@ -25,6 +25,12 @@ const I18N = require('./i18n');
 let CUR = I18N.UI.en;
 let LANG = 'en';
 let UP = '';
+// T = the exact-English dictionary lookup for the locale being rendered
+// (identity for 'en'); P translates an editorial paragraph authored as an
+// English template with {slot} placeholders, then substitutes the build-time
+// values — so counts and citations vary while the prose stays translatable.
+let T = (s) => s;
+const P = (tmpl, slots) => T(tmpl).replace(/\{(\w+)\}/g, (m, k) => (k in slots ? String(slots[k]) : m));
 
 const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, 'data', 'forum.json');
@@ -179,7 +185,7 @@ function renderDocumentsSection(pdfs, textIndex) {
     .join('\n');
   return `    <section id="documents">
       <h2>${CUR.hDocuments}</h2>
-      <p class="section-intro">The Forum's own <strong>numbered final declarations 01–19 (1990–2013)</strong>, published here as preserved local PDFs — the chapters of the Forum's official compilation${cite(['foro-declaraciones-libro'])}, recovered from Wayback captures of forodesaopaulo.org (ADR-0007). Each row links the local copy, its Internet Archive snapshot, and the extracted plain text used for date/edition verification. Declarations from 2014 on are linked from each meeting's page; the per-meeting <em>Memoria</em> pages and other primary captures are preserved in the <a href="${UP}archive/">published document vault</a> (ADR-0008). The dateline column is each declaration's own opening dateline — the primary source for the dates in the meetings table.</p>
+      <p class="section-intro">${P(`The Forum's own <strong>numbered final declarations 01–19 (1990–2013)</strong>, published here as preserved local PDFs — the chapters of the Forum's official compilation{citeBook}, recovered from Wayback captures of forodesaopaulo.org (ADR-0007). Each row links the local copy, its Internet Archive snapshot, and the extracted plain text used for date/edition verification. Declarations from 2014 on are linked from each meeting's page; the per-meeting <em>Memoria</em> pages and other primary captures are preserved in the <a href="{up}archive/">published document vault</a> (ADR-0008). The dateline column is each declaration's own opening dateline — the primary source for the dates in the meetings table.`, { citeBook: cite(['foro-declaraciones-libro']), up: UP })}</p>
       <div class="table-scroll">
         <table class="meetings">
           <thead>
@@ -299,7 +305,7 @@ function renderMembershipRosters(rosters) {
     const rows = r.byCountry
       .map((c) => `          <dt>${esc(c.country)} <span class="fo-n">${c.orgs.length}</span></dt><dd>${c.orgs.map(esc).join(' · ')}</dd>`)
       .join('\n');
-    const heading = `${esc(r.title)} — ${total} organizations, ${r.byCountry.length} countries${cite(r.sources)}`;
+    const heading = `${esc(r.title)} — ${total} ${CUR.wordOrganizations}, ${r.byCountry.length} ${CUR.wordCountries}${cite(r.sources)}`;
     const body = `${r.note ? `<p class="section-intro">${esc(r.note)}</p>` : ''}
         <dl class="facts founding-orgs">
 ${rows}
@@ -314,7 +320,7 @@ ${rows}
       </details>`;
   };
   return `      <h3>${CUR.hMembership}</h3>
-      <p class="section-intro">The Forum's membership at three documented points, per Regalado (2008). It grew from the 48 founding organizations (1990) across the Caribbean and Central America by 1993, then consolidated by 2007.</p>
+      <p class="section-intro">${T(`The Forum's membership at three documented points, per Regalado (2008). It grew from the 48 founding organizations (1990) across the Caribbean and Central America by 1993, then consolidated by 2007.`)}</p>
 ${rosters.map(one).join('\n')}`;
 }
 
@@ -792,7 +798,7 @@ function renderAtlas(countries) {
   const payload = JSON.stringify({ start: 1990, end: now, countries: data });
   return `    <section id="atlas">
       <h2>${CUR.hAtlas}</h2>
-      <p class="section-intro">The tracked countries on the map, coloured by who held the presidency that year. Drag the slider or press play to watch the spread — often called the “pink tide” — rise and recede. A <strong>solid</strong> country held an FSP-party presidency; where the FSP party instead held a <strong>legislative</strong> majority or plurality, or an <strong>FSP-appointed high-court majority</strong>, <em>without</em> the presidency, the country is hatched with red lines — horizontal for the legislature, vertical for the court, crossed for both (a branch, not the presidency; the court line records who appointed the bench, not how it rules). One-party Cuba is marked distinctly and not part of the electoral counts. Neighbouring countries are shown greyed for context.</p>
+      <p class="section-intro">${T(`The tracked countries on the map, coloured by who held the presidency that year. Drag the slider or press play to watch the spread — often called the “pink tide” — rise and recede. A <strong>solid</strong> country held an FSP-party presidency; where the FSP party instead held a <strong>legislative</strong> majority or plurality, or an <strong>FSP-appointed high-court majority</strong>, <em>without</em> the presidency, the country is hatched with red lines — horizontal for the legislature, vertical for the court, crossed for both (a branch, not the presidency; the court line records who appointed the bench, not how it rules). One-party Cuba is marked distinctly and not part of the electoral counts. Neighbouring countries are shown greyed for context.`)}</p>
       <div class="atlas-controls">
         <button type="button" id="atlas-play" class="atlas-btn" aria-label="${CUR.playAria}" data-play="${CUR.play}" data-pause="${CUR.pause}">${CUR.play}</button>
         <input type="range" id="atlas-slider" min="1990" max="${now}" value="${now}" step="1" aria-label="${CUR.yearAria}" />
@@ -896,7 +902,7 @@ function renderPresidentialTimeline(countries) {
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="presidents-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-presidents" tabindex="0">
       <h2>${CUR.hFspCoverage}</h2>
-      <p class="section-intro">For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom. ${present.has('fsp-unv') ? 'Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a hatched state, not counted as confirmed. ' : ''}The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.</p>
+      <p class="section-intro">${T(`For each tracked country, the party in the presidency each year since 1990 — the geographic and temporal spread often called the “pink tide”. Rows are ordered by when a country first elected an FSP-party president, so the wave reads top-to-bottom.`)} ${present.has('fsp-unv') ? `${T(`Affiliations still marked <em>to&nbsp;verify</em> (see the Countries dossiers and issue&nbsp;#4) are shown as a hatched state, not counted as confirmed.`)} ` : ''}${T(`The raw grid is fact; “peak”, “wave” and “majority” are interpretive readings of it.`)}</p>
       <p class="ptl-caption" id="ptl-caption" aria-live="polite">${CUR.capPtl}</p>
       <div class="table-scroll">
         <div class="ptl" id="ptl-grid" style="${gridCols}">
@@ -905,7 +911,7 @@ function renderPresidentialTimeline(countries) {
 ${bodyRows}
         </div>
       </div>
-      <p class="ptl-note">Peak coverage: <strong>${peak.total} of ${denom}</strong> electoral countries in <strong>${peak.y}</strong>. ${opCountries.length ? `${esc(opCountries.join(', '))} — a one-party socialist state governed continuously by the PCC — ${opCountries.length === 1 ? 'is' : 'are'} shown separately (last row) and excluded from these counts. ` : ''}This maps ${rows.length} countries with a dossier here, not all of Latin America — read the per-year counts, not the absolute total. Companion to the sourced president count (issue&nbsp;#96).</p>
+      <p class="ptl-note">${P(`Peak coverage: <strong>{n} of {denom}</strong> electoral countries in <strong>{year}</strong>.`, { n: peak.total, denom, year: peak.y })} ${opCountries.length ? `${opCountries.length === 1 ? P(`{names} — a one-party socialist state governed continuously by the PCC — is shown separately (last row) and excluded from these counts.`, { names: esc(opCountries.join(', ')) }) : P(`{names} — one-party socialist states governed continuously by the PCC — are shown separately (last row) and excluded from these counts.`, { names: esc(opCountries.join(', ')) })} ` : ''}${P(`This maps {n} countries with a dossier here, not all of Latin America — read the per-year counts, not the absolute total. Companion to the sourced president count (issue&nbsp;#96).`, { n: rows.length })}</p>
       <div class="ptl-legend">${legend}</div>
     </section>
 `;
@@ -985,7 +991,7 @@ function renderCourtsGrid(countries) {
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="courts-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-courts" tabindex="0">
       <h2>${CUR.hInterventions}</h2>
-      <p class="section-intro">When each tracked country's <strong>high court was restructured</strong> — court-packing, purges, and structural reforms — from the court histories in the country dossiers. Continuity (normal turnover) is left blank; only documented interventions are marked, colour and glyph both. Interventions happen under governments of every stripe — the grid is a record, not a verdict. ${withData} countries have a compiled court history so far; the rest show blank (see the country epics).</p>
+      <p class="section-intro">${P(`When each tracked country's <strong>high court was restructured</strong> — court-packing, purges, and structural reforms — from the court histories in the country dossiers. Continuity (normal turnover) is left blank; only documented interventions are marked, colour and glyph both. Interventions happen under governments of every stripe — the grid is a record, not a verdict. {n} countries have a compiled court history so far; the rest show blank (see the country epics).`, { n: withData })}</p>
       <p class="ptl-caption" id="cm-caption" aria-live="polite">${CUR.capCm}</p>
       <div class="table-scroll">
         <div class="ptl" id="cm-grid" style="${gridCols}">
@@ -1077,7 +1083,7 @@ function renderLegislativeGrid(countries) {
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="legislative-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-legislative" tabindex="0">
       <h2>${CUR.hLegControl}</h2>
-      <p class="section-intro">The FSP-member party's standing in the <strong>lower house</strong> each year — whether it (or its governing coalition) held a <strong>majority</strong>, a <strong>plurality</strong>, a <strong>minority</strong> government, or sat in <strong>opposition</strong>. A coalition majority is not a single-party majority (see each cell's detail). <strong>${withData}</strong> ${withData === 1 ? 'country' : 'countries'} compiled so far (${esc(withNames.join(', '))}); the rest are blank pending the country epics (#107).</p>
+      <p class="section-intro">${T(`The FSP-member party's standing in the <strong>lower house</strong> each year — whether it (or its governing coalition) held a <strong>majority</strong>, a <strong>plurality</strong>, a <strong>minority</strong> government, or sat in <strong>opposition</strong>. A coalition majority is not a single-party majority (see each cell's detail).`)} ${withData === 1 ? P(`<strong>{n}</strong> country compiled so far ({names}); the rest are blank pending the country epics (#107).`, { n: withData, names: esc(withNames.join(', ')) }) : P(`<strong>{n}</strong> countries compiled so far ({names}); the rest are blank pending the country epics (#107).`, { n: withData, names: esc(withNames.join(', ')) })}</p>
       <p class="ptl-caption" id="lg-caption" aria-live="polite">${CUR.capLg}</p>
       <div class="table-scroll">
         <div class="ptl" id="lg-grid" style="${gridCols}">
@@ -1194,7 +1200,7 @@ function renderCourtSeatsGrid(countries) {
   const gridCols = `grid-template-columns: var(--ptl-lbl) repeat(${nCols}, var(--ptl-cell))`;
   return `    <section id="courtbench-map" class="tab-panel" role="tabpanel" aria-labelledby="tab-courtbench" tabindex="0">
       <h2>${CUR.hSeatsByGov}</h2>
-      <p class="section-intro">For each country with a sourced record, <strong>who appointed the sitting high-court bench</strong> each year — whether justices appointed under FSP-member governments were a <strong>majority</strong> (the years marked here, and the vertical red hatch on the map), a <strong>minority</strong>, or absent. This grid records <strong>appointment provenance only</strong>: appointment by a government does not by itself demonstrate that a court serves it — courts counted here have ruled against the governments that appointed them (Brazil's mensalão convictions, Uruguay's 2013 rulings). The stronger claim — documented packing, purges and structural reforms — is the <strong>Court interventions</strong> tab. ${rows.length} countries have a sourced bench record; the rest are omitted rather than estimated. Each cell's detail cites the counts only where sources give them.</p>
+      <p class="section-intro">${P(`For each country with a sourced record, <strong>who appointed the sitting high-court bench</strong> each year — whether justices appointed under FSP-member governments were a <strong>majority</strong> (the years marked here, and the vertical red hatch on the map), a <strong>minority</strong>, or absent. This grid records <strong>appointment provenance only</strong>: appointment by a government does not by itself demonstrate that a court serves it — courts counted here have ruled against the governments that appointed them (Brazil's mensalão convictions, Uruguay's 2013 rulings). The stronger claim — documented packing, purges and structural reforms — is the <strong>Court interventions</strong> tab. {n} countries have a sourced bench record; the rest are omitted rather than estimated. Each cell's detail cites the counts only where sources give them.`, { n: rows.length })}</p>
       <p class="ptl-caption" id="cs-caption" aria-live="polite">${CUR.capCs}</p>
       <div class="table-scroll">
         <div class="ptl" id="cs-grid" style="${gridCols}">
@@ -1222,7 +1228,7 @@ function renderCountryIndex(countries) {
     .join('\n');
   return `    <section id="countries">
       <h2>${CUR.hCountries}</h2>
-      <p class="section-intro">Per-country dossiers: presidential succession since 1990 (FSP presidents highlighted) and the Supreme Court history.</p>
+      <p class="section-intro">${T(`Per-country dossiers: presidential succession since 1990 (FSP presidents highlighted) and the Supreme Court history.`)}</p>
       <div class="country-index">
 ${cards}
       </div>
@@ -1272,7 +1278,7 @@ function renderCourtHistory(sc) {
     .join(' · ');
   return `    <section>
       <h2>${CUR.hCourtHistory}</h2>
-      <p class="section-intro">Structural changes to the court during the Foro de São Paulo era — size changes, court-packings, purges and reforms. <span class="ch-type ch-packing">packing</span>/<span class="ch-type ch-purge">purge</span> mark expansions and forced removals. ${src ? `${CUR.sourcesWord}: ${src}.` : ''}</p>
+      <p class="section-intro">${T(`Structural changes to the court during the Foro de São Paulo era — size changes, court-packings, purges and reforms. <span class="ch-type ch-packing">packing</span>/<span class="ch-type ch-purge">purge</span> mark expansions and forced removals.`)} ${src ? `${CUR.sourcesWord}: ${src}.` : ''}</p>
       <div class="table-scroll">
         <table class="meetings">
           <thead><tr><th>${CUR.thPeriod}</th><th>${CUR.thType}</th><th>${CUR.thChange}</th><th>${CUR.thSeats}</th><th>${CUR.thGovernment}</th></tr></thead>
@@ -1310,7 +1316,7 @@ function renderBenchControl(sc) {
     .join('\n');
   return `    <section>
       <h2>${CUR.hBench}</h2>
-      <p class="section-intro">Sourced period bands: how much of the sitting high-court bench was appointed (or, where sources say so, effectively controlled) under FSP-member governments. <strong>Appointment provenance is not a claim about how judges rule</strong> — see each band's notes; documented interventions are in the court history above. Seat counts appear only where sources give them; years outside these bands are uncovered, not asserted.</p>
+      <p class="section-intro">${T(`Sourced period bands: how much of the sitting high-court bench was appointed (or, where sources say so, effectively controlled) under FSP-member governments. <strong>Appointment provenance is not a claim about how judges rule</strong> — see each band's notes; documented interventions are in the court history above. Seat counts appear only where sources give them; years outside these bands are uncovered, not asserted.`)}</p>
       <div class="table-scroll">
         <table class="meetings">
           <thead><tr><th>${CUR.thPeriod}</th><th>${CUR.thControl}</th><th>${CUR.thFspAppointees}</th><th>${CUR.thNotesSources}</th></tr></thead>
@@ -1340,7 +1346,7 @@ function renderJustices(sc) {
     .join('\n');
   return `    <section>
       <h2>${CUR.hCourtComposition}</h2>
-      <p class="section-intro">Each justice with the president (and party) who appointed them; rows marked <span class="fsp-badge">FSP</span> were appointed by a Foro de São Paulo member/affiliated president. "Background" notes prior political/professional roles where notable — justices are not formal party members.</p>
+      <p class="section-intro">${T(`Each justice with the president (and party) who appointed them; rows marked <span class="fsp-badge">FSP</span> were appointed by a Foro de São Paulo member/affiliated president. "Background" notes prior political/professional roles where notable — justices are not formal party members.`)}</p>
       <div class="table-scroll">
         <table class="meetings">
           <thead><tr><th>${CUR.thApptYear}</th><th>${CUR.thJustice}</th><th>${CUR.thAppointedBy}</th><th>${CUR.thStatus}</th><th>${CUR.thBackground}</th></tr></thead>
@@ -1373,11 +1379,11 @@ function fspBlocStats(e) {
   const bloc = g.fspInGovernment ? gov : total;
   const thr = e.majorityThreshold;
   let tail;
-  if (!g.fspInGovernment) tail = 'The FSP parties sat in opposition.';
-  else if (thr && bloc >= thr) tail = 'The FSP bloc holds a majority in this chamber in its own right.';
-  else if (g.hasMajority) tail = 'A working majority is assembled with non-FSP coalition partners.';
-  else tail = 'The FSP party held the presidency but not a majority in this chamber.';
-  return { bloc, opp, tail, label: g.fspInGovernment && opp ? 'FSP member parties in government' : 'FSP member parties together' };
+  if (!g.fspInGovernment) tail = T('The FSP parties sat in opposition.');
+  else if (thr && bloc >= thr) tail = T('The FSP bloc holds a majority in this chamber in its own right.');
+  else if (g.hasMajority) tail = T('A working majority is assembled with non-FSP coalition partners.');
+  else tail = T('The FSP party held the presidency but not a majority in this chamber.');
+  return { bloc, opp, tail, label: g.fspInGovernment && opp ? T('FSP member parties in government') : T('FSP member parties together') };
 }
 
 // Detailed per-election legislative composition on the country page (seats by
@@ -1385,7 +1391,7 @@ function fspBlocStats(e) {
 function renderLegislativeComposition(c) {
   const comps = c.legislativeComposition || [];
   if (!comps.length) return '';
-  const ALIGN = { government: 'Government', opposition: 'Opposition', mixed: 'Mixed / centrão', independent: 'Independent' };
+  const ALIGN = { government: CUR.alignGovernment, opposition: CUR.alignOpposition, mixed: CUR.alignMixed, independent: CUR.alignIndependent };
   const blocks = comps
     .map((e) => {
       const prows = e.parties
@@ -1400,7 +1406,7 @@ function renderLegislativeComposition(c) {
         })
         .join('\n');
       const g = e.government || {};
-      const maj = g.hasMajority ? 'commanded a working majority' : 'lacked a majority';
+      const maj = g.hasMajority ? T('commanded a working majority') : T('lacked a majority');
       // Contrast the governing FSP bloc with the majority threshold — to make
       // explicit whether the FSP bloc alone is a majority or the governing
       // majority is built with non-FSP coalition partners. FSP-listed parties
@@ -1410,10 +1416,13 @@ function renderLegislativeComposition(c) {
       const pct = e.totalSeats ? Math.round((st.bloc / e.totalSeats) * 100) : 0;
       const gap = thr ? thr - st.bloc : 0;
       const oppNote = g.fspInGovernment && st.opp
-        ? ` A further ${st.opp} FSP-listed seat${st.opp === 1 ? '' : 's'} sat with the opposition.`
+        ? ` ${st.opp === 1 ? P('A further {n} FSP-listed seat sat with the opposition.', { n: st.opp }) : P('A further {n} FSP-listed seats sat with the opposition.', { n: st.opp })}`
         : '';
+      const gapPhrase = gap === 1
+        ? P('{gap} seat short of the {thr}-seat majority', { gap, thr: esc(thr) })
+        : P('{gap} seats short of the {thr}-seat majority', { gap, thr: esc(thr) });
       const fspLine = st.bloc
-        ? `      <p class="notice"><strong>${st.label}: ${st.bloc} of ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${st.bloc >= thr ? 'a majority on their own' : `${gap} seat${gap === 1 ? '' : 's'} short of the ${esc(thr)}-seat majority`}` : ''}. ${st.tail}${oppNote}</p>\n`
+        ? `      <p class="notice"><strong>${st.label}: ${st.bloc} ${CUR.wordOf} ${esc(e.totalSeats)}</strong> (${pct}%)${thr ? ` — ${st.bloc >= thr ? T('a majority on their own') : gapPhrase}` : ''}. ${st.tail}${oppNote}</p>\n`
         : '';
       // Visual seat-share bar: parties ordered government → mixed → independent →
       // opposition (FSP parties first within their own alignment group, keeping
@@ -1432,7 +1441,7 @@ function renderLegislativeComposition(c) {
       const seatbar = segs
         ? `      <div class="seatbar" role="img" aria-label="Seats by bloc for ${esc(e.year)}; majority line at ${esc(e.majorityThreshold || '')} of ${esc(e.totalSeats)}">${segs}${majMark}</div>\n`
         : '';
-      return `      <h3>${esc(e.year)} — ${esc(e.chamber)} (${esc(e.totalSeats)} seats${e.majorityThreshold ? `; majority = ${esc(e.majorityThreshold)}` : ''})</h3>
+      return `      <h3>${esc(e.year)} — ${esc(e.chamber)} (${esc(e.totalSeats)} ${CUR.wordSeats}${e.majorityThreshold ? `; ${CUR.wordMajority} = ${esc(e.majorityThreshold)}` : ''})</h3>
 ${seatbar}      <div class="table-scroll">
         <table class="meetings">
           <thead><tr><th>${CUR.thParty}</th><th>${CUR.thFullName}</th><th>${CUR.thSeats}</th><th>${CUR.thAlignment}</th></tr></thead>
@@ -1441,17 +1450,17 @@ ${prows}
           </tbody>
         </table>
       </div>
-${fspLine}      <p class="section-intro"><strong>Government:</strong> ${esc(g.led || '')} — ${maj}. FSP party in government: <strong>${g.fspInGovernment ? 'yes' : 'no'}</strong>.${g.note ? ` ${esc(g.note)}` : ''}${srcLinks(e.sources)}</p>`;
+${fspLine}      <p class="section-intro">${P(`<strong>Government:</strong> {led} — {maj}. FSP party in government: <strong>{yesno}</strong>.`, { led: esc(g.led || ''), maj, yesno: g.fspInGovernment ? CUR.wordYes : CUR.wordNo })}${g.note ? ` ${esc(g.note)}` : ''}${srcLinks(e.sources)}</p>`;
     })
     .join('\n');
   const fp = c.fspParties;
   const fspNote = fp
-    ? `      <p class="notice">FSP member parties (highlighted <span class="fsp-badge">FSP</span>): <strong>${(fp.current || []).map(esc).join(', ')}</strong>.${fp.foundingOnly && fp.foundingOnly.length ? ` Also 1990 founding members: ${fp.foundingOnly.map(esc).join(', ')}.` : ''}${fp.note ? ` ${esc(fp.note)}` : ''}</p>\n`
+    ? `      <p class="notice">${P(`FSP member parties (highlighted <span class="fsp-badge">FSP</span>): <strong>{names}</strong>.`, { names: (fp.current || []).map(esc).join(', ') })}${fp.foundingOnly && fp.foundingOnly.length ? ` ${P(`Also 1990 founding members: {names}.`, { names: fp.foundingOnly.map(esc).join(', ') })}` : ''}${fp.note ? ` ${esc(fp.note)}` : ''}</p>\n`
     : '';
   return `    <section>
       <h2>${CUR.hLegComposition}</h2>
-      <p class="section-intro">Seats by party for recent elections, and whether the governing coalition held a majority. In a fragmented system a governing majority is assembled across several parties — no party governs alone; a coalition majority is not a single-party majority. Each bar orders blocs left→right with a marker at the majority line.</p>
-      <div class="seatbar-legend"><span class="ptl-key"><span class="seatseg-key seatseg-fsp"></span>FSP party</span><span class="ptl-key"><span class="seatseg-key seatseg-government"></span>Government ally</span><span class="ptl-key"><span class="seatseg-key seatseg-mixed"></span>Mixed / centrão</span><span class="ptl-key"><span class="seatseg-key seatseg-opposition"></span>Opposition</span><span class="ptl-key"><span class="seatbar-maj-key"></span>Majority line</span></div>
+      <p class="section-intro">${T(`Seats by party for recent elections, and whether the governing coalition held a majority. In a fragmented system a governing majority is assembled across several parties — no party governs alone; a coalition majority is not a single-party majority. Each bar orders blocs left→right with a marker at the majority line.`)}</p>
+      <div class="seatbar-legend"><span class="ptl-key"><span class="seatseg-key seatseg-fsp"></span>${CUR.legFspParty}</span><span class="ptl-key"><span class="seatseg-key seatseg-government"></span>${CUR.legGovAlly}</span><span class="ptl-key"><span class="seatseg-key seatseg-mixed"></span>${CUR.alignMixed}</span><span class="ptl-key"><span class="seatseg-key seatseg-opposition"></span>${CUR.alignOpposition}</span><span class="ptl-key"><span class="seatbar-maj-key"></span>${CUR.legMajLine}</span></div>
 ${fspNote}${blocks}
     </section>
 `;
@@ -1503,7 +1512,7 @@ ${ANALYTICS}
   <main class="wrap">
     <section>
       <h2>${CUR.hPresidential}</h2>
-      <p class="section-intro">Rows highlighted <span class="fsp-badge">FSP</span> mark presidents from a Foro de São Paulo member/affiliated party.</p>
+      <p class="section-intro">${T(`Rows highlighted <span class="fsp-badge">FSP</span> mark presidents from a Foro de São Paulo member/affiliated party.`)}</p>
       <div class="table-scroll">
         <table class="meetings">
           <thead><tr><th>${CUR.thPeriod}</th><th>${CUR.thPresident}</th><th>${CUR.thParty}</th><th>${CUR.thNotes}</th></tr></thead>
@@ -1607,8 +1616,8 @@ ${renderTimeline(data.meetings)}
 
     <section id="meetings">
       <h2>${CUR.hMeetings}</h2>
-      <p class="section-intro">All recorded editions of the Forum. A <span class="flag">?</span> marks dates or edition numbers not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.</p>
-      <p class="notice">Edition numbers follow the Forum’s own numbered declarations${cite(['foro-declaraciones-libro'])}, which run <strong>XI = Antigua 2002 → XII = São Paulo 2005</strong> — the official series has <strong>no numbered encuentro for Quito 2003</strong>. Every edition number is confirmed against a primary source — the PDF book through 2013, and each meeting’s own final declaration for 2014–2024. The dates and edition sequence draw on the Forum’s official numbered declarations${cite(['foro-declaraciones-libro'])}, its per-meeting “Memoria” pages, and the chronology in Graça Salgueiro’s book${cite(['salgueiro-foro'])}. Where a declaration links to a live page, its Wayback snapshot is kept alongside it.</p>
+      <p class="section-intro">${T(`All recorded editions of the Forum. A <span class="flag">?</span> marks dates or edition numbers not yet verified against a primary source. Years with no meeting (1994, 1999, 2004, 2006, 2020–2022) are omitted.`)}</p>
+      <p class="notice">${P(`Edition numbers follow the Forum’s own numbered declarations{citeBook}, which run <strong>XI = Antigua 2002 → XII = São Paulo 2005</strong> — the official series has <strong>no numbered encuentro for Quito 2003</strong>. Every edition number is confirmed against a primary source — the PDF book through 2013, and each meeting’s own final declaration for 2014–2024. The dates and edition sequence draw on the Forum’s official numbered declarations{citeBook}, its per-meeting “Memoria” pages, and the chronology in Graça Salgueiro’s book{citeSalgueiro}. Where a declaration links to a live page, its Wayback snapshot is kept alongside it.`, { citeBook: cite(['foro-declaraciones-libro']), citeSalgueiro: cite(['salgueiro-foro']) })}</p>
       <div class="m-controls">
         <input type="search" id="m-search" placeholder="${CUR.searchPlaceholder}" aria-label="${CUR.searchMeetings}" />
         <select id="m-country" aria-label="${CUR.filterCountry}">
@@ -1636,7 +1645,7 @@ ${renderMeetingsRows(data.meetings, archives)}
 ${renderDocumentsSection(officialPdfs, declTextIndex)}
     <section id="parties">
       <h2>${CUR.hParties}</h2>
-      <p class="section-intro">A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the full <strong>membership rosters for 1990, 1993 and 2007 are listed below</strong> (from Regalado), and the current membership is still being compiled.</p>
+      <p class="section-intro">${T(`A curated, non-exhaustive list of notable member parties. The Forum reports more than 100 participating parties and organizations today; the full <strong>membership rosters for 1990, 1993 and 2007 are listed below</strong> (from Regalado), and the current membership is still being compiled.`)}</p>
       <div class="party-grid">
 ${renderParties(data.parties)}
       </div>
@@ -1651,7 +1660,7 @@ ${renderCountryIndex(countries)}
 ${renderOrganization(data.organization)}
     <section id="related">
       <h2>${CUR.hRelated}</h2>
-      <p class="section-intro">The Foro de São Paulo is often confused with newer left/progressive networks. It has <strong>not</strong> been renamed — these are distinct, coexisting organizations that sometimes coordinate or meet alongside it.</p>
+      <p class="section-intro">${T(`The Foro de São Paulo is often confused with newer left/progressive networks. It has <strong>not</strong> been renamed — these are distinct, coexisting organizations that sometimes coordinate or meet alongside it.`)}</p>
       <div class="party-grid">
 ${renderRelated(data.relatedOrganizations)}
       </div>
@@ -1662,7 +1671,7 @@ ${renderRegionalBodies(data.regionalBodies)}
 ${renderCriticalPerspectives(data.criticalPerspectives)}
     <section id="references">
       <h2>${CUR.hReferences}</h2>
-      <p class="section-intro">Each reference links to the live source; where available, an <em>archived</em> link points to an Internet Archive snapshot as a permanent fallback (generated by <code>scripts/archive-refs.js</code>).</p>
+      <p class="section-intro">${T(`Each reference links to the live source; where available, an <em>archived</em> link points to an Internet Archive snapshot as a permanent fallback (generated by <code>scripts/archive-refs.js</code>).`)}</p>
       <ol class="references">
 ${renderReferences(data.references, archives, archiveDocs)}
       </ol>
@@ -1701,6 +1710,7 @@ function main() {
     LANG = lang;
     CUR = I18N.UI[lang];
     const dict = I18N.loadDict(lang);
+    T = I18N.translator(dict);
     const ldata = I18N.localizeDeep(data, dict);
     const lcountries = I18N.localizeDeep(countries, dict);
     const ldir = path.join(OUT_DIR, lang);
@@ -1728,7 +1738,7 @@ function main() {
       fs.writeFileSync(path.join(mdir, `${m.year}.html`), renderMeetingPage(m, archives, codeByCountry, officialPdfByYear));
     }
   }
-  LANG = 'en'; CUR = I18N.UI.en; UP = '';
+  LANG = 'en'; CUR = I18N.UI.en; UP = ''; T = (s) => s;
 
   // Every pre-i18n URL stays alive as a redirect stub into the locale trees.
   fs.writeFileSync(path.join(OUT_DIR, 'index.html'), I18N.redirectStub('', 'Foro de São Paulo — Cronologia'));
