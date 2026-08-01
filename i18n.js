@@ -60,14 +60,19 @@ function translator(dict) {
 
 /**
  * Deep-copy `value` with every TRANSLATABLE_KEYS string routed through the
- * dict. `references` and `membershipRosters` subtrees pass through verbatim
- * (bibliography and org-name rosters). With an empty dict this is an identity
- * copy, so the English build is unchanged by construction.
+ * dict. `references` subtrees pass through verbatim (bibliography), and
+ * `membershipRosters` keep their org-name lists untouched — only each roster's
+ * editorial `title` and `note` are prose and go through the dict. With an
+ * empty dict this is an identity copy, so the English build is unchanged by
+ * construction.
  */
 function localizeDeep(value, dict) {
   const t = translator(dict);
   const walk = (v, k) => {
-    if (k === 'references' || k === 'membershipRosters') return v;
+    if (k === 'references') return v;
+    if (k === 'membershipRosters' && Array.isArray(v)) {
+      return v.map((r) => (r && typeof r === 'object' ? { ...r, title: t(r.title), note: t(r.note) } : r));
+    }
     if (Array.isArray(v)) return v.map((x) => walk(x, k));
     if (v && typeof v === 'object') {
       const out = {};
@@ -120,6 +125,12 @@ const UI = {
     thHeads: 'Heads of state (party)', thJustice: 'Justice', thNotesSources: 'Notes &amp; sources', thNotes: 'Notes',
     thNo: 'Nº', thParty: 'Party', thPeriod: 'Period', thPresident: 'President', thYear: 'Year', thYears: 'Years',
     thSeats: 'Seats', thStatus: 'Status', thText: 'Text', thPdf: 'PDF',
+    // inline words & legends (seat bars, alignment cells, roster headings)
+    wordYes: 'yes', wordNo: 'no', wordSeats: 'seats', wordMajority: 'majority', wordOf: 'of',
+    wordOrganizations: 'organizations', wordCountries: 'countries',
+    alignGovernment: 'Government', alignOpposition: 'Opposition',
+    alignMixed: 'Mixed / centrão', alignIndependent: 'Independent',
+    legFspParty: 'FSP party', legGovAlly: 'Government ally', legMajLine: 'Majority line',
     // controls / aria / titles
     play: '▶ Play', pause: '❚❚ Pause', playAria: 'Play through the years',
     searchMeetings: 'Search meetings', searchPlaceholder: 'Search city, country, notes…',
@@ -207,6 +218,12 @@ const UI = {
     thHeads: 'Jefes de Estado (partido)', thJustice: 'Magistrado', thNotesSources: 'Notas y fuentes', thNotes: 'Notas',
     thNo: 'N.º', thParty: 'Partido', thPeriod: 'Período', thPresident: 'Presidente', thYear: 'Año', thYears: 'Años',
     thSeats: 'Escaños', thStatus: 'Estatus', thText: 'Texto', thPdf: 'PDF',
+    // inline words & legends (seat bars, alignment cells, roster headings)
+    wordYes: 'sí', wordNo: 'no', wordSeats: 'escaños', wordMajority: 'mayoría', wordOf: 'de',
+    wordOrganizations: 'organizaciones', wordCountries: 'países',
+    alignGovernment: 'Gobierno', alignOpposition: 'Oposición',
+    alignMixed: 'Mixto / centrão', alignIndependent: 'Independiente',
+    legFspParty: 'Partido del FSP', legGovAlly: 'Aliado del gobierno', legMajLine: 'Línea de mayoría',
     play: '▶ Reproducir', pause: '❚❚ Pausar', playAria: 'Reproducir los años',
     searchMeetings: 'Buscar encuentros', searchPlaceholder: 'Buscar ciudad, país, notas…',
     filterCountry: 'Filtrar por país', sortYear: 'Ordenar por año', yearAria: 'Año',
@@ -293,6 +310,12 @@ const UI = {
     thHeads: 'Chefes de Estado (partido)', thJustice: 'Ministro', thNotesSources: 'Notas e fontes', thNotes: 'Notas',
     thNo: 'N.º', thParty: 'Partido', thPeriod: 'Período', thPresident: 'Presidente', thYear: 'Ano', thYears: 'Anos',
     thSeats: 'Assentos', thStatus: 'Status', thText: 'Texto', thPdf: 'PDF',
+    // inline words & legends (seat bars, alignment cells, roster headings)
+    wordYes: 'sim', wordNo: 'não', wordSeats: 'assentos', wordMajority: 'maioria', wordOf: 'de',
+    wordOrganizations: 'organizações', wordCountries: 'países',
+    alignGovernment: 'Governo', alignOpposition: 'Oposição',
+    alignMixed: 'Misto / centrão', alignIndependent: 'Independente',
+    legFspParty: 'Partido do FSP', legGovAlly: 'Aliado do governo', legMajLine: 'Linha da maioria',
     play: '▶ Reproduzir', pause: '❚❚ Pausar', playAria: 'Reproduzir os anos',
     searchMeetings: 'Buscar encontros', searchPlaceholder: 'Buscar cidade, país, notas…',
     filterCountry: 'Filtrar por país', sortYear: 'Ordenar por ano', yearAria: 'Ano',
