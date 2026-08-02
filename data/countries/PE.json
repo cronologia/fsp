@@ -92,9 +92,17 @@
       "name": "José María Balcázar",
       "party": "Perú Libre (interim)",
       "start": "2026",
-      "end": "present",
+      "end": "2026",
       "fsp": true,
-      "notes": "Elected interim president by Congress 18–19 Feb 2026 on Perú Libre's nomination (he entered Congress on its ticket, though formally unaffiliated after caucus moves). Interim only: Keiko Fujimori (Fuerza Popular), winner of the June 2026 runoff, is due to be sworn in on 28 July 2026."
+      "notes": "Elected interim president by Congress 18–19 Feb 2026 on Perú Libre's nomination (he entered Congress on its ticket, though formally unaffiliated after caucus moves). Interim only: he handed over to Keiko Fujimori on 28 July 2026 at the end of the transition."
+    },
+    {
+      "name": "Keiko Fujimori",
+      "party": "Fuerza Popular",
+      "start": "2026",
+      "end": "present",
+      "fsp": false,
+      "notes": "Sworn in before Congress on 28 July 2026 — Peru's first elected female president, and the tenth president since 2016. She won the 7 June 2026 runoff by fewer than 50,000 votes (50.13% against Roberto Sánchez's 49.87%). Fuerza Popular is a right-wing party (regional affiliation: Union of Latin American Parties), not an FSP member. Relatives of those killed in the 2022–23 protests demonstrated outside Congress during the inauguration, saying they did not recognize her legitimacy — their characterization, as reported by the wires."
     }
   ],
   "supremeCourt": {
@@ -109,7 +117,11 @@
     "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
     "https://en.wikipedia.org/wiki/Jos%C3%A9_Jer%C3%AD",
     "https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Balc%C3%A1zar",
-    "https://en.wikipedia.org/wiki/2026_Peruvian_general_election"
+    "https://en.wikipedia.org/wiki/2026_Peruvian_general_election",
+    "https://www.npr.org/2026/07/28/nx-s1-5910830/peru-president-keiko-fujimori-inaugurated",
+    "https://www.aljazeera.com/news/2026/7/28/keiko-fujimori-sworn-in-as-peru-president",
+    "https://en.wikipedia.org/wiki/2026_Peruvian_general_election",
+    "https://en.wikipedia.org/wiki/Free_Peru"
   ],
   "fspParties": {
     "current": [
@@ -170,7 +182,7 @@
     },
     {
       "start": "2022",
-      "end": "present",
+      "end": "2026",
       "chamber": "unicameral",
       "fspParty": "Perú Libre",
       "fspBloc": "opposition",
@@ -179,6 +191,15 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Balc%C3%A1zar"
       ]
+    },
+    {
+      "start": "2026",
+      "end": "present",
+      "chamber": "bicameral",
+      "fspParty": "Perú Libre",
+      "fspBloc": "minority",
+      "inGovernment": false,
+      "seats": "The 2026 election restored the bicameral Congress (60 senators, 130 deputies), seated with the new government on 28 July 2026. Perú Libre — the FSP's Peruvian member party — won no seats in either chamber, down from 37 in 2021: out of parliament entirely for the first time since its 2021 breakthrough. Fuerza Popular is the largest party in both chambers and, together with Renovación Popular, holds exactly half the Senate (30 of 60). Seat tables rest on convergent press tallies; the official ONPE/JNE portals could not be reached for direct confirmation in this update."
     }
   ],
   "legislativeComposition": [
@@ -314,6 +335,106 @@
       "sources": [
         "https://en.wikipedia.org/wiki/2021_Peruvian_general_election",
         "https://data.ipu.org/parliament/PE/PE-LC01/election/PE-LC01-E20210411/"
+      ]
+    },
+    {
+      "year": 2026,
+      "chamber": "Senado",
+      "totalSeats": 60,
+      "majorityThreshold": 31,
+      "parties": [
+        {
+          "abbr": "FP",
+          "name": "Fuerza Popular",
+          "seats": 22,
+          "align": "government"
+        },
+        {
+          "abbr": "JP",
+          "name": "Juntos por el Perú",
+          "seats": 14,
+          "align": "opposition"
+        },
+        {
+          "abbr": "RP",
+          "name": "Renovación Popular",
+          "seats": 8,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PBG",
+          "name": "Partido del Buen Gobierno",
+          "seats": 7,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Obras",
+          "name": "Obras",
+          "seats": 5,
+          "align": "opposition"
+        },
+        {
+          "abbr": "AN",
+          "name": "Ahora Nación",
+          "seats": 4,
+          "align": "opposition"
+        }
+      ],
+      "government": "Keiko Fujimori (Fuerza Popular)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Peruvian_general_election",
+        "https://www.americatv.com.pe/noticias/actualidad/fuerza-popular-tendria-mas-escanos-senado",
+        "https://www.infobae.com/peru/2026/04/20/fuerza-popular-tendria-al-menos-un-tercio-de-las-curules/"
+      ]
+    },
+    {
+      "year": 2026,
+      "chamber": "Cámara de Diputados",
+      "totalSeats": 130,
+      "majorityThreshold": 66,
+      "parties": [
+        {
+          "abbr": "FP",
+          "name": "Fuerza Popular",
+          "seats": 41,
+          "align": "government"
+        },
+        {
+          "abbr": "JP",
+          "name": "Juntos por el Perú",
+          "seats": 32,
+          "align": "opposition"
+        },
+        {
+          "abbr": "PBG",
+          "name": "Partido del Buen Gobierno",
+          "seats": 18,
+          "align": "opposition"
+        },
+        {
+          "abbr": "RP",
+          "name": "Renovación Popular",
+          "seats": 15,
+          "align": "opposition"
+        },
+        {
+          "abbr": "Obras",
+          "name": "Obras",
+          "seats": 14,
+          "align": "opposition"
+        },
+        {
+          "abbr": "AN",
+          "name": "Ahora Nación",
+          "seats": 10,
+          "align": "opposition"
+        }
+      ],
+      "government": "Keiko Fujimori (Fuerza Popular)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Peruvian_general_election",
+        "https://www.americatv.com.pe/noticias/actualidad/fuerza-popular-tendria-mas-escanos-senado",
+        "https://www.infobae.com/peru/2026/04/20/fuerza-popular-tendria-al-menos-un-tercio-de-las-curules/"
       ]
     }
   ],

@@ -55,7 +55,7 @@
       "start": "2022",
       "end": "present",
       "fsp": true,
-      "notes": "First left president of Colombia. FSP membership of the Pacto Histórico coalition as such is not established here (to verify): its constituent Polo Democrático Alternativo and Partido Comunista Colombiano appear in Regalado's 2007 FSP roster, and forodesaopaulo.org published a solidarity statement with Petro and the Pacto Histórico. Petro's political lineage runs through the M-19 (see Armed movements) and the Polo Democrático."
+      "notes": "First left president of Colombia. FSP membership of the Pacto Histórico coalition as such is not established here (to verify): its constituent Polo Democrático Alternativo and Partido Comunista Colombiano appear in Regalado's 2007 FSP roster, and forodesaopaulo.org published a solidarity statement with Petro and the Pacto Histórico. Petro's political lineage runs through the M-19 (see Armed movements) and the Polo Democrático. His term ends on 7 August 2026: Abelardo de la Espriella (Movimiento de Salvación Nacional) defeated Iván Cepeda (Pacto Histórico) in the 21 June 2026 runoff by 0.96 points — the narrowest presidential runoff in Colombian history; the CNE certified the result on 24 June, Cepeda conceded the same day, and Petro recognized the result while alleging fraud (his characterization). The inauguration is scheduled for 7 August 2026 and had not yet occurred as of this dataset's date."
     }
   ],
   "supremeCourt": {
@@ -68,7 +68,10 @@
     "https://en.wikipedia.org/wiki/List_of_presidents_of_Colombia",
     "https://en.wikipedia.org/wiki/Historic_Pact",
     "https://forodesaopaulo.org/solidaridad-com-el-pacto-historico-y-a-gustavo-petro/",
-    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa"
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
+    "https://www.financecolombia.com/colombias-electoral-authority-certifies-new-congress-confirming-seat-distribution/",
+    "https://colombiaone.com/2026/07/20/colombia-swears-in-new-congress-as-2026-2030-legislative-period-begins/",
+    "https://en.wikipedia.org/wiki/2026_Colombian_presidential_election"
   ],
   "fspMembershipSources": [
     "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
@@ -97,7 +100,7 @@
     },
     {
       "start": "2022",
-      "end": "present",
+      "end": "2026",
       "chamber": "both",
       "fspParty": "Pacto Histórico",
       "fspBloc": "plurality",
@@ -106,6 +109,15 @@
       "sources": [
         "https://en.wikipedia.org/wiki/2022_Colombian_parliamentary_election"
       ]
+    },
+    {
+      "start": "2026",
+      "end": "present",
+      "fspParty": "Pacto Histórico",
+      "fspBloc": "plurality",
+      "inGovernment": false,
+      "seats": "The Congress elected in March 2026 was seated on 20 July 2026 (103 senators, 183 representatives). Pacto Histórico — the FSP member — remains the largest single Senate bloc on the CNE-certified roll (26 seats per Finance Colombia's report of Resolution 3328/2026; other published tallies differ by one seat in three rows, a discrepancy recorded rather than resolved). A complete certified Chamber table had not been obtained as of this update (to verify).",
+      "chamber": "both"
     }
   ]
 }
