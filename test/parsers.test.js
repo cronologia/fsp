@@ -9,7 +9,7 @@ const {
   collectUrls,
   collectCountryUrls,
   loadCountryUrls,
-} = require('../scripts/archive-refs.js');
+} = require('../scripts/archive-country-sources.js');
 
 test('parse-official-index extracts title, url, date and category', () => {
   const html = `

@@ -21,6 +21,7 @@ on:
     paths:
       - 'scripts/wayback-harvest.js'
       - 'scripts/archive-refs.js'
+      - 'scripts/archive-country-sources.js'
       - '.github/workflows/wayback.yml'
 
 permissions:
@@ -45,6 +46,9 @@ jobs:
 
       - name: Archive reference URLs
         run: node scripts/archive-refs.js || echo "::warning::archive step failed (archive.org unreachable?)"
+
+      - name: Archive country-dossier source URLs
+        run: node scripts/archive-country-sources.js || echo "::warning::country-source archive step failed (archive.org unreachable?)"
 
       - name: Fetch declaration bodies
         run: node scripts/fetch-declarations.js || echo "::warning::declaration fetch incomplete (archive.org unreachable or some snapshots failed)"

@@ -55,18 +55,20 @@ jobs:
           fi
           echo "docs/ is in sync."
 
-      # Vendored copies drift silently (cronologia/core#12, #21, #33). This repo
-      # gets the SKILLS gate now; the template-drift gate for scripts/ is
-      # deliberately NOT wired yet: fsp is the reference implementation whose
-      # archive-refs.js legitimately collects URLs from country dossiers and
-      # pins official captures at citation time — behavior the template's
-      # current ADOPT points cannot express. Gate it only after the template
-      # grows an ADOPT: collect-urls block (tracked in cronologia/core#33).
+      # Vendored copies drift silently (cronologia/core#12, #21, #33).
+      # archive-refs.js is the shared template copy (repo differences live in
+      # its ADOPT blocks — the geoblock carve-out for forodesaopaulo.org); the
+      # country-dossier URL walk lives in the repo-owned
+      # scripts/archive-country-sources.js, which the drift tool does not
+      # compare. That resolution closed cronologia/core#33.
       - name: Check out cronologia/core (for the vendored-copy checks)
         uses: actions/checkout@v4
         with:
           repository: cronologia/core
           path: .core-template
+
+      - name: Template drift check
+        run: python3 .core-template/tools/template-drift.py --scripts scripts --label fsp
 
       - name: Vendored skill drift check
         run: python3 .core-template/tools/sync-skills.py . --check

@@ -23,7 +23,8 @@ data/declarations/pdf/   Official declaration PDFs 1990-2013 (GENERATED — fetc
 data/declarations/text/  Plain-text corpus + index.json: dates & official editions (GENERATED)
 data/archive/            Local vault: a saved copy of every reference, by type (GENERATED — ADR-0008)
 src/styles.css           Stylesheet (copied into the build)
-scripts/archive-refs.js  Archives reference URLs to the Wayback Machine (honors `official: true`)
+scripts/archive-refs.js  Archives reference URLs to the Wayback Machine (SHARED template copy — core#33; honors `official: true` with a rolling refresh, except geoblocked forodesaopaulo.org refs, which keep their citation-time capture)
+scripts/archive-country-sources.js  Archives the country dossiers' bare-URL sources into the same cache (repo-owned companion)
 scripts/archive-docs.js  Saves a local copy of every reference into data/archive/ (ADR-0008)
 scripts/wayback-harvest.js  Indexes archived captures of the official FSP site
 scripts/fetch-declarations.js  Downloads declaration bodies + official PDFs from Wayback (ADR-0007)
@@ -44,8 +45,8 @@ docs/adrs/               Architecture Decision Records
 node build.js                       # compile data/* -> docs/
 node scripts/validate-data.js       # schema check (runs in CI before the build)
 node --test                         # unit tests: build.js helpers, data invariants, parsers (CI)
-node scripts/archive-refs.js        # archive any reference missing a Wayback snapshot
-node scripts/archive-refs.js --dry-run
+node scripts/archive-refs.js        # archive any reference missing a Wayback snapshot (env: ARCHIVE_MAX_SAVES, ARCHIVE_REFRESH_DAYS)
+node scripts/archive-country-sources.js  # same, for the country dossiers' bare-URL sources
 node scripts/wayback-harvest.js     # index archived captures of forodesaopaulo.org
 node scripts/extract-declarations.js # rebuild the declaration text corpus from the PDFs (offline)
 node scripts/archive-docs.js        # save a local copy of every reference into data/archive/
