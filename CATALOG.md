@@ -6,7 +6,7 @@
 > `node scripts/gen-catalog.js`. See [`context.md`](context.md) for domain
 > background and [`docs/adrs/`](docs/adrs/) for the architecture.
 
-_Last generated: 2026-08-01 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 45 references._
+_Last generated: 2026-08-02 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 45 references._
 
 ## Contents
 
@@ -42,7 +42,7 @@ Total FSP-party presidential terms across tracked countries: **36**.
 | [Chile](docs/countries/CL.html) | CL | Partido Socialista / Partido Comunista de Chile | member (Partido Socialista and Partido Comunista) | Ricardo Lagos (2000–2006); Michelle Bachelet (2006–2010); Michelle Bachelet (2014–2018); Gabriel Boric (2022–2026) |
 | [Ecuador](docs/countries/EC.html) | EC | Movimiento PAIS (Alianza PAIS) | member (Alianza PAIS / Revolución Ciudadana — Correísmo) | Rafael Correa (2007–2017) |
 | [Dominican Republic](docs/countries/DO.html) | DO | Partido de la Liberación Dominicana (PLD) | member (PLD, per Regalado 2008) | Leonel Fernández (1996–2000); Leonel Fernández (2004–2012); Danilo Medina (2012–2020) |
-| [Peru](docs/countries/PE.html) | PE | Partido Nacionalista Peruano (Humala) | member (Partido Nacionalista Peruano per Regalado 2008; Perú Libre since 2018/2020) | Ollanta Humala (2011–2016); Pedro Castillo (2021–2022); José María Balcázar (2026–present) |
+| [Peru](docs/countries/PE.html) | PE | Partido Nacionalista Peruano (Humala) | member (Partido Nacionalista Peruano per Regalado 2008; Perú Libre since 2018/2020) | Ollanta Humala (2011–2016); Pedro Castillo (2021–2022); José María Balcázar (2026–2026) |
 | [Paraguay](docs/countries/PY.html) | PY | Frente Guasú / Alianza Patriótica para el Cambio (Lugo) | member (Frente Guasú — Lugo) | Fernando Lugo (2008–2012) |
 | [Colombia](docs/countries/CO.html) | CO | Pacto Histórico / Colombia Humana (Petro) | member (Pacto Histórico; Partido Comunista Colombiano and the Polo/UP tradition) | Gustavo Petro (2022–present) |
 | [Cuba](docs/countries/CU.html) | CU | Partido Comunista de Cuba (PCC) | member (PCC; one-party state — no competitive elections) | Fidel Castro (1976–2008); Raúl Castro (2008–2018); Miguel Díaz-Canel (2018–present) |
@@ -63,9 +63,9 @@ governing coalition; `opposition` = out of government; `single-party` = one-part
 - **Chile** (PS): 1990–2000: **minority** · 2000–2010: **minority** · 2010–2014: **opposition** · 2014–2018: **minority** · 2018–2022: **opposition** · 2022–2026: **minority** · 2026–present: **opposition**
 - **Ecuador** (—): 1990–2007: **opposition** · 2007–2017: **majority** · 2017–2021: **opposition** · 2021–present: **plurality**
 - **Dominican Republic** (PLD): 1990–1996: **opposition** · 1996–2020: **majority** · 2020–present: **opposition**
-- **Peru** (PNP): 1990–2011: **opposition** · 2011–2016: **plurality** · 2016–2021: **opposition** · 2021–2022: **plurality** · 2022–present: **opposition**
+- **Peru** (PNP): 1990–2011: **opposition** · 2011–2016: **plurality** · 2016–2021: **opposition** · 2021–2022: **plurality** · 2022–2026: **opposition** · 2026–present: **minority**
 - **Paraguay** (—): 1990–2008: **opposition** · 2008–2012: **minority** · 2012–present: **opposition**
-- **Colombia** (PCC / UP / Polo): 1990–2022: **opposition** · 2022–present: **plurality**
+- **Colombia** (PCC / UP / Polo): 1990–2022: **opposition** · 2022–2026: **plurality** · 2026–present: **plurality**
 - **Cuba** (PCC): 1990–present: **single-party**
 
 ## Member parties
