@@ -6,7 +6,7 @@
 > `node scripts/gen-catalog.js`. See [`context.md`](context.md) for domain
 > background and [`docs/adrs/`](docs/adrs/) for the architecture.
 
-_Last generated: 2026-08-02 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 45 references._
+_Last generated: 2026-08-03 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 48 references._
 
 ## Contents
 
@@ -344,3 +344,6 @@ the Internet Archive and as a local copy in the document vault (ADR-0004, ADR-00
 | `pomar-regalado-2013` | Valter Pomar & Roberto Regalado — Foro de São Paulo: construindo a integração latino-americana e caribenha | book (insider) | <https://diegoazziufabc.wordpress.com/wp-content/uploads/2018/08/livro-foro-de-sao-paulo-roberto-regalado-e-valter-pomar-compl.pdf> |
 | `pena-esclusa-foro` | Alejandro Peña Esclusa — El Foro de São Paulo: una amenaza continental (expanded ed. of “…contra Álvaro Uribe”, 2008) | book (analysis) | <https://www.goodreads.com/book/show/54416676-el-foro-de-s-o-paulo> |
 | `wsf-wikipedia` | World Social Forum (Fórum Social Mundial) — Wikipedia | encyclopedia | <https://en.wikipedia.org/wiki/World_Social_Forum> |
+| `olavo-ruschel-2014` | Entrevista de Olavo de Carvalho para Leandro Ruschel | video (interview, critical) | <https://www.youtube.com/watch?v=YoApKNuOQ1A> |
+| `olavo-astv-2015` | The Triumph of Cultural Marxism — America's Survival TV, with Olavo de Carvalho, Cliff Kincaid and Jerry Kenney | video (interview, critical) | <https://www.youtube.com/watch?v=Mn9iS9jSs9E> |
+| `olavo-cof316-2015` | O Brasil perante a nova ordem mundial (online-course lecture) | video (lecture, critical) | <https://www.youtube.com/watch?v=dlQG02mwTD0> |
