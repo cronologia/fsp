@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-07-27T08:13:22.519Z",
+    "lastRun": "2026-08-03T08:06:44.762Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -229,6 +229,46 @@
       "path": "encyclopedia/wsf-wikipedia.html",
       "bytes": 322612,
       "state": "ok"
+    },
+    "olavo-ruschel-2014": {
+      "path": "video/olavo-ruschel-2014.html",
+      "state": "failed",
+      "error": "fetch failed"
+    },
+    "olavo-astv-2015": {
+      "path": "video/olavo-astv-2015.html",
+      "bytes": 992761,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "olavo-cof316-2015": {
+      "path": "video/olavo-cof316-2015.html",
+      "bytes": 1087738,
+      "source": "wayback",
+      "state": "ok"
+    },
+    "olavo-true-outspeak": {
+      "path": "video/olavo-true-outspeak.html",
+      "bytes": 2013233,
+      "source": "live",
+      "state": "ok"
+    },
+    "pomar-30anos-2020": {
+      "path": "video/pomar-30anos-2020.html",
+      "bytes": 771411,
+      "source": "live",
+      "state": "ok"
+    },
+    "radiovox-xxiii-2017": {
+      "path": "video/radiovox-xxiii-2017.html",
+      "bytes": 768924,
+      "source": "live",
+      "state": "ok"
+    },
+    "conspiracao-portas-abertas-2008": {
+      "path": "book/conspiracao-portas-abertas-2008.html",
+      "state": "failed",
+      "error": "fetch failed"
     }
   }
 }

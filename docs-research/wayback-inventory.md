@@ -6,9 +6,9 @@
 > meeting declarations, member lists and history into `data/forum.json`.
 
 - Domain: `forodesaopaulo.org`
-- Last run: 2026-07-27T07:54:36.140Z
-- Latest capture seen (incremental watermark): 2026-07-23
-- Unique archived URLs: **35276** (high-value: **3314**)
+- Last run: 2026-08-03T07:49:33.823Z
+- Latest capture seen (incremental watermark): 2026-08-02
+- Unique archived URLs: **35277** (high-value: **3315**)
 
 ## High-value pages
 
@@ -314,6 +314,6 @@
 | http://forodesaopaulo.org/asi-se-llevo-a-cabo-el-encuentro-parlamentario-progresista-del-foro-de-sao-paulo/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1564644226662 | 2019-08-01 | 2019-08-01 | [view](https://web.archive.org/web/20190801072737/http://forodesaopaulo.org/asi-se-llevo-a-cabo-el-encuentro-parlamentario-progresista-del-foro-de-sao-paulo/?_wpcf7_is_ajax_call=1&_wpcf7=22815&_wpcf7_request_ver=1564644226662) |
 | http://forodesaopaulo.org/bancada-progresista-del-parlasur-declaracion-por-la-condena-injusta-al-companero-lula/ | 2019-11-24 | 2019-11-24 | [view](https://web.archive.org/web/20191124112136/http://forodesaopaulo.org/bancada-progresista-del-parlasur-declaracion-por-la-condena-injusta-al-companero-lula/) |
 | http://forodesaopaulo.org/boletin-digital-panorama-mundial-220519-partido-comunista-de-cuba/ | 2019-08-19 | 2019-08-19 | [view](https://web.archive.org/web/20190819163414/http://forodesaopaulo.org/boletin-digital-panorama-mundial-220519-partido-comunista-de-cuba/) |
-| … and 3014 more (see JSON) | | | |
+| … and 3015 more (see JSON) | | | |
 
-_Full machine-readable inventory: `data/wayback-inventory.json` (35276 URLs)._
+_Full machine-readable inventory: `data/wayback-inventory.json` (35277 URLs)._

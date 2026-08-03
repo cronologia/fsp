@@ -1,64 +1,69 @@
 {
-  "_meta": {
-    "generatedBy": "scripts/archive-refs.js",
-    "lastRun": "2026-07-27T08:07:27.396Z",
-    "count": 237
-  },
+  "generatedBy": "scripts/archive-refs.js",
+  "updatedAt": "2026-08-03",
   "snapshots": {
-    "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
-      "archiveUrl": "https://web.archive.org/web/20260620160759/https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum",
-      "timestamp": "20260620160759",
+    "http://archive.ipu.org/parline-e/reports/arc/2095_13.htm": {
+      "archiveUrl": "https://web.archive.org/web/20240623200652/http://archive.ipu.org/parline-e/reports/arc/2095_13.htm",
+      "timestamp": "20240623200652",
       "status": "200",
-      "checkedAt": "2026-06-30T11:41:49.563Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:53.236Z"
     },
-    "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo": {
-      "archiveUrl": "https://web.archive.org/web/20260618203344/https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
-      "timestamp": "20260618203344",
+    "http://archive.ipu.org/parline/reports/2235_E.htm": {
+      "archiveUrl": "https://web.archive.org/web/20251206051114/http://archive.ipu.org/Parline/reports/2235_E.htm",
+      "timestamp": "20251206051114",
       "status": "200",
-      "checkedAt": "2026-06-30T11:41:49.877Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:08.163Z"
     },
-    "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/": {
-      "archiveUrl": "https://web.archive.org/web/20260713022142/https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
-      "timestamp": "20260713022142",
+    "http://archive.ipu.org/parline/reports/arc/2347_10.htm": {
+      "archiveUrl": "https://web.archive.org/web/20260416051103/http://archive.ipu.org/parline/reports/arc/2347_10.htm",
+      "timestamp": "20260416051103",
       "status": "200",
-      "fresh": true,
-      "checkedAt": "2026-07-13T02:31:25.640Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:43:20.210Z"
     },
-    "https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/": {
-      "archiveUrl": "https://web.archive.org/web/20250919173312/https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/",
-      "timestamp": "20250919173312",
+    "http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2019000200061&lng=es&nrm=iso&tlng=es": {
+      "archiveUrl": "https://web.archive.org/web/20250612062552/http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2019000200061&lng=es&nrm=iso&tlng=es",
+      "timestamp": "20250612062552",
       "status": "200",
-      "checkedAt": "2026-06-30T11:41:50.063Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:41:07.803Z"
     },
-    "https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/": {
-      "archiveUrl": "https://web.archive.org/web/20251225164525/https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/",
-      "timestamp": "20251225164525",
+    "http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2020000100135": {
+      "archiveUrl": "https://web.archive.org/web/20240603163355/http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2020000100135",
+      "timestamp": "20240603163355",
       "status": "200",
-      "checkedAt": "2026-06-30T11:41:50.146Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:41:14.286Z"
     },
-    "https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart": {
-      "archiveUrl": "https://web.archive.org/web/20250203095126/https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart",
-      "timestamp": "20250203095126",
+    "https://ain-bolivia.org/2011/06/pending-bolivian-judicial-elections-opportunity-for-reform-in-uncharted-territory/": {
+      "archiveUrl": "https://web.archive.org/web/20241211030521/https://ain-bolivia.org/2011/06/pending-bolivian-judicial-elections-opportunity-for-reform-in-uncharted-territory/",
+      "timestamp": "20241211030521",
       "status": "200",
-      "checkedAt": "2026-06-30T11:41:50.227Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:32.398Z"
     },
-    "https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america": {
-      "archiveUrl": "https://web.archive.org/web/20260420085130/https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america",
-      "timestamp": "20260420085130",
+    "https://atlas.fgv.br/verbete/6071": {
+      "archiveUrl": "https://web.archive.org/web/20251020025451/https://atlas.fgv.br/verbete/6071",
+      "timestamp": "20251020025451",
       "status": "200",
-      "checkedAt": "2026-06-30T11:41:50.318Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:32:41.794Z"
     },
-    "https://www.gisreportsonline.com/r/sao-paulo-forum/": {
-      "archiveUrl": "https://web.archive.org/web/20260314020258/https://www.gisreportsonline.com/r/sao-paulo-forum/",
-      "timestamp": "20260314020258",
+    "https://atlasinstitute.org/how-presidential-nominations-shape-brazils-highest-court/": {
+      "archiveUrl": "https://web.archive.org/web/20260719110624/https://atlasinstitute.org/how-presidential-nominations-shape-brazils-highest-court/",
+      "timestamp": "20260719110624",
       "status": "200",
-      "checkedAt": "2026-06-30T11:41:50.411Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T11:20:13.366Z"
     },
-    "https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/": {
-      "archiveUrl": "https://web.archive.org/web/20231024134035/https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/",
-      "timestamp": "20231024134035",
+    "https://cnnespanol.cnn.com/2023/02/17/congreso-honduras-nuevos-15-magistrados-corte-suprema-justicia-orix/": {
+      "archiveUrl": "https://web.archive.org/web/20230924152331/https://cnnespanol.cnn.com/2023/02/17/congreso-honduras-nuevos-15-magistrados-corte-suprema-justicia-orix/",
+      "timestamp": "20230924152331",
       "status": "200",
-      "checkedAt": "2026-06-30T11:42:47.977Z"
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:43:00.088Z"
     },
     "https://comitedelectura.pe/blogs/noticias/las-diferencias-entre-el-grupo-de-puebla-y-el-foro-de-sao-paulo": {
       "archiveUrl": "https://web.archive.org/web/20250217012249/https://comitedelectura.pe/blogs/noticias/las-diferencias-entre-el-grupo-de-puebla-y-el-foro-de-sao-paulo",
@@ -66,59 +71,206 @@
       "status": "200",
       "checkedAt": "2026-06-30T11:42:48.068Z"
     },
-    "https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/": {
-      "archiveUrl": "https://web.archive.org/web/20260630113004/https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/",
-      "timestamp": "20260630113004",
+    "https://contralacorrupcion.mx/una-mayoria-muchas-oposiciones-como-voto-el-senado-en-la-lxvi-legislatura": {
+      "archiveUrl": "https://web.archive.org/web/20251015061857/https://contralacorrupcion.mx/una-mayoria-muchas-oposiciones-como-voto-el-senado-en-la-lxvi-legislatura",
+      "timestamp": "20251015061857",
       "status": "200",
-      "checkedAt": "2026-06-30T11:42:48.151Z"
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:28.213Z"
     },
-    "https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo": {
-      "archiveUrl": "https://web.archive.org/web/20260630123637/https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo",
-      "timestamp": "20260630123637",
+    "https://data.ipu.org/election-summary/HTML/2043_06.htm": {
+      "archiveUrl": "https://web.archive.org/web/20251206045851/https://data.ipu.org/election-summary/HTML/2043_06.htm",
+      "timestamp": "20251206045851",
       "status": "200",
-      "checkedAt": "2026-07-06T08:44:46.706Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:41.106Z"
     },
-    "https://radiovox.org/": {
-      "archiveUrl": "https://web.archive.org/web/20251117020502/http://radiovox.org/",
-      "timestamp": "20251117020502",
+    "https://data.ipu.org/election-summary/HTML/2251_11.htm": {
+      "archiveUrl": "https://web.archive.org/web/20251206050618/https://data.ipu.org/election-summary/HTML/2251_11.htm",
+      "timestamp": "20251206050618",
       "status": "200",
-      "checkedAt": "2026-07-06T08:44:47.133Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:11.026Z"
     },
-    "https://en.wikipedia.org/wiki/Frei_Betto": {
-      "archiveUrl": "https://web.archive.org/web/20260605190521/https://en.wikipedia.org/wiki/Frei_Betto",
-      "timestamp": "20260605190521",
+    "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20201018/": {
+      "archiveUrl": "https://web.archive.org/web/20251126210730/https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20201018/",
+      "timestamp": "20251126210730",
       "status": "200",
-      "checkedAt": "2026-07-11T23:07:53.385Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:29:34.361Z"
     },
-    "https://www.voltairenet.org/article154638.html": {
-      "archiveUrl": "https://web.archive.org/web/20250818142150/https://www.voltairenet.org/article154638.html",
-      "timestamp": "20250818142150",
+    "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/": {
+      "archiveUrl": "https://web.archive.org/web/20260719110446/https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/",
+      "timestamp": "20260719110446",
       "status": "200",
-      "checkedAt": "2026-07-11T23:07:57.731Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T11:20:12.618Z"
     },
-    "https://en.wikipedia.org/wiki/Liberation_theology": {
-      "archiveUrl": "https://web.archive.org/web/20260708150358/https://en.wikipedia.org/wiki/Liberation_theology",
-      "timestamp": "20260708150358",
+    "https://data.ipu.org/parliament/BO/BO-UC01/election/BO-UC01-E20250817/": {
+      "archiveUrl": "https://web.archive.org/web/20251114014030/https://data.ipu.org/parliament/BO/BO-UC01/election/BO-UC01-E20250817/",
+      "timestamp": "20251114014030",
       "status": "200",
-      "checkedAt": "2026-07-11T23:15:45.855Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:29:34.167Z"
     },
-    "https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia": {
-      "archiveUrl": "https://web.archive.org/web/20260701092319/https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia",
-      "timestamp": "20260701092319",
+    "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20181007/": {
+      "archiveUrl": "https://web.archive.org/web/20251206172104/https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20181007/",
+      "timestamp": "20251206172104",
       "status": "200",
-      "checkedAt": "2026-07-13T00:03:05.524Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:40.678Z"
     },
-    "https://en.wikipedia.org/wiki/Comunes_(political_party)": {
-      "archiveUrl": "https://web.archive.org/web/20260107181712/https://en.wikipedia.org/wiki/Comunes_(political_party)",
-      "timestamp": "20260107181712",
+    "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/": {
+      "archiveUrl": "https://web.archive.org/web/20260223062532/https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/",
+      "timestamp": "20260223062532",
       "status": "200",
-      "checkedAt": "2026-07-13T00:03:08.392Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:38.062Z"
     },
-    "https://en.wikipedia.org/wiki/Gustavo_Petro": {
-      "archiveUrl": "https://web.archive.org/web/20260709023434/https://en.wikipedia.org/wiki/Gustavo_Petro",
-      "timestamp": "20260709023434",
+    "https://data.ipu.org/parliament/BR/BR-UC01/election/BR-UC01-E20221002/": {
+      "archiveUrl": "https://web.archive.org/web/20250812033706/https://data.ipu.org/parliament/BR/BR-UC01/election/BR-UC01-E20221002/",
+      "timestamp": "20250812033706",
       "status": "200",
-      "checkedAt": "2026-07-13T00:04:16.294Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:40.068Z"
+    },
+    "https://data.ipu.org/parliament/CL/CL-LC01/election/CL-LC01-E20251116/": {
+      "refId": "country-source",
+      "archiveUrl": "https://web.archive.org/web/20260727080107/https://data.ipu.org/parliament/CL/CL-LC01/election/CL-LC01-E20251116/",
+      "timestamp": "20260727080107",
+      "checkedAt": "2026-08-03"
+    },
+    "https://data.ipu.org/parliament/DO/DO-LC01/election/DO-LC01-E20200705/": {
+      "archiveUrl": "https://web.archive.org/web/20251206052721/https://data.ipu.org/parliament/DO/DO-LC01/election/DO-LC01-E20200705/",
+      "timestamp": "20251206052721",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:51.644Z"
+    },
+    "https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20170219/": {
+      "archiveUrl": "https://web.archive.org/web/20251206051704/https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20170219/",
+      "timestamp": "20251206051704",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:51.725Z"
+    },
+    "https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20230820/": {
+      "archiveUrl": "https://web.archive.org/web/20251206053432/https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20230820/",
+      "timestamp": "20251206053432",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:50.630Z"
+    },
+    "https://data.ipu.org/parliament/HN/HN-LC01/election/HN-LC01-E20211128/": {
+      "archiveUrl": "https://web.archive.org/web/20250619221834/https://data.ipu.org/parliament/HN/HN-LC01/election/HN-LC01-E20211128/",
+      "timestamp": "20250619221834",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:36:49.824Z"
+    },
+    "https://data.ipu.org/parliament/MX/MX-LC01/election/MX-LC01-E20180701/": {
+      "archiveUrl": "https://web.archive.org/web/20251028183409/https://data.ipu.org/parliament/MX/MX-LC01/election/MX-LC01-E20180701/",
+      "timestamp": "20251028183409",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:57.780Z"
+    },
+    "https://data.ipu.org/parliament/MX/MX-UC01/election/MX-UC01-E20180701/": {
+      "archiveUrl": "https://web.archive.org/web/20251206051022/https://data.ipu.org/parliament/MX/MX-UC01/election/MX-UC01-E20180701/",
+      "timestamp": "20251206051022",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:00.519Z"
+    },
+    "https://data.ipu.org/parliament/NI/NI-LC01/election/NI-LC01-E20211107/": {
+      "archiveUrl": "https://web.archive.org/web/20250426162114/https://data.ipu.org/parliament/NI/NI-LC01/election/NI-LC01-E20211107/",
+      "timestamp": "20250426162114",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:04.974Z"
+    },
+    "https://data.ipu.org/parliament/PE/PE-LC01/election/PE-LC01-E20210411/": {
+      "archiveUrl": "https://web.archive.org/web/20260413104829/https://data.ipu.org/parliament/PE/PE-LC01/election/PE-LC01-E20210411/",
+      "timestamp": "20260413104829",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:11.698Z"
+    },
+    "https://data.ipu.org/parliament/UY/UY-UC01/election/UY-UC01-E20241027/": {
+      "archiveUrl": "https://web.archive.org/web/20251227000827/https://data.ipu.org/parliament/UY/UY-UC01/election/UY-UC01-E20241027/",
+      "timestamp": "20251227000827",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:41:18.723Z"
+    },
+    "https://diariocorreo.pe/politica/el-peru-libre-de-vladimir-cerron-integra-el-foro-de-sao-paulo-noticia/": {
+      "archiveUrl": "https://web.archive.org/web/20260411112029/https://diariocorreo.pe/politica/el-peru-libre-de-vladimir-cerron-integra-el-foro-de-sao-paulo-noticia/",
+      "timestamp": "20260411112029",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:10.401Z"
+    },
+    "https://diegoazziufabc.wordpress.com/wp-content/uploads/2018/08/livro-foro-de-sao-paulo-roberto-regalado-e-valter-pomar-compl.pdf": {
+      "archiveUrl": "https://web.archive.org/web/20250919194026/https://diegoazziufabc.wordpress.com/wp-content/uploads/2018/08/livro-foro-de-sao-paulo-roberto-regalado-e-valter-pomar-compl.pdf",
+      "timestamp": "20250919194026",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T12:04:39.783Z"
+    },
+    "https://dplf.org/wp-content/uploads/2014/07/judicial-independence-ecuadors-judicial-reform-process.pdf": {
+      "archiveUrl": "https://web.archive.org/web/20251206050912/https://dplf.org/wp-content/uploads/2014/07/judicial-independence-ecuadors-judicial-reform-process.pdf",
+      "timestamp": "20251206050912",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:48.487Z"
+    },
+    "https://electionguide.org/elections/id/2549/": {
+      "archiveUrl": "https://web.archive.org/web/20260527111029/https://www.electionguide.org/elections/id/2549/",
+      "timestamp": "20260527111029",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:52.573Z"
+    },
+    "https://electionguide.org/elections/id/2550/": {
+      "archiveUrl": "https://web.archive.org/web/20260527111249/https://www.electionguide.org/elections/id/2550/",
+      "timestamp": "20260527111249",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:52.091Z"
+    },
+    "https://electionguide.org/elections/id/338/": {
+      "archiveUrl": "https://web.archive.org/web/20260527110709/https://www.electionguide.org/elections/id/338/",
+      "timestamp": "20260527110709",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:17.383Z"
+    },
+    "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm": {
+      "archiveUrl": "https://web.archive.org/web/20260606010146/https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm",
+      "timestamp": "20260606010146",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:18.940Z"
+    },
+    "https://elfaro.net/es/202103/el_salvador/25304/Bukele-gana-la-Asamblea-Legislativa.htm": {
+      "archiveUrl": "https://web.archive.org/web/20260119235832/https://elfaro.net/es/202103/el_salvador/25304/Bukele-gana-la-Asamblea-Legislativa.htm",
+      "timestamp": "20260119235832",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:40:11.502Z"
+    },
+    "https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart": {
+      "archiveUrl": "https://web.archive.org/web/20250203095126/https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart",
+      "timestamp": "20250203095126",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.227Z"
+    },
+    "https://en.mercopress.com/2018/04/14/brazilian-supreme-tribunal-of-the-eleven-justices-seven-were-named-by-lula-and-rousseff": {
+      "archiveUrl": "https://web.archive.org/web/20251016213939/https://en.mercopress.com/2018/04/14/brazilian-supreme-tribunal-of-the-eleven-justices-seven-were-named-by-lula-and-rousseff",
+      "timestamp": "20251016213939",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:30:31.088Z"
     },
     "https://en.wikipedia.org/wiki/19th_of_April_Movement": {
       "archiveUrl": "https://web.archive.org/web/20260701092320/https://en.wikipedia.org/wiki/19th_of_April_Movement",
@@ -126,35 +278,382 @@
       "status": "200",
       "checkedAt": "2026-07-13T00:04:16.508Z"
     },
-    "https://en.wikipedia.org/wiki/Revolutionary_Left_Movement_(Chile)": {
-      "archiveUrl": "https://web.archive.org/web/20260522184154/https://en.wikipedia.org/wiki/Revolutionary_Left_Movement_(Chile)",
-      "timestamp": "20260522184154",
+    "https://en.wikipedia.org/wiki/2002_Brazilian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260426033713/https://en.wikipedia.org/wiki/2002_Brazilian_general_election",
+      "timestamp": "20260426033713",
       "status": "200",
-      "checkedAt": "2026-07-13T00:04:16.770Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:41.529Z"
     },
-    "https://en.wikipedia.org/wiki/Tupamaros": {
-      "archiveUrl": "https://web.archive.org/web/20260711172008/https://en.wikipedia.org/wiki/Tupamaros",
-      "timestamp": "20260711172008",
+    "https://en.wikipedia.org/wiki/2004_Uruguayan_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260410173742/https://en.wikipedia.org/wiki/2004_Uruguayan_general_election",
+      "timestamp": "20260410173742",
       "status": "200",
-      "checkedAt": "2026-07-13T00:04:20.382Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:17.141Z"
     },
-    "https://en.wikipedia.org/wiki/Guatemalan_National_Revolutionary_Unity": {
-      "archiveUrl": "https://web.archive.org/web/20260708001944/https://en.wikipedia.org/wiki/Guatemalan_National_Revolutionary_Unity",
-      "timestamp": "20260708001944",
+    "https://en.wikipedia.org/wiki/2006_Brazilian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260713141135/https://en.wikipedia.org/wiki/2006_Brazilian_general_election",
+      "timestamp": "20260713141135",
       "status": "200",
-      "checkedAt": "2026-07-13T00:04:20.618Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:40.848Z"
     },
-    "https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861": {
-      "archiveUrl": "https://web.archive.org/web/20260713000047/https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861",
-      "timestamp": "20260713000047",
+    "https://en.wikipedia.org/wiki/2009_Honduran_coup_d%27%C3%A9tat": {
+      "archiveUrl": "https://web.archive.org/web/20260704002104/https://en.wikipedia.org/wiki/2009_Honduran_coup_d%27%C3%A9tat",
+      "timestamp": "20260704002104",
       "status": "200",
-      "checkedAt": "2026-07-13T01:19:15.942Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:35:48.108Z"
     },
-    "https://www.youtube.com/@RadioVox1029": {
-      "archiveUrl": "https://web.archive.org/web/20250717231029/https://www.youtube.com/@radiovox1029",
-      "timestamp": "20250717231029",
+    "https://en.wikipedia.org/wiki/2009_Salvadoran_legislative_election": {
+      "archiveUrl": "https://web.archive.org/web/20251206072818/https://en.wikipedia.org/wiki/2009_Salvadoran_legislative_election",
+      "timestamp": "20251206072818",
       "status": "200",
-      "checkedAt": "2026-07-13T01:55:11.728Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:40:11.843Z"
+    },
+    "https://en.wikipedia.org/wiki/2009_Uruguayan_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260622202438/https://en.wikipedia.org/wiki/2009_Uruguayan_general_election",
+      "timestamp": "20260622202438",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:41:21.625Z"
+    },
+    "https://en.wikipedia.org/wiki/2010_Venezuelan_parliamentary_election": {
+      "archiveUrl": "https://web.archive.org/web/20260610215858/https://en.wikipedia.org/wiki/2010_Venezuelan_parliamentary_election",
+      "timestamp": "20260610215858",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:43:20.020Z"
+    },
+    "https://en.wikipedia.org/wiki/2011_Argentine_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260714051916/https://en.wikipedia.org/wiki/2011_Argentine_general_election",
+      "timestamp": "20260714051916",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:30.730Z"
+    },
+    "https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election": {
+      "archiveUrl": "https://web.archive.org/web/20260616175557/https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election",
+      "timestamp": "20260616175557",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:31.458Z"
+    },
+    "https://en.wikipedia.org/wiki/2011_Nicaraguan_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260202124149/https://en.wikipedia.org/wiki/2011_Nicaraguan_general_election",
+      "timestamp": "20260202124149",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:06.787Z"
+    },
+    "https://en.wikipedia.org/wiki/2011_Peruvian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260614202940/https://en.wikipedia.org/wiki/2011_Peruvian_general_election",
+      "timestamp": "20260614202940",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:09.766Z"
+    },
+    "https://en.wikipedia.org/wiki/2013_Chilean_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260701114103/https://en.wikipedia.org/wiki/2013_Chilean_general_election",
+      "timestamp": "20260701114103",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:40.506Z"
+    },
+    "https://en.wikipedia.org/wiki/2013_Ecuadorian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260107165112/https://en.wikipedia.org/wiki/2013_Ecuadorian_general_election",
+      "timestamp": "20260107165112",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:50.150Z"
+    },
+    "https://en.wikipedia.org/wiki/2014_Bolivian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260707103859/https://en.wikipedia.org/wiki/2014_Bolivian_general_election",
+      "timestamp": "20260707103859",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:38.671Z"
+    },
+    "https://en.wikipedia.org/wiki/2015_Venezuelan_parliamentary_election": {
+      "archiveUrl": "https://web.archive.org/web/20260610215914/https://en.wikipedia.org/wiki/2015_Venezuelan_parliamentary_election",
+      "timestamp": "20260610215914",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:19.756Z"
+    },
+    "https://en.wikipedia.org/wiki/2016_Dominican_Republic_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260710205256/https://en.wikipedia.org/wiki/2016_Dominican_Republic_general_election",
+      "timestamp": "20260710205256",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:51.243Z"
+    },
+    "https://en.wikipedia.org/wiki/2016_Nicaraguan_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260228101414/https://en.wikipedia.org/wiki/2016_Nicaraguan_general_election",
+      "timestamp": "20260228101414",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:04.550Z"
+    },
+    "https://en.wikipedia.org/wiki/2016_Peruvian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260611181807/https://en.wikipedia.org/wiki/2016_Peruvian_general_election",
+      "timestamp": "20260611181807",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:09.928Z"
+    },
+    "https://en.wikipedia.org/wiki/2017_Argentine_legislative_election": {
+      "archiveUrl": "https://web.archive.org/web/20260103235653/https://en.wikipedia.org/wiki/2017_Argentine_legislative_election",
+      "timestamp": "20260103235653",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:30.926Z"
+    },
+    "https://en.wikipedia.org/wiki/2017_Chilean_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260701114015/https://en.wikipedia.org/wiki/2017_Chilean_general_election",
+      "timestamp": "20260701114015",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:40.668Z"
+    },
+    "https://en.wikipedia.org/wiki/2017_Ecuadorian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260518083742/https://en.wikipedia.org/wiki/2017_Ecuadorian_general_election",
+      "timestamp": "20260518083742",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:51.517Z"
+    },
+    "https://en.wikipedia.org/wiki/2018_Brazilian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260705215434/https://en.wikipedia.org/wiki/2018_Brazilian_general_election",
+      "timestamp": "20260705215434",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:40.510Z"
+    },
+    "https://en.wikipedia.org/wiki/2018_Mexican_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260715194308/https://en.wikipedia.org/wiki/2018_Mexican_general_election",
+      "timestamp": "20260715194308",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:56.031Z"
+    },
+    "https://en.wikipedia.org/wiki/2019_Argentine_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260714051930/https://en.wikipedia.org/wiki/2019_Argentine_general_election",
+      "timestamp": "20260714051930",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:29.920Z"
+    },
+    "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20251210003446/https://en.wikipedia.org/wiki/2019_Uruguayan_general_election",
+      "timestamp": "20251210003446",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:41:16.889Z"
+    },
+    "https://en.wikipedia.org/wiki/2020_Bolivian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260530222653/https://en.wikipedia.org/wiki/2020_Bolivian_general_election",
+      "timestamp": "20260530222653",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:38.495Z"
+    },
+    "https://en.wikipedia.org/wiki/2020_Dominican_Republic_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260710205258/https://en.wikipedia.org/wiki/2020_Dominican_Republic_general_election",
+      "timestamp": "20260710205258",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:51.447Z"
+    },
+    "https://en.wikipedia.org/wiki/2020_Venezuelan_parliamentary_election": {
+      "archiveUrl": "https://web.archive.org/web/20260702014054/https://en.wikipedia.org/wiki/2020_Venezuelan_parliamentary_election",
+      "timestamp": "20260702014054",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:56:21.611Z"
+    },
+    "https://en.wikipedia.org/wiki/2021_Argentine_legislative_election": {
+      "archiveUrl": "https://web.archive.org/web/20260310171126/https://en.wikipedia.org/wiki/2021_Argentine_legislative_election",
+      "timestamp": "20260310171126",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:31.108Z"
+    },
+    "https://en.wikipedia.org/wiki/2021_Chilean_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260701114015/https://en.wikipedia.org/wiki/2021_Chilean_general_election",
+      "timestamp": "20260701114015",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:42.271Z"
+    },
+    "https://en.wikipedia.org/wiki/2021_Honduran_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260311100824/https://en.wikipedia.org/wiki/2021_Honduran_general_election",
+      "timestamp": "20260311100824",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:36:48.420Z"
+    },
+    "https://en.wikipedia.org/wiki/2021_Nicaraguan_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260405215042/https://en.wikipedia.org/wiki/2021_Nicaraguan_general_election",
+      "timestamp": "20260405215042",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:04.751Z"
+    },
+    "https://en.wikipedia.org/wiki/2021_Peruvian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260713190025/https://en.wikipedia.org/wiki/2021_Peruvian_general_election",
+      "timestamp": "20260713190025",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:10.560Z"
+    },
+    "https://en.wikipedia.org/wiki/2021_Salvadoran_legislative_election": {
+      "archiveUrl": "https://web.archive.org/web/20260524030741/https://en.wikipedia.org/wiki/2021_Salvadoran_legislative_election",
+      "timestamp": "20260524030741",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:39:15.062Z"
+    },
+    "https://en.wikipedia.org/wiki/2022_Brazilian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260622124707/https://en.wikipedia.org/wiki/2022_Brazilian_general_election",
+      "timestamp": "20260622124707",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:38.573Z"
+    },
+    "https://en.wikipedia.org/wiki/2022_Colombian_parliamentary_election": {
+      "archiveUrl": "https://web.archive.org/web/20260516232333/https://en.wikipedia.org/wiki/2022_Colombian_parliamentary_election",
+      "timestamp": "20260516232333",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:45.628Z"
+    },
+    "https://en.wikipedia.org/wiki/2023_Argentine_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260715150155/https://en.wikipedia.org/wiki/2023_Argentine_general_election",
+      "timestamp": "20260715150155",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:31.279Z"
+    },
+    "https://en.wikipedia.org/wiki/2023_Ecuadorian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260202105303/https://en.wikipedia.org/wiki/2023_Ecuadorian_general_election",
+      "timestamp": "20260202105303",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:50.431Z"
+    },
+    "https://en.wikipedia.org/wiki/2024_Bolivian_judicial_election": {
+      "archiveUrl": "https://web.archive.org/web/20260706000845/https://en.wikipedia.org/wiki/2024_Bolivian_judicial_election",
+      "timestamp": "20260706000845",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:37.533Z"
+    },
+    "https://en.wikipedia.org/wiki/2024_Mexican_Chamber_of_Deputies_election": {
+      "archiveUrl": "https://web.archive.org/web/20251113224345/https://en.wikipedia.org/wiki/2024_Mexican_Chamber_of_Deputies_election",
+      "timestamp": "20251113224345",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:56.549Z"
+    },
+    "https://en.wikipedia.org/wiki/2024_Mexican_Senate_election": {
+      "archiveUrl": "https://web.archive.org/web/20251226061017/https://en.wikipedia.org/wiki/2024_Mexican_Senate_election",
+      "timestamp": "20251226061017",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:57.377Z"
+    },
+    "https://en.wikipedia.org/wiki/2024_Mexican_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260715194309/https://en.wikipedia.org/wiki/2024_Mexican_general_election",
+      "timestamp": "20260715194309",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:55.850Z"
+    },
+    "https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform": {
+      "archiveUrl": "https://web.archive.org/web/20251028064906/https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform",
+      "timestamp": "20251028064906",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:36:50.328Z"
+    },
+    "https://en.wikipedia.org/wiki/2024_Uruguayan_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260422232659/https://en.wikipedia.org/wiki/2024_Uruguayan_general_election",
+      "timestamp": "20260422232659",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:41:17.088Z"
+    },
+    "https://en.wikipedia.org/wiki/2025_Bolivian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260706000846/https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
+      "timestamp": "20260706000846",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:38.044Z"
+    },
+    "https://en.wikipedia.org/wiki/2025_Chilean_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260701114016/https://en.wikipedia.org/wiki/2025_Chilean_general_election",
+      "timestamp": "20260701114016",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:32:44.523Z"
+    },
+    "https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260503231905/https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election",
+      "timestamp": "20260503231905",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:41:52.939Z"
+    },
+    "https://en.wikipedia.org/wiki/2025_Honduran_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260716024033/https://en.wikipedia.org/wiki/2025_Honduran_general_election",
+      "timestamp": "20260716024033",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:52:41.217Z"
+    },
+    "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections": {
+      "archiveUrl": "https://web.archive.org/web/20260617060150/https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections",
+      "timestamp": "20260617060150",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:36:50.586Z"
+    },
+    "https://en.wikipedia.org/wiki/2026_Colombian_presidential_election": {
+      "refId": "country-source",
+      "archiveUrl": "https://web.archive.org/web/20260706005130/https://en.wikipedia.org/wiki/2026_Colombian_presidential_election",
+      "timestamp": "20260706005130",
+      "checkedAt": "2026-08-03"
+    },
+    "https://en.wikipedia.org/wiki/2026_Peruvian_general_election": {
+      "archiveUrl": "https://web.archive.org/web/20260703190311/https://en.wikipedia.org/wiki/2026_Peruvian_general_election",
+      "timestamp": "20260703190311",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:09.567Z"
+    },
+    "https://en.wikipedia.org/wiki/BRICS": {
+      "archiveUrl": "https://web.archive.org/web/20260710095205/https://en.wikipedia.org/wiki/BRICS",
+      "timestamp": "20260710095205",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:17.962Z"
+    },
+    "https://en.wikipedia.org/wiki/Bolivarian_Alliance_for_the_Peoples_of_Our_America": {
+      "archiveUrl": "https://web.archive.org/web/20260121001432/https://en.wikipedia.org/wiki/Bolivarian_Alliance_for_the_Peoples_of_Our_America",
+      "timestamp": "20260121001432",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:14.609Z"
+    },
+    "https://en.wikipedia.org/wiki/Chamber_of_Deputies_(Brazil)": {
+      "archiveUrl": "https://web.archive.org/web/20260711063315/https://en.wikipedia.org/wiki/Chamber_of_Deputies_(Brazil)",
+      "timestamp": "20260711063315",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:36.511Z"
     },
     "https://en.wikipedia.org/wiki/Colombian_peace_process": {
       "archiveUrl": "https://web.archive.org/web/20260701092323/https://en.wikipedia.org/wiki/Colombian_peace_process",
@@ -162,18 +661,387 @@
       "status": "200",
       "checkedAt": "2026-07-13T01:56:13.828Z"
     },
-    "https://www.midiasemmascara.org/": {
-      "archiveUrl": "https://web.archive.org/web/20260601204728/http://www.midiasemmascara.org/",
-      "timestamp": "20260601204728",
+    "https://en.wikipedia.org/wiki/Colorado_Party_(Paraguay)": {
+      "archiveUrl": "https://web.archive.org/web/20260630072446/https://en.wikipedia.org/wiki/Colorado_Party_(Paraguay)",
+      "timestamp": "20260630072446",
       "status": "200",
-      "checkedAt": "2026-07-13T01:56:18.220Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:18.671Z"
     },
-    "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/": {
-      "archiveUrl": "https://web.archive.org/web/20240616222506/https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/",
-      "timestamp": "20240616222506",
+    "https://en.wikipedia.org/wiki/Communist_Party_of_Cuba": {
+      "archiveUrl": "https://web.archive.org/web/20260701095736/https://en.wikipedia.org/wiki/Communist_Party_of_Cuba",
+      "timestamp": "20260701095736",
       "status": "200",
-      "fresh": true,
-      "checkedAt": "2026-07-13T02:35:06.458Z"
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:49.813Z"
+    },
+    "https://en.wikipedia.org/wiki/Community_of_Latin_American_and_Caribbean_States": {
+      "archiveUrl": "https://web.archive.org/web/20260701100816/https://en.wikipedia.org/wiki/Community_of_Latin_American_and_Caribbean_States",
+      "timestamp": "20260701100816",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:16.887Z"
+    },
+    "https://en.wikipedia.org/wiki/Comunes_(political_party)": {
+      "archiveUrl": "https://web.archive.org/web/20260107181712/https://en.wikipedia.org/wiki/Comunes_(political_party)",
+      "timestamp": "20260107181712",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:03:08.392Z"
+    },
+    "https://en.wikipedia.org/wiki/Concertaci%C3%B3n": {
+      "archiveUrl": "https://web.archive.org/web/20260108090322/https://en.wikipedia.org/wiki/Concertaci%C3%B3n",
+      "timestamp": "20260108090322",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:32:45.053Z"
+    },
+    "https://en.wikipedia.org/wiki/Daniel_Ortega": {
+      "archiveUrl": "https://web.archive.org/web/20260706003926/https://en.wikipedia.org/wiki/Daniel_Ortega",
+      "timestamp": "20260706003926",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:00.897Z"
+    },
+    "https://en.wikipedia.org/wiki/Dominican_Liberation_Party": {
+      "archiveUrl": "https://web.archive.org/web/20260512182029/https://en.wikipedia.org/wiki/Dominican_Liberation_Party",
+      "timestamp": "20260512182029",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:51.058Z"
+    },
+    "https://en.wikipedia.org/wiki/Fernando_Lugo": {
+      "archiveUrl": "https://web.archive.org/web/20260714143647/https://en.wikipedia.org/wiki/Fernando_Lugo",
+      "timestamp": "20260714143647",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:16.935Z"
+    },
+    "https://en.wikipedia.org/wiki/Free_Peru": {
+      "refId": "country-source",
+      "archiveUrl": "https://web.archive.org/web/20260629161319/https://en.wikipedia.org/wiki/Free_Peru",
+      "timestamp": "20260629161319",
+      "checkedAt": "2026-08-03"
+    },
+    "https://en.wikipedia.org/wiki/Frei_Betto": {
+      "archiveUrl": "https://web.archive.org/web/20260605190521/https://en.wikipedia.org/wiki/Frei_Betto",
+      "timestamp": "20260605190521",
+      "status": "200",
+      "checkedAt": "2026-07-11T23:07:53.385Z"
+    },
+    "https://en.wikipedia.org/wiki/Guas%C3%BA_Front": {
+      "archiveUrl": "https://web.archive.org/web/20251212053121/https://en.wikipedia.org/wiki/Guas%C3%BA_Front",
+      "timestamp": "20251212053121",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:16.717Z"
+    },
+    "https://en.wikipedia.org/wiki/Guatemalan_National_Revolutionary_Unity": {
+      "archiveUrl": "https://web.archive.org/web/20260708001944/https://en.wikipedia.org/wiki/Guatemalan_National_Revolutionary_Unity",
+      "timestamp": "20260708001944",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:20.618Z"
+    },
+    "https://en.wikipedia.org/wiki/Gustavo_Petro": {
+      "archiveUrl": "https://web.archive.org/web/20260709023434/https://en.wikipedia.org/wiki/Gustavo_Petro",
+      "timestamp": "20260709023434",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:16.294Z"
+    },
+    "https://en.wikipedia.org/wiki/Historic_Pact": {
+      "archiveUrl": "https://web.archive.org/web/20260621214709/https://en.wikipedia.org/wiki/Historic_Pact",
+      "timestamp": "20260621214709",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:43.072Z"
+    },
+    "https://en.wikipedia.org/wiki/Jos%C3%A9_Jer%C3%AD": {
+      "archiveUrl": "https://web.archive.org/web/20260611181808/https://en.wikipedia.org/wiki/Jos%C3%A9_Jer%C3%AD",
+      "timestamp": "20260611181808",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:08.799Z"
+    },
+    "https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Balc%C3%A1zar": {
+      "archiveUrl": "https://web.archive.org/web/20260701114120/https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Balc%C3%A1zar",
+      "timestamp": "20260701114120",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:08.990Z"
+    },
+    "https://en.wikipedia.org/wiki/LXVI_Legislature_of_the_Mexican_Congress": {
+      "archiveUrl": "https://web.archive.org/web/20260311143400/https://en.wikipedia.org/wiki/LXVI_Legislature_of_the_Mexican_Congress",
+      "timestamp": "20260311143400",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:56.369Z"
+    },
+    "https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)": {
+      "archiveUrl": "https://web.archive.org/web/20260719115650/https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)",
+      "timestamp": "20260719115650",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:29.976Z"
+    },
+    "https://en.wikipedia.org/wiki/Liberation_theology": {
+      "archiveUrl": "https://web.archive.org/web/20260708150358/https://en.wikipedia.org/wiki/Liberation_theology",
+      "timestamp": "20260708150358",
+      "status": "200",
+      "checkedAt": "2026-07-11T23:15:45.855Z"
+    },
+    "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Cuba": {
+      "archiveUrl": "https://web.archive.org/web/20260701100743/https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Cuba",
+      "timestamp": "20260701100743",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:49.633Z"
+    },
+    "https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)": {
+      "archiveUrl": "https://web.archive.org/web/20251112091624/https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)",
+      "timestamp": "20251112091624",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:29:36.146Z"
+    },
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil": {
+      "archiveUrl": "https://web.archive.org/web/20260701114134/https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil",
+      "timestamp": "20260701114134",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:30:34.701Z"
+    },
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_Colombia": {
+      "archiveUrl": "https://web.archive.org/web/20260701114149/https://en.wikipedia.org/wiki/List_of_presidents_of_Colombia",
+      "timestamp": "20260701114149",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:42.456Z"
+    },
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_Paraguay": {
+      "archiveUrl": "https://web.archive.org/web/20260701114111/https://en.wikipedia.org/wiki/List_of_Presidents_of_Paraguay",
+      "timestamp": "20260701114111",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:16.385Z"
+    },
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_Peru": {
+      "archiveUrl": "https://web.archive.org/web/20260701114200/https://en.wikipedia.org/wiki/List_of_presidents_of_Peru",
+      "timestamp": "20260701114200",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:08.360Z"
+    },
+    "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic": {
+      "archiveUrl": "https://web.archive.org/web/20260617202621/https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic",
+      "timestamp": "20260617202621",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:50.857Z"
+    },
+    "https://en.wikipedia.org/wiki/Mercosur": {
+      "archiveUrl": "https://web.archive.org/web/20260708112445/https://en.wikipedia.org/wiki/Mercosur",
+      "timestamp": "20260708112445",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:14.245Z"
+    },
+    "https://en.wikipedia.org/wiki/National_Assembly_(Ecuador)": {
+      "archiveUrl": "https://web.archive.org/web/20260629191819/https://en.wikipedia.org/wiki/National_Assembly_(Ecuador)",
+      "timestamp": "20260629191819",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:49.933Z"
+    },
+    "https://en.wikipedia.org/wiki/National_Assembly_(Nicaragua)": {
+      "archiveUrl": "https://web.archive.org/web/20260716162031/https://en.wikipedia.org/wiki/National_Assembly_(Nicaragua)",
+      "timestamp": "20260716162031",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:03.727Z"
+    },
+    "https://en.wikipedia.org/wiki/National_Assembly_(Venezuela)": {
+      "archiveUrl": "https://web.archive.org/web/20260617113659/https://en.wikipedia.org/wiki/National_Assembly_(Venezuela)",
+      "timestamp": "20260617113659",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:19.434Z"
+    },
+    "https://en.wikipedia.org/wiki/National_Assembly_of_People%27s_Power": {
+      "archiveUrl": "https://web.archive.org/web/20260701095722/https://en.wikipedia.org/wiki/National_Assembly_of_People%27s_Power",
+      "timestamp": "20260701095722",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:50.597Z"
+    },
+    "https://en.wikipedia.org/wiki/National_Congress_(Honduras)": {
+      "archiveUrl": "https://web.archive.org/web/20210411032833/http://en.wikipedia.org/wiki/National_Congress_(Honduras)",
+      "timestamp": "20210411032833",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:36:48.223Z"
+    },
+    "https://en.wikipedia.org/wiki/Ollanta_Humala": {
+      "archiveUrl": "https://web.archive.org/web/20260711222403/https://en.wikipedia.org/wiki/Ollanta_Humala",
+      "timestamp": "20260711222403",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:08.607Z"
+    },
+    "https://en.wikipedia.org/wiki/Party_of_the_Democratic_Revolution": {
+      "archiveUrl": "https://web.archive.org/web/20260707110550/https://en.wikipedia.org/wiki/Party_of_the_Democratic_Revolution",
+      "timestamp": "20260707110550",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:53.649Z"
+    },
+    "https://en.wikipedia.org/wiki/Patriotic_Union_(Colombia)": {
+      "archiveUrl": "https://web.archive.org/web/20260522110201/https://en.wikipedia.org/wiki/Patriotic_Union_(Colombia)",
+      "timestamp": "20260522110201",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:45.395Z"
+    },
+    "https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal": {
+      "archiveUrl": "https://web.archive.org/web/20260629195251/https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal",
+      "timestamp": "20260629195251",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:31.597Z"
+    },
+    "https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia": {
+      "archiveUrl": "https://web.archive.org/web/20260701092319/https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia",
+      "timestamp": "20260701092319",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:03:05.524Z"
+    },
+    "https://en.wikipedia.org/wiki/Revolutionary_Left_Movement_(Chile)": {
+      "archiveUrl": "https://web.archive.org/web/20260522184154/https://en.wikipedia.org/wiki/Revolutionary_Left_Movement_(Chile)",
+      "timestamp": "20260522184154",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:16.770Z"
+    },
+    "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum": {
+      "archiveUrl": "https://web.archive.org/web/20260620160759/https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Forum",
+      "timestamp": "20260620160759",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:49.563Z"
+    },
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina": {
+      "archiveUrl": "https://web.archive.org/web/20260326155744/https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina",
+      "timestamp": "20260326155744",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:27:32.821Z"
+    },
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Chile": {
+      "archiveUrl": "https://web.archive.org/web/20260701114014/https://en.wikipedia.org/wiki/Supreme_Court_of_Chile",
+      "timestamp": "20260701114014",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:32:42.100Z"
+    },
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)": {
+      "archiveUrl": "https://web.archive.org/web/20260115170957/https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)",
+      "timestamp": "20260115170957",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:00.720Z"
+    },
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)": {
+      "archiveUrl": "https://web.archive.org/web/20260719111326/https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)",
+      "timestamp": "20260719111326",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T11:24:55.718Z"
+    },
+    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_of_the_Nation": {
+      "archiveUrl": "https://web.archive.org/web/20260113124252/https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_of_the_Nation",
+      "timestamp": "20260113124252",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:36:51.095Z"
+    },
+    "https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)": {
+      "archiveUrl": "https://web.archive.org/web/20260405162532/https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)",
+      "timestamp": "20260405162532",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:17.812Z"
+    },
+    "https://en.wikipedia.org/wiki/Supremo_Tribunal_Federal": {
+      "archiveUrl": "https://web.archive.org/web/20260714062904/https://en.wikipedia.org/wiki/Supremo_Tribunal_Federal",
+      "timestamp": "20260714062904",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:30:34.228Z"
+    },
+    "https://en.wikipedia.org/wiki/Tupamaros": {
+      "archiveUrl": "https://web.archive.org/web/20260711172008/https://en.wikipedia.org/wiki/Tupamaros",
+      "timestamp": "20260711172008",
+      "status": "200",
+      "checkedAt": "2026-07-13T00:04:20.382Z"
+    },
+    "https://en.wikipedia.org/wiki/Union_of_South_American_Nations": {
+      "archiveUrl": "https://web.archive.org/web/20260709212000/https://en.wikipedia.org/wiki/Union_of_South_American_Nations",
+      "timestamp": "20260709212000",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-13T11:46:16.533Z"
+    },
+    "https://en.wikipedia.org/wiki/Workers%27_Party_(Brazil)": {
+      "archiveUrl": "https://web.archive.org/web/20260706123727/https://en.wikipedia.org/wiki/Workers'_Party_(Brazil)",
+      "timestamp": "20260706123727",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:49:45.569Z"
+    },
+    "https://en.wikipedia.org/wiki/World_Social_Forum": {
+      "archiveUrl": "https://web.archive.org/web/20260624091952/https://en.wikipedia.org/wiki/World_Social_Forum",
+      "timestamp": "20260624091952",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:27:32.275Z"
+    },
+    "https://es.wikipedia.org/wiki/Anexo:Jueces_de_la_Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n_(Argentina)": {
+      "archiveUrl": "https://web.archive.org/web/20241228051407/https://es.wikipedia.org/wiki/Anexo%3AJueces_de_la_Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n_(Argentina)",
+      "timestamp": "20241228051407",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:27:33.236Z"
+    },
+    "https://es.wikipedia.org/wiki/C%C3%A1mara_de_Diputados_de_Bolivia": {
+      "archiveUrl": "https://web.archive.org/web/20251228070213/https://es.wikipedia.org/wiki/C%C3%A1mara_de_Diputados_de_Bolivia",
+      "timestamp": "20251228070213",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:29:33.952Z"
+    },
+    "https://es.wikipedia.org/wiki/Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n": {
+      "archiveUrl": "https://web.archive.org/web/20260701104038/https://es.wikipedia.org/wiki/Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n",
+      "timestamp": "20260701104038",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:27:33.032Z"
+    },
+    "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo": {
+      "archiveUrl": "https://web.archive.org/web/20260706132157/https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+      "timestamp": "20260706132157",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:29.333Z"
+    },
+    "https://es.wikipedia.org/wiki/Frente_Amplio_(Uruguay)": {
+      "archiveUrl": "https://web.archive.org/web/20260709031646/https://es.wikipedia.org/wiki/Frente_Amplio_(Uruguay)",
+      "timestamp": "20260709031646",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:17.603Z"
+    },
+    "https://es.wikipedia.org/wiki/Sala_de_lo_Constitucional_de_la_Corte_Suprema_de_Justicia_de_El_Salvador": {
+      "archiveUrl": "https://web.archive.org/web/20260504165821/https://es.wikipedia.org/wiki/Sala_de_lo_Constitucional_de_la_Corte_Suprema_de_Justicia_de_El_Salvador",
+      "timestamp": "20260504165821",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:28.449Z"
     },
     "https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/": {
       "archiveUrl": "https://web.archive.org/web/20240523194414/https://forodesaopaulo.org/declaracao-final-do-xxvi-encontro-do-foro-de-sao-paulo/",
@@ -181,6 +1049,13 @@
       "status": "200",
       "fresh": true,
       "checkedAt": "2026-07-13T02:35:31.369Z"
+    },
+    "https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/": {
+      "archiveUrl": "https://web.archive.org/web/20201021125101/https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/",
+      "timestamp": "20201021125101",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T02:57:07.922Z"
     },
     "https://forodesaopaulo.org/memoria-del-xx-encuentro-del-foro-de-sao-paulo/": {
       "archiveUrl": "https://web.archive.org/web/20210613042318/https://forodesaopaulo.org/memoria-del-xx-encuentro-del-foro-de-sao-paulo/",
@@ -210,439 +1085,12 @@
       "fresh": true,
       "checkedAt": "2026-07-13T02:56:22.674Z"
     },
-    "https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/": {
-      "archiveUrl": "https://web.archive.org/web/20201021125101/https://forodesaopaulo.org/declaracion-final-porto-alegre-1997/",
-      "timestamp": "20201021125101",
+    "https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/": {
+      "archiveUrl": "https://web.archive.org/web/20240616222506/https://forodesaopaulo.org/memoria-del-xxv-encuentro-del-foro-de-sao-paulo-25-al-28-de-julio-de-2019-caracas-venezuela/",
+      "timestamp": "20240616222506",
       "status": "200",
       "fresh": true,
-      "checkedAt": "2026-07-13T02:57:07.922Z"
-    },
-    "https://en.wikipedia.org/wiki/Mercosur": {
-      "archiveUrl": "https://web.archive.org/web/20260708112445/https://en.wikipedia.org/wiki/Mercosur",
-      "timestamp": "20260708112445",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-13T11:46:14.245Z"
-    },
-    "https://en.wikipedia.org/wiki/Bolivarian_Alliance_for_the_Peoples_of_Our_America": {
-      "archiveUrl": "https://web.archive.org/web/20260121001432/https://en.wikipedia.org/wiki/Bolivarian_Alliance_for_the_Peoples_of_Our_America",
-      "timestamp": "20260121001432",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-13T11:46:14.609Z"
-    },
-    "https://en.wikipedia.org/wiki/Union_of_South_American_Nations": {
-      "archiveUrl": "https://web.archive.org/web/20260709212000/https://en.wikipedia.org/wiki/Union_of_South_American_Nations",
-      "timestamp": "20260709212000",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-13T11:46:16.533Z"
-    },
-    "https://en.wikipedia.org/wiki/Community_of_Latin_American_and_Caribbean_States": {
-      "archiveUrl": "https://web.archive.org/web/20260701100816/https://en.wikipedia.org/wiki/Community_of_Latin_American_and_Caribbean_States",
-      "timestamp": "20260701100816",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-13T11:46:16.887Z"
-    },
-    "https://en.wikipedia.org/wiki/BRICS": {
-      "archiveUrl": "https://web.archive.org/web/20260710095205/https://en.wikipedia.org/wiki/BRICS",
-      "timestamp": "20260710095205",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-13T11:46:17.962Z"
-    },
-    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa": {
-      "archiveUrl": "https://web.archive.org/web/20250208141042/https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
-      "timestamp": "20250208141042",
-      "status": "200",
-      "fresh": true,
-      "checkedAt": "2026-07-13T11:46:42.852Z"
-    },
-    "https://diegoazziufabc.wordpress.com/wp-content/uploads/2018/08/livro-foro-de-sao-paulo-roberto-regalado-e-valter-pomar-compl.pdf": {
-      "archiveUrl": "https://web.archive.org/web/20250919194026/https://diegoazziufabc.wordpress.com/wp-content/uploads/2018/08/livro-foro-de-sao-paulo-roberto-regalado-e-valter-pomar-compl.pdf",
-      "timestamp": "20250919194026",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-13T12:04:39.783Z"
-    },
-    "https://www.goodreads.com/book/show/54416676-el-foro-de-s-o-paulo": {
-      "archiveUrl": "https://web.archive.org/web/20260713121356/https://www.goodreads.com/book/show/54416676-el-foro-de-s-o-paulo",
-      "timestamp": "20260713121356",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:27:32.096Z"
-    },
-    "https://en.wikipedia.org/wiki/World_Social_Forum": {
-      "archiveUrl": "https://web.archive.org/web/20260624091952/https://en.wikipedia.org/wiki/World_Social_Forum",
-      "timestamp": "20260624091952",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:27:32.275Z"
-    },
-    "https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina": {
-      "archiveUrl": "https://web.archive.org/web/20260326155744/https://en.wikipedia.org/wiki/Supreme_Court_of_Argentina",
-      "timestamp": "20260326155744",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:27:32.821Z"
-    },
-    "https://es.wikipedia.org/wiki/Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n": {
-      "archiveUrl": "https://web.archive.org/web/20260701104038/https://es.wikipedia.org/wiki/Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n",
-      "timestamp": "20260701104038",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:27:33.032Z"
-    },
-    "https://es.wikipedia.org/wiki/Anexo:Jueces_de_la_Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n_(Argentina)": {
-      "archiveUrl": "https://web.archive.org/web/20241228051407/https://es.wikipedia.org/wiki/Anexo%3AJueces_de_la_Corte_Suprema_de_Justicia_de_la_Naci%C3%B3n_(Argentina)",
-      "timestamp": "20241228051407",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:27:33.236Z"
-    },
-    "https://www.icj.org/wp-content/uploads/2012/04/Argentina-Attacks-on-Justice-2005-Publications-2008.pdf": {
-      "archiveUrl": "https://web.archive.org/web/20260215101323/https://www.icj.org/wp-content/uploads/2012/04/Argentina-Attacks-on-Justice-2005-Publications-2008.pdf",
-      "timestamp": "20260215101323",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:27:33.832Z"
-    },
-    "https://www.lanacion.com.ar/politica/cuando-cristina-kirchner-fustigaba-a-los-jueces-de-la-corte-ejemplar-de-nestor-kirchner-nid18072022/": {
-      "archiveUrl": "https://web.archive.org/web/20250319201309/https://www.lanacion.com.ar/politica/cuando-cristina-kirchner-fustigaba-a-los-jueces-de-la-corte-ejemplar-de-nestor-kirchner-nid18072022/",
-      "timestamp": "20250319201309",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:27:34.139Z"
-    },
-    "https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo": {
-      "archiveUrl": "https://web.archive.org/web/20260706132157/https://es.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
-      "timestamp": "20260706132157",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:29.333Z"
-    },
-    "https://www.cancilleria.gob.ar/es/actualidad/comunicados/esta-semana-se-reune-el-foro-de-sao-paulo-en-buenos-aires": {
-      "archiveUrl": "https://web.archive.org/web/20260117110026/https://www.cancilleria.gob.ar/es/actualidad/comunicados/esta-semana-se-reune-el-foro-de-sao-paulo-en-buenos-aires",
-      "timestamp": "20260117110026",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:29.625Z"
-    },
-    "https://en.wikipedia.org/wiki/2019_Argentine_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260714051930/https://en.wikipedia.org/wiki/2019_Argentine_general_election",
-      "timestamp": "20260714051930",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:29.920Z"
-    },
-    "https://en.wikipedia.org/wiki/2011_Argentine_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260714051916/https://en.wikipedia.org/wiki/2011_Argentine_general_election",
-      "timestamp": "20260714051916",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:30.730Z"
-    },
-    "https://en.wikipedia.org/wiki/2017_Argentine_legislative_election": {
-      "archiveUrl": "https://web.archive.org/web/20260103235653/https://en.wikipedia.org/wiki/2017_Argentine_legislative_election",
-      "timestamp": "20260103235653",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:30.926Z"
-    },
-    "https://en.wikipedia.org/wiki/2021_Argentine_legislative_election": {
-      "archiveUrl": "https://web.archive.org/web/20260310171126/https://en.wikipedia.org/wiki/2021_Argentine_legislative_election",
-      "timestamp": "20260310171126",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:31.108Z"
-    },
-    "https://en.wikipedia.org/wiki/2023_Argentine_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260715150155/https://en.wikipedia.org/wiki/2023_Argentine_general_election",
-      "timestamp": "20260715150155",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:31.279Z"
-    },
-    "https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election": {
-      "archiveUrl": "https://web.archive.org/web/20260616175557/https://en.wikipedia.org/wiki/2011_Bolivian_judicial_election",
-      "timestamp": "20260616175557",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:31.458Z"
-    },
-    "https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal": {
-      "archiveUrl": "https://web.archive.org/web/20260629195251/https://en.wikipedia.org/wiki/Plurinational_Constitutional_Tribunal",
-      "timestamp": "20260629195251",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:31.597Z"
-    },
-    "https://ain-bolivia.org/2011/06/pending-bolivian-judicial-elections-opportunity-for-reform-in-uncharted-territory/": {
-      "archiveUrl": "https://web.archive.org/web/20241211030521/https://ain-bolivia.org/2011/06/pending-bolivian-judicial-elections-opportunity-for-reform-in-uncharted-territory/",
-      "timestamp": "20241211030521",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:32.398Z"
-    },
-    "https://www.lexivox.org/norms/BO-DS-N432.html": {
-      "archiveUrl": "https://web.archive.org/web/20250603075742/https://www.lexivox.org/norms/BO-DS-N432.html",
-      "timestamp": "20250603075742",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:33.070Z"
-    },
-    "https://www.icj.org/bolivia-new-report-highlights-shortcomings-and-challenges-of-judicial-independence/": {
-      "archiveUrl": "https://web.archive.org/web/20260418171628/https://www.icj.org/bolivia-new-report-highlights-shortcomings-and-challenges-of-judicial-independence/",
-      "timestamp": "20260418171628",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:33.303Z"
-    },
-    "https://freedomhouse.org/country/bolivia/freedom-world/2018": {
-      "archiveUrl": "https://web.archive.org/web/20260514100319/https://freedomhouse.org/country/bolivia/freedom-world/2018",
-      "timestamp": "20260514100319",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:33.554Z"
-    },
-    "https://www.ohchr.org/en/press-releases/2024/01/bolivia-un-expert-concerned-about-delay-judicial-elections": {
-      "archiveUrl": "https://web.archive.org/web/20260119072142/https://www.ohchr.org/en/press-releases/2024/01/bolivia-un-expert-concerned-about-delay-judicial-elections",
-      "timestamp": "20260119072142",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:33.950Z"
-    },
-    "https://en.wikipedia.org/wiki/2024_Bolivian_judicial_election": {
-      "archiveUrl": "https://web.archive.org/web/20260706000845/https://en.wikipedia.org/wiki/2024_Bolivian_judicial_election",
-      "timestamp": "20260706000845",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:37.533Z"
-    },
-    "https://en.wikipedia.org/wiki/2025_Bolivian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260706000846/https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
-      "timestamp": "20260706000846",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:38.044Z"
-    },
-    "https://www.cnn.com/2025/10/19/americas/bolivia-election-results-rodrigo-paz-intl-hnk": {
-      "archiveUrl": "https://web.archive.org/web/20251124192324/https://www.cnn.com/2025/10/19/americas/bolivia-election-results-rodrigo-paz-intl-hnk",
-      "timestamp": "20251124192324",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:38.317Z"
-    },
-    "https://en.wikipedia.org/wiki/2020_Bolivian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260530222653/https://en.wikipedia.org/wiki/2020_Bolivian_general_election",
-      "timestamp": "20260530222653",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:38.495Z"
-    },
-    "https://en.wikipedia.org/wiki/2014_Bolivian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260707103859/https://en.wikipedia.org/wiki/2014_Bolivian_general_election",
-      "timestamp": "20260707103859",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:38.671Z"
-    },
-    "https://fuentedirecta.oep.org.bo/noticia/elecciones-generales-2025-cinco-organizaciones-politicas-tendran-representacion-en-la-asamblea-legislativa-plurinacional/": {
-      "archiveUrl": "https://web.archive.org/web/20260326020310/https://fuentedirecta.oep.org.bo/noticia/elecciones-generales-2025-cinco-organizaciones-politicas-tendran-representacion-en-la-asamblea-legislativa-plurinacional/",
-      "timestamp": "20260326020310",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:28:38.906Z"
-    },
-    "https://es.wikipedia.org/wiki/C%C3%A1mara_de_Diputados_de_Bolivia": {
-      "archiveUrl": "https://web.archive.org/web/20251228070213/https://es.wikipedia.org/wiki/C%C3%A1mara_de_Diputados_de_Bolivia",
-      "timestamp": "20251228070213",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:29:33.952Z"
-    },
-    "https://data.ipu.org/parliament/BO/BO-UC01/election/BO-UC01-E20250817/": {
-      "archiveUrl": "https://web.archive.org/web/20251114014030/https://data.ipu.org/parliament/BO/BO-UC01/election/BO-UC01-E20250817/",
-      "timestamp": "20251114014030",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:29:34.167Z"
-    },
-    "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20201018/": {
-      "archiveUrl": "https://web.archive.org/web/20251126210730/https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20201018/",
-      "timestamp": "20251126210730",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:29:34.361Z"
-    },
-    "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal": {
-      "archiveUrl": "https://web.archive.org/web/20260716004752/https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal",
-      "timestamp": "20260716004752",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:29:34.612Z"
-    },
-    "https://portal.stf.jus.br/textos/verTexto.asp?servico=sobreStfConhecaStfHistorico": {
-      "archiveUrl": "https://web.archive.org/web/20260219204020/https://portal.stf.jus.br/textos/verTexto.asp?servico=sobreStfConhecaStfHistorico",
-      "timestamp": "20260219204020",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:29:35.684Z"
-    },
-    "https://www18.fgv.br/cpdoc/acervo/dicionarios/verbete-tematico/supremo-tribunal-federal-stf": {
-      "archiveUrl": "https://web.archive.org/web/20240704171035/https://www18.fgv.br/Cpdoc/Acervo/dicionarios/verbete-tematico/supremo-tribunal-federal-stf",
-      "timestamp": "20240704171035",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:29:35.966Z"
-    },
-    "https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)": {
-      "archiveUrl": "https://web.archive.org/web/20251112091624/https://en.wikipedia.org/wiki/List_of_ministers_of_the_Supreme_Federal_Court_(Brazil)",
-      "timestamp": "20251112091624",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:29:36.146Z"
-    },
-    "https://en.mercopress.com/2018/04/14/brazilian-supreme-tribunal-of-the-eleven-justices-seven-were-named-by-lula-and-rousseff": {
-      "archiveUrl": "https://web.archive.org/web/20251016213939/https://en.mercopress.com/2018/04/14/brazilian-supreme-tribunal-of-the-eleven-justices-seven-were-named-by-lula-and-rousseff",
-      "timestamp": "20251016213939",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:30:31.088Z"
-    },
-    "https://www.brasildefato.com.br/2025/10/17/lula-to-make-11th-supreme-court-appointment-as-justice-barroso-retires-from-brazils-top-court/": {
-      "archiveUrl": "https://web.archive.org/web/20260514172728/https://www.brasildefato.com.br/2025/10/17/lula-to-make-11th-supreme-court-appointment-as-justice-barroso-retires-from-brazils-top-court/",
-      "timestamp": "20260514172728",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:30:34.008Z"
-    },
-    "https://en.wikipedia.org/wiki/Supremo_Tribunal_Federal": {
-      "archiveUrl": "https://web.archive.org/web/20260714062904/https://en.wikipedia.org/wiki/Supremo_Tribunal_Federal",
-      "timestamp": "20260714062904",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:30:34.228Z"
-    },
-    "https://portal.stf.jus.br/ostf/ministros/ministro.asp?periodo=STF&consulta=QUADRO_INDICACOES": {
-      "archiveUrl": "https://web.archive.org/web/20250610123937/https://portal.stf.jus.br/ostf/ministros/ministro.asp?periodo=STF&consulta=QUADRO_INDICACOES",
-      "timestamp": "20250610123937",
-      "status": "202",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:30:34.447Z"
-    },
-    "https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil": {
-      "archiveUrl": "https://web.archive.org/web/20260701114134/https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil",
-      "timestamp": "20260701114134",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:30:34.701Z"
-    },
-    "https://en.wikipedia.org/wiki/Chamber_of_Deputies_(Brazil)": {
-      "archiveUrl": "https://web.archive.org/web/20260711063315/https://en.wikipedia.org/wiki/Chamber_of_Deputies_(Brazil)",
-      "timestamp": "20260711063315",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:36.511Z"
-    },
-    "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/": {
-      "archiveUrl": "https://web.archive.org/web/20260223062532/https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20221002/",
-      "timestamp": "20260223062532",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:38.062Z"
-    },
-    "https://en.wikipedia.org/wiki/2022_Brazilian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260622124707/https://en.wikipedia.org/wiki/2022_Brazilian_general_election",
-      "timestamp": "20260622124707",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:38.573Z"
-    },
-    "https://pcdob.org.br/noticias/pcdob-elege-seis-deputados-federais-em-cinco-estados/": {
-      "archiveUrl": "https://web.archive.org/web/20260214105526/https://pcdob.org.br/noticias/pcdob-elege-seis-deputados-federais-em-cinco-estados/",
-      "timestamp": "20260214105526",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:39.879Z"
-    },
-    "https://data.ipu.org/parliament/BR/BR-UC01/election/BR-UC01-E20221002/": {
-      "archiveUrl": "https://web.archive.org/web/20250812033706/https://data.ipu.org/parliament/BR/BR-UC01/election/BR-UC01-E20221002/",
-      "timestamp": "20250812033706",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:40.068Z"
-    },
-    "https://www12.senado.leg.br/noticias/materias/2022/10/31/bancadas-do-senado-estarao-mais-concentradas-em-2023": {
-      "archiveUrl": "https://web.archive.org/web/20260217120458/https://www12.senado.leg.br/noticias/materias/2022/10/31/bancadas-do-senado-estarao-mais-concentradas-em-2023",
-      "timestamp": "20260217120458",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:40.318Z"
-    },
-    "https://en.wikipedia.org/wiki/2018_Brazilian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260705215434/https://en.wikipedia.org/wiki/2018_Brazilian_general_election",
-      "timestamp": "20260705215434",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:40.510Z"
-    },
-    "https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20181007/": {
-      "archiveUrl": "https://web.archive.org/web/20251206172104/https://data.ipu.org/parliament/BR/BR-LC01/election/BR-LC01-E20181007/",
-      "timestamp": "20251206172104",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:40.678Z"
-    },
-    "https://en.wikipedia.org/wiki/2006_Brazilian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260713141135/https://en.wikipedia.org/wiki/2006_Brazilian_general_election",
-      "timestamp": "20260713141135",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:40.848Z"
-    },
-    "https://data.ipu.org/election-summary/HTML/2043_06.htm": {
-      "archiveUrl": "https://web.archive.org/web/20251206045851/https://data.ipu.org/election-summary/HTML/2043_06.htm",
-      "timestamp": "20251206045851",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:41.106Z"
-    },
-    "https://www.electionguide.org/elections/id/381/": {
-      "archiveUrl": "https://web.archive.org/web/20260527111856/https://www.electionguide.org/elections/id/381/",
-      "timestamp": "20260527111856",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:41.294Z"
-    },
-    "https://en.wikipedia.org/wiki/2002_Brazilian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260426033713/https://en.wikipedia.org/wiki/2002_Brazilian_general_election",
-      "timestamp": "20260426033713",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:31:41.529Z"
-    },
-    "https://atlas.fgv.br/verbete/6071": {
-      "archiveUrl": "https://web.archive.org/web/20251020025451/https://atlas.fgv.br/verbete/6071",
-      "timestamp": "20251020025451",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:32:41.794Z"
-    },
-    "https://en.wikipedia.org/wiki/Supreme_Court_of_Chile": {
-      "archiveUrl": "https://web.archive.org/web/20260701114014/https://en.wikipedia.org/wiki/Supreme_Court_of_Chile",
-      "timestamp": "20260701114014",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:32:42.100Z"
-    },
-    "https://en.wikipedia.org/wiki/2025_Chilean_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260701114016/https://en.wikipedia.org/wiki/2025_Chilean_general_election",
-      "timestamp": "20260701114016",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:32:44.523Z"
+      "checkedAt": "2026-07-13T02:35:06.458Z"
     },
     "https://forodesaopaulo.org/partidos/": {
       "archiveUrl": "https://web.archive.org/web/20250507142833/http://forodesaopaulo.org/partidos/",
@@ -651,48 +1099,6 @@
       "fresh": false,
       "checkedAt": "2026-07-19T10:32:44.777Z"
     },
-    "https://en.wikipedia.org/wiki/Concertaci%C3%B3n": {
-      "archiveUrl": "https://web.archive.org/web/20260108090322/https://en.wikipedia.org/wiki/Concertaci%C3%B3n",
-      "timestamp": "20260108090322",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:32:45.053Z"
-    },
-    "https://en.wikipedia.org/wiki/2013_Chilean_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260701114103/https://en.wikipedia.org/wiki/2013_Chilean_general_election",
-      "timestamp": "20260701114103",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:40.506Z"
-    },
-    "https://en.wikipedia.org/wiki/2017_Chilean_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260701114015/https://en.wikipedia.org/wiki/2017_Chilean_general_election",
-      "timestamp": "20260701114015",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:40.668Z"
-    },
-    "https://en.wikipedia.org/wiki/2021_Chilean_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260701114015/https://en.wikipedia.org/wiki/2021_Chilean_general_election",
-      "timestamp": "20260701114015",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:42.271Z"
-    },
-    "https://en.wikipedia.org/wiki/List_of_presidents_of_Colombia": {
-      "archiveUrl": "https://web.archive.org/web/20260701114149/https://en.wikipedia.org/wiki/List_of_presidents_of_Colombia",
-      "timestamp": "20260701114149",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:42.456Z"
-    },
-    "https://en.wikipedia.org/wiki/Historic_Pact": {
-      "archiveUrl": "https://web.archive.org/web/20260621214709/https://en.wikipedia.org/wiki/Historic_Pact",
-      "timestamp": "20260621214709",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:43.072Z"
-    },
     "https://forodesaopaulo.org/solidaridad-com-el-pacto-historico-y-a-gustavo-petro/": {
       "archiveUrl": "https://web.archive.org/web/20220807224421/https://forodesaopaulo.org/solidaridad-com-el-pacto-historico-y-a-gustavo-petro/",
       "timestamp": "20220807224421",
@@ -700,831 +1106,12 @@
       "fresh": false,
       "checkedAt": "2026-07-19T10:33:45.128Z"
     },
-    "https://en.wikipedia.org/wiki/Patriotic_Union_(Colombia)": {
-      "archiveUrl": "https://web.archive.org/web/20260522110201/https://en.wikipedia.org/wiki/Patriotic_Union_(Colombia)",
-      "timestamp": "20260522110201",
+    "https://freedomhouse.org/country/bolivia/freedom-world/2018": {
+      "archiveUrl": "https://web.archive.org/web/20260514100319/https://freedomhouse.org/country/bolivia/freedom-world/2018",
+      "timestamp": "20260514100319",
       "status": "200",
       "fresh": false,
-      "checkedAt": "2026-07-19T10:33:45.395Z"
-    },
-    "https://en.wikipedia.org/wiki/2022_Colombian_parliamentary_election": {
-      "archiveUrl": "https://web.archive.org/web/20260516232333/https://en.wikipedia.org/wiki/2022_Colombian_parliamentary_election",
-      "timestamp": "20260516232333",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:45.628Z"
-    },
-    "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Cuba": {
-      "archiveUrl": "https://web.archive.org/web/20260701100743/https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Cuba",
-      "timestamp": "20260701100743",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:49.633Z"
-    },
-    "https://en.wikipedia.org/wiki/Communist_Party_of_Cuba": {
-      "archiveUrl": "https://web.archive.org/web/20260701095736/https://en.wikipedia.org/wiki/Communist_Party_of_Cuba",
-      "timestamp": "20260701095736",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:49.813Z"
-    },
-    "https://en.wikipedia.org/wiki/National_Assembly_of_People%27s_Power": {
-      "archiveUrl": "https://web.archive.org/web/20260701095722/https://en.wikipedia.org/wiki/National_Assembly_of_People%27s_Power",
-      "timestamp": "20260701095722",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:50.597Z"
-    },
-    "https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic": {
-      "archiveUrl": "https://web.archive.org/web/20260617202621/https://en.wikipedia.org/wiki/List_of_presidents_of_the_Dominican_Republic",
-      "timestamp": "20260617202621",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:50.857Z"
-    },
-    "https://en.wikipedia.org/wiki/Dominican_Liberation_Party": {
-      "archiveUrl": "https://web.archive.org/web/20260512182029/https://en.wikipedia.org/wiki/Dominican_Liberation_Party",
-      "timestamp": "20260512182029",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:51.058Z"
-    },
-    "https://en.wikipedia.org/wiki/2016_Dominican_Republic_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260710205256/https://en.wikipedia.org/wiki/2016_Dominican_Republic_general_election",
-      "timestamp": "20260710205256",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:51.243Z"
-    },
-    "https://en.wikipedia.org/wiki/2020_Dominican_Republic_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260710205258/https://en.wikipedia.org/wiki/2020_Dominican_Republic_general_election",
-      "timestamp": "20260710205258",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:51.447Z"
-    },
-    "https://data.ipu.org/parliament/DO/DO-LC01/election/DO-LC01-E20200705/": {
-      "archiveUrl": "https://web.archive.org/web/20251206052721/https://data.ipu.org/parliament/DO/DO-LC01/election/DO-LC01-E20200705/",
-      "timestamp": "20251206052721",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:51.644Z"
-    },
-    "https://www.csis.org/analysis/outcome-dominican-republic-general-elections": {
-      "archiveUrl": "https://web.archive.org/web/20260307225010/https://www.csis.org/analysis/outcome-dominican-republic-general-elections",
-      "timestamp": "20260307225010",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:51.867Z"
-    },
-    "https://electionguide.org/elections/id/2550/": {
-      "archiveUrl": "https://web.archive.org/web/20260527111249/https://www.electionguide.org/elections/id/2550/",
-      "timestamp": "20260527111249",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:52.091Z"
-    },
-    "https://electionguide.org/elections/id/2549/": {
-      "archiveUrl": "https://web.archive.org/web/20260527111029/https://www.electionguide.org/elections/id/2549/",
-      "timestamp": "20260527111029",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:33:52.573Z"
-    },
-    "https://www.hrw.org/world-report/2012/country-chapters/ecuador": {
-      "archiveUrl": "https://web.archive.org/web/20260121074430/https://www.hrw.org/world-report/2012/country-chapters/ecuador",
-      "timestamp": "20260121074430",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:48.060Z"
-    },
-    "https://www.hrw.org/news/2014/01/29/ecuador-ensure-judicial-independence": {
-      "archiveUrl": "https://web.archive.org/web/20260316160523/https://www.hrw.org/news/2014/01/29/ecuador-ensure-judicial-independence",
-      "timestamp": "20260316160523",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:48.265Z"
-    },
-    "https://dplf.org/wp-content/uploads/2014/07/judicial-independence-ecuadors-judicial-reform-process.pdf": {
-      "archiveUrl": "https://web.archive.org/web/20251206050912/https://dplf.org/wp-content/uploads/2014/07/judicial-independence-ecuadors-judicial-reform-process.pdf",
-      "timestamp": "20251206050912",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:48.487Z"
-    },
-    "https://www.hrw.org/news/2021/05/27/ecuador-implement-constitutional-court-rulings-protecting-rights": {
-      "archiveUrl": "https://web.archive.org/web/20260508122409/https://www.hrw.org/news/2021/05/27/ecuador-implement-constitutional-court-rulings-protecting-rights",
-      "timestamp": "20260508122409",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:48.794Z"
-    },
-    "https://www.iconnectblog.com/a-convenient-emergency-perilous-times-for-judicial-independence-in-ecuador/": {
-      "archiveUrl": "https://web.archive.org/web/20260214052435/https://www.iconnectblog.com/a-convenient-emergency-perilous-times-for-judicial-independence-in-ecuador/",
-      "timestamp": "20260214052435",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:49.499Z"
-    },
-    "https://en.wikipedia.org/wiki/National_Assembly_(Ecuador)": {
-      "archiveUrl": "https://web.archive.org/web/20260629191819/https://en.wikipedia.org/wiki/National_Assembly_(Ecuador)",
-      "timestamp": "20260629191819",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:49.933Z"
-    },
-    "https://en.wikipedia.org/wiki/2013_Ecuadorian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260107165112/https://en.wikipedia.org/wiki/2013_Ecuadorian_general_election",
-      "timestamp": "20260107165112",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:50.150Z"
-    },
-    "https://en.wikipedia.org/wiki/2023_Ecuadorian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260202105303/https://en.wikipedia.org/wiki/2023_Ecuadorian_general_election",
-      "timestamp": "20260202105303",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:50.431Z"
-    },
-    "https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20230820/": {
-      "archiveUrl": "https://web.archive.org/web/20251206053432/https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20230820/",
-      "timestamp": "20251206053432",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:50.630Z"
-    },
-    "https://www.eluniverso.com/noticias/politica/asi-esta-conformada-la-asamblea-nacional-del-ecuador-para-el-periodo-2023-2025-nota/": {
-      "archiveUrl": "https://web.archive.org/web/20240717170338/https://www.eluniverso.com/noticias/politica/asi-esta-conformada-la-asamblea-nacional-del-ecuador-para-el-periodo-2023-2025-nota/",
-      "timestamp": "20240717170338",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:51.322Z"
-    },
-    "https://en.wikipedia.org/wiki/2017_Ecuadorian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260518083742/https://en.wikipedia.org/wiki/2017_Ecuadorian_general_election",
-      "timestamp": "20260518083742",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:51.517Z"
-    },
-    "https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20170219/": {
-      "archiveUrl": "https://web.archive.org/web/20251206051704/https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20170219/",
-      "timestamp": "20251206051704",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:51.725Z"
-    },
-    "https://www.everycrsreport.com/reports/IF10581.html": {
-      "archiveUrl": "https://web.archive.org/web/20251206050858/https://www.everycrsreport.com/reports/IF10581.html",
-      "timestamp": "20251206050858",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:53.053Z"
-    },
-    "http://archive.ipu.org/parline-e/reports/arc/2095_13.htm": {
-      "archiveUrl": "https://web.archive.org/web/20240623200652/http://archive.ipu.org/parline-e/reports/arc/2095_13.htm",
-      "timestamp": "20240623200652",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:34:53.236Z"
-    },
-    "https://en.wikipedia.org/wiki/2009_Honduran_coup_d%27%C3%A9tat": {
-      "archiveUrl": "https://web.archive.org/web/20260704002104/https://en.wikipedia.org/wiki/2009_Honduran_coup_d%27%C3%A9tat",
-      "timestamp": "20260704002104",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:35:48.108Z"
-    },
-    "https://en.wikipedia.org/wiki/National_Congress_(Honduras)": {
-      "archiveUrl": "https://web.archive.org/web/20210411032833/http://en.wikipedia.org/wiki/National_Congress_(Honduras)",
-      "timestamp": "20210411032833",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:36:48.223Z"
-    },
-    "https://en.wikipedia.org/wiki/2021_Honduran_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260311100824/https://en.wikipedia.org/wiki/2021_Honduran_general_election",
-      "timestamp": "20260311100824",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:36:48.420Z"
-    },
-    "https://data.ipu.org/parliament/HN/HN-LC01/election/HN-LC01-E20211128/": {
-      "archiveUrl": "https://web.archive.org/web/20250619221834/https://data.ipu.org/parliament/HN/HN-LC01/election/HN-LC01-E20211128/",
-      "timestamp": "20250619221834",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:36:49.824Z"
-    },
-    "https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform": {
-      "archiveUrl": "https://web.archive.org/web/20251028064906/https://en.wikipedia.org/wiki/2024_Mexican_judicial_reform",
-      "timestamp": "20251028064906",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:36:50.328Z"
-    },
-    "https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections": {
-      "archiveUrl": "https://web.archive.org/web/20260617060150/https://en.wikipedia.org/wiki/2025_Mexican_judicial_elections",
-      "timestamp": "20260617060150",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:36:50.586Z"
-    },
-    "https://www.eluniversal.com.mx/nacion/1994-cuando-zedillo-bajo-de-26-a-11-a-los-ministros-de-la-suprema-corte/": {
-      "archiveUrl": "https://web.archive.org/web/20260313230900/https://www.eluniversal.com.mx/nacion/1994-cuando-zedillo-bajo-de-26-a-11-a-los-ministros-de-la-suprema-corte/",
-      "timestamp": "20260313230900",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:36:50.891Z"
-    },
-    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_of_the_Nation": {
-      "archiveUrl": "https://web.archive.org/web/20260113124252/https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_of_the_Nation",
-      "timestamp": "20260113124252",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:36:51.095Z"
-    },
-    "https://www.courthousenews.com/mexicos-next-supreme-court-justice-could-be-hand-picked-by-the-president/": {
-      "archiveUrl": "https://web.archive.org/web/20260118054409/https://www.courthousenews.com/mexicos-next-supreme-court-justice-could-be-hand-picked-by-the-president/",
-      "timestamp": "20260118054409",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:51.249Z"
-    },
-    "https://www.americasquarterly.org/article/mexicos-new-supreme-court/": {
-      "archiveUrl": "https://web.archive.org/web/20260519055655/https://americasquarterly.org/article/mexicos-new-supreme-court/",
-      "timestamp": "20260519055655",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:51.988Z"
-    },
-    "https://mexiconewsdaily.com/news/mexicos-new-supreme-court-takes-bench/": {
-      "archiveUrl": "https://web.archive.org/web/20260301101506/https://mexiconewsdaily.com/news/mexicos-new-supreme-court-takes-bench/",
-      "timestamp": "20260301101506",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:52.244Z"
-    },
-    "https://www.hrw.org/news/2025/09/01/mexico-electoral-process-undermines-judicial-independence": {
-      "archiveUrl": "https://web.archive.org/web/20260705060205/https://www.hrw.org/news/2025/09/01/mexico-electoral-process-undermines-judicial-independence",
-      "timestamp": "20260705060205",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:52.672Z"
-    },
-    "https://www.capitalmexico.com.mx/nacional/foro-de-sao-paulo-relacionado-mexico-prd-morena-cuba-brasil-venezuela/": {
-      "archiveUrl": "https://web.archive.org/web/20230508121209/https://www.capitalmexico.com.mx/nacional/foro-de-sao-paulo-relacionado-mexico-prd-morena-cuba-brasil-venezuela/",
-      "timestamp": "20230508121209",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:53.448Z"
-    },
-    "https://en.wikipedia.org/wiki/Party_of_the_Democratic_Revolution": {
-      "archiveUrl": "https://web.archive.org/web/20260707110550/https://en.wikipedia.org/wiki/Party_of_the_Democratic_Revolution",
-      "timestamp": "20260707110550",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:53.649Z"
-    },
-    "https://en.wikipedia.org/wiki/2024_Mexican_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260715194309/https://en.wikipedia.org/wiki/2024_Mexican_general_election",
-      "timestamp": "20260715194309",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:55.850Z"
-    },
-    "https://en.wikipedia.org/wiki/2018_Mexican_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260715194308/https://en.wikipedia.org/wiki/2018_Mexican_general_election",
-      "timestamp": "20260715194308",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:56.031Z"
-    },
-    "https://en.wikipedia.org/wiki/LXVI_Legislature_of_the_Mexican_Congress": {
-      "archiveUrl": "https://web.archive.org/web/20260311143400/https://en.wikipedia.org/wiki/LXVI_Legislature_of_the_Mexican_Congress",
-      "timestamp": "20260311143400",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:56.369Z"
-    },
-    "https://en.wikipedia.org/wiki/2024_Mexican_Chamber_of_Deputies_election": {
-      "archiveUrl": "https://web.archive.org/web/20251113224345/https://en.wikipedia.org/wiki/2024_Mexican_Chamber_of_Deputies_election",
-      "timestamp": "20251113224345",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:56.549Z"
-    },
-    "https://en.wikipedia.org/wiki/2024_Mexican_Senate_election": {
-      "archiveUrl": "https://web.archive.org/web/20251226061017/https://en.wikipedia.org/wiki/2024_Mexican_Senate_election",
-      "timestamp": "20251226061017",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:57.377Z"
-    },
-    "https://www.electionguide.org/elections/id/4312/": {
-      "archiveUrl": "https://web.archive.org/web/20260527124656/https://electionguide.org/elections/id/4312/",
-      "timestamp": "20260527124656",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:57.577Z"
-    },
-    "https://data.ipu.org/parliament/MX/MX-LC01/election/MX-LC01-E20180701/": {
-      "archiveUrl": "https://web.archive.org/web/20251028183409/https://data.ipu.org/parliament/MX/MX-LC01/election/MX-LC01-E20180701/",
-      "timestamp": "20251028183409",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:57.780Z"
-    },
-    "https://www.congress.gov/crs_external_products/IF/PDF/IF10867/IF10867.5.pdf": {
-      "archiveUrl": "https://web.archive.org/web/20260605124656/https://www.congress.gov/crs_external_products/IF/PDF/IF10867/IF10867.5.pdf",
-      "timestamp": "20260605124656",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:37:59.733Z"
-    },
-    "https://data.ipu.org/parliament/MX/MX-UC01/election/MX-UC01-E20180701/": {
-      "archiveUrl": "https://web.archive.org/web/20251206051022/https://data.ipu.org/parliament/MX/MX-UC01/election/MX-UC01-E20180701/",
-      "timestamp": "20251206051022",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:00.519Z"
-    },
-    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)": {
-      "archiveUrl": "https://web.archive.org/web/20260115170957/https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Nicaragua)",
-      "timestamp": "20260115170957",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:00.720Z"
-    },
-    "https://en.wikipedia.org/wiki/Daniel_Ortega": {
-      "archiveUrl": "https://web.archive.org/web/20260706003926/https://en.wikipedia.org/wiki/Daniel_Ortega",
-      "timestamp": "20260706003926",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:00.897Z"
-    },
-    "https://nacla.org/strange-bedfellows-aleman-ortega-pact/": {
-      "archiveUrl": "https://web.archive.org/web/20260415135834/https://nacla.org/strange-bedfellows-aleman-ortega-pact/",
-      "timestamp": "20260415135834",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:03.007Z"
-    },
-    "https://www.oas.org/en/iachr/reports/pdfs/2021_nicaragua-en.pdf": {
-      "archiveUrl": "https://web.archive.org/web/20251220120319/https://www.oas.org/en/iachr/reports/pdfs/2021_nicaragua-en.pdf",
-      "timestamp": "20251220120319",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:03.219Z"
-    },
-    "https://www.refworld.org/reference/annualreport/freehou/2013/en/63359": {
-      "archiveUrl": "https://web.archive.org/web/20250322231942/https://www.refworld.org/reference/annualreport/freehou/2013/en/63359",
-      "timestamp": "20250322231942",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:03.488Z"
-    },
-    "https://en.wikipedia.org/wiki/National_Assembly_(Nicaragua)": {
-      "archiveUrl": "https://web.archive.org/web/20260716162031/https://en.wikipedia.org/wiki/National_Assembly_(Nicaragua)",
-      "timestamp": "20260716162031",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:03.727Z"
-    },
-    "https://en.wikipedia.org/wiki/2016_Nicaraguan_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260228101414/https://en.wikipedia.org/wiki/2016_Nicaraguan_general_election",
-      "timestamp": "20260228101414",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:04.550Z"
-    },
-    "https://en.wikipedia.org/wiki/2021_Nicaraguan_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260405215042/https://en.wikipedia.org/wiki/2021_Nicaraguan_general_election",
-      "timestamp": "20260405215042",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:04.751Z"
-    },
-    "https://data.ipu.org/parliament/NI/NI-LC01/election/NI-LC01-E20211107/": {
-      "archiveUrl": "https://web.archive.org/web/20250426162114/https://data.ipu.org/parliament/NI/NI-LC01/election/NI-LC01-E20211107/",
-      "timestamp": "20250426162114",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:04.974Z"
-    },
-    "https://freedomhouse.org/country/nicaragua/freedom-world/2022": {
-      "archiveUrl": "https://web.archive.org/web/20260430022821/https://freedomhouse.org/country/nicaragua/freedom-world/2022",
-      "timestamp": "20260430022821",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:05.204Z"
-    },
-    "https://en.wikipedia.org/wiki/2011_Nicaraguan_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260202124149/https://en.wikipedia.org/wiki/2011_Nicaraguan_general_election",
-      "timestamp": "20260202124149",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:06.787Z"
-    },
-    "https://www.electionguide.org/elections/id/1610/": {
-      "archiveUrl": "https://web.archive.org/web/20260527122437/https://www.electionguide.org/elections/id/1610/",
-      "timestamp": "20260527122437",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:07.866Z"
-    },
-    "http://archive.ipu.org/parline/reports/2235_E.htm": {
-      "archiveUrl": "https://web.archive.org/web/20251206051114/http://archive.ipu.org/Parline/reports/2235_E.htm",
-      "timestamp": "20251206051114",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:08.163Z"
-    },
-    "https://en.wikipedia.org/wiki/List_of_presidents_of_Peru": {
-      "archiveUrl": "https://web.archive.org/web/20260701114200/https://en.wikipedia.org/wiki/List_of_presidents_of_Peru",
-      "timestamp": "20260701114200",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:08.360Z"
-    },
-    "https://en.wikipedia.org/wiki/Ollanta_Humala": {
-      "archiveUrl": "https://web.archive.org/web/20260711222403/https://en.wikipedia.org/wiki/Ollanta_Humala",
-      "timestamp": "20260711222403",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:08.607Z"
-    },
-    "https://en.wikipedia.org/wiki/Jos%C3%A9_Jer%C3%AD": {
-      "archiveUrl": "https://web.archive.org/web/20260611181808/https://en.wikipedia.org/wiki/Jos%C3%A9_Jer%C3%AD",
-      "timestamp": "20260611181808",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:08.799Z"
-    },
-    "https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Balc%C3%A1zar": {
-      "archiveUrl": "https://web.archive.org/web/20260701114120/https://en.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_Balc%C3%A1zar",
-      "timestamp": "20260701114120",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:08.990Z"
-    },
-    "https://en.wikipedia.org/wiki/2026_Peruvian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260703190311/https://en.wikipedia.org/wiki/2026_Peruvian_general_election",
-      "timestamp": "20260703190311",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:09.567Z"
-    },
-    "https://en.wikipedia.org/wiki/2011_Peruvian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260614202940/https://en.wikipedia.org/wiki/2011_Peruvian_general_election",
-      "timestamp": "20260614202940",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:09.766Z"
-    },
-    "https://en.wikipedia.org/wiki/2016_Peruvian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260611181807/https://en.wikipedia.org/wiki/2016_Peruvian_general_election",
-      "timestamp": "20260611181807",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:09.928Z"
-    },
-    "https://diariocorreo.pe/politica/el-peru-libre-de-vladimir-cerron-integra-el-foro-de-sao-paulo-noticia/": {
-      "archiveUrl": "https://web.archive.org/web/20260411112029/https://diariocorreo.pe/politica/el-peru-libre-de-vladimir-cerron-integra-el-foro-de-sao-paulo-noticia/",
-      "timestamp": "20260411112029",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:10.401Z"
-    },
-    "https://en.wikipedia.org/wiki/2021_Peruvian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260713190025/https://en.wikipedia.org/wiki/2021_Peruvian_general_election",
-      "timestamp": "20260713190025",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:10.560Z"
-    },
-    "https://data.ipu.org/election-summary/HTML/2251_11.htm": {
-      "archiveUrl": "https://web.archive.org/web/20251206050618/https://data.ipu.org/election-summary/HTML/2251_11.htm",
-      "timestamp": "20251206050618",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:11.026Z"
-    },
-    "https://data.ipu.org/parliament/PE/PE-LC01/election/PE-LC01-E20210411/": {
-      "archiveUrl": "https://web.archive.org/web/20260413104829/https://data.ipu.org/parliament/PE/PE-LC01/election/PE-LC01-E20210411/",
-      "timestamp": "20260413104829",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:11.698Z"
-    },
-    "https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo": {
-      "archiveUrl": "https://web.archive.org/web/20210615062502/https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo",
-      "timestamp": "20210615062502",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:15.084Z"
-    },
-    "https://en.wikipedia.org/wiki/List_of_presidents_of_Paraguay": {
-      "archiveUrl": "https://web.archive.org/web/20260701114111/https://en.wikipedia.org/wiki/List_of_Presidents_of_Paraguay",
-      "timestamp": "20260701114111",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:16.385Z"
-    },
-    "https://en.wikipedia.org/wiki/Guas%C3%BA_Front": {
-      "archiveUrl": "https://web.archive.org/web/20251212053121/https://en.wikipedia.org/wiki/Guas%C3%BA_Front",
-      "timestamp": "20251212053121",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:16.717Z"
-    },
-    "https://en.wikipedia.org/wiki/Fernando_Lugo": {
-      "archiveUrl": "https://web.archive.org/web/20260714143647/https://en.wikipedia.org/wiki/Fernando_Lugo",
-      "timestamp": "20260714143647",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:16.935Z"
-    },
-    "https://en.wikipedia.org/wiki/Colorado_Party_(Paraguay)": {
-      "archiveUrl": "https://web.archive.org/web/20260630072446/https://en.wikipedia.org/wiki/Colorado_Party_(Paraguay)",
-      "timestamp": "20260630072446",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:18.671Z"
-    },
-    "https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm": {
-      "archiveUrl": "https://web.archive.org/web/20260606010146/https://elfaro.net/en/202105/el_salvador/25452/New-Legislative-Assembly-Ousts-Supreme-Court-Magistrates-and-Attorney-General.htm",
-      "timestamp": "20260606010146",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:18.940Z"
-    },
-    "https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding": {
-      "archiveUrl": "https://web.archive.org/web/20260514140134/https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding",
-      "timestamp": "20260514140134",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:38:19.425Z"
-    },
-    "https://en.wikipedia.org/wiki/2021_Salvadoran_legislative_election": {
-      "archiveUrl": "https://web.archive.org/web/20260524030741/https://en.wikipedia.org/wiki/2021_Salvadoran_legislative_election",
-      "timestamp": "20260524030741",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:39:15.062Z"
-    },
-    "https://elfaro.net/es/202103/el_salvador/25304/Bukele-gana-la-Asamblea-Legislativa.htm": {
-      "archiveUrl": "https://web.archive.org/web/20260119235832/https://elfaro.net/es/202103/el_salvador/25304/Bukele-gana-la-Asamblea-Legislativa.htm",
-      "timestamp": "20260119235832",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:40:11.502Z"
-    },
-    "https://en.wikipedia.org/wiki/2009_Salvadoran_legislative_election": {
-      "archiveUrl": "https://web.archive.org/web/20251206072818/https://en.wikipedia.org/wiki/2009_Salvadoran_legislative_election",
-      "timestamp": "20251206072818",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:40:11.843Z"
-    },
-    "https://revista.drclas.harvard.edu/the-salvadoran-right-since-2009/": {
-      "archiveUrl": "https://web.archive.org/web/20240606165832/https://revista.drclas.harvard.edu/the-salvadoran-right-since-2009/",
-      "timestamp": "20240606165832",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:40:12.147Z"
-    },
-    "http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2019000200061&lng=es&nrm=iso&tlng=es": {
-      "archiveUrl": "https://web.archive.org/web/20250612062552/http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2019000200061&lng=es&nrm=iso&tlng=es",
-      "timestamp": "20250612062552",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:41:07.803Z"
-    },
-    "https://www.redalyc.org/journal/675/67559606003/html/": {
-      "archiveUrl": "https://web.archive.org/web/20240307184210/https://www.redalyc.org/journal/675/67559606003/html/",
-      "timestamp": "20240307184210",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:41:12.940Z"
-    },
-    "http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2020000100135": {
-      "archiveUrl": "https://web.archive.org/web/20240603163355/http://www.scielo.edu.uy/scielo.php?script=sci_arttext&pid=S1688-499X2020000100135",
-      "timestamp": "20240603163355",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:41:14.286Z"
-    },
-    "https://www.poderjudicial.gub.uy/suprema-corte-de-justicia/integrantes": {
-      "archiveUrl": "https://web.archive.org/web/20260412233910/https://www.poderjudicial.gub.uy/suprema-corte-de-justicia/integrantes",
-      "timestamp": "20260412233910",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:41:15.216Z"
-    },
-    "https://en.wikipedia.org/wiki/2019_Uruguayan_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20251210003446/https://en.wikipedia.org/wiki/2019_Uruguayan_general_election",
-      "timestamp": "20251210003446",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:41:16.889Z"
-    },
-    "https://en.wikipedia.org/wiki/2024_Uruguayan_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260422232659/https://en.wikipedia.org/wiki/2024_Uruguayan_general_election",
-      "timestamp": "20260422232659",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:41:17.088Z"
-    },
-    "https://data.ipu.org/parliament/UY/UY-UC01/election/UY-UC01-E20241027/": {
-      "archiveUrl": "https://web.archive.org/web/20251227000827/https://data.ipu.org/parliament/UY/UY-UC01/election/UY-UC01-E20241027/",
-      "timestamp": "20251227000827",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:41:18.723Z"
-    },
-    "https://en.wikipedia.org/wiki/2009_Uruguayan_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260622202438/https://en.wikipedia.org/wiki/2009_Uruguayan_general_election",
-      "timestamp": "20260622202438",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:41:21.625Z"
-    },
-    "https://www.electionguide.org/elections/id/456/": {
-      "archiveUrl": "https://web.archive.org/web/20260527110728/https://www.electionguide.org/elections/id/456/",
-      "timestamp": "20260527110728",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:16.736Z"
-    },
-    "https://www.electionguide.org/elections/id/967/": {
-      "archiveUrl": "https://web.archive.org/web/20260527125018/https://www.electionguide.org/elections/id/967/",
-      "timestamp": "20260527125018",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:16.960Z"
-    },
-    "https://en.wikipedia.org/wiki/2004_Uruguayan_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260410173742/https://en.wikipedia.org/wiki/2004_Uruguayan_general_election",
-      "timestamp": "20260410173742",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:17.141Z"
-    },
-    "https://electionguide.org/elections/id/338/": {
-      "archiveUrl": "https://web.archive.org/web/20260527110709/https://www.electionguide.org/elections/id/338/",
-      "timestamp": "20260527110709",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:17.383Z"
-    },
-    "https://es.wikipedia.org/wiki/Frente_Amplio_(Uruguay)": {
-      "archiveUrl": "https://web.archive.org/web/20260709031646/https://es.wikipedia.org/wiki/Frente_Amplio_(Uruguay)",
-      "timestamp": "20260709031646",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:17.603Z"
-    },
-    "https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)": {
-      "archiveUrl": "https://web.archive.org/web/20260405162532/https://en.wikipedia.org/wiki/Supreme_Tribunal_of_Justice_(Venezuela)",
-      "timestamp": "20260405162532",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:17.812Z"
-    },
-    "https://www.hrw.org/report/2004/06/16/rigging-rule-law/judicial-independence-under-siege-venezuela": {
-      "archiveUrl": "https://web.archive.org/web/20260216230646/https://www.hrw.org/report/2004/06/16/rigging-rule-law/judicial-independence-under-siege-venezuela",
-      "timestamp": "20260216230646",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:18.052Z"
-    },
-    "https://www.hrw.org/news/2004/12/13/venezuela-chavez-allies-pack-supreme-court": {
-      "archiveUrl": "https://web.archive.org/web/20260527002138/https://www.hrw.org/news/2004/12/13/venezuela-chavez-allies-pack-supreme-court",
-      "timestamp": "20260527002138",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:18.290Z"
-    },
-    "https://www.hrw.org/news/2015/12/10/venezuela-curb-plan-pack-supreme-court": {
-      "archiveUrl": "https://web.archive.org/web/20260506052754/https://www.hrw.org/news/2015/12/10/venezuela-curb-plan-pack-supreme-court",
-      "timestamp": "20260506052754",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:18.536Z"
-    },
-    "https://en.wikipedia.org/wiki/National_Assembly_(Venezuela)": {
-      "archiveUrl": "https://web.archive.org/web/20260617113659/https://en.wikipedia.org/wiki/National_Assembly_(Venezuela)",
-      "timestamp": "20260617113659",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:19.434Z"
-    },
-    "https://en.wikipedia.org/wiki/2015_Venezuelan_parliamentary_election": {
-      "archiveUrl": "https://web.archive.org/web/20260610215914/https://en.wikipedia.org/wiki/2015_Venezuelan_parliamentary_election",
-      "timestamp": "20260610215914",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:42:19.756Z"
-    },
-    "https://en.wikipedia.org/wiki/2010_Venezuelan_parliamentary_election": {
-      "archiveUrl": "https://web.archive.org/web/20260610215858/https://en.wikipedia.org/wiki/2010_Venezuelan_parliamentary_election",
-      "timestamp": "20260610215858",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:43:20.020Z"
-    },
-    "http://archive.ipu.org/parline/reports/arc/2347_10.htm": {
-      "archiveUrl": "https://web.archive.org/web/20260416051103/http://archive.ipu.org/parline/reports/arc/2347_10.htm",
-      "timestamp": "20260416051103",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:43:20.210Z"
-    },
-    "https://www.csis.org/analysis/venezuelan-parliamentary-elections": {
-      "archiveUrl": "https://web.archive.org/web/20260115073448/https://www.csis.org/analysis/venezuelan-parliamentary-elections",
-      "timestamp": "20260115073448",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:43:20.578Z"
-    },
-    "https://en.wikipedia.org/wiki/Workers%27_Party_(Brazil)": {
-      "archiveUrl": "https://web.archive.org/web/20260706123727/https://en.wikipedia.org/wiki/Workers'_Party_(Brazil)",
-      "timestamp": "20260706123727",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:49:45.569Z"
-    },
-    "https://pdba.georgetown.edu/Elecdata/Brazil/dip02.html": {
-      "archiveUrl": "https://web.archive.org/web/20240611192555/https://pdba.georgetown.edu/Elecdata/Brazil/dip02.html",
-      "timestamp": "20240611192555",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:49:46.831Z"
-    },
-    "https://en.wikipedia.org/wiki/2025_Honduran_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260716024033/https://en.wikipedia.org/wiki/2025_Honduran_general_election",
-      "timestamp": "20260716024033",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:52:41.217Z"
-    },
-    "https://mexiconewsdaily.com/politics/amlo-appoints-supreme-court-justice-batres/": {
-      "archiveUrl": "https://web.archive.org/web/20260307095847/https://mexiconewsdaily.com/politics/amlo-appoints-supreme-court-justice-batres/",
-      "timestamp": "20260307095847",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:52:41.456Z"
-    },
-    "https://en.wikipedia.org/wiki/2020_Venezuelan_parliamentary_election": {
-      "archiveUrl": "https://web.archive.org/web/20260702014054/https://en.wikipedia.org/wiki/2020_Venezuelan_parliamentary_election",
-      "timestamp": "20260702014054",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T10:56:21.611Z"
-    },
-    "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/": {
-      "archiveUrl": "https://web.archive.org/web/20260719110446/https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/",
-      "timestamp": "20260719110446",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T11:20:12.618Z"
-    },
-    "https://atlasinstitute.org/how-presidential-nominations-shape-brazils-highest-court/": {
-      "archiveUrl": "https://web.archive.org/web/20260719110624/https://atlasinstitute.org/how-presidential-nominations-shape-brazils-highest-court/",
-      "timestamp": "20260719110624",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T11:20:13.366Z"
-    },
-    "https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)": {
-      "archiveUrl": "https://web.archive.org/web/20260719111326/https://en.wikipedia.org/wiki/Supreme_Court_of_Justice_(Uruguay)",
-      "timestamp": "20260719111326",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-19T11:24:55.718Z"
-    },
-    "https://www.masparachile.cl/noticias/como-quedo-compuesta-la-camara-de-diputadas-y-diputados-tras-las-elecciones-2025": {
-      "archiveUrl": "https://web.archive.org/web/20260302130056/https://www.masparachile.cl/noticias/como-quedo-compuesta-la-camara-de-diputadas-y-diputados-tras-las-elecciones-2025",
-      "timestamp": "20260302130056",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:39:40.622Z"
-    },
-    "https://www.emol.com/noticias/Nacional/2025/12/14/1185707/nuevo-senado-congreso-miembros-partidos.html": {
-      "archiveUrl": "https://web.archive.org/web/20260116025116/https://www.emol.com/noticias/Nacional/2025/12/14/1185707/nuevo-senado-congreso-miembros-partidos.html",
-      "timestamp": "20260116025116",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:40:48.376Z"
-    },
-    "https://www.hrw.org/world-report/2025/country-chapters/cuba": {
-      "archiveUrl": "https://web.archive.org/web/20260712075907/https://www.hrw.org/world-report/2025/country-chapters/cuba",
-      "timestamp": "20260712075907",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:40:48.605Z"
+      "checkedAt": "2026-07-19T10:28:33.554Z"
     },
     "https://freedomhouse.org/country/cuba": {
       "archiveUrl": "https://web.archive.org/web/20260601004954/https://freedomhouse.org/country/cuba",
@@ -1533,61 +1120,19 @@
       "fresh": false,
       "checkedAt": "2026-07-20T07:40:48.863Z"
     },
-    "https://www.oas.org/en/iachr/docs/annual/2023/chapters/IA2023_Cap_4B_Cuba_ENG.PDF": {
-      "archiveUrl": "https://web.archive.org/web/20260105162827/https://www.oas.org/en/iachr/docs/annual/2023/chapters/IA2023_Cap_4B_Cuba_ENG.PDF",
-      "timestamp": "20260105162827",
+    "https://freedomhouse.org/country/nicaragua/freedom-world/2022": {
+      "archiveUrl": "https://web.archive.org/web/20260430022821/https://freedomhouse.org/country/nicaragua/freedom-world/2022",
+      "timestamp": "20260430022821",
       "status": "200",
       "fresh": false,
-      "checkedAt": "2026-07-20T07:40:49.113Z"
+      "checkedAt": "2026-07-19T10:38:05.204Z"
     },
-    "https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election": {
-      "archiveUrl": "https://web.archive.org/web/20260503231905/https://en.wikipedia.org/wiki/2025_Ecuadorian_general_election",
-      "timestamp": "20260503231905",
+    "https://fuentedirecta.oep.org.bo/noticia/elecciones-generales-2025-cinco-organizaciones-politicas-tendran-representacion-en-la-asamblea-legislativa-plurinacional/": {
+      "archiveUrl": "https://web.archive.org/web/20260326020310/https://fuentedirecta.oep.org.bo/noticia/elecciones-generales-2025-cinco-organizaciones-politicas-tendran-representacion-en-la-asamblea-legislativa-plurinacional/",
+      "timestamp": "20260326020310",
       "status": "200",
       "fresh": false,
-      "checkedAt": "2026-07-20T07:41:52.939Z"
-    },
-    "https://www.cne.gob.ec/cne-proclama-resultados-definitivos-y-adjudica-escanos-de-asambleistas-nacionales-y-parlamentarios-andinos/": {
-      "archiveUrl": "https://web.archive.org/web/20250409180542/https://www.cne.gob.ec/cne-proclama-resultados-definitivos-y-adjudica-escanos-de-asambleistas-nacionales-y-parlamentarios-andinos/",
-      "timestamp": "20250409180542",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:41:53.195Z"
-    },
-    "https://www.primicias.ec/elecciones/ecuador2025/asamblea/resultados-candidatos-asambleistas-nacionales-provinciales-bancadas-cne-89388/": {
-      "archiveUrl": "https://web.archive.org/web/20260123023939/https://www.primicias.ec/elecciones/ecuador2025/asamblea/resultados-candidatos-asambleistas-nacionales-provinciales-bancadas-cne-89388/",
-      "timestamp": "20260123023939",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:41:53.489Z"
-    },
-    "https://www.americanbar.org/groups/human_rights/reports/honduras-elige-nueva-corte-suprema/": {
-      "archiveUrl": "https://web.archive.org/web/20250421022012/https://www.americanbar.org/groups/human_rights/reports/honduras-elige-nueva-corte-suprema/",
-      "timestamp": "20250421022012",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:42:59.791Z"
-    },
-    "https://cnnespanol.cnn.com/2023/02/17/congreso-honduras-nuevos-15-magistrados-corte-suprema-justicia-orix/": {
-      "archiveUrl": "https://web.archive.org/web/20230924152331/https://cnnespanol.cnn.com/2023/02/17/congreso-honduras-nuevos-15-magistrados-corte-suprema-justicia-orix/",
-      "timestamp": "20230924152331",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:43:00.088Z"
-    },
-    "https://www.expedientepublico.org/honduras-eligio-a-los-15-nuevos-magistrados-de-la-corte-suprema-de-justicia/": {
-      "archiveUrl": "https://web.archive.org/web/20260218121733/https://www.expedientepublico.org/honduras-eligio-a-los-15-nuevos-magistrados-de-la-corte-suprema-de-justicia/",
-      "timestamp": "20260218121733",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:43:00.351Z"
-    },
-    "https://www.laprensa.hn/premium/especiales/resultados-elecciones-honduras-2025/elecciones-honduras-2025-declaratoria-congreso-nacional-diputados-FK28776461": {
-      "archiveUrl": "https://web.archive.org/web/20260110212621/https://www.laprensa.hn/premium/especiales/resultados-elecciones-honduras-2025/elecciones-honduras-2025-declaratoria-congreso-nacional-diputados-FK28776461",
-      "timestamp": "20260110212621",
-      "status": "200",
-      "fresh": false,
-      "checkedAt": "2026-07-20T07:44:26.954Z"
+      "checkedAt": "2026-07-19T10:28:38.906Z"
     },
     "https://mexiconewsdaily.com/mexico-elections-2024/mexico-morena-falls-short-senate-supermajority/": {
       "archiveUrl": "https://web.archive.org/web/20251115063734/https://mexiconewsdaily.com/mexico-elections-2024/mexico-morena-falls-short-senate-supermajority/",
@@ -1596,19 +1141,106 @@
       "fresh": false,
       "checkedAt": "2026-07-20T07:44:27.187Z"
     },
-    "https://contralacorrupcion.mx/una-mayoria-muchas-oposiciones-como-voto-el-senado-en-la-lxvi-legislatura": {
-      "archiveUrl": "https://web.archive.org/web/20251015061857/https://contralacorrupcion.mx/una-mayoria-muchas-oposiciones-como-voto-el-senado-en-la-lxvi-legislatura",
-      "timestamp": "20251015061857",
+    "https://mexiconewsdaily.com/news/mexicos-new-supreme-court-takes-bench/": {
+      "archiveUrl": "https://web.archive.org/web/20260301101506/https://mexiconewsdaily.com/news/mexicos-new-supreme-court-takes-bench/",
+      "timestamp": "20260301101506",
       "status": "200",
       "fresh": false,
-      "checkedAt": "2026-07-20T07:44:28.213Z"
+      "checkedAt": "2026-07-19T10:37:52.244Z"
     },
-    "https://es.wikipedia.org/wiki/Sala_de_lo_Constitucional_de_la_Corte_Suprema_de_Justicia_de_El_Salvador": {
-      "archiveUrl": "https://web.archive.org/web/20260504165821/https://es.wikipedia.org/wiki/Sala_de_lo_Constitucional_de_la_Corte_Suprema_de_Justicia_de_El_Salvador",
-      "timestamp": "20260504165821",
+    "https://mexiconewsdaily.com/politics/amlo-appoints-supreme-court-justice-batres/": {
+      "archiveUrl": "https://web.archive.org/web/20260307095847/https://mexiconewsdaily.com/politics/amlo-appoints-supreme-court-justice-batres/",
+      "timestamp": "20260307095847",
       "status": "200",
       "fresh": false,
-      "checkedAt": "2026-07-20T07:44:28.449Z"
+      "checkedAt": "2026-07-19T10:52:41.456Z"
+    },
+    "https://nacla.org/strange-bedfellows-aleman-ortega-pact/": {
+      "archiveUrl": "https://web.archive.org/web/20260415135834/https://nacla.org/strange-bedfellows-aleman-ortega-pact/",
+      "timestamp": "20260415135834",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:03.007Z"
+    },
+    "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa": {
+      "archiveUrl": "https://web.archive.org/web/20250208141042/https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
+      "timestamp": "20250208141042",
+      "status": "200",
+      "fresh": true,
+      "checkedAt": "2026-07-13T11:46:42.852Z"
+    },
+    "https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo": {
+      "archiveUrl": "https://web.archive.org/web/20210615062502/https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo",
+      "timestamp": "20210615062502",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:15.084Z"
+    },
+    "https://pcdob.org.br/noticias/pcdob-elege-seis-deputados-federais-em-cinco-estados/": {
+      "archiveUrl": "https://web.archive.org/web/20260214105526/https://pcdob.org.br/noticias/pcdob-elege-seis-deputados-federais-em-cinco-estados/",
+      "timestamp": "20260214105526",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:39.879Z"
+    },
+    "https://pdba.georgetown.edu/Elecdata/Brazil/dip02.html": {
+      "archiveUrl": "https://web.archive.org/web/20240611192555/https://pdba.georgetown.edu/Elecdata/Brazil/dip02.html",
+      "timestamp": "20240611192555",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:49:46.831Z"
+    },
+    "https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/": {
+      "archiveUrl": "https://web.archive.org/web/20251225164525/https://peoplesdispatch.org/2023/06/30/sao-paulo-forum-is-back-in-brasilia-with-leaders-from-across-the-globe/",
+      "timestamp": "20251225164525",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.146Z"
+    },
+    "https://portal.stf.jus.br/ostf/ministros/ministro.asp?periodo=STF&consulta=QUADRO_INDICACOES": {
+      "archiveUrl": "https://web.archive.org/web/20250610123937/https://portal.stf.jus.br/ostf/ministros/ministro.asp?periodo=STF&consulta=QUADRO_INDICACOES",
+      "timestamp": "20250610123937",
+      "status": "202",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:30:34.447Z"
+    },
+    "https://portal.stf.jus.br/textos/verTexto.asp?servico=sobreStfConhecaStfHistorico": {
+      "archiveUrl": "https://web.archive.org/web/20260219204020/https://portal.stf.jus.br/textos/verTexto.asp?servico=sobreStfConhecaStfHistorico",
+      "timestamp": "20260219204020",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:29:35.684Z"
+    },
+    "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/": {
+      "refId": "pt-oficial",
+      "archiveUrl": "https://web.archive.org/web/20260803074946/https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
+      "timestamp": "20260803074946",
+      "checkedAt": "2026-08-03"
+    },
+    "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo": {
+      "archiveUrl": "https://web.archive.org/web/20260618203344/https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
+      "timestamp": "20260618203344",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:49.877Z"
+    },
+    "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal": {
+      "archiveUrl": "https://web.archive.org/web/20260716004752/https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal",
+      "timestamp": "20260716004752",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:29:34.612Z"
+    },
+    "https://radiovox.org/": {
+      "archiveUrl": "https://web.archive.org/web/20251117020502/http://radiovox.org/",
+      "timestamp": "20251117020502",
+      "status": "200",
+      "checkedAt": "2026-07-06T08:44:47.133Z"
+    },
+    "https://revista.drclas.harvard.edu/the-salvadoran-right-since-2009/": {
+      "archiveUrl": "https://web.archive.org/web/20240606165832/https://revista.drclas.harvard.edu/the-salvadoran-right-since-2009/",
+      "timestamp": "20240606165832",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:40:12.147Z"
     },
     "https://revistamundoelectoral.com/articulo-internacional/luces-y-sombras-de-la-jurisprudencia-constitucional-electoral-en-el-salvador/": {
       "archiveUrl": "https://web.archive.org/web/20260514102900/https://revistamundoelectoral.com/articulo-internacional/luces-y-sombras-de-la-jurisprudencia-constitucional-electoral-en-el-salvador/",
@@ -1617,12 +1249,326 @@
       "fresh": false,
       "checkedAt": "2026-07-20T07:44:28.703Z"
     },
-    "https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)": {
-      "archiveUrl": "https://web.archive.org/web/20260719115650/https://en.wikipedia.org/wiki/Legislative_Assembly_(El_Salvador)",
-      "timestamp": "20260719115650",
+    "https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861": {
+      "archiveUrl": "https://web.archive.org/web/20260713000047/https://www.amazon.com/Foro-S%C3%A3o-Paulo-latino-americano-Portuguese/dp/8595071861",
+      "timestamp": "20260713000047",
+      "status": "200",
+      "checkedAt": "2026-07-13T01:19:15.942Z"
+    },
+    "https://www.americanbar.org/groups/human_rights/reports/honduras-elige-nueva-corte-suprema/": {
+      "archiveUrl": "https://web.archive.org/web/20250421022012/https://www.americanbar.org/groups/human_rights/reports/honduras-elige-nueva-corte-suprema/",
+      "timestamp": "20250421022012",
       "status": "200",
       "fresh": false,
-      "checkedAt": "2026-07-20T07:44:29.976Z"
+      "checkedAt": "2026-07-20T07:42:59.791Z"
+    },
+    "https://www.americasquarterly.org/article/mexicos-new-supreme-court/": {
+      "archiveUrl": "https://web.archive.org/web/20260519055655/https://americasquarterly.org/article/mexicos-new-supreme-court/",
+      "timestamp": "20260519055655",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:51.988Z"
+    },
+    "https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/": {
+      "archiveUrl": "https://web.archive.org/web/20250919173312/https://www.brasildefato.com.br/2020/07/29/foro-de-sao-paulo-completa-30-anos-entenda-sua-importancia/",
+      "timestamp": "20250919173312",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.063Z"
+    },
+    "https://www.brasildefato.com.br/2025/10/17/lula-to-make-11th-supreme-court-appointment-as-justice-barroso-retires-from-brazils-top-court/": {
+      "archiveUrl": "https://web.archive.org/web/20260514172728/https://www.brasildefato.com.br/2025/10/17/lula-to-make-11th-supreme-court-appointment-as-justice-barroso-retires-from-brazils-top-court/",
+      "timestamp": "20260514172728",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:30:34.008Z"
+    },
+    "https://www.cancilleria.gob.ar/es/actualidad/comunicados/esta-semana-se-reune-el-foro-de-sao-paulo-en-buenos-aires": {
+      "archiveUrl": "https://web.archive.org/web/20260117110026/https://www.cancilleria.gob.ar/es/actualidad/comunicados/esta-semana-se-reune-el-foro-de-sao-paulo-en-buenos-aires",
+      "timestamp": "20260117110026",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:29.625Z"
+    },
+    "https://www.capitalmexico.com.mx/nacional/foro-de-sao-paulo-relacionado-mexico-prd-morena-cuba-brasil-venezuela/": {
+      "archiveUrl": "https://web.archive.org/web/20230508121209/https://www.capitalmexico.com.mx/nacional/foro-de-sao-paulo-relacionado-mexico-prd-morena-cuba-brasil-venezuela/",
+      "timestamp": "20230508121209",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:53.448Z"
+    },
+    "https://www.cne.gob.ec/cne-proclama-resultados-definitivos-y-adjudica-escanos-de-asambleistas-nacionales-y-parlamentarios-andinos/": {
+      "archiveUrl": "https://web.archive.org/web/20250409180542/https://www.cne.gob.ec/cne-proclama-resultados-definitivos-y-adjudica-escanos-de-asambleistas-nacionales-y-parlamentarios-andinos/",
+      "timestamp": "20250409180542",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:41:53.195Z"
+    },
+    "https://www.cnn.com/2025/10/19/americas/bolivia-election-results-rodrigo-paz-intl-hnk": {
+      "archiveUrl": "https://web.archive.org/web/20251124192324/https://www.cnn.com/2025/10/19/americas/bolivia-election-results-rodrigo-paz-intl-hnk",
+      "timestamp": "20251124192324",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:38.317Z"
+    },
+    "https://www.congress.gov/crs_external_products/IF/PDF/IF10867/IF10867.5.pdf": {
+      "archiveUrl": "https://web.archive.org/web/20260605124656/https://www.congress.gov/crs_external_products/IF/PDF/IF10867/IF10867.5.pdf",
+      "timestamp": "20260605124656",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:59.733Z"
+    },
+    "https://www.courthousenews.com/mexicos-next-supreme-court-justice-could-be-hand-picked-by-the-president/": {
+      "archiveUrl": "https://web.archive.org/web/20260118054409/https://www.courthousenews.com/mexicos-next-supreme-court-justice-could-be-hand-picked-by-the-president/",
+      "timestamp": "20260118054409",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:51.249Z"
+    },
+    "https://www.csis.org/analysis/outcome-dominican-republic-general-elections": {
+      "archiveUrl": "https://web.archive.org/web/20260307225010/https://www.csis.org/analysis/outcome-dominican-republic-general-elections",
+      "timestamp": "20260307225010",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:33:51.867Z"
+    },
+    "https://www.csis.org/analysis/venezuelan-parliamentary-elections": {
+      "archiveUrl": "https://web.archive.org/web/20260115073448/https://www.csis.org/analysis/venezuelan-parliamentary-elections",
+      "timestamp": "20260115073448",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:43:20.578Z"
+    },
+    "https://www.electionguide.org/elections/id/1610/": {
+      "archiveUrl": "https://web.archive.org/web/20260527122437/https://www.electionguide.org/elections/id/1610/",
+      "timestamp": "20260527122437",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:07.866Z"
+    },
+    "https://www.electionguide.org/elections/id/381/": {
+      "archiveUrl": "https://web.archive.org/web/20260527111856/https://www.electionguide.org/elections/id/381/",
+      "timestamp": "20260527111856",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:41.294Z"
+    },
+    "https://www.electionguide.org/elections/id/4312/": {
+      "archiveUrl": "https://web.archive.org/web/20260527124656/https://electionguide.org/elections/id/4312/",
+      "timestamp": "20260527124656",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:57.577Z"
+    },
+    "https://www.electionguide.org/elections/id/456/": {
+      "archiveUrl": "https://web.archive.org/web/20260527110728/https://www.electionguide.org/elections/id/456/",
+      "timestamp": "20260527110728",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:16.736Z"
+    },
+    "https://www.electionguide.org/elections/id/4596/": {
+      "archiveUrl": "https://web.archive.org/web/20260720074316/https://www.electionguide.org/elections/id/4596/",
+      "timestamp": "20260720074316",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-27T08:04:38.315Z"
+    },
+    "https://www.electionguide.org/elections/id/967/": {
+      "archiveUrl": "https://web.archive.org/web/20260527125018/https://www.electionguide.org/elections/id/967/",
+      "timestamp": "20260527125018",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:16.960Z"
+    },
+    "https://www.eluniversal.com.mx/nacion/1994-cuando-zedillo-bajo-de-26-a-11-a-los-ministros-de-la-suprema-corte/": {
+      "archiveUrl": "https://web.archive.org/web/20260313230900/https://www.eluniversal.com.mx/nacion/1994-cuando-zedillo-bajo-de-26-a-11-a-los-ministros-de-la-suprema-corte/",
+      "timestamp": "20260313230900",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:36:50.891Z"
+    },
+    "https://www.eluniverso.com/noticias/politica/asi-esta-conformada-la-asamblea-nacional-del-ecuador-para-el-periodo-2023-2025-nota/": {
+      "archiveUrl": "https://web.archive.org/web/20240717170338/https://www.eluniverso.com/noticias/politica/asi-esta-conformada-la-asamblea-nacional-del-ecuador-para-el-periodo-2023-2025-nota/",
+      "timestamp": "20240717170338",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:51.322Z"
+    },
+    "https://www.emol.com/noticias/Nacional/2025/12/14/1185707/nuevo-senado-congreso-miembros-partidos.html": {
+      "archiveUrl": "https://web.archive.org/web/20260116025116/https://www.emol.com/noticias/Nacional/2025/12/14/1185707/nuevo-senado-congreso-miembros-partidos.html",
+      "timestamp": "20260116025116",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:40:48.376Z"
+    },
+    "https://www.erealizacoes.com.br/": {
+      "refId": "conspiracao-portas-abertas-2008",
+      "archiveUrl": "https://web.archive.org/web/20260515203341/http://erealizacoes.com.br/",
+      "timestamp": "20260515203341",
+      "checkedAt": "2026-08-03"
+    },
+    "https://www.everycrsreport.com/reports/IF10581.html": {
+      "archiveUrl": "https://web.archive.org/web/20251206050858/https://www.everycrsreport.com/reports/IF10581.html",
+      "timestamp": "20251206050858",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:53.053Z"
+    },
+    "https://www.expedientepublico.org/honduras-eligio-a-los-15-nuevos-magistrados-de-la-corte-suprema-de-justicia/": {
+      "archiveUrl": "https://web.archive.org/web/20260218121733/https://www.expedientepublico.org/honduras-eligio-a-los-15-nuevos-magistrados-de-la-corte-suprema-de-justicia/",
+      "timestamp": "20260218121733",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:43:00.351Z"
+    },
+    "https://www.gisreportsonline.com/r/sao-paulo-forum/": {
+      "archiveUrl": "https://web.archive.org/web/20260314020258/https://www.gisreportsonline.com/r/sao-paulo-forum/",
+      "timestamp": "20260314020258",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.411Z"
+    },
+    "https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo": {
+      "archiveUrl": "https://web.archive.org/web/20260630123637/https://www.goodreads.com/book/show/32619274-o-foro-de-s-o-paulo",
+      "timestamp": "20260630123637",
+      "status": "200",
+      "checkedAt": "2026-07-06T08:44:46.706Z"
+    },
+    "https://www.goodreads.com/book/show/54416676-el-foro-de-s-o-paulo": {
+      "archiveUrl": "https://web.archive.org/web/20260713121356/https://www.goodreads.com/book/show/54416676-el-foro-de-s-o-paulo",
+      "timestamp": "20260713121356",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:27:32.096Z"
+    },
+    "https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america": {
+      "archiveUrl": "https://web.archive.org/web/20260420085130/https://www.heritage.org/americas/commentary/the-marxist-influence-the-sao-paulo-forum-latin-america",
+      "timestamp": "20260420085130",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:41:50.318Z"
+    },
+    "https://www.hrw.org/news/2004/12/13/venezuela-chavez-allies-pack-supreme-court": {
+      "archiveUrl": "https://web.archive.org/web/20260527002138/https://www.hrw.org/news/2004/12/13/venezuela-chavez-allies-pack-supreme-court",
+      "timestamp": "20260527002138",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:18.290Z"
+    },
+    "https://www.hrw.org/news/2014/01/29/ecuador-ensure-judicial-independence": {
+      "archiveUrl": "https://web.archive.org/web/20260316160523/https://www.hrw.org/news/2014/01/29/ecuador-ensure-judicial-independence",
+      "timestamp": "20260316160523",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:48.265Z"
+    },
+    "https://www.hrw.org/news/2015/12/10/venezuela-curb-plan-pack-supreme-court": {
+      "archiveUrl": "https://web.archive.org/web/20260506052754/https://www.hrw.org/news/2015/12/10/venezuela-curb-plan-pack-supreme-court",
+      "timestamp": "20260506052754",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:18.536Z"
+    },
+    "https://www.hrw.org/news/2021/05/27/ecuador-implement-constitutional-court-rulings-protecting-rights": {
+      "archiveUrl": "https://web.archive.org/web/20260508122409/https://www.hrw.org/news/2021/05/27/ecuador-implement-constitutional-court-rulings-protecting-rights",
+      "timestamp": "20260508122409",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:48.794Z"
+    },
+    "https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding": {
+      "archiveUrl": "https://web.archive.org/web/20260514140134/https://www.hrw.org/news/2021/11/01/el-salvador-legislature-deepens-democratic-backsliding",
+      "timestamp": "20260514140134",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:19.425Z"
+    },
+    "https://www.hrw.org/news/2025/09/01/mexico-electoral-process-undermines-judicial-independence": {
+      "archiveUrl": "https://web.archive.org/web/20260705060205/https://www.hrw.org/news/2025/09/01/mexico-electoral-process-undermines-judicial-independence",
+      "timestamp": "20260705060205",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:37:52.672Z"
+    },
+    "https://www.hrw.org/report/2004/06/16/rigging-rule-law/judicial-independence-under-siege-venezuela": {
+      "archiveUrl": "https://web.archive.org/web/20260216230646/https://www.hrw.org/report/2004/06/16/rigging-rule-law/judicial-independence-under-siege-venezuela",
+      "timestamp": "20260216230646",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:42:18.052Z"
+    },
+    "https://www.hrw.org/world-report/2012/country-chapters/ecuador": {
+      "archiveUrl": "https://web.archive.org/web/20260121074430/https://www.hrw.org/world-report/2012/country-chapters/ecuador",
+      "timestamp": "20260121074430",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:48.060Z"
+    },
+    "https://www.hrw.org/world-report/2025/country-chapters/cuba": {
+      "archiveUrl": "https://web.archive.org/web/20260712075907/https://www.hrw.org/world-report/2025/country-chapters/cuba",
+      "timestamp": "20260712075907",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:40:48.605Z"
+    },
+    "https://www.icj.org/bolivia-new-report-highlights-shortcomings-and-challenges-of-judicial-independence/": {
+      "archiveUrl": "https://web.archive.org/web/20260418171628/https://www.icj.org/bolivia-new-report-highlights-shortcomings-and-challenges-of-judicial-independence/",
+      "timestamp": "20260418171628",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:33.303Z"
+    },
+    "https://www.icj.org/wp-content/uploads/2012/04/Argentina-Attacks-on-Justice-2005-Publications-2008.pdf": {
+      "archiveUrl": "https://web.archive.org/web/20260215101323/https://www.icj.org/wp-content/uploads/2012/04/Argentina-Attacks-on-Justice-2005-Publications-2008.pdf",
+      "timestamp": "20260215101323",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:27:33.832Z"
+    },
+    "https://www.iconnectblog.com/a-convenient-emergency-perilous-times-for-judicial-independence-in-ecuador/": {
+      "archiveUrl": "https://web.archive.org/web/20260214052435/https://www.iconnectblog.com/a-convenient-emergency-perilous-times-for-judicial-independence-in-ecuador/",
+      "timestamp": "20260214052435",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:34:49.499Z"
+    },
+    "https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/": {
+      "archiveUrl": "https://web.archive.org/web/20260630113004/https://www.infobae.com/america/agencias/2024/06/24/foro-de-sao-paulo-y-grupo-de-puebla-en-honduras-para-los-15-anos-del-golpe-de-estado-contra-zelaya/",
+      "timestamp": "20260630113004",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:42:48.151Z"
+    },
+    "https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/": {
+      "archiveUrl": "https://web.archive.org/web/20231024134035/https://www.infobae.com/america/opinion/2023/10/08/el-grupo-de-puebla-el-relevo-del-foro-de-sao-paulo/",
+      "timestamp": "20231024134035",
+      "status": "200",
+      "checkedAt": "2026-06-30T11:42:47.977Z"
+    },
+    "https://www.lanacion.com.ar/politica/cuando-cristina-kirchner-fustigaba-a-los-jueces-de-la-corte-ejemplar-de-nestor-kirchner-nid18072022/": {
+      "archiveUrl": "https://web.archive.org/web/20250319201309/https://www.lanacion.com.ar/politica/cuando-cristina-kirchner-fustigaba-a-los-jueces-de-la-corte-ejemplar-de-nestor-kirchner-nid18072022/",
+      "timestamp": "20250319201309",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:27:34.139Z"
+    },
+    "https://www.laprensa.hn/premium/especiales/resultados-elecciones-honduras-2025/elecciones-honduras-2025-declaratoria-congreso-nacional-diputados-FK28776461": {
+      "archiveUrl": "https://web.archive.org/web/20260110212621/https://www.laprensa.hn/premium/especiales/resultados-elecciones-honduras-2025/elecciones-honduras-2025-declaratoria-congreso-nacional-diputados-FK28776461",
+      "timestamp": "20260110212621",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:44:26.954Z"
+    },
+    "https://www.lexivox.org/norms/BO-DS-N432.html": {
+      "archiveUrl": "https://web.archive.org/web/20250603075742/https://www.lexivox.org/norms/BO-DS-N432.html",
+      "timestamp": "20250603075742",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:33.070Z"
+    },
+    "https://www.masparachile.cl/noticias/como-quedo-compuesta-la-camara-de-diputadas-y-diputados-tras-las-elecciones-2025": {
+      "archiveUrl": "https://web.archive.org/web/20260302130056/https://www.masparachile.cl/noticias/como-quedo-compuesta-la-camara-de-diputadas-y-diputados-tras-las-elecciones-2025",
+      "timestamp": "20260302130056",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:39:40.622Z"
     },
     "https://www.masparachile.cl/noticias/como-quedo-compuesto-el-senado-de-chile-tras-las-elecciones-2025": {
       "archiveUrl": "https://web.archive.org/web/20260311135525/https://www.masparachile.cl/noticias/como-quedo-compuesto-el-senado-de-chile-tras-las-elecciones-2025",
@@ -1631,12 +1577,110 @@
       "fresh": false,
       "checkedAt": "2026-07-27T08:02:16.280Z"
     },
-    "https://www.electionguide.org/elections/id/4596/": {
-      "archiveUrl": "https://web.archive.org/web/20260720074316/https://www.electionguide.org/elections/id/4596/",
-      "timestamp": "20260720074316",
+    "https://www.midiasemmascara.org/": {
+      "archiveUrl": "https://web.archive.org/web/20260601204728/http://www.midiasemmascara.org/",
+      "timestamp": "20260601204728",
+      "status": "200",
+      "checkedAt": "2026-07-13T01:56:18.220Z"
+    },
+    "https://www.npr.org/2026/07/28/nx-s1-5910830/peru-president-keiko-fujimori-inaugurated": {
+      "refId": "country-source",
+      "archiveUrl": "https://web.archive.org/web/20260729175533/https://www.npr.org/2026/07/28/nx-s1-5910830/peru-president-keiko-fujimori-inaugurated",
+      "timestamp": "20260729175533",
+      "checkedAt": "2026-08-03"
+    },
+    "https://www.oas.org/en/iachr/docs/annual/2023/chapters/IA2023_Cap_4B_Cuba_ENG.PDF": {
+      "archiveUrl": "https://web.archive.org/web/20260105162827/https://www.oas.org/en/iachr/docs/annual/2023/chapters/IA2023_Cap_4B_Cuba_ENG.PDF",
+      "timestamp": "20260105162827",
       "status": "200",
       "fresh": false,
-      "checkedAt": "2026-07-27T08:04:38.315Z"
+      "checkedAt": "2026-07-20T07:40:49.113Z"
+    },
+    "https://www.oas.org/en/iachr/reports/pdfs/2021_nicaragua-en.pdf": {
+      "archiveUrl": "https://web.archive.org/web/20251220120319/https://www.oas.org/en/iachr/reports/pdfs/2021_nicaragua-en.pdf",
+      "timestamp": "20251220120319",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:03.219Z"
+    },
+    "https://www.ohchr.org/en/press-releases/2024/01/bolivia-un-expert-concerned-about-delay-judicial-elections": {
+      "archiveUrl": "https://web.archive.org/web/20260119072142/https://www.ohchr.org/en/press-releases/2024/01/bolivia-un-expert-concerned-about-delay-judicial-elections",
+      "timestamp": "20260119072142",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:28:33.950Z"
+    },
+    "https://www.poderjudicial.gub.uy/suprema-corte-de-justicia/integrantes": {
+      "archiveUrl": "https://web.archive.org/web/20260412233910/https://www.poderjudicial.gub.uy/suprema-corte-de-justicia/integrantes",
+      "timestamp": "20260412233910",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:41:15.216Z"
+    },
+    "https://www.primicias.ec/elecciones/ecuador2025/asamblea/resultados-candidatos-asambleistas-nacionales-provinciales-bancadas-cne-89388/": {
+      "archiveUrl": "https://web.archive.org/web/20260123023939/https://www.primicias.ec/elecciones/ecuador2025/asamblea/resultados-candidatos-asambleistas-nacionales-provinciales-bancadas-cne-89388/",
+      "timestamp": "20260123023939",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-20T07:41:53.489Z"
+    },
+    "https://www.redalyc.org/journal/675/67559606003/html/": {
+      "archiveUrl": "https://web.archive.org/web/20240307184210/https://www.redalyc.org/journal/675/67559606003/html/",
+      "timestamp": "20240307184210",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:41:12.940Z"
+    },
+    "https://www.refworld.org/reference/annualreport/freehou/2013/en/63359": {
+      "archiveUrl": "https://web.archive.org/web/20250322231942/https://www.refworld.org/reference/annualreport/freehou/2013/en/63359",
+      "timestamp": "20250322231942",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:38:03.488Z"
+    },
+    "https://www.voltairenet.org/article154638.html": {
+      "archiveUrl": "https://web.archive.org/web/20250818142150/https://www.voltairenet.org/article154638.html",
+      "timestamp": "20250818142150",
+      "status": "200",
+      "checkedAt": "2026-07-11T23:07:57.731Z"
+    },
+    "https://www.youtube.com/@RadioVox1029": {
+      "archiveUrl": "https://web.archive.org/web/20250717231029/https://www.youtube.com/@radiovox1029",
+      "timestamp": "20250717231029",
+      "status": "200",
+      "checkedAt": "2026-07-13T01:55:11.728Z"
+    },
+    "https://www.youtube.com/watch?v=Mn9iS9jSs9E": {
+      "refId": "olavo-astv-2015",
+      "archiveUrl": "https://web.archive.org/web/20250905044131/https://www.youtube.com/watch?v=Mn9iS9jSs9E",
+      "timestamp": "20250905044131",
+      "checkedAt": "2026-08-03"
+    },
+    "https://www.youtube.com/watch?v=YoApKNuOQ1A": {
+      "refId": "olavo-ruschel-2014",
+      "archiveUrl": "https://web.archive.org/web/20250110225658/https://www.youtube.com/watch?v=YoApKNuOQ1A",
+      "timestamp": "20250110225658",
+      "checkedAt": "2026-08-03"
+    },
+    "https://www.youtube.com/watch?v=dlQG02mwTD0": {
+      "refId": "olavo-cof316-2015",
+      "archiveUrl": "https://web.archive.org/web/20260104190654/https://www.youtube.com/watch?v=dlQG02mwTD0",
+      "timestamp": "20260104190654",
+      "checkedAt": "2026-08-03"
+    },
+    "https://www12.senado.leg.br/noticias/materias/2022/10/31/bancadas-do-senado-estarao-mais-concentradas-em-2023": {
+      "archiveUrl": "https://web.archive.org/web/20260217120458/https://www12.senado.leg.br/noticias/materias/2022/10/31/bancadas-do-senado-estarao-mais-concentradas-em-2023",
+      "timestamp": "20260217120458",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:31:40.318Z"
+    },
+    "https://www18.fgv.br/cpdoc/acervo/dicionarios/verbete-tematico/supremo-tribunal-federal-stf": {
+      "archiveUrl": "https://web.archive.org/web/20240704171035/https://www18.fgv.br/Cpdoc/Acervo/dicionarios/verbete-tematico/supremo-tribunal-federal-stf",
+      "timestamp": "20240704171035",
+      "status": "200",
+      "fresh": false,
+      "checkedAt": "2026-07-19T10:29:35.966Z"
     }
   }
 }
