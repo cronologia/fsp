@@ -6,7 +6,7 @@
 > `node scripts/gen-catalog.js`. See [`context.md`](context.md) for domain
 > background and [`docs/adrs/`](docs/adrs/) for the architecture.
 
-_Last generated: 2026-08-03 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 48 references._
+_Last generated: 2026-08-03 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 49 references._
 
 ## Contents
 
@@ -347,3 +347,4 @@ the Internet Archive and as a local copy in the document vault (ADR-0004, ADR-00
 | `olavo-ruschel-2014` | Entrevista de Olavo de Carvalho para Leandro Ruschel | video (interview, critical) | <https://www.youtube.com/watch?v=YoApKNuOQ1A> |
 | `olavo-astv-2015` | The Triumph of Cultural Marxism — America's Survival TV, with Olavo de Carvalho, Cliff Kincaid and Jerry Kenney | video (interview, critical) | <https://www.youtube.com/watch?v=Mn9iS9jSs9E> |
 | `olavo-cof316-2015` | O Brasil perante a nova ordem mundial (online-course lecture) | video (lecture, critical) | <https://www.youtube.com/watch?v=dlQG02mwTD0> |
+| `olavo-true-outspeak` | True Outspeak (weekly programme, 2006–2011) | video (programme, critical) | <https://www.youtube.com/playlist?list=PLeDYbSG3ee95BaJB-caH9btRz6tcv2sne> |
