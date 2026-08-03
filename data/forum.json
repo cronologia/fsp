@@ -775,7 +775,7 @@
     ]
   },
   "criticalPerspectives": {
-    "note": "Several authors and outlets analyze the Foro de São Paulo as a coordinating network of the Latin American left, tracking the connections between its member parties and the spread of left governments in the region. These works are influential in Brazil's political debate. Some specific claims (e.g. formal ties to armed groups, or direct control of governments) are debated; such claims are attributed to their authors rather than asserted here as established fact.",
+    "note": "Several authors and outlets analyze the Foro de São Paulo as a coordinating network of the Latin American left, tracking the connections between its member parties and the spread of left governments in the region. These works are influential in Brazil's political debate. Some specific claims (e.g. formal ties to armed groups, or direct control of governments) are debated; such claims are attributed to their authors rather than asserted here as established fact. Insider accounts by the Forum's own officers are listed here too, under the same rule: this section collects analyses of the Forum from every side, each attributed to its author and dated, so a reader can see the coordination thesis and the rebuttal of it side by side.",
     "works": [
       {
         "author": "Olavo de Carvalho",
@@ -827,11 +827,19 @@
       },
       {
         "author": "Olavo de Carvalho",
-        "work": "True Outspeak (weekly programme) — the 2006–2007 episodes",
-        "year": "2006–2007",
+        "work": "True Outspeak (weekly programme) — the 2006–2008 episodes",
+        "year": "2006–2008",
         "publisher": "BlogTalkRadio (playlist on YouTube)",
         "url": "https://www.youtube.com/playlist?list=PLeDYbSG3ee95BaJB-caH9btRz6tcv2sne",
-        "thesis": "The earliest dated layer of his Foro de São Paulo claim-set, four years before the sources otherwise cited here. In his first broadcast (4 December 2006) he places the Forum in a 1960s lineage as a successor to OLAS — the Organización Latinoamericana de Solidaridad, itself founded in Havana in 1967 — holds firmly to the 1990 founding date, and states his own sourcing unprompted: the Forum's minutes and resolutions together with a document collection inherited from the lawyer José Carlos Graça Wagner, while disclaiming original research of his own. In January 2007 he argues the 'two lefts are one' case from the official document of the XIII Encontro (San Salvador) rather than by assertion, and in April 2007 dates his own campaigning on the subject to sixteen years, i.e. from about 1991. The roster he names at this date is narrower than the later one — PT, MST, FARC, Cuba, Chávez — and the successor-organization thesis he would advance in 2015 is absent from these twenty episodes entirely."
+        "thesis": "The earliest dated layer of his Foro de São Paulo claim-set, from ninety-three episodes running December 2006 to November 2008 — four years before the other sources cited here. In his first broadcast he states his own sourcing unprompted: the Forum's minutes and resolutions together with a document collection inherited from the lawyer José Carlos Graça Wagner, while disclaiming original research; by February 2008 he describes that collection in detail and quantifies it at eighteen years of minutes and more than a thousand pages. He holds the 1990 founding date firmly, and in January 2007 argues the 'two lefts are one' case from the official XIII Encontro document rather than by assertion. His account of who created the Forum reverses inside the window: through 2007 he says Fidel Castro ordered it, and by July 2008 that it was Lula's own invention — a shift traceable to Castro's January 2008 Reflexiones crediting Lula, which he reported at the time. In May 2008 É Realizações published Conspiração de Portas Abertas, which he presents as the first Brazilian book on the Forum. Two features of the later claim-set are absent here. The Forum he describes is ascendant, not declining. And the successor-organization thesis he would advance in November 2015 — the Forum about to be replaced because its name had become a liability, with PSB circles organizing the successor — appears nowhere in these ninety-three episodes: an exhaustive search across fourteen transcription spellings of the Forum's name returns no successor, no renaming and no mention of the PSB in any such role. What does exist by November 2007 is the same template pointing backwards: the Forum as OLAS 'under a new version', one movement continuing under successive names."
+      },
+      {
+        "author": "Valter Pomar",
+        "work": "Aula sobre os 30 anos do Foro de São Paulo (video lecture)",
+        "year": "2020",
+        "publisher": "TV 247, 4 July 2020",
+        "url": "https://www.youtube.com/watch?v=aBGA1LTiXNI",
+        "thesis": "The insider counter-account, from the Forum's Executive Secretary of 2005–2013. Pomar traces the initiative to a conversation between Fidel Castro and Lula in late 1989 and dates the naming to the second meeting, in Mexico City in June 1991. Against the reading of the Forum as a centralized directorate, he argues it is an articulation between parties that keep their own programmes, and explicitly rejects the comparison with the Communist International — calling the impression of a single coordinated plan an optical illusion produced by parties reaching similar conclusions in similar conditions. He recounts the left's electoral advance from 1998 as a sequence of national victories rather than a directed campaign. Attributed to him as a participant's account, with the same standing as the critical readings above and no more."
       }
     ]
   },
@@ -1199,6 +1207,30 @@
       "publisher": "Olavo de Carvalho, on BlogTalkRadio; playlist on YouTube",
       "type": "video (programme, critical)",
       "note": "His own Portuguese-language weekly programme for a Brazilian audience — the English title is branding. Ran Monday nights from 4 December 2006, moving to a Wednesday slot in 2010 and ending 20 April 2011; 210 episodes numbered, 201 in the playlist. A partisan primary source: his positions, attributed, never independent evidence. Machine-captioned, so names and quotations require audio verification. Cited here from the first 20 episodes (4 Dec 2006 – 7 May 2007)."
+    },
+    {
+      "id": "pomar-30anos-2020",
+      "title": "Aula sobre os 30 anos do Foro de São Paulo (Valter Pomar)",
+      "url": "https://www.youtube.com/watch?v=aBGA1LTiXNI",
+      "publisher": "TV 247",
+      "type": "video (insider)",
+      "note": "Recorded 4 July 2020, the Forum's thirtieth anniversary — the date is stated on the recording and corroborated by other anniversary pieces published that day. Valter Pomar was the Forum's Executive Secretary (2005–2013): an insider primary source, attributed, not a neutral account. His 1991 Mexico City figures (12–15 June, 68 political forces plus 12 observer organisations) match the official record exactly. One internal contradiction is worth noting for anyone citing him on the founding: he places the interrupted declaration session on the afternoon of 4 July 1990 and ties it to an Argentina–Italy World Cup semi-final, which was played on 3 July."
+    },
+    {
+      "id": "radiovox-xxiii-2017",
+      "title": "XXIII Encontro do Foro de São Paulo na Nicarágua (Observatório Latino)",
+      "url": "https://www.youtube.com/watch?v=lQ8ynn2rQGE",
+      "publisher": "Rádio Vox / Observatório Latino (re-upload)",
+      "type": "video (commentary, critical)",
+      "note": "Broadcast Sunday 23 July 2017, days after the XXIII Encontro closed in Managua — partisan critical commentary (Graça Salgueiro), cited alongside the meeting's own declaration and Memoria, never in place of them. It reads out the Forum's condolence note for Marco Aurélio Garcia, who died on 20 July 2017, describing him as its first Executive Secretary over more than ten years and signed by Mônica Valente. A re-upload, not the original broadcast."
+    },
+    {
+      "id": "conspiracao-portas-abertas-2008",
+      "title": "Conspiração de Portas Abertas",
+      "url": "https://www.erealizacoes.com.br/",
+      "publisher": "É Realizações, São Paulo, May 2008",
+      "type": "book (analysis)",
+      "note": "Presented by Olavo de Carvalho on his programme of 28 May 2008 as the first Brazilian book devoted to the Foro de São Paulo, collecting documents. Recorded here as a documentary lead from that broadcast; the edition details and contents still need confirming against the published book."
     }
   ],
   "membersInGovernment": {
