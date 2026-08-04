@@ -469,6 +469,7 @@ ${row(CUR.rowStatusToday, m.currentStatus)}
       <h2>${CUR.hArmed}</h2>
       <div class="notice notice-attribution">${esc(am.note)}</div>
       ${am.presidencyNote ? `<div class="notice">${esc(am.presidencyNote)}</div>` : ''}
+      ${am.declarationCheck ? `<div class="notice notice-attribution">${esc(am.declarationCheck)}</div>` : ''}
       <div class="party-grid">
 ${cards}
       </div>
