@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/extract-declarations.js",
-    "lastRun": "2026-08-04T14:23:36.445Z",
+    "lastRun": "2026-08-04T15:40:34.033Z",
     "note": "Plain-text extraction of the official declaration PDFs (#28 phase 2). headerDate and headerEditionRoman are mined from each declaration's own opening dateline — the primary source for #3 (date/edition verification). editionMatchesOfficialNumber:false flags where the header's Roman numeral differs from the book chapter number. Do not hand-edit."
   },
   "declarations": {
@@ -212,11 +212,11 @@
     "08": {
       "year": 1998,
       "city": "Mexico-II",
-      "chars": 27706,
+      "chars": 27392,
       "contentStreams": 12,
       "glyphDoubling": true,
-      "headerDate": "1998-11-25",
-      "headerDateLine": "25 de noviembre de 1998",
+      "headerDate": "1998-11-01",
+      "headerDateLine": "1 de noviembre de 1998",
       "headerEditionRoman": "VIII",
       "headerEditionNum": 8,
       "editionMatchesOfficialNumber": true

@@ -102,6 +102,33 @@ test('no declaration has glyph doubling left in it', () => {
     `documents return nothing however many times the term occurs.\n${doubled.join('\n')}`);
 });
 
+test('no declaration has doubled one-letter words left in it', () => {
+  // The document-wide doubling check above measures a ratio, and a ratio can
+  // sit comfortably under threshold while a specific, damaging residue
+  // survives. It did: undoubling first ran only on tokens of four characters
+  // or more, so the 1998 declaration kept 301 doubled one-letter words — "aa",
+  // "yy", "oo", "ee" for a, y, o, e. That reads fine and passes every check
+  // above, and it silently breaks any multi-word phrase search that crosses a
+  // conjunction, which is most of them: "guerra sucia y el terrorismo de
+  // Estado" is stored with "yy" and returns nothing.
+  //
+  // Doubled UPPERCASE pairs are legitimate here — EE.UU., and Roman numerals
+  // like XX, II, VII — so only lowercase is asserted on. No Spanish or
+  // Portuguese word is a doubled single lowercase letter.
+  const residue = [];
+  for (const d of entries) {
+    const t = fs.readFileSync(d.file, 'utf8').replace(/\s+/g, ' ');
+    const hits = t.match(/(?<![A-Za-zÀ-ÿ])([a-zà-ÿ])\1(?![A-Za-zÀ-ÿ])/g) || [];
+    if (hits.length) {
+      residue.push(`${d.n}-${d.year}: ${hits.length} × ${[...new Set(hits)].join(', ')}`);
+    }
+  }
+  assert.deepStrictEqual(residue, [],
+    `doubled one-letter words survive in the committed text. Phrase searches ` +
+    `over these documents return false negatives wherever the phrase crosses ` +
+    `one. Check the per-document token floor in undouble().\n${residue.join('\n')}`);
+});
+
 test('every declaration carries the header date it was mined for', () => {
   // The reason the corpus exists (#28 phase 2 → #3). 1997 and 2000 genuinely
   // print no dateline in the PDF; everything else must have one, and 1998 only

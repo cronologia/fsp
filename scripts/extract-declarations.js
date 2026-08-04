@@ -158,11 +158,35 @@ function streamLength(s, dict, fromIndex) {
  * only when EVERY pair in it matches, so ordinary repeated letters ("llegó",
  * "consecuencias") are untouched. Measured background rate in the other
  * eighteen files is 1.0-1.4%; this one is 100%.
+ *
+ * The token floor is decided per DOCUMENT, and that matters. A first pass
+ * halved only tokens of four characters or more, because in an ordinary file a
+ * bare two-character token that happens to pair ("EE" inside "EE.UU.") must be
+ * left alone. But in the doubled document the one-letter words — "a", "y",
+ * "o", "e" — are stored "aa", "yy", "oo", "ee", and skipping them left 301 of
+ * them in the committed text. The document then reads correctly and still
+ * defeats any multi-word phrase search that crosses a conjunction: "diálogo y
+ * negociación" is stored "diálogo yy negociación" and returns nothing. That is
+ * the same silent false negative in a smaller costume. So: measure the whole
+ * document first, and only in a document that is wholly doubled drop the floor
+ * to two characters.
  */
+function isDoubledToken(w) {
+  if (w.length < 2 || w.length % 2) return false;
+  for (let i = 0; i < w.length; i += 2) if (w[i] !== w[i + 1]) return false;
+  return true;
+}
+
 function undouble(text) {
+  const tokens = text.match(/\S+/g) || [];
+  const long = tokens.filter((w) => w.length >= 4);
+  const ratio = long.length ? long.filter(isDoubledToken).length / long.length : 0;
+  // A wholly doubled document sits near 1.0; the background in a clean file is
+  // 1.0-1.4%. Nothing lands between, so the threshold is not delicate.
+  const wholeDocument = ratio > 0.8;
+  const floor = wholeDocument ? 2 : 4;
   return text.replace(/\S+/g, (w) => {
-    if (w.length < 4 || w.length % 2) return w;
-    for (let i = 0; i < w.length; i += 2) if (w[i] !== w[i + 1]) return w;
+    if (w.length < floor || !isDoubledToken(w)) return w;
     let out = '';
     for (let i = 0; i < w.length; i += 2) out += w[i];
     return out;
@@ -280,16 +304,36 @@ function headerMeta(text, expectYear) {
   const hd = dm && parseDate(dm);
   if (hd) { out.date = hd.iso; out.line = hd.line; }
 
-  // Fallback: no header date (e.g. sign-off is at the foot). Scan the whole
-  // body for a date whose YEAR equals the declaration's — this rejects
-  // off-year body mentions like "11 de septiembre de 2001" in a 2002 text.
+  // Fallback: no header date. Six of the nineteen carry theirs at the foot
+  // instead — "São Paulo, 4 de julio de 1990." — or in a self-dating clause,
+  // "el XVI Encuentro ... se realizó del 17 al 20 de agosto de 2010".
+  //
+  // The first version of this fallback scanned the whole body for the first
+  // date whose YEAR matched, which rejects off-year mentions ("11 de
+  // septiembre de 2001" in a 2002 text) but nothing else. In-year mentions of
+  // OTHER events pass it, and one did: the 1998 declaration was recorded as
+  // dated 25 November 1998, which is the date of an OAS terrorism conference
+  // in Mar del Plata that it mentions at 88% of the way through. Its actual
+  // sign-off, at the very foot, reads "México, D.F., 1 de noviembre de 1998".
+  // The wrong date entered the index as `headerDate` — the field the project
+  // treats as the primary source for #3 — and read as a verified mining, not a
+  // guess. So the fallback now requires the date to be where a declaration
+  // actually dates itself: the closing place-and-date line, or a sentence that
+  // names the Encuentro. Nothing else counts, and a document that offers
+  // neither is left with no date rather than an arbitrary one.
   if (!out.date && expectYear) {
     const re = /(\d{1,2})(?:\s*(?:y|al|a|-)\s*(\d{1,2}))?\s+de\s+([A-Za-zçãé]+)\s+de\s+(\d{4})/gi;
+    const SIGNOFF_ZONE = Math.max(0, text.length - 400);
     let m;
     while ((m = re.exec(text))) {
       if (Number(m[4]) !== expectYear) continue;
       const d = parseDate(m);
-      if (d) { out.date = d.iso; out.line = d.line; break; }
+      if (!d) continue;
+      const inSignoff = m.index >= SIGNOFF_ZONE;
+      // Same sentence as the meeting's own name.
+      const sentence = text.slice(0, m.index).split(/(?<=[.!?])\s/).pop() || '';
+      const selfDating = /\b(?:Encuentro|Encontro)\b/i.test(sentence);
+      if (inSignoff || selfDating) { out.date = d.iso; out.line = d.line; break; }
     }
   }
 
