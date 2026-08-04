@@ -6,7 +6,7 @@
 > `node scripts/gen-catalog.js`. See [`context.md`](context.md) for domain
 > background and [`docs/adrs/`](docs/adrs/) for the architecture.
 
-_Last generated: 2026-08-03 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 52 references._
+_Last generated: 2026-08-04 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 52 references._
 
 ## Contents
 

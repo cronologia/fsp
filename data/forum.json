@@ -862,7 +862,8 @@
       "id": "pt-oficial",
       "title": "Foro de São Paulo: 33 anos em defesa da integração regional e da democracia",
       "url": "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
-      "publisher": "Partido dos Trabalhadores (official)",
+      "publisher": "Partido dos Trabalhadores",
+      "publisherNote": "official",
       "type": "primary/affiliated",
       "official": true
     },
@@ -884,7 +885,8 @@
       "id": "granma-30years",
       "title": "Thirty years ago, the São Paulo Forum gave the left heart",
       "url": "https://en.granma.cu/mundo/2020-07-06/thirty-years-ago-the-sao-paulo-forum-gave-the-left-heart",
-      "publisher": "Granma (Cuba)",
+      "publisher": "Granma",
+      "publisherNote": "Cuba — the party daily",
       "type": "news/affiliated"
     },
     {
@@ -970,7 +972,8 @@
       "id": "castro-lula-voltairenet",
       "title": "Lula da Silva, by Fidel Castro Ruz (on the 1985 Havana debt conference)",
       "url": "https://www.voltairenet.org/article154638.html",
-      "publisher": "Voltaire Network (Fidel Castro reflection)",
+      "publisher": "Voltaire Network",
+      "publisherNote": "a reflection by Fidel Castro",
       "type": "primary/affiliated"
     },
     {
@@ -1049,7 +1052,8 @@
       "id": "atas-foro-msm",
       "title": "Atas do Foro de São Paulo (compilation) — Mídia Sem Máscara / Olavo de Carvalho",
       "url": "https://archive.org/details/atas-do-foro-de-sao-paulo-midia-sem-mascara-olavo-de-carvalho",
-      "publisher": "Internet Archive (compiled by Mídia Sem Máscara)",
+      "publisher": "Internet Archive",
+      "publisherNote": "compiled by Mídia Sem Máscara",
       "type": "compilation (attributed)",
       "note": "A document assembled and published by Mídia Sem Máscara / Olavo de Carvalho, presented as records (“atas”) of FSP meetings. Their authenticity as verbatim minutes is not independently established here; included as an attributed critical compilation, preserved on the Internet Archive."
     },
@@ -1196,7 +1200,8 @@
       "id": "olavo-cof316-2015",
       "title": "O Brasil perante a nova ordem mundial (online-course lecture)",
       "url": "https://www.youtube.com/watch?v=dlQG02mwTD0",
-      "publisher": "Olavo de Carvalho (official channel)",
+      "publisher": "Olavo de Carvalho",
+      "publisherNote": "his official channel",
       "type": "video (lecture, critical)",
       "note": "A Curso Online de Filosofia session (aula 316) recorded 14 November 2015 — dated by internal anchors (Bill Clinton's Brasília remark of 12 Nov referenced as fresh; Dilma Rousseff at the G20 in Antalya; Aldo Rebelo as sitting Defense Minister) matching the course index; the upload date is only a floor. The subject's own lecture — partisan primary source, attributed positions only. Auto-captioned; quotations require audio verification."
     },
@@ -1220,7 +1225,8 @@
       "id": "radiovox-xxiii-2017",
       "title": "XXIII Encontro do Foro de São Paulo na Nicarágua (Observatório Latino)",
       "url": "https://www.youtube.com/watch?v=lQ8ynn2rQGE",
-      "publisher": "Rádio Vox / Observatório Latino (re-upload)",
+      "publisher": "Rádio Vox / Observatório Latino",
+      "publisherNote": "re-upload",
       "type": "video (commentary, critical)",
       "note": "Broadcast Sunday 23 July 2017, days after the XXIII Encontro closed in Managua — partisan critical commentary (Graça Salgueiro), cited alongside the meeting's own declaration and Memoria, never in place of them. It reads out the Forum's condolence note for Marco Aurélio Garcia, who died on 20 July 2017, describing him as its first Executive Secretary over more than ten years and signed by Mônica Valente. A re-upload, not the original broadcast."
     },

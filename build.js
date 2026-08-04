@@ -550,7 +550,7 @@ function renderReferences(refs, archives, archiveDocs = {}) {
         : '';
       return `        <li id="ref-${esc(r.id)}">
           <a href="${esc(r.url)}" rel="noopener noreferrer" target="_blank">${esc(r.title)}</a>
-          <span class="ref-meta">${esc(r.publisher)} — ${esc(r.type)}${archiveLink}${savedLink}</span>
+          <span class="ref-meta">${esc(r.publisherNote ? `${r.publisher} (${r.publisherNote})` : r.publisher)} — ${esc(r.type)}${archiveLink}${savedLink}</span>
         </li>`;
     })
     .join('\n');
