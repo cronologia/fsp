@@ -37,7 +37,7 @@ const TRANSLATABLE_KEYS = new Set([
   'nature', 'designation', 'fspRole', 'currentStatus', 'whatItIs', 'fspLink',
   'composition', 'relationToForum', 'thesis',
   'renamed', 'convenedBy', 'context', 'attendance',
-  'compositionNote', 'compositionTitle', 'scale', 'presidencyNote', 'seeAlso',
+  'compositionNote', 'compositionTitle', 'scale', 'presidencyNote', 'declarationCheck', 'seeAlso',
   'dataQuality', 'members', 'foro', 'puebla', 'period', 'founded',
   'place', 'dimension', 'venue',
 ]);
