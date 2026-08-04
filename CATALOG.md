@@ -6,7 +6,7 @@
 > `node scripts/gen-catalog.js`. See [`context.md`](context.md) for domain
 > background and [`docs/adrs/`](docs/adrs/) for the architecture.
 
-_Last generated: 2026-08-04 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 52 references._
+_Last generated: 2026-08-04 · 16 countries · 11 listed parties · 5 armed movements · 5 regional bodies · 4 related organizations · 53 references._
 
 ## Contents
 
@@ -351,3 +351,4 @@ the Internet Archive and as a local copy in the document vault (ADR-0004, ADR-00
 | `pomar-30anos-2020` | Aula sobre os 30 anos do Foro de São Paulo (Valter Pomar) | video (insider) | <https://www.youtube.com/watch?v=aBGA1LTiXNI> |
 | `radiovox-xxiii-2017` | XXIII Encontro do Foro de São Paulo na Nicarágua (Observatório Latino) | video (commentary, critical) | <https://www.youtube.com/watch?v=lQ8ynn2rQGE> |
 | `conspiracao-portas-abertas-2008` | Conspiração de Portas Abertas | book (analysis) | <https://www.erealizacoes.com.br/> |
+| `keyes-pena-esclusa-2009` | Alan Keyes with Alejandro Peña Esclusa — conversation on the Foro de São Paulo (9 parts, ~82 min, English) | video (interview, critical) | <https://www.youtube.com/watch?v=EPkGM26H26U> |
