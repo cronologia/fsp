@@ -130,31 +130,112 @@ function fromCp1252(str) {
   return out;
 }
 
-/** Extract all text from a PDF buffer via inflated content streams. */
+/**
+ * Resolve a stream's byte length from its dictionary.
+ *
+ * `/Length` is normally a literal, but Distiller writes it as an indirect
+ * reference (`/Length 12 0 R`) when the length is not known until the stream is
+ * written. Both forms appear across these nineteen files.
+ */
+function streamLength(s, dict, fromIndex) {
+  const direct = /\/Length\s+(\d+)(?!\s+\d+\s+R)/.exec(dict);
+  if (direct) return Number(direct[1]);
+  const indirect = /\/Length\s+(\d+)\s+(\d+)\s+R/.exec(dict);
+  if (!indirect) return -1;
+  const obj = new RegExp(`(?:^|[^0-9])${indirect[1]}\\s+${indirect[2]}\\s+obj\\s+(\\d+)`, 'g');
+  const hit = obj.exec(s) || obj.exec(s.slice(0, fromIndex));
+  return hit ? Number(hit[1]) : -1;
+}
+
+/**
+ * Undo per-glyph doubling.
+ *
+ * One of the nineteen (the 1998 Mexico City declaration) emits every glyph
+ * twice — "DDEECCLLAARRAACCIIOONN" — while leaving the spaces single. The text
+ * is complete and reads correctly to a human skimming it, which is why it
+ * survived review; but "FARC" is stored as "FFAARRCC", so every search over
+ * that document silently returns nothing. Doubling is decided per token and
+ * only when EVERY pair in it matches, so ordinary repeated letters ("llegó",
+ * "consecuencias") are untouched. Measured background rate in the other
+ * eighteen files is 1.0-1.4%; this one is 100%.
+ */
+function undouble(text) {
+  return text.replace(/\S+/g, (w) => {
+    if (w.length < 4 || w.length % 2) return w;
+    for (let i = 0; i < w.length; i += 2) if (w[i] !== w[i + 1]) return w;
+    let out = '';
+    for (let i = 0; i < w.length; i += 2) out += w[i];
+    return out;
+  });
+}
+
+// Stream kinds that are never page text: embedded font programs (Type1 has
+// /Length1../Length3, CFF and TrueType announce a /Subtype), images, object and
+// cross-reference streams, and XMP metadata. Scanning a font program yields
+// glyph-table bytes that look like text to a byte scanner and end up appended
+// to the declaration.
+const NON_CONTENT = /\/(?:Length1|Subtype\s*\/(?:Type1C|CIDFontType0C|TrueType|Image|XML)|Type\s*\/(?:ObjStm|XRef|Metadata|Font|FontDescriptor))/;
+
+/** Extract all text from a PDF buffer via inflated content streams.
+ *
+ * Stream extents come from the dictionary's `/Length`, NOT from searching for
+ * the next `endstream`. That search is what an earlier version did, and it is
+ * wrong for a reason that fails silently: `endstream` occurs by chance inside
+ * FlateDecode output, so the first stream would end early, the scan would
+ * resume inside compressed bytes, and it never re-synced to the next real
+ * object. The result was page 1 of every document and nothing after it —
+ * roughly 20% of the corpus, with each file ending mid-sentence and no error
+ * anywhere. A negative drawn from that corpus is not a negative about the
+ * declarations, which is how a published claim-check came to be wrong.
+ */
 function extractPdf(buf) {
   const s = buf.toString('latin1');
-  const re = /stream\r?\n/g;
-  let m;
   let out = '';
-  while ((m = re.exec(s))) {
-    const start = m.index + m[0].length;
-    const end = s.indexOf('endstream', start);
-    if (end < 0) break;
+  let streams = 0;
+  // Iterate over OBJECT headers, not over the byte sequence "stream". Two
+  // earlier shapes of this loop were wrong in ways that produced plausible
+  // output: searching for the next `endstream` cut every document at page one
+  // (those bytes occur inside FlateDecode output), and matching
+  // `obj <<dict>> stream` with a lazy quantifier let the dict expand across
+  // unrelated objects until it found a `>>` that happened to precede a stream,
+  // so a page's content was filtered out as if it were a font.
+  const objRe = /(\d+)\s+(\d+)\s+obj\b/g;
+  let m;
+  while ((m = objRe.exec(s))) {
+    // The dictionary is whatever sits between this header and its own stream.
+    // Bounded by the next object header so a non-stream object cannot reach
+    // forward and claim the following object's stream.
+    const nextObj = objRe.lastIndex;
+    const sm = /stream\r?\n/.exec(s.slice(nextObj, nextObj + 4000));
+    if (!sm) continue;
+    const dict = s.slice(nextObj, nextObj + sm.index);
+    if (/\bobj\b/.test(dict)) continue; // another object intervened: not ours
+    const start = nextObj + sm.index + sm[0].length;
+    const len = streamLength(s, dict, m.index);
+    // With no usable /Length there is nothing trustworthy to slice, and
+    // guessing is what broke this before. Skip and let the audit report it.
+    if (len <= 0 || start + len > buf.length) continue;
+    objRe.lastIndex = start + len;
+    // Only page content streams carry real text. The "does it contain a T"
+    // check that used to stand alone here is not a filter: embedded font
+    // programs contain 'T' too, and scanning one appends glyph-table bytes to
+    // the end of the declaration. Decide from the stream's own dictionary.
+    if (NON_CONTENT.test(dict)) continue;
     let inf;
     try {
-      inf = zlib.inflateSync(buf.slice(start, end));
+      inf = zlib.inflateSync(buf.slice(start, start + len));
     } catch {
-      re.lastIndex = end;
       continue;
     }
-    // Only content streams carry text operators; a cheap check skips fonts/images.
-    if (inf.indexOf(0x54) === -1) { re.lastIndex = end; continue; } // no 'T' at all
+    if (inf.indexOf(0x54) === -1) continue; // no 'T' at all
     out += scanContent(inf) + '\n';
-    re.lastIndex = end;
+    streams++;
   }
   // The string bytes are single-byte WinAnsi (CP1252); code points 0-255 map
   // to Unicode directly except the 0x80-0x9F block, which we remap.
-  return fromCp1252(out);
+  const text = fromCp1252(out);
+  const fixed = undouble(text);
+  return { text: fixed, streams, undoubled: fixed.length < text.length };
 }
 
 // ---- closing place/date line ----------------------------------------------
@@ -277,8 +358,13 @@ function main() {
     const pdf = path.join(PDF_DIR, `${p.officialNumber}-${p.year}.pdf`);
     if (!fs.existsSync(pdf)) { missing++; index[p.officialNumber] = { year: p.year, state: 'pdf-missing' }; continue; }
     let text;
+    let streams = 0;
+    let undoubled = false;
     try {
-      text = extractPdf(fs.readFileSync(pdf)).replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim() + '\n';
+      const ex = extractPdf(fs.readFileSync(pdf));
+      streams = ex.streams;
+      undoubled = ex.undoubled;
+      text = ex.text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim() + '\n';
     } catch (err) {
       index[p.officialNumber] = { year: p.year, state: 'extract-failed', error: err.message };
       continue;
@@ -294,6 +380,11 @@ function main() {
       year: p.year,
       city: p.city,
       chars,
+      // Pages recovered. A document whose page count and stream count disagree
+      // is the truncation signature this extractor once shipped silently.
+      contentStreams: streams,
+      // True when the PDF stored every glyph twice and the extractor undid it.
+      glyphDoubling: undoubled,
       headerDate: h.date,
       headerDateLine: h.line,
       headerEditionRoman: h.editionRoman,
@@ -301,7 +392,7 @@ function main() {
       editionMatchesOfficialNumber: editionMatch,
     };
     const flag = editionMatch === false ? ' ⚠ edition≠chapter' : '';
-    console.log(`  ✓ ${p.officialNumber}-${p.year} — ${chars} chars · ${h.date || 'date?'} · ed ${h.editionRoman || '?'}${flag}`);
+    console.log(`  ✓ ${p.officialNumber}-${p.year} — ${chars} chars · ${streams} stream(s) · ${h.date || 'date?'} · ed ${h.editionRoman || '?'}${flag}`);
     ok++;
   }
 
