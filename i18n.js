@@ -58,31 +58,53 @@ function translator(dict) {
   return (s) => (s !== null && s !== undefined && Object.prototype.hasOwnProperty.call(dict, s) ? dict[s] : s);
 }
 
+/** The narrow allowlist that applies INSIDE `references` (core template).
+ *
+ * A reference NAMES its source and also CHARACTERISES it. The name is
+ * bibliography and stays verbatim; the characterisation is this project
+ * writing in its own voice, and it must read in the page's language.
+ *
+ *   `publisherNote` — the parenthetical that was glued to `publisher`:
+ *                     "official", "compiled by Mídia Sem Máscara", "re-upload".
+ *   `type`          — in most family repos a closed vocabulary that belongs in
+ *                     the chrome table. NOT here: this project's types are
+ *                     written as prose — "video (interview, critical)",
+ *                     "analysis (Foro vs. Puebla Group)", "book (insider)" —
+ *                     and they carry the stance judgement that lets a reader
+ *                     weigh a source. Nineteen of them rendered in English on
+ *                     the Spanish and Portuguese pages.
+ *
+ * An allowlist rather than a boolean: a new key inside a reference stays
+ * untranslated by default, which is the safe direction for citation data.
+ */
+const REFERENCE_TRANSLATABLE = new Set(['publisherNote', 'type']);
+
 /**
  * Deep-copy `value` with every TRANSLATABLE_KEYS string routed through the
- * dict. `references` subtrees pass through verbatim (bibliography), and
- * `membershipRosters` keep their org-name lists untouched — only each roster's
- * editorial `title` and `note` are prose and go through the dict. With an
- * empty dict this is an identity copy, so the English build is unchanged by
- * construction.
+ * dict. `references` subtrees pass through verbatim (bibliography) EXCEPT for
+ * REFERENCE_TRANSLATABLE, and `membershipRosters` keep their org-name lists
+ * untouched — only each roster's editorial `title` and `note` are prose and go
+ * through the dict. With an empty dict this is an identity copy, so the
+ * English build is unchanged by construction.
  */
 function localizeDeep(value, dict) {
   const t = translator(dict);
-  const walk = (v, k) => {
-    if (k === 'references') return v;
-    if (k === 'membershipRosters' && Array.isArray(v)) {
+  const walk = (v, k, inRefs) => {
+    const keys = inRefs ? REFERENCE_TRANSLATABLE : TRANSLATABLE_KEYS;
+    const refs = inRefs || k === 'references';
+    if (!refs && k === 'membershipRosters' && Array.isArray(v)) {
       return v.map((r) => (r && typeof r === 'object' ? { ...r, title: t(r.title), note: t(r.note) } : r));
     }
-    if (Array.isArray(v)) return v.map((x) => walk(x, k));
+    if (Array.isArray(v)) return v.map((x) => walk(x, k, refs));
     if (v && typeof v === 'object') {
       const out = {};
-      for (const kk of Object.keys(v)) out[kk] = walk(v[kk], kk);
+      for (const kk of Object.keys(v)) out[kk] = walk(v[kk], kk, refs);
       return out;
     }
-    if (typeof v === 'string' && TRANSLATABLE_KEYS.has(k)) return t(v);
+    if (typeof v === 'string' && keys.has(k)) return t(v);
     return v;
   };
-  return walk(value, null);
+  return walk(value, null, false);
 }
 
 /* ---------------------------------------------------------------------------
@@ -437,7 +459,7 @@ function sitemap(routes) {
 }
 
 module.exports = {
-  LOCALES, BASE, TRANSLATABLE_KEYS, UI,
+  LOCALES, BASE, TRANSLATABLE_KEYS, REFERENCE_TRANSLATABLE, UI,
   loadDict, translator, localizeDeep,
   switcher, hreflangHead, disclaimerHtml, redirectStub, sitemap,
 };

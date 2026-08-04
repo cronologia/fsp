@@ -163,11 +163,20 @@ test('es and pt dictionaries have identical keysets, no empty values, valid _met
 // build.js's own T()/P() editorial-chrome literals.
 // ---------------------------------------------------------------------------
 
-/** Collect the translatable dataset strings, mirroring localizeDeep's walk. */
+/** Collect the translatable dataset strings, mirroring localizeDeep's walk.
+ *
+ * Including the narrow allowlist that applies inside `references`. That subtree
+ * was skipped wholesale until a reference's stance note — "video (interview,
+ * critical)", "compiled by Mídia Sem Máscara" — was recognised as this
+ * project's own prose rather than bibliography. Mirror the walk exactly: a
+ * checker that collects a different set of strings than the compiler
+ * translates passes while the page is wrong.
+ */
 function collectDatasetStrings(value, out) {
-  const walk = (v, k) => {
-    if (k === 'references') return;
-    if (k === 'membershipRosters' && Array.isArray(v)) {
+  const walk = (v, k, inRefs) => {
+    const keys = inRefs ? I18N.REFERENCE_TRANSLATABLE : I18N.TRANSLATABLE_KEYS;
+    const refs = inRefs || k === 'references';
+    if (!refs && k === 'membershipRosters' && Array.isArray(v)) {
       for (const r of v) {
         if (r && typeof r === 'object') {
           if (typeof r.title === 'string' && r.title.trim()) out.add(r.title);
@@ -176,11 +185,11 @@ function collectDatasetStrings(value, out) {
       }
       return;
     }
-    if (Array.isArray(v)) { for (const x of v) walk(x, k); return; }
-    if (v && typeof v === 'object') { for (const kk of Object.keys(v)) walk(v[kk], kk); return; }
-    if (typeof v === 'string' && I18N.TRANSLATABLE_KEYS.has(k) && v.trim()) out.add(v);
+    if (Array.isArray(v)) { for (const x of v) walk(x, k, refs); return; }
+    if (v && typeof v === 'object') { for (const kk of Object.keys(v)) walk(v[kk], kk, refs); return; }
+    if (typeof v === 'string' && keys.has(k) && v.trim()) out.add(v);
   };
-  walk(value, null);
+  walk(value, null, false);
 }
 
 /** Extract the string literals build.js routes through T() / P(). */
@@ -227,7 +236,18 @@ test('references, roster org-lists, names and the countries↔forum join key are
     const ldata = I18N.localizeDeep(data, dict);
     const lcountries = I18N.localizeDeep(countries, dict);
 
-    assert.deepEqual(ldata.references, data.references, `${lang}: references[] pass through verbatim`);
+    // References are verbatim EXCEPT the allowlist — the citation is
+    // bibliography, the stance note is prose. Assert the narrowed contract
+    // rather than dropping it: everything outside the allowlist must still be
+    // byte-identical, which is what stops a title or a URL being translated.
+    ldata.references.forEach((r, i) => {
+      const src = data.references[i];
+      for (const k of Object.keys(src)) {
+        if (I18N.REFERENCE_TRANSLATABLE.has(k)) continue;
+        assert.deepEqual(r[k], src[k], `${lang}: reference ${src.id}.${k} passes through verbatim`);
+      }
+      assert.deepEqual(Object.keys(r), Object.keys(src), `${lang}: reference ${src.id} keeps its shape`);
+    });
     ldata.membershipRosters.forEach((r, i) => {
       assert.deepEqual(r.orgs, data.membershipRosters[i].orgs, `${lang}: roster ${i} org list untouched`);
     });
