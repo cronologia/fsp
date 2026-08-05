@@ -191,3 +191,12 @@ reachable (locally, or via a GitHub Action). Do not work around egress policy.
   from the default branch.
 - Keep `docs/` in sync with `data/` in every commit that touches data.
 - Write descriptive commit messages explaining the *why*.
+
+## Searching the vaulted transcripts
+
+The `corpus-search` skill indexes every collection in `cronologia/archive` —
+including the general `transcripts/` set this project mines — and searches them
+as one corpus. Use it before reporting that anything is absent: a sweep over one
+collection reported as a corpus-wide zero is a false negative, and has been
+published as a finding once. Search the CLAIM rather than the NAME (the ASR
+destroys names), and quote the scope with any zero you report.
