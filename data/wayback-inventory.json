@@ -1,9 +1,9 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-08-03T07:49:33.823Z",
-  "latestCapture": "20260802071818",
-  "uniqueUrls": 35277,
-  "usefulUrls": 3315,
+  "lastRun": "2026-08-10T05:45:33.113Z",
+  "latestCapture": "20260803031920",
+  "uniqueUrls": 35278,
+  "usefulUrls": 3316,
   "truncated": false,
   "entries": [
     {
@@ -3964,6 +3964,15 @@
       "snapshots": 1,
       "statuscode": "301",
       "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "http://forodesaopaulo.org/declaracion-final-del-xxiv-encuentro-del-foro-de-sao-paulo-15-al-17-de-julio-de-2018/",
+      "firstSeen": "20260803031920",
+      "lastSeen": "20260803031920",
+      "snapshots": 1,
+      "statuscode": "403",
+      "mimetype": "text/plain",
       "useful": true
     },
     {
@@ -8587,7 +8596,7 @@
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/06/Declaraci%C3%B3n-Final-2016.pdf",
       "firstSeen": "20170302004406",
       "lastSeen": "20260802071818",
-      "snapshots": 23,
+      "snapshots": 24,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -21069,8 +21078,8 @@
     {
       "url": "https://forodesaopaulo.org/quienes-somos/",
       "firstSeen": "20210124212623",
-      "lastSeen": "20210124212623",
-      "snapshots": 1,
+      "lastSeen": "20260802230703",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": true

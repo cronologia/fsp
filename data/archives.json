@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-10",
   "snapshots": {
     "http://archive.ipu.org/parline-e/reports/arc/2095_13.htm": {
       "archiveUrl": "https://web.archive.org/web/20240623200652/http://archive.ipu.org/parline-e/reports/arc/2095_13.htm",
@@ -1163,11 +1163,10 @@
       "checkedAt": "2026-07-19T10:38:03.007Z"
     },
     "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa": {
-      "archiveUrl": "https://web.archive.org/web/20250208141042/https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
-      "timestamp": "20250208141042",
-      "status": "200",
-      "fresh": true,
-      "checkedAt": "2026-07-13T11:46:42.852Z"
+      "refId": "regalado-2008",
+      "archiveUrl": "https://web.archive.org/web/20260810054704/https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
+      "timestamp": "20260810054704",
+      "checkedAt": "2026-08-10"
     },
     "https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo": {
       "archiveUrl": "https://web.archive.org/web/20210615062502/https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo",
@@ -1649,6 +1648,18 @@
       "timestamp": "20250717231029",
       "status": "200",
       "checkedAt": "2026-07-13T01:55:11.728Z"
+    },
+    "https://www.youtube.com/playlist?list=PLeDYbSG3ee95BaJB-caH9btRz6tcv2sne": {
+      "refId": "olavo-true-outspeak",
+      "archiveUrl": "https://web.archive.org/web/20260804163257/https://www.youtube.com/playlist?list=PLeDYbSG3ee95BaJB-caH9btRz6tcv2sne",
+      "timestamp": "20260804163257",
+      "checkedAt": "2026-08-10"
+    },
+    "https://www.youtube.com/watch?v=EPkGM26H26U": {
+      "refId": "keyes-pena-esclusa-2009",
+      "archiveUrl": "https://web.archive.org/web/20251202154511/https://www.youtube.com/watch?v=EPkGM26H26U",
+      "timestamp": "20251202154511",
+      "checkedAt": "2026-08-10"
     },
     "https://www.youtube.com/watch?v=Mn9iS9jSs9E": {
       "refId": "olavo-astv-2015",
