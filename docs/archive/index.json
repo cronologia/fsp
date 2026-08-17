@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-08-10T05:59:12.674Z",
+    "lastRun": "2026-08-17T05:44:33.226Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -233,7 +233,6 @@
     "olavo-ruschel-2014": {
       "path": "video/olavo-ruschel-2014.html",
       "bytes": 866842,
-      "source": "wayback",
       "state": "ok"
     },
     "olavo-astv-2015": {
@@ -264,12 +263,11 @@
     "conspiracao-portas-abertas-2008": {
       "path": "book/conspiracao-portas-abertas-2008.html",
       "state": "failed",
-      "error": "too small (2003b)"
+      "error": "fetch failed"
     },
     "keyes-pena-esclusa-2009": {
       "path": "video/keyes-pena-esclusa-2009.html",
       "bytes": 1067092,
-      "source": "wayback",
       "state": "ok"
     }
   }
