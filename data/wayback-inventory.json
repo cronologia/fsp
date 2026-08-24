@@ -1,9 +1,9 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-08-17T05:00:30.057Z",
-  "latestCapture": "20260811105921",
-  "uniqueUrls": 35278,
-  "usefulUrls": 3316,
+  "lastRun": "2026-08-24T05:03:44.654Z",
+  "latestCapture": "20260818215420",
+  "uniqueUrls": 35288,
+  "usefulUrls": 3325,
   "truncated": false,
   "entries": [
     {
@@ -8577,8 +8577,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/2016_05_04_PT_SRI_Nota-sobre-a-antecipa%C3%A7%C3%A3o-de-ju%C3%ADzo-da-PGR-sobre-Lula_English.pdf",
       "firstSeen": "20181014184920",
-      "lastSeen": "20181014184920",
-      "snapshots": 1,
+      "lastSeen": "20260816010621",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -8586,8 +8586,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/ESP-Nota-sobre-antecipac%CC%A7a%CC%83o-de-juizo-PGR.pdf",
       "firstSeen": "20181014184920",
-      "lastSeen": "20181014184920",
-      "snapshots": 1,
+      "lastSeen": "20260816010620",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -8596,7 +8596,7 @@
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/06/Declaraci%C3%B3n-Final-2016.pdf",
       "firstSeen": "20170302004406",
       "lastSeen": "20260811105921",
-      "snapshots": 25,
+      "snapshots": 26,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -9090,8 +9090,8 @@
     {
       "url": "https://encontro.forodesaopaulo.org/",
       "firstSeen": "20230627222609",
-      "lastSeen": "20230627222609",
-      "snapshots": 1,
+      "lastSeen": "20260816225203",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": true
@@ -9817,10 +9817,28 @@
       "useful": true
     },
     {
+      "url": "https://encontro.forodesaopaulo.org/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "firstSeen": "20260818215420",
+      "lastSeen": "20260818215420",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "https://encontro.forodesaopaulo.org/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+      "firstSeen": "20260818215417",
+      "lastSeen": "20260818215417",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
       "url": "https://encontro.forodesaopaulo.org/downloads/Programa-XXVI-FSP-v4-port.pdf",
       "firstSeen": "20230629151528",
-      "lastSeen": "20230629151528",
-      "snapshots": 1,
+      "lastSeen": "20260816224757",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": true
@@ -9997,6 +10015,15 @@
       "useful": true
     },
     {
+      "url": "https://encontro.forodesaopaulo.org/noticia/377/2023-06-26-foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia",
+      "firstSeen": "20260816230840",
+      "lastSeen": "20260816230840",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
       "url": "https://encontro.forodesaopaulo.org/noticia/379/2023-06-26-foro-de-sao-paulo-integra-esquerdas-e-movimentos-sociais-na-defesa-de-direitos-na-america-latina",
       "firstSeen": "20230629184010",
       "lastSeen": "20230629184010",
@@ -10036,6 +10063,60 @@
       "url": "https://encontro.forodesaopaulo.org/sitemap.xml",
       "firstSeen": "20230627222546",
       "lastSeen": "20230627222546",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "https://encontro.forodesaopaulo.org/static/img/icons/payment/americanexpress.png",
+      "firstSeen": "20260818215417",
+      "lastSeen": "20260818215417",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "https://encontro.forodesaopaulo.org/static/img/icons/payment/codester.png",
+      "firstSeen": "20260818215417",
+      "lastSeen": "20260818215417",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "https://encontro.forodesaopaulo.org/static/img/icons/payment/discover.png",
+      "firstSeen": "20260818215418",
+      "lastSeen": "20260818215418",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "https://encontro.forodesaopaulo.org/static/img/icons/payment/mastercard.png",
+      "firstSeen": "20260818215414",
+      "lastSeen": "20260818215414",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "https://encontro.forodesaopaulo.org/static/img/icons/payment/paypal.png",
+      "firstSeen": "20260818215416",
+      "lastSeen": "20260818215416",
+      "snapshots": 1,
+      "statuscode": "404",
+      "mimetype": "text/html",
+      "useful": true
+    },
+    {
+      "url": "https://encontro.forodesaopaulo.org/static/img/icons/payment/visa.png",
+      "firstSeen": "20260818215414",
+      "lastSeen": "20260818215414",
       "snapshots": 1,
       "statuscode": "404",
       "mimetype": "text/html",
@@ -14769,8 +14850,8 @@
     {
       "url": "https://forodesaopaulo.org/documento-base-do-xxvi-encontro-do-foro-de-sao-paulo/",
       "firstSeen": "20230618041649",
-      "lastSeen": "20230618041649",
-      "snapshots": 1,
+      "lastSeen": "20260816230529",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": true
@@ -20781,8 +20862,8 @@
     {
       "url": "https://forodesaopaulo.org/programa-preliminar-xxvi-encuentro-del-fsp/",
       "firstSeen": "20230514084134",
-      "lastSeen": "20230514084134",
-      "snapshots": 1,
+      "lastSeen": "20260816225203",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": true
@@ -36513,8 +36594,8 @@
     {
       "url": "http://forodesaopaulo.org/",
       "firstSeen": "20260606233348",
-      "lastSeen": "20260606233348",
-      "snapshots": 1,
+      "lastSeen": "20260815233455",
+      "snapshots": 2,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -47217,6 +47298,15 @@
       "lastSeen": "20190819165618",
       "snapshots": 1,
       "statuscode": "200",
+      "mimetype": "text/html",
+      "useful": false
+    },
+    {
+      "url": "http://forodesaopaulo.org/consenso-de-nossa-america-managua-nicaragua-10-de-janeiro-de-2017/",
+      "firstSeen": "20260817115500",
+      "lastSeen": "20260817115500",
+      "snapshots": 1,
+      "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
     },
@@ -87579,8 +87669,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/120516-POSICIONAMIENTO-CEN-PRD.pdf",
       "firstSeen": "20181014191559",
-      "lastSeen": "20181014191559",
-      "snapshots": 1,
+      "lastSeen": "20260816005757",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -87588,8 +87678,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/Alianza-Verde.pdf",
       "firstSeen": "20181014191606",
-      "lastSeen": "20181014191606",
-      "snapshots": 1,
+      "lastSeen": "20260816005931",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -87597,8 +87687,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/Comunicado-de-URNG-por-Dilma-003.pdf",
       "firstSeen": "20181014191539",
-      "lastSeen": "20181014191539",
-      "snapshots": 1,
+      "lastSeen": "20260816005946",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -87606,8 +87696,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/COMUNICADO-en-apoyo-y-solidaridad-con-la-compa%C3%B1era-Dilma.pdf",
       "firstSeen": "20181014191600",
-      "lastSeen": "20181014191600",
-      "snapshots": 1,
+      "lastSeen": "20260816010753",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -87615,8 +87705,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/COMUNICADO-SOLIDARIDAD-CON-BRASIL_12_05_2016.pdf",
       "firstSeen": "20181014191539",
-      "lastSeen": "20181014191539",
-      "snapshots": 1,
+      "lastSeen": "20260816010201",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -87624,8 +87714,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/EL-PSUV-SE-SOLIDARIZA-CON-LA-PRESIDENTA-DE-BRASIL-DILMA-ROUSSEFF.pdf",
       "firstSeen": "20181014191544",
-      "lastSeen": "20181014191544",
-      "snapshots": 1,
+      "lastSeen": "20260816011302",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -87633,8 +87723,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/Nota-do-PT-MRE.pdf",
       "firstSeen": "20181014191559",
-      "lastSeen": "20181014191559",
-      "snapshots": 1,
+      "lastSeen": "20260816004432",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -87642,8 +87732,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/O-golpismo-Serra.pdf",
       "firstSeen": "20181013021724",
-      "lastSeen": "20181013021724",
-      "snapshots": 1,
+      "lastSeen": "20260816011355",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -87651,8 +87741,8 @@
     {
       "url": "http://forodesaopaulo.org/wp-content/uploads/2016/05/peru.pdf",
       "firstSeen": "20181014191607",
-      "lastSeen": "20181014191607",
-      "snapshots": 1,
+      "lastSeen": "20260816004757",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "application/pdf",
       "useful": false
@@ -94689,8 +94779,8 @@
     {
       "url": "https://forodesaopaulo.org/",
       "firstSeen": "20260723154436",
-      "lastSeen": "20260723154436",
-      "snapshots": 2,
+      "lastSeen": "20260816121050",
+      "snapshots": 3,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
@@ -100917,8 +101007,8 @@
     {
       "url": "https://forodesaopaulo.org/brief-history-and-foundations/",
       "firstSeen": "20201028022755",
-      "lastSeen": "20201028022755",
-      "snapshots": 1,
+      "lastSeen": "20260815231544",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": false
@@ -101727,8 +101817,8 @@
     {
       "url": "https://forodesaopaulo.org/campana-bloqueo-no-solidaridad-si-mayo-y-junio-2021/?fbclid=IwAR2VJDruZBLc1hWJLcNsPFs2dLTJyzD9ecHpdHE33qECkqDcqKaYJuxSDIY",
       "firstSeen": "20221107155249",
-      "lastSeen": "20221107155249",
-      "snapshots": 1,
+      "lastSeen": "20260816151143",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": false
@@ -109548,8 +109638,8 @@
     {
       "url": "https://forodesaopaulo.org/fuera-almagro-nota-del-grupo-de-trabajo-del-fsp/",
       "firstSeen": "20201101041113",
-      "lastSeen": "20201101041113",
-      "snapshots": 1,
+      "lastSeen": "20260817083734",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": false
@@ -119574,8 +119664,8 @@
     {
       "url": "https://forodesaopaulo.org/principios/",
       "firstSeen": "20201022064418",
-      "lastSeen": "20201022064418",
-      "snapshots": 1,
+      "lastSeen": "20260816230530",
+      "snapshots": 2,
       "statuscode": "200",
       "mimetype": "text/html",
       "useful": false

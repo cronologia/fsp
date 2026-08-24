@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-08-17",
+  "updatedAt": "2026-08-24",
   "snapshots": {
     "http://archive.ipu.org/parline-e/reports/arc/2095_13.htm": {
       "archiveUrl": "https://web.archive.org/web/20240623200652/http://archive.ipu.org/parline-e/reports/arc/2095_13.htm",
@@ -195,6 +195,12 @@
       "status": "200",
       "fresh": false,
       "checkedAt": "2026-07-19T10:38:11.698Z"
+    },
+    "https://data.ipu.org/parliament/SV/SV-LC01/election/SV-LC01-E20210228/": {
+      "refId": "country-source",
+      "archiveUrl": "https://web.archive.org/web/20260810054944/https://data.ipu.org/parliament/SV/SV-LC01/election/SV-LC01-E20210228/",
+      "timestamp": "20260810054944",
+      "checkedAt": "2026-08-24"
     },
     "https://data.ipu.org/parliament/UY/UY-UC01/election/UY-UC01-E20241027/": {
       "archiveUrl": "https://web.archive.org/web/20251227000827/https://data.ipu.org/parliament/UY/UY-UC01/election/UY-UC01-E20241027/",
@@ -1211,9 +1217,9 @@
     },
     "https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/": {
       "refId": "pt-oficial",
-      "archiveUrl": "https://web.archive.org/web/20260803074946/https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
-      "timestamp": "20260803074946",
-      "checkedAt": "2026-08-03"
+      "archiveUrl": "https://web.archive.org/web/20260824050359/https://pt.org.br/foro-de-sao-paulo-33-anos-em-defesa-da-integracao-regional-e-da-democracia/",
+      "timestamp": "20260824050359",
+      "checkedAt": "2026-08-24"
     },
     "https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo": {
       "archiveUrl": "https://web.archive.org/web/20260618203344/https://pt.wikipedia.org/wiki/Foro_de_S%C3%A3o_Paulo",
