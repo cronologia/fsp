@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-08-24",
+  "updatedAt": "2026-08-31",
   "snapshots": {
     "http://archive.ipu.org/parline-e/reports/arc/2095_13.htm": {
       "archiveUrl": "https://web.archive.org/web/20240623200652/http://archive.ipu.org/parline-e/reports/arc/2095_13.htm",
@@ -1286,6 +1286,12 @@
       "status": "200",
       "fresh": false,
       "checkedAt": "2026-07-19T10:30:34.008Z"
+    },
+    "https://www.cadena3.com/noticia/siempre-juntos/como-fue-la-composicion-del-maximo-tribunal-desde-cfk-hasta-milei_407707": {
+      "refId": "country-source",
+      "archiveUrl": "https://web.archive.org/web/20260824051025/https://www.cadena3.com/noticia/siempre-juntos/como-fue-la-composicion-del-maximo-tribunal-desde-cfk-hasta-milei_407707",
+      "timestamp": "20260824051025",
+      "checkedAt": "2026-08-31"
     },
     "https://www.cancilleria.gob.ar/es/actualidad/comunicados/esta-semana-se-reune-el-foro-de-sao-paulo-en-buenos-aires": {
       "archiveUrl": "https://web.archive.org/web/20260117110026/https://www.cancilleria.gob.ar/es/actualidad/comunicados/esta-semana-se-reune-el-foro-de-sao-paulo-en-buenos-aires",

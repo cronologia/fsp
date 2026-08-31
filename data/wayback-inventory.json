@@ -1,7 +1,7 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-08-24T05:03:44.654Z",
-  "latestCapture": "20260818215420",
+  "lastRun": "2026-08-31T10:54:13.447Z",
+  "latestCapture": "20260826075455",
   "uniqueUrls": 35288,
   "usefulUrls": 3325,
   "truncated": false,
@@ -6057,8 +6057,8 @@
     {
       "url": "http://forodesaopaulo.org/partidos/",
       "firstSeen": "20260524144256",
-      "lastSeen": "20260811092337",
-      "snapshots": 8,
+      "lastSeen": "20260826075455",
+      "snapshots": 9,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": true
@@ -9820,7 +9820,7 @@
       "url": "https://encontro.forodesaopaulo.org/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
       "firstSeen": "20260818215420",
       "lastSeen": "20260818215420",
-      "snapshots": 1,
+      "snapshots": 2,
       "statuscode": "404",
       "mimetype": "text/html",
       "useful": true
