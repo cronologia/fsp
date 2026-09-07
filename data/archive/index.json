@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-08-31T11:10:04.016Z",
+    "lastRun": "2026-09-07T09:43:38.086Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {
@@ -263,7 +263,7 @@
     "conspiracao-portas-abertas-2008": {
       "path": "book/conspiracao-portas-abertas-2008.html",
       "state": "failed",
-      "error": "too small (2003b)"
+      "error": "fetch failed"
     },
     "keyes-pena-esclusa-2009": {
       "path": "video/keyes-pena-esclusa-2009.html",
