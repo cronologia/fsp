@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generatedBy": "scripts/archive-docs.js",
-    "lastRun": "2026-09-14T10:07:04.632Z",
+    "lastRun": "2026-09-21T10:10:17.559Z",
     "note": "Local preserved copies of every reference, grouped by type. build.js links these as \"saved copy\" and publishes them under docs/archive/. See README.md for provenance. Do not hand-edit."
   },
   "docs": {

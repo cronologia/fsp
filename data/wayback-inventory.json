@@ -1,6 +1,6 @@
 {
   "domain": "forodesaopaulo.org",
-  "lastRun": "2026-09-14T09:55:24.067Z",
+  "lastRun": "2026-09-21T09:58:56.378Z",
   "latestCapture": "20260829084859",
   "uniqueUrls": 35288,
   "usefulUrls": 3325,
@@ -41644,7 +41644,7 @@
       "url": "http://forodesaopaulo.org/?p=1573",
       "firstSeen": "20260604151116",
       "lastSeen": "20260829084859",
-      "snapshots": 3,
+      "snapshots": 4,
       "statuscode": "403",
       "mimetype": "text/html",
       "useful": false
