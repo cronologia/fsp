@@ -1,38 +1,34 @@
-name: Wayback collection
+name: Wayback preservation
 
-# Collects data from the Internet Archive on GitHub's runners (which can reach
-# archive.org), since some environments block it by egress policy.
+# Weekly Internet Archive preservation of every reference URL in
+# data/chronology.json. Runs scripts/archive-refs.js (availability lookup +
+# polite Save Page Now for unarchived URLs), rebuilds the site so the
+# "archived" fallback links render, and commits data/archives.json + docs/
+# when anything changed.
 #
-# - pull_request: proves the harvest works and uploads the inventory as an
-#   artifact (no commit back).
-# - workflow_dispatch / schedule: refreshes the inventory + archive cache and
-#   commits the results to the branch.
+# Template file — projects copy it (with scripts/archive-refs.js) verbatim.
+#
+# Why CI and not a local sandbox (fsp ADR-0006): this must be able to run on
+# GitHub-hosted runners so that when a development sandbox blocks archive.org,
+# the pipeline still runs here — never route around an egress policy.
 
 on:
-  workflow_dispatch:
-    inputs:
-      full:
-        description: 'Force a complete, paginated re-scan (instead of incremental)'
-        type: boolean
-        default: false
   schedule:
-    - cron: '17 4 * * 1' # weekly, Mondays 04:17 UTC
-  pull_request:
-    paths:
-      - 'scripts/wayback-harvest.js'
-      - 'scripts/archive-refs.js'
-      - 'scripts/archive-country-sources.js'
-      - '.github/workflows/wayback.yml'
+    - cron: '17 6 * * 1' # weekly, Monday 06:17 UTC (off the top of the hour)
+  workflow_dispatch:
 
 permissions:
   contents: write
+  # Needed to dispatch the deploy workflow below. Without it the rebuilt docs/
+  # sit on main and never reach a reader (see the step's comment).
+  actions: write
 
 concurrency:
-  group: wayback-collection
+  group: wayback
   cancel-in-progress: false
 
 jobs:
-  collect:
+  archive:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,65 +37,46 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Harvest Wayback inventory (forodesaopaulo.org)
-        run: node scripts/wayback-harvest.js ${{ (github.event_name == 'workflow_dispatch' && inputs.full) && '--full' || '' }} || echo "::warning::harvest step failed (archive.org unreachable?)"
-
       - name: Archive reference URLs
-        run: node scripts/archive-refs.js || echo "::warning::archive step failed (archive.org unreachable?)"
+        run: node scripts/archive-refs.js
 
-      - name: Archive country-dossier source URLs
-        run: node scripts/archive-country-sources.js || echo "::warning::country-source archive step failed (archive.org unreachable?)"
-
-      - name: Fetch declaration bodies
-        run: node scripts/fetch-declarations.js || echo "::warning::declaration fetch incomplete (archive.org unreachable or some snapshots failed)"
-
-      - name: Extract declaration text corpus (#28)
-        run: node scripts/extract-declarations.js || echo "::warning::declaration text extraction failed"
-
-      - name: Preserve reference documents
-        run: node scripts/archive-docs.js || echo "::warning::reference document archiving incomplete (archive.org unreachable or some fetches failed)"
-
-      - name: Rebuild site
+      - name: Rebuild site (archive fallback links come from data/archives.json)
         run: node build.js
 
-      - name: Job summary
+      - name: Commit updated archives
+        id: commit
         run: |
-          echo "## Wayback collection" >> "$GITHUB_STEP_SUMMARY"
-          if [ -f data/wayback-inventory.json ]; then
-            node -e "const d=require('./data/wayback-inventory.json'); console.log('- Unique archived URLs: **'+(d.uniqueUrls||0)+'**'); console.log('- High-value pages: **'+(d.usefulUrls||0)+'**'); console.log('- Latest capture: '+(d.latestCapture||'n/a')); console.log('- Last run: '+(d.lastRun||'n/a')); if(d.truncated) console.log('- ⚠️ scan truncated at page limit');" >> "$GITHUB_STEP_SUMMARY"
-          else
-            echo "- No inventory produced (archive.org may be unreachable from this runner)." >> "$GITHUB_STEP_SUMMARY"
+          if git diff --quiet -- data/archives.json docs/; then
+            echo "No archive changes."
+            exit 0
           fi
-
-      - name: Upload inventory artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: wayback-inventory
-          path: |
-            data/wayback-inventory.json
-            docs-research/wayback-inventory.md
-          if-no-files-found: ignore
-
-      - name: Commit results
-        if: github.event_name != 'pull_request'
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/archives.json data/wayback-inventory.json data/declarations/ data/archive/ docs-research/ docs/ || true
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: refresh Wayback inventory + archives [skip ci]"
-            # master may have advanced while this run worked (e.g. a merge landed).
-            # Rebase the generated-data commit onto the latest master and retry so
-            # the push isn't lost to a non-fast-forward rejection.
-            n=0
-            until git push; do
-              n=$((n+1))
-              if [ "$n" -ge 4 ]; then echo "::error::push failed after $n attempts"; exit 1; fi
-              echo "::warning::push rejected (master advanced) — rebasing on origin/master and retrying ($n)"
-              git fetch origin master
-              git rebase origin/master || { echo "::error::rebase conflict on generated data"; git rebase --abort; exit 1; }
-            done
-          fi
+          git add data/archives.json docs/
+          git commit -m "Wayback: refresh data/archives.json (scheduled preservation run)"
+          git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # A push made with GITHUB_TOKEN does NOT trigger other workflows: GitHub
+      # suppresses it so automation cannot set off recursive runs. So the push
+      # above rebuilt docs/ on main and deploy.yml never woke up, and every
+      # weekly run left the SITE one commit behind its own repository -- for
+      # months, invisibly, while this job and the deploy both reported success.
+      # Nineteen of twenty-five sites were stale when published-drift.py was
+      # finally run with --grace 0 (core#98).
+      #
+      # An explicit API dispatch with the same token IS allowed -- the
+      # restriction is on implicit event triggering, not on asking. So ask.
+      - name: Deploy the rebuilt site
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -sS -X POST --fail-with-body \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/deploy.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "deploy.yml dispatched for $GITHUB_REPOSITORY"
+
