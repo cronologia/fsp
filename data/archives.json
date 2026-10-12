@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/archive-refs.js",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-12",
   "snapshots": {
     "http://archive.ipu.org/parline-e/reports/arc/2095_13.htm": {
       "archiveUrl": "https://web.archive.org/web/20240623200652/http://archive.ipu.org/parline-e/reports/arc/2095_13.htm",
@@ -1170,9 +1170,9 @@
     },
     "https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa": {
       "refId": "regalado-2008",
-      "archiveUrl": "https://web.archive.org/web/20260810054704/https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
-      "timestamp": "20260810054704",
-      "checkedAt": "2026-08-10"
+      "archiveUrl": "https://web.archive.org/web/20261012152442/https://oceansur.com/catalogo/titulos/encuentros-y-desencuentros-de-la-izquierda-latinoa",
+      "timestamp": "20261012152442",
+      "checkedAt": "2026-10-12"
     },
     "https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo": {
       "archiveUrl": "https://web.archive.org/web/20210615062502/https://panamericana.pe/24horas/politica/321563-peru-libre-liderado-vladimir-cerron-forma-parte-foro-sao-paulo",
